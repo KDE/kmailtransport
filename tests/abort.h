@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2006 - 2007 Volker Krause <vkrause@kde.org>
+    Copyright (c) 2009 Constantin Berzan <exit3219@gmail.com>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -17,39 +17,27 @@
     02110-1301, USA.
 */
 
-#ifndef TRANSPORTMGR_H
-#define TRANSPORTMGR_H
+#ifndef ABORT_H
+#define ABORT_H
 
-#define USES_DEPRECATED_MAILTRANSPORT_API
-
-#include <KVBox>
-#include <mailtransport/transportcombobox.h>
+#include <QObject>
 
 class KJob;
-class KLineEdit;
-class KTextEdit;
 
-class TransportMgr : public KVBox
+/**
+  This class uses the DispatcherInterface to send an abort() signal th the MDA.
+*/
+class Runner : public QObject
 {
   Q_OBJECT
 
   public:
-    TransportMgr();
+    Runner();
 
   private slots:
-    void removeAllBtnClicked();
-    void editBtnClicked();
-    void sendBtnClicked();
-    void cancelBtnClicked();
-    void jobResult( KJob *job );
-    void jobPercent( KJob *job, unsigned long percent );
-    void jobInfoMessage( KJob *job, const QString &info, const QString &info2 );
+    void sendAbort();
 
-  private:
-    MailTransport::TransportComboBox *mComboBox;
-    KLineEdit *mSenderEdit, *mToEdit, *mCcEdit, *mBccEdit;
-    KTextEdit *mMailEdit;
-    KJob *mCurrentJob;
 };
+
 
 #endif

@@ -1,5 +1,6 @@
 /*
     Copyright (c) 2006 - 2007 Volker Krause <vkrause@kde.org>
+    Copyright (c) 2009 Constantin Berzan <exit3219@gmail.com>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -17,10 +18,8 @@
     02110-1301, USA.
 */
 
-#ifndef TRANSPORTMGR_H
-#define TRANSPORTMGR_H
-
-#define USES_DEPRECATED_MAILTRANSPORT_API
+#ifndef MESSAGEQUEUER_H
+#define MESSAGEQUEUER_H
 
 #include <KVBox>
 #include <mailtransport/transportcombobox.h>
@@ -29,18 +28,25 @@ class KJob;
 class KLineEdit;
 class KTextEdit;
 
-class TransportMgr : public KVBox
+namespace MailTransport {
+  class MessageQueueJob;
+}
+
+
+/**
+  Mostly stolen from transportmgr.{h,cpp}
+*/
+class MessageQueuer : public KVBox
 {
   Q_OBJECT
 
   public:
-    TransportMgr();
+    MessageQueuer();
 
   private slots:
-    void removeAllBtnClicked();
-    void editBtnClicked();
-    void sendBtnClicked();
-    void cancelBtnClicked();
+    void sendNowClicked();
+    void sendQueuedClicked();
+    void sendOnDateClicked();
     void jobResult( KJob *job );
     void jobPercent( KJob *job, unsigned long percent );
     void jobInfoMessage( KJob *job, const QString &info, const QString &info2 );
@@ -49,7 +55,10 @@ class TransportMgr : public KVBox
     MailTransport::TransportComboBox *mComboBox;
     KLineEdit *mSenderEdit, *mToEdit, *mCcEdit, *mBccEdit;
     KTextEdit *mMailEdit;
-    KJob *mCurrentJob;
+
+    MailTransport::MessageQueueJob *createQueueJob();
+
 };
+
 
 #endif

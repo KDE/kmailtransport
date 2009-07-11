@@ -1,5 +1,5 @@
 /*
-    Copyright (c) 2006 - 2007 Volker Krause <vkrause@kde.org>
+    Copyright 2009 Constantin Berzan <exit3219@gmail.com>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
@@ -17,39 +17,23 @@
     02110-1301, USA.
 */
 
-#ifndef TRANSPORTMGR_H
-#define TRANSPORTMGR_H
+#ifndef ATTRIBUTETEST_H
+#define ATTRIBUTETEST_H
 
-#define USES_DEPRECATED_MAILTRANSPORT_API
+#include <QtCore/QObject>
 
-#include <KVBox>
-#include <mailtransport/transportcombobox.h>
-
-class KJob;
-class KLineEdit;
-class KTextEdit;
-
-class TransportMgr : public KVBox
+/**
+  This is a test of the various attributes.
+*/
+class AttributeTest : public QObject
 {
   Q_OBJECT
 
-  public:
-    TransportMgr();
+  private Q_SLOTS:
+    void initTestCase();
+    void testRegistrar();
+    void testSerialization();
 
-  private slots:
-    void removeAllBtnClicked();
-    void editBtnClicked();
-    void sendBtnClicked();
-    void cancelBtnClicked();
-    void jobResult( KJob *job );
-    void jobPercent( KJob *job, unsigned long percent );
-    void jobInfoMessage( KJob *job, const QString &info, const QString &info2 );
-
-  private:
-    MailTransport::TransportComboBox *mComboBox;
-    KLineEdit *mSenderEdit, *mToEdit, *mCcEdit, *mBccEdit;
-    KTextEdit *mMailEdit;
-    KJob *mCurrentJob;
 };
 
 #endif
