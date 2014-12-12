@@ -35,16 +35,9 @@ find_package(KF5KCMUtils ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5ConfigWidgets ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Wallet ${KF5_VERSION} CONFIG REQUIRED)
 
-# FIXME: remove this if/endif when KMime is split.
-if ("${CMAKE_BINARY_DIR}" STREQUAL "${CMAKE_CURRENT_BINARY_DIR}")
-  find_package(KF5Mime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-  find_package(KF5Akonadi ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-  find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
-else()
-  # IMPORTED targets are scoped, so KF5::AkonadiPrivate found in ../akonadi
-  # won't work here, and it is a PUBLIC dependency of KF5::Akonadi
-  find_package(KF5AkonadiServer ${KF5AkonadiServer_MIN_VERSION} CONFIG REQUIRED)
-endif()
+find_package(KF5Mime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
+find_package(KF5Akonadi ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
+find_package(KF5AkonadiMime ${KDEPIMLIBS_VERSION} CONFIG REQUIRED)
 
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 
@@ -83,7 +76,5 @@ add_subdirectory(src)
 add_subdirectory(tests)
 add_subdirectory(autotests)
 
-if ("${CMAKE_BINARY_DIR}" STREQUAL "${MailTransport_BINARY_DIR}")
-  feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
-endif()
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
