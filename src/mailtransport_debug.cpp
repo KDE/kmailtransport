@@ -20,4 +20,3 @@
 #include "mailtransport_debug.h"
 Q_LOGGING_CATEGORY(MAILTRANSPORT_LOG, "log_mailtransport")
 
-

@@ -170,7 +170,7 @@ void AddTransportDialog::accept()
         AgentInstanceCreateJob *cjob = new AgentInstanceCreateJob(d->selectedType().agentType());
         if (!cjob->exec()) {
             qCWarning(MAILTRANSPORT_LOG) << "Failed to create agent instance of type"
-                       << d->selectedType().agentType().identifier();
+                                         << d->selectedType().agentType().identifier();
             return;
         }
         transport->setHost(cjob->instance().identifier());
