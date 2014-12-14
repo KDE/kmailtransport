@@ -31,7 +31,7 @@
 
 #include <KLocalizedString>
 #include <QUrl>
-#include <QDebug>
+#include "mailtransport_debug.h"
 #include <KIO/Job>
 #include <KIO/Scheduler>
 #include <KPasswordDialog>
@@ -47,7 +47,7 @@ public:
 
     void removeSlave(KIO::Slave *slave, bool disconnect = false)
     {
-        qDebug() << "Removing slave" << slave << "from pool";
+        qCDebug(MAILTRANSPORT_LOG) << "Removing slave" << slave << "from pool";
         const int slaveKey = slaves.key(slave);
         if (slaveKey > 0) {
             slaves.remove(slaveKey);
@@ -107,7 +107,7 @@ SmtpJob::~SmtpJob()
     if (!s_slavePool.isDestroyed()) {
         s_slavePool->ref--;
         if (s_slavePool->ref == 0) {
-            qDebug() << "clearing SMTP slave pool" << s_slavePool->slaves.count();
+            qCDebug(MAILTRANSPORT_LOG) << "clearing SMTP slave pool" << s_slavePool->slaves.count();
             foreach (KIO::Slave *slave, s_slavePool->slaves) {
                 if (slave) {
                     KIO::Scheduler::disconnectSlave(slave);
@@ -226,10 +226,10 @@ void SmtpJob::startSmtpJob()
             slaveConfig.insert(QLatin1String("sasl"), transport()->authenticationTypeString());
         }
         d->slave = KIO::Scheduler::getConnectedSlave(destination, slaveConfig);
-        qDebug() << "Created new SMTP slave" << d->slave;
+        qCDebug(MAILTRANSPORT_LOG) << "Created new SMTP slave" << d->slave;
         s_slavePool->slaves.insert(transport()->id(), d->slave);
     } else {
-        qDebug() << "Re-using existing slave" << d->slave;
+        qCDebug(MAILTRANSPORT_LOG) << "Re-using existing slave" << d->slave;
     }
 
     KIO::TransferJob *job = KIO::put(destination, -1, KIO::HideProgressInfo);

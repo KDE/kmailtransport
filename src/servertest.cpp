@@ -32,7 +32,7 @@
 #include <QTimer>
 
 // KDE
-#include <QDebug>
+#include "mailtransport_debug.h"
 
 using namespace MailTransport;
 
@@ -106,11 +106,11 @@ void ServerTestPrivate::finalResult()
         return;
     }
 
-    qDebug() << "Modes:" << connectionResults;
-    qDebug() << "Capabilities:" << capabilityResults;
-    qDebug() << "Normal:" <<  q->normalProtocols();
-    qDebug() << "SSL:" <<  q->secureProtocols();
-    qDebug() << "TLS:" <<  q->tlsProtocols();
+    qCDebug(MAILTRANSPORT_LOG) << "Modes:" << connectionResults;
+    qCDebug(MAILTRANSPORT_LOG) << "Capabilities:" << capabilityResults;
+    qCDebug(MAILTRANSPORT_LOG) << "Normal:" <<  q->normalProtocols();
+    qCDebug(MAILTRANSPORT_LOG) << "SSL:" <<  q->secureProtocols();
+    qCDebug(MAILTRANSPORT_LOG) << "TLS:" <<  q->tlsProtocols();
 
     if (testProgress) {
         testProgress->hide();
@@ -146,7 +146,7 @@ QList< int > ServerTestPrivate::parseAuthenticationList(const QStringList &authe
         }
         // APOP is handled by handlePopConversation()
     }
-    qDebug() << authentications << result;
+    qCDebug(MAILTRANSPORT_LOG) << authentications << result;
 
     // LOGIN doesn't offer anything over PLAIN, requires more server
     // roundtrips and is not an official SASL mechanism, but a MS-ism,
@@ -161,7 +161,7 @@ QList< int > ServerTestPrivate::parseAuthenticationList(const QStringList &authe
 void ServerTestPrivate::handleSMTPIMAPResponse(int type, const QString &text)
 {
     if (!text.contains(QLatin1String("AUTH"), Qt::CaseInsensitive)) {
-        qDebug() << "No authentication possible";
+        qCDebug(MAILTRANSPORT_LOG) << "No authentication possible";
         return;
     }
 
@@ -185,7 +185,7 @@ void ServerTestPrivate::handleSMTPIMAPResponse(int type, const QString &text)
         authenticationResults[type] << Transport::EnumAuthenticationType::CLEAR;
     }
 
-    qDebug() << "For type" << type << ", we have:" << authenticationResults[type];
+    qCDebug(MAILTRANSPORT_LOG) << "For type" << type << ", we have:" << authenticationResults[type];
 }
 
 void ServerTestPrivate::slotNormalPossible()
@@ -216,7 +216,7 @@ void ServerTestPrivate::sendInitialCapabilityQuery(MailTransport::Socket *socket
                 hostname += QLatin1String(".localnet");
             }
         }
-        qDebug() << "Hostname for EHLO is" << hostname;
+        qCDebug(MAILTRANSPORT_LOG) << "Hostname for EHLO is" << hostname;
 
         socket->write(QLatin1String("EHLO ") + hostname);
     }
@@ -328,7 +328,7 @@ void ServerTestPrivate::slotReadNormal(const QString &text)
     Q_ASSERT(encryptionMode != Transport::EnumEncryption::SSL);
     static const int tlsHandshakeStage = 42;
 
-    qDebug() << "Stage" << normalStage + 1 << ", Mode" << encryptionMode;
+    qCDebug(MAILTRANSPORT_LOG) << "Stage" << normalStage + 1 << ", Mode" << encryptionMode;
 
     // If we are in stage 42, we just do the handshake for TLS encryption and
     // then reset the stage to -1, so that all authentication modes and
@@ -373,7 +373,7 @@ void ServerTestPrivate::slotReadNormal(const QString &text)
     // If the server announced that STARTTLS/STLS is available, we'll add TLS to the
     // connection result, do the command and set the stage to 42 to start the handshake.
     if (shouldStartTLS && encryptionMode == Transport::EnumEncryption::None) {
-        qDebug() << "Trying TLS...";
+        qCDebug(MAILTRANSPORT_LOG) << "Trying TLS...";
         connectionResults << Transport::EnumEncryption::TLS;
         if (testProtocol == POP_PROTOCOL) {
             normalSocket->write(QLatin1String("STLS"));
@@ -467,7 +467,7 @@ ServerTest::~ServerTest()
 
 void ServerTest::start()
 {
-    qDebug() << d;
+    qCDebug(MAILTRANSPORT_LOG) << d;
 
     d->connectionResults.clear();
     d->authenticationResults.clear();

@@ -22,7 +22,7 @@
 
 #include "outboxactions_p.h"
 
-#include <QDebug>
+#include "mailtransport_debug.h"
 
 #include <agentmanager.h>
 #include <collection.h>
@@ -38,9 +38,9 @@ void DispatcherInterfacePrivate::massModifyResult(KJob *job)
 {
     // Nothing to do here, really.  If the job fails, the user can retry it.
     if (job->error()) {
-        qDebug() << "failed" << job->errorString();
+        qCDebug(MAILTRANSPORT_LOG) << "failed" << job->errorString();
     } else {
-        qDebug() << "succeeded.";
+        qCDebug(MAILTRANSPORT_LOG) << "succeeded.";
     }
 }
 
@@ -53,7 +53,7 @@ AgentInstance DispatcherInterface::dispatcherInstance() const
     AgentInstance a =
         AgentManager::self()->instance(QStringLiteral("akonadi_maildispatcher_agent"));
     if (!a.isValid()) {
-        qWarning() << "Could not get MDA instance.";
+        qCWarning(MAILTRANSPORT_LOG) << "Could not get MDA instance.";
     }
     return a;
 }

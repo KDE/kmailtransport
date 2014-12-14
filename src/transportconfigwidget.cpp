@@ -30,7 +30,7 @@
 #include "transportmanager.h"
 
 #include <KConfigDialogManager>
-#include <QDebug>
+#include "mailtransport_debug.h"
 
 using namespace MailTransport;
 
@@ -55,7 +55,7 @@ TransportConfigWidget::~ TransportConfigWidget()
 void TransportConfigWidget::init(Transport *transport)
 {
     Q_D(TransportConfigWidget);
-    qDebug() << "this" << this << "d" << d;
+    qCDebug(MAILTRANSPORT_LOG) << "this" << this << "d" << d;
     Q_ASSERT(transport);
     d->transport = transport;
 
@@ -76,6 +76,6 @@ void TransportConfigWidget::apply()
     d->manager->updateSettings();
     d->transport->forceUniqueName();
     d->transport->save();
-    qDebug() << "Config written.";
+    qCDebug(MAILTRANSPORT_LOG) << "Config written.";
 }
 

@@ -23,7 +23,7 @@
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
 
-#include <QDebug>
+#include "mailtransport_debug.h"
 
 using namespace Akonadi;
 
@@ -69,17 +69,17 @@ void FilterActionJob::Private::fetchResult(KJob *job)
 void FilterActionJob::Private::traverseItems()
 {
     Q_ASSERT(functor);
-    qDebug() << "Traversing" << items.count() << "items.";
+    qCDebug(MAILTRANSPORT_LOG) << "Traversing" << items.count() << "items.";
     foreach (const Item &item, items) {
         if (functor->itemAccepted(item)) {
             functor->itemAction(item, q);
-            qDebug() << "Added subjob for item" << item.id();
+            qCDebug(MAILTRANSPORT_LOG) << "Added subjob for item" << item.id();
         }
     }
     if (q->subjobs().isEmpty()) {
-        qDebug() << "No subjobs; I am done";
+        qCDebug(MAILTRANSPORT_LOG) << "No subjobs; I am done";
     } else {
-        qDebug() << "Have subjobs; Done when last of them is";
+        qCDebug(MAILTRANSPORT_LOG) << "Have subjobs; Done when last of them is";
     }
     q->commit();
 }
@@ -119,7 +119,7 @@ FilterActionJob::~FilterActionJob()
 void FilterActionJob::doStart()
 {
     if (d->collection.isValid()) {
-        qDebug() << "Fetching collection" << d->collection.id();
+        qCDebug(MAILTRANSPORT_LOG) << "Fetching collection" << d->collection.id();
         ItemFetchJob *fjob = new ItemFetchJob(d->collection, this);
         Q_ASSERT(d->functor);
         d->fetchScope = d->functor->fetchScope();

@@ -28,7 +28,7 @@
 #include <QSslSocket>
 
 // KDE
-#include <QDebug>
+#include "mailtransport_debug.h"
 #include <ksocketfactory.h>
 
 using namespace MailTransport;
@@ -66,13 +66,13 @@ SocketPrivate::SocketPrivate(Socket *s) : q(s)
 
 void SocketPrivate::slotConnected()
 {
-    qDebug();
+    qCDebug(MAILTRANSPORT_LOG);
 
     if (!secure) {
-        qDebug() << "normal connect";
+        qCDebug(MAILTRANSPORT_LOG) << "normal connect";
         emit q->connected();
     } else {
-        qDebug() << "encrypted connect";
+        qCDebug(MAILTRANSPORT_LOG) << "encrypted connect";
         socket->startClientEncryption();
     }
 }
@@ -80,7 +80,7 @@ void SocketPrivate::slotConnected()
 void SocketPrivate::slotStateChanged(QAbstractSocket::SocketState state)
 {
 #ifdef comm_debug
-    qDebug() << "State is now:" << (int) state;
+    qCDebug(MAILTRANSPORT_LOG) << "State is now:" << (int) state;
 #endif
     if (state == QAbstractSocket::UnconnectedState) {
         emit q->failed();
@@ -90,7 +90,7 @@ void SocketPrivate::slotStateChanged(QAbstractSocket::SocketState state)
 void SocketPrivate::slotModeChanged(QSslSocket::SslMode  state)
 {
 #ifdef comm_debug
-    qDebug() << "Mode is now:" << state;
+    qCDebug(MAILTRANSPORT_LOG) << "Mode is now:" << state;
 #endif
     if (state == QSslSocket::SslClientMode) {
         emit q->tlsDone();
@@ -99,7 +99,7 @@ void SocketPrivate::slotModeChanged(QSslSocket::SslMode  state)
 
 void SocketPrivate::slotSocketRead()
 {
-    qDebug();
+    qCDebug(MAILTRANSPORT_LOG);
 
     if (!socket) {
         return;
@@ -112,7 +112,7 @@ void SocketPrivate::slotSocketRead()
     }
 
 #ifdef comm_debug
-    qDebug() << socket->isEncrypted() << m_msg.trimmed();
+    qCDebug(MAILTRANSPORT_LOG) << socket->isEncrypted() << m_msg.trimmed();
 #endif
 
     emit q->data(m_msg);
@@ -121,7 +121,7 @@ void SocketPrivate::slotSocketRead()
 
 void SocketPrivate::slotSslErrors(const QList<QSslError> &)
 {
-    qDebug();
+    qCDebug(MAILTRANSPORT_LOG);
     /* We can safely ignore the errors, we are only interested in the
     capabilities. We're not sending auth info. */
     socket->ignoreSslErrors();
@@ -136,21 +136,21 @@ Socket::Socket(QObject *parent)
     d->socket = 0;
     d->port = 0;
     d->secure = false;
-    qDebug();
+    qCDebug(MAILTRANSPORT_LOG);
 }
 
 Socket::~Socket()
 {
-    qDebug();
+    qCDebug(MAILTRANSPORT_LOG);
     delete d;
 }
 
 void Socket::reconnect()
 {
-    qDebug() << "Connecting to:" << d->server <<  ":" <<  d->port;
+    qCDebug(MAILTRANSPORT_LOG) << "Connecting to:" << d->server <<  ":" <<  d->port;
 
 #ifdef comm_debug
-    // qDebug() << d->protocol;
+    // qCDebug(MAILTRANSPORT_LOG) << d->protocol;
 #endif
 
     if (d->socket) {
@@ -176,7 +176,7 @@ void Socket::reconnect()
 
 void Socket::write(const QString &text)
 {
-    // qDebug();
+    // qCDebug(MAILTRANSPORT_LOG);
     // Eat things in the queue when there is no connection. We need
     // to get a connection first don't we...
     if (!d->socket || !available()) {
@@ -186,7 +186,7 @@ void Socket::write(const QString &text)
     QByteArray cs = (text + QLatin1String("\r\n")).toLatin1();
 
 #ifdef comm_debug
-    qDebug() << "C   :" << cs;
+    qCDebug(MAILTRANSPORT_LOG) << "C   :" << cs;
 #endif
 
     d->socket->write(cs.data(), cs.size());
@@ -194,14 +194,14 @@ void Socket::write(const QString &text)
 
 bool Socket::available()
 {
-    // qDebug();
+    // qCDebug(MAILTRANSPORT_LOG);
     bool ok = d->socket && d->socket->state() == QAbstractSocket::ConnectedState;
     return ok;
 }
 
 void Socket::startTLS()
 {
-    qDebug() << objectName();
+    qCDebug(MAILTRANSPORT_LOG) << objectName();
     d->socket->setProtocol(QSsl::TlsV1);
     d->socket->startClientEncryption();
 }

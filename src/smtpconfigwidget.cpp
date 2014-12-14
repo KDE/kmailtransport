@@ -41,7 +41,7 @@
 #include <QButtonGroup>
 
 #include <KProtocolInfo>
-#include <QDebug>
+#include "mailtransport_debug.h"
 #include <KMessageBox>
 
 namespace
@@ -349,7 +349,7 @@ void SMTPConfigWidget::ensureValidAuthSelection()
 void SMTPConfigWidget::encryptionChanged(int enc)
 {
     Q_D(SMTPConfigWidget);
-    qDebug() << enc;
+    qCDebug(MAILTRANSPORT_LOG) << enc;
 
     // adjust port
     if (enc == Transport::EnumEncryption::SSL) {

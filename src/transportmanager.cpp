@@ -43,7 +43,7 @@
 
 #include <KConfig>
 #include <KConfigGroup>
-#include <QDebug>
+#include "mailtransport_debug.h"
 #include <KEMailSettings>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -221,11 +221,11 @@ Transport *TransportManager::createTransport() const
 void TransportManager::addTransport(Transport *transport)
 {
     if (d->transports.contains(transport)) {
-        qDebug() << "Already have this transport.";
+        qCDebug(MAILTRANSPORT_LOG) << "Already have this transport.";
         return;
     }
 
-    qDebug() << "Added transport" << transport;
+    qCDebug(MAILTRANSPORT_LOG) << "Added transport" << transport;
     d->transports.append(transport);
     d->validateDefault();
     emitChangesCommitted();
@@ -237,7 +237,7 @@ void TransportManager::schedule(TransportJob *job)
 
     // check if the job is waiting for the wallet
     if (!job->transport()->isComplete()) {
-        qDebug() << "job waits for wallet:" << job;
+        qCDebug(MAILTRANSPORT_LOG) << "job waits for wallet:" << job;
         d->walletQueue << job;
         loadPasswordsAsync();
         return;
@@ -256,7 +256,7 @@ void TransportManager::createDefaultTransport()
         t->save();
         addTransport(t);
     } else {
-        qWarning() << "KEMailSettings does not contain a valid transport.";
+        qCWarning(MAILTRANSPORT_LOG) << "KEMailSettings does not contain a valid transport.";
     }
 }
 
@@ -290,7 +290,7 @@ bool TransportManager::configureTransport(Transport *transport, QWidget *parent)
         using namespace Akonadi;
         AgentInstance instance = AgentManager::self()->instance(transport->host());
         if (!instance.isValid()) {
-            qWarning() << "Invalid resource instance" << transport->host();
+            qCWarning(MAILTRANSPORT_LOG) << "Invalid resource instance" << transport->host();
         }
         instance.configure(parent);   // Async...
         transport->save();
@@ -405,7 +405,7 @@ void TransportManager::removeTransport(int id)
         using namespace Akonadi;
         const AgentInstance instance = AgentManager::self()->instance(t->host());
         if (!instance.isValid()) {
-            qWarning() << "Could not find resource instance.";
+            qCWarning(MAILTRANSPORT_LOG) << "Could not find resource instance.";
         }
         AgentManager::self()->removeInstance(instance);
     }
@@ -441,7 +441,7 @@ void TransportManagerPrivate::readConfig()
         // see if we happen to have that one already
         foreach (Transport *old, oldTransports) {
             if (old->currentGroup() == QLatin1String("Transport ") + re.cap(1)) {
-                qDebug() << "reloading existing transport:" << s;
+                qCDebug(MAILTRANSPORT_LOG) << "reloading existing transport:" << s;
                 t = old;
                 t->d->passwordNeedsUpdateFromWallet = true;
                 t->load();
@@ -525,7 +525,7 @@ void TransportManagerPrivate::fillTypes()
                 type.d->mName = atype.name();
                 type.d->mDescription = atype.description();
                 types << type;
-                qDebug() << "Found Akonadi type" << atype.name();
+                qCDebug(MAILTRANSPORT_LOG) << "Found Akonadi type" << atype.name();
             }
         }
 
@@ -536,7 +536,7 @@ void TransportManagerPrivate::fillTypes()
                          q, SLOT(agentTypeRemoved(Akonadi::AgentType)));
     }
 
-    qDebug() << "Have SMTP, Sendmail, and" << types.count() - 2 << "Akonadi types.";
+    qCDebug(MAILTRANSPORT_LOG) << "Have SMTP, Sendmail, and" << types.count() - 2 << "Akonadi types.";
 }
 
 void TransportManager::emitChangesCommitted()
@@ -555,7 +555,7 @@ void TransportManagerPrivate::slotTransportsChanged()
         return;
     }
 
-    qDebug();
+    qCDebug(MAILTRANSPORT_LOG);
     config->reparseConfiguration();
     // FIXME: this deletes existing transport objects!
     readConfig();
@@ -635,7 +635,7 @@ void TransportManager::loadPasswords()
 
 void TransportManager::loadPasswordsAsync()
 {
-    qDebug();
+    qCDebug(MAILTRANSPORT_LOG);
 
     // check if there is anything to do at all
     bool found = false;
@@ -676,7 +676,7 @@ void TransportManager::loadPasswordsAsync()
 
 void TransportManagerPrivate::slotWalletOpened(bool success)
 {
-    qDebug();
+    qCDebug(MAILTRANSPORT_LOG);
     walletAsyncOpen = false;
     if (!success) {
         walletOpenFailed = true;
@@ -764,7 +764,7 @@ void TransportManagerPrivate::agentTypeAdded(const Akonadi::AgentType &atype)
         type.d->mName = atype.name();
         type.d->mDescription = atype.description();
         types << type;
-        qDebug() << "Added new Akonadi type" << atype.name();
+        qCDebug(MAILTRANSPORT_LOG) << "Added new Akonadi type" << atype.name();
     }
 }
 
@@ -775,7 +775,7 @@ void TransportManagerPrivate::agentTypeRemoved(const Akonadi::AgentType &atype)
         if (type.type() == Transport::EnumType::Akonadi &&
                 type.agentType() == atype) {
             types.removeAll(type);
-            qDebug() << "Removed Akonadi type" << atype.name();
+            qCDebug(MAILTRANSPORT_LOG) << "Removed Akonadi type" << atype.name();
         }
     }
 }

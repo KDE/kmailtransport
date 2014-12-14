@@ -24,7 +24,7 @@
 #include "transporttype.h"
 #include "ui_addtransportdialog.h"
 
-#include <QDebug>
+#include "mailtransport_debug.h"
 #include <QDialogButtonBox>
 
 #include <QPushButton>
@@ -169,7 +169,7 @@ void AddTransportDialog::accept()
         using namespace Akonadi;
         AgentInstanceCreateJob *cjob = new AgentInstanceCreateJob(d->selectedType().agentType());
         if (!cjob->exec()) {
-            qWarning() << "Failed to create agent instance of type"
+            qCWarning(MAILTRANSPORT_LOG) << "Failed to create agent instance of type"
                        << d->selectedType().agentType().identifier();
             return;
         }

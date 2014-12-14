@@ -5,7 +5,7 @@ add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 
 
 set(mailtransport_lib_srcs
-  ${mailtransport_lib_srcs}
+  mailtransport_debug.cpp
   transport.cpp
   transportmanager.cpp
   transporttype.cpp

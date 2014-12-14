@@ -27,7 +27,7 @@
 #include <QTimer>
 
 #include <KConfigGroup>
-#include <QDebug>
+#include "mailtransport_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStringHandler>
@@ -42,7 +42,7 @@ using namespace KWallet;
 Transport::Transport(const QString &cfgGroup) :
     TransportBase(cfgGroup), d(new TransportPrivate)
 {
-    qDebug() << cfgGroup;
+    qCDebug(MAILTRANSPORT_LOG) << cfgGroup;
     d->passwordLoaded = false;
     d->passwordDirty = false;
     d->storePasswordInFile = false;
@@ -102,7 +102,7 @@ void Transport::updatePasswordState()
 {
     Transport *original = TransportManager::self()->transportById(id(), false);
     if (original == this) {
-        qWarning() << "Tried to update password state of non-cloned transport.";
+        qCWarning(MAILTRANSPORT_LOG) << "Tried to update password state of non-cloned transport.";
         return;
     }
     if (original) {
@@ -110,7 +110,7 @@ void Transport::updatePasswordState()
         d->passwordLoaded = original->d->passwordLoaded;
         d->passwordDirty = original->d->passwordDirty;
     } else {
-        qWarning() << "Transport with this ID not managed by transport manager.";
+        qCWarning(MAILTRANSPORT_LOG) << "Transport with this ID not managed by transport manager.";
     }
 }
 
@@ -165,14 +165,14 @@ void Transport::usrRead()
         using namespace Akonadi;
         d->transportType = TransportType();
         d->transportType.d->mType = type();
-        qDebug() << "type" << type();
+        qCDebug(MAILTRANSPORT_LOG) << "type" << type();
         if (type() == EnumType::Akonadi) {
             const AgentInstance instance = AgentManager::self()->instance(host());
             if (!instance.isValid()) {
-                qWarning() << "Akonadi transport with invalid resource instance.";
+                qCWarning(MAILTRANSPORT_LOG) << "Akonadi transport with invalid resource instance.";
             }
             d->transportType.d->mAgentType = instance.type();
-            qDebug() << "agent type" << instance.type().name() << "id" << instance.type().identifier();
+            qCDebug(MAILTRANSPORT_LOG) << "agent type" << instance.type().name() << "id" << instance.type().identifier();
         }
         // Now we have the type and possibly agentType.  Get the name, description
         // etc. from TransportManager.
@@ -181,7 +181,7 @@ void Transport::usrRead()
         if (index != -1) {
             d->transportType = types[ index ];
         } else {
-            qWarning() << "Type unknown to manager.";
+            qCWarning(MAILTRANSPORT_LOG) << "Type unknown to manager.";
             d->transportType.d->mName = i18nc("An unknown transport type", "Unknown");
         }
     }
@@ -288,7 +288,7 @@ void Transport::readPassword()
                                         QString::fromLatin1("transport-%1").arg(id()))) {
             return;
         }
-        qDebug() << "migrating password from kmail wallet";
+        qCDebug(MAILTRANSPORT_LOG) << "migrating password from kmail wallet";
         KWallet::Wallet *wallet = TransportManager::self()->wallet();
         if (wallet) {
             QString pwd;
@@ -326,7 +326,7 @@ bool Transport::needsWalletMigration() const
 
 void Transport::migrateToWallet()
 {
-    qDebug() << "migrating" << id() << "to wallet";
+    qCDebug(MAILTRANSPORT_LOG) << "migrating" << id() << "to wallet";
     d->needsWalletMigration = false;
     KConfigGroup group(config(), currentGroup());
     group.deleteEntry("password");
@@ -346,7 +346,7 @@ Transport *Transport::clone() const
 TransportType Transport::transportType() const
 {
     if (!d->transportType.isValid()) {
-        qWarning() << "Invalid transport type.";
+        qCWarning(MAILTRANSPORT_LOG) << "Invalid transport type.";
     }
     return d->transportType;
 }

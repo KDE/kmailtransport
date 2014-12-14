@@ -36,7 +36,7 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 
-#include <QDebug>
+#include "mailtransport_debug.h"
 #include <KLocalizedString>
 
 using namespace MailTransport;
@@ -101,7 +101,7 @@ TransportConfigDialog::TransportConfigDialog(Transport *transport, QWidget *pare
         break;
     }
     case Transport::EnumType::Akonadi: {
-        qWarning() << "Tried to configure an Akonadi transport.";
+        qCWarning(MAILTRANSPORT_LOG) << "Tried to configure an Akonadi transport.";
         d->configWidget = new QLabel(i18n("This outgoing account cannot be configured."), this);
         break;
     }

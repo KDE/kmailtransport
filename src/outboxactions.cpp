@@ -19,6 +19,7 @@
 
 #include "outboxactions_p.h"
 
+#include "mailtransport_debug.h"
 #include "dispatchmodeattribute.h"
 #include "errorattribute.h"
 
@@ -55,7 +56,7 @@ ItemFetchScope SendQueuedAction::fetchScope() const
 bool SendQueuedAction::itemAccepted(const Item &item) const
 {
     if (!item.hasAttribute<DispatchModeAttribute>()) {
-        qWarning() << "Item doesn't have DispatchModeAttribute.";
+        qCWarning(MAILTRANSPORT_LOG) << "Item doesn't have DispatchModeAttribute.";
         return false;
     }
 
@@ -137,12 +138,12 @@ ItemFetchScope DispatchManualTransportAction::fetchScope() const
 bool DispatchManualTransportAction::itemAccepted(const Item &item) const
 {
     if (!item.hasAttribute<DispatchModeAttribute>()) {
-        qWarning() << "Item doesn't have DispatchModeAttribute.";
+        qCWarning(MAILTRANSPORT_LOG) << "Item doesn't have DispatchModeAttribute.";
         return false;
     }
 
     if (!item.hasAttribute<TransportAttribute>()) {
-        qWarning() << "Item doesn't have TransportAttribute.";
+        qCWarning(MAILTRANSPORT_LOG) << "Item doesn't have TransportAttribute.";
         return false;
     }
 
