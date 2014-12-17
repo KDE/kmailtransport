@@ -52,7 +52,7 @@ public:
 
 public Q_SLOTS:
     /** reimpl */
-    virtual void apply();
+    void apply() Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void checkSmtpCapabilities();

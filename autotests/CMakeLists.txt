@@ -7,12 +7,13 @@ macro(add_akonadi_isolated_test _source _path)
   get_filename_component(_targetName ${_source} NAME_WE)
   set(_srcList ${_source} )
 
-  add_executable(${_targetName} TEST ${_srcList})
+  add_executable(${_targetName} ${_srcList})
   target_link_libraries(${_targetName}
     Qt5::Test
-    akonadi-kmime
-    mailtransport
-    kmime
+    KF5::AkonadiCore
+    KF5::AkonadiMime
+    KF5::MailTransport
+    KF5::Mime
   )
 
   # based on kde4_add_unit_test
@@ -37,8 +38,9 @@ endmacro(add_akonadi_isolated_test)
 
 # Akonadi testrunner-based tests:
 
-#add_akonadi_isolated_test( attributetest.cpp unittestenv )
-#add_akonadi_isolated_test( messagequeuejobtest.cpp unittestenv )
+add_akonadi_isolated_test( attributetest.cpp unittestenv )
+add_akonadi_isolated_test( messagequeuejobtest.cpp unittestenv )
+MESSAGE(STATUS "REACTIVATE IT")
 if (KDEPIMLIBS_RUN_KDEPIMRUNTIME_ISOLATED_TESTS)
-#add_akonadi_isolated_test( filteractiontest.cpp unittestenv_akonadi )
+   add_akonadi_isolated_test( filteractiontest.cpp unittestenv_akonadi )
 endif()

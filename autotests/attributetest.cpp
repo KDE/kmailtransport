@@ -73,13 +73,13 @@ void AttributeTest::testRegistrar()
 void AttributeTest::testSerialization()
 {
     {
-        QString from("from@me.org");
-        QStringList to("to1@me.org");
-        to << "to2@me.org";
-        QStringList cc("cc1@me.org");
-        cc << "cc2@me.org";
-        QStringList bcc("bcc1@me.org");
-        bcc << "bcc2@me.org";
+        QString from(QLatin1String("from@me.org"));
+        QStringList to(QLatin1String("to1@me.org"));
+        to << QLatin1String("to2@me.org");
+        QStringList cc(QLatin1String("cc1@me.org"));
+        cc << QLatin1String("cc2@me.org");
+        QStringList bcc(QLatin1String("bcc1@me.org"));
+        bcc << QLatin1String("bcc2@me.org");
         AddressAttribute *a = new AddressAttribute(from, to, cc, bcc);
         QByteArray data = a->serialized();
         delete a;
@@ -95,8 +95,8 @@ void AttributeTest::testSerialization()
         DispatchModeAttribute::DispatchMode mode = DispatchModeAttribute::Automatic;
         QDateTime date = QDateTime::currentDateTime();
         // The serializer does not keep track of milliseconds, so forget them.
-        qDebug() << "ms" << date.toString("z");
-        int ms = date.toString("z").toInt();
+        qDebug() << "ms" << date.toString(QLatin1String("z"));
+        int ms = date.toString(QLatin1String("z")).toInt();
         date = date.addMSecs(-ms);
         DispatchModeAttribute *a = new DispatchModeAttribute(mode);
         a->setSendAfter(date);
@@ -109,7 +109,7 @@ void AttributeTest::testSerialization()
     }
 
     {
-        QString msg("The #!@$ing thing failed!");
+        QString msg(QLatin1String("The #!@$ing thing failed!"));
         ErrorAttribute *a = new ErrorAttribute(msg);
         QByteArray data = a->serialized();
         delete a;
@@ -163,5 +163,5 @@ void AttributeTest::testSerialization()
     }
 }
 
-QTEST_AKONADIMAIN(AttributeTest, NoGUI)
+QTEST_AKONADIMAIN(AttributeTest)
 

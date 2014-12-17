@@ -36,7 +36,7 @@
 #include <specialmailcollections.h>
 #include <specialmailcollectionsrequestjob.h>
 
-#include <kmime_message.h>
+#include <kmime/kmime_message.h>
 #include <boost/shared_ptr.hpp>
 
 #include <dispatchmodeattribute.h>
@@ -46,8 +46,9 @@
 #include <transport.h>
 #include <transportattribute.h>
 #include <transportmanager.h>
+#include <qsignalspy.h>
 
-#define SPAM_ADDRESS ( QStringList() << "idanoka@gmail.com" )
+#define SPAM_ADDRESS ( QStringList() << QLatin1String("idanoka@gmail.com") )
 
 using namespace Akonadi;
 using namespace KMime;
@@ -60,14 +61,15 @@ void MessageQueueJobTest::initTestCase()
     QTest::qWait(1000);
 
     // Switch MDA offline to avoid spam.
-    AgentInstance mda = AgentManager::self()->instance("akonadi_maildispatcher_agent");
+    AgentInstance mda = AgentManager::self()->instance(QLatin1String("akonadi_maildispatcher_agent"));
     QVERIFY(mda.isValid());
     mda.setIsOnline(false);
 
     // check that outbox is empty
     SpecialMailCollectionsRequestJob *rjob = new SpecialMailCollectionsRequestJob(this);
     rjob->requestDefaultCollection(SpecialMailCollections::Outbox);
-    QTest::kWaitForSignal(rjob, SIGNAL(result(KJob*)));
+    QSignalSpy spy(rjob, SIGNAL(result(KJob*)));
+    QVERIFY(spy.wait(10000));
     verifyOutboxContents(0);
 }
 
@@ -184,5 +186,5 @@ void MessageQueueJobTest::verifyOutboxContents(qlonglong count)
     QCOMPARE(job->statistics().count(), count);
 }
 
-QTEST_AKONADIMAIN(MessageQueueJobTest, NoGUI)
+QTEST_AKONADIMAIN(MessageQueueJobTest)
 

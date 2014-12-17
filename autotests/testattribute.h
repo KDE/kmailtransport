@@ -26,7 +26,7 @@
 class TestAttribute : public Akonadi::Attribute
 {
 public:
-    TestAttribute() {};
+    TestAttribute() {}
     QByteArray type() const
     {
         return "EXTRA";

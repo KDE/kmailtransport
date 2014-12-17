@@ -84,7 +84,7 @@ public:
 
       @see TransportManager::schedule()
     */
-    virtual void start();
+    void start() Q_DECL_OVERRIDE;
 
     /**
       Returns the Transport object containing the mail transport settings.

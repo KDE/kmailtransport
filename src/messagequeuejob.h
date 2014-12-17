@@ -156,7 +156,7 @@ protected Q_SLOTS:
 
       (reimplemented from KCompositeJob)
     */
-    virtual void slotResult(KJob *);
+    void slotResult(KJob *) Q_DECL_OVERRIDE;
 
 private:
     class Private;

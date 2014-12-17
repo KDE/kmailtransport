@@ -69,7 +69,6 @@ public:
       @see Transport.
     */
     Transport *transport() const;
-
     /**
       Sets the transport id to use for sending this message.
     */
