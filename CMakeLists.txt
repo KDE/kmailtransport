@@ -18,15 +18,16 @@ include(KDEFrameworkCompilerSettings)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
 
-# FIXME: Do we want the same versions in kdepimlibs and kf5?
 set(KF5_VERSION "5.5.0")
+
+set(KMAILTRANSPORTLIB_VERSION "4.79.0")
+
 set(KMIMELIBS_VERSION "4.79.0")
 set(AKONADILIBS_VERSION "4.79.0")
-set(KDEPIMLIBS_VERSION "4.79.0")
 set(AKONADIMIMELIB_VERSION "4.79.0")
 set(CMAKECONFIG_INSTALL_DIR "${CMAKECONFIG_INSTALL_PREFIX}/KF5MailTransport")
 
-ecm_setup_version(${KDEPIMLIBS_VERSION} VARIABLE_PREFIX MAILTRANSPORT
+ecm_setup_version(${KMAILTRANSPORTLIB_VERSION} VARIABLE_PREFIX MAILTRANSPORT
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfigVersion.cmake"
                         SOVERSION 5
