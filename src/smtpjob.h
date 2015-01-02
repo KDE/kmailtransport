@@ -71,7 +71,7 @@ protected:
     bool doKill() Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
-    virtual void slotResult(KJob *job);
+    void slotResult(KJob *job) Q_DECL_OVERRIDE;
     void slaveError(KIO::Slave *slave, int errorCode, const QString &errorMsg);
 
 private:

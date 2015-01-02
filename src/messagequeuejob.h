@@ -148,7 +148,7 @@ public:
       Creates the item and places it in the outbox.
       It is now queued for sending by the mail dispatcher agent.
     */
-    virtual void start();
+    void start()Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
     /**
