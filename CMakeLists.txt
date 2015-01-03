@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8.12)
 project(MailTransport)
 
 # ECM setup
-find_package(ECM 1.3.0 CONFIG REQUIRED)
+find_package(ECM 1.6.0 CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${MailTransport_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
 
 include(GenerateExportHeader)
@@ -18,7 +18,7 @@ include(KDEFrameworkCompilerSettings)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
 
-set(KF5_VERSION "5.5.0")
+set(KF5_VERSION "5.6.0")
 
 set(KMAILTRANSPORT_LIB_VERSION "4.79.0")
 
