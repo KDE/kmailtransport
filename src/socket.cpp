@@ -221,6 +221,11 @@ void Socket::setPort(int port)
     d->port = port;
 }
 
+int Socket::port() const
+{
+    return d->port;
+}
+
 void Socket::setSecure(bool what)
 {
     d->secure = what;

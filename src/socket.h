@@ -86,6 +86,11 @@ public:
     void setPort(int port);
 
     /**
+     * returns the used port.
+     */
+    int port() const;
+
+    /**
      * this will be a secure connection
      */
     void setSecure(bool what);
