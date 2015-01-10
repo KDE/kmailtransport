@@ -63,7 +63,7 @@ generate_export_header(KF5MailTransport BASE_NAME mailtransport)
 add_library(KF5::MailTransport ALIAS KF5MailTransport)
 
 
-target_include_directories(KF5MailTransport INTERFACE "$<INSTALL_INTERFACE:${KF5_INCLUDE_INSTALL_DIR}/MailTransport;${KF5_INCLUDE_INSTALL_DIR}/MailTransport/mailtransport>")
+target_include_directories(KF5MailTransport INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport;${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/mailtransport>")
 target_include_directories(KF5MailTransport PUBLIC "$<BUILD_INTERFACE:${MailTransport_SOURCE_DIR}/src;${MailTransport_BINARY_DIR}/src>")
 
 
@@ -96,7 +96,7 @@ endif()
 
 install(TARGETS KF5MailTransport EXPORT KF5MailTransportTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
-install(FILES mailtransport.kcfg DESTINATION ${KCFG_INSTALL_DIR})
+install(FILES mailtransport.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 
 add_subdirectory(kcm)
 
@@ -128,7 +128,7 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
 
 install(FILES
   ${MailTransport_CamelCase_HEADERS}
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/MailTransport/MailTransport/ COMPONENT Devel ) 
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/MailTransport/ COMPONENT Devel ) 
 
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_export.h
@@ -136,9 +136,9 @@ install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/transportbase.h
   sentactionattribute.h
 
-  DESTINATION ${KF5_INCLUDE_INSTALL_DIR}/MailTransport/mailtransport COMPONENT Devel
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/mailtransport COMPONENT Devel
 )
 
-ecm_generate_pri_file(BASE_NAME KMailTransport LIB_NAME KF5MailTransport DEPS "Wallet AkonadiCore Mime AkonadiMime" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KF5_INCLUDE_INSTALL_DIR}/MailTransport/)
+ecm_generate_pri_file(BASE_NAME KMailTransport LIB_NAME KF5MailTransport DEPS "Wallet AkonadiCore Mime AkonadiMime" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 

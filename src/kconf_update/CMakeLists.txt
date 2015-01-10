@@ -1,2 +1,2 @@
-install(FILES mailtransports.upd DESTINATION ${KCONF_UPDATE_INSTALL_DIR})
-install(PROGRAMS migrate-transports.pl DESTINATION ${KCONF_UPDATE_INSTALL_DIR})
+install(FILES mailtransports.upd DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})
+install(PROGRAMS migrate-transports.pl DESTINATION ${KDE_INSTALL_KCONFUPDATEDIR})

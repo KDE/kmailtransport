@@ -6,6 +6,6 @@ target_link_libraries(kcm_mailtransport
                         KF5::MailTransport
 )
 
-install(TARGETS kcm_mailtransport DESTINATION ${PLUGIN_INSTALL_DIR})
-install(FILES kcm_mailtransport.desktop DESTINATION ${SERVICES_INSTALL_DIR})
+install(TARGETS kcm_mailtransport DESTINATION ${KDE_INSTALL_PLUGINDIR})
+install(FILES kcm_mailtransport.desktop DESTINATION ${KDE_INSTALL_KSERVICES5DIR})
 
