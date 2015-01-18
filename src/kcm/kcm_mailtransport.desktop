@@ -12,6 +12,7 @@ X-KDE-ParentComponents=
 X-KDE-CfgDlgHierarchy=
 
 Name=Mail Transport
+Name[ar]=نقل البريد
 Name[be]=Паштовы транспарт
 Name[bs]=Transport pošte
 Name[ca]=Transport de correu
