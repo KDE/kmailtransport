@@ -26,7 +26,7 @@
 
 #include <QtCore/QSharedDataPointer>
 #include <QtCore/QVariant>
-
+#include <QtCore/QVector>
 #include <attribute.h>
 
 namespace MailTransport
@@ -62,7 +62,7 @@ public:
         /**
          * Describes a list of sent actions.
          */
-        typedef QList<Action> List;
+        typedef QVector<Action> List;
 
         /**
          * Creates a new invalid action.
@@ -151,5 +151,6 @@ private:
 };
 
 }
+Q_DECLARE_TYPEINFO(MailTransport::SentActionAttribute::Action, Q_MOVABLE_TYPE);
 
 #endif
