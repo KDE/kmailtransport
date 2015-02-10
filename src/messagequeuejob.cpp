@@ -89,7 +89,7 @@ bool MessageQueueJob::Private::validate()
     }
 
     const int transport = transportAttribute.transportId();
-    if (TransportManager::self()->transportById(transport, false) == 0) {
+    if (TransportManager::self()->transportById(transport, false) == Q_NULLPTR) {
         q->setError(UserDefinedError);
         q->setErrorText(i18n("Message has invalid transport."));
         q->emitResult();

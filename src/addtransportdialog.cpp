@@ -40,7 +40,7 @@ class AddTransportDialog::Private
 {
 public:
     Private(AddTransportDialog *qq)
-        : q(qq), okButton(0)
+        : q(qq), okButton(Q_NULLPTR)
     {
     }
 

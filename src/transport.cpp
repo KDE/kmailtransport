@@ -237,7 +237,7 @@ bool Transport::usrSave()
         if (!wallet || wallet->writePassword(QString::number(id()), d->password) != 0) {
             // wallet saving failed, ask if we should store in the config file instead
             if (d->storePasswordInFile || KMessageBox::warningYesNo(
-                        0,
+                        Q_NULLPTR,
                         i18n("KWallet is not available. It is strongly recommended to use "
                              "KWallet for managing your passwords.\n"
                              "However, the password can be stored in the configuration "

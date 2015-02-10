@@ -103,7 +103,7 @@ void SendmailJob::receivedStdErr()
 bool SendmailJob::doKill()
 {
     delete d->process;
-    d->process = 0;
+    d->process = Q_NULLPTR;
     return true;
 }
 

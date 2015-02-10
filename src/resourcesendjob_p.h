@@ -60,7 +60,7 @@ public:
 
 protected:
     /** reimpl */
-    virtual void doStart();
+    virtual void doStart() Q_DECL_OVERRIDE;
 
 private:
     friend class ResourceSendJobPrivate;

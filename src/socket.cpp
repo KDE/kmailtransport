@@ -133,7 +133,7 @@ void SocketPrivate::slotSslErrors(const QList<QSslError> &)
 Socket::Socket(QObject *parent)
     : QObject(parent), d(new SocketPrivate(this))
 {
-    d->socket = 0;
+    d->socket = Q_NULLPTR;
     d->port = 0;
     d->secure = false;
     qCDebug(MAILTRANSPORT_LOG);

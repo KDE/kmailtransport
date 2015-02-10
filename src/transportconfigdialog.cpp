@@ -45,7 +45,7 @@ class MailTransport::TransportConfigDialog::Private
 {
 public:
     Private(TransportConfigDialog *qq)
-        : transport(0), configWidget(0), q(qq), okButton(0)
+        : transport(Q_NULLPTR), configWidget(Q_NULLPTR), q(qq), okButton(Q_NULLPTR)
     {
     }
 
@@ -107,7 +107,7 @@ TransportConfigDialog::TransportConfigDialog(Transport *transport, QWidget *pare
     }
     default: {
         Q_ASSERT(false);
-        d->configWidget = 0;
+        d->configWidget = Q_NULLPTR;
         break;
     }
     }

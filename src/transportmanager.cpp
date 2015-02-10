@@ -116,7 +116,7 @@ public:
     StaticTransportManager() : TransportManager() {}
 };
 
-StaticTransportManager *sSelf = 0;
+StaticTransportManager *sSelf = Q_NULLPTR;
 
 static void destroyStaticTransportManager()
 {
@@ -133,7 +133,7 @@ TransportManager::TransportManager()
     qAddPostRoutine(destroyStaticTransportManager);
     d->myOwnChange = false;
     d->appliedChange = false;
-    d->wallet = 0;
+    d->wallet = Q_NULLPTR;
     d->walletOpenFailed = false;
     d->walletAsyncOpen = false;
     d->defaultTransportId = -1;
@@ -184,7 +184,7 @@ Transport *TransportManager::transportById(int id, bool def) const
     if (def || (id == 0 && d->defaultTransportId != id)) {
         return transportById(d->defaultTransportId, false);
     }
-    return 0;
+    return Q_NULLPTR;
 }
 
 Transport *TransportManager::transportByName(const QString &name, bool def) const
@@ -197,7 +197,7 @@ Transport *TransportManager::transportByName(const QString &name, bool def) cons
     if (def) {
         return transportById(0, false);
     }
-    return 0;
+    return Q_NULLPTR;
 }
 
 QList< Transport * > TransportManager::transports() const
@@ -309,7 +309,7 @@ TransportJob *TransportManager::createTransportJob(int transportId)
 {
     Transport *t = transportById(transportId, false);
     if (!t) {
-        return 0;
+        return Q_NULLPTR;
     }
     t = t->clone(); // Jobs delete their transports.
     t->updatePasswordState();
@@ -322,13 +322,13 @@ TransportJob *TransportManager::createTransportJob(int transportId)
         return new ResourceSendJob(t, this);
     }
     Q_ASSERT(false);
-    return 0;
+    return Q_NULLPTR;
 }
 
 TransportJob *TransportManager::createTransportJob(const QString &transport)
 {
     bool ok = false;
-    Transport *t = 0;
+    Transport *t = Q_NULLPTR;
 
     int transportId = transport.toInt(&ok);
     if (ok) {
@@ -343,7 +343,7 @@ TransportJob *TransportManager::createTransportJob(const QString &transport)
         return createTransportJob(t->id());
     }
 
-    return 0;
+    return Q_NULLPTR;
 }
 
 bool TransportManager::isEmpty() const
@@ -436,7 +436,7 @@ void TransportManagerPrivate::readConfig()
         if (re.indexIn(s) == -1) {
             continue;
         }
-        Transport *t = 0;
+        Transport *t = Q_NULLPTR;
 
         // see if we happen to have that one already
         foreach (Transport *old, oldTransports) {
@@ -584,7 +584,7 @@ KWallet::Wallet *TransportManager::wallet()
     }
 
     if (!Wallet::isEnabled() || d->walletOpenFailed) {
-        return 0;
+        return Q_NULLPTR;
     }
 
     WId window = 0;
@@ -599,7 +599,7 @@ KWallet::Wallet *TransportManager::wallet()
 
     if (!d->wallet) {
         d->walletOpenFailed = true;
-        return 0;
+        return Q_NULLPTR;
     }
 
     d->prepareWallet();
@@ -681,7 +681,7 @@ void TransportManagerPrivate::slotWalletOpened(bool success)
     if (!success) {
         walletOpenFailed = true;
         delete wallet;
-        wallet = 0;
+        wallet = Q_NULLPTR;
     } else {
         prepareWallet();
     }
@@ -727,7 +727,7 @@ void TransportManagerPrivate::migrateToWallet()
 
     // ask user if he wants to migrate
     int result = KMessageBox::questionYesNoList(
-                     0,
+                     Q_NULLPTR,
                      i18n("The following mail transports store their passwords in an "
                           "unencrypted configuration file.\nFor security reasons, "
                           "please consider migrating these passwords to KWallet, the "

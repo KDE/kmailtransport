@@ -31,7 +31,7 @@ class Akonadi::FilterActionJob::Private
 {
 public:
     Private(FilterActionJob *qq)
-        : q(qq), functor(0)
+        : q(qq), functor(Q_NULLPTR)
     {
     }
 
