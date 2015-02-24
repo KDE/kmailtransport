@@ -48,7 +48,7 @@
 #include <transportmanager.h>
 #include <qsignalspy.h>
 
-#define SPAM_ADDRESS ( QStringList() << QLatin1String("idanoka@gmail.com") )
+#define SPAM_ADDRESS ( QStringList() << QStringLiteral("idanoka@gmail.com") )
 
 using namespace Akonadi;
 using namespace KMime;
@@ -61,7 +61,7 @@ void MessageQueueJobTest::initTestCase()
     QTest::qWait(1000);
 
     // Switch MDA offline to avoid spam.
-    AgentInstance mda = AgentManager::self()->instance(QLatin1String("akonadi_maildispatcher_agent"));
+    AgentInstance mda = AgentManager::self()->instance(QStringLiteral("akonadi_maildispatcher_agent"));
     QVERIFY(mda.isValid());
     mda.setIsOnline(false);
 

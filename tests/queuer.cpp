@@ -55,30 +55,30 @@ MessageQueuer::MessageQueuer()
     mComboBox->setEditable(true);
     vbox->addWidget(mComboBox);
     mSenderEdit = new QLineEdit(this);
-    mSenderEdit->setPlaceholderText(QLatin1String("Sender"));
+    mSenderEdit->setPlaceholderText(QStringLiteral("Sender"));
     vbox->addWidget(mSenderEdit);
     mToEdit = new QLineEdit(this);
-    mToEdit->setText(QLatin1String("idanoka@gmail.com"));
+    mToEdit->setText(QStringLiteral("idanoka@gmail.com"));
     vbox->addWidget(mToEdit);
-    mToEdit->setPlaceholderText(QLatin1String("To"));
+    mToEdit->setPlaceholderText(QStringLiteral("To"));
     mCcEdit = new QLineEdit(this);
     vbox->addWidget(mCcEdit);
-    mCcEdit->setPlaceholderText(QLatin1String("Cc"));
+    mCcEdit->setPlaceholderText(QStringLiteral("Cc"));
     mBccEdit = new QLineEdit(this);
-    mBccEdit->setPlaceholderText(QLatin1String("Bcc"));
+    mBccEdit->setPlaceholderText(QStringLiteral("Bcc"));
     vbox->addWidget(mBccEdit);
     mMailEdit = new KTextEdit(this);
-    mMailEdit->setText(QLatin1String("test from queuer!"));
+    mMailEdit->setText(QStringLiteral("test from queuer!"));
     mMailEdit->setAcceptRichText(false);
     mMailEdit->setLineWrapMode(QTextEdit::NoWrap);
     vbox->addWidget(mMailEdit);
-    QPushButton *b = new QPushButton(QLatin1String("&Send Now"), this);
+    QPushButton *b = new QPushButton(QStringLiteral("&Send Now"), this);
     vbox->addWidget(b);
     connect(b, &QPushButton::clicked, this, &MessageQueuer::sendNowClicked);
-    b = new QPushButton(QLatin1String("Send &Queued"), this);
+    b = new QPushButton(QStringLiteral("Send &Queued"), this);
     vbox->addWidget(b);
     connect(b, &QPushButton::clicked, this, &MessageQueuer::sendQueuedClicked);
-    b = new QPushButton(QLatin1String("Send on &Date..."), this);
+    b = new QPushButton(QStringLiteral("Send on &Date..."), this);
     vbox->addWidget(b);
     connect(b, &QPushButton::clicked, this, &MessageQueuer::sendOnDateClicked);
 }
@@ -103,7 +103,7 @@ void MessageQueuer::sendOnDateClicked()
     QPointer<KDialog> dialog = new KDialog(this);
     QDateTimeEdit *dt = new QDateTimeEdit(dialog);
     dt->setDateTime(QDateTime::currentDateTime());
-    dt->setDisplayFormat(QLatin1String("hh:mm:ss"));
+    dt->setDisplayFormat(QStringLiteral("hh:mm:ss"));
     dialog->setMainWidget(dt);
     dialog->enableButtonCancel(false);
     dialog->exec();
@@ -152,7 +152,7 @@ MessageQueueJob *MessageQueuer::createQueueJob()
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    app.setApplicationName(QLatin1String("messagequeuer"));
+    app.setApplicationName(QStringLiteral("messagequeuer"));
 
     MessageQueuer *t = new MessageQueuer();
     t->show();

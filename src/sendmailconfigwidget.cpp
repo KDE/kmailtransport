@@ -68,7 +68,7 @@ void SendmailConfigWidget::init()
         // Locate sendmail.
         // This is imperfect, because it shows the standard path if an empty path
         // is saved in the config.
-        d->ui.kcfg_host->setText(QStandardPaths::findExecutable(QLatin1String("sendmail")));
+        d->ui.kcfg_host->setText(QStandardPaths::findExecutable(QStringLiteral("sendmail")));
     }
     connect(d->ui.kcfg_host->lineEdit(), SIGNAL(textChanged(QString)),
             SLOT(slotTextChanged(QString)));

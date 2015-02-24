@@ -54,7 +54,7 @@ void Runner::sendAbort()
 
 int main(int argc, char **argv)
 {
-    QApplication::setApplicationName(QLatin1String("Abort"));
+    QApplication::setApplicationName(QStringLiteral("Abort"));
     QApplication app(argc, argv);
 
     new Runner();

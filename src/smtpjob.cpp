@@ -150,21 +150,21 @@ void SmtpJob::startSmtpJob()
     destination.setHost(transport()->host().trimmed());
     destination.setPort(transport()->port());
 
-    destination.addQueryItem(QLatin1String("headers"), QLatin1String("0"));
-    destination.addQueryItem(QLatin1String("from"), sender());
+    destination.addQueryItem(QStringLiteral("headers"), QStringLiteral("0"));
+    destination.addQueryItem(QStringLiteral("from"), sender());
 
     foreach (const QString &str, to()) {
-        destination.addQueryItem(QLatin1String("to"), str);
+        destination.addQueryItem(QStringLiteral("to"), str);
     }
     foreach (const QString &str, cc()) {
-        destination.addQueryItem(QLatin1String("cc"), str);
+        destination.addQueryItem(QStringLiteral("cc"), str);
     }
     foreach (const QString &str, bcc()) {
-        destination.addQueryItem(QLatin1String("bcc"), str);
+        destination.addQueryItem(QStringLiteral("bcc"), str);
     }
 
     if (transport()->specifyHostname()) {
-        destination.addQueryItem(QLatin1String("hostname"), transport()->localHostname());
+        destination.addQueryItem(QStringLiteral("hostname"), transport()->localHostname());
     }
 
     if (transport()->requiresAuthentication()) {
@@ -209,21 +209,21 @@ void SmtpJob::startSmtpJob()
     if (!data().isEmpty()) {
         // allow +5% for subsequent LF->CRLF and dotstuffing (an average
         // over 2G-lines gives an average line length of 42-43):
-        destination.addQueryItem(QLatin1String("size"),
+        destination.addQueryItem(QStringLiteral("size"),
                                  QString::number(qRound(data().length() * 1.05)));
     }
 
-    destination.setPath(QLatin1String("/send"));
+    destination.setPath(QStringLiteral("/send"));
 
 #ifndef MAILTRANSPORT_INPROCESS_SMTP
     d->slave = s_slavePool->slaves.value(transport()->id());
     if (!d->slave) {
         KIO::MetaData slaveConfig;
-        slaveConfig.insert(QLatin1String("tls"),
+        slaveConfig.insert(QStringLiteral("tls"),
                            (transport()->encryption() == Transport::EnumEncryption::TLS) ?
-                           QLatin1String("on") : QLatin1String("off"));
+                           QStringLiteral("on") : QStringLiteral("off"));
         if (transport()->requiresAuthentication()) {
-            slaveConfig.insert(QLatin1String("sasl"), transport()->authenticationTypeString());
+            slaveConfig.insert(QStringLiteral("sasl"), transport()->authenticationTypeString());
         }
         d->slave = KIO::Scheduler::getConnectedSlave(destination, slaveConfig);
         qCDebug(MAILTRANSPORT_LOG) << "Created new SMTP slave" << d->slave;
@@ -240,7 +240,7 @@ void SmtpJob::startSmtpJob()
         return;
     }
 
-    job->addMetaData(QLatin1String("lf2crlf+dotstuff"), QLatin1String("slave"));
+    job->addMetaData(QStringLiteral("lf2crlf+dotstuff"), QStringLiteral("slave"));
     connect(job, &KIO::TransferJob::dataReq, this, &SmtpJob::dataRequest);
 
     addSubjob(job);
