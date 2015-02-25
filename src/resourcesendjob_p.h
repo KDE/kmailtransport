@@ -59,8 +59,7 @@ public:
     virtual ~ResourceSendJob();
 
 protected:
-    /** reimpl */
-    virtual void doStart() Q_DECL_OVERRIDE;
+    void doStart() Q_DECL_OVERRIDE;
 
 private:
     friend class ResourceSendJobPrivate;

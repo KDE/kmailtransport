@@ -50,14 +50,11 @@ public:
     /** Destroys this object. */
     virtual ~SendQueuedAction();
 
-    /* reimpl */
-    virtual Akonadi::ItemFetchScope fetchScope() const Q_DECL_OVERRIDE;
+    Akonadi::ItemFetchScope fetchScope() const Q_DECL_OVERRIDE;
 
-    /* reimpl */
-    virtual bool itemAccepted(const Akonadi::Item &item) const Q_DECL_OVERRIDE;
+    bool itemAccepted(const Akonadi::Item &item) const Q_DECL_OVERRIDE;
 
-    /* reimpl */
-    virtual Akonadi::Job *itemAction(const Akonadi::Item &item,
+    Akonadi::Job *itemAction(const Akonadi::Item &item,
                                      Akonadi::FilterActionJob *parent) const Q_DECL_OVERRIDE;
 
 private:
@@ -85,13 +82,10 @@ public:
     /** Destroys this object. */
     virtual ~ClearErrorAction();
 
-    /* reimpl */
-    virtual Akonadi::ItemFetchScope fetchScope() const Q_DECL_OVERRIDE;
+    Akonadi::ItemFetchScope fetchScope() const Q_DECL_OVERRIDE;
 
-    /* reimpl */
-    virtual bool itemAccepted(const Akonadi::Item &item) const Q_DECL_OVERRIDE;
+    bool itemAccepted(const Akonadi::Item &item) const Q_DECL_OVERRIDE;
 
-    /* reimpl */
     virtual Akonadi::Job *itemAction(const Akonadi::Item &item,
                                      Akonadi::FilterActionJob *parent) const Q_DECL_OVERRIDE;
 
@@ -118,13 +112,10 @@ public:
 
     virtual ~DispatchManualTransportAction();
 
-    /* reimpl */
-    virtual Akonadi::ItemFetchScope fetchScope() const Q_DECL_OVERRIDE;
+    Akonadi::ItemFetchScope fetchScope() const Q_DECL_OVERRIDE;
 
-    /* reimpl */
-    virtual bool itemAccepted(const Akonadi::Item &item) const Q_DECL_OVERRIDE;
+    bool itemAccepted(const Akonadi::Item &item) const Q_DECL_OVERRIDE;
 
-    /* reimpl */
     virtual Akonadi::Job *itemAction(const Akonadi::Item &item,
                                      Akonadi::FilterActionJob *parent) const Q_DECL_OVERRIDE;
 
