@@ -18,7 +18,7 @@ include(KDEFrameworkCompilerSettings)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
 
-set(KF5_VERSION "5.6.0")
+set(KF5_VERSION "5.7.0")
 
 set(KMAILTRANSPORT_LIB_VERSION "4.79.0")
 
