@@ -49,7 +49,7 @@ void Runner::checkFolders()
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    app.setApplicationName(QLatin1String("clearerror"));
+    app.setApplicationName(QStringLiteral("clearerror"));
 
     new Runner();
     return app.exec();

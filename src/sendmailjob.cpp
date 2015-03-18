@@ -63,7 +63,7 @@ SendmailJob::~ SendmailJob()
 void SendmailJob::doStart()
 {
     QStringList arguments;
-    arguments << QLatin1String("-i") << QLatin1String("-f")
+    arguments << QStringLiteral("-i") << QStringLiteral("-f")
               << sender() << to() << cc() << bcc();
     d->process->start(transport()->host(), arguments);
 

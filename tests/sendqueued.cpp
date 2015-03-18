@@ -49,7 +49,7 @@ void Runner::checkFolders()
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    app.setApplicationName(QLatin1String("sendqueued"));
+    app.setApplicationName(QStringLiteral("sendqueued"));
 
     new Runner();
     return app.exec();

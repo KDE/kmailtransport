@@ -46,32 +46,32 @@ TransportMgr::TransportMgr() :
     mComboBox = new TransportComboBox(this);
     mComboBox->setEditable(true);
     vbox->addWidget(mComboBox);
-    QPushButton *b = new QPushButton(QLatin1String("&Edit"), this);
+    QPushButton *b = new QPushButton(QStringLiteral("&Edit"), this);
     vbox->addWidget(b);
     connect(b, &QPushButton::clicked, this, &TransportMgr::editBtnClicked);
-    b = new QPushButton(QLatin1String("&Remove all transports"), this);
+    b = new QPushButton(QStringLiteral("&Remove all transports"), this);
     vbox->addWidget(b);
     connect(b, &QPushButton::clicked, this, &TransportMgr::removeAllBtnClicked);
     mSenderEdit = new QLineEdit(this);
-    mSenderEdit->setPlaceholderText(QLatin1String("Sender"));
+    mSenderEdit->setPlaceholderText(QStringLiteral("Sender"));
     vbox->addWidget(mSenderEdit);
     mToEdit = new QLineEdit(this);
-    mToEdit->setPlaceholderText(QLatin1String("To"));
+    mToEdit->setPlaceholderText(QStringLiteral("To"));
     vbox->addWidget(mToEdit);
     mCcEdit = new QLineEdit(this);
-    mCcEdit->setPlaceholderText(QLatin1String("Cc"));
+    mCcEdit->setPlaceholderText(QStringLiteral("Cc"));
     vbox->addWidget(mCcEdit);
     mBccEdit = new QLineEdit(this);
-    mBccEdit->setPlaceholderText(QLatin1String("Bcc"));
+    mBccEdit->setPlaceholderText(QStringLiteral("Bcc"));
     vbox->addWidget(mBccEdit);
     mMailEdit = new KTextEdit(this);
     mMailEdit->setAcceptRichText(false);
     mMailEdit->setLineWrapMode(QTextEdit::NoWrap);
     vbox->addWidget(mMailEdit);
-    b = new QPushButton(QLatin1String("&Send"), this);
+    b = new QPushButton(QStringLiteral("&Send"), this);
     connect(b, &QPushButton::clicked, this, &TransportMgr::sendBtnClicked);
     vbox->addWidget(b);
-    b = new QPushButton(QLatin1String("&Cancel"), this);
+    b = new QPushButton(QStringLiteral("&Cancel"), this);
     connect(b, &QPushButton::clicked, this, &TransportMgr::cancelBtnClicked);
     vbox->addWidget(b);
 }
@@ -136,7 +136,7 @@ void TransportMgr::cancelBtnClicked()
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    app.setApplicationName(QLatin1String("transportmgr"));
+    app.setApplicationName(QStringLiteral("transportmgr"));
 
     TransportMgr *t = new TransportMgr();
     t->show();
