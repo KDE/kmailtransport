@@ -564,6 +564,7 @@ void ServerTest::setProgressBar(QProgressBar *pb)
 void ServerTest::setProtocol(const QString &protocol)
 {
     d->testProtocol = protocol;
+    d->customPorts.clear();
 }
 
 QString ServerTest::protocol()
