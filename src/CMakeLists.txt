@@ -76,10 +76,16 @@ PUBLIC
 PRIVATE
                       KF5::I18n 
                       KF5::KIOCore
-                      KF5::AkonadiWidgets
                       KF5::ConfigGui
                       KF5::WidgetsAddons
                       KF5::CoreAddons
+                      KF5::Wallet
+                      KF5::Completion
+                      KF5::ConfigWidgets
+                      Qt5::DBus
+                      Qt5::Network
+                      KF5::KIOWidgets
+                      KF5::KDELibs4Support
 )
 
 set_target_properties(KF5MailTransport PROPERTIES

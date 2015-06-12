@@ -26,10 +26,9 @@
 // Qt
 #include <QByteArray>
 #include <QSslSocket>
-
+#include <QNetworkProxy>
 // KDE
 #include "mailtransport_debug.h"
-#include <ksocketfactory.h>
 
 using namespace MailTransport;
 
@@ -156,10 +155,10 @@ void Socket::reconnect()
     if (d->socket) {
         return;
     }
-
-    d->socket =
-        static_cast<QSslSocket *>(KSocketFactory::connectToHost(d->protocol, d->server,
-                                  d->port, this));
+    
+    d->socket = new QSslSocket(this);
+    d->socket->setProxy(QNetworkProxy::DefaultProxy);
+    d->socket->connectToHost(d->server, d->port);
 
     d->socket->setProtocol(QSsl::AnyProtocol);
 

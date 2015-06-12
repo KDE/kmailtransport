@@ -50,7 +50,7 @@
 #include <KRandom>
 #include <Kdelibs4ConfigMigrator>
 
-#include <KWallet/Wallet>
+#include <KWallet/kwallet.h>
 
 #include <agentinstance.h>
 #include <agentmanager.h>
