@@ -354,6 +354,7 @@ bool TransportManager::isEmpty() const
 QList<int> TransportManager::transportIds() const
 {
     QList<int> rv;
+    rv.reserve(d->transports.count());
     foreach (Transport *t, d->transports) {
         rv << t->id();
     }
@@ -363,6 +364,7 @@ QList<int> TransportManager::transportIds() const
 QStringList TransportManager::transportNames() const
 {
     QStringList rv;
+    rv.reserve(d->transports.count());
     foreach (Transport *t, d->transports) {
         rv << t->name();
     }
@@ -566,6 +568,7 @@ void TransportManagerPrivate::slotTransportsChanged()
 int TransportManagerPrivate::createId() const
 {
     QList<int> usedIds;
+    usedIds.reserve(1 + transports.count());
     foreach (Transport *t, transports) {
         usedIds << t->id();
     }

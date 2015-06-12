@@ -134,6 +134,7 @@ QByteArray SentActionAttribute::type() const
 QByteArray SentActionAttribute::serialized() const
 {
     QVariantList list;
+    list.reserve(d->mActions.count());
     foreach (const Action &action, d->mActions) {
         QVariantMap map;
         map.insert(QString::number(action.type()), action.value());
