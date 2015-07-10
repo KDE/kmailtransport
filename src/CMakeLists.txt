@@ -1,5 +1,4 @@
 
-add_subdirectory(kconf_update)
 
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 
