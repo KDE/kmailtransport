@@ -215,8 +215,6 @@ void Transport::usrRead()
         d->password = KStringHandler::obscure(group.readEntry("password"));
     } else if (group.hasKey("password-kmail")) {
         d->password = Legacy::decryptKMail(group.readEntry("password-kmail"));
-    } else if (group.hasKey("password-knode")) {
-        d->password = Legacy::decryptKNode(group.readEntry("password-knode"));
     }
 
     if (!d->password.isEmpty()) {
@@ -331,7 +329,6 @@ void Transport::migrateToWallet()
     KConfigGroup group(config(), currentGroup());
     group.deleteEntry("password");
     group.deleteEntry("password-kmail");
-    group.deleteEntry("password-knode");
     d->passwordDirty = true;
     d->storePasswordInFile = false;
     save();
