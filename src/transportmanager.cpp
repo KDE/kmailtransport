@@ -126,8 +126,8 @@ static void destroyStaticTransportManager()
 TransportManager::TransportManager()
     : QObject(), d(new TransportManagerPrivate(this))
 {
-    Kdelibs4ConfigMigrator migrate(QLatin1String("transportmanager"));
-    migrate.setConfigFiles(QStringList() << QLatin1String("mailtransports"));
+    Kdelibs4ConfigMigrator migrate(QStringLiteral("transportmanager"));
+    migrate.setConfigFiles(QStringList() << QStringLiteral("mailtransports"));
     migrate.migrate();
 
     qAddPostRoutine(destroyStaticTransportManager);
@@ -137,7 +137,7 @@ TransportManager::TransportManager()
     d->walletOpenFailed = false;
     d->walletAsyncOpen = false;
     d->defaultTransportId = -1;
-    d->config = new KConfig(QLatin1String("mailtransports"));
+    d->config = new KConfig(QStringLiteral("mailtransports"));
 
     QDBusConnection::sessionBus().registerObject(DBUS_OBJECT_PATH, this,
             QDBusConnection::ExportScriptableSlots |
