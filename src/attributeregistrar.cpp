@@ -25,7 +25,6 @@
 
 #include <attributefactory.h>
 
-#ifndef KDELIBS_STATIC_LIBS
 namespace
 {
 
@@ -47,18 +46,3 @@ const bool registered = dummy();
 
 } // namespace
 
-#else
-
-extern bool ___MailTransport____INIT()
-{
-    using namespace Akonadi;
-    using namespace MailTransport;
-    AttributeFactory::registerAttribute<DispatchModeAttribute>();
-    AttributeFactory::registerAttribute<ErrorAttribute>();
-    AttributeFactory::registerAttribute<SentActionAttribute>();
-    AttributeFactory::registerAttribute<SentBehaviourAttribute>();
-    AttributeFactory::registerAttribute<TransportAttribute>();
-    return true;
-}
-
-#endif
