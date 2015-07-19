@@ -196,7 +196,7 @@ SentActionAttribute &MessageQueueJob::sentActionAttribute()
     return d->sentActionAttribute;
 }
 
-void MessageQueueJob::setMessage(Message::Ptr message)
+void MessageQueueJob::setMessage(const Message::Ptr &message)
 {
     d->message = message;
 }

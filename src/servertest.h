@@ -206,7 +206,7 @@ Q_SIGNALS:
      * This will be emitted when the test is done. It will contain
      * the values from the enum EnumEncryption which are possible.
      */
-    void finished(QList<int>);
+    void finished(const QList<int> &);
 
 private:
     Q_DECLARE_PRIVATE(ServerTest)

@@ -29,7 +29,7 @@ public:
     Akonadi::Collection mMoveToCollection;
 };
 
-SentBehaviourAttribute::SentBehaviourAttribute(SentBehaviour beh, Collection moveToCollection)
+SentBehaviourAttribute::SentBehaviourAttribute(SentBehaviour beh, const Collection &moveToCollection)
     : d(new Private)
 {
     d->mBehaviour = beh;
@@ -95,7 +95,7 @@ Collection SentBehaviourAttribute::moveToCollection() const
     return d->mMoveToCollection;
 }
 
-void SentBehaviourAttribute::setMoveToCollection(Collection moveToCollection)
+void SentBehaviourAttribute::setMoveToCollection(const Collection &moveToCollection)
 {
     d->mMoveToCollection = moveToCollection;
 }

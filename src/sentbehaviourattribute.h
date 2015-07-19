@@ -52,7 +52,7 @@ public:
       Creates a new SentBehaviourAttribute.
     */
     explicit SentBehaviourAttribute(SentBehaviour beh = MoveToDefaultSentCollection,
-                                    Akonadi::Collection moveToCollection = Akonadi::Collection(-1));
+                                    const Akonadi::Collection &moveToCollection = Akonadi::Collection(-1));
 
     /**
       Destroys the SentBehaviourAttribute.
@@ -90,7 +90,7 @@ public:
       @param moveToCollection target collection for "move to" operation
       @see setSentBehaviour.
     */
-    void setMoveToCollection(Akonadi::Collection moveToCollection);
+    void setMoveToCollection(const Akonadi::Collection &moveToCollection);
 
 private:
     class Private;

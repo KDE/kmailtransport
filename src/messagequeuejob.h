@@ -142,7 +142,7 @@ public:
     /**
       Sets the message to be sent.
     */
-    void setMessage(KMime::Message::Ptr message);
+    void setMessage(const KMime::Message::Ptr &message);
 
     /**
       Creates the item and places it in the outbox.
