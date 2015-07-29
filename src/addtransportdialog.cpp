@@ -125,11 +125,14 @@ AddTransportDialog::AddTransportDialog(QWidget *parent)
     }
 
     // Populate type list.
-    foreach (const TransportType &type, TransportManager::self()->types()) {
+    const auto transportTypes = TransportManager::self()->types();
+    foreach (const TransportType &type, transportTypes) {
         QTreeWidgetItem *treeItem = new QTreeWidgetItem(d->ui.typeListView);
         treeItem->setText(0, type.name());
         treeItem->setText(1, type.description());
         treeItem->setData(0, Qt::UserRole, QVariant::fromValue(type));     // the transport type
+        if (type.type() == TransportBase::EnumType::SMTP)
+            treeItem->setSelected(true); // select SMTP by default
     }
     d->ui.typeListView->resizeColumnToContents(0);
     updateGeometry();
