@@ -109,10 +109,8 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
   ErrorAttribute
   MessageQueueJob
   PrecommandJob
-  SendmailJob
   SentBehaviourAttribute
   ServerTest
-  SmtpJob
   Socket
   Transport
   TransportAttribute

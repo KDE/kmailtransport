@@ -35,10 +35,8 @@ namespace MailTransport
 
 /**
   Mail transport job for sendmail.
-
-  @deprecated Use MessageQueueJob for sending e-mail.
 */
-class MAILTRANSPORT_DEPRECATED_EXPORT SendmailJob : public TransportJob
+class SendmailJob : public TransportJob
 {
     Q_OBJECT
 public:
