@@ -37,12 +37,10 @@ class ResourceSendJobPrivate;
   result() as soon as the item is placed in the outbox, since there is no way
   of monitoring the progress from here.
 
-  @deprecated Use MessageQueueJob for placing messages in the outbox.
-
   @author Constantin Berzan <exit3219@gmail.com>
   @since 4.4
 */
-class MAILTRANSPORT_DEPRECATED ResourceSendJob : public TransportJob
+class ResourceSendJob : public TransportJob
 {
     Q_OBJECT
 public:
