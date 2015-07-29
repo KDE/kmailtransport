@@ -120,10 +120,8 @@ AddTransportDialog::AddTransportDialog(QWidget *parent)
         connect(buttonBox, &QDialogButtonBox::accepted, this, &AddTransportDialog::accept);
         connect(buttonBox, &QDialogButtonBox::rejected, this, &AddTransportDialog::reject);
 
-#ifdef KDEPIM_MOBILE_UI
         d->ui.descLabel->hide();
         d->ui.setDefault->hide();
-#endif
     }
 
     // Populate type list.
@@ -180,11 +178,9 @@ void AddTransportDialog::accept()
     if (TransportManager::self()->configureTransport(transport, this)) {
         // The user clicked OK and the transport settings were saved.
         TransportManager::self()->addTransport(transport);
-#ifndef KDEPIM_MOBILE_UI
         if (d->ui.setDefault->isChecked()) {
             TransportManager::self()->setDefaultTransport(transport->id());
         }
-#endif
         QDialog::accept();
     }
 }
