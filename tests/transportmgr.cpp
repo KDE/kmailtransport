@@ -89,17 +89,11 @@ void TransportMgr::removeAllBtnClicked()
 
 void TransportMgr::editBtnClicked()
 {
-    // NOTE: Using deprecated TransportConfigDialog here for testing purposes.
-    // The TransportManagementWidget uses the non-deprecated method instead.
     const int index = mComboBox->currentTransportId();
     if (index < 0) {
         return;
     }
-    TransportConfigDialog *t =
-        new TransportConfigDialog(
-        TransportManager::self()->transportById(index), this);
-    t->exec();
-    delete t;
+    TransportManager::self()->configureTransport(TransportManager::self()->transportById(index), this);
 }
 
 void TransportMgr::sendBtnClicked()

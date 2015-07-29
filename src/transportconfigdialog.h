@@ -35,10 +35,8 @@ class Transport;
 
 /**
  * @short Configuration dialog for a mail transport.
- *
- * @deprecated Use TransportManager::configureTransport() instead.
  */
-class MAILTRANSPORT_DEPRECATED_EXPORT TransportConfigDialog : public QDialog
+class TransportConfigDialog : public QDialog
 {
     Q_OBJECT
 

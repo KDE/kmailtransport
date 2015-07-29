@@ -118,7 +118,6 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
   TransportAttribute
   #TransportBase
   TransportComboBox
-  TransportConfigDialog
   TransportJob
   TransportManagementWidget
   TransportManager
