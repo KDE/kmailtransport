@@ -8,6 +8,10 @@ add_executable(transportmgr ${tm_srcs})
 ecm_mark_as_test(transportmgr)
 target_link_libraries(transportmgr KF5MailTransport Qt5::Widgets KF5::I18n KF5::ConfigGui KF5::Completion KF5::TextWidgets)
 
+add_executable(servertest servertest.cpp)
+ecm_mark_as_test(servertest)
+target_link_libraries(servertest KF5MailTransport KF5::I18n KF5::ConfigGui Qt5::Widgets)
+
 set(queuer_srcs queuer.cpp)
 add_executable(queuer ${queuer_srcs})
 ecm_mark_as_test(queuer)
