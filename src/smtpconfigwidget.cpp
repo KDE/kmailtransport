@@ -40,30 +40,6 @@
 #include "mailtransport_debug.h"
 #include <KMessageBox>
 
-namespace
-{
-
-// TODO: is this really necessary?
-class BusyCursorHelper : public QObject
-{
-public:
-    inline BusyCursorHelper(QObject *parent) : QObject(parent)
-    {
-#ifndef QT_NO_CURSOR
-        qApp->setOverrideCursor(Qt::BusyCursor);
-#endif
-    }
-
-    inline ~BusyCursorHelper()
-    {
-#ifndef QT_NO_CURSOR
-        qApp->restoreOverrideCursor();
-#endif
-    }
-};
-
-}
-
 using namespace MailTransport;
 
 class MailTransport::SMTPConfigWidgetPrivate : public TransportConfigWidgetPrivate
@@ -229,11 +205,10 @@ void SMTPConfigWidget::checkSmtpCapabilities()
     }
     d->serverTest->setProgressBar(d->ui.checkCapabilitiesProgress);
     d->ui.checkCapabilitiesStack->setCurrentIndex(1);
-    BusyCursorHelper *busyCursorHelper = new BusyCursorHelper(d->serverTest);
+    qApp->setOverrideCursor(Qt::BusyCursor);
 
     connect(d->serverTest, &ServerTest::finished, this, &SMTPConfigWidget::slotFinished);
-    connect(d->serverTest, SIGNAL(finished(QList<int>)),
-            busyCursorHelper, SLOT(deleteLater()));
+    connect(d->serverTest, &ServerTest::finished, qApp, [](){ qApp->restoreOverrideCursor(); });
     d->ui.checkCapabilities->setEnabled(false);
     d->serverTest->start();
     d->serverTestFailed = false;
