@@ -27,6 +27,7 @@
 #include <mailtransport_defs.h>
 
 // Qt
+#include <QHash>
 #include <QHostInfo>
 #include <QProgressBar>
 #include <QTimer>
@@ -445,8 +446,8 @@ void ServerTestPrivate::slotUpdateProgress()
 
 //---------------------- end private class -----------------------//
 
-ServerTest::ServerTest(QWidget *parent)
-    : QWidget(parent), d(new ServerTestPrivate(this))
+ServerTest::ServerTest(QObject *parent)
+    : QObject(parent), d(new ServerTestPrivate(this))
 {
     d->normalSocketTimer = new QTimer(this);
     d->normalSocketTimer->setSingleShot(true);

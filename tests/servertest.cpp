@@ -35,7 +35,6 @@ int main(int argc, char **argv)
     ServerTest test;
     test.setProtocol(app.arguments().at(1));
     test.setServer(app.arguments().at(2));
-    test.show();
     test.start();
     QObject::connect(&test, &ServerTest::finished, [](const QList<int> &encs) {
         qDebug() << encs;

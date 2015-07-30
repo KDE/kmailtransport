@@ -24,8 +24,8 @@
 #include <mailtransport_export.h>
 #include <transport.h>
 
-#include <QWidget>
-#include <QtCore/QHash>
+#include <QObject>
+#include <QList>
 
 class QProgressBar;
 
@@ -39,7 +39,7 @@ class ServerTestPrivate;
  * This class can be used to test certain server to see if they support stuff.
  * @author Tom Albers <tomalbers@kde.nl>
  */
-class MAILTRANSPORT_EXPORT ServerTest : public QWidget
+class MAILTRANSPORT_EXPORT ServerTest : public QObject
 {
     Q_OBJECT
     Q_PROPERTY(QString server READ server WRITE setServer)
@@ -64,7 +64,7 @@ public:
      *
      * @param parent The parent widget.
      */
-    ServerTest(QWidget *parent = Q_NULLPTR);
+    ServerTest(QObject *parent = Q_NULLPTR);
 
     /**
      * Destroys the server test.
