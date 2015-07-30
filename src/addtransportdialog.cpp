@@ -119,9 +119,6 @@ AddTransportDialog::AddTransportDialog(QWidget *parent)
         mainLayout->addWidget(buttonBox);
         connect(buttonBox, &QDialogButtonBox::accepted, this, &AddTransportDialog::accept);
         connect(buttonBox, &QDialogButtonBox::rejected, this, &AddTransportDialog::reject);
-
-        d->ui.descLabel->hide();
-        d->ui.setDefault->hide();
     }
 
     // Populate type list.
