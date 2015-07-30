@@ -72,7 +72,7 @@ void AddTransportDialog::Private::writeConfig()
 void AddTransportDialog::Private::readConfig()
 {
     KConfigGroup group(KSharedConfig::openConfig(), "AddTransportDialog");
-    const QSize sizeDialog = group.readEntry("Size", QSize(300, 200));
+    const QSize sizeDialog = group.readEntry("Size", QSize(300, TransportManager::self()->types().size() > 1 ? 200 : 80));
     if (sizeDialog.isValid()) {
         q->resize(sizeDialog);
     }
@@ -132,6 +132,13 @@ AddTransportDialog::AddTransportDialog(QWidget *parent)
             treeItem->setSelected(true); // select SMTP by default
     }
     d->ui.typeListView->resizeColumnToContents(0);
+
+    // if we only have one type, don't bother the user with this
+    if (d->ui.typeListView->invisibleRootItem()->childCount() == 1) {
+        d->ui.descLabel->hide();
+        d->ui.typeListView->hide();
+    }
+
     updateGeometry();
     d->ui.typeListView->setFocus();
 
