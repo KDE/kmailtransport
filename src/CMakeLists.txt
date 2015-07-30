@@ -15,7 +15,6 @@ set(mailtransport_lib_srcs
   filteractionjob.cpp
   transportjob.cpp
   resourcesendjob.cpp
-  sendmailjob.cpp
   smtpjob.cpp
   precommandjob.cpp
 
@@ -34,7 +33,6 @@ set(mailtransport_lib_srcs
   sentbehaviourattribute.cpp
   transportattribute.cpp
   transportconfigdialog.cpp
-  sendmailconfigwidget.cpp
   smtpconfigwidget.cpp
 
   transportlistview.cpp
@@ -43,7 +41,6 @@ set(mailtransport_lib_srcs
 )
 
 ki18n_wrap_ui(mailtransport_lib_srcs
-  ui/sendmailsettings.ui
   ui/addtransportdialog.ui
   ui/transportmanagementwidget.ui
   ui/smtpsettings.ui

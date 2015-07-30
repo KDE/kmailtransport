@@ -27,7 +27,6 @@
 #include "transportconfigwidget.h"
 #include "transportmanager.h"
 #include "transporttype.h"
-#include "sendmailconfigwidget.h"
 #include "smtpconfigwidget.h"
 
 #include <QDialogButtonBox>
@@ -90,14 +89,6 @@ TransportConfigDialog::TransportConfigDialog(Transport *transport, QWidget *pare
     switch (transport->type()) {
     case Transport::EnumType::SMTP: {
         d->configWidget = new SMTPConfigWidget(transport, this);
-        break;
-    }
-    case Transport::EnumType::Sendmail: {
-        SendmailConfigWidget *sendMailWidget = new SendmailConfigWidget(transport, this);
-        d->configWidget = sendMailWidget;
-        connect(sendMailWidget, SIGNAL(enableButtonOk(bool)),
-                this, SLOT(slotEnabledOkButton(bool)));
-        pathIsEmpty = sendMailWidget->pathIsEmpty();
         break;
     }
     case Transport::EnumType::Akonadi: {

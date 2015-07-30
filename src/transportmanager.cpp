@@ -20,7 +20,6 @@
 #include "transportmanager.h"
 #include "resourcesendjob_p.h"
 #include "mailtransport_defs.h"
-#include "sendmailjob.h"
 #include "smtpjob.h"
 #include "transport.h"
 #include "transport_p.h"
@@ -30,7 +29,6 @@
 #include "addtransportdialog.h"
 #include "transportconfigdialog.h"
 #include "transportconfigwidget.h"
-#include "sendmailconfigwidget.h"
 #include "smtpconfigwidget.h"
 
 #include <QApplication>
@@ -316,8 +314,6 @@ TransportJob *TransportManager::createTransportJob(int transportId)
     switch (t->type()) {
     case Transport::EnumType::SMTP:
         return new SmtpJob(t, this);
-    case Transport::EnumType::Sendmail:
-        return new SendmailJob(t, this);
     case Transport::EnumType::Akonadi:
         return new ResourceSendJob(t, this);
     }
@@ -505,15 +501,6 @@ void TransportManagerPrivate::fillTypes()
         types << type;
     }
 
-    // Sendmail.
-    {
-        TransportType type;
-        type.d->mType = Transport::EnumType::Sendmail;
-        type.d->mName = i18nc("@option sendmail transport", "Sendmail");
-        type.d->mDescription = i18n("A local sendmail installation");
-        types << type;
-    }
-
     // All Akonadi resources with MailTransport capability.
     {
         using namespace Akonadi;
@@ -538,7 +525,7 @@ void TransportManagerPrivate::fillTypes()
                          q, SLOT(agentTypeRemoved(Akonadi::AgentType)));
     }
 
-    qCDebug(MAILTRANSPORT_LOG) << "Have SMTP, Sendmail, and" << types.count() - 2 << "Akonadi types.";
+    qCDebug(MAILTRANSPORT_LOG) << "Have SMTP and" << types.count() - 1 << "Akonadi types.";
 }
 
 void TransportManager::emitChangesCommitted()

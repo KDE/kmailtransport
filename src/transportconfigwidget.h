@@ -44,10 +44,9 @@ class TransportConfigWidgetPrivate;
   settings to the config file.  If it is a new transport, the caller must
   still call TransportManager::addTransport() to register the transport.
 
-  Concrete configuration is done in subclasses SMTPConfigWidget and
-  SendmailConfigWidget.  Akonadi-type transports are not configured by
-  MailTransport directly, instead the configure() method of their agent
-  instance is called.
+  Concrete configuration is done in subclasses SMTPConfigWidget.
+  Akonadi-type transports are not configured by MailTransport directly,
+  instead the configure() method of their agent instance is called.
 
   To configure a transport from applications, use
   TransportManager::configureTransport().  You still need to call

@@ -39,15 +39,13 @@ class TransportType;
   Initialize an empty Transport object by calling the set...() methods defined in
   kcfg-generated TransportBase, and in this class. Note that some transports use
   the "host" setting to store the following values:
-   - Sendmail transport: path to the sendmail executable
    - Akonadi transports: resource ID.
 */
 // TODO KDE5: Do something about the kcfg-generated TransportBase.
 // Currently it has the config stuff as private members, which means it is
-// utterly inextensible.  Also the sendmail and akonadi-type transports use
-// the "host" setting for keeping the location of the sendmail executable and
-// the resource id, respectively.  This is a hack; they should have separate
-// config options... (cberzan)
+// utterly inextensible.  Also the akonadi-type transports use
+// the "host" setting for keeping the the resource id.
+// This is a hack; they should have separate config options... (cberzan)
 class MAILTRANSPORT_EXPORT Transport : public TransportBase
 {
     Q_OBJECT

@@ -36,8 +36,8 @@ class TransportManager;
 /**
   @short A representation of a transport type.
 
-  Represents an available transport type.  SMTP and Sendmail are available,
-  as well as a number of Akonadi-based types.  Each Akonadi-based type
+  Represents an available transport type.  SMTP is available, as well as
+  optionally a number of Akonadi-based types.  Each Akonadi-based type
   corresponds to an Akonadi resource type that supports sending messages.
 
   This class provides information about the type, such as name and

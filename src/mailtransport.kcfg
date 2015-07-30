@@ -22,9 +22,6 @@
         <choice name="SMTP">
           <label>SMTP Server</label>
         </choice>
-        <choice name="Sendmail">
-          <label>Local sendmail</label>
-        </choice>
         <choice name="Akonadi">
           <label>Akonadi Resource</label>
         </choice>
