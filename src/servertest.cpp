@@ -539,7 +539,7 @@ void ServerTest::setFakeHostname(const QString &fakeHostname)
     d->fakeHostname = fakeHostname;
 }
 
-QString ServerTest::fakeHostname()
+QString ServerTest::fakeHostname() const
 {
     return d->fakeHostname;
 }
@@ -567,17 +567,17 @@ void ServerTest::setProtocol(const QString &protocol)
     d->customPorts.clear();
 }
 
-QString ServerTest::protocol()
+QString ServerTest::protocol() const
 {
     return d->testProtocol;
 }
 
-QString ServerTest::server()
+QString ServerTest::server() const
 {
     return d->server;
 }
 
-int ServerTest::port(Transport::EnumEncryption::type encryptionMode)
+int ServerTest::port(TransportBase::EnumEncryption::type encryptionMode) const
 {
     Q_ASSERT(encryptionMode == Transport::EnumEncryption::None ||
              encryptionMode == Transport::EnumEncryption::SSL);
@@ -588,32 +588,32 @@ int ServerTest::port(Transport::EnumEncryption::type encryptionMode)
     }
 }
 
-QProgressBar *ServerTest::progressBar()
+QProgressBar *ServerTest::progressBar() const
 {
     return d->testProgress;
 }
 
-QList< int > ServerTest::normalProtocols()
+QList< int > ServerTest::normalProtocols() const
 {
     return d->authenticationResults[TransportBase::EnumEncryption::None];
 }
 
-bool ServerTest::isNormalPossible()
+bool ServerTest::isNormalPossible() const
 {
     return d->normalPossible;
 }
 
-QList< int > ServerTest::tlsProtocols()
+QList< int > ServerTest::tlsProtocols() const
 {
     return d->authenticationResults[TransportBase::EnumEncryption::TLS];
 }
 
-QList< int > ServerTest::secureProtocols()
+QList< int > ServerTest::secureProtocols() const
 {
     return d->authenticationResults[Transport::EnumEncryption::SSL];
 }
 
-bool ServerTest::isSecurePossible()
+bool ServerTest::isSecurePossible() const
 {
     return d->securePossible;
 }
