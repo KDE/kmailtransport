@@ -267,7 +267,7 @@
              </widget>
             </item>
             <item row="2" column="1">
-             <widget class="KComboBox" name="authCombo"/>
+             <widget class="QComboBox" name="authCombo"/>
             </item>
            </layout>
           </item>
@@ -371,13 +371,6 @@
    </item>
   </layout>
  </widget>
- <customwidgets>
-  <customwidget>
-   <class>KComboBox</class>
-   <extends>QComboBox</extends>
-   <header>kcombobox.h</header>
-  </customwidget>
- </customwidgets>
  <tabstops>
   <tabstop>tabWidget</tabstop>
   <tabstop>kcfg_host</tabstop>

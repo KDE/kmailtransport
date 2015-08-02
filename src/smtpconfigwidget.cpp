@@ -55,7 +55,7 @@ public:
 
     bool serverTestFailed;
 
-    static void addAuthenticationItem(KComboBox *combo,
+    static void addAuthenticationItem(QComboBox *combo,
                                       int authenticationType)
     {
         combo->addItem(Transport::authenticationTypeString(authenticationType),

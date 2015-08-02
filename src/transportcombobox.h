@@ -23,7 +23,7 @@
 #include <mailtransport_export.h>
 #include <transportbase.h>
 
-#include <KComboBox>
+#include <QComboBox>
 
 class TransportComboBoxPrivate;
 
@@ -34,7 +34,7 @@ namespace MailTransport
   A combo-box for selecting a mail transport.
   It is updated automatically when transports are added, changed, or removed.
 */
-class MAILTRANSPORT_EXPORT TransportComboBox : public KComboBox
+class MAILTRANSPORT_EXPORT TransportComboBox : public QComboBox
 {
     Q_OBJECT
 

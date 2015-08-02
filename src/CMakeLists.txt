@@ -72,7 +72,6 @@ PRIVATE
                       KF5::WidgetsAddons
                       KF5::CoreAddons
                       KF5::Wallet
-                      KF5::Completion
                       KF5::ConfigWidgets
                       Qt5::DBus
                       Qt5::Network
