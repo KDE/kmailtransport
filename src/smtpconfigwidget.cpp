@@ -83,9 +83,9 @@ public:
         }
 
         QList<int> capa = noEncCapa;
-        if (ui.ssl->isChecked()) {
+        if (ui.encryptionSsl->isChecked()) {
             capa = sslCapa;
-        } else if (ui.tls->isChecked()) {
+        } else if (ui.encryptionTls->isChecked()) {
             capa = tlsCapa;
         }
 
@@ -152,9 +152,13 @@ void SMTPConfigWidget::init()
     d->manager->updateWidgets();
 
     d->encryptionGroup = new QButtonGroup(this);
-    d->encryptionGroup->addButton(d->ui.none, Transport::EnumEncryption::None);
-    d->encryptionGroup->addButton(d->ui.ssl, Transport::EnumEncryption::SSL);
-    d->encryptionGroup->addButton(d->ui.tls, Transport::EnumEncryption::TLS);
+    d->encryptionGroup->addButton(d->ui.encryptionNone, Transport::EnumEncryption::None);
+    d->encryptionGroup->addButton(d->ui.encryptionSsl, Transport::EnumEncryption::SSL);
+    d->encryptionGroup->addButton(d->ui.encryptionTls, Transport::EnumEncryption::TLS);
+
+    d->ui.encryptionNone->setChecked(d->transport->encryption() == Transport::EnumEncryption::None);
+    d->ui.encryptionSsl->setChecked(d->transport->encryption() == Transport::EnumEncryption::SSL);
+    d->ui.encryptionTls->setChecked(d->transport->encryption() == Transport::EnumEncryption::TLS);
 
     d->resetAuthCapabilities();
 
@@ -198,9 +202,9 @@ void SMTPConfigWidget::checkSmtpCapabilities()
         d->serverTest->setFakeHostname(d->ui.kcfg_localHostname->text());
     }
     QAbstractButton *encryptionChecked = d->encryptionGroup->checkedButton();
-    if (encryptionChecked == d->ui.none) {
+    if (encryptionChecked == d->ui.encryptionNone) {
         d->serverTest->setPort(Transport::EnumEncryption::None, d->ui.kcfg_port->value());
-    } else if (encryptionChecked == d->ui.ssl) {
+    } else if (encryptionChecked == d->ui.encryptionSsl) {
         d->serverTest->setPort(Transport::EnumEncryption::SSL, d->ui.kcfg_port->value());
     }
     d->serverTest->setProgressBar(d->ui.checkCapabilitiesProgress);
@@ -226,6 +230,13 @@ void SMTPConfigWidget::apply()
     if (index >= 0) {
         group.writeEntry("authtype", d->ui.authCombo->itemData(index).toInt());
     }
+
+    if (d->ui.encryptionNone->isChecked())
+        d->transport->setEncryption(Transport::EnumEncryption::None);
+    if (d->ui.encryptionSsl->isChecked())
+        d->transport->setEncryption(Transport::EnumEncryption::SSL);
+    if (d->ui.encryptionTls->isChecked())
+        d->transport->setEncryption(Transport::EnumEncryption::TLS);
 
     TransportConfigWidget::apply();
 }
@@ -262,13 +273,13 @@ void SMTPConfigWidget::slotFinished(const QList<int> &results)
     }
 
     // encryption method
-    d->ui.none->setEnabled(results.contains(Transport::EnumEncryption::None));
-    d->ui.ssl->setEnabled(results.contains(Transport::EnumEncryption::SSL));
-    d->ui.tls->setEnabled(results.contains(Transport::EnumEncryption::TLS));
+    d->ui.encryptionNone->setEnabled(results.contains(Transport::EnumEncryption::None));
+    d->ui.encryptionSsl->setEnabled(results.contains(Transport::EnumEncryption::SSL));
+    d->ui.encryptionTls->setEnabled(results.contains(Transport::EnumEncryption::TLS));
     checkHighestEnabledButton(d->encryptionGroup);
 
     d->noEncCapa = d->serverTest->normalProtocols();
-    if (d->ui.tls->isEnabled()) {
+    if (d->ui.encryptionTls->isEnabled()) {
         d->tlsCapa = d->serverTest->tlsProtocols();
     } else {
         d->tlsCapa.clear();
@@ -276,10 +287,10 @@ void SMTPConfigWidget::slotFinished(const QList<int> &results)
     d->sslCapa = d->serverTest->secureProtocols();
     d->updateAuthCapbilities();
     //Show correct port from capabilities.
-    if (d->ui.ssl->isEnabled()) {
+    if (d->ui.encryptionSsl->isEnabled()) {
         const int portValue = d->serverTest->port(Transport::EnumEncryption::SSL);
         d->ui.kcfg_port->setValue(portValue == -1 ? SMTPS_PORT : portValue);
-    } else if (d->ui.none->isEnabled()) {
+    } else if (d->ui.encryptionNone->isEnabled()) {
         const int portValue = d->serverTest->port(Transport::EnumEncryption::None);
         d->ui.kcfg_port->setValue(portValue == -1 ? SMTP_PORT : portValue);
     }

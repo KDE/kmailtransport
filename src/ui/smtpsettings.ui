@@ -137,7 +137,7 @@
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_7">
        <item>
-        <widget class="KButtonGroup" name="kcfg_encryption">
+        <widget class="QGroupBox" name="encryptionGroup">
          <property name="enabled">
           <bool>true</bool>
          </property>
@@ -211,21 +211,21 @@
             <item row="0" column="1">
              <layout class="QHBoxLayout" name="encryptHLayout">
               <item>
-               <widget class="QRadioButton" name="none">
+               <widget class="QRadioButton" name="encryptionNone">
                 <property name="text">
                  <string>&amp;None</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QRadioButton" name="ssl">
+               <widget class="QRadioButton" name="encryptionSsl">
                 <property name="text">
                  <string>&amp;SSL</string>
                 </property>
                </widget>
               </item>
               <item>
-               <widget class="QRadioButton" name="tls">
+               <widget class="QRadioButton" name="encryptionTls">
                 <property name="text">
                  <string>&amp;TLS</string>
                 </property>
@@ -373,12 +373,6 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>KButtonGroup</class>
-   <extends>QGroupBox</extends>
-   <header>kbuttongroup.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>KComboBox</class>
    <extends>QComboBox</extends>
    <header>kcombobox.h</header>
@@ -392,9 +386,9 @@
   <tabstop>password</tabstop>
   <tabstop>kcfg_storePassword</tabstop>
   <tabstop>checkCapabilities</tabstop>
-  <tabstop>none</tabstop>
-  <tabstop>ssl</tabstop>
-  <tabstop>tls</tabstop>
+  <tabstop>encryptionNone</tabstop>
+  <tabstop>encryptionSsl</tabstop>
+  <tabstop>encryptionTls</tabstop>
   <tabstop>authCombo</tabstop>
   <tabstop>kcfg_specifyHostname</tabstop>
   <tabstop>kcfg_localHostname</tabstop>

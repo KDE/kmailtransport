@@ -76,8 +76,6 @@ PRIVATE
                       KF5::ConfigWidgets
                       Qt5::DBus
                       Qt5::Network
-                      KF5::KIOWidgets
-                      KF5::KDELibs4Support
 )
 
 set_target_properties(KF5MailTransport PROPERTIES
