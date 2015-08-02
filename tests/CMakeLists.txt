@@ -15,7 +15,7 @@ target_link_libraries(servertest KF5MailTransport KF5::I18n KF5::ConfigGui Qt5::
 set(queuer_srcs queuer.cpp)
 add_executable(queuer ${queuer_srcs})
 ecm_mark_as_test(queuer)
-target_link_libraries(queuer KF5MailTransport Qt5::Widgets KF5::I18n KF5::ConfigGui KF5::Completion KF5::KDELibs4Support)
+target_link_libraries(queuer KF5MailTransport Qt5::Widgets KF5::I18n KF5::ConfigGui KF5::Completion KF5::TextWidgets)
 
 set( sendqueued_srcs sendqueued.cpp )
 add_executable( sendqueued ${sendqueued_srcs} )

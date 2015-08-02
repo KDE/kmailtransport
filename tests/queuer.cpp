@@ -26,13 +26,14 @@
 
 #include <QApplication>
 #include <QDateTimeEdit>
-#include <KDialog>
 #include <QLineEdit>
 #include <KTextEdit>
 #include <QVBoxLayout>
 #include <control.h>
 
 #include <QDebug>
+#include <QDialog>
+#include <QDialogButtonBox>
 
 #include <dispatchmodeattribute.h>
 #include <messagequeuejob.h>
@@ -100,14 +101,17 @@ void MessageQueuer::sendQueuedClicked()
 
 void MessageQueuer::sendOnDateClicked()
 {
-    QPointer<KDialog> dialog = new KDialog(this);
+    QPointer<QDialog> dialog = new QDialog(this);
+    auto layout = new QVBoxLayout(dialog);
     QDateTimeEdit *dt = new QDateTimeEdit(dialog);
     dt->setDateTime(QDateTime::currentDateTime());
     dt->setDisplayFormat(QStringLiteral("hh:mm:ss"));
-    dialog->setMainWidget(dt);
-    dialog->enableButtonCancel(false);
-    dialog->exec();
-    if (!dialog) {
+    layout->addWidget(dt);
+    auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    connect(box, SIGNAL(accepted()), dialog, SLOT(accept()));
+    connect(box, SIGNAL(rejected()), dialog, SLOT(reject()));
+    layout->addWidget(box);
+    if (!dialog->exec() || !dialog) {
         return;
     }
     qDebug() << "DispatchMode AfterDueDate" << dt->dateTime();
