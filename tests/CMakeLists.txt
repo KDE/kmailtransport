@@ -19,19 +19,16 @@ target_link_libraries(queuer KF5MailTransport Qt5::Widgets KF5::I18n KF5::Config
 
 set( sendqueued_srcs sendqueued.cpp )
 add_executable( sendqueued ${sendqueued_srcs} )
-add_test(sendqueued sendqueued)
 ecm_mark_as_test(sendqueued)
 target_link_libraries( sendqueued KF5MailTransport  KF5::AkonadiMime Qt5::Widgets)
 
 set( clearerror_srcs clearerror.cpp )
 add_executable( clearerror ${clearerror_srcs} )
-add_test(clearerror clearerror)
 ecm_mark_as_test(clearerror)
 target_link_libraries( clearerror KF5MailTransport  KF5::AkonadiMime Qt5::Widgets)
 
 set( abort_srcs abort.cpp )
 add_executable( abort ${abort_srcs} )
-add_test(abort abort)
 ecm_mark_as_test(abort)
 target_link_libraries( abort KF5MailTransport KF5::AkonadiCore Qt5::Widgets)
 
