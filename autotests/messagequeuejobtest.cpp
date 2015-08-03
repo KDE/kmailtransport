@@ -37,7 +37,6 @@
 #include <specialmailcollectionsrequestjob.h>
 
 #include <kmime/kmime_message.h>
-#include <boost/shared_ptr.hpp>
 
 #include <dispatchmodeattribute.h>
 #include <errorattribute.h>

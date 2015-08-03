@@ -37,7 +37,6 @@
 #include <Akonadi/KMime/AddressAttribute>
 
 #include <kmime/kmime_message.h>
-#include <boost/shared_ptr.hpp>
 
 namespace MailTransport
 {
