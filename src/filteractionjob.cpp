@@ -27,7 +27,7 @@
 
 using namespace Akonadi;
 
-class Akonadi::FilterActionJob::Private
+class Q_DECL_HIDDEN Akonadi::FilterActionJob::Private
 {
 public:
     Private(FilterActionJob *qq)

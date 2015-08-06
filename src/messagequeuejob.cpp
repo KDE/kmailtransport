@@ -41,7 +41,7 @@ using namespace MailTransport;
 /**
   @internal
 */
-class MailTransport::MessageQueueJob::Private
+class Q_DECL_HIDDEN MailTransport::MessageQueueJob::Private
 {
 public:
     Private(MessageQueueJob *qq)

@@ -30,7 +30,7 @@
 
 using namespace MailTransport;
 
-class TransportManagementWidget::Private
+class Q_DECL_HIDDEN TransportManagementWidget::Private
 {
 public:
 
