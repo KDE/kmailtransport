@@ -35,7 +35,7 @@ class SocketPrivate;
  * with the ServerTest class.
  * @author Tom Albers <tomalbers@kde.nl>
  */
-class MAILTRANSPORT_EXPORT Socket : public QObject
+class Socket : public QObject
 {
     Q_OBJECT
 

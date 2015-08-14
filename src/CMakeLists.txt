@@ -105,7 +105,6 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
   PrecommandJob
   SentBehaviourAttribute
   ServerTest
-  Socket
   Transport
   TransportAttribute
   #TransportBase
