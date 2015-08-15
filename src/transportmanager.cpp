@@ -428,7 +428,7 @@ void TransportManagerPrivate::readConfig()
     QList<Transport *> oldTransports = transports;
     transports.clear();
 
-    QRegExp re(QLatin1String("^Transport (.+)$"));
+    QRegExp re(QStringLiteral("^Transport (.+)$"));
     QStringList groups = config->groupList().filter(re);
     foreach (const QString &s, groups) {
         if (re.indexIn(s) == -1) {
@@ -507,7 +507,7 @@ void TransportManagerPrivate::fillTypes()
         foreach (const AgentType &atype, AgentManager::self()->types()) {
             // TODO probably the string "MailTransport" should be #defined somewhere
             // and used like that in the resources (?)
-            if (atype.capabilities().contains(QLatin1String("MailTransport"))) {
+            if (atype.capabilities().contains(QStringLiteral("MailTransport"))) {
                 TransportType type;
                 type.d->mType = Transport::EnumType::Akonadi;
                 type.d->mAgentType = atype;
@@ -747,7 +747,7 @@ void TransportManagerPrivate::dbusServiceUnregistered()
 void TransportManagerPrivate::agentTypeAdded(const Akonadi::AgentType &atype)
 {
     using namespace Akonadi;
-    if (atype.capabilities().contains(QLatin1String("MailTransport"))) {
+    if (atype.capabilities().contains(QStringLiteral("MailTransport"))) {
         TransportType type;
         type.d->mType = Transport::EnumType::Akonadi;
         type.d->mAgentType = atype;

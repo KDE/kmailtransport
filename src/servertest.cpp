@@ -167,10 +167,10 @@ void ServerTestPrivate::handleSMTPIMAPResponse(int type, const QString &text)
     }
 
     QStringList protocols;
-    protocols << QLatin1String("LOGIN") << QLatin1String("PLAIN")
-              << QLatin1String("CRAM-MD5") << QLatin1String("DIGEST-MD5")
-              << QLatin1String("NTLM") << QLatin1String("GSSAPI")
-              << QLatin1String("ANONYMOUS");
+    protocols << QStringLiteral("LOGIN") << QStringLiteral("PLAIN")
+              << QStringLiteral("CRAM-MD5") << QStringLiteral("DIGEST-MD5")
+              << QStringLiteral("NTLM") << QStringLiteral("GSSAPI")
+              << QStringLiteral("ANONYMOUS");
 
     QStringList results;
     for (int i = 0; i < protocols.count(); ++i) {
@@ -198,7 +198,7 @@ void ServerTestPrivate::slotNormalPossible()
 void ServerTestPrivate::sendInitialCapabilityQuery(MailTransport::Socket *socket)
 {
     if (testProtocol == IMAP_PROTOCOL) {
-        socket->write(QLatin1String("1 CAPABILITY"));
+        socket->write(QStringLiteral("1 CAPABILITY"));
 
     } else if (testProtocol == SMTP_PROTOCOL) {
 
@@ -212,7 +212,7 @@ void ServerTestPrivate::sendInitialCapabilityQuery(MailTransport::Socket *socket
         } else {
             hostname = QHostInfo::localHostName();
             if (hostname.isEmpty()) {
-                hostname = QLatin1String("localhost.invalid");
+                hostname = QStringLiteral("localhost.invalid");
             } else if (!hostname.contains(QChar::fromLatin1('.'))) {
                 hostname += QLatin1String(".localnet");
             }
@@ -242,7 +242,7 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
         //Regexp taken from POP3 ioslave
         QString responseWithoutCRLF = response;
         responseWithoutCRLF.chop(2);
-        QRegExp re(QLatin1String("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"),
+        QRegExp re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"),
                    Qt::CaseInsensitive);
         if (responseWithoutCRLF.indexOf(re) != -1) {
             authenticationResults[type] << Transport::EnumAuthenticationType::APOP;
@@ -260,7 +260,7 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
                     << Transport::EnumAuthenticationType::APOP;
         }
 
-        socket->write(QLatin1String("CAPA"));
+        socket->write(QStringLiteral("CAPA"));
         return true;
     }
 
@@ -288,7 +288,7 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
             connectionResults << Transport::EnumEncryption::TLS;
             popSupportsTLS = true;
         }
-        socket->write(QLatin1String("AUTH"));
+        socket->write(QStringLiteral("AUTH"));
         return true;
     }
 
@@ -377,11 +377,11 @@ void ServerTestPrivate::slotReadNormal(const QString &text)
         qCDebug(MAILTRANSPORT_LOG) << "Trying TLS...";
         connectionResults << Transport::EnumEncryption::TLS;
         if (testProtocol == POP_PROTOCOL) {
-            normalSocket->write(QLatin1String("STLS"));
+            normalSocket->write(QStringLiteral("STLS"));
         } else if (testProtocol == IMAP_PROTOCOL) {
-            normalSocket->write(QLatin1String("2 STARTTLS"));
+            normalSocket->write(QStringLiteral("2 STARTTLS"));
         } else {
-            normalSocket->write(QLatin1String("STARTTLS"));
+            normalSocket->write(QStringLiteral("STARTTLS"));
         }
         encryptionMode = Transport::EnumEncryption::TLS;
         normalStage = tlsHandshakeStage;
@@ -490,7 +490,7 @@ void ServerTest::start()
 
     d->normalSocket = new MailTransport::Socket(this);
     d->secureSocket = new MailTransport::Socket(this);
-    d->normalSocket->setObjectName(QLatin1String("normal"));
+    d->normalSocket->setObjectName(QStringLiteral("normal"));
     d->normalSocket->setServer(d->server);
     d->normalSocket->setProtocol(d->testProtocol);
     if (d->testProtocol == IMAP_PROTOCOL) {
@@ -520,7 +520,7 @@ void ServerTest::start()
     d->normalSocketTimer->start(10000);
 
     if (d->secureSocket->port() > 0) {
-        d->secureSocket->setObjectName(QLatin1String("secure"));
+        d->secureSocket->setObjectName(QStringLiteral("secure"));
         d->secureSocket->setServer(d->server);
         d->secureSocket->setProtocol(d->testProtocol + QLatin1Char('s'));
         d->secureSocket->setSecure(true);
