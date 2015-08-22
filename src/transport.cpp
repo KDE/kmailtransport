@@ -283,7 +283,7 @@ void Transport::readPassword()
         // try migrating password from kmail
         if (Wallet::folderDoesNotExist(Wallet::NetworkWallet(), KMAIL_WALLET_FOLDER) ||
                 Wallet::keyDoesNotExist(Wallet::NetworkWallet(), KMAIL_WALLET_FOLDER,
-                                        QString::fromLatin1("transport-%1").arg(id()))) {
+                                        QStringLiteral("transport-%1").arg(id()))) {
             return;
         }
         qCDebug(MAILTRANSPORT_LOG) << "migrating password from kmail wallet";
@@ -291,14 +291,14 @@ void Transport::readPassword()
         if (wallet) {
             QString pwd;
             wallet->setFolder(KMAIL_WALLET_FOLDER);
-            if (wallet->readPassword(QString::fromLatin1("transport-%1").arg(id()), pwd) == 0) {
+            if (wallet->readPassword(QStringLiteral("transport-%1").arg(id()), pwd) == 0) {
                 setPassword(pwd);
                 save();
             } else {
                 d->password.clear();
                 d->passwordLoaded = false;
             }
-            wallet->removeEntry(QString::fromLatin1("transport-%1").arg(id()));
+            wallet->removeEntry(QStringLiteral("transport-%1").arg(id()));
             wallet->setFolder(WALLET_FOLDER);
         }
         return;
