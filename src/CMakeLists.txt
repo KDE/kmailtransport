@@ -4,7 +4,6 @@ add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 
 
 set(mailtransport_lib_srcs
-  mailtransport_debug.cpp
   transport.cpp
   transportmanager.cpp
   transporttype.cpp
@@ -39,6 +38,8 @@ set(mailtransport_lib_srcs
   transportmanagementwidget.cpp
   addtransportdialog.cpp
 )
+
+ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME log_mailtransport)
 
 ki18n_wrap_ui(mailtransport_lib_srcs
   ui/addtransportdialog.ui
