@@ -200,7 +200,7 @@ void Transport::usrRead()
                 // to reentrancy problems in KDBusServiceStarter when an application
                 // run in Kontact creates the transports (due to a QEventLoop in the
                 // synchronous KWallet openWallet call).
-                QTimer::singleShot(0, this, SLOT(readPassword()));
+                QTimer::singleShot(0, this, &Transport::readPassword);
             } else {
                 d->passwordLoaded = false;
             }

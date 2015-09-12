@@ -68,7 +68,7 @@ void DispatcherInterface::dispatchManually()
     }
 
     FilterActionJob *mjob = new FilterActionJob(outbox, new SendQueuedAction, sInstance);
-    QObject::connect(mjob, SIGNAL(result(KJob*)), sInstance, SLOT(massModifyResult(KJob*)));
+    QObject::connect(mjob, &KJob::result, sInstance, &DispatcherInterfacePrivate::massModifyResult);
 }
 
 void DispatcherInterface::retryDispatching()
@@ -81,7 +81,7 @@ void DispatcherInterface::retryDispatching()
     }
 
     FilterActionJob *mjob = new FilterActionJob(outbox, new ClearErrorAction, sInstance);
-    QObject::connect(mjob, SIGNAL(result(KJob*)), sInstance, SLOT(massModifyResult(KJob*)));
+    QObject::connect(mjob, &KJob::result, sInstance, &DispatcherInterfacePrivate::massModifyResult);
 }
 
 void DispatcherInterface::dispatchManualTransport(int transportId)
@@ -95,7 +95,7 @@ void DispatcherInterface::dispatchManualTransport(int transportId)
 
     FilterActionJob *mjob =
         new FilterActionJob(outbox, new DispatchManualTransportAction(transportId), sInstance);
-    QObject::connect(mjob, SIGNAL(result(KJob*)), sInstance, SLOT(massModifyResult(KJob*)));
+    QObject::connect(mjob, &KJob::result, sInstance, &DispatcherInterfacePrivate::massModifyResult);
 }
 
 #include "moc_dispatcherinterface_p.cpp"
