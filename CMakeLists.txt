@@ -19,7 +19,7 @@ include(ECMQtDeclareLoggingCategory)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
 
-set(KF5_VERSION "5.12.0")
+set(KF5_VERSION "5.14.0")
 
 set(KMAILTRANSPORT_LIB_VERSION "4.81.0")
 
