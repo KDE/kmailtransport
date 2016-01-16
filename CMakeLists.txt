@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 2.8.12)
 project(MailTransport)
 
 # ECM setup
-find_package(ECM 5.14.0 CONFIG REQUIRED)
+find_package(ECM 5.17.0 CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${MailTransport_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
 
 include(GenerateExportHeader)
@@ -19,13 +19,13 @@ include(ECMQtDeclareLoggingCategory)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
 
-set(KF5_VERSION "5.14.0")
+set(KF5_VERSION "5.17.0")
 
-set(KMAILTRANSPORT_LIB_VERSION "4.81.0")
+set(KMAILTRANSPORT_LIB_VERSION "5.1.40")
 
-set(KMIME_LIB_VERSION "4.83.0")
-set(AKONADI_LIB_VERSION "4.81.0")
-set(AKONADIMIME_LIB_VERSION "4.81.0")
+set(KMIME_LIB_VERSION "5.1.40")
+set(AKONADI_LIB_VERSION "5.1.40")
+set(AKONADIMIME_LIB_VERSION "5.1.40")
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
 
 ecm_setup_version(${KMAILTRANSPORT_LIB_VERSION} VARIABLE_PREFIX MAILTRANSPORT
