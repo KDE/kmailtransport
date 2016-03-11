@@ -7,8 +7,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>392</width>
-    <height>446</height>
+    <width>405</width>
+    <height>470</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -31,7 +31,7 @@
           <item row="0" column="0">
            <widget class="QLabel" name="hostLabel">
             <property name="text">
-             <string>Outgoing mail &amp;server:</string>
+             <string>Outgoing &amp;mail server:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -42,7 +42,11 @@
            </widget>
           </item>
           <item row="0" column="1">
-           <widget class="QLineEdit" name="kcfg_host"/>
+           <widget class="KLineEdit" name="kcfg_host">
+            <property name="trapEnterKeyEvent" stdset="0">
+             <bool>true</bool>
+            </property>
+           </widget>
           </item>
           <item row="2" column="0">
            <widget class="QLabel" name="usernameLabel">
@@ -61,9 +65,12 @@
            </widget>
           </item>
           <item row="2" column="1">
-           <widget class="QLineEdit" name="kcfg_userName">
+           <widget class="KLineEdit" name="kcfg_userName">
             <property name="enabled">
              <bool>false</bool>
+            </property>
+            <property name="trapEnterKeyEvent" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -84,7 +91,7 @@
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="password">
+           <widget class="KLineEdit" name="password">
             <property name="enabled">
              <bool>false</bool>
             </property>
@@ -93,6 +100,9 @@
             </property>
             <property name="echoMode">
              <enum>QLineEdit::Password</enum>
+            </property>
+            <property name="trapEnterKeyEvent" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -293,7 +303,7 @@
              <bool>false</bool>
             </property>
             <property name="text">
-             <string>Hos&amp;tname:</string>
+             <string>Hostna&amp;me:</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -304,9 +314,12 @@
            </widget>
           </item>
           <item row="1" column="1">
-           <widget class="QLineEdit" name="kcfg_localHostname">
+           <widget class="KLineEdit" name="kcfg_localHostname">
             <property name="enabled">
              <bool>false</bool>
+            </property>
+            <property name="trapEnterKeyEvent" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -328,9 +341,12 @@
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="QLineEdit" name="kcfg_senderOverwriteAddress">
+           <widget class="KLineEdit" name="kcfg_senderOverwriteAddress">
             <property name="enabled">
              <bool>false</bool>
+            </property>
+            <property name="trapEnterKeyEvent" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -345,8 +361,10 @@
            </widget>
           </item>
           <item row="4" column="1">
-           <widget class="QLineEdit" name="kcfg_precommand">
-            <zorder>precommandLabel</zorder>
+           <widget class="KLineEdit" name="kcfg_precommand">
+            <property name="trapEnterKeyEvent" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
          </layout>
@@ -371,6 +389,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>KLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>klineedit.h</header>
+  </customwidget>
+ </customwidgets>
  <tabstops>
   <tabstop>tabWidget</tabstop>
   <tabstop>kcfg_host</tabstop>
