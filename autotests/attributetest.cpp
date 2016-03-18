@@ -42,31 +42,37 @@ void AttributeTest::testRegistrar()
     {
         Attribute *a = AttributeFactory::createAttribute("AddressAttribute");
         QVERIFY(dynamic_cast<AddressAttribute *>(a));
+        delete a;
     }
 
     {
         Attribute *a = AttributeFactory::createAttribute("DispatchModeAttribute");
         QVERIFY(dynamic_cast<DispatchModeAttribute *>(a));
+        delete a;
     }
 
     {
         Attribute *a = AttributeFactory::createAttribute("ErrorAttribute");
         QVERIFY(dynamic_cast<ErrorAttribute *>(a));
+        delete a;
     }
 
     {
         Attribute *a = AttributeFactory::createAttribute("SentActionAttribute");
         QVERIFY(dynamic_cast<SentActionAttribute *>(a));
+        delete a;
     }
 
     {
         Attribute *a = AttributeFactory::createAttribute("SentBehaviourAttribute");
         QVERIFY(dynamic_cast<SentBehaviourAttribute *>(a));
+        delete a;
     }
 
     {
         Attribute *a = AttributeFactory::createAttribute("TransportAttribute");
         QVERIFY(dynamic_cast<TransportAttribute *>(a));
+        delete a;
     }
 }
 
@@ -150,6 +156,7 @@ void AttributeTest::testSerialization()
         a->deserialize(data);
         QCOMPARE(beh, a->sentBehaviour());
         QCOMPARE(id, a->moveToCollection().id());
+        delete a;
     }
 
     {
@@ -160,6 +167,7 @@ void AttributeTest::testSerialization()
         a = new TransportAttribute;
         a->deserialize(data);
         QCOMPARE(id, a->transportId());
+        delete a;
     }
 }
 
