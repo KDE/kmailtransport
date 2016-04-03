@@ -38,7 +38,7 @@ ecm_setup_version(${KMAILTRANSPORT_LIB_VERSION} VARIABLE_PREFIX MAILTRANSPORT
 find_package(KF5KCMUtils ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5ConfigWidgets ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Wallet ${KF5_VERSION} CONFIG REQUIRED)
-
+find_package(KF5DocTools ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG REQUIRED)
@@ -77,12 +77,12 @@ install(EXPORT KF5MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" 
 ########### Targets ###########
 add_subdirectory(cmake)
 add_subdirectory(src)
-
+add_subdirectory(kioslave)
 if(BUILD_TESTING)
     add_subdirectory(tests)
     add_subdirectory(autotests)
 endif()
 
-
+install( FILES kmailtransport.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 
