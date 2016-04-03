@@ -30,7 +30,7 @@ target_link_libraries(test_headergeneration  Qt5::Test )
 set(test_commands_SRCS test_commands.cpp )
 ecm_qt_declare_logging_category(test_commands_SRCS HEADER smtp_debug.h IDENTIFIER SMTP_LOG CATEGORY_NAME log_smtp)
 
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. ${Sasl2_INCLUDE_DIRS}  ${kioslave_SOURCE_DIR}/src/)
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../../ ${Sasl2_INCLUDE_DIRS}  )
 
 add_executable( test_commands ${test_commands_SRCS} )
 add_test( test_commands test_commands )
@@ -49,7 +49,7 @@ target_link_libraries(interactivesmtpserver    Qt5::Test Qt5::Widgets Qt5::Netwo
 ########### next target ###############
 set(test_capabilities_SRCS test_capabilities.cpp ../capabilities.cpp )
 
-include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. ${kioslave_SOURCE_DIR}/src/smtp)
+include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../)
 
 add_executable( test_capabilities ${test_capabilities_SRCS} )
 ecm_mark_as_test(test-capabilities)
