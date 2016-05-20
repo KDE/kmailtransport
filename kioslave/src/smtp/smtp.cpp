@@ -164,8 +164,10 @@ void SMTPProtocol::special(const QByteArray &aData)
 // profile=text (this will override the "host" setting)
 // hostname=text (used in the HELO)
 // body={7bit,8bit} (default: 7bit; 8bit activates the use of the 8BITMIME SMTP extension)
-void SMTPProtocol::put(const QUrl &url, int permissions, KIO::JobFlags)
+void SMTPProtocol::put(const QUrl &url, int permissions, KIO::JobFlags flags)
 {
+    Q_UNUSED(permissions);
+    Q_UNUSED(flags);
     Request request = Request::fromURL(url);   // parse settings from URL's query
 
     KEMailSettings mset;
