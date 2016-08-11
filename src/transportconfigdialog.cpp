@@ -83,8 +83,7 @@ TransportConfigDialog::TransportConfigDialog(Transport *transport, QWidget *pare
 {
     Q_ASSERT(transport);
     d->transport = transport;
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     bool pathIsEmpty = false;
     switch (transport->type()) {
     case Transport::EnumType::SMTP: {
@@ -103,7 +102,7 @@ TransportConfigDialog::TransportConfigDialog(Transport *transport, QWidget *pare
     }
     }
     mainLayout->addWidget(d->configWidget);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     d->okButton = buttonBox->button(QDialogButtonBox::Ok);
     d->okButton->setEnabled(false);
     d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
