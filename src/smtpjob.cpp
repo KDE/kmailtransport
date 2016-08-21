@@ -31,6 +31,7 @@
 
 #include <KLocalizedString>
 #include <QUrl>
+#include <QUrlQuery>
 #include "mailtransport_debug.h"
 #include <KIO/Job>
 #include <KIO/Scheduler>
@@ -150,21 +151,22 @@ void SmtpJob::startSmtpJob()
     destination.setHost(transport()->host().trimmed());
     destination.setPort(transport()->port());
 
-    destination.addQueryItem(QStringLiteral("headers"), QStringLiteral("0"));
-    destination.addQueryItem(QStringLiteral("from"), sender());
+    QUrlQuery destinationQuery(destination);
+    destinationQuery.addQueryItem(QStringLiteral("headers"), QStringLiteral("0"));
+    destinationQuery.addQueryItem(QStringLiteral("from"), sender());
 
     foreach (const QString &str, to()) {
-        destination.addQueryItem(QStringLiteral("to"), str);
+        destinationQuery.addQueryItem(QStringLiteral("to"), str);
     }
     foreach (const QString &str, cc()) {
-        destination.addQueryItem(QStringLiteral("cc"), str);
+        destinationQuery.addQueryItem(QStringLiteral("cc"), str);
     }
     foreach (const QString &str, bcc()) {
-        destination.addQueryItem(QStringLiteral("bcc"), str);
+        destinationQuery.addQueryItem(QStringLiteral("bcc"), str);
     }
 
     if (transport()->specifyHostname()) {
-        destination.addQueryItem(QStringLiteral("hostname"), transport()->localHostname());
+        destinationQuery.addQueryItem(QStringLiteral("hostname"), transport()->localHostname());
     }
 
     if (transport()->requiresAuthentication()) {
@@ -209,11 +211,12 @@ void SmtpJob::startSmtpJob()
     if (!data().isEmpty()) {
         // allow +5% for subsequent LF->CRLF and dotstuffing (an average
         // over 2G-lines gives an average line length of 42-43):
-        destination.addQueryItem(QStringLiteral("size"),
+        destinationQuery.addQueryItem(QStringLiteral("size"),
                                  QString::number(qRound(data().length() * 1.05)));
     }
 
     destination.setPath(QStringLiteral("/send"));
+    destination.setQuery(destinationQuery);
 
 #ifndef MAILTRANSPORT_INPROCESS_SMTP
     d->slave = s_slavePool->slaves.value(transport()->id());
