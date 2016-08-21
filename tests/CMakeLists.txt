@@ -1,6 +1,7 @@
 
 include(ECMMarkAsTest)
 
+find_package(KF5TextWidgets ${KF5_VERSION} CONFIG REQUIRED)
 find_package(Qt5Test CONFIG REQUIRED)
 
 set(tm_srcs transportmgr.cpp)
