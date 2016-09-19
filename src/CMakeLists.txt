@@ -39,7 +39,7 @@ set(mailtransport_lib_srcs
   addtransportdialog.cpp
 )
 
-ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME log_mailtransport)
+ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport)
 
 ki18n_wrap_ui(mailtransport_lib_srcs
   ui/addtransportdialog.ui
