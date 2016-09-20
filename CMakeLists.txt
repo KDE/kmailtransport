@@ -87,6 +87,6 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-install( FILES kmailtransport.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES kmailtransport.renamecategories kmailtransport.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
 

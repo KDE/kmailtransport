@@ -28,7 +28,7 @@ set(kio_smtp_PART_SRCS
    kioslavesession.cpp
 )
 
-ecm_qt_declare_logging_category(kio_smtp_PART_SRCS HEADER smtp_debug.h IDENTIFIER SMTP_LOG CATEGORY_NAME log_smtp)
+ecm_qt_declare_logging_category(kio_smtp_PART_SRCS HEADER smtp_debug.h IDENTIFIER SMTP_LOG CATEGORY_NAME org.kde.pim.smtp)
 
 add_library(kio_smtp MODULE ${kio_smtp_PART_SRCS})
 
