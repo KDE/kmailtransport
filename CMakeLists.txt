@@ -21,7 +21,7 @@ include(ECMQtDeclareLoggingCategory)
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
 
 
-set(PIM_VERSION "5.3.40")
+set(PIM_VERSION "5.3.41")
 
 set(KMAILTRANSPORT_LIB_VERSION ${PIM_VERSION})
 
