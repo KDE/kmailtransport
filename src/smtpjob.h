@@ -25,6 +25,8 @@
 
 #include <transportjob.h>
 
+#include <mailtransport_export.h>
+
 namespace KIO
 {
 class Job;
@@ -48,7 +50,7 @@ class SmtpSession;
   Precommands are automatically executed, once per opening a connection to the
   server (not necessarily once per message).
 */
-class SmtpJob : public TransportJob
+class MAILTRANSPORT_EXPORT SmtpJob : public TransportJob
 {
     Q_OBJECT
 public:
