@@ -52,7 +52,8 @@ public:
       Creates a new SentBehaviourAttribute.
     */
     explicit SentBehaviourAttribute(SentBehaviour beh = MoveToDefaultSentCollection,
-                                    const Akonadi::Collection &moveToCollection = Akonadi::Collection(-1));
+                                    const Akonadi::Collection &moveToCollection = Akonadi::Collection(-1),
+                                    bool sendSilently = false);
 
     /**
       Destroys the SentBehaviourAttribute.
@@ -92,6 +93,20 @@ public:
     */
     void setMoveToCollection(const Akonadi::Collection &moveToCollection);
 
+    /**
+     * Returns whether a notification should be shown after the email is sent.
+     * @since 5.4
+     */
+    bool sendSilently() const;
+
+    /**
+     * Set whether a notification should be shown after the email is sent.
+     *
+     * Default is false.
+     *
+     * @since 5.4
+     */
+    void setSendSilently(bool sendSilently);
 private:
     class Private;
     Private *const d;

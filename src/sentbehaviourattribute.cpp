@@ -25,15 +25,18 @@ using namespace MailTransport;
 class SentBehaviourAttribute::Private
 {
 public:
-    SentBehaviour mBehaviour;
+    SentBehaviourAttribute::SentBehaviour mBehaviour;
     Akonadi::Collection mMoveToCollection;
+    bool mSilent;
 };
 
-SentBehaviourAttribute::SentBehaviourAttribute(SentBehaviour beh, const Collection &moveToCollection)
+SentBehaviourAttribute::SentBehaviourAttribute(SentBehaviour beh, const Collection &moveToCollection,
+                                               bool sendSilently)
     : d(new Private)
 {
     d->mBehaviour = beh;
     d->mMoveToCollection = moveToCollection;
+    d->mSilent = sendSilently;
 }
 
 SentBehaviourAttribute::~SentBehaviourAttribute()
@@ -54,10 +57,22 @@ QByteArray SentBehaviourAttribute::type() const
 
 QByteArray SentBehaviourAttribute::serialized() const
 {
+    QByteArray out;
+
     switch (d->mBehaviour) {
-    case Delete: return "delete";
-    case MoveToCollection: return "moveTo" + QByteArray::number(d->mMoveToCollection.id());
-    case MoveToDefaultSentCollection: return "moveToDefault";
+    case Delete:
+        out = "delete";
+        break;
+    case MoveToCollection: 
+        out = "moveTo" + QByteArray::number(d->mMoveToCollection.id());
+        break;
+    case MoveToDefaultSentCollection:
+        out = "moveToDefault";
+        break;
+    }
+
+    if (d->mSilent) {
+        out += ",silent";
     }
 
     Q_ASSERT(false);
@@ -66,17 +81,24 @@ QByteArray SentBehaviourAttribute::serialized() const
 
 void SentBehaviourAttribute::deserialize(const QByteArray &data)
 {
+    const QByteArrayList in = data.split(',');
+    Q_ASSERT(in.size() > 0);
+
     d->mMoveToCollection = Akonadi::Collection(-1);
-    if (data == "delete") {
+    if (in[0] == "delete") {
         d->mBehaviour = Delete;
-    } else if (data == "moveToDefault") {
+    } else if (in[0] == "moveToDefault") {
         d->mBehaviour = MoveToDefaultSentCollection;
-    } else if (data.startsWith(QByteArray("moveTo"))) {
+    } else if (in[0].startsWith(QByteArray("moveTo"))) {
         d->mBehaviour = MoveToCollection;
         d->mMoveToCollection = Akonadi::Collection(data.mid(6).toLongLong());
         // NOTE: 6 is the strlen of "moveTo".
     } else {
         Q_ASSERT(false);
+    }
+
+    if (in.size() == 2 && in[1] == "silent") {
+        d->mSilent = true;
     }
 }
 
@@ -98,5 +120,15 @@ Collection SentBehaviourAttribute::moveToCollection() const
 void SentBehaviourAttribute::setMoveToCollection(const Collection &moveToCollection)
 {
     d->mMoveToCollection = moveToCollection;
+}
+
+bool SentBehaviourAttribute::sendSilently() const
+{
+    return d->mSilent;
+}
+
+void SentBehaviourAttribute::setSendSilently(bool sendSilently)
+{
+    d->mSilent = sendSilently;
 }
 
