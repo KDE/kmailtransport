@@ -69,14 +69,16 @@ QByteArray SentBehaviourAttribute::serialized() const
     case MoveToDefaultSentCollection:
         out = "moveToDefault";
         break;
+    default:
+        Q_ASSERT(false);
+        return QByteArray();
     }
 
     if (d->mSilent) {
         out += ",silent";
     }
 
-    Q_ASSERT(false);
-    return QByteArray();
+    return out;
 }
 
 void SentBehaviourAttribute::deserialize(const QByteArray &data)
