@@ -46,7 +46,7 @@ SentBehaviourAttribute::~SentBehaviourAttribute()
 
 SentBehaviourAttribute *SentBehaviourAttribute::clone() const
 {
-    return new SentBehaviourAttribute(d->mBehaviour, d->mMoveToCollection);
+    return new SentBehaviourAttribute(d->mBehaviour, d->mMoveToCollection, d->mSilent);
 }
 
 QByteArray SentBehaviourAttribute::type() const
