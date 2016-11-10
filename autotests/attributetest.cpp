@@ -162,6 +162,7 @@ void AttributeTest::testSerialization()
         delete a;
     }
 
+    //MoveToCollection + silently
     {
         SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::MoveToCollection;
         Collection::Id id = 123456789012345ll;
@@ -174,6 +175,42 @@ void AttributeTest::testSerialization()
         a->deserialize(data);
         QCOMPARE(beh, a->sentBehaviour());
         QCOMPARE(id, a->moveToCollection().id());
+        QCOMPARE(sendSilently, a->sendSilently());
+        delete a;
+    }
+
+    //Delete + silently
+    {
+        SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::Delete;
+        Collection::Id id = 123456789012345ll;
+        SentBehaviourAttribute *a = new SentBehaviourAttribute(beh, Collection(id));
+        bool sendSilently = true;
+        a->setSendSilently(sendSilently);
+        QByteArray data = a->serialized();
+        delete a;
+        a = new SentBehaviourAttribute;
+        a->deserialize(data);
+        QCOMPARE(beh, a->sentBehaviour());
+        //When delete we move to -1
+        QCOMPARE(a->moveToCollection().id(), -1);
+        QCOMPARE(sendSilently, a->sendSilently());
+        delete a;
+    }
+
+    //MoveToDefaultSentCollection + silently
+    {
+        SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::MoveToDefaultSentCollection;
+        Collection::Id id = 123456789012345ll;
+        SentBehaviourAttribute *a = new SentBehaviourAttribute(beh, Collection(id));
+        bool sendSilently = true;
+        a->setSendSilently(sendSilently);
+        QByteArray data = a->serialized();
+        delete a;
+        a = new SentBehaviourAttribute;
+        a->deserialize(data);
+        QCOMPARE(beh, a->sentBehaviour());
+        //When movetodefaultsendCollection we move to -1
+        QCOMPARE(a->moveToCollection().id(), -1);
         QCOMPARE(sendSilently, a->sendSilently());
         delete a;
     }
