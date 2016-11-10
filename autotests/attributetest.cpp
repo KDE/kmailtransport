@@ -147,6 +147,7 @@ void AttributeTest::testSerialization()
 
         QCOMPARE(SentActionAttribute::Action::MarkAsForwarded, actions[1].type());
         QCOMPARE(id, actions[1].value().toLongLong());
+        delete a;
     }
 
     {
