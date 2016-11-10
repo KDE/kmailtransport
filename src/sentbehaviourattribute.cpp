@@ -93,7 +93,7 @@ void SentBehaviourAttribute::deserialize(const QByteArray &data)
         d->mBehaviour = MoveToDefaultSentCollection;
     } else if (in[0].startsWith(QByteArray("moveTo"))) {
         d->mBehaviour = MoveToCollection;
-        d->mMoveToCollection = Akonadi::Collection(data.mid(6).toLongLong());
+        d->mMoveToCollection = Akonadi::Collection(in[0].mid(6).toLongLong());
         // NOTE: 6 is the strlen of "moveTo".
     } else {
         Q_ASSERT(false);
