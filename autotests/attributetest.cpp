@@ -176,9 +176,12 @@ void AttributeTest::testSerialization()
         QCOMPARE(beh, a->sentBehaviour());
         QCOMPARE(id, a->moveToCollection().id());
         QCOMPARE(sendSilently, a->sendSilently());
+        SentBehaviourAttribute *copy = a->clone();
+        QCOMPARE(copy->sentBehaviour(), beh);
+        QCOMPARE(copy->moveToCollection().id(), id);
+        QCOMPARE(copy->sendSilently(), sendSilently);
         delete a;
-        SentBehaviourAttribute::SentBehaviour copy = beh;
-        QCOMPARE(beh, copy);
+        delete copy;
     }
 
     //Delete + silently
@@ -196,9 +199,13 @@ void AttributeTest::testSerialization()
         //When delete we move to -1
         QCOMPARE(a->moveToCollection().id(), -1);
         QCOMPARE(sendSilently, a->sendSilently());
+        SentBehaviourAttribute *copy = a->clone();
+        QCOMPARE(copy->sentBehaviour(), beh);
+        //When delete we move to -1
+        QCOMPARE(copy->moveToCollection().id(), -1);
+        QCOMPARE(copy->sendSilently(), sendSilently);
         delete a;
-        SentBehaviourAttribute::SentBehaviour copy = beh;
-        QCOMPARE(beh, copy);
+        delete copy;
     }
 
     //MoveToDefaultSentCollection + silently
@@ -216,10 +223,13 @@ void AttributeTest::testSerialization()
         //When movetodefaultsendCollection we move to -1
         QCOMPARE(a->moveToCollection().id(), -1);
         QCOMPARE(sendSilently, a->sendSilently());
+        SentBehaviourAttribute *copy = a->clone();
+        QCOMPARE(copy->sentBehaviour(), beh);
+        //When movetodefaultsendCollection we move to -1
+        QCOMPARE(copy->moveToCollection().id(), -1);
+        QCOMPARE(copy->sendSilently(), sendSilently);
         delete a;
-        SentBehaviourAttribute::SentBehaviour copy = beh;
-        QCOMPARE(beh, copy);
-
+        delete copy;
     }
 
     {
