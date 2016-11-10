@@ -95,6 +95,7 @@ void AttributeTest::testSerialization()
         QCOMPARE(to, a->to());
         QCOMPARE(cc, a->cc());
         QCOMPARE(bcc, a->bcc());
+        delete a;
     }
 
     {
@@ -112,6 +113,7 @@ void AttributeTest::testSerialization()
         a->deserialize(data);
         QCOMPARE(mode, a->dispatchMode());
         QCOMPARE(date, a->sendAfter());
+        delete a;
     }
 
     {
@@ -122,6 +124,7 @@ void AttributeTest::testSerialization()
         a = new ErrorAttribute;
         a->deserialize(data);
         QCOMPARE(msg, a->message());
+        delete a;
     }
 
     {
