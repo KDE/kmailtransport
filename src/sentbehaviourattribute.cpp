@@ -86,14 +86,15 @@ void SentBehaviourAttribute::deserialize(const QByteArray &data)
     const QByteArrayList in = data.split(',');
     Q_ASSERT(in.size() > 0);
 
+    const QByteArray attr0 = in[0];
     d->mMoveToCollection = Akonadi::Collection(-1);
-    if (in[0] == "delete") {
+    if (attr0 == "delete") {
         d->mBehaviour = Delete;
-    } else if (in[0] == "moveToDefault") {
+    } else if (attr0 == "moveToDefault") {
         d->mBehaviour = MoveToDefaultSentCollection;
-    } else if (in[0].startsWith(QByteArray("moveTo"))) {
+    } else if (attr0.startsWith(QByteArray("moveTo"))) {
         d->mBehaviour = MoveToCollection;
-        d->mMoveToCollection = Akonadi::Collection(in[0].mid(6).toLongLong());
+        d->mMoveToCollection = Akonadi::Collection(attr0.mid(6).toLongLong());
         // NOTE: 6 is the strlen of "moveTo".
     } else {
         Q_ASSERT(false);
