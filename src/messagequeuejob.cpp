@@ -80,8 +80,8 @@ bool MessageQueueJob::Private::validate()
         return false;
     }
 
-    if (addressAttribute.to().count() + addressAttribute.cc().count() +
-            addressAttribute.bcc().count() == 0) {
+    if ((addressAttribute.to().count() + addressAttribute.cc().count() +
+            addressAttribute.bcc().count()) == 0) {
         q->setError(UserDefinedError);
         q->setErrorText(i18n("Message has no recipients."));
         q->emitResult();

@@ -102,7 +102,7 @@ public:
             }
         }
 
-        if (capa.count() == 0) {
+        if (capa.isEmpty()) {
             ui.noAuthPossible->setVisible(true);
             ui.kcfg_requiresAuthentication->setChecked(false);
             ui.kcfg_requiresAuthentication->setEnabled(false);
