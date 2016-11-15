@@ -41,6 +41,7 @@ class Transport;
 */
 class MAILTRANSPORT_DEPRECATED_EXPORT TransportJob : public KCompositeJob
 {
+    Q_OBJECT
     friend class TransportManager;
 
 public:

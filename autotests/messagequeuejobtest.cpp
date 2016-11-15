@@ -97,7 +97,7 @@ void MessageQueueJobTest::testValidMessages()
     fjob->fetchScope().fetchAllAttributes();
     AKVERIFYEXEC(fjob);
     QCOMPARE(fjob->items().count(), 1);
-    Item item = fjob->items().first();
+    Item item = fjob->items().constFirst();
     QVERIFY(!item.remoteId().isEmpty());   // stored by the resource
     QVERIFY(item.hasPayload<Message::Ptr>());
     AddressAttribute *addrA = item.attribute<AddressAttribute>();
