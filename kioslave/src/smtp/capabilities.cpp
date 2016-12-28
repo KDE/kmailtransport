@@ -102,7 +102,7 @@ QString Capabilities::createSpecialResponse(bool tls) const
             result.push_back(QStringLiteral("SIZE"));    // indetermined
         }
     }
-    return result.join(QStringLiteral(" "));
+    return result.join(QLatin1Char(' '));
 }
 
 QStringList Capabilities::saslMethodsQSL() const

@@ -617,7 +617,7 @@ bool SMTPProtocol::authenticate()
         strList = m_sessionIface->capabilities().saslMethodsQSL();
     }
 
-    const QByteArray ba = strList.join(QStringLiteral(" ")).toLatin1();
+    const QByteArray ba = strList.join(QLatin1Char(' ')).toLatin1();
     AuthCommand authCmd(m_sessionIface, ba.constData(), m_sServer, authInfo);
     bool ret = execute(&authCmd);
     m_sUser = authInfo.username;
