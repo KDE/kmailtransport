@@ -49,7 +49,7 @@ public:
       @param transport The transport object to use.
       @param parent The parent object.
     */
-    explicit ResourceSendJob(Transport *transport, QObject *parent = Q_NULLPTR);
+    explicit ResourceSendJob(Transport *transport, QObject *parent = nullptr);
 
     /**
       Destroys this job.

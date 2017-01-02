@@ -34,7 +34,7 @@ class TransportListView : public QTreeWidget
     Q_OBJECT
 
 public:
-    explicit TransportListView(QWidget *parent = Q_NULLPTR);
+    explicit TransportListView(QWidget *parent = nullptr);
     //virtual ~TransportListView() {}
 
     // overloaded from QTreeWidget

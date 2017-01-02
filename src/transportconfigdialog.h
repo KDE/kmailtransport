@@ -56,7 +56,7 @@ public:
      * added to the TransportManager yet.
      * @param parent The parent widget.
      */
-    explicit TransportConfigDialog(Transport *transport, QWidget *parent = Q_NULLPTR);
+    explicit TransportConfigDialog(Transport *transport, QWidget *parent = nullptr);
 
     /**
      * Destroys the transport config dialog.

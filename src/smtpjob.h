@@ -59,7 +59,7 @@ public:
       @param transport The transport settings.
       @param parent The parent object.
     */
-    explicit SmtpJob(Transport *transport, QObject *parent = Q_NULLPTR);
+    explicit SmtpJob(Transport *transport, QObject *parent = nullptr);
 
     /**
       Deletes this job.

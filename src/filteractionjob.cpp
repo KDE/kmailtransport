@@ -31,7 +31,7 @@ class Q_DECL_HIDDEN Akonadi::FilterActionJob::Private
 {
 public:
     Private(FilterActionJob *qq)
-        : q(qq), functor(Q_NULLPTR)
+        : q(qq), functor(nullptr)
     {
     }
 

@@ -100,7 +100,7 @@ protected:
       @param parent The parent object.
       @see TransportManager::createTransportJob()
     */
-    explicit TransportJob(Transport *transport, QObject *parent = Q_NULLPTR);
+    explicit TransportJob(Transport *transport, QObject *parent = nullptr);
 
     /**
       Returns the sender of the mail.

@@ -51,7 +51,7 @@ public:
       @param precommand The command to run.
       @param parent The parent object.
     */
-    explicit PrecommandJob(const QString &precommand, QObject *parent = Q_NULLPTR);
+    explicit PrecommandJob(const QString &precommand, QObject *parent = nullptr);
 
     /**
       Destroys this job.

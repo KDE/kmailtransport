@@ -48,7 +48,7 @@ public:
 };
 
 PreCommandJobPrivate::PreCommandJobPrivate(PrecommandJob *parent)
-    : process(Q_NULLPTR), q(parent)
+    : process(nullptr), q(parent)
 {
 }
 
@@ -94,7 +94,7 @@ void PreCommandJobPrivate::slotError(QProcess::ProcessError error)
 bool PrecommandJob::doKill()
 {
     delete d->process;
-    d->process = Q_NULLPTR;
+    d->process = nullptr;
     return true;
 }
 

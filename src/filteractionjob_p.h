@@ -141,7 +141,7 @@ public:
      * @param functor The FilterAction to use.
      * @param parent The parent object.
      */
-    FilterActionJob(const Item &item, FilterAction *functor, QObject *parent = Q_NULLPTR);
+    FilterActionJob(const Item &item, FilterAction *functor, QObject *parent = nullptr);
 
     /**
      * Creates a filter action job to act on a set of items.
@@ -150,7 +150,7 @@ public:
      * @param functor The FilterAction to use.
      * @param parent The parent object.
      */
-    FilterActionJob(const Item::List &items, FilterAction *functor, QObject *parent = Q_NULLPTR);
+    FilterActionJob(const Item::List &items, FilterAction *functor, QObject *parent = nullptr);
 
     /**
      * Creates a filter action job to act on items in a collection.
@@ -160,7 +160,7 @@ public:
      * @param functor The FilterAction to use.
      * @param parent The parent object.
      */
-    FilterActionJob(const Collection &collection, FilterAction *functor, QObject *parent = Q_NULLPTR);
+    FilterActionJob(const Collection &collection, FilterAction *functor, QObject *parent = nullptr);
 
     /**
      * Destroys the filter action job.

@@ -61,7 +61,7 @@ private:
 
 SocketPrivate::SocketPrivate(Socket *s) :
     q(s),
-    socket(Q_NULLPTR),
+    socket(nullptr),
     port(0),
     secure(false)
 {

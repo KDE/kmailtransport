@@ -95,7 +95,7 @@ SmtpJob::SmtpJob(Transport *transport, QObject *parent)
     : TransportJob(transport, parent), d(new SmtpJobPrivate(this))
 {
     d->currentState = SmtpJobPrivate::Idle;
-    d->slave = Q_NULLPTR;
+    d->slave = nullptr;
     d->finished = false;
     if (!s_slavePool.isDestroyed()) {
         s_slavePool->ref++;
@@ -177,7 +177,7 @@ void SmtpJob::startSmtpJob()
 
             QPointer<KPasswordDialog> dlg =
                 new KPasswordDialog(
-                Q_NULLPTR,
+                nullptr,
                 KPasswordDialog::ShowUsernameLine |
                 KPasswordDialog::ShowKeepPassword);
             dlg->setPrompt(i18n("You need to supply a username and a password "

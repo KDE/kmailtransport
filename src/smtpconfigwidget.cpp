@@ -141,7 +141,7 @@ static void checkHighestEnabledButton(QButtonGroup *group)
 void SMTPConfigWidget::init()
 {
     Q_D(SMTPConfigWidget);
-    d->serverTest = Q_NULLPTR;
+    d->serverTest = nullptr;
 
     connect(TransportManager::self(), &TransportManager::passwordsChanged, this, &SMTPConfigWidget::passwordsLoaded);
 

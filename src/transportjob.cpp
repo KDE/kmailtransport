@@ -42,7 +42,7 @@ TransportJob::TransportJob(Transport *transport, QObject *parent)
     : KCompositeJob(parent), d(new Private)
 {
     d->transport = transport;
-    d->buffer = Q_NULLPTR;
+    d->buffer = nullptr;
 }
 
 TransportJob::~ TransportJob()

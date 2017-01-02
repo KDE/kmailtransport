@@ -95,7 +95,7 @@ public:
 }
 
 ServerTestPrivate::ServerTestPrivate(ServerTest *test)
-    : q(test), testProgress(Q_NULLPTR), secureSocketFinished(false),
+    : q(test), testProgress(nullptr), secureSocketFinished(false),
       normalSocketFinished(false), tlsFinished(false),
       normalPossible(true), securePossible(true)
 {

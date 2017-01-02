@@ -46,7 +46,7 @@ class InteractiveSMTPServerWindow : public QWidget
 {
     Q_OBJECT
 public:
-    InteractiveSMTPServerWindow(QTcpSocket *socket, QWidget *parent = Q_NULLPTR);
+    InteractiveSMTPServerWindow(QTcpSocket *socket, QWidget *parent = nullptr);
     ~InteractiveSMTPServerWindow();
 
 public Q_SLOTS:
@@ -71,7 +71,7 @@ class InteractiveSMTPServer : public QTcpServer
     Q_OBJECT
 
 public:
-    InteractiveSMTPServer(QObject *parent = Q_NULLPTR);
+    InteractiveSMTPServer(QObject *parent = nullptr);
     ~InteractiveSMTPServer() {}
 
 private Q_SLOTS:

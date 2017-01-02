@@ -32,7 +32,7 @@ class ConfigModule : public KCModule
 {
     Q_OBJECT
 public:
-    explicit ConfigModule(QWidget *parent = Q_NULLPTR,
+    explicit ConfigModule(QWidget *parent = nullptr,
                           const QVariantList &args = QVariantList());
 };
 
