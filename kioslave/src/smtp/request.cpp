@@ -173,7 +173,7 @@ static QByteArray formatSubject(QString s)
 QByteArray Request::headerFields(const QString &fromRealName) const
 {
     if (!emitHeaders()) {
-        return 0;
+        return nullptr;
     }
 
     assert(hasFromAddress());   // should have been checked for by

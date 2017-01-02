@@ -51,18 +51,18 @@ int main(int, char **)
 
     // initial state
     assert(!ehlo.isComplete());
-    assert(!ehlo.doNotExecute(0));
+    assert(!ehlo.doNotExecute(nullptr));
     assert(!ehlo.needsResponse());
 
     // dynamics 1: EHLO succeeds
-    assert(ehlo.nextCommandLine(0) == "EHLO mail.example.com\r\n");
+    assert(ehlo.nextCommandLine(nullptr) == "EHLO mail.example.com\r\n");
     assert(!ehlo.isComplete());   // EHLO may fail and we then try HELO
     assert(ehlo.needsResponse());
     r.clear();
     r.parseLine("250-mail.example.net\r\n");
     r.parseLine("250-PIPELINING\r\n");
     r.parseLine("250 8BITMIME\r\n");
-    assert(ehlo.processResponse(r, 0) == true);
+    assert(ehlo.processResponse(r, nullptr) == true);
     assert(ehlo.isComplete());
     assert(!ehlo.needsResponse());
     assert(smtp.lastErrorCode == 0);
@@ -71,18 +71,18 @@ int main(int, char **)
     // dynamics 2: EHLO fails with "unknown command"
     smtp.clear();
     EHLOCommand ehlo2(&smtp, QStringLiteral("mail.example.com"));
-    ehlo2.nextCommandLine(0);
+    ehlo2.nextCommandLine(nullptr);
     r.clear();
     r.parseLine("500 unknown command\r\n");
-    assert(ehlo2.processResponse(r, 0) == true);
+    assert(ehlo2.processResponse(r, nullptr) == true);
     assert(!ehlo2.isComplete());
     assert(!ehlo2.needsResponse());
-    assert(ehlo2.nextCommandLine(0) == "HELO mail.example.com\r\n");
+    assert(ehlo2.nextCommandLine(nullptr) == "HELO mail.example.com\r\n");
     assert(ehlo2.isComplete());
     assert(ehlo2.needsResponse());
     r.clear();
     r.parseLine("250 mail.example.net\r\n");
-    assert(ehlo2.processResponse(r, 0) == true);
+    assert(ehlo2.processResponse(r, nullptr) == true);
     assert(!ehlo2.needsResponse());
     assert(smtp.lastErrorCode == 0);
     assert(smtp.lastErrorMessage.isNull());
@@ -90,10 +90,10 @@ int main(int, char **)
     // dynamics 3: EHLO fails with unknown response code
     smtp.clear();
     EHLOCommand ehlo3(&smtp, QStringLiteral("mail.example.com"));
-    ehlo3.nextCommandLine(0);
+    ehlo3.nextCommandLine(nullptr);
     r.clear();
     r.parseLine("545 you don't know me\r\n");
-    assert(ehlo3.processResponse(r, 0) == false);
+    assert(ehlo3.processResponse(r, nullptr) == false);
     assert(ehlo3.isComplete());
     assert(!ehlo3.needsResponse());
     assert(smtp.lastErrorCode == KIO::ERR_UNKNOWN);
@@ -101,14 +101,14 @@ int main(int, char **)
     // dynamics 4: EHLO _and_ HELO fail with "command unknown"
     smtp.clear();
     EHLOCommand ehlo4(&smtp, QStringLiteral("mail.example.com"));
-    ehlo4.nextCommandLine(0);
+    ehlo4.nextCommandLine(nullptr);
     r.clear();
     r.parseLine("500 unknown command\r\n");
-    ehlo4.processResponse(r, 0);
-    ehlo4.nextCommandLine(0);
+    ehlo4.processResponse(r, nullptr);
+    ehlo4.nextCommandLine(nullptr);
     r.clear();
     r.parseLine("500 unknown command\r\n");
-    assert(ehlo4.processResponse(r, 0) == false);
+    assert(ehlo4.processResponse(r, nullptr) == false);
     assert(ehlo4.isComplete());
     assert(!ehlo4.needsResponse());
     assert(smtp.lastErrorCode == KIO::ERR_INTERNAL_SERVER);
@@ -126,7 +126,7 @@ int main(int, char **)
 
     // initial state
     assert(!tls.isComplete());
-    assert(!tls.doNotExecute(0));
+    assert(!tls.doNotExecute(nullptr));
     assert(!tls.needsResponse());
 
     // dynamics 1: ok from server, TLS negotiation successful
@@ -185,7 +185,7 @@ int main(int, char **)
 
     // initial state
     assert(!auth.isComplete());
-    assert(!auth.doNotExecute(0));
+    assert(!auth.doNotExecute(nullptr));
     assert(!auth.needsResponse());
 
     // dynamics 1: TLS, so AUTH should include initial-response:
@@ -267,7 +267,7 @@ int main(int, char **)
 
     // initial state
     assert(!mail.isComplete());
-    assert(!mail.doNotExecute(0));
+    assert(!mail.doNotExecute(nullptr));
     assert(!mail.needsResponse());
 
     // dynamics: success, no size, no 8bit
@@ -328,7 +328,7 @@ int main(int, char **)
 
     // initial state
     assert(!rcpt.isComplete());
-    assert(!rcpt.doNotExecute(0));
+    assert(!rcpt.doNotExecute(nullptr));
     assert(!rcpt.needsResponse());
 
     // dynamics: success
@@ -404,7 +404,7 @@ int main(int, char **)
 
     // initial state
     assert(!data.isComplete());
-    assert(!data.doNotExecute(0));
+    assert(!data.doNotExecute(nullptr));
     assert(!data.needsResponse());
 
     // dynamics: success
@@ -439,7 +439,7 @@ int main(int, char **)
     // DATA (transfer)
     //
 
-    TransferCommand xfer(&smtp, 0);
+    TransferCommand xfer(&smtp, nullptr);
     // flags
     assert(!xfer.closeConnectionOnError());
     assert(!xfer.mustBeLastInPipeline());
@@ -459,7 +459,7 @@ int main(int, char **)
 
     // dynamics 2: some recipients rejected, but not all
     smtp.clear();
-    TransferCommand xfer2(&smtp, 0);
+    TransferCommand xfer2(&smtp, nullptr);
     ts.clear();
     ts.setRecipientAccepted();
     ts.addRejectedRecipient(QStringLiteral("joe@user.org"), QStringLiteral("No relaying allowed"));
@@ -500,12 +500,12 @@ int main(int, char **)
     assert(!noop.needsResponse());
 
     // dynamics: success (failure is tested with RSET)
-    assert(noop.nextCommandLine(0) == "NOOP\r\n");
+    assert(noop.nextCommandLine(nullptr) == "NOOP\r\n");
     assert(noop.isComplete());
     assert(noop.needsResponse());
     r.clear();
     r.parseLine("250 Ok");
-    assert(noop.processResponse(r, 0) == true);
+    assert(noop.processResponse(r, nullptr) == true);
     assert(noop.isComplete());
     assert(!noop.needsResponse());
     assert(smtp.lastErrorCode == 0);
@@ -528,12 +528,12 @@ int main(int, char **)
     assert(!rset.needsResponse());
 
     // dynamics: failure (success is tested with NOOP/QUIT)
-    assert(rset.nextCommandLine(0) == "RSET\r\n");
+    assert(rset.nextCommandLine(nullptr) == "RSET\r\n");
     assert(rset.isComplete());
     assert(rset.needsResponse());
     r.clear();
     r.parseLine("502 command not implemented");
-    assert(rset.processResponse(r, 0) == false);
+    assert(rset.processResponse(r, nullptr) == false);
     assert(rset.isComplete());
     assert(!rset.needsResponse());
     assert(smtp.lastErrorCode == 0);   // an RSET failure isn't worth it, is it?
@@ -552,16 +552,16 @@ int main(int, char **)
 
     // initial state
     assert(!quit.isComplete());
-    assert(!quit.doNotExecute(0));
+    assert(!quit.doNotExecute(nullptr));
     assert(!quit.needsResponse());
 
     // dynamics 1: success
-    assert(quit.nextCommandLine(0) == "QUIT\r\n");
+    assert(quit.nextCommandLine(nullptr) == "QUIT\r\n");
     assert(quit.isComplete());
     assert(quit.needsResponse());
     r.clear();
     r.parseLine("221 Goodbye");
-    assert(quit.processResponse(r, 0) == true);
+    assert(quit.processResponse(r, nullptr) == true);
     assert(quit.isComplete());
     assert(!quit.needsResponse());
     assert(smtp.lastErrorCode == 0);
@@ -570,10 +570,10 @@ int main(int, char **)
     // dynamics 2: success
     smtp.clear();
     QuitCommand quit2(&smtp);
-    quit2.nextCommandLine(0);
+    quit2.nextCommandLine(nullptr);
     r.clear();
     r.parseLine("500 unknown command");
-    assert(quit2.processResponse(r, 0) == false);
+    assert(quit2.processResponse(r, nullptr) == false);
     assert(quit2.isComplete());
     assert(!quit2.needsResponse());
     assert(smtp.lastErrorCode == 0);   // an QUIT failure isn't worth it, is it?
@@ -608,7 +608,7 @@ void checkSuccessfulTransferCommand(bool error, bool preload, bool ungetLast,
     const char *s_post = mailEndsInNewline ? foobarbaz_crlf : foobarbaz_dotstuffed;
     //const unsigned int s_post_len = qstrlen( s_post );
 
-    TransferCommand xfer(&smtp, preload ? s_post : 0);
+    TransferCommand xfer(&smtp, preload ? s_post : nullptr);
 
     TransactionState ts;
     ts.setRecipientAccepted();

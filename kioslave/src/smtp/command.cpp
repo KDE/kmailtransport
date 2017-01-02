@@ -47,14 +47,14 @@ namespace KioSMTP
 {
 
 static const sasl_callback_t callbacks[] = {
-    { SASL_CB_ECHOPROMPT, NULL, NULL },
-    { SASL_CB_NOECHOPROMPT, NULL, NULL },
-    { SASL_CB_GETREALM, NULL, NULL },
-    { SASL_CB_USER, NULL, NULL },
-    { SASL_CB_AUTHNAME, NULL, NULL },
-    { SASL_CB_PASS, NULL, NULL },
-    { SASL_CB_CANON_USER, NULL, NULL },
-    { SASL_CB_LIST_END, NULL, NULL }
+    { SASL_CB_ECHOPROMPT, nullptr, nullptr },
+    { SASL_CB_NOECHOPROMPT, nullptr, nullptr },
+    { SASL_CB_GETREALM, nullptr, nullptr },
+    { SASL_CB_USER, nullptr, nullptr },
+    { SASL_CB_AUTHNAME, nullptr, nullptr },
+    { SASL_CB_PASS, nullptr, nullptr },
+    { SASL_CB_CANON_USER, nullptr, nullptr },
+    { SASL_CB_LIST_END, nullptr, nullptr }
 };
 
 //
@@ -103,7 +103,7 @@ Command *Command::createSimpleCommand(int which, SMTPSessionInterface *smtp)
     case QUIT:
         return new QuitCommand(smtp);
     default:
-        return 0;
+        return nullptr;
     }
 }
 
@@ -220,17 +220,17 @@ AuthCommand::AuthCommand(SMTPSessionInterface *smtp,
     , mAi(&ai)
     , mFirstTime(true)
 {
-    mMechusing = 0;
+    mMechusing = nullptr;
     int result;
-    conn = 0;
-    client_interact = 0;
-    mOut = 0;
+    conn = nullptr;
+    client_interact = nullptr;
+    mOut = nullptr;
     mOutlen = 0;
     mOneStep = false;
 
     const QByteArray ba = aFQDN.toLatin1();
     result = sasl_client_new("smtp", ba.constData(),
-                             0, 0, callbacks, 0, &conn);
+                             nullptr, nullptr, callbacks, 0, &conn);
     if (result != SASL_OK) {
         SASLERROR
         return;
@@ -260,7 +260,7 @@ AuthCommand::~AuthCommand()
     if (conn) {
         qCDebug(SMTP_LOG) << "dispose sasl connection";
         sasl_dispose(&conn);
-        conn = 0;
+        conn = nullptr;
     }
 }
 
@@ -304,7 +304,7 @@ bool AuthCommand::saslInteract(void *in)
             break;
         }
         default:
-            interact->result = NULL;
+            interact->result = nullptr;
             interact->len = 0;
             break;
         }
@@ -336,7 +336,7 @@ QByteArray AuthCommand::nextCommandLine(TransactionState *ts)
     if (!mUngetSASLResponse.isNull()) {
         // implement un-ungetCommandLine
         cmd = mUngetSASLResponse;
-        mUngetSASLResponse = 0;
+        mUngetSASLResponse = nullptr;
     } else if (mFirstTime) {
         QString firstCommand = QLatin1String("AUTH ") + QString::fromLatin1(mMechusing);
 
@@ -355,7 +355,7 @@ QByteArray AuthCommand::nextCommandLine(TransactionState *ts)
         challenge = QByteArray::fromBase64(mLastChallenge);
         int result;
         do {
-            result = sasl_client_step(conn, challenge.isEmpty() ? 0 : challenge.data(),
+            result = sasl_client_step(conn, challenge.isEmpty() ? nullptr : challenge.data(),
                                       challenge.size(),
                                       &client_interact,
                                       &mOut, &mOutlen);
@@ -535,7 +535,7 @@ QByteArray TransferCommand::nextCommandLine(TransactionState *ts)
 
     if (!mUngetBuffer.isEmpty()) {
         const QByteArray ret = mUngetBuffer;
-        mUngetBuffer = 0;
+        mUngetBuffer = nullptr;
         if (mWasComplete) {
             mComplete = true;
             mNeedResponse = true;
@@ -557,7 +557,7 @@ QByteArray TransferCommand::nextCommandLine(TransactionState *ts)
                              i18n("Could not read data from application."));
         mComplete = true;
         mNeedResponse = true;
-        return 0;
+        return nullptr;
     }
     mComplete = true;
     mNeedResponse = true;
@@ -603,7 +603,7 @@ static QByteArray dotstuff_lf2crlf(const QByteArray &ba, char &last)
 QByteArray TransferCommand::prepare(const QByteArray &ba)
 {
     if (ba.isEmpty()) {
-        return 0;
+        return nullptr;
     }
     if (mSMTP->lf2crlfAndDotStuffingRequested()) {
         qCDebug(SMTP_LOG) << "performing dotstuffing and LF->CRLF transformation";

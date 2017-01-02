@@ -36,7 +36,7 @@
 using namespace MailTransport;
 
 TransportMgr::TransportMgr() :
-    mCurrentJob(0)
+    mCurrentJob(nullptr)
 {
     QVBoxLayout *vbox = new QVBoxLayout;
     vbox->setMargin(0);
@@ -124,7 +124,7 @@ void TransportMgr::cancelBtnClicked()
     if (mCurrentJob) {
         qDebug() << "kill success:" << mCurrentJob->kill();
     }
-    mCurrentJob = 0;
+    mCurrentJob = nullptr;
 }
 
 int main(int argc, char **argv)
@@ -141,7 +141,7 @@ int main(int argc, char **argv)
 void TransportMgr::jobResult(KJob *job)
 {
     qDebug() << job->error() << job->errorText();
-    mCurrentJob = 0;
+    mCurrentJob = nullptr;
 }
 
 void TransportMgr::jobPercent(KJob *job, unsigned long percent)

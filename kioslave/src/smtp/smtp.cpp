@@ -410,7 +410,7 @@ QByteArray SMTPProtocol::collectPipelineCommands(TransactionState *ts)
             //
             // 32 KB seems to be a sensible limit. Additionally, a job can only transfer
             // 32 KB at once anyway.
-            if (dynamic_cast<TransferCommand *>(cmd) != 0 &&
+            if (dynamic_cast<TransferCommand *>(cmd) != nullptr &&
                     cmdLine_len >= 32 * 1024) {
                 return cmdLine;
             }

@@ -136,7 +136,7 @@ void MessageQueueJobTest::testValidMessages()
 
 void MessageQueueJobTest::testInvalidMessages()
 {
-    MessageQueueJob *job = 0;
+    MessageQueueJob *job = nullptr;
     Message::Ptr msg;
 
     // without message

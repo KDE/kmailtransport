@@ -234,7 +234,7 @@ void ServerTestPrivate::slotTlsDone()
 bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int type, int stage,
         const QString &response, bool *shouldStartTLS)
 {
-    Q_ASSERT(shouldStartTLS != 0);
+    Q_ASSERT(shouldStartTLS != nullptr);
 
     // Initial Greeting
     if (stage == 0) {

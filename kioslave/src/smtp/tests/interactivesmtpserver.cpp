@@ -87,7 +87,7 @@ InteractiveSMTPServerWindow::~InteractiveSMTPServerWindow()
         else {
             mSocket->deleteLater();
         }
-        mSocket = 0;
+        mSocket = nullptr;
     }
 }
 
