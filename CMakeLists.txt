@@ -1,6 +1,7 @@
-cmake_minimum_required(VERSION 2.8.12)
+cmake_minimum_required(VERSION 3.0)
+set(PIM_VERSION "5.4.40")
 
-project(MailTransport)
+project(MailTransport VERSION ${PIM_VERSION})
 
 # ECM setup
 set(KF5_VERSION "5.28.0")
@@ -23,7 +24,6 @@ include(ECMCoverageOption)
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
 
 
-set(PIM_VERSION "5.4.40")
 
 set(KMAILTRANSPORT_LIB_VERSION ${PIM_VERSION})
 
@@ -32,7 +32,7 @@ set(AKONADI_LIB_VERSION "5.4.40")
 set(AKONADIMIME_LIB_VERSION "5.4.40")
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
 
-ecm_setup_version(${KMAILTRANSPORT_LIB_VERSION} VARIABLE_PREFIX MAILTRANSPORT
+ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h"
                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfigVersion.cmake"
                         SOVERSION 5
