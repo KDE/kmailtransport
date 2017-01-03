@@ -32,6 +32,9 @@
 #ifndef __KIOSMTP_COMMAND_H__
 #define __KIOSMTP_COMMAND_H__
 
+// workaround a bug in Cyrus-SASL 2.1.26 which is missing sys/types.h
+// include in sasl.h
+#include <sys/types.h>
 extern "C" {
 #include <sasl/sasl.h>
 }
