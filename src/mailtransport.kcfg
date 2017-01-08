@@ -85,6 +85,7 @@ However, if KWallet is not available, the password will be stored in the configu
         <choice name="APOP" />
         <choice name="CLEAR" />
         <choice name="ANONYMOUS" />
+        <choice name="XOAUTH2" />
       </choices>
       <default>PLAIN</default>
     </entry>
