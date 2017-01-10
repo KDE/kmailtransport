@@ -26,9 +26,16 @@
 
 using namespace MailTransport;
 
-class MailTransport::TransportJob::Private
+class Q_DECL_HIDDEN MailTransport::TransportJob::Private
 {
 public:
+    Private()
+        : transport(nullptr),
+          buffer(nullptr)
+    {
+
+    }
+
     Transport *transport;
     QString sender;
     QStringList to;
@@ -45,7 +52,7 @@ TransportJob::TransportJob(Transport *transport, QObject *parent)
     d->buffer = nullptr;
 }
 
-TransportJob::~ TransportJob()
+TransportJob::~TransportJob()
 {
     delete d->transport;
     delete d;

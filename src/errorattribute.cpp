@@ -22,7 +22,7 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class ErrorAttribute::Private
+class Q_DECL_HIDDEN ErrorAttribute::Private
 {
 public:
     QString mMessage;

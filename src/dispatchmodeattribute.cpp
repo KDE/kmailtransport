@@ -26,7 +26,7 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class DispatchModeAttribute::Private
+class Q_DECL_HIDDEN DispatchModeAttribute::Private
 {
 public:
     DispatchMode mMode;

@@ -66,7 +66,9 @@ class TransportManagerPrivate
 {
 public:
     TransportManagerPrivate(TransportManager *parent)
-        : q(parent)
+        : config(nullptr),
+          wallet(nullptr),
+          q(parent)
     {
     }
 
