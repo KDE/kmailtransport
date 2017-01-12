@@ -122,7 +122,7 @@ AddTransportDialog::AddTransportDialog(QWidget *parent)
 
     // Populate type list.
     const auto transportTypes = TransportManager::self()->types();
-    foreach (const TransportType &type, transportTypes) {
+    for (const TransportType &type : transportTypes) {
         QTreeWidgetItem *treeItem = new QTreeWidgetItem(d->ui.typeListView);
         treeItem->setText(0, type.name());
         treeItem->setText(1, type.description());
