@@ -162,9 +162,9 @@ void SentActionAttribute::deserialize(const QByteArray &data)
 
     foreach (const QVariant &variant, list) {
         const QVariantMap map = variant.toMap();
-        QMapIterator<QString, QVariant> it(map);
-        while (it.hasNext()) {
-            it.next();
+        QMap<QString, QVariant>::const_iterator it = map.cbegin();
+        const QMap<QString, QVariant>::const_iterator itEnd = map.cend();
+        for (; it != itEnd; ++it) {
             d->mActions << Action(static_cast<Action::Type>(it.key().toInt()), it.value());
         }
     }
