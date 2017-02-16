@@ -4,7 +4,7 @@ set(PIM_VERSION "5.4.41")
 project(MailTransport VERSION ${PIM_VERSION})
 
 # ECM setup
-set(KF5_VERSION "5.30.0")
+set(KF5_VERSION "5.31.0")
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${MailTransport_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
 
