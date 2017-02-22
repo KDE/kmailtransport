@@ -18,6 +18,7 @@
 */
 
 #include "filteractionjob_p.h"
+#include "helper_p.h"
 
 #include <collection.h>
 #include <itemfetchjob.h>
@@ -70,7 +71,7 @@ void FilterActionJob::Private::traverseItems()
 {
     Q_ASSERT(functor);
     qCDebug(MAILTRANSPORT_LOG) << "Traversing" << items.count() << "items.";
-    foreach (const Item &item, items) {
+    for (const Item &item : qAsConst(items)) {
         if (functor->itemAccepted(item)) {
             functor->itemAction(item, q);
             qCDebug(MAILTRANSPORT_LOG) << "Added subjob for item" << item.id();

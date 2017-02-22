@@ -155,13 +155,13 @@ void SmtpJob::startSmtpJob()
     destinationQuery.addQueryItem(QStringLiteral("headers"), QStringLiteral("0"));
     destinationQuery.addQueryItem(QStringLiteral("from"), sender());
 
-    foreach (const QString &str, to()) {
+    for (const QString &str : to()) {
         destinationQuery.addQueryItem(QStringLiteral("to"), str);
     }
-    foreach (const QString &str, cc()) {
+    for (const QString &str : cc()) {
         destinationQuery.addQueryItem(QStringLiteral("cc"), str);
     }
-    foreach (const QString &str, bcc()) {
+    for (const QString &str : bcc()) {
         destinationQuery.addQueryItem(QStringLiteral("bcc"), str);
     }
 

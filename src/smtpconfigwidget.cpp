@@ -26,6 +26,7 @@
 
 #include "smtpconfigwidget.h"
 #include "ui_smtpsettings.h"
+#include "helper_p.h"
 
 #include "transportconfigwidget_p.h"
 #include "transport.h"
@@ -90,7 +91,7 @@ public:
         }
 
         ui.authCombo->clear();
-        foreach (int authType, capa) {
+        for (int authType : qAsConst(capa)) {
             addAuthenticationItem(ui.authCombo, authType);
         }
 

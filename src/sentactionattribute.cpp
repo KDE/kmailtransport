@@ -20,6 +20,7 @@
 */
 
 #include "sentactionattribute.h"
+#include "helper_p.h"
 
 #include <QtCore/QDataStream>
 #include <QtCore/QSharedData>
@@ -135,7 +136,7 @@ QByteArray SentActionAttribute::serialized() const
 {
     QVariantList list;
     list.reserve(d->mActions.count());
-    foreach (const Action &action, d->mActions) {
+    for (const Action &action : qAsConst(d->mActions)) {
         QVariantMap map;
         map.insert(QString::number(action.type()), action.value());
 
@@ -160,7 +161,7 @@ void SentActionAttribute::deserialize(const QByteArray &data)
     QVariantList list;
     stream >> list;
 
-    foreach (const QVariant &variant, list) {
+    for (const QVariant &variant : qAsConst(list)) {
         const QVariantMap map = variant.toMap();
         QMap<QString, QVariant>::const_iterator it = map.cbegin();
         const QMap<QString, QVariant>::const_iterator itEnd = map.cend();

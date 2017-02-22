@@ -30,6 +30,7 @@
 #include "transportconfigdialog.h"
 #include "transportconfigwidget.h"
 #include "smtpconfigwidget.h"
+#include "helper_p.h"
 
 #include <QApplication>
 #include <QtDBus/QDBusConnection>
@@ -431,8 +432,8 @@ void TransportManagerPrivate::readConfig()
     transports.clear();
 
     QRegExp re(QStringLiteral("^Transport (.+)$"));
-    QStringList groups = config->groupList().filter(re);
-    foreach (const QString &s, groups) {
+    const QStringList groups = config->groupList().filter(re);
+    for (const QString &s : groups) {
         if (re.indexIn(s) == -1) {
             continue;
         }
@@ -558,7 +559,7 @@ int TransportManagerPrivate::createId() const
 {
     QList<int> usedIds;
     usedIds.reserve(1 + transports.count());
-    foreach (Transport *t, transports) {
+    for (Transport *t : qAsConst(transports)) {
         usedIds << t->id();
     }
     usedIds << 0; // 0 is default for unknown
@@ -618,7 +619,7 @@ void TransportManager::loadPasswords()
     // flush the wallet queue
     const QList<TransportJob *> copy = d->walletQueue;
     d->walletQueue.clear();
-    foreach (TransportJob *job, copy) {
+    for (TransportJob *job : copy) {
         job->start();
     }
 
@@ -708,7 +709,7 @@ void TransportManagerPrivate::migrateToWallet()
 
     // check if migration is needed
     QStringList names;
-    foreach (Transport *t, transports) {
+    for (Transport *t : qAsConst(transports)) {
         if (t->needsWalletMigration()) {
             names << t->name();
         }
