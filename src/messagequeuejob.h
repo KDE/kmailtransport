@@ -22,10 +22,10 @@
 
 #include <mailtransport_export.h>
 
-#include "akonadi/dispatchmodeattribute.h"
-#include "akonadi/sentactionattribute.h"
-#include "akonadi/sentbehaviourattribute.h"
-#include "akonadi/transportattribute.h"
+#include <MailTransport/DispatchModeAttribute>
+#include <MailTransport/SentActionAttribute>
+#include <MailTransport/SentBehaviourAttribute>
+#include <MailTransport/TransportAttribute>
 
 #include <QtCore/QDateTime>
 #include <QtCore/QString>
