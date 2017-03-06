@@ -18,7 +18,7 @@
 */
 
 #include "configmodule.h"
-#include "transportmanagementwidget.h"
+#include "widgets/transportmanagementwidget.h"
 
 #include <KPluginFactory>
 #include <KPluginLoader>

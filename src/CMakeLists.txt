@@ -8,7 +8,6 @@ set(mailtransport_lib_srcs
   transportmanager.cpp
   transporttype.cpp
 
-  transportcombobox.cpp
   transportconfigwidget.cpp
 
   filteractionjob.cpp
@@ -17,7 +16,6 @@ set(mailtransport_lib_srcs
   smtpjob.cpp
   precommandjob.cpp
 
-  legacydecrypt.cpp
   socket.cpp
   servertest.cpp
 
@@ -25,19 +23,26 @@ set(mailtransport_lib_srcs
   messagequeuejob.cpp
   outboxactions.cpp
 
-  attributeregistrar.cpp
-  dispatchmodeattribute.cpp
-  errorattribute.cpp
-  sentactionattribute.cpp
-  sentbehaviourattribute.cpp
-  transportattribute.cpp
   transportconfigdialog.cpp
   smtpconfigwidget.cpp
 
-  transportlistview.cpp
-  transportmanagementwidget.cpp
   addtransportdialog.cpp
 )
+
+set(mailtransport_akonadi_srcs
+  akonadi/attributeregistrar.cpp
+  akonadi/dispatchmodeattribute.cpp
+  akonadi/errorattribute.cpp
+  akonadi/transportattribute.cpp
+  akonadi/sentactionattribute.cpp
+  akonadi/sentbehaviourattribute.cpp
+    )
+
+set(mailtransport_widgets_srcs
+  widgets/transportcombobox.cpp
+    widgets/transportlistview.cpp
+    widgets/transportmanagementwidget.cpp
+    )
 
 ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport)
 
@@ -49,7 +54,10 @@ ki18n_wrap_ui(mailtransport_lib_srcs
 
 kconfig_add_kcfg_files(mailtransport_lib_srcs transportbase.kcfgc)
 
-add_library(KF5MailTransport ${mailtransport_lib_srcs})
+add_library(KF5MailTransport ${mailtransport_lib_srcs}
+    ${mailtransport_widgets_srcs}
+    ${mailtransport_akonadi_srcs}
+    )
 
 generate_export_header(KF5MailTransport BASE_NAME mailtransport)
 
@@ -101,34 +109,51 @@ add_subdirectory(kcm)
 ecm_generate_headers(MailTransport_CamelCase_HEADERS
   HEADER_NAMES
   DispatcherInterface
-  DispatchModeAttribute
-  ErrorAttribute
   MessageQueueJob
   PrecommandJob
-  SentBehaviourAttribute
   ServerTest
   SmtpJob
   Transport
-  TransportAttribute
-  #TransportBase
-  TransportComboBox
   TransportJob
-  TransportManagementWidget
   TransportManager
   TransportType
   PREFIX MailTransport
   REQUIRED_HEADERS MailTransport_HEADERS
 )
 
+ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
+  HEADER_NAMES
+  TransportComboBox
+  TransportManagementWidget
+  PREFIX MailTransport
+  REQUIRED_HEADERS MailTransport_widgets_HEADERS
+  RELATIVE widgets
+)
+
+ecm_generate_headers(MailTransport_akonadi_CamelCase_HEADERS
+  HEADER_NAMES
+  TransportAttribute
+  SentBehaviourAttribute
+  DispatchModeAttribute
+  ErrorAttribute
+  SentActionAttribute 
+  PREFIX MailTransport
+  REQUIRED_HEADERS MailTransport_akonadi_HEADERS
+  RELATIVE akonadi
+)
+
 install(FILES
   ${MailTransport_CamelCase_HEADERS}
+  ${MailTransport_widgets_CamelCase_HEADERS}
+  ${MailTransport_akonadi_CamelCase_HEADERS}
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/MailTransport/ COMPONENT Devel ) 
 
 install(FILES
   ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_export.h
   ${MailTransport_HEADERS}
+  ${MailTransport_widgets_HEADERS}
+  ${MailTransport_akonadi_HEADERS}
   ${CMAKE_CURRENT_BINARY_DIR}/transportbase.h
-  sentactionattribute.h
 
   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/mailtransport COMPONENT Devel
 )

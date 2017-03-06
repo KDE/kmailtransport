@@ -23,7 +23,7 @@
 #define USES_DEPRECATED_MAILTRANSPORT_API
 
 #include <QWidget>
-#include <transportcombobox.h>
+#include <widgets/transportcombobox.h>
 
 class KJob;
 class QLineEdit;

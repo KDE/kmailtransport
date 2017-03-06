@@ -27,7 +27,7 @@
 #include <agentmanager.h>
 #include <collection.h>
 #include <specialmailcollections.h>
-#include "transportattribute.h"
+#include "akonadi/transportattribute.h"
 
 using namespace Akonadi;
 using namespace MailTransport;

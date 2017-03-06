@@ -22,7 +22,7 @@
 
 #include <mailtransport_export.h>
 #include <filteractionjob_p.h>
-#include <transportattribute.h>
+#include <MailTransport/TransportAttribute>
 
 #include <itemfetchscope.h>
 #include <job.h>

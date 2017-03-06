@@ -80,7 +80,7 @@
   <customwidget>
    <class>TransportListView</class>
    <extends>QTreeWidget</extends>
-   <header location="global">transportlistview.h</header>
+   <header location="global">widgets/transportlistview.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

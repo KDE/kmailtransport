@@ -21,7 +21,7 @@
 
 #include <transportconfigdialog.h>
 #include <transportmanager.h>
-#include <transportmanagementwidget.h>
+#include <widgets/transportmanagementwidget.h>
 #include <transportjob.h>
 #include <transport.h>
 #include <QVBoxLayout>

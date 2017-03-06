@@ -35,7 +35,7 @@
 #include <QDialog>
 #include <QDialogButtonBox>
 
-#include <dispatchmodeattribute.h>
+#include <akonadi/dispatchmodeattribute.h>
 #include <messagequeuejob.h>
 #include <transportmanager.h>
 #include <transport.h>

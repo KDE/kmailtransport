@@ -19,7 +19,6 @@
 
 #include "transport.h"
 #include "transport_p.h"
-#include "legacydecrypt.h"
 #include "mailtransport_defs.h"
 #include "transportmanager.h"
 #include "transporttype_p.h"
@@ -213,8 +212,8 @@ void Transport::usrRead()
     KConfigGroup group(config(), currentGroup());
     if (group.hasKey("password")) {
         d->password = KStringHandler::obscure(group.readEntry("password"));
-    } else if (group.hasKey("password-kmail")) {
-        d->password = Legacy::decryptKMail(group.readEntry("password-kmail"));
+    } else if (group.hasKey("password-kmail")) { //Legacy
+        d->password = KStringHandler::obscure(group.readEntry("password-kmail"));
     }
 
     if (!d->password.isEmpty()) {

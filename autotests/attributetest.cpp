@@ -23,11 +23,11 @@
 #include <qtest_akonadi.h>
 #include <addressattribute.h>
 
-#include <dispatchmodeattribute.h>
-#include <errorattribute.h>
-#include <sentactionattribute.h>
-#include <sentbehaviourattribute.h>
-#include <transportattribute.h>
+#include <akonadi/dispatchmodeattribute.h>
+#include <akonadi/errorattribute.h>
+#include <akonadi/sentactionattribute.h>
+#include <akonadi/sentbehaviourattribute.h>
+#include <akonadi/transportattribute.h>
 
 using namespace Akonadi;
 using namespace MailTransport;

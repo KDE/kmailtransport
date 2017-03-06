@@ -20,8 +20,8 @@
 #include "outboxactions_p.h"
 
 #include "mailtransport_debug.h"
-#include "dispatchmodeattribute.h"
-#include "errorattribute.h"
+#include "akonadi/dispatchmodeattribute.h"
+#include "akonadi/errorattribute.h"
 
 #include <itemmodifyjob.h>
 #include <messageflags.h>

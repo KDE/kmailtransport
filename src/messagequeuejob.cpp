@@ -20,7 +20,7 @@
 #include "messagequeuejob.h"
 
 #include "transport.h"
-#include "transportattribute.h"
+#include "akonadi/transportattribute.h"
 #include "transportmanager.h"
 
 #include "mailtransport_debug.h"
