@@ -27,9 +27,9 @@
 #include "transporttype.h"
 #include "transporttype_p.h"
 #include "widgets/addtransportdialog.h"
-#include "transportconfigdialog.h"
-#include "transportconfigwidget.h"
-#include "smtpconfigwidget.h"
+#include "widgets/transportconfigdialog.h"
+#include "widgets/transportconfigwidget.h"
+#include "widgets/smtpconfigwidget.h"
 #include "helper_p.h"
 
 #include <QApplication>

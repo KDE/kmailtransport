@@ -28,8 +28,6 @@
 #include <QDialogButtonBox>
 
 #include <QPushButton>
-#include <agentinstance.h>
-#include <agentinstancecreatejob.h>
 
 using namespace MailTransport;
 
@@ -168,17 +166,6 @@ void AddTransportDialog::accept()
     // Create a new transport and configure it.
     Transport *transport = TransportManager::self()->createTransport();
     transport->setTransportType(d->selectedType());
-    if (d->selectedType().type() == Transport::EnumType::Akonadi) {
-        // Create a resource instance if Akonadi-type transport.
-        using namespace Akonadi;
-        AgentInstanceCreateJob *cjob = new AgentInstanceCreateJob(d->selectedType().agentType());
-        if (!cjob->exec()) {
-            qCWarning(MAILTRANSPORT_LOG) << "Failed to create agent instance of type"
-                                         << d->selectedType().agentType().identifier();
-            return;
-        }
-        transport->setHost(cjob->instance().identifier());
-    }
     transport->setName(d->ui.name->text().trimmed());
     transport->forceUniqueName();
     if (TransportManager::self()->configureTransport(transport, this)) {

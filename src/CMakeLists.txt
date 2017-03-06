@@ -8,7 +8,6 @@ set(mailtransport_lib_srcs
   transportmanager.cpp
   transporttype.cpp
 
-  transportconfigwidget.cpp
 
   filteractionjob.cpp
   transportjob.cpp
@@ -23,8 +22,6 @@ set(mailtransport_lib_srcs
   messagequeuejob.cpp
   outboxactions.cpp
 
-  transportconfigdialog.cpp
-  smtpconfigwidget.cpp
 
 )
 
@@ -38,10 +35,13 @@ set(mailtransport_akonadi_srcs
     )
 
 set(mailtransport_widgets_srcs
+  widgets/transportconfigwidget.cpp
   widgets/addtransportdialog.cpp
   widgets/transportcombobox.cpp
     widgets/transportlistview.cpp
     widgets/transportmanagementwidget.cpp
+  widgets/transportconfigdialog.cpp
+  widgets/smtpconfigwidget.cpp
     )
 
 ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport)

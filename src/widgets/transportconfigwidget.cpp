@@ -60,7 +60,6 @@ void TransportConfigWidget::init(Transport *transport)
     d->transport = transport;
 
     d->manager = new KConfigDialogManager(this, transport);
-    //d->manager->updateWidgets(); // no-op; ui is set up in subclasses.
 }
 
 KConfigDialogManager *TransportConfigWidget::configManager() const

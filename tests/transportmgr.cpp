@@ -19,7 +19,7 @@
 
 #include "transportmgr.h"
 
-#include <transportconfigdialog.h>
+#include <widgets/transportconfigdialog.h>
 #include <transportmanager.h>
 #include <widgets/transportmanagementwidget.h>
 #include <transportjob.h>
