@@ -165,14 +165,6 @@ void Transport::usrRead()
         d->transportType = TransportType();
         d->transportType.d->mType = type();
         qCDebug(MAILTRANSPORT_LOG) << "type" << type();
-        if (type() == EnumType::Akonadi) {
-            const AgentInstance instance = AgentManager::self()->instance(host());
-            if (!instance.isValid()) {
-                qCWarning(MAILTRANSPORT_LOG) << "Akonadi transport with invalid resource instance.";
-            }
-            d->transportType.d->mAgentType = instance.type();
-            qCDebug(MAILTRANSPORT_LOG) << "agent type" << instance.type().name() << "id" << instance.type().identifier();
-        }
         // Now we have the type and possibly agentType.  Get the name, description
         // etc. from TransportManager.
         const TransportType::List &types = TransportManager::self()->types();

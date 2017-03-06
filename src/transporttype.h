@@ -108,11 +108,6 @@ public:
     */
     QString description() const;
 
-    /**
-      Returns the corresponding Akonadi::AgentType that this transport type
-      represents.  Only valid if type() is Transport::EnumType::Akonadi.
-    */
-    Akonadi::AgentType agentType() const;
 
 private:
     //@cond PRIVATE

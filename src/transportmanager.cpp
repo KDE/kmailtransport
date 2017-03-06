@@ -100,8 +100,6 @@ public:
     void slotTransportsChanged();
     void slotWalletOpened(bool success);
     void dbusServiceUnregistered();
-    void agentTypeAdded(const Akonadi::AgentType &atype);
-    void agentTypeRemoved(const Akonadi::AgentType &atype);
     void jobResult(KJob *job);
 };
 
@@ -476,9 +474,6 @@ void TransportManagerPrivate::fillTypes()
         type.d->mDescription = i18n("An SMTP server on the Internet");
         types << type;
     }
-
-
-    qCDebug(MAILTRANSPORT_LOG) << "Have SMTP and" << types.count() - 1 << "Akonadi types.";
 }
 
 void TransportManager::emitChangesCommitted()
