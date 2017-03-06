@@ -20,7 +20,7 @@
 #ifndef MAILTRANSPORT_SENTBEHAVIOURATTRIBUTE_H
 #define MAILTRANSPORT_SENTBEHAVIOURATTRIBUTE_H
 
-#include <mailtransport_export.h>
+#include <mailtransportakonadi_export.h>
 
 #include <attribute.h>
 #include <collection.h>
@@ -36,7 +36,7 @@ namespace MailTransport
   @author Constantin Berzan <exit3219@gmail.com>
   @since 4.4
 */
-class MAILTRANSPORT_EXPORT SentBehaviourAttribute : public Akonadi::Attribute
+class MAILTRANSPORTAKONADI_EXPORT SentBehaviourAttribute : public Akonadi::Attribute
 {
 public:
     /**

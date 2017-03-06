@@ -20,14 +20,14 @@
 #include "dispatcherinterface.h"
 #include "dispatcherinterface_p.h"
 
-#include "akonadi/outboxactions_p.h"
+#include "kmailtransportakonadi/outboxactions_p.h"
 
-#include "mailtransport_debug.h"
+#include "mailtransportakonadi_debug.h"
 
 #include <agentmanager.h>
 #include <collection.h>
 #include <specialmailcollections.h>
-#include "akonadi/transportattribute.h"
+#include "kmailtransportakonadi/transportattribute.h"
 
 using namespace Akonadi;
 using namespace MailTransport;
@@ -38,9 +38,9 @@ void DispatcherInterfacePrivate::massModifyResult(KJob *job)
 {
     // Nothing to do here, really.  If the job fails, the user can retry it.
     if (job->error()) {
-        qCDebug(MAILTRANSPORT_LOG) << "failed" << job->errorString();
+        qCDebug(MAILTRANSPORTAKONADI_LOG) << "failed" << job->errorString();
     } else {
-        qCDebug(MAILTRANSPORT_LOG) << "succeeded.";
+        qCDebug(MAILTRANSPORTAKONADI_LOG) << "succeeded.";
     }
 }
 
@@ -53,7 +53,7 @@ AgentInstance DispatcherInterface::dispatcherInstance() const
     AgentInstance a =
         AgentManager::self()->instance(QStringLiteral("akonadi_maildispatcher_agent"));
     if (!a.isValid()) {
-        qCWarning(MAILTRANSPORT_LOG) << "Could not get MDA instance.";
+        qCWarning(MAILTRANSPORTAKONADI_LOG) << "Could not get MDA instance.";
     }
     return a;
 }

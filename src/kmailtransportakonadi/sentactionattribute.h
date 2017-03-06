@@ -22,7 +22,7 @@
 #ifndef MAILTRANSPORT_SENTACTIONATTRIBUTE_H
 #define MAILTRANSPORT_SENTACTIONATTRIBUTE_H
 
-#include <mailtransport_export.h>
+#include <mailtransportakonadi_export.h>
 
 #include <QtCore/QSharedDataPointer>
 #include <QtCore/QVariant>
@@ -41,13 +41,13 @@ namespace MailTransport
  * @author Tobias Koenig <tokoe@kdab.com>
  * @since 4.6
  */
-class MAILTRANSPORT_EXPORT SentActionAttribute : public Akonadi::Attribute
+class MAILTRANSPORTAKONADI_EXPORT SentActionAttribute : public Akonadi::Attribute
 {
 public:
     /**
      * @short A sent action.
      */
-    class MAILTRANSPORT_EXPORT Action
+    class MAILTRANSPORTAKONADI_EXPORT Action
     {
     public:
         /**

@@ -20,7 +20,7 @@
 #ifndef MAILTRANSPORT_FILTERACTIONJOB_P_H
 #define MAILTRANSPORT_FILTERACTIONJOB_P_H
 
-#include <mailtransport_export.h>
+#include <mailtransportakonadi_export.h>
 
 #include <item.h>
 #include <transactionsequence.h>
@@ -73,7 +73,7 @@ class FilterActionJob;
  * @author Constantin Berzan <exit3219@gmail.com>
  * @since 4.4
  */
-class MAILTRANSPORT_EXPORT FilterAction
+class MAILTRANSPORTAKONADI_EXPORT FilterAction
 {
 public:
     /**
@@ -129,7 +129,7 @@ public:
  * @author Constantin Berzan <exit3219@gmail.com>
  * @since 4.4
  */
-class MAILTRANSPORT_EXPORT FilterActionJob : public TransactionSequence
+class MAILTRANSPORTAKONADI_EXPORT FilterActionJob : public TransactionSequence
 {
     Q_OBJECT
 

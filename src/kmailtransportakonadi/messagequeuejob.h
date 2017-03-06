@@ -20,12 +20,12 @@
 #ifndef MAILTRANSPORT_MESSAGEQUEUEJOB_H
 #define MAILTRANSPORT_MESSAGEQUEUEJOB_H
 
-#include <mailtransport_export.h>
+#include <mailtransportakonadi_export.h>
 
-#include <MailTransport/DispatchModeAttribute>
-#include <MailTransport/SentActionAttribute>
-#include <MailTransport/SentBehaviourAttribute>
-#include <MailTransport/TransportAttribute>
+#include <MailTransportAkonadi/DispatchModeAttribute>
+#include <MailTransportAkonadi/SentActionAttribute>
+#include <MailTransportAkonadi/SentBehaviourAttribute>
+#include <MailTransportAkonadi/TransportAttribute>
 
 #include <QtCore/QDateTime>
 #include <QtCore/QString>
@@ -83,7 +83,7 @@ namespace MailTransport
   @author Constantin Berzan <exit3219@gmail.com>
   @since 4.4
 */
-class MAILTRANSPORT_EXPORT MessageQueueJob : public KCompositeJob
+class MAILTRANSPORTAKONADI_EXPORT MessageQueueJob : public KCompositeJob
 {
     Q_OBJECT
 

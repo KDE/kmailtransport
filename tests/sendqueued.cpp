@@ -24,7 +24,7 @@
 #include <collection.h>
 #include <control.h>
 #include <filteractionjob_p.h>
-#include <akonadi/dispatcherinterface.h>
+#include <kmailtransportakonadi/dispatcherinterface.h>
 #include <specialmailcollections.h>
 #include <specialmailcollectionsrequestjob.h>
 

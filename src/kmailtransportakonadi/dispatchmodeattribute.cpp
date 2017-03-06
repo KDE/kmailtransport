@@ -19,7 +19,7 @@
 
 #include "dispatchmodeattribute.h"
 
-#include "mailtransport_debug.h"
+#include "mailtransportakonadi_debug.h"
 
 #include <attributefactory.h>
 
@@ -86,7 +86,7 @@ void DispatchModeAttribute::deserialize(const QByteArray &data)
         d->mDueDate = QDateTime::fromString(QString::fromLatin1(data.mid(5)), Qt::ISODate);
         // NOTE: 5 is the strlen of "after".
     } else {
-        qCWarning(MAILTRANSPORT_LOG) << "Failed to deserialize data [" << data << "]";
+        qCWarning(MAILTRANSPORTAKONADI_LOG) << "Failed to deserialize data [" << data << "]";
     }
 }
 

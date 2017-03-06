@@ -20,10 +20,10 @@
 #include "messagequeuejob.h"
 
 #include "transport.h"
-#include "akonadi/transportattribute.h"
+#include "kmailtransportakonadi/transportattribute.h"
 #include "transportmanager.h"
 
-#include "mailtransport_debug.h"
+#include "mailtransportakonadi_debug.h"
 #include <KLocalizedString>
 
 #include <collection.h>

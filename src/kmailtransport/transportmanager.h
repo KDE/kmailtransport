@@ -26,8 +26,6 @@
 #include <QtCore/QList>
 #include <QtCore/QObject>
 
-#include <agenttype.h>
-
 class KJob;
 
 namespace KWallet

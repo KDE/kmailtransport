@@ -20,7 +20,7 @@
 #ifndef MAILTRANSPORT_DISPATCHMODEATTRIBUTE_H
 #define MAILTRANSPORT_DISPATCHMODEATTRIBUTE_H
 
-#include <mailtransport_export.h>
+#include <mailtransportakonadi_export.h>
 
 #include <QtCore/QDateTime>
 
@@ -37,7 +37,7 @@ namespace MailTransport
   @author Constantin Berzan <exit3219@gmail.com>
   @since 4.4
 */
-class MAILTRANSPORT_EXPORT DispatchModeAttribute : public Akonadi::Attribute
+class MAILTRANSPORTAKONADI_EXPORT DispatchModeAttribute : public Akonadi::Attribute
 {
 public:
     /**

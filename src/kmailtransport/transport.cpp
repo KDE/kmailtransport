@@ -32,9 +32,6 @@
 #include <KStringHandler>
 #include <KWallet/KWallet>
 
-#include <agentinstance.h>
-#include <agentmanager.h>
-
 using namespace MailTransport;
 using namespace KWallet;
 
@@ -161,7 +158,6 @@ void Transport::usrRead()
 
     // Set TransportType.
     {
-        using namespace Akonadi;
         d->transportType = TransportType();
         d->transportType.d->mType = type();
         qCDebug(MAILTRANSPORT_LOG) << "type" << type();

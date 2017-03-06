@@ -20,7 +20,7 @@
 #ifndef MAILTRANSPORT_DISPATCHERINTERFACE_H
 #define MAILTRANSPORT_DISPATCHERINTERFACE_H
 
-#include <mailtransport_export.h>
+#include <mailtransportakonadi_export.h>
 
 #include <agentinstance.h>
 
@@ -41,7 +41,7 @@ namespace MailTransport
   @author Constantin Berzan <exit3219@gmail.com>
   @since 4.4
 */
-class MAILTRANSPORT_EXPORT DispatcherInterface
+class MAILTRANSPORTAKONADI_EXPORT DispatcherInterface
 {
 public:
 

@@ -38,12 +38,12 @@
 
 #include <kmime/kmime_message.h>
 
-#include <akonadi/dispatchmodeattribute.h>
-#include <akonadi/errorattribute.h>
-#include <akonadi/messagequeuejob.h>
-#include <akonadi/sentbehaviourattribute.h>
+#include <kmailtransportakonadi/dispatchmodeattribute.h>
+#include <kmailtransportakonadi/errorattribute.h>
+#include <kmailtransportakonadi/messagequeuejob.h>
+#include <kmailtransportakonadi/sentbehaviourattribute.h>
 #include <transport.h>
-#include <akonadi/transportattribute.h>
+#include <kmailtransportakonadi/transportattribute.h>
 #include <transportmanager.h>
 #include <qsignalspy.h>
 

@@ -17,64 +17,69 @@
     02110-1301, USA.
 */
 
-#ifndef MAILTRANSPORT_ERRORATTRIBUTE_H
-#define MAILTRANSPORT_ERRORATTRIBUTE_H
+#ifndef MAILTRANSPORT_TRANSPORTATTRIBUTE_H
+#define MAILTRANSPORT_TRANSPORTATTRIBUTE_H
 
-#include <mailtransport_export.h>
-
-#include <QtCore/QString>
+#include <mailtransportakonadi_export.h>
 
 #include <attribute.h>
 
 namespace MailTransport
 {
 
+class Transport;
+
 /**
- * @short An Attribute to mark messages that failed to be sent.
- *
- * This attribute contains the error message encountered.
- *
- * @author Constantin Berzan <exit3219@gmail.com>
- * @since 4.4
- */
-class MAILTRANSPORT_EXPORT ErrorAttribute : public Akonadi::Attribute
+  Attribute determining which transport to use for sending a message.
+
+  @see mailtransport
+  @see TransportManager.
+
+  @author Constantin Berzan <exit3219@gmail.com>
+  @since 4.4
+*/
+class MAILTRANSPORTAKONADI_EXPORT TransportAttribute : public Akonadi::Attribute
 {
 public:
     /**
-     * Creates a new error attribute.
-     *
-     * @param msg The i18n'ed error message.
-     */
-    explicit ErrorAttribute(const QString &msg = QString());
+      Creates a new TransportAttribute.
+    */
+    explicit TransportAttribute(int id = -1);
 
     /**
-     * Destroys the error attribute.
-     */
-    virtual ~ErrorAttribute();
-
-    /**
-     * Returns the i18n'ed error message.
-     */
-    QString message() const;
-
-    /**
-     * Sets the i18n'ed error message.
-     */
-    void setMessage(const QString &msg);
+      Destroys this TransportAttribute.
+    */
+    virtual ~TransportAttribute();
 
     /* reimpl */
-    ErrorAttribute *clone() const Q_DECL_OVERRIDE;
+    TransportAttribute *clone() const Q_DECL_OVERRIDE;
     QByteArray type() const Q_DECL_OVERRIDE;
     QByteArray serialized() const Q_DECL_OVERRIDE;
     void deserialize(const QByteArray &data) Q_DECL_OVERRIDE;
 
+    /**
+      Returns the transport id to use for sending this message.
+      @see TransportManager.
+    */
+    int transportId() const;
+
+    /**
+      Returns the transport object corresponding to the transport id contained
+      in this attribute.
+      @see Transport.
+    */
+    Transport *transport() const;
+    /**
+      Sets the transport id to use for sending this message.
+    */
+    void setTransportId(int id);
+
 private:
-    //@cond PRIVATE
     class Private;
     Private *const d;
-    //@endcond
+
 };
 
-}
+} // namespace MailTransport
 
-#endif
+#endif // MAILTRANSPORT_TRANSPORTATTRIBUTE_H

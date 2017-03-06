@@ -19,9 +19,9 @@
 
 #include "outboxactions_p.h"
 
-#include "mailtransport_debug.h"
-#include "akonadi/dispatchmodeattribute.h"
-#include "akonadi/errorattribute.h"
+#include "mailtransportakonadi_debug.h"
+#include "kmailtransportakonadi/dispatchmodeattribute.h"
+#include "kmailtransportakonadi/errorattribute.h"
 
 #include <itemmodifyjob.h>
 #include <messageflags.h>
@@ -56,7 +56,7 @@ ItemFetchScope SendQueuedAction::fetchScope() const
 bool SendQueuedAction::itemAccepted(const Item &item) const
 {
     if (!item.hasAttribute<DispatchModeAttribute>()) {
-        qCWarning(MAILTRANSPORT_LOG) << "Item doesn't have DispatchModeAttribute.";
+        qCWarning(MAILTRANSPORTAKONADI_LOG) << "Item doesn't have DispatchModeAttribute.";
         return false;
     }
 
@@ -138,12 +138,12 @@ ItemFetchScope DispatchManualTransportAction::fetchScope() const
 bool DispatchManualTransportAction::itemAccepted(const Item &item) const
 {
     if (!item.hasAttribute<DispatchModeAttribute>()) {
-        qCWarning(MAILTRANSPORT_LOG) << "Item doesn't have DispatchModeAttribute.";
+        qCWarning(MAILTRANSPORTAKONADI_LOG) << "Item doesn't have DispatchModeAttribute.";
         return false;
     }
 
     if (!item.hasAttribute<TransportAttribute>()) {
-        qCWarning(MAILTRANSPORT_LOG) << "Item doesn't have TransportAttribute.";
+        qCWarning(MAILTRANSPORTAKONADI_LOG) << "Item doesn't have TransportAttribute.";
         return false;
     }
 

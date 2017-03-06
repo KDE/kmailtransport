@@ -26,7 +26,7 @@
 
 #include <control.h>
 
-#include <akonadi/dispatcherinterface.h>
+#include <kmailtransportakonadi/dispatcherinterface.h>
 
 using namespace Akonadi;
 using namespace MailTransport;

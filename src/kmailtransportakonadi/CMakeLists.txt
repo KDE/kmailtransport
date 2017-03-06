@@ -1,0 +1,83 @@
+
+
+add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
+
+
+set(mailtransportakonadi_lib_srcs
+    dispatcherinterface.cpp
+    attributeregistrar.cpp
+    dispatchmodeattribute.cpp
+    errorattribute.cpp
+    transportattribute.cpp
+    sentactionattribute.cpp
+    sentbehaviourattribute.cpp
+    messagequeuejob.cpp
+    outboxactions.cpp
+    filteractionjob.cpp
+    )
+
+ecm_qt_declare_logging_category(mailtransportakonadi_lib_srcs HEADER mailtransportakonadi_debug.h IDENTIFIER MAILTRANSPORTAKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransportakonadi)
+
+add_library(KF5MailTransportAkonadi ${mailtransportakonadi_lib_srcs}
+    )
+
+generate_export_header(KF5MailTransportAkonadi BASE_NAME mailtransportakonadi)
+
+add_library(KF5::MailTransportAkonadi ALIAS KF5MailTransportAkonadi)
+
+
+target_include_directories(KF5MailTransportAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransportAkonadi;${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransportakonadi>")
+target_include_directories(KF5MailTransportAkonadi PUBLIC "$<BUILD_INTERFACE:${MailTransport_SOURCE_DIR}/src;${MailTransport_BINARY_DIR}/src>")
+
+
+target_link_libraries(KF5MailTransportAkonadi
+    PUBLIC
+    KF5::AkonadiCore
+    KF5::Mime
+    KF5::AkonadiMime
+    KF5::MailTransport
+    PRIVATE
+    KF5::I18n
+    KF5::KIOCore
+    KF5::WidgetsAddons
+    KF5::CoreAddons
+    KF5::Wallet
+    KF5::ConfigGui
+    )
+
+set_target_properties(KF5MailTransportAkonadi PROPERTIES
+    VERSION ${MAILTRANSPORT_VERSION_STRING}
+    SOVERSION ${MAILTRANSPORT_SOVERSION}
+    EXPORT_NAME MailTransportAkonadi
+    )
+
+
+install(TARGETS KF5MailTransportAkonadi EXPORT KF5MailTransportTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+
+ecm_generate_headers(MailTransport_kmailtransportakonadi_CamelCase_HEADERS
+    HEADER_NAMES
+    DispatcherInterface
+    MessageQueueJob
+    TransportAttribute
+    SentBehaviourAttribute
+    DispatchModeAttribute
+    ErrorAttribute
+    SentActionAttribute
+    PREFIX MailTransportAkonadi
+    REQUIRED_HEADERS MailTransport_kmailtransportakonadi_HEADERS
+    )
+
+install(FILES
+    ${MailTransport_kmailtransportakonadi_CamelCase_HEADERS}
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransportAkonadi COMPONENT Devel )
+
+install(FILES
+    ${CMAKE_CURRENT_BINARY_DIR}/mailtransportakonadi_export.h
+    ${MailTransport_kmailtransportakonadi_HEADERS}
+
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransportakonadi COMPONENT Devel
+    )
+
+ecm_generate_pri_file(BASE_NAME KMailTransport LIB_NAME KF5MailTransportAkonadi DEPS "Wallet AkonadiCore Mime AkonadiMime" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransportAkonadi/)
+install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
+
