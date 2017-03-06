@@ -60,7 +60,7 @@ public:
     /**
       Describes a list of transport types.
     */
-    typedef QList<TransportType> List;
+    typedef QVector<TransportType> List;
 
     /**
       Constructs a new TransportType.
@@ -119,5 +119,6 @@ private:
 } // namespace MailTransport
 
 Q_DECLARE_METATYPE(MailTransport::TransportType)
+Q_DECLARE_TYPEINFO(MailTransport::TransportType, Q_MOVABLE_TYPE);
 
 #endif // MAILTRANSPORT_TRANSPORTTYPE_H
