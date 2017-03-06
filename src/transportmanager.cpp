@@ -18,7 +18,6 @@
 */
 
 #include "transportmanager.h"
-#include "resourcesendjob_p.h"
 #include "mailtransport_defs.h"
 #include "smtpjob.h"
 #include "transport.h"
@@ -50,9 +49,6 @@
 #include <Kdelibs4ConfigMigrator>
 
 #include <KWallet/kwallet.h>
-
-#include <agentinstance.h>
-#include <agentmanager.h>
 
 using namespace MailTransport;
 using namespace KWallet;
@@ -287,17 +283,6 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent,
 
 bool TransportManager::configureTransport(Transport *transport, QWidget *parent)
 {
-    if (transport->type() == Transport::EnumType::Akonadi) {
-        using namespace Akonadi;
-        AgentInstance instance = AgentManager::self()->instance(transport->host());
-        if (!instance.isValid()) {
-            qCWarning(MAILTRANSPORT_LOG) << "Invalid resource instance" << transport->host();
-        }
-        instance.configure(parent);   // Async...
-        transport->save();
-        return true; // No way to know here if the user cancelled or not.
-    }
-
     QPointer<TransportConfigDialog> transportConfigDialog =
         new TransportConfigDialog(transport, parent);
     transportConfigDialog->setWindowTitle(i18n("Configure account"));
@@ -317,8 +302,6 @@ TransportJob *TransportManager::createTransportJob(int transportId)
     switch (t->type()) {
     case Transport::EnumType::SMTP:
         return new SmtpJob(t, this);
-    case Transport::EnumType::Akonadi:
-        return new ResourceSendJob(t, this);
     }
     Q_ASSERT(false);
     return nullptr;
@@ -400,16 +383,6 @@ void TransportManager::removeTransport(int id)
         return;
     }
     emit transportRemoved(t->id(), t->name());
-
-    // Kill the resource, if Akonadi-type transport.
-    if (t->type() == Transport::EnumType::Akonadi) {
-        using namespace Akonadi;
-        const AgentInstance instance = AgentManager::self()->instance(t->host());
-        if (!instance.isValid()) {
-            qCWarning(MAILTRANSPORT_LOG) << "Could not find resource instance.";
-        }
-        AgentManager::self()->removeInstance(instance);
-    }
 
     d->transports.removeAll(t);
     d->validateDefault();
@@ -504,29 +477,6 @@ void TransportManagerPrivate::fillTypes()
         types << type;
     }
 
-    // All Akonadi resources with MailTransport capability.
-    {
-        using namespace Akonadi;
-        foreach (const AgentType &atype, AgentManager::self()->types()) {
-            // TODO probably the string "MailTransport" should be #defined somewhere
-            // and used like that in the resources (?)
-            if (atype.capabilities().contains(QStringLiteral("MailTransport"))) {
-                TransportType type;
-                type.d->mType = Transport::EnumType::Akonadi;
-                type.d->mAgentType = atype;
-                type.d->mName = atype.name();
-                type.d->mDescription = atype.description();
-                types << type;
-                qCDebug(MAILTRANSPORT_LOG) << "Found Akonadi type" << atype.name();
-            }
-        }
-
-        // Watch for appearing and disappearing types.
-        QObject::connect(AgentManager::self(), SIGNAL(typeAdded(Akonadi::AgentType)),
-                         q, SLOT(agentTypeAdded(Akonadi::AgentType)));
-        QObject::connect(AgentManager::self(), SIGNAL(typeRemoved(Akonadi::AgentType)),
-                         q, SLOT(agentTypeRemoved(Akonadi::AgentType)));
-    }
 
     qCDebug(MAILTRANSPORT_LOG) << "Have SMTP and" << types.count() - 1 << "Akonadi types.";
 }
@@ -747,31 +697,6 @@ void TransportManagerPrivate::dbusServiceUnregistered()
     QDBusConnection::sessionBus().registerService(DBUS_SERVICE_NAME);
 }
 
-void TransportManagerPrivate::agentTypeAdded(const Akonadi::AgentType &atype)
-{
-    using namespace Akonadi;
-    if (atype.capabilities().contains(QStringLiteral("MailTransport"))) {
-        TransportType type;
-        type.d->mType = Transport::EnumType::Akonadi;
-        type.d->mAgentType = atype;
-        type.d->mName = atype.name();
-        type.d->mDescription = atype.description();
-        types << type;
-        qCDebug(MAILTRANSPORT_LOG) << "Added new Akonadi type" << atype.name();
-    }
-}
-
-void TransportManagerPrivate::agentTypeRemoved(const Akonadi::AgentType &atype)
-{
-    using namespace Akonadi;
-    foreach (const TransportType &type, types) {
-        if (type.type() == Transport::EnumType::Akonadi &&
-                type.agentType() == atype) {
-            types.removeAll(type);
-            qCDebug(MAILTRANSPORT_LOG) << "Removed Akonadi type" << atype.name();
-        }
-    }
-}
 
 void TransportManagerPrivate::jobResult(KJob *job)
 {

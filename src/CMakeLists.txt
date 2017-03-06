@@ -11,7 +11,6 @@ set(mailtransport_lib_srcs
 
   filteractionjob.cpp
   transportjob.cpp
-  resourcesendjob.cpp
   smtpjob.cpp
   precommandjob.cpp
 
