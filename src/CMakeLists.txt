@@ -17,20 +17,20 @@ set(mailtransport_lib_srcs
   socket.cpp
   servertest.cpp
 
-  dispatcherinterface.cpp
-  messagequeuejob.cpp
-  outboxactions.cpp
 
 
 )
 
 set(mailtransport_akonadi_srcs
+  akonadi/dispatcherinterface.cpp
   akonadi/attributeregistrar.cpp
   akonadi/dispatchmodeattribute.cpp
   akonadi/errorattribute.cpp
   akonadi/transportattribute.cpp
   akonadi/sentactionattribute.cpp
   akonadi/sentbehaviourattribute.cpp
+  akonadi/messagequeuejob.cpp
+  akonadi/outboxactions.cpp
     )
 
 set(mailtransport_widgets_srcs
@@ -93,11 +93,6 @@ set_target_properties(KF5MailTransport PROPERTIES
 )
 
 
-if(MAILTRANSPORT_INPROCESS_SMTP)
-  target_link_libraries(mailtransport ${Sasl2_LIBRARIES} KF5::PimUtils)
-endif()
-
-
 install(TARGETS KF5MailTransport EXPORT KF5MailTransportTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES mailtransport.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
@@ -107,8 +102,6 @@ add_subdirectory(kcm)
 
 ecm_generate_headers(MailTransport_CamelCase_HEADERS
   HEADER_NAMES
-  DispatcherInterface
-  MessageQueueJob
   PrecommandJob
   ServerTest
   SmtpJob
@@ -131,6 +124,8 @@ ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
 
 ecm_generate_headers(MailTransport_akonadi_CamelCase_HEADERS
   HEADER_NAMES
+  DispatcherInterface
+  MessageQueueJob
   TransportAttribute
   SentBehaviourAttribute
   DispatchModeAttribute

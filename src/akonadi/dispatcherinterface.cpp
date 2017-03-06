@@ -20,7 +20,7 @@
 #include "dispatcherinterface.h"
 #include "dispatcherinterface_p.h"
 
-#include "outboxactions_p.h"
+#include "akonadi/outboxactions_p.h"
 
 #include "mailtransport_debug.h"
 

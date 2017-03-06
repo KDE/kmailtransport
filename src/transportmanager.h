@@ -106,7 +106,7 @@ public:
       Note: The Transport objects become invalid as soon as a change occur, so
       they are only suitable for immediate use.
     */
-    QList<Transport *>transports() const;
+    QList<Transport *> transports() const;
 
     /**
       Returns a list of all available transport types.

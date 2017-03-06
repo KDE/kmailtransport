@@ -38,7 +38,6 @@ class SmtpJobPrivate;
 namespace MailTransport
 {
 
-class SmtpSession;
 
 /**
   Mail transport job for SMTP.
@@ -83,7 +82,6 @@ private Q_SLOTS:
 private:
     friend class ::SmtpJobPrivate;
     SmtpJobPrivate *const d;
-    Q_PRIVATE_SLOT(d, void smtpSessionResult(MailTransport::SmtpSession *))
 };
 
 } // namespace MailTransport

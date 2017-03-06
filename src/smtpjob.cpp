@@ -70,19 +70,6 @@ class SmtpJobPrivate
 public:
     SmtpJobPrivate(SmtpJob *parent) : q(parent) {}
 
-    void smtpSessionResult(SmtpSession *session)
-    {
-#ifndef MAILTRANSPORT_INPROCESS_SMTP
-        Q_UNUSED(session);
-#else
-        if (!session->errorMessage().isEmpty()) {
-            q->setError(KJob::UserDefinedError);
-            q->setErrorText(session->errorMessage());
-        }
-        q->emitResult();
-#endif
-    }
-
     SmtpJob *q;
     KIO::Slave *slave;
     enum State {
@@ -218,7 +205,6 @@ void SmtpJob::startSmtpJob()
     destination.setPath(QStringLiteral("/send"));
     destination.setQuery(destinationQuery);
 
-#ifndef MAILTRANSPORT_INPROCESS_SMTP
     d->slave = s_slavePool->slaves.value(transport()->id());
     if (!d->slave) {
         KIO::MetaData slaveConfig;
@@ -248,16 +234,6 @@ void SmtpJob::startSmtpJob()
 
     addSubjob(job);
     KIO::Scheduler::assignJobToSlave(d->slave, job);
-#else
-    SmtpSession *session = new SmtpSession(this);
-    connect(session, SIGNAL(result(MailTransport::SmtpSession*)),
-            SLOT(smtpSessionResult(MailTransport::SmtpSession*)));
-    session->setUseTLS(transport()->encryption() == Transport::EnumEncryption::TLS);
-    if (transport()->requiresAuthentication()) {
-        session->setSaslMethod(transport()->authenticationTypeString());
-    }
-    session->sendMessage(destination, buffer());
-#endif
 
     setTotalAmount(KJob::Bytes, data().length());
 }

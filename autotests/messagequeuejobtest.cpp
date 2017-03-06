@@ -40,7 +40,7 @@
 
 #include <akonadi/dispatchmodeattribute.h>
 #include <akonadi/errorattribute.h>
-#include <messagequeuejob.h>
+#include <akonadi/messagequeuejob.h>
 #include <akonadi/sentbehaviourattribute.h>
 #include <transport.h>
 #include <akonadi/transportattribute.h>
