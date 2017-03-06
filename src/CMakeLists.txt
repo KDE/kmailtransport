@@ -26,7 +26,6 @@ set(mailtransport_lib_srcs
   transportconfigdialog.cpp
   smtpconfigwidget.cpp
 
-  addtransportdialog.cpp
 )
 
 set(mailtransport_akonadi_srcs
@@ -39,6 +38,7 @@ set(mailtransport_akonadi_srcs
     )
 
 set(mailtransport_widgets_srcs
+  widgets/addtransportdialog.cpp
   widgets/transportcombobox.cpp
     widgets/transportlistview.cpp
     widgets/transportmanagementwidget.cpp

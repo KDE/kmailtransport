@@ -26,7 +26,7 @@
 #include "transportjob.h"
 #include "transporttype.h"
 #include "transporttype_p.h"
-#include "addtransportdialog.h"
+#include "widgets/addtransportdialog.h"
 #include "transportconfigdialog.h"
 #include "transportconfigwidget.h"
 #include "smtpconfigwidget.h"
