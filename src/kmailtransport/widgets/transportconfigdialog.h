@@ -48,8 +48,7 @@ public:
      * yourself.
      *
      * Note that this class only works for transports that are handled directly
-     * by MailTransport, i.e. SMTP.  This class cannot be used to
-     * configure an Akonadi transport.
+     * by MailTransport, i.e. SMTP.
      *
      * @param transport The Transport object to configure. This must be a deep
      * copy of a Transport object or a newly created one, which hasn't been

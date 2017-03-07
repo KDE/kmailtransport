@@ -37,15 +37,8 @@ class TransportType;
   To create a new empty Transport object, use TransportManager::createTransport().
 
   Initialize an empty Transport object by calling the set...() methods defined in
-  kcfg-generated TransportBase, and in this class. Note that some transports use
-  the "host" setting to store the following values:
-   - Akonadi transports: resource ID.
+  kcfg-generated TransportBase, and in this class.
 */
-// TODO KDE5: Do something about the kcfg-generated TransportBase.
-// Currently it has the config stuff as private members, which means it is
-// utterly inextensible.  Also the akonadi-type transports use
-// the "host" setting for keeping the the resource id.
-// This is a hack; they should have separate config options... (cberzan)
 class MAILTRANSPORT_EXPORT Transport : public TransportBase
 {
     Q_OBJECT
