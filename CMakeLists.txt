@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.4.46")
+set(PIM_VERSION "5.4.47")
 
 project(MailTransport VERSION ${PIM_VERSION})
 
@@ -32,12 +32,6 @@ set(AKONADI_LIB_VERSION "5.4.40")
 set(AKONADIMIME_LIB_VERSION "5.4.40")
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
 
-ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
-                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h"
-                        PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfigVersion.cmake"
-                        SOVERSION 5
-)
-
 ########### Find packages ###########
 find_package(KF5KCMUtils ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5ConfigWidgets ${KF5_VERSION} CONFIG REQUIRED)
@@ -57,28 +51,6 @@ set_package_properties(Sasl2 PROPERTIES
                              URL "http://www.cyrussasl.org"
                              TYPE OPTIONAL
 )
-
-configure_package_config_file(
-  "${CMAKE_CURRENT_SOURCE_DIR}/KF5MailTransportConfig.cmake.in"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfig.cmake"
-  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-)
-
-install(FILES
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfig.cmake"
-  "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfigVersion.cmake"
-  DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-  COMPONENT Devel
-)
-
-install(FILES
-   ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h
-   DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}
-   COMPONENT Devel
-)
-
-
-install(EXPORT KF5MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5MailTransportTargets.cmake NAMESPACE KF5::)
 
 ########### Targets ###########
 add_subdirectory(cmake)

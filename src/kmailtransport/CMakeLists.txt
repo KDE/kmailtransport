@@ -1,3 +1,12 @@
+ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
+                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h"
+			PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfigVersion.cmake"
+                        SOVERSION 5
+)
+
+
+
+
 set(mailtransport_lib_srcs
     transport.cpp
     transportmanager.cpp
@@ -109,3 +118,25 @@ install(FILES
 ecm_generate_pri_file(BASE_NAME KMailTransport LIB_NAME KF5MailTransport DEPS "Wallet" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
+
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
+
+configure_package_config_file(
+	"${CMAKE_CURRENT_SOURCE_DIR}/KF5MailTransportConfig.cmake.in"
+	"${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfig.cmake"
+  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+)
+
+install(FILES
+	"${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfig.cmake"
+	"${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfigVersion.cmake"
+  DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+  COMPONENT Devel
+)
+
+install(EXPORT KF5MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5MailTransportTargets.cmake NAMESPACE KF5::)
+
+install(FILES
+   ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+)

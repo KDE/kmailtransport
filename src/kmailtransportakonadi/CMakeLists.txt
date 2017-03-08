@@ -1,3 +1,12 @@
+ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
+                        VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransportakonadi_version.h"
+			PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportAkonadiConfigVersion.cmake"
+                        SOVERSION 5
+)
+
+
+
+
 set(mailtransportakonadi_lib_srcs
     dispatcherinterface.cpp
     attributeregistrar.cpp
@@ -47,7 +56,7 @@ set_target_properties(KF5MailTransportAkonadi PROPERTIES
     )
 
 
-install(TARGETS KF5MailTransportAkonadi EXPORT KF5MailTransportTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5MailTransportAkonadi EXPORT KF5MailTransportAkonadiTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(MailTransport_kmailtransportakonadi_CamelCase_HEADERS
     HEADER_NAMES
@@ -73,6 +82,29 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransportakonadi COMPONENT Devel
     )
 
-ecm_generate_pri_file(BASE_NAME KMailTransport LIB_NAME KF5MailTransportAkonadi DEPS "Wallet AkonadiCore Mime AkonadiMime" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransportAkonadi/)
+ecm_generate_pri_file(BASE_NAME KMailTransportAkonadi LIB_NAME KF5MailTransportAkonadi DEPS "MailTransport AkonadiCore Mime AkonadiMime" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransportAkonadi/)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
+
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransportAkonadi")
+
+install(EXPORT KF5MailTransportAkonadiTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5MailTransportAkonadiTargets.cmake NAMESPACE KF5::)
+
+configure_package_config_file(
+	"${CMAKE_CURRENT_SOURCE_DIR}/KF5MailTransportAkonadiConfig.cmake.in"
+	"${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportAkonadiConfig.cmake"
+  INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+)
+
+install(FILES
+	"${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportAkonadiConfig.cmake"
+	"${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportAkonadiConfigVersion.cmake"
+  DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+  COMPONENT Devel
+)
+
+
+install(FILES
+   ${CMAKE_CURRENT_BINARY_DIR}/mailtransportakonadi_version.h
+  DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+)
