@@ -31,7 +31,6 @@ kconfig_add_kcfg_files(mailtransport_lib_srcs transportbase.kcfgc)
 
 add_library(KF5MailTransport ${mailtransport_lib_srcs}
     ${mailtransport_widgets_srcs}
-    ${mailtransport_kmailtransportakonadi_srcs}
     )
 
 generate_export_header(KF5MailTransport BASE_NAME mailtransport)
