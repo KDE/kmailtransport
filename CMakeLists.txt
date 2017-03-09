@@ -56,10 +56,6 @@ set_package_properties(Sasl2 PROPERTIES
 add_subdirectory(cmake)
 add_subdirectory(src)
 add_subdirectory(kioslave)
-if(BUILD_TESTING)
-    add_subdirectory(tests)
-    add_subdirectory(autotests)
-endif()
 
 install( FILES kmailtransport.renamecategories kmailtransport.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

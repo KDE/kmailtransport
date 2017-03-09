@@ -136,3 +136,8 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
     )
+
+
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+endif()
