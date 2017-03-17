@@ -199,7 +199,7 @@ public Q_SLOTS:
     /**
       Returns a list of transport identifiers.
     */
-    Q_SCRIPTABLE QList<int> transportIds() const;
+    Q_SCRIPTABLE QVector<int> transportIds() const;
 
     /**
       Returns a list of transport names.

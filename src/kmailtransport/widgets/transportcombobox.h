@@ -64,7 +64,7 @@ public:
     TransportBase::EnumType::type transportType() const;
 
 protected:
-    void setTransportList(const QList<int> &transportList);
+    void setTransportList(const QVector<int> &transportList);
 
 public Q_SLOTS:
     /**

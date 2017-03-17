@@ -331,9 +331,9 @@ bool TransportManager::isEmpty() const
     return d->transports.isEmpty();
 }
 
-QList<int> TransportManager::transportIds() const
+QVector<int> TransportManager::transportIds() const
 {
-    QList<int> rv;
+    QVector<int> rv;
     rv.reserve(d->transports.count());
     foreach (Transport *t, d->transports) {
         rv << t->id();
@@ -502,7 +502,7 @@ void TransportManagerPrivate::slotTransportsChanged()
 
 int TransportManagerPrivate::createId() const
 {
-    QList<int> usedIds;
+    QVector<int> usedIds;
     usedIds.reserve(1 + transports.count());
     for (Transport *t : qAsConst(transports)) {
         usedIds << t->id();
