@@ -53,8 +53,8 @@ public:
     MailTransport::Socket         *normalSocket;
     MailTransport::Socket         *secureSocket;
 
-    QSet< int >                    connectionResults;
-    QHash< int, QList<int> >       authenticationResults;
+    QVector< int >                    connectionResults;
+    QHash< int, QVector<int> >       authenticationResults;
     QSet< ServerTest::Capability > capabilityResults;
     QHash< int, uint >             customPorts;
     QTimer                        *normalSocketTimer;
@@ -79,7 +79,7 @@ public:
     void sendInitialCapabilityQuery(MailTransport::Socket *socket);
     bool handlePopConversation(MailTransport::Socket *socket, int type, int stage,
                                const QString &response, bool *shouldStartTLS);
-    QList< int > parseAuthenticationList(const QStringList &authentications);
+    QVector<int> parseAuthenticationList(const QStringList &authentications);
 
     // slots
     void slotNormalPossible();
@@ -121,12 +121,12 @@ void ServerTestPrivate::finalResult()
     normalSocketFinished =  false;
     tlsFinished = false ;
 
-    emit q->finished(connectionResults.toList());
+    emit q->finished(connectionResults);
 }
 
-QList< int > ServerTestPrivate::parseAuthenticationList(const QStringList &authentications)
+QVector<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authentications)
 {
-    QList< int > result;
+    QVector<int> result;
     for (QStringList::ConstIterator it = authentications.begin();
             it != authentications.end(); ++it) {
         QString current = (*it).toUpper();
@@ -594,7 +594,7 @@ QProgressBar *ServerTest::progressBar() const
     return d->testProgress;
 }
 
-QList< int > ServerTest::normalProtocols() const
+QVector<int> ServerTest::normalProtocols() const
 {
     return d->authenticationResults[TransportBase::EnumEncryption::None];
 }
@@ -604,12 +604,12 @@ bool ServerTest::isNormalPossible() const
     return d->normalPossible;
 }
 
-QList< int > ServerTest::tlsProtocols() const
+QVector<int> ServerTest::tlsProtocols() const
 {
     return d->authenticationResults[TransportBase::EnumEncryption::TLS];
 }
 
-QList< int > ServerTest::secureProtocols() const
+QVector<int> ServerTest::secureProtocols() const
 {
     return d->authenticationResults[Transport::EnumEncryption::SSL];
 }
