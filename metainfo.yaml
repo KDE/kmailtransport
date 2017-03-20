@@ -1,14 +1,26 @@
-maintainer: mlaurent
+name: kmailtransport
 description: Manage mail transport
-tier: 3
-type: functional
+public_lib: true
+group: kdepim
 platforms:
     - name: All
-portingAid: false
-deprecated: false
-release: false
+irc: akonadi
+
 libraries:
  - qmake: KMailTransport
    cmake: "KF5::MailTransport"
-cmakename: KF5MailTransport
+   cmakename: KF5MailTransport"
+ - qmake: KMailTransportAkonadi
+   cmake: "KF5::MailTransportAkonadi"
+   cmakename: KF5MailTransportAkonadi   
 
+
+group_info:
+    fancyname: KDE PIM
+    maintainer:
+        - mlaurent
+    irc: kontact
+    mailinglist: kde-pim
+    platforms:
+        - All
+    logo: docs/kontact.svg
