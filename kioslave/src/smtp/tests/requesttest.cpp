@@ -72,10 +72,10 @@ void RequestTest::shouldParseRequest()
     QFETCH(unsigned int, size);
 
     KioSMTP::Request request = KioSMTP::Request::fromURL(smtpurl);
-    QCOMPARE(request.to().join(QLatin1String(",")), to);
-    QCOMPARE(request.cc().join(QLatin1String(",")), cc);
+    QCOMPARE(request.to().join(QLatin1Char(',')), to);
+    QCOMPARE(request.cc().join(QLatin1Char(',')), cc);
     QCOMPARE(request.fromAddress(), from);
-    QCOMPARE(request.bcc().join(QLatin1String(",")), bcc);
+    QCOMPARE(request.bcc().join(QLatin1Char(',')), bcc);
     QCOMPARE(request.size(), size);
     QCOMPARE(request.emitHeaders(), emitheaders);
 }
