@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.4.81")
+set(PIM_VERSION "5.4.90")
 
 project(MailTransport VERSION ${PIM_VERSION})
 
@@ -27,9 +27,9 @@ add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
 
 set(KMAILTRANSPORT_LIB_VERSION ${PIM_VERSION})
 
-set(KMIME_LIB_VERSION "5.4.80")
-set(AKONADI_LIB_VERSION "5.4.80")
-set(AKONADIMIME_LIB_VERSION "5.4.80")
+set(KMIME_LIB_VERSION "5.4.90")
+set(AKONADI_LIB_VERSION "5.4.90")
+set(AKONADIMIME_LIB_VERSION "5.4.90")
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
 
 ########### Find packages ###########
