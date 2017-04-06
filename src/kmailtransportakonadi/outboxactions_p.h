@@ -27,9 +27,7 @@
 #include <itemfetchscope.h>
 #include <job.h>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   FilterAction that finds all messages with a DispatchMode of Manual
   and assigns them a DispatchMode of Immediately.
@@ -54,8 +52,7 @@ public:
 
     bool itemAccepted(const Akonadi::Item &item) const Q_DECL_OVERRIDE;
 
-    Akonadi::Job *itemAction(const Akonadi::Item &item,
-                                     Akonadi::FilterActionJob *parent) const Q_DECL_OVERRIDE;
+    Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const Q_DECL_OVERRIDE;
 
 private:
     class Private;
@@ -86,8 +83,7 @@ public:
 
     bool itemAccepted(const Akonadi::Item &item) const Q_DECL_OVERRIDE;
 
-    virtual Akonadi::Job *itemAction(const Akonadi::Item &item,
-                                     Akonadi::FilterActionJob *parent) const Q_DECL_OVERRIDE;
+    virtual Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const Q_DECL_OVERRIDE;
 
 private:
     class Private;
@@ -116,8 +112,7 @@ public:
 
     bool itemAccepted(const Akonadi::Item &item) const Q_DECL_OVERRIDE;
 
-    virtual Akonadi::Job *itemAction(const Akonadi::Item &item,
-                                     Akonadi::FilterActionJob *parent) const Q_DECL_OVERRIDE;
+    virtual Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const Q_DECL_OVERRIDE;
 
 private:
     class Private;
@@ -125,7 +120,6 @@ private:
 
     int mTransportId;
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_OUTBOXACTIONS_P_H

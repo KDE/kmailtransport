@@ -53,7 +53,7 @@ class MyFunctor : public FilterAction
         if (!item.hasAttribute<TestAttribute>()) {
             return false;
         }
-        return (item.attribute<TestAttribute>()->data == acceptable);
+        return item.attribute<TestAttribute>()->data == acceptable;
     }
 
     virtual Akonadi::Job *itemAction(const Akonadi::Item &item, FilterActionJob *parent) const
@@ -202,4 +202,3 @@ Item FilterActionTest::createItem(const Collection &col, bool accept)
     Q_ASSERT(cjob->exec());
     return cjob->item();
 }
-

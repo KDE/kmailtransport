@@ -35,8 +35,9 @@
 using namespace MailTransport;
 using namespace KWallet;
 
-Transport::Transport(const QString &cfgGroup) :
-    TransportBase(cfgGroup), d(new TransportPrivate)
+Transport::Transport(const QString &cfgGroup)
+    : TransportBase(cfgGroup)
+    , d(new TransportPrivate)
 {
     qCDebug(MAILTRANSPORT_LOG) << cfgGroup;
     d->passwordLoaded = false;
@@ -59,8 +60,8 @@ bool Transport::isValid() const
 
 QString Transport::password()
 {
-    if (!d->passwordLoaded && requiresAuthentication() && storePassword() &&
-            d->password.isEmpty()) {
+    if (!d->passwordLoaded && requiresAuthentication() && storePassword()
+        && d->password.isEmpty()) {
         readPassword();
     }
     return d->password;
@@ -91,7 +92,6 @@ void Transport::forceUniqueName()
                       "it unique among a list of names", "%1 #%2", origName, suffix));
         ++suffix;
     }
-
 }
 
 void Transport::updatePasswordState()
@@ -222,18 +222,18 @@ bool Transport::usrSave()
         if (!wallet || wallet->writePassword(QString::number(id()), d->password) != 0) {
             // wallet saving failed, ask if we should store in the config file instead
             if (d->storePasswordInFile || KMessageBox::warningYesNo(
-                        nullptr,
-                        i18n("KWallet is not available. It is strongly recommended to use "
-                             "KWallet for managing your passwords.\n"
-                             "However, the password can be stored in the configuration "
-                             "file instead. The password is stored in an obfuscated format, "
-                             "but should not be considered secure from decryption efforts "
-                             "if access to the configuration file is obtained.\n"
-                             "Do you want to store the password for server '%1' in the "
-                             "configuration file?", name()),
-                        i18n("KWallet Not Available"),
-                        KGuiItem(i18n("Store Password")),
-                        KGuiItem(i18n("Do Not Store Password"))) == KMessageBox::Yes) {
+                    nullptr,
+                    i18n("KWallet is not available. It is strongly recommended to use "
+                         "KWallet for managing your passwords.\n"
+                         "However, the password can be stored in the configuration "
+                         "file instead. The password is stored in an obfuscated format, "
+                         "but should not be considered secure from decryption efforts "
+                         "if access to the configuration file is obtained.\n"
+                         "Do you want to store the password for server '%1' in the "
+                         "configuration file?", name()),
+                    i18n("KWallet Not Available"),
+                    KGuiItem(i18n("Store Password")),
+                    KGuiItem(i18n("Do Not Store Password"))) == KMessageBox::Yes) {
                 // write to config file
                 KConfigGroup group(config(), currentGroup());
                 group.writeEntry("password", KStringHandler::obscure(storePassword));
@@ -264,13 +264,13 @@ void Transport::readPassword()
     d->passwordLoaded = true;
 
     // check whether there is a chance to find our password at all
-    if (Wallet::folderDoesNotExist(Wallet::NetworkWallet(), WALLET_FOLDER) ||
-            Wallet::keyDoesNotExist(Wallet::NetworkWallet(), WALLET_FOLDER,
-                                    QString::number(id()))) {
+    if (Wallet::folderDoesNotExist(Wallet::NetworkWallet(), WALLET_FOLDER)
+        || Wallet::keyDoesNotExist(Wallet::NetworkWallet(), WALLET_FOLDER,
+                                   QString::number(id()))) {
         // try migrating password from kmail
-        if (Wallet::folderDoesNotExist(Wallet::NetworkWallet(), KMAIL_WALLET_FOLDER) ||
-                Wallet::keyDoesNotExist(Wallet::NetworkWallet(), KMAIL_WALLET_FOLDER,
-                                        QStringLiteral("transport-%1").arg(id()))) {
+        if (Wallet::folderDoesNotExist(Wallet::NetworkWallet(), KMAIL_WALLET_FOLDER)
+            || Wallet::keyDoesNotExist(Wallet::NetworkWallet(), KMAIL_WALLET_FOLDER,
+                                       QStringLiteral("transport-%1").arg(id()))) {
             return;
         }
         qCDebug(MAILTRANSPORT_LOG) << "migrating password from kmail wallet";
@@ -341,4 +341,3 @@ void Transport::setTransportType(const TransportType &type)
     d->transportType = type;
     setType(type.type());
 }
-

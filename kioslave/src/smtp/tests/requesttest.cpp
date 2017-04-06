@@ -21,12 +21,10 @@
 RequestTest::RequestTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 RequestTest::~RequestTest()
 {
-
 }
 
 void RequestTest::shouldHaveDefaultValue()

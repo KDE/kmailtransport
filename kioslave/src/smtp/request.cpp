@@ -38,9 +38,7 @@
 
 #include <assert.h>
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 Request Request::fromURL(const QUrl &url)
 {
     Request request;
@@ -192,5 +190,4 @@ QByteArray Request::headerFields(const QString &fromRealName) const
     }
     return result;
 }
-
 } // namespace KioSMTP

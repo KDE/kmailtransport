@@ -68,7 +68,6 @@ public:
 
     // slot
     void outboxRequestResult(KJob *job);
-
 };
 
 bool MessageQueueJob::Private::validate()
@@ -80,8 +79,8 @@ bool MessageQueueJob::Private::validate()
         return false;
     }
 
-    if ((addressAttribute.to().count() + addressAttribute.cc().count() +
-            addressAttribute.bcc().count()) == 0) {
+    if ((addressAttribute.to().count() + addressAttribute.cc().count()
+         +addressAttribute.bcc().count()) == 0) {
         q->setError(UserDefinedError);
         q->setErrorText(i18n("Message has no recipients."));
         q->emitResult();
@@ -96,14 +95,14 @@ bool MessageQueueJob::Private::validate()
         return false;
     }
 
-    if (sentBehaviourAttribute.sentBehaviour() == SentBehaviourAttribute::MoveToCollection &&
-            !(sentBehaviourAttribute.moveToCollection().isValid())) {
+    if (sentBehaviourAttribute.sentBehaviour() == SentBehaviourAttribute::MoveToCollection
+        && !(sentBehaviourAttribute.moveToCollection().isValid())) {
         q->setError(UserDefinedError);
         q->setErrorText(i18n("Message has invalid sent-mail folder."));
         q->emitResult();
         return false;
-    } else if (sentBehaviourAttribute.sentBehaviour() ==
-               SentBehaviourAttribute::MoveToDefaultSentCollection) {
+    } else if (sentBehaviourAttribute.sentBehaviour()
+               == SentBehaviourAttribute::MoveToDefaultSentCollection) {
         // TODO require SpecialMailCollections::SentMail here?
     }
 
@@ -127,8 +126,8 @@ void MessageQueueJob::Private::outboxRequestResult(KJob *job)
         return;
     }
 
-    SpecialMailCollectionsRequestJob *requestJob =
-        qobject_cast<SpecialMailCollectionsRequestJob *>(job);
+    SpecialMailCollectionsRequestJob *requestJob
+        = qobject_cast<SpecialMailCollectionsRequestJob *>(job);
     if (!requestJob) {
         return;
     }
@@ -157,7 +156,8 @@ void MessageQueueJob::Private::outboxRequestResult(KJob *job)
 }
 
 MessageQueueJob::MessageQueueJob(QObject *parent)
-    : KCompositeJob(parent), d(new Private(this))
+    : KCompositeJob(parent)
+    , d(new Private(this))
 {
 }
 
@@ -205,7 +205,7 @@ void MessageQueueJob::start()
 {
     SpecialMailCollectionsRequestJob *rjob = new SpecialMailCollectionsRequestJob(this);
     rjob->requestDefaultCollection(SpecialMailCollections::Outbox);
-    connect(rjob, SIGNAL(result(KJob*)), this, SLOT(outboxRequestResult(KJob*)));
+    connect(rjob, SIGNAL(result(KJob *)), this, SLOT(outboxRequestResult(KJob *)));
     rjob->start();
 }
 

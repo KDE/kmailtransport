@@ -36,12 +36,9 @@
 
 #include <QByteArray>
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 void Response::parseLine(const char *line, int len)
 {
-
     if (!isWellFormed()) {
         return;    // don't bother
     }
@@ -165,5 +162,4 @@ int Response::errorCode() const
         }
     }
 }
-
 } // namespace KioSMTP

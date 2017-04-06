@@ -34,7 +34,6 @@ public:
 
 private Q_SLOTS:
     void sendAbort();
-
 };
 
 #endif

@@ -55,15 +55,16 @@ TransportManagementWidget::Private::Private(TransportManagementWidget *parent)
 }
 
 TransportManagementWidget::TransportManagementWidget(QWidget *parent)
-    : QWidget(parent), d(new Private(this))
+    : QWidget(parent)
+    , d(new Private(this))
 {
     d->ui.setupUi(this);
     d->updateButtonState();
 
     d->ui.transportList->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(d->ui.transportList, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
+    connect(d->ui.transportList, SIGNAL(currentItemChanged(QTreeWidgetItem *,QTreeWidgetItem *)),
             SLOT(updateButtonState()));
-    connect(d->ui.transportList, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
+    connect(d->ui.transportList, SIGNAL(itemDoubleClicked(QTreeWidgetItem *,int)),
             SLOT(editClicked()));
     connect(d->ui.addButton, SIGNAL(clicked()), SLOT(addClicked()));
     connect(d->ui.editButton, SIGNAL(clicked()), SLOT(editClicked()));
@@ -91,8 +92,8 @@ void TransportManagementWidget::Private::updateButtonState()
         ui.editButton->setEnabled(true);
         ui.renameButton->setEnabled(true);
         ui.removeButton->setEnabled(true);
-        if (ui.transportList->currentItem()->data(0, Qt::UserRole) ==
-                TransportManager::self()->defaultTransportId()) {
+        if (ui.transportList->currentItem()->data(0, Qt::UserRole)
+            == TransportManager::self()->defaultTransportId()) {
             ui.defaultButton->setEnabled(false);
         } else {
             ui.defaultButton->setEnabled(true);
@@ -130,12 +131,12 @@ void TransportManagementWidget::Private::removeClicked()
     if (!ui.transportList->currentItem()) {
         return;
     }
-    const int rc =
-        KMessageBox::questionYesNo(
-            q,
-            i18n("Do you want to remove outgoing account '%1'?",
-                 ui.transportList->currentItem()->text(0)),
-            i18n("Remove outgoing account?"));
+    const int rc
+        = KMessageBox::questionYesNo(
+        q,
+        i18n("Do you want to remove outgoing account '%1'?",
+             ui.transportList->currentItem()->text(0)),
+        i18n("Remove outgoing account?"));
     if (rc == KMessageBox::No) {
         return;
     }

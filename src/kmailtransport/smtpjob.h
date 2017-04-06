@@ -27,18 +27,14 @@
 
 #include <mailtransport_export.h>
 
-namespace KIO
-{
+namespace KIO {
 class Job;
 class Slave;
 }
 
 class SmtpJobPrivate;
 
-namespace MailTransport
-{
-
-
+namespace MailTransport {
 /**
   Mail transport job for SMTP.
   Internally, all jobs for a specific transport are queued to use the same
@@ -83,7 +79,6 @@ private:
     friend class ::SmtpJobPrivate;
     SmtpJobPrivate *const d;
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_SMTPJOB_H

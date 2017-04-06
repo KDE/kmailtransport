@@ -22,9 +22,7 @@
 
 #include <QTreeWidget>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   @internal
   A QTreeWidget for transports.
@@ -45,9 +43,7 @@ protected Q_SLOTS:
 
 private Q_SLOTS:
     void fillTransportList();
-
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORTLISTVIEW_H

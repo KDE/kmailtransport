@@ -28,9 +28,7 @@
 
 #include <QDialog>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class Transport;
 
 /**
@@ -72,7 +70,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotEnabledOkButton(bool))
     //@endcond
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORTCONFIGDIALOG_H

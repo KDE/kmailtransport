@@ -35,19 +35,20 @@
 using namespace MailTransport;
 
 TransportConfigWidget::TransportConfigWidget(Transport *transport, QWidget *parent)
-    : QWidget(parent), d_ptr(new TransportConfigWidgetPrivate)
+    : QWidget(parent)
+    , d_ptr(new TransportConfigWidgetPrivate)
 {
     init(transport);
 }
 
-TransportConfigWidget::TransportConfigWidget(TransportConfigWidgetPrivate &dd,
-        Transport *transport, QWidget *parent)
-    : QWidget(parent), d_ptr(&dd)
+TransportConfigWidget::TransportConfigWidget(TransportConfigWidgetPrivate &dd, Transport *transport, QWidget *parent)
+    : QWidget(parent)
+    , d_ptr(&dd)
 {
     init(transport);
 }
 
-TransportConfigWidget::~ TransportConfigWidget()
+TransportConfigWidget::~TransportConfigWidget()
 {
     delete d_ptr;
 }
@@ -77,4 +78,3 @@ void TransportConfigWidget::apply()
     d->transport->save();
     qCDebug(MAILTRANSPORT_LOG) << "Config written.";
 }
-

@@ -25,9 +25,7 @@
 #include <item.h>
 #include <transactionsequence.h>
 
-namespace Akonadi
-{
-
+namespace Akonadi {
 class Collection;
 class ItemFetchScope;
 class Job;
@@ -104,8 +102,7 @@ public:
      * @param item the item to work on
      * @param parent the parent job
      */
-    virtual Akonadi::Job *itemAction(const Akonadi::Item &item,
-                                     Akonadi::FilterActionJob *parent) const = 0;
+    virtual Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const = 0;
 };
 
 /**
@@ -178,7 +175,6 @@ private:
     Q_PRIVATE_SLOT(d, void fetchResult(KJob *))
     //@endcond
 };
-
 } // namespace Akonadi
 
 #endif // AKONADI_FILTERACTIONJOB_H

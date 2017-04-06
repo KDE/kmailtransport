@@ -28,14 +28,11 @@
 
 class KJob;
 
-namespace KWallet
-{
+namespace KWallet {
 class Wallet;
 }
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class Transport;
 class TransportJob;
 class TransportManagerPrivate;
@@ -295,7 +292,6 @@ private:
     Q_PRIVATE_SLOT(d, void dbusServiceUnregistered())
     Q_PRIVATE_SLOT(d, void jobResult(KJob *job))
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORTMANAGER_H

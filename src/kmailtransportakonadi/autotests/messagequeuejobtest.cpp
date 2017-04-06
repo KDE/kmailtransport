@@ -47,7 +47,7 @@
 #include <transportmanager.h>
 #include <qsignalspy.h>
 
-#define SPAM_ADDRESS ( QStringList() << QStringLiteral("idanoka@gmail.com") )
+#define SPAM_ADDRESS (QStringList() << QStringLiteral("idanoka@gmail.com"))
 
 using namespace Akonadi;
 using namespace KMime;
@@ -67,7 +67,7 @@ void MessageQueueJobTest::initTestCase()
     // check that outbox is empty
     SpecialMailCollectionsRequestJob *rjob = new SpecialMailCollectionsRequestJob(this);
     rjob->requestDefaultCollection(SpecialMailCollections::Outbox);
-    QSignalSpy spy(rjob, SIGNAL(result(KJob*)));
+    QSignalSpy spy(rjob, SIGNAL(result(KJob *)));
     QVERIFY(spy.wait(10000));
     verifyOutboxContents(0);
 }
@@ -177,8 +177,8 @@ void MessageQueueJobTest::testInvalidMessages()
 void MessageQueueJobTest::verifyOutboxContents(qlonglong count)
 {
     QVERIFY(SpecialMailCollections::self()->hasDefaultCollection(SpecialMailCollections::Outbox));
-    Collection outbox =
-        SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
+    Collection outbox
+        = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
     QVERIFY(outbox.isValid());
     CollectionStatisticsJob *job = new CollectionStatisticsJob(outbox);
     AKVERIFYEXEC(job);
@@ -186,4 +186,3 @@ void MessageQueueJobTest::verifyOutboxContents(qlonglong count)
 }
 
 QTEST_AKONADIMAIN(MessageQueueJobTest)
-

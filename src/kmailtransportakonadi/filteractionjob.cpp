@@ -32,7 +32,8 @@ class Q_DECL_HIDDEN Akonadi::FilterActionJob::Private
 {
 public:
     Private(FilterActionJob *qq)
-        : q(qq), functor(nullptr)
+        : q(qq)
+        , functor(nullptr)
     {
     }
 
@@ -90,22 +91,24 @@ FilterAction::~FilterAction()
 }
 
 FilterActionJob::FilterActionJob(const Item &item, FilterAction *functor, QObject *parent)
-    : TransactionSequence(parent), d(new Private(this))
+    : TransactionSequence(parent)
+    , d(new Private(this))
 {
     d->functor = functor;
     d->items << item;
 }
 
 FilterActionJob::FilterActionJob(const Item::List &items, FilterAction *functor, QObject *parent)
-    : TransactionSequence(parent), d(new Private(this))
+    : TransactionSequence(parent)
+    , d(new Private(this))
 {
     d->functor = functor;
     d->items = items;
 }
 
-FilterActionJob::FilterActionJob(const Collection &collection,
-                                 FilterAction *functor, QObject *parent)
-    : TransactionSequence(parent), d(new Private(this))
+FilterActionJob::FilterActionJob(const Collection &collection, FilterAction *functor, QObject *parent)
+    : TransactionSequence(parent)
+    , d(new Private(this))
 {
     d->functor = functor;
     Q_ASSERT(collection.isValid());
@@ -125,7 +128,7 @@ void FilterActionJob::doStart()
         Q_ASSERT(d->functor);
         d->fetchScope = d->functor->fetchScope();
         fjob->setFetchScope(d->fetchScope);
-        connect(fjob, SIGNAL(result(KJob*)), this, SLOT(fetchResult(KJob*)));
+        connect(fjob, SIGNAL(result(KJob *)), this, SLOT(fetchResult(KJob *)));
     } else {
         d->traverseItems();
     }

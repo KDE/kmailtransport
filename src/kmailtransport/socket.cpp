@@ -32,38 +32,35 @@
 
 using namespace MailTransport;
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class SocketPrivate
 {
 public:
     SocketPrivate(Socket *s);
-    Socket             *const q;
-    QSslSocket         *socket;
-    QString             server;
-    QString             protocol;
-    int                 port;
-    bool                secure;
+    Socket *const q;
+    QSslSocket *socket;
+    QString server;
+    QString protocol;
+    int port;
+    bool secure;
 
     // slots
     void slotConnected();
     void slotStateChanged(QAbstractSocket::SocketState state);
-    void slotModeChanged(QSslSocket::SslMode  state);
+    void slotModeChanged(QSslSocket::SslMode state);
     void slotSocketRead();
     void slotSslErrors(const QList<QSslError> &errors);
 
 private:
     QString m_msg;
 };
-
 }
 
-SocketPrivate::SocketPrivate(Socket *s) :
-    q(s),
-    socket(nullptr),
-    port(0),
-    secure(false)
+SocketPrivate::SocketPrivate(Socket *s)
+    : q(s)
+    , socket(nullptr)
+    , port(0)
+    , secure(false)
 {
 }
 
@@ -83,14 +80,14 @@ void SocketPrivate::slotConnected()
 void SocketPrivate::slotStateChanged(QAbstractSocket::SocketState state)
 {
 #ifdef comm_debug
-    qCDebug(MAILTRANSPORT_LOG) << "State is now:" << (int) state;
+    qCDebug(MAILTRANSPORT_LOG) << "State is now:" << (int)state;
 #endif
     if (state == QAbstractSocket::UnconnectedState) {
         emit q->failed();
     }
 }
 
-void SocketPrivate::slotModeChanged(QSslSocket::SslMode  state)
+void SocketPrivate::slotModeChanged(QSslSocket::SslMode state)
 {
 #ifdef comm_debug
     qCDebug(MAILTRANSPORT_LOG) << "Mode is now:" << state;
@@ -134,7 +131,8 @@ void SocketPrivate::slotSslErrors(const QList<QSslError> &)
 // ------------------ end private ---------------------------//
 
 Socket::Socket(QObject *parent)
-    : QObject(parent), d(new SocketPrivate(this))
+    : QObject(parent)
+    , d(new SocketPrivate(this))
 {
     qCDebug(MAILTRANSPORT_LOG);
 }
@@ -156,7 +154,7 @@ void Socket::reconnect()
     if (d->socket) {
         return;
     }
-    
+
     d->socket = new QSslSocket(this);
     d->socket->setProxy(QNetworkProxy::DefaultProxy);
     d->socket->connectToHost(d->server, d->port);

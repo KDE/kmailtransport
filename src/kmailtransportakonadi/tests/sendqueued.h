@@ -35,7 +35,6 @@ public:
 
 private Q_SLOTS:
     void checkFolders();
-
 };
 
 #endif

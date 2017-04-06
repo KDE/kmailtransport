@@ -30,9 +30,7 @@
 
 class PreCommandJobPrivate;
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   Job to execute a command.
   This is used often for sending or receiving mails, for example to set up
@@ -78,7 +76,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotStarted())
     Q_PRIVATE_SLOT(d, void slotError(QProcess::ProcessError error))
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_PRECOMMANDJOB_H

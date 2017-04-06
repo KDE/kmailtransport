@@ -37,48 +37,45 @@
 
 using namespace MailTransport;
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class ServerTestPrivate
 {
 public:
     ServerTestPrivate(ServerTest *test);
 
-    ServerTest *const              q;
-    QString                        server;
-    QString                        fakeHostname;
-    QString                        testProtocol;
+    ServerTest *const q;
+    QString server;
+    QString fakeHostname;
+    QString testProtocol;
 
-    MailTransport::Socket         *normalSocket;
-    MailTransport::Socket         *secureSocket;
+    MailTransport::Socket *normalSocket;
+    MailTransport::Socket *secureSocket;
 
-    QVector< int >                    connectionResults;
-    QHash< int, QVector<int> >       authenticationResults;
+    QVector< int > connectionResults;
+    QHash< int, QVector<int> > authenticationResults;
     QSet< ServerTest::Capability > capabilityResults;
-    QHash< int, uint >             customPorts;
-    QTimer                        *normalSocketTimer;
-    QTimer                        *secureSocketTimer;
-    QTimer                        *progressTimer;
+    QHash< int, uint > customPorts;
+    QTimer *normalSocketTimer;
+    QTimer *secureSocketTimer;
+    QTimer *progressTimer;
 
-    QProgressBar                  *testProgress;
+    QProgressBar *testProgress;
 
-    bool                           secureSocketFinished;
-    bool                           normalSocketFinished;
-    bool                           tlsFinished;
-    bool                           popSupportsTLS;
-    int                            normalStage;
-    int                            secureStage;
-    int                            encryptionMode;
+    bool secureSocketFinished;
+    bool normalSocketFinished;
+    bool tlsFinished;
+    bool popSupportsTLS;
+    int normalStage;
+    int secureStage;
+    int encryptionMode;
 
-    bool                           normalPossible;
-    bool                           securePossible;
+    bool normalPossible;
+    bool securePossible;
 
     void finalResult();
     void handleSMTPIMAPResponse(int type, const QString &text);
     void sendInitialCapabilityQuery(MailTransport::Socket *socket);
-    bool handlePopConversation(MailTransport::Socket *socket, int type, int stage,
-                               const QString &response, bool *shouldStartTLS);
+    bool handlePopConversation(MailTransport::Socket *socket, int type, int stage, const QString &response, bool *shouldStartTLS);
     QVector<int> parseAuthenticationList(const QStringList &authentications);
 
     // slots
@@ -91,13 +88,16 @@ public:
     void slotReadSecure(const QString &text);
     void slotUpdateProgress();
 };
-
 }
 
 ServerTestPrivate::ServerTestPrivate(ServerTest *test)
-    : q(test), testProgress(nullptr), secureSocketFinished(false),
-      normalSocketFinished(false), tlsFinished(false),
-      normalPossible(true), securePossible(true)
+    : q(test)
+    , testProgress(nullptr)
+    , secureSocketFinished(false)
+    , normalSocketFinished(false)
+    , tlsFinished(false)
+    , normalPossible(true)
+    , securePossible(true)
 {
 }
 
@@ -117,9 +117,9 @@ void ServerTestPrivate::finalResult()
         testProgress->hide();
     }
     progressTimer->stop();
-    secureSocketFinished =  false;
-    normalSocketFinished =  false;
-    tlsFinished = false ;
+    secureSocketFinished = false;
+    normalSocketFinished = false;
+    tlsFinished = false;
 
     emit q->finished(connectionResults);
 }
@@ -128,7 +128,7 @@ QVector<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authe
 {
     QVector<int> result;
     for (QStringList::ConstIterator it = authentications.begin();
-            it != authentications.end(); ++it) {
+         it != authentications.end(); ++it) {
         QString current = (*it).toUpper();
         if (current == QLatin1String("LOGIN")) {
             result << Transport::EnumAuthenticationType::LOGIN;
@@ -199,9 +199,7 @@ void ServerTestPrivate::sendInitialCapabilityQuery(MailTransport::Socket *socket
 {
     if (testProtocol == IMAP_PROTOCOL) {
         socket->write(QStringLiteral("1 CAPABILITY"));
-
     } else if (testProtocol == SMTP_PROTOCOL) {
-
         // Detect the hostname which we send with the EHLO command.
         // If there is a fake one set, use that, otherwise use the
         // local host name (and make sure it contains a domain, so the
@@ -225,20 +223,17 @@ void ServerTestPrivate::sendInitialCapabilityQuery(MailTransport::Socket *socket
 
 void ServerTestPrivate::slotTlsDone()
 {
-
     // The server will not send a response after starting TLS. Therefore, we have to manually
     // call slotReadNormal(), because this is not triggered by a data received signal this time.
     slotReadNormal(QString());
 }
 
-bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int type, int stage,
-        const QString &response, bool *shouldStartTLS)
+bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int type, int stage, const QString &response, bool *shouldStartTLS)
 {
     Q_ASSERT(shouldStartTLS != nullptr);
 
     // Initial Greeting
     if (stage == 0) {
-
         //Regexp taken from POP3 ioslave
         QString responseWithoutCRLF = response;
         responseWithoutCRLF.chop(2);
@@ -253,17 +248,16 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
 
         // If we are in TLS stage, the server does not send the initial greeting.
         // Assume that the APOP availability is the same as with an unsecured connection.
-        if (type == Transport::EnumEncryption::TLS &&
-                authenticationResults[Transport::EnumEncryption::None].
-                contains(Transport::EnumAuthenticationType::APOP)) {
+        if (type == Transport::EnumEncryption::TLS
+            && authenticationResults[Transport::EnumEncryption::None].
+            contains(Transport::EnumAuthenticationType::APOP)) {
             authenticationResults[Transport::EnumEncryption::TLS]
-                    << Transport::EnumAuthenticationType::APOP;
+                << Transport::EnumAuthenticationType::APOP;
         }
 
         socket->write(QStringLiteral("CAPA"));
         return true;
     }
-
     // CAPA result
     else if (stage == 1) {
 //     Example:
@@ -291,7 +285,6 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
         socket->write(QStringLiteral("AUTH"));
         return true;
     }
-
     // AUTH response
     else if (stage == 2) {
 //     Example:
@@ -306,14 +299,14 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
         formattedReply.chop(3);
 
         // Get rid of the first +OK line
-        formattedReply = formattedReply.right(formattedReply.size() -
-                                              formattedReply.indexOf(QLatin1Char('\n')) - 1);
-        formattedReply =
-            formattedReply.replace(QLatin1Char(' '), QLatin1Char('-')).
-            replace(QLatin1String("\r\n"), QLatin1String(" "));
+        formattedReply = formattedReply.right(formattedReply.size()
+                                              -formattedReply.indexOf(QLatin1Char('\n')) - 1);
+        formattedReply
+            = formattedReply.replace(QLatin1Char(' '), QLatin1Char('-')).
+              replace(QLatin1String("\r\n"), QLatin1String(" "));
 
-        authenticationResults[type] +=
-            parseAuthenticationList(formattedReply.split(QLatin1Char(' ')));
+        authenticationResults[type]
+            += parseAuthenticationList(formattedReply.split(QLatin1Char(' ')));
     }
 
     *shouldStartTLS = popSupportsTLS;
@@ -447,7 +440,8 @@ void ServerTestPrivate::slotUpdateProgress()
 //---------------------- end private class -----------------------//
 
 ServerTest::ServerTest(QObject *parent)
-    : QObject(parent), d(new ServerTestPrivate(this))
+    : QObject(parent)
+    , d(new ServerTestPrivate(this))
 {
     d->normalSocketTimer = new QTimer(this);
     d->normalSocketTimer->setSingleShot(true);
@@ -552,8 +546,8 @@ void ServerTest::setServer(const QString &server)
 
 void ServerTest::setPort(Transport::EnumEncryption::type encryptionMode, uint port)
 {
-    Q_ASSERT(encryptionMode == Transport::EnumEncryption::None ||
-             encryptionMode == Transport::EnumEncryption::SSL);
+    Q_ASSERT(encryptionMode == Transport::EnumEncryption::None
+             || encryptionMode == Transport::EnumEncryption::SSL);
     d->customPorts.insert(encryptionMode, port);
 }
 
@@ -580,8 +574,8 @@ QString ServerTest::server() const
 
 int ServerTest::port(TransportBase::EnumEncryption::type encryptionMode) const
 {
-    Q_ASSERT(encryptionMode == Transport::EnumEncryption::None ||
-             encryptionMode == Transport::EnumEncryption::SSL);
+    Q_ASSERT(encryptionMode == Transport::EnumEncryption::None
+             || encryptionMode == Transport::EnumEncryption::SSL);
     if (d->customPorts.contains(encryptionMode)) {
         return d->customPorts.value(static_cast<int>(encryptionMode));
     } else {

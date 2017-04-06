@@ -30,9 +30,7 @@
 
 class KConfigDialogManager;
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class Transport;
 class TransportConfigWidgetPrivate;
 
@@ -91,16 +89,13 @@ public Q_SLOTS:
 
 protected:
     TransportConfigWidgetPrivate *const d_ptr;
-    TransportConfigWidget(TransportConfigWidgetPrivate &dd,
-                          Transport *transport, QWidget *parent);
+    TransportConfigWidget(TransportConfigWidgetPrivate &dd, Transport *transport, QWidget *parent);
 
 private:
     Q_DECLARE_PRIVATE(TransportConfigWidget)
 
     void init(Transport *transport);
-
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORTCONFIGWIDGET_H

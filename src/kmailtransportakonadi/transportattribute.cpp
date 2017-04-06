@@ -76,4 +76,3 @@ void TransportAttribute::setTransportId(int id)
 {
     d->mId = id;
 }
-

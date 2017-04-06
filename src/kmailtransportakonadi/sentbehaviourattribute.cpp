@@ -30,8 +30,7 @@ public:
     bool mSilent;
 };
 
-SentBehaviourAttribute::SentBehaviourAttribute(SentBehaviour beh, const Collection &moveToCollection,
-                                               bool sendSilently)
+SentBehaviourAttribute::SentBehaviourAttribute(SentBehaviour beh, const Collection &moveToCollection, bool sendSilently)
     : d(new Private)
 {
     d->mBehaviour = beh;
@@ -63,7 +62,7 @@ QByteArray SentBehaviourAttribute::serialized() const
     case Delete:
         out = "delete";
         break;
-    case MoveToCollection: 
+    case MoveToCollection:
         out = "moveTo" + QByteArray::number(d->mMoveToCollection.id());
         break;
     case MoveToDefaultSentCollection:
@@ -134,4 +133,3 @@ void SentBehaviourAttribute::setSendSilently(bool sendSilently)
 {
     d->mSilent = sendSilently;
 }
-

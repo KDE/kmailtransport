@@ -42,7 +42,10 @@ using namespace MailTransport;
 class SlavePool
 {
 public:
-    SlavePool() : ref(0) {}
+    SlavePool() : ref(0)
+    {
+    }
+
     int ref;
     QHash<int, KIO::Slave *> slaves;
 
@@ -68,7 +71,9 @@ Q_GLOBAL_STATIC(SlavePool, s_slavePool)
 class SmtpJobPrivate
 {
 public:
-    SmtpJobPrivate(SmtpJob *parent) : q(parent) {}
+    SmtpJobPrivate(SmtpJob *parent) : q(parent)
+    {
+    }
 
     SmtpJob *q;
     KIO::Slave *slave;
@@ -79,7 +84,8 @@ public:
 };
 
 SmtpJob::SmtpJob(Transport *transport, QObject *parent)
-    : TransportJob(transport, parent), d(new SmtpJobPrivate(this))
+    : TransportJob(transport, parent)
+    , d(new SmtpJobPrivate(this))
 {
     d->currentState = SmtpJobPrivate::Idle;
     d->slave = nullptr;
@@ -87,7 +93,7 @@ SmtpJob::SmtpJob(Transport *transport, QObject *parent)
     if (!s_slavePool.isDestroyed()) {
         s_slavePool->ref++;
     }
-    KIO::Scheduler::connect(SIGNAL(slaveError(KIO::Slave*,int,QString)), this, SLOT(slaveError(KIO::Slave*,int,QString)));
+    KIO::Scheduler::connect(SIGNAL(slaveError(KIO::Slave *,int,QString)), this, SLOT(slaveError(KIO::Slave *,int,QString)));
 }
 
 SmtpJob::~SmtpJob()
@@ -113,9 +119,9 @@ void SmtpJob::doStart()
         return;
     }
 
-    if ((!s_slavePool->slaves.isEmpty() &&
-            s_slavePool->slaves.contains(transport()->id())) ||
-            transport()->precommand().isEmpty()) {
+    if ((!s_slavePool->slaves.isEmpty()
+         && s_slavePool->slaves.contains(transport()->id()))
+        || transport()->precommand().isEmpty()) {
         d->currentState = SmtpJobPrivate::Smtp;
         startSmtpJob();
     } else {
@@ -133,8 +139,8 @@ void SmtpJob::startSmtpJob()
     }
 
     QUrl destination;
-    destination.setScheme((transport()->encryption() == Transport::EnumEncryption::SSL) ?
-                          SMTPS_PROTOCOL : SMTP_PROTOCOL);
+    destination.setScheme((transport()->encryption() == Transport::EnumEncryption::SSL)
+                          ? SMTPS_PROTOCOL : SMTP_PROTOCOL);
     destination.setHost(transport()->host().trimmed());
     destination.setPort(transport()->port());
 
@@ -159,14 +165,13 @@ void SmtpJob::startSmtpJob()
     if (transport()->requiresAuthentication()) {
         QString user = transport()->userName();
         QString passwd = transport()->password();
-        if ((user.isEmpty() || passwd.isEmpty()) &&
-                transport()->authenticationType() != Transport::EnumAuthenticationType::GSSAPI) {
-
-            QPointer<KPasswordDialog> dlg =
-                new KPasswordDialog(
+        if ((user.isEmpty() || passwd.isEmpty())
+            && transport()->authenticationType() != Transport::EnumAuthenticationType::GSSAPI) {
+            QPointer<KPasswordDialog> dlg
+                = new KPasswordDialog(
                 nullptr,
-                KPasswordDialog::ShowUsernameLine |
-                KPasswordDialog::ShowKeepPassword);
+                KPasswordDialog::ShowUsernameLine
+                |KPasswordDialog::ShowKeepPassword);
             dlg->setPrompt(i18n("You need to supply a username and a password "
                                 "to use this SMTP server."));
             dlg->setKeepPassword(transport()->storePassword());
@@ -199,7 +204,7 @@ void SmtpJob::startSmtpJob()
         // allow +5% for subsequent LF->CRLF and dotstuffing (an average
         // over 2G-lines gives an average line length of 42-43):
         destinationQuery.addQueryItem(QStringLiteral("size"),
-                                 QString::number(qRound(data().length() * 1.05)));
+                                      QString::number(qRound(data().length() * 1.05)));
     }
 
     destination.setPath(QStringLiteral("/send"));
@@ -209,8 +214,8 @@ void SmtpJob::startSmtpJob()
     if (!d->slave) {
         KIO::MetaData slaveConfig;
         slaveConfig.insert(QStringLiteral("tls"),
-                           (transport()->encryption() == Transport::EnumEncryption::TLS) ?
-                           QStringLiteral("on") : QStringLiteral("off"));
+                           (transport()->encryption() == Transport::EnumEncryption::TLS)
+                           ? QStringLiteral("on") : QStringLiteral("off"));
         if (transport()->requiresAuthentication()) {
             slaveConfig.insert(QStringLiteral("sasl"), transport()->authenticationTypeString());
         }

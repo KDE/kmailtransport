@@ -53,8 +53,7 @@
 using namespace MailTransport;
 using namespace KWallet;
 
-namespace MailTransport
-{
+namespace MailTransport {
 /**
  * Private class that helps to provide binary compatibility between releases.
  * @internal
@@ -63,9 +62,9 @@ class TransportManagerPrivate
 {
 public:
     TransportManagerPrivate(TransportManager *parent)
-        : config(nullptr),
-          wallet(nullptr),
-          q(parent)
+        : config(nullptr)
+        , wallet(nullptr)
+        , q(parent)
     {
     }
 
@@ -102,13 +101,14 @@ public:
     void dbusServiceUnregistered();
     void jobResult(KJob *job);
 };
-
 }
 
 class StaticTransportManager : public TransportManager
 {
 public:
-    StaticTransportManager() : TransportManager() {}
+    StaticTransportManager() : TransportManager()
+    {
+    }
 };
 
 StaticTransportManager *sSelf = nullptr;
@@ -119,7 +119,8 @@ static void destroyStaticTransportManager()
 }
 
 TransportManager::TransportManager()
-    : QObject(), d(new TransportManagerPrivate(this))
+    : QObject()
+    , d(new TransportManagerPrivate(this))
 {
     Kdelibs4ConfigMigrator migrate(QStringLiteral("transportmanager"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("mailtransports"));
@@ -135,12 +136,12 @@ TransportManager::TransportManager()
     d->config = new KConfig(QStringLiteral("mailtransports"));
 
     QDBusConnection::sessionBus().registerObject(DBUS_OBJECT_PATH, this,
-            QDBusConnection::ExportScriptableSlots |
-            QDBusConnection::ExportScriptableSignals);
+                                                 QDBusConnection::ExportScriptableSlots
+                                                 |QDBusConnection::ExportScriptableSignals);
 
-    QDBusServiceWatcher *watcher =
-        new QDBusServiceWatcher(DBUS_SERVICE_NAME, QDBusConnection::sessionBus(),
-                                QDBusServiceWatcher::WatchForUnregistration, this);
+    QDBusServiceWatcher *watcher
+        = new QDBusServiceWatcher(DBUS_SERVICE_NAME, QDBusConnection::sessionBus(),
+                                  QDBusServiceWatcher::WatchForUnregistration, this);
     connect(watcher, SIGNAL(serviceUnregistered(QString)),
             SLOT(dbusServiceUnregistered()));
 
@@ -228,7 +229,7 @@ void TransportManager::addTransport(Transport *transport)
 
 void TransportManager::schedule(TransportJob *job)
 {
-    connect(job, SIGNAL(result(KJob*)), SLOT(jobResult(KJob*)));
+    connect(job, SIGNAL(result(KJob *)), SLOT(jobResult(KJob *)));
 
     // check if the job is waiting for the wallet
     if (!job->transport()->isComplete()) {
@@ -255,8 +256,7 @@ void TransportManager::createDefaultTransport()
     }
 }
 
-bool TransportManager::showTransportCreationDialog(QWidget *parent,
-        ShowCondition showCondition)
+bool TransportManager::showTransportCreationDialog(QWidget *parent, ShowCondition showCondition)
 {
     if (showCondition == IfNoTransportExists) {
         if (!isEmpty()) {
@@ -264,10 +264,10 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent,
         }
 
         const int response = KMessageBox::messageBox(parent,
-                             KMessageBox::WarningContinueCancel,
-                             i18n("You must create an outgoing account before sending."),
-                             i18n("Create Account Now?"),
-                             KGuiItem(i18n("Create Account Now")));
+                                                     KMessageBox::WarningContinueCancel,
+                                                     i18n("You must create an outgoing account before sending."),
+                                                     i18n("Create Account Now?"),
+                                                     KGuiItem(i18n("Create Account Now")));
         if (response != KMessageBox::Continue) {
             return false;
         }
@@ -281,8 +281,8 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent,
 
 bool TransportManager::configureTransport(Transport *transport, QWidget *parent)
 {
-    QPointer<TransportConfigDialog> transportConfigDialog =
-        new TransportConfigDialog(transport, parent);
+    QPointer<TransportConfigDialog> transportConfigDialog
+        = new TransportConfigDialog(transport, parent);
     transportConfigDialog->setWindowTitle(i18n("Configure account"));
     bool okClicked = (transportConfigDialog->exec() == QDialog::Accepted);
     delete transportConfigDialog;
@@ -394,7 +394,6 @@ void TransportManager::removeTransport(int id)
     delete t;
     d->config->deleteGroup(group);
     d->writeConfig();
-
 }
 
 void TransportManagerPrivate::readConfig()
@@ -665,16 +664,16 @@ void TransportManagerPrivate::migrateToWallet()
 
     // ask user if he wants to migrate
     int result = KMessageBox::questionYesNoList(
-                     nullptr,
-                     i18n("The following mail transports store their passwords in an "
-                          "unencrypted configuration file.\nFor security reasons, "
-                          "please consider migrating these passwords to KWallet, the "
-                          "KDE Wallet management tool,\nwhich stores sensitive data "
-                          "for you in a strongly encrypted file.\n"
-                          "Do you want to migrate your passwords to KWallet?"),
-                     names, i18n("Question"),
-                     KGuiItem(i18n("Migrate")), KGuiItem(i18n("Keep")),
-                     QStringLiteral("WalletMigrate"));
+        nullptr,
+        i18n("The following mail transports store their passwords in an "
+             "unencrypted configuration file.\nFor security reasons, "
+             "please consider migrating these passwords to KWallet, the "
+             "KDE Wallet management tool,\nwhich stores sensitive data "
+             "for you in a strongly encrypted file.\n"
+             "Do you want to migrate your passwords to KWallet?"),
+        names, i18n("Question"),
+        KGuiItem(i18n("Migrate")), KGuiItem(i18n("Keep")),
+        QStringLiteral("WalletMigrate"));
     if (result != KMessageBox::Yes) {
         return;
     }
@@ -691,7 +690,6 @@ void TransportManagerPrivate::dbusServiceUnregistered()
 {
     QDBusConnection::sessionBus().registerService(DBUS_SERVICE_NAME);
 }
-
 
 void TransportManagerPrivate::jobResult(KJob *job)
 {

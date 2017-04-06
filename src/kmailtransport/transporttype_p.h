@@ -23,9 +23,7 @@
 #include <QtCore/QSharedData>
 #include <QtCore/QString>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   @internal
 */
@@ -49,7 +47,6 @@ public:
     QString mName;
     QString mDescription;
 };
-
 } // namespace MailTransport
 
 #endif //MAILTRANSPORT_TRANSPORTTYPE_P_H

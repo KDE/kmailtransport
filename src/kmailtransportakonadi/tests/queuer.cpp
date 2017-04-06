@@ -136,19 +136,19 @@ MessageQueueJob *MessageQueuer::createQueueJob()
     // default dispatch mode
     // default sent-mail collection
     job->addressAttribute().setFrom(mSenderEdit->text());
-    job->addressAttribute().setTo(mToEdit->text().isEmpty() ?
-                                  QStringList() : mToEdit->text().split(QLatin1Char(',')));
-    job->addressAttribute().setCc(mCcEdit->text().isEmpty() ?
-                                  QStringList() : mCcEdit->text().split(QLatin1Char(',')));
-    job->addressAttribute().setBcc(mBccEdit->text().isEmpty() ?
-                                   QStringList() : mBccEdit->text().split(QLatin1Char(',')));
+    job->addressAttribute().setTo(mToEdit->text().isEmpty()
+                                  ? QStringList() : mToEdit->text().split(QLatin1Char(',')));
+    job->addressAttribute().setCc(mCcEdit->text().isEmpty()
+                                  ? QStringList() : mCcEdit->text().split(QLatin1Char(',')));
+    job->addressAttribute().setBcc(mBccEdit->text().isEmpty()
+                                   ? QStringList() : mBccEdit->text().split(QLatin1Char(',')));
 
-    connect(job, SIGNAL(result(KJob*)),
-            SLOT(jobResult(KJob*)));
-    connect(job, SIGNAL(percent(KJob*,ulong)),
-            SLOT(jobPercent(KJob*,ulong)));
-    connect(job, SIGNAL(infoMessage(KJob*,QString,QString)),
-            SLOT(jobInfoMessage(KJob*,QString,QString)));
+    connect(job, SIGNAL(result(KJob *)),
+            SLOT(jobResult(KJob *)));
+    connect(job, SIGNAL(percent(KJob *,ulong)),
+            SLOT(jobPercent(KJob *,ulong)));
+    connect(job, SIGNAL(infoMessage(KJob *,QString,QString)),
+            SLOT(jobInfoMessage(KJob *,QString,QString)));
 
     return job;
 }
@@ -185,4 +185,3 @@ void MessageQueuer::jobInfoMessage(KJob *job, const QString &info, const QString
     qDebug() << info;
     qDebug() << info2;
 }
-

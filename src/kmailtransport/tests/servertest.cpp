@@ -26,8 +26,9 @@ using namespace MailTransport;
 
 int main(int argc, char **argv)
 {
-    if (argc <= 2)
+    if (argc <= 2) {
         qFatal("Usage: servertest <protocol> <hostname>");
+    }
 
     QApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("kmailtransport-servertest"));
@@ -42,4 +43,3 @@ int main(int argc, char **argv)
     });
     return app.exec();
 }
-

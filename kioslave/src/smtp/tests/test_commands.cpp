@@ -29,7 +29,6 @@ static void checkSuccessfulTransferCommand(bool, bool, bool, bool, bool);
 
 int main(int, char **)
 {
-
     if (!initSASL()) {
         exit(-1);
     }
@@ -479,9 +478,10 @@ int main(int, char **)
         Error = 16,
         EndOfOptions = 32
     };
-    for (unsigned int i = 0; i < EndOfOptions; ++i)
+    for (unsigned int i = 0; i < EndOfOptions; ++i) {
         checkSuccessfulTransferCommand(i & Error, i & Preloading, i & UngetLast,
                                        i & PerformDotStuff, i & EndInLF);
+    }
 
     //
     // NOOP
@@ -582,8 +582,7 @@ int main(int, char **)
     return 0;
 }
 
-void checkSuccessfulTransferCommand(bool error, bool preload, bool ungetLast,
-                                    bool slaveDotStuff, bool mailEndsInNewline)
+void checkSuccessfulTransferCommand(bool error, bool preload, bool ungetLast, bool slaveDotStuff, bool mailEndsInNewline)
 {
     qDebug() << "   ===== checkTransferCommand( "
              << error << ", "
@@ -599,8 +598,8 @@ void checkSuccessfulTransferCommand(bool error, bool preload, bool ungetLast,
 
     Response r;
 
-    const char *s_pre = slaveDotStuff ?
-                        mailEndsInNewline ? foobarbaz_lf : foobarbaz
+    const char *s_pre = slaveDotStuff
+                        ? mailEndsInNewline ? foobarbaz_lf : foobarbaz
                         :
                         mailEndsInNewline ? foobarbaz_crlf : foobarbaz_dotstuffed;
     const unsigned int s_pre_len = qstrlen(s_pre);

@@ -26,9 +26,7 @@
 
 class TransportPrivate;
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class TransportType;
 
 /**
@@ -161,7 +159,6 @@ private Q_SLOTS:
 private:
     TransportPrivate *const d;
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORT_H

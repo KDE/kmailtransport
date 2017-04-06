@@ -30,10 +30,9 @@ class Q_DECL_HIDDEN MailTransport::TransportJob::Private
 {
 public:
     Private()
-        : transport(nullptr),
-          buffer(nullptr)
+        : transport(nullptr)
+        , buffer(nullptr)
     {
-
     }
 
     Transport *transport;
@@ -46,7 +45,8 @@ public:
 };
 
 TransportJob::TransportJob(Transport *transport, QObject *parent)
-    : KCompositeJob(parent), d(new Private)
+    : KCompositeJob(parent)
+    , d(new Private)
 {
     d->transport = transport;
     d->buffer = nullptr;

@@ -29,9 +29,7 @@
 #include <QtCore/QVector>
 #include <attribute.h>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
  * @short An Attribute that stores the action to execute after sending.
  *
@@ -149,7 +147,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 Q_DECLARE_TYPEINFO(MailTransport::SentActionAttribute::Action, Q_MOVABLE_TYPE);
 

@@ -24,9 +24,7 @@
 
 #include <QtNetwork/QSslSocket>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class SocketPrivate;
 
 /**
@@ -106,7 +104,7 @@ private:
 
     Q_PRIVATE_SLOT(d, void slotConnected())
     Q_PRIVATE_SLOT(d, void slotStateChanged(QAbstractSocket::SocketState state))
-    Q_PRIVATE_SLOT(d, void slotModeChanged(QSslSocket::SslMode  state))
+    Q_PRIVATE_SLOT(d, void slotModeChanged(QSslSocket::SslMode state))
     Q_PRIVATE_SLOT(d, void slotSocketRead())
     Q_PRIVATE_SLOT(d, void slotSslErrors(const QList<QSslError> &errors))
 
@@ -131,8 +129,6 @@ Q_SIGNALS:
      */
     void tlsDone();
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_SOCKET_H
-

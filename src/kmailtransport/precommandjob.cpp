@@ -48,12 +48,14 @@ public:
 };
 
 PreCommandJobPrivate::PreCommandJobPrivate(PrecommandJob *parent)
-    : process(nullptr), q(parent)
+    : process(nullptr)
+    , q(parent)
 {
 }
 
 PrecommandJob::PrecommandJob(const QString &precommand, QObject *parent)
-    : KJob(parent), d(new PreCommandJobPrivate(this))
+    : KJob(parent)
+    , d(new PreCommandJobPrivate(this))
 {
     d->precommand = precommand;
     d->process = new QProcess(this);
@@ -64,7 +66,7 @@ PrecommandJob::PrecommandJob(const QString &precommand, QObject *parent)
             SLOT(slotFinished(int,QProcess::ExitStatus)));
 }
 
-PrecommandJob::~ PrecommandJob()
+PrecommandJob::~PrecommandJob()
 {
     delete d;
 }

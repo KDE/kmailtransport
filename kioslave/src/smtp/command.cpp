@@ -43,9 +43,7 @@
 
 #include <assert.h>
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 static const sasl_callback_t callbacks[] = {
     { SASL_CB_ECHOPROMPT, nullptr, nullptr },
     { SASL_CB_NOECHOPROMPT, nullptr, nullptr },
@@ -156,7 +154,7 @@ bool EHLOCommand::processResponse(const Response &r, TransactionState *ts)
         return true;
     }
     mComplete = true;
-    if (r.code() / 10 ==  25) {   // 25x: success
+    if (r.code() / 10 == 25) {    // 25x: success
         parseFeatures(r);
         return true;
     }
@@ -207,15 +205,12 @@ bool StartTLSCommand::processResponse(const Response &r, TransactionState *ts)
 
 #define SASLERROR mSMTP->error(KIO::ERR_COULD_NOT_AUTHENTICATE, \
                                i18n("An error occurred during authentication: %1",  \
-                                    QString::fromUtf8( sasl_errdetail( conn ) )));
+                                    QString::fromUtf8(sasl_errdetail(conn))));
 
 //
 // AUTH - rfc 2554
 //
-AuthCommand::AuthCommand(SMTPSessionInterface *smtp,
-                         const char *mechanisms,
-                         const QString &aFQDN,
-                         KIO::AuthInfo &ai)
+AuthCommand::AuthCommand(SMTPSessionInterface *smtp, const char *mechanisms, const QString &aFQDN, KIO::AuthInfo &ai)
     : Command(smtp, CloseConnectionOnError | OnlyLastInPipeline)
     , mAi(&ai)
     , mFirstTime(true)
@@ -242,7 +237,7 @@ AuthCommand::AuthCommand(SMTPSessionInterface *smtp,
         if (result == SASL_INTERACT) {
             if (!saslInteract(client_interact)) {
                 return;
-            };
+            }
         }
     } while (result == SASL_INTERACT);
     if (result != SASL_CONTINUE && result != SASL_OK) {
@@ -267,14 +262,13 @@ AuthCommand::~AuthCommand()
 bool AuthCommand::saslInteract(void *in)
 {
     qCDebug(SMTP_LOG) << "saslInteract: ";
-    sasl_interact_t *interact = (sasl_interact_t *) in;
+    sasl_interact_t *interact = (sasl_interact_t *)in;
 
     //some mechanisms do not require username && pass, so don't need a popup
     //window for getting this info
     for (; interact->id != SASL_CB_LIST_END; interact++) {
-        if (interact->id == SASL_CB_AUTHNAME ||
-                interact->id == SASL_CB_PASS) {
-
+        if (interact->id == SASL_CB_AUTHNAME
+            || interact->id == SASL_CB_PASS) {
             if (mAi->username.isEmpty() || mAi->password.isEmpty()) {
                 if (!mSMTP->openPasswordDialog(*mAi)) {
                     mSMTP->error(KIO::ERR_ABORTED, i18n("No authentication details supplied."));
@@ -285,22 +279,24 @@ bool AuthCommand::saslInteract(void *in)
         }
     }
 
-    interact = (sasl_interact_t *) in;
+    interact = (sasl_interact_t *)in;
     while (interact->id != SASL_CB_LIST_END) {
         switch (interact->id) {
         case SASL_CB_USER:
-        case SASL_CB_AUTHNAME: {
+        case SASL_CB_AUTHNAME:
+        {
             qCDebug(SMTP_LOG) << "SASL_CB_[USER|AUTHNAME]: " << mAi->username;
             const QByteArray baUserName = mAi->username.toUtf8();
             interact->result = strdup(baUserName.constData());
-            interact->len = strlen((const char *) interact->result);
+            interact->len = strlen((const char *)interact->result);
             break;
         }
-        case SASL_CB_PASS: {
+        case SASL_CB_PASS:
+        {
             qCDebug(SMTP_LOG) << "SASL_CB_PASS: [HIDDEN]";
             const QByteArray baPassword = mAi->password.toUtf8();
             interact->result = strdup(baPassword.constData());
-            interact->len = strlen((const char *) interact->result);
+            interact->len = strlen((const char *)interact->result);
             break;
         }
         default:
@@ -362,7 +358,7 @@ QByteArray AuthCommand::nextCommandLine(TransactionState *ts)
             if (result == SASL_INTERACT) {
                 if (!saslInteract(client_interact)) {
                     return "";
-                };
+                }
             }
         } while (result == SASL_INTERACT);
         if (result != SASL_CONTINUE && result != SASL_OK) {
@@ -649,5 +645,4 @@ QByteArray QuitCommand::nextCommandLine(TransactionState *ts)
     mNeedResponse = true;
     return "QUIT\r\n";
 }
-
 } // namespace KioSMTP

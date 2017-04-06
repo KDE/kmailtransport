@@ -28,8 +28,7 @@ class KJob;
 class QLineEdit;
 class KTextEdit;
 
-namespace MailTransport
-{
+namespace MailTransport {
 class MessageQueueJob;
 }
 
