@@ -25,10 +25,7 @@
 
 #include <QtCore/QString>
 
-
-namespace MailTransport
-{
-
+namespace MailTransport {
 class AddTransportDialog;
 class TransportManager;
 
@@ -101,14 +98,12 @@ public:
     */
     QString description() const;
 
-
 private:
     //@cond PRIVATE
     class Private;
     QSharedDataPointer<Private> d;
     //@endcond
 };
-
 } // namespace MailTransport
 
 Q_DECLARE_METATYPE(MailTransport::TransportType)

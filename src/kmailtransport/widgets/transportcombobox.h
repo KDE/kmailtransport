@@ -27,9 +27,7 @@
 
 class TransportComboBoxPrivate;
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   A combo-box for selecting a mail transport.
   It is updated automatically when transports are added, changed, or removed.
@@ -75,7 +73,6 @@ public Q_SLOTS:
 private:
     TransportComboBoxPrivate *const d;
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORTCOMBOBOX_H

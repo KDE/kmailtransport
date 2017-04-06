@@ -38,9 +38,7 @@ typedef QList<QByteArray> QCStringList;
 
 class QString;
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 class Response
 {
 public:
@@ -56,6 +54,7 @@ public:
     {
         parseLine(line, qstrlen(line));
     }
+
     void parseLine(const char *line, int len);
 
     /** Return an internationalized error message according to the
@@ -85,14 +84,17 @@ public:
     {
         return mCode;
     }
+
     unsigned int first() const
     {
         return code() / 100;
     }
+
     unsigned int second() const
     {
         return (code() % 100) / 10;
     }
+
     unsigned int third() const
     {
         return code() % 10;
@@ -102,10 +104,12 @@ public:
     {
         return first() <= 3 && first() >= 1;
     }
+
     bool isNegative() const
     {
         return first() == 4 || first() == 5;
     }
+
     bool isUnknown() const
     {
         return !isPositive() && !isNegative();
@@ -120,6 +124,7 @@ public:
     {
         return mValid;
     }
+
     bool isComplete() const
     {
         return mSawLastLine;
@@ -152,12 +157,13 @@ public:
 #ifdef KIOSMTP_COMPARATORS
     bool operator==(const Response &other) const
     {
-        return mCode == other.mCode &&
-               mValid == other.mValid &&
-               mSawLastLine == other.mSawLastLine &&
-               mWellFormed == other.mWellFormed &&
-               mLines == other.mLines;
+        return mCode == other.mCode
+               && mValid == other.mValid
+               && mSawLastLine == other.mSawLastLine
+               && mWellFormed == other.mWellFormed
+               && mLines == other.mLines;
     }
+
 #endif
 
 private:
@@ -167,7 +173,6 @@ private:
     bool mSawLastLine;
     bool mWellFormed;
 };
-
 } // namespace KioSMTP
 
 #endif // __KIOSMTP_RESPONSE_H__

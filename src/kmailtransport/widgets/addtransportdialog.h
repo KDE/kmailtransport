@@ -22,9 +22,7 @@
 
 #include <QDialog>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   @internal
 
@@ -62,7 +60,6 @@ private:
     Q_PRIVATE_SLOT(d, void updateOkButton())
     Q_PRIVATE_SLOT(d, void doubleClicked())
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_ADDTRANSPORTDIALOG_H

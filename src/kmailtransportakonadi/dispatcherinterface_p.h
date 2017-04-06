@@ -23,9 +23,7 @@
 
 class KJob;
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   @internal
 */
@@ -37,9 +35,7 @@ public:
 
 public Q_SLOTS:
     void massModifyResult(KJob *job);
-
 };
-
 }
 
 #endif

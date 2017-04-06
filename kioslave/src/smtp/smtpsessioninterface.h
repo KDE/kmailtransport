@@ -25,14 +25,11 @@
 class QByteArray;
 class QString;
 
-namespace KIO
-{
+namespace KIO {
 class AuthInfo;
 }
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 class Response;
 
 /** Interface to the SMTP session for command classes.
@@ -87,10 +84,9 @@ public:
     /** Pipelining has been requested. */
     virtual bool pipeliningRequested() const;
 
-private :
+private:
     KioSMTP::Capabilities m_capabilities;
 };
-
 }
 
 #endif

@@ -38,7 +38,8 @@ class AddTransportDialog::Private
 {
 public:
     Private(AddTransportDialog *qq)
-        : q(qq), okButton(nullptr)
+        : q(qq)
+        , okButton(nullptr)
     {
     }
 
@@ -99,7 +100,8 @@ void AddTransportDialog::Private::updateOkButton()
 }
 
 AddTransportDialog::AddTransportDialog(QWidget *parent)
-    : QDialog(parent), d(new Private(this))
+    : QDialog(parent)
+    , d(new Private(this))
 {
     // Setup UI.
     {
@@ -125,8 +127,9 @@ AddTransportDialog::AddTransportDialog(QWidget *parent)
         treeItem->setText(0, type.name());
         treeItem->setText(1, type.description());
         treeItem->setData(0, Qt::UserRole, QVariant::fromValue(type));     // the transport type
-        if (type.type() == TransportBase::EnumType::SMTP)
+        if (type.type() == TransportBase::EnumType::SMTP) {
             treeItem->setSelected(true); // select SMTP by default
+        }
     }
     d->ui.typeListView->resizeColumnToContents(0);
 
@@ -140,11 +143,11 @@ AddTransportDialog::AddTransportDialog(QWidget *parent)
     d->ui.typeListView->setFocus();
 
     // Connect user input.
-    connect(d->ui.typeListView, SIGNAL(itemClicked(QTreeWidgetItem*,int)),
+    connect(d->ui.typeListView, SIGNAL(itemClicked(QTreeWidgetItem *,int)),
             this, SLOT(updateOkButton()));
     connect(d->ui.typeListView, SIGNAL(itemSelectionChanged()),
             this, SLOT(updateOkButton()));
-    connect(d->ui.typeListView, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
+    connect(d->ui.typeListView, SIGNAL(itemDoubleClicked(QTreeWidgetItem *,int)),
             this, SLOT(doubleClicked()));
     connect(d->ui.name, SIGNAL(textChanged(QString)),
             this, SLOT(updateOkButton()));

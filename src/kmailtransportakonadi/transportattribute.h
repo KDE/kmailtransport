@@ -24,9 +24,7 @@
 
 #include <attribute.h>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class Transport;
 
 /**
@@ -77,9 +75,7 @@ public:
 private:
     class Private;
     Private *const d;
-
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORTATTRIBUTE_H

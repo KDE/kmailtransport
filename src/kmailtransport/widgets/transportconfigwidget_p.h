@@ -24,9 +24,7 @@
 
 #include <KConfigDialogManager>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   @internal
 */
@@ -39,9 +37,7 @@ public:
     virtual ~TransportConfigWidgetPrivate()
     {
     }
-
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORTCONFIGWIDGET_P_H

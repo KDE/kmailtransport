@@ -56,8 +56,7 @@ public:
 
     bool serverTestFailed;
 
-    static void addAuthenticationItem(QComboBox *combo,
-                                      int authenticationType)
+    static void addAuthenticationItem(QComboBox *combo, int authenticationType)
     {
         combo->addItem(Transport::authenticationTypeString(authenticationType),
                        QVariant(authenticationType));
@@ -74,7 +73,6 @@ public:
                   << Transport::EnumAuthenticationType::GSSAPI;
         sslCapa = tlsCapa = noEncCapa;
         updateAuthCapbilities();
-
     }
 
     void updateAuthCapbilities()
@@ -213,7 +211,9 @@ void SMTPConfigWidget::checkSmtpCapabilities()
     qApp->setOverrideCursor(Qt::BusyCursor);
 
     connect(d->serverTest, &ServerTest::finished, this, &SMTPConfigWidget::slotFinished);
-    connect(d->serverTest, &ServerTest::finished, qApp, [](){ qApp->restoreOverrideCursor(); });
+    connect(d->serverTest, &ServerTest::finished, qApp, [](){
+        qApp->restoreOverrideCursor();
+    });
     d->ui.checkCapabilities->setEnabled(false);
     d->serverTest->start();
     d->serverTestFailed = false;
@@ -232,12 +232,15 @@ void SMTPConfigWidget::apply()
         group.writeEntry("authtype", d->ui.authCombo->itemData(index).toInt());
     }
 
-    if (d->ui.encryptionNone->isChecked())
+    if (d->ui.encryptionNone->isChecked()) {
         d->transport->setEncryption(Transport::EnumEncryption::None);
-    if (d->ui.encryptionSsl->isChecked())
+    }
+    if (d->ui.encryptionSsl->isChecked()) {
         d->transport->setEncryption(Transport::EnumEncryption::SSL);
-    if (d->ui.encryptionTls->isChecked())
+    }
+    if (d->ui.encryptionTls->isChecked()) {
         d->transport->setEncryption(Transport::EnumEncryption::TLS);
+    }
 
     TransportConfigWidget::apply();
 }
@@ -343,4 +346,3 @@ void SMTPConfigWidget::encryptionChanged(int enc)
 
     ensureValidAuthSelection();
 }
-

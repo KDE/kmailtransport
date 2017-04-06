@@ -60,4 +60,3 @@ int main(int argc, char **argv)
     new Runner();
     return app.exec();
 }
-

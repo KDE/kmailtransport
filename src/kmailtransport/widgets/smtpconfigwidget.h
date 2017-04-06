@@ -28,9 +28,7 @@
 
 #include "transportconfigwidget.h"
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class Transport;
 
 /**
@@ -66,9 +64,7 @@ private:
     Q_DECLARE_PRIVATE(SMTPConfigWidget)
 
     void init();
-
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_SMTPCONFIGWIDGET_H

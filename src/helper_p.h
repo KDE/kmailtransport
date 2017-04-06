@@ -21,60 +21,73 @@
 #define _HELPER_H
 #include <qglobal.h>
 
-#if QT_VERSION < QT_VERSION_CHECK(5,7,0)
-template <typename... Args>
+#if QT_VERSION < QT_VERSION_CHECK(5, 7, 0)
+template<typename ... Args>
 struct QNonConstOverload
 {
-    template <typename R, typename T>
-    Q_DECL_CONSTEXPR auto operator()(R (T::*ptr)(Args...)) const Q_DECL_NOTHROW -> decltype(ptr)
-    { return ptr; }
+    template<typename R, typename T>
+    Q_DECL_CONSTEXPR auto operator()(R (T::*ptr)(Args ...)) const Q_DECL_NOTHROW->decltype(ptr)
+    {
+        return ptr;
+    }
 
-    template <typename R, typename T>
-    static Q_DECL_CONSTEXPR auto of(R (T::*ptr)(Args...)) Q_DECL_NOTHROW -> decltype(ptr)
-    { return ptr; }
+    template<typename R, typename T>
+    static Q_DECL_CONSTEXPR auto of(R (T::*ptr)(Args ...)) Q_DECL_NOTHROW->decltype(ptr)
+    {
+        return ptr;
+    }
 };
 
-template <typename... Args>
+template<typename ... Args>
 struct QConstOverload
 {
-    template <typename R, typename T>
-    Q_DECL_CONSTEXPR auto operator()(R (T::*ptr)(Args...) const) const Q_DECL_NOTHROW -> decltype(ptr)
-    { return ptr; }
+    template<typename R, typename T>
+    Q_DECL_CONSTEXPR auto operator()(R (T::*ptr)(Args ...) const) const Q_DECL_NOTHROW->decltype(ptr)
+    {
+        return ptr;
+    }
 
-    template <typename R, typename T>
-    static Q_DECL_CONSTEXPR auto of(R (T::*ptr)(Args...) const) Q_DECL_NOTHROW -> decltype(ptr)
-    { return ptr; }
+    template<typename R, typename T>
+    static Q_DECL_CONSTEXPR auto of(R (T::*ptr)(Args ...) const) Q_DECL_NOTHROW->decltype(ptr)
+    {
+        return ptr;
+    }
 };
 
-template <typename... Args>
-struct QOverload : QConstOverload<Args...>, QNonConstOverload<Args...>
+template<typename ... Args>
+struct QOverload : QConstOverload<Args ...>, QNonConstOverload<Args ...>
 {
-    using QConstOverload<Args...>::of;
-    using QConstOverload<Args...>::operator();
-    using QNonConstOverload<Args...>::of;
-    using QNonConstOverload<Args...>::operator();
+    using QConstOverload<Args ...>::of;
+    using QConstOverload<Args ...>::operator();
+    using QNonConstOverload<Args ...>::of;
+    using QNonConstOverload<Args ...>::operator();
 
-    template <typename R>
-    Q_DECL_CONSTEXPR auto operator()(R (*ptr)(Args...)) const Q_DECL_NOTHROW -> decltype(ptr)
-    { return ptr; }
+    template<typename R>
+    Q_DECL_CONSTEXPR auto operator()(R (*ptr)(Args ...)) const Q_DECL_NOTHROW->decltype(ptr)
+    {
+        return ptr;
+    }
 
-    template <typename R>
-    static Q_DECL_CONSTEXPR auto of(R (*ptr)(Args...)) Q_DECL_NOTHROW -> decltype(ptr)
-    { return ptr; }
+    template<typename R>
+    static Q_DECL_CONSTEXPR auto of(R (*ptr)(Args ...)) Q_DECL_NOTHROW->decltype(ptr)
+    {
+        return ptr;
+    }
 };
 
-namespace QtPrivate
-{
-template <typename T> struct QAddConst {
+namespace QtPrivate {
+template<typename T> struct QAddConst {
     typedef const T Type;
 };
 }
 
 // this adds const to non-const objects (like std::as_const)
-template <typename T>
-Q_DECL_CONSTEXPR typename QtPrivate::QAddConst<T>::Type &qAsConst(T &t) Q_DECL_NOTHROW { return t; }
+template<typename T>
+Q_DECL_CONSTEXPR typename QtPrivate::QAddConst<T>::Type &qAsConst(T &t) Q_DECL_NOTHROW {
+    return t;
+}
 // prevent rvalue arguments:
-template <typename T>
+template<typename T>
 void qAsConst(const T &&) Q_DECL_EQ_DELETE;
 #endif
 

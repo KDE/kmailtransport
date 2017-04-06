@@ -38,8 +38,7 @@
 
 class QUrl;
 
-namespace KioSMTP
-{
+namespace KioSMTP {
 class Response;
 class TransactionState;
 class Command;
@@ -52,10 +51,9 @@ class SMTPProtocol : public KIO::TCPSlaveBase
     friend class KioSMTP::KioSlaveSession;
 public:
     SMTPProtocol(const QByteArray &pool, const QByteArray &app, bool useSSL);
-    virtual ~ SMTPProtocol();
+    virtual ~SMTPProtocol();
 
-    virtual void setHost(const QString &host, quint16 port,
-                         const QString &user, const QString &pass) Q_DECL_OVERRIDE;
+    virtual void setHost(const QString &host, quint16 port, const QString &user, const QString &pass) Q_DECL_OVERRIDE;
 
     void special(const QByteArray &aData) Q_DECL_OVERRIDE;
     void put(const QUrl &url, int permissions, KIO::JobFlags flags) Q_DECL_OVERRIDE;
@@ -107,9 +105,10 @@ protected:
     {
         mPendingCommandQueue.enqueue(command);
     }
+
     void queueCommand(int type);
 
-    quint16  m_sOldPort;
+    quint16 m_sOldPort;
     quint16 m_port;
     bool m_opened;
     QString m_sServer, m_sOldServer;

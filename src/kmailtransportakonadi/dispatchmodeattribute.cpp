@@ -60,14 +60,14 @@ QByteArray DispatchModeAttribute::type() const
 QByteArray DispatchModeAttribute::serialized() const
 {
     switch (d->mMode) {
-    case Automatic: {
+    case Automatic:
         if (!d->mDueDate.isValid()) {
             return "immediately";
         } else {
             return "after" + d->mDueDate.toString(Qt::ISODate).toLatin1();
         }
-    }
-    case Manual: return "never";
+    case Manual:
+        return "never";
     }
 
     Q_ASSERT(false);
@@ -109,4 +109,3 @@ void DispatchModeAttribute::setSendAfter(const QDateTime &date)
 {
     d->mDueDate = date;
 }
-

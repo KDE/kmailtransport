@@ -25,9 +25,7 @@
 #include <attribute.h>
 #include <collection.h>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   Attribute determining what will happen to a message after it is sent.  The
   message can be deleted from the Outbox, moved to the default sent-mail
@@ -51,9 +49,7 @@ public:
     /**
       Creates a new SentBehaviourAttribute.
     */
-    explicit SentBehaviourAttribute(SentBehaviour beh = MoveToDefaultSentCollection,
-                                    const Akonadi::Collection &moveToCollection = Akonadi::Collection(-1),
-                                    bool sendSilently = false);
+    explicit SentBehaviourAttribute(SentBehaviour beh = MoveToDefaultSentCollection, const Akonadi::Collection &moveToCollection = Akonadi::Collection(-1), bool sendSilently = false);
 
     /**
       Destroys the SentBehaviourAttribute.
@@ -110,9 +106,7 @@ public:
 private:
     class Private;
     Private *const d;
-
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_SENTBEHAVIOURATTRIBUTE_H

@@ -33,7 +33,6 @@ private Q_SLOTS:
     void initTestCase();
     void testRegistrar();
     void testSerialization();
-
 };
 
 #endif

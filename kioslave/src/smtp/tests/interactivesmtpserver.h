@@ -72,7 +72,9 @@ class InteractiveSMTPServer : public QTcpServer
 
 public:
     InteractiveSMTPServer(QObject *parent = nullptr);
-    ~InteractiveSMTPServer() {}
+    ~InteractiveSMTPServer()
+    {
+    }
 
 private Q_SLOTS:
     void newConnectionAvailable();

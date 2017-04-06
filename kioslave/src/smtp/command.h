@@ -41,9 +41,7 @@ extern "C" {
 
 #include <kio/authinfo.h>
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 class Response;
 class TransactionState;
 class SMTPSessionInterface;
@@ -145,10 +143,12 @@ public:
     {
         return mFlags & CloseConnectionOnError;
     }
+
     bool mustBeLastInPipeline() const
     {
         return mFlags & OnlyLastInPipeline;
     }
+
     bool mustBeFirstInPipeline() const
     {
         return mFlags & OnlyFirstInPipeline;
@@ -200,8 +200,7 @@ public:
 class AuthCommand : public Command
 {
 public:
-    AuthCommand(SMTPSessionInterface *smtp, const char *mechanisms,
-                const QString &aFQDN, KIO::AuthInfo &ai);
+    AuthCommand(SMTPSessionInterface *smtp, const char *mechanisms, const QString &aFQDN, KIO::AuthInfo &ai);
     ~AuthCommand();
     bool doNotExecute(const TransactionState *ts) const Q_DECL_OVERRIDE;
     QByteArray nextCommandLine(TransactionState *ts) Q_DECL_OVERRIDE;
@@ -226,8 +225,7 @@ private:
 class MailFromCommand : public Command
 {
 public:
-    MailFromCommand(SMTPSessionInterface *smtp, const QByteArray &addr,
-                    bool eightBit = false, unsigned int size = 0)
+    MailFromCommand(SMTPSessionInterface *smtp, const QByteArray &addr, bool eightBit = false, unsigned int size = 0)
         : Command(smtp)
         , mAddr(addr)
         , m8Bit(eightBit)
@@ -328,7 +326,6 @@ public:
 
     QByteArray nextCommandLine(TransactionState *ts) Q_DECL_OVERRIDE;
 };
-
 } // namespace KioSMTP
 
 #endif // __KIOSMTP_COMMAND_H__

@@ -249,4 +249,3 @@ void AttributeTest::testSerialization()
 }
 
 QTEST_AKONADIMAIN(AttributeTest)
-

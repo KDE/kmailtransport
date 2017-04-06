@@ -75,7 +75,7 @@ using std::unique_ptr;
 #include <netdb.h>
 
 extern "C" {
-    Q_DECL_EXPORT int kdemain(int argc, char **argv);
+Q_DECL_EXPORT int kdemain(int argc, char **argv);
 }
 
 int kdemain(int argc, char **argv)
@@ -98,8 +98,7 @@ int kdemain(int argc, char **argv)
     return 0;
 }
 
-SMTPProtocol::SMTPProtocol(const QByteArray &pool, const QByteArray &app,
-                           bool useSSL)
+SMTPProtocol::SMTPProtocol(const QByteArray &pool, const QByteArray &app, bool useSSL)
     : TCPSlaveBase(useSSL ? "smtps" : "smtp", pool, app, useSSL)
     , m_sOldPort(0)
     , m_opened(false)
@@ -117,7 +116,6 @@ SMTPProtocol::~SMTPProtocol()
 
 void SMTPProtocol::openConnection()
 {
-
     // Don't actually call smtp_open() yet. Just pretend that we are connected.
     // We can't call smtp_open() here, as that does EHLO, and the EHLO command
     // needs the fake hostname. However, we only get the fake hostname in put(), so
@@ -137,8 +135,8 @@ void SMTPProtocol::special(const QByteArray &aData)
     s >> what;
     if (what == 'c') {
         const QString response = m_sessionIface->capabilities().createSpecialResponse(
-                                     (isUsingSsl() && !isAutoSsl())
-                                     || m_sessionIface->haveCapability("STARTTLS"));
+            (isUsingSsl() && !isAutoSsl())
+            || m_sessionIface->haveCapability("STARTTLS"));
         infoMessage(response);
     } else if (what == 'N') {
         if (!execute(Command::NOOP)) {
@@ -220,7 +218,7 @@ void SMTPProtocol::put(const QUrl &url, int permissions, KIO::JobFlags flags)
     }
 
     if (request.is8BitBody()
-            && !m_sessionIface->haveCapability("8BITMIME") && !m_sessionIface->eightBitMimeRequested()) {
+        && !m_sessionIface->haveCapability("8BITMIME") && !m_sessionIface->eightBitMimeRequested()) {
         error(KIO::ERR_SERVICE_NOT_AVAILABLE,
               i18n("Your server (%1) does not support sending of 8-bit messages.\n"
                    "Please use base64 or quoted-printable encoding.", m_sServer));
@@ -250,8 +248,7 @@ void SMTPProtocol::put(const QUrl &url, int permissions, KIO::JobFlags flags)
     }
 }
 
-void SMTPProtocol::setHost(const QString &host, quint16 port,
-                           const QString &user, const QString &pass)
+void SMTPProtocol::setHost(const QString &host, quint16 port, const QString &user, const QString &pass)
 {
     m_sServer = host;
     m_port = port;
@@ -280,7 +277,6 @@ bool SMTPProtocol::sendCommandLine(const QByteArray &cmdline)
 
 Response SMTPProtocol::getResponse(bool *ok)
 {
-
     if (ok) {
         *ok = false;
     }
@@ -343,9 +339,9 @@ bool SMTPProtocol::executeQueuedCommands(TransactionState *ts)
         if (cmdline.isEmpty()) {
             continue;
         }
-        if (!sendCommandLine(cmdline) ||
-                !batchProcessResponses(ts) ||
-                ts->failedFatally()) {
+        if (!sendCommandLine(cmdline)
+            || !batchProcessResponses(ts)
+            || ts->failedFatally()) {
             smtp_close(false);   // _hard_ shutdown
             return false;
         }
@@ -368,7 +364,6 @@ QByteArray SMTPProtocol::collectPipelineCommands(TransactionState *ts)
     unsigned int cmdLine_len = 0;
 
     while (!mPendingCommandQueue.isEmpty()) {
-
         Command *cmd = mPendingCommandQueue.head();
 
         if (cmd->doNotExecute(ts)) {
@@ -410,8 +405,8 @@ QByteArray SMTPProtocol::collectPipelineCommands(TransactionState *ts)
             //
             // 32 KB seems to be a sensible limit. Additionally, a job can only transfer
             // 32 KB at once anyway.
-            if (dynamic_cast<TransferCommand *>(cmd) != nullptr &&
-                    cmdLine_len >= 32 * 1024) {
+            if (dynamic_cast<TransferCommand *>(cmd) != nullptr
+                && cmdLine_len >= 32 * 1024) {
                 return cmdLine;
             }
         }
@@ -431,7 +426,6 @@ bool SMTPProtocol::batchProcessResponses(TransactionState *ts)
     assert(ts);
 
     while (!mSentCommandQueue.isEmpty()) {
-
         Command *cmd = mSentCommandQueue.head();
         assert(cmd->isComplete());
 
@@ -469,7 +463,6 @@ bool SMTPProtocol::execute(int type, TransactionState *ts)
 // ### when command queues are _not_ empty!)
 bool SMTPProtocol::execute(Command *cmd, TransactionState *ts)
 {
-
     if (!cmd) {
         qCritical() << "SMTPProtocol::execute() called with no command to run!";
     }
@@ -508,9 +501,9 @@ bool SMTPProtocol::execute(Command *cmd, TransactionState *ts)
             return false;
         }
         if (!cmd->processResponse(r, ts)) {
-            if ((ts && ts->failedFatally()) ||
-                    cmd->closeConnectionOnError() ||
-                    !execute(Command::RSET)) {
+            if ((ts && ts->failedFatally())
+                || cmd->closeConnectionOnError()
+                || !execute(Command::RSET)) {
                 smtp_close(false);
             }
             return false;
@@ -522,11 +515,11 @@ bool SMTPProtocol::execute(Command *cmd, TransactionState *ts)
 
 bool SMTPProtocol::smtp_open(const QString &fakeHostname)
 {
-    if (m_opened &&
-            m_sOldPort == m_port &&
-            m_sOldServer == m_sServer &&
-            m_sOldUser == m_sUser &&
-            (fakeHostname.isNull() || m_hostname == fakeHostname)) {
+    if (m_opened
+        && m_sOldPort == m_port
+        && m_sOldServer == m_sServer
+        && m_sOldUser == m_sUser
+        && (fakeHostname.isNull() || m_hostname == fakeHostname)) {
         return true;
     }
 
@@ -542,7 +535,7 @@ bool SMTPProtocol::smtp_open(const QString &fakeHostname)
         if (ok) {
             error(KIO::ERR_COULD_NOT_LOGIN,
                   i18n("The server (%1) did not accept the connection.\n"
-                       "%2", m_sServer,  greeting.errorMessage()));
+                       "%2", m_sServer, greeting.errorMessage()));
         }
         smtp_close();
         return false;
@@ -567,11 +560,10 @@ bool SMTPProtocol::smtp_open(const QString &fakeHostname)
     }
 
     if ((m_sessionIface->haveCapability("STARTTLS") /*### && canUseTLS()*/ && m_sessionIface->tlsRequested() != SMTPSessionInterface::ForceNoTLS)
-            || m_sessionIface->tlsRequested() == SMTPSessionInterface::ForceTLS) {
+        || m_sessionIface->tlsRequested() == SMTPSessionInterface::ForceTLS) {
         // For now we're gonna force it on.
 
         if (execute(Command::STARTTLS)) {
-
             // re-issue EHLO to refresh the capability list (could be have
             // been faked before TLS was enabled):
             EHLOCommand ehloCmdPostTLS(m_sessionIface, m_hostname);
@@ -599,8 +591,8 @@ bool SMTPProtocol::authenticate()
 {
     // return with success if the server doesn't support SMTP-AUTH or an user
     // name is not specified and metadata doesn't tell us to force it.
-    if ((m_sUser.isEmpty() || !m_sessionIface->haveCapability("AUTH")) &&
-            m_sessionIface->requestedSaslMethod().isEmpty()) {
+    if ((m_sUser.isEmpty() || !m_sessionIface->haveCapability("AUTH"))
+        && m_sessionIface->requestedSaslMethod().isEmpty()) {
         return true;
     }
 

@@ -37,9 +37,7 @@
 
 class QUrl;
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 class Request
 {
 public:
@@ -57,10 +55,12 @@ public:
     {
         return mProfileName;
     }
+
     void setProfileName(const QString &profileName)
     {
         mProfileName = profileName;
     }
+
     bool hasProfile() const
     {
         return !profileName().isNull();
@@ -70,6 +70,7 @@ public:
     {
         return mSubject;
     }
+
     void setSubject(const QString &subject)
     {
         mSubject = subject;
@@ -79,10 +80,12 @@ public:
     {
         return mFromAddress;
     }
+
     void setFromAddress(const QString &fromAddress)
     {
         mFromAddress = fromAddress;
     }
+
     bool hasFromAddress() const
     {
         return !mFromAddress.isEmpty();
@@ -92,6 +95,7 @@ public:
     {
         return to() + cc() + bcc();
     }
+
     bool hasRecipients() const
     {
         return !to().empty() || !cc().empty() || !bcc().empty();
@@ -101,22 +105,27 @@ public:
     {
         return mTo;
     }
+
     QStringList cc() const
     {
         return mCc;
     }
+
     QStringList bcc() const
     {
         return mBcc;
     }
+
     void addTo(const QString &to)
     {
         mTo.push_back(to);
     }
+
     void addCc(const QString &cc)
     {
         mCc.push_back(cc);
     }
+
     void addBcc(const QString &bcc)
     {
         mBcc.push_back(bcc);
@@ -126,6 +135,7 @@ public:
     {
         return mHeloHostname;
     }
+
     QByteArray heloHostnameCString() const;
     void setHeloHostname(const QString &hostname)
     {
@@ -136,6 +146,7 @@ public:
     {
         return mEmitHeaders;
     }
+
     void setEmitHeaders(bool emitHeaders)
     {
         mEmitHeaders = emitHeaders;
@@ -145,6 +156,7 @@ public:
     {
         return m8Bit;
     }
+
     void set8BitBody(bool a8Bit)
     {
         m8Bit = a8Bit;
@@ -154,6 +166,7 @@ public:
     {
         return mSize;
     }
+
     void setSize(unsigned int size)
     {
         mSize = size;
@@ -174,7 +187,6 @@ private:
     bool m8Bit;
     unsigned int mSize;
 };
-
 } // namespace KioSMTP
 
 #endif // __KIOSMTP_REQUEST_H__

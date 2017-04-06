@@ -36,9 +36,7 @@
 
 #include <QString>
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 /**
    @short A class modelling an SMTP transaction's state
 
@@ -64,12 +62,12 @@ class TransactionState
 {
 public:
     struct RecipientRejection {
-        RecipientRejection(const QString &who = QString(),
-                           const QString &why = QString())
+        RecipientRejection(const QString &who = QString(), const QString &why = QString())
             : recipient(who)
             , reason(why)
         {
         }
+
         QString recipient;
         QString reason;
 #ifdef KIOSMTP_COMPARATORS
@@ -77,6 +75,7 @@ public:
         {
             return recipient == other.recipient && reason == other.reason;
         }
+
 #endif
     };
     typedef QList<RecipientRejection> RejectedRecipientList;
@@ -102,6 +101,7 @@ public:
     {
         return mFailed || mFailedFatally;
     }
+
     void setFailed()
     {
         mFailed = true;
@@ -116,6 +116,7 @@ public:
     {
         return mFailedFatally;
     }
+
     void setFailedFatally(int code = 0, const QString &msg = QString());
 
     /** @return whether the transaction was completed successfully */
@@ -123,6 +124,7 @@ public:
     {
         return mComplete;
     }
+
     void setComplete()
     {
         mComplete = true;
@@ -146,6 +148,7 @@ public:
     {
         return mDataCommandIssued;
     }
+
     void setDataCommandIssued(bool issued)
     {
         mDataCommandIssued = issued;
@@ -155,6 +158,7 @@ public:
     {
         return mDataCommandIssued && mDataCommandSucceeded;
     }
+
     void setDataCommandSucceeded(bool succeeded, const Response &r);
 
     Response dataResponse() const
@@ -166,6 +170,7 @@ public:
     {
         return mAtLeastOneRecipientWasAccepted;
     }
+
     void setRecipientAccepted()
     {
         mAtLeastOneRecipientWasAccepted = true;
@@ -175,10 +180,12 @@ public:
     {
         return !mRejectedRecipients.empty();
     }
+
     RejectedRecipientList rejectedRecipients() const
     {
         return mRejectedRecipients;
     }
+
     void addRejectedRecipient(const RecipientRejection &r);
     void addRejectedRecipient(const QString &who, const QString &why)
     {
@@ -191,24 +198,25 @@ public:
         mDataResponse.clear();
         mAtLeastOneRecipientWasAccepted
             = mDataCommandIssued
-              = mDataCommandSucceeded
-                = mFailed = mFailedFatally
-                            = mComplete = false;
+                  = mDataCommandSucceeded
+                        = mFailed = mFailedFatally
+                                        = mComplete = false;
     }
 
 #ifdef KIOSMTP_COMPARATORS
     bool operator==(const TransactionState &other) const
     {
         return
-            mAtLeastOneRecipientWasAccepted == other.mAtLeastOneRecipientWasAccepted &&
-            mDataCommandIssued == other.mDataCommandIssued &&
-            mDataCommandSucceeded == other.mDataCommandSucceeded &&
-            mFailed == other.mFailed &&
-            mFailedFatally == other.mFailedFatally &&
-            mComplete == other.mComplete &&
-            mDataResponse.code() == other.mDataResponse.code() &&
-            mRejectedRecipients == other.mRejectedRecipients;
+            mAtLeastOneRecipientWasAccepted == other.mAtLeastOneRecipientWasAccepted
+            && mDataCommandIssued == other.mDataCommandIssued
+            && mDataCommandSucceeded == other.mDataCommandSucceeded
+            && mFailed == other.mFailed
+            && mFailedFatally == other.mFailedFatally
+            && mComplete == other.mComplete
+            && mDataResponse.code() == other.mDataResponse.code()
+            && mRejectedRecipients == other.mRejectedRecipients;
     }
+
 #endif
 
 private:
@@ -224,7 +232,6 @@ private:
     bool mFailedFatally;
     bool mComplete;
 };
-
 } // namespace KioSMTP
 
 #endif // __KIOSMTP_TRANSACTIONSTATE_H__

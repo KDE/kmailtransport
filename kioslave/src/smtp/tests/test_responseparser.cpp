@@ -7,7 +7,7 @@
 QTEST_GUILESS_MAIN(ResponseParserTest)
 
 static const QByteArray singleLineResponseCRLF = "250 OK\r\n";
-static const QByteArray singleLineResponse     = "250 OK";
+static const QByteArray singleLineResponse = "250 OK";
 
 static const QByteArray multiLineResponse[] = {
     "250-ktown.kde.org\r\n",
@@ -15,7 +15,7 @@ static const QByteArray multiLineResponse[] = {
     "250-AUTH PLAIN DIGEST-MD5\r\n",
     "250 PIPELINING\r\n"
 };
-static const unsigned int numMultiLineLines = sizeof multiLineResponse / sizeof * multiLineResponse;
+static const unsigned int numMultiLineLines = sizeof multiLineResponse / sizeof *multiLineResponse;
 
 void ResponseParserTest::testResponseParser()
 {

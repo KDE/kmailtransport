@@ -38,9 +38,7 @@
 
 #include <kmime/kmime_message.h>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   @short Provides an interface for sending email.
 
@@ -147,7 +145,7 @@ public:
       Creates the item and places it in the outbox.
       It is now queued for sending by the mail dispatcher agent.
     */
-    void start()Q_DECL_OVERRIDE;
+    void start() Q_DECL_OVERRIDE;
 
 protected Q_SLOTS:
     /**
@@ -163,9 +161,7 @@ private:
     Private *const d;
 
     Q_PRIVATE_SLOT(d, void outboxRequestResult(KJob *))
-
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_MESSAGEQUEUEJOB_H

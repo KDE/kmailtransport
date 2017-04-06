@@ -50,9 +50,12 @@ static const QHostAddress localhost(0x7f000001);   // 127.0.0.1
 static QString err2str(QAbstractSocket::SocketError error)
 {
     switch (error) {
-    case QAbstractSocket::ConnectionRefusedError: return QStringLiteral("Connection refused");
-    case QAbstractSocket::HostNotFoundError: return QStringLiteral("Host not found");
-    default: return QStringLiteral("Unknown error");
+    case QAbstractSocket::ConnectionRefusedError:
+        return QStringLiteral("Connection refused");
+    case QAbstractSocket::HostNotFoundError:
+        return QStringLiteral("Host not found");
+    default:
+        return QStringLiteral("Unknown error");
     }
 }
 
@@ -63,7 +66,7 @@ static QString escape(QString s)
            .replace(QLatin1Char('>'), QLatin1String("&gt;"))
            .replace(QLatin1Char('<'), QLatin1String("&lt;"))
            .replace(QLatin1Char('"'), QLatin1String("&quot;"))
-           ;
+    ;
 }
 
 static QString trim(const QString &s)
@@ -81,10 +84,10 @@ InteractiveSMTPServerWindow::~InteractiveSMTPServerWindow()
 {
     if (mSocket) {
         mSocket->close();
-        if (mSocket->state() == QAbstractSocket::ClosingState)
+        if (mSocket->state() == QAbstractSocket::ClosingState) {
             connect(mSocket, SIGNAL(disconnected()),
                     mSocket, SLOT(deleteLater()));
-        else {
+        } else {
             mSocket->deleteLater();
         }
         mSocket = nullptr;
@@ -128,7 +131,8 @@ int main(int argc, char *argv[])
 }
 
 InteractiveSMTPServerWindow::InteractiveSMTPServerWindow(QTcpSocket *socket, QWidget *parent)
-    : QWidget(parent), mSocket(socket)
+    : QWidget(parent)
+    , mSocket(socket)
 {
     QPushButton *but;
     Q_ASSERT(socket);
@@ -203,4 +207,3 @@ void InteractiveSMTPServerWindow::slotCloseConnection()
 {
     mSocket->close();
 }
-

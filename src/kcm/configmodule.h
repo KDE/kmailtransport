@@ -22,9 +22,7 @@
 
 #include <KCModule>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   KCModule for transport management.
 */
@@ -32,10 +30,8 @@ class ConfigModule : public KCModule
 {
     Q_OBJECT
 public:
-    explicit ConfigModule(QWidget *parent = nullptr,
-                          const QVariantList &args = QVariantList());
+    explicit ConfigModule(QWidget *parent = nullptr, const QVariantList &args = QVariantList());
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_CONFIGMODULE_H

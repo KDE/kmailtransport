@@ -34,9 +34,7 @@
 #include <kio/global.h>
 #include <KLocalizedString>
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 void TransactionState::setFailedFatally(int code, const QString &msg)
 {
     mFailed = mFailedFatally = true;
@@ -50,10 +48,10 @@ void TransactionState::setMailFromFailed(const QString &addr, const Response &r)
     mErrorCode = KIO::ERR_NO_CONTENT;
     if (addr.isEmpty()) {
         mErrorMessage = i18n("The server did not accept a blank sender address.\n"
-                             "%1",  r.errorMessage());
+                             "%1", r.errorMessage());
     } else {
         mErrorMessage = i18n("The server did not accept the sender address \"%1\".\n"
-                             "%2",  addr,  r.errorMessage());
+                             "%2", addr, r.errorMessage());
     }
 }
 
@@ -108,7 +106,7 @@ QString TransactionState::errorMessage() const
         QStringList recip;
         recip.reserve(mRejectedRecipients.count());
         for (RejectedRecipientList::const_iterator it = mRejectedRecipients.begin();
-                it != mRejectedRecipients.end(); ++it) {
+             it != mRejectedRecipients.end(); ++it) {
             recip.push_back((*it).recipient + QLatin1String(" (") + (*it).reason + QLatin1Char(')'));
         }
         return i18n("Message sending failed since the following recipients were rejected by the server:\n"
@@ -123,5 +121,4 @@ QString TransactionState::errorMessage() const
     // ### what else?
     return i18n("Unhandled error condition. Please send a bug report.");
 }
-
 }

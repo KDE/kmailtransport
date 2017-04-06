@@ -29,9 +29,7 @@
 
 class QProgressBar;
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class ServerTestPrivate;
 
 /**
@@ -221,7 +219,6 @@ private:
     Q_PRIVATE_SLOT(d, void slotSslNotPossible())
     Q_PRIVATE_SLOT(d, void slotUpdateProgress())
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_SERVERTEST_H

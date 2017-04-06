@@ -32,17 +32,15 @@
 #include "capabilities.h"
 #include "response.h"
 
-namespace KioSMTP
-{
-
+namespace KioSMTP {
 Capabilities Capabilities::fromResponse(const Response &ehlo)
 {
     Capabilities c;
 
     // first, check whether the response was valid and indicates success:
     if (!ehlo.isOk()
-            || ehlo.code() / 10 != 25 // ### restrict to 250 only?
-            || ehlo.lines().empty()) {
+        || ehlo.code() / 10 != 25     // ### restrict to 250 only?
+        || ehlo.lines().empty()) {
         return c;
     }
 
@@ -109,7 +107,7 @@ QStringList Capabilities::saslMethodsQSL() const
 {
     QStringList result;
     for (QMap<QString, QStringList>::const_iterator it = mCapabilities.begin();
-            it != mCapabilities.end(); ++it) {
+         it != mCapabilities.end(); ++it) {
         if (it.key() == QLatin1String("AUTH")) {
             result += it.value();
         } else if (it.key().startsWith(QLatin1String("AUTH="))) {
@@ -120,5 +118,4 @@ QStringList Capabilities::saslMethodsQSL() const
     result.removeDuplicates();
     return result;
 }
-
 } // namespace KioSMTP

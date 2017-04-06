@@ -27,9 +27,7 @@
 
 #include <QWidget>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   A widget to manage mail transports.
 */
@@ -60,7 +58,6 @@ private:
     Q_PRIVATE_SLOT(d, void updateButtonState())
     Q_PRIVATE_SLOT(d, void slotCustomContextMenuRequested(const QPoint &))
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORTMANAGEMENTWIDGET_H

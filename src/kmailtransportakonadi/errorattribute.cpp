@@ -69,4 +69,3 @@ void ErrorAttribute::setMessage(const QString &msg)
 {
     d->mMessage = msg;
 }
-

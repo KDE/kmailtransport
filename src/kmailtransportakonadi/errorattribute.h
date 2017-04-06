@@ -26,9 +26,7 @@
 
 #include <attribute.h>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
  * @short An Attribute to mark messages that failed to be sent.
  *
@@ -74,7 +72,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 }
 
 #endif

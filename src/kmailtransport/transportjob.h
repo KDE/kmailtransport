@@ -28,9 +28,7 @@
 
 class QBuffer;
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class Transport;
 
 /**
@@ -144,7 +142,6 @@ private:
     Private *const d;
     //@endcond
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_TRANSPORTJOB_H

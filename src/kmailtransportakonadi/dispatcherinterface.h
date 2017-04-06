@@ -26,9 +26,7 @@
 
 //krazy:excludeall=dpointer
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   @short An interface for applications to interact with the dispatcher agent.
 
@@ -77,7 +75,6 @@ public:
     */
     void dispatchManualTransport(int transportId);
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_DISPATCHERINTERFACE_H

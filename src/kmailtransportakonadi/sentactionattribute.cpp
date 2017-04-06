@@ -89,7 +89,7 @@ SentActionAttribute::Action &SentActionAttribute::Action::operator=(const Action
 
 bool SentActionAttribute::Action::operator==(const Action &other) const
 {
-    return ((d->mType == other.d->mType) && (d->mValue == other.d->mValue));
+    return (d->mType == other.d->mType) && (d->mValue == other.d->mValue);
 }
 
 class SentActionAttribute::Private

@@ -44,7 +44,10 @@ class MailTransport::TransportConfigDialog::Private
 {
 public:
     Private(TransportConfigDialog *qq)
-        : transport(nullptr), configWidget(nullptr), q(qq), okButton(nullptr)
+        : transport(nullptr)
+        , configWidget(nullptr)
+        , q(qq)
+        , okButton(nullptr)
     {
     }
 
@@ -79,27 +82,25 @@ void TransportConfigDialog::Private::slotTextChanged(const QString &text)
 }
 
 TransportConfigDialog::TransportConfigDialog(Transport *transport, QWidget *parent)
-    : QDialog(parent), d(new Private(this))
+    : QDialog(parent)
+    , d(new Private(this))
 {
     Q_ASSERT(transport);
     d->transport = transport;
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     bool pathIsEmpty = false;
     switch (transport->type()) {
-    case Transport::EnumType::SMTP: {
+    case Transport::EnumType::SMTP:
         d->configWidget = new SMTPConfigWidget(transport, this);
         break;
-    }
-    case Transport::EnumType::Akonadi: {
+    case Transport::EnumType::Akonadi:
         qCWarning(MAILTRANSPORT_LOG) << "Tried to configure an Akonadi transport.";
         d->configWidget = new QLabel(i18n("This outgoing account cannot be configured."), this);
         break;
-    }
-    default: {
+    default:
         Q_ASSERT(false);
         d->configWidget = nullptr;
         break;
-    }
     }
     mainLayout->addWidget(d->configWidget);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);

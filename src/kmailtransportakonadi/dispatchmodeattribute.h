@@ -26,9 +26,7 @@
 
 #include <attribute.h>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 /**
   Attribute determining how and when a message from the outbox should be
   dispatched.  Messages can be sent immediately, sent only when the user
@@ -94,9 +92,7 @@ public:
 private:
     class Private;
     Private *const d;
-
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_DISPATCHMODEATTRIBUTE_H

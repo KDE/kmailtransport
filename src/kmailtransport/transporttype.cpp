@@ -47,7 +47,7 @@ TransportType &TransportType::operator=(const TransportType &other)
 
 bool TransportType::operator==(const TransportType &other) const
 {
-    return (d->mType == other.d->mType);
+    return d->mType == other.d->mType;
 }
 
 bool TransportType::isValid() const
@@ -69,4 +69,3 @@ QString TransportType::description() const
 {
     return d->mDescription;
 }
-
