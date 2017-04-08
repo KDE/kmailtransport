@@ -81,7 +81,7 @@ void DispatchModeAttribute::deserialize(const QByteArray &data)
         d->mMode = Automatic;
     } else if (data == "never") {
         d->mMode = Manual;
-    } else if (data.startsWith(QByteArray("after"))) {
+    } else if (data.startsWith(QByteArrayLiteral("after"))) {
         d->mMode = Automatic;
         d->mDueDate = QDateTime::fromString(QString::fromLatin1(data.mid(5)), Qt::ISODate);
         // NOTE: 5 is the strlen of "after".
