@@ -18,7 +18,7 @@
 */
 
 #include "filteractionjob_p.h"
-#include "helper_p.h"
+
 
 #include <collection.h>
 #include <itemfetchjob.h>

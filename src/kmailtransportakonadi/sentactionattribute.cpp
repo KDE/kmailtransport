@@ -20,7 +20,7 @@
 */
 
 #include "sentactionattribute.h"
-#include "helper_p.h"
+
 
 #include <QtCore/QDataStream>
 #include <QtCore/QSharedData>

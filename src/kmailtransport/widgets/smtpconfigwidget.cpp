@@ -26,7 +26,7 @@
 
 #include "smtpconfigwidget.h"
 #include "ui_smtpsettings.h"
-#include "helper_p.h"
+
 
 #include "transportconfigwidget_p.h"
 #include "transport.h"

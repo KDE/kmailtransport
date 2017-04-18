@@ -29,7 +29,7 @@
 #include "widgets/transportconfigdialog.h"
 #include "widgets/transportconfigwidget.h"
 #include "widgets/smtpconfigwidget.h"
-#include "helper_p.h"
+
 
 #include <QApplication>
 #include <QtDBus/QDBusConnection>
