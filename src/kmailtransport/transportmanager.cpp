@@ -30,7 +30,6 @@
 #include "widgets/transportconfigwidget.h"
 #include "widgets/smtpconfigwidget.h"
 
-
 #include <QApplication>
 #include <QtDBus/QDBusConnection>
 #include <QtDBus/QDBusConnectionInterface>

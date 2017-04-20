@@ -21,7 +21,6 @@
 
 #include "sentactionattribute.h"
 
-
 #include <QtCore/QDataStream>
 #include <QtCore/QSharedData>
 

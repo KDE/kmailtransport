@@ -19,7 +19,6 @@
 
 #include "filteractionjob_p.h"
 
-
 #include <collection.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
