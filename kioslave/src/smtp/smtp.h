@@ -70,9 +70,9 @@ protected:
     void smtp_close(bool nice = true);
 
     /** Execute command @p cmd */
-    bool execute(KioSMTP::Command *cmd, KioSMTP::TransactionState *ts = 0);
+    bool execute(KioSMTP::Command *cmd, KioSMTP::TransactionState *ts = nullptr);
     /** Execute a command of type @p type */
-    bool execute(int type, KioSMTP::TransactionState *ts = 0);
+    bool execute(int type, KioSMTP::TransactionState *ts = nullptr);
     /** Execute the queued commands. If something goes horribly wrong
         (sending command oline fails, getting response fails or some
         command raises the failedFatally() flag in @p ts, shuts down the

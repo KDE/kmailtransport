@@ -100,17 +100,17 @@ public:
 
     static Command *createSimpleCommand(int which, SMTPSessionInterface *smtp);
 
-    virtual QByteArray nextCommandLine(TransactionState *ts = 0) = 0;
+    virtual QByteArray nextCommandLine(TransactionState *ts = nullptr) = 0;
     /* Reimplement this if your @ref #nextCommandLine() implementation
        changes state other than @ref mComplete. The default
        implementation just resets @ref mComplete to false. */
-    virtual void ungetCommandLine(const QByteArray &cmdLine, TransactionState *ts = 0);
+    virtual void ungetCommandLine(const QByteArray &cmdLine, TransactionState *ts = nullptr);
     /* Reimplement this if your command need more sophisicated
        response processing than just checking for @ref
        Response::isOk(). The default implementation sets @ref
        mComplete to true, @ref mNeedResponse to false and returns
        whether the response isOk(). */
-    virtual bool processResponse(const Response &response, TransactionState *ts = 0);
+    virtual bool processResponse(const Response &response, TransactionState *ts = nullptr);
 
     virtual bool doNotExecute(const TransactionState *ts) const
     {
