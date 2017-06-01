@@ -44,8 +44,8 @@ find_package(KF5Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG REQUIRED)
 
 add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
-add_definitions( -DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT )
-add_definitions( -DQT_DISABLE_DEPRECATED_BEFORE=0x060000 )
+add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 find_package(Sasl2)
 set_package_properties(Sasl2 PROPERTIES
                              DESCRIPTION "The Cyrus-sasl library"
