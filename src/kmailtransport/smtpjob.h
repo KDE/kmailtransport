@@ -62,11 +62,11 @@ public:
     virtual ~SmtpJob();
 
 protected:
-    void doStart() Q_DECL_OVERRIDE;
-    bool doKill() Q_DECL_OVERRIDE;
+    void doStart() override;
+    bool doKill() override;
 
 protected Q_SLOTS:
-    void slotResult(KJob *job) Q_DECL_OVERRIDE;
+    void slotResult(KJob *job) override;
     void slaveError(KIO::Slave *slave, int errorCode, const QString &errorMsg);
 
 private:

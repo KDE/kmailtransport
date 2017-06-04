@@ -138,8 +138,8 @@ protected:
     */
     Transport(const QString &cfgGroup);
 
-    void usrRead() Q_DECL_OVERRIDE;
-    bool usrSave() Q_DECL_OVERRIDE;
+    void usrRead() override;
+    bool usrSave() override;
 
     /**
       Returns true if the password was not stored in the wallet.

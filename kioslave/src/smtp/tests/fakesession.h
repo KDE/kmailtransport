@@ -69,56 +69,56 @@ public:
     //
     // emulated API:
     //
-    bool startSsl() Q_DECL_OVERRIDE
+    bool startSsl() override
     {
         return startTLSReturnCode;
     }
 
-    bool haveCapability(const char *cap) const Q_DECL_OVERRIDE
+    bool haveCapability(const char *cap) const override
     {
         return caps.contains(QLatin1String(cap));
     }
 
-    void error(int id, const QString &msg) Q_DECL_OVERRIDE
+    void error(int id, const QString &msg) override
     {
         lastErrorCode = id;
         lastErrorMessage = msg;
         qWarning() << id << msg;
     }
 
-    void informationMessageBox(const QString &msg, const QString &caption) Q_DECL_OVERRIDE
+    void informationMessageBox(const QString &msg, const QString &caption) override
     {
         Q_UNUSED(caption);
         lastMessageBoxText = msg;
     }
 
-    bool openPasswordDialog(KIO::AuthInfo &) Q_DECL_OVERRIDE
+    bool openPasswordDialog(KIO::AuthInfo &) override
     {
         return true;
     }
 
-    void dataReq() Q_DECL_OVERRIDE
+    void dataReq() override
     {
         /* noop */
     }
 
-    int readData(QByteArray &ba) Q_DECL_OVERRIDE
+    int readData(QByteArray &ba) override
     {
         ba = nextData;
         return nextDataReturnCode;
     }
 
-    bool lf2crlfAndDotStuffingRequested() const Q_DECL_OVERRIDE
+    bool lf2crlfAndDotStuffingRequested() const override
     {
         return lf2crlfAndDotStuff;
     }
 
-    QString requestedSaslMethod() const Q_DECL_OVERRIDE
+    QString requestedSaslMethod() const override
     {
         return saslMethod;
     }
 
-    TLSRequestState tlsRequested() const Q_DECL_OVERRIDE
+    TLSRequestState tlsRequested() const override
     {
         return SMTPSessionInterface::UseTLSIfAvailable;
     }

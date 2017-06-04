@@ -28,18 +28,18 @@ class KioSlaveSession : public SMTPSessionInterface
 {
 public:
     explicit KioSlaveSession(SMTPProtocol *protocol);
-    void error(int id, const QString &msg) Q_DECL_OVERRIDE;
-    void informationMessageBox(const QString &msg, const QString &caption) Q_DECL_OVERRIDE;
-    bool openPasswordDialog(KIO::AuthInfo &authInfo) Q_DECL_OVERRIDE;
-    void dataReq() Q_DECL_OVERRIDE;
-    int readData(QByteArray &ba) Q_DECL_OVERRIDE;
-    bool startSsl() Q_DECL_OVERRIDE;
+    void error(int id, const QString &msg) override;
+    void informationMessageBox(const QString &msg, const QString &caption) override;
+    bool openPasswordDialog(KIO::AuthInfo &authInfo) override;
+    void dataReq() override;
+    int readData(QByteArray &ba) override;
+    bool startSsl() override;
 
-    QString requestedSaslMethod() const Q_DECL_OVERRIDE;
-    bool eightBitMimeRequested() const Q_DECL_OVERRIDE;
-    bool lf2crlfAndDotStuffingRequested() const Q_DECL_OVERRIDE;
-    bool pipeliningRequested() const Q_DECL_OVERRIDE;
-    TLSRequestState tlsRequested() const Q_DECL_OVERRIDE;
+    QString requestedSaslMethod() const override;
+    bool eightBitMimeRequested() const override;
+    bool lf2crlfAndDotStuffingRequested() const override;
+    bool pipeliningRequested() const override;
+    TLSRequestState tlsRequested() const override;
 
 private:
     SMTPProtocol *m_protocol;

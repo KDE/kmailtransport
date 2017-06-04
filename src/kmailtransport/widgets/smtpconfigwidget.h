@@ -50,7 +50,7 @@ public:
 
 public Q_SLOTS:
     /** reimpl */
-    void apply() Q_DECL_OVERRIDE;
+    void apply() override;
 
 private Q_SLOTS:
     void checkSmtpCapabilities();

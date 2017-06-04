@@ -145,7 +145,7 @@ public:
       Creates the item and places it in the outbox.
       It is now queued for sending by the mail dispatcher agent.
     */
-    void start() Q_DECL_OVERRIDE;
+    void start() override;
 
 protected Q_SLOTS:
     /**
@@ -153,7 +153,7 @@ protected Q_SLOTS:
 
       (reimplemented from KCompositeJob)
     */
-    void slotResult(KJob *) Q_DECL_OVERRIDE;
+    void slotResult(KJob *) override;
 
 private:
     class Private;

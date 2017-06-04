@@ -51,7 +51,7 @@ public:
     virtual ~AddTransportDialog();
 
     /* reimpl */
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 
 private:
     class Private;

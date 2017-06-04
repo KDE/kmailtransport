@@ -165,7 +165,7 @@ public:
     ~FilterActionJob();
 
 protected:
-    void doStart() Q_DECL_OVERRIDE;
+    void doStart() override;
 
 private:
     //@cond PRIVATE

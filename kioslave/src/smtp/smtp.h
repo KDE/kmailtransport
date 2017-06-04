@@ -53,13 +53,13 @@ public:
     SMTPProtocol(const QByteArray &pool, const QByteArray &app, bool useSSL);
     virtual ~SMTPProtocol();
 
-    virtual void setHost(const QString &host, quint16 port, const QString &user, const QString &pass) Q_DECL_OVERRIDE;
+    virtual void setHost(const QString &host, quint16 port, const QString &user, const QString &pass) override;
 
-    void special(const QByteArray &aData) Q_DECL_OVERRIDE;
-    void put(const QUrl &url, int permissions, KIO::JobFlags flags) Q_DECL_OVERRIDE;
-    void stat(const QUrl &url) Q_DECL_OVERRIDE;
-    void openConnection() Q_DECL_OVERRIDE;
-    void closeConnection() Q_DECL_OVERRIDE;
+    void special(const QByteArray &aData) override;
+    void put(const QUrl &url, int permissions, KIO::JobFlags flags) override;
+    void stat(const QUrl &url) override;
+    void openConnection() override;
+    void closeConnection() override;
 
 protected:
 

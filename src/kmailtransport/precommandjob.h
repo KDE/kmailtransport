@@ -60,14 +60,14 @@ public:
       Executes the precommand.
       Reimplemented from KJob.
     */
-    void start() Q_DECL_OVERRIDE;
+    void start() override;
 
 protected:
 
     /**
       Reimplemented from KJob.
     */
-    bool doKill() Q_DECL_OVERRIDE;
+    bool doKill() override;
 
 private:
     friend class ::PreCommandJobPrivate;
