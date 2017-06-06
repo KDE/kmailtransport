@@ -20,7 +20,7 @@
 #ifndef MESSAGEQUEUEJOBTEST_H
 #define MESSAGEQUEUEJOBTEST_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 /**
   This tests the ability to queue messages (MessageQueueJob class).

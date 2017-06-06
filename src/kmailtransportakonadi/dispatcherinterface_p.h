@@ -19,7 +19,7 @@
 #ifndef MAILTRANSPORT_DISPATCHERINTERFACE_P_H
 #define MAILTRANSPORT_DISPATCHERINTERFACE_P_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class KJob;
 

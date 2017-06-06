@@ -20,7 +20,7 @@
 #ifndef RESPONSEPARSER_TEST_H
 #define RESPONSEPARSER_TEST_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 class ResponseParserTest : public QObject
 {

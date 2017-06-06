@@ -24,9 +24,9 @@
 
 #include <mailtransportakonadi_export.h>
 
-#include <QtCore/QSharedDataPointer>
-#include <QtCore/QVariant>
-#include <QtCore/QVector>
+#include <QSharedDataPointer>
+#include <QVariant>
+#include <QVector>
 #include <attribute.h>
 
 namespace MailTransport {

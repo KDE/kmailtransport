@@ -39,7 +39,7 @@
 #include <KLocalizedString>
 #include <kio/slavebase.h> // for test_commands, where SMTPProtocol is not derived from TCPSlaveBase
 
-#include <QtCore/QUrl>
+#include <QUrl>
 
 #include <assert.h>
 

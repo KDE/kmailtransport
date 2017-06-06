@@ -20,8 +20,8 @@
 #ifndef FILTERACTIONTEST_H
 #define FILTERACTIONTEST_H
 
-#include <QtCore/QObject>
-#include <QtCore/QString>
+#include <QObject>
+#include <QString>
 
 #include <collection.h>
 #include <item.h>

@@ -20,8 +20,8 @@
 #ifndef MAILTRANSPORT_TRANSPORTTYPE_P_H
 #define MAILTRANSPORT_TRANSPORTTYPE_P_H
 
-#include <QtCore/QSharedData>
-#include <QtCore/QString>
+#include <QSharedData>
+#include <QString>
 
 namespace MailTransport {
 /**

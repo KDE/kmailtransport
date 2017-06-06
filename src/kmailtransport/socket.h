@@ -22,7 +22,7 @@
 
 #include <mailtransport_export.h>
 
-#include <QtNetwork/QSslSocket>
+#include <QSslSocket>
 
 namespace MailTransport {
 class SocketPrivate;

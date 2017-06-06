@@ -33,7 +33,7 @@
 #include "smtp_debug.h"
 
 #include <QUrl>
-#include <QtCore/QUrl>
+#include <QUrl>
 #include <qdebug.h>
 
 #include <assert.h>

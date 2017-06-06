@@ -33,8 +33,8 @@
     your version.
 */
 
-#include <QtCore/QString>
-#include <QtCore/QTextStream>
+#include <QString>
+#include <QTextStream>
 #include <QApplication>
 #include <QLabel>
 #include <QLineEdit>

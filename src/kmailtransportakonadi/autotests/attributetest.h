@@ -20,7 +20,7 @@
 #ifndef ATTRIBUTETEST_H
 #define ATTRIBUTETEST_H
 
-#include <QtCore/QObject>
+#include <QObject>
 
 /**
   This is a test of the various attributes.

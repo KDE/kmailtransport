@@ -21,8 +21,8 @@
 
 #include "sentactionattribute.h"
 
-#include <QtCore/QDataStream>
-#include <QtCore/QSharedData>
+#include <QDataStream>
+#include <QSharedData>
 
 using namespace Akonadi;
 using namespace MailTransport;

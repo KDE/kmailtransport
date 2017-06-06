@@ -31,9 +31,9 @@
 #include "widgets/smtpconfigwidget.h"
 
 #include <QApplication>
-#include <QtDBus/QDBusConnection>
-#include <QtDBus/QDBusConnectionInterface>
-#include <QtDBus/QDBusServiceWatcher>
+#include <QDBusConnection>
+#include <QDBusConnectionInterface>
+#include <QDBusServiceWatcher>
 #include <QPointer>
 #include <QRegExp>
 #include <QStringList>

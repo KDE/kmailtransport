@@ -22,7 +22,7 @@
 
 #include <mailtransportakonadi_export.h>
 
-#include <QtCore/QDateTime>
+#include <QDateTime>
 
 #include <attribute.h>
 

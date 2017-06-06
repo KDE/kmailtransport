@@ -37,7 +37,7 @@
 */
 
 #include <QWidget>
-#include <QtNetwork/QTcpServer>
+#include <QTcpServer>
 
 class QLabel;
 class QLineEdit;

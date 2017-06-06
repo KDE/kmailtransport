@@ -23,7 +23,7 @@
 #include "mailtransport_export.h"
 #include "transport.h"
 
-#include <QtCore/QString>
+#include <QString>
 
 namespace MailTransport {
 class AddTransportDialog;

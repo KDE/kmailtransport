@@ -27,9 +27,9 @@
 #include <MailTransportAkonadi/SentBehaviourAttribute>
 #include <MailTransportAkonadi/TransportAttribute>
 
-#include <QtCore/QDateTime>
-#include <QtCore/QString>
-#include <QtCore/QStringList>
+#include <QDateTime>
+#include <QString>
+#include <QStringList>
 
 #include <KCompositeJob>
 

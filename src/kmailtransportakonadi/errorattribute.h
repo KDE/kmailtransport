@@ -22,7 +22,7 @@
 
 #include <mailtransportakonadi_export.h>
 
-#include <QtCore/QString>
+#include <QString>
 
 #include <attribute.h>
 
