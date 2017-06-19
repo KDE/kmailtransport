@@ -233,11 +233,9 @@ void SMTPConfigWidget::apply()
 
     if (d->ui.encryptionNone->isChecked()) {
         d->transport->setEncryption(Transport::EnumEncryption::None);
-    }
-    if (d->ui.encryptionSsl->isChecked()) {
+    } else if (d->ui.encryptionSsl->isChecked()) {
         d->transport->setEncryption(Transport::EnumEncryption::SSL);
-    }
-    if (d->ui.encryptionTls->isChecked()) {
+    } else if (d->ui.encryptionTls->isChecked()) {
         d->transport->setEncryption(Transport::EnumEncryption::TLS);
     }
 
