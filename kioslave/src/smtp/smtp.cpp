@@ -72,7 +72,11 @@ using std::unique_ptr;
 #include <string.h>
 #include <stdio.h>
 #include <assert.h>
+#ifdef Q_OS_WIN
+#include <Winsock2.h>
+#else
 #include <netdb.h>
+#endif
 
 extern "C" {
 Q_DECL_EXPORT int kdemain(int argc, char **argv);
