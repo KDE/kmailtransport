@@ -4,12 +4,15 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
     SOVERSION 5
     )
 
+set(mailtransport_lib_smtp_srcs
+    smtp/smtpjob.cpp
+    )
+
 set(mailtransport_lib_srcs
     transport.cpp
     transportmanager.cpp
     transporttype.cpp
     transportjob.cpp
-    smtpjob.cpp
     precommandjob.cpp
     socket.cpp
     servertest.cpp
@@ -38,6 +41,7 @@ kconfig_add_kcfg_files(mailtransport_lib_srcs transportbase.kcfgc)
 add_library(KF5MailTransport
     ${mailtransport_lib_srcs}
     ${mailtransport_widgets_srcs}
+    ${mailtransport_lib_smtp_srcs}
     )
 
 generate_export_header(KF5MailTransport BASE_NAME mailtransport)
@@ -79,7 +83,6 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
     HEADER_NAMES
     PrecommandJob
     ServerTest
-    SmtpJob
     Transport
     TransportJob
     TransportManager
@@ -87,6 +90,15 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
     PREFIX MailTransport
     REQUIRED_HEADERS MailTransport_HEADERS
     )
+
+ecm_generate_headers(MailTransport_smtp_CamelCase_HEADERS
+    HEADER_NAMES
+    SmtpJob
+    PREFIX MailTransport
+    REQUIRED_HEADERS MailTransport_smtp_HEADERS
+    RELATIVE smtp
+    )
+
 
 ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
     HEADER_NAMES
@@ -100,12 +112,14 @@ ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
 install(FILES
     ${MailTransport_CamelCase_HEADERS}
     ${MailTransport_widgets_CamelCase_HEADERS}
+    ${MailTransport_smtp_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/ COMPONENT Devel )
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_export.h
     ${MailTransport_HEADERS}
     ${MailTransport_widgets_HEADERS}
+    ${MailTransport_smtp_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/transportbase.h
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransport COMPONENT Devel

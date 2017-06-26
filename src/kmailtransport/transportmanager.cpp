@@ -19,7 +19,7 @@
 
 #include "transportmanager.h"
 #include "mailtransport_defs.h"
-#include "smtpjob.h"
+#include "smtp/smtpjob.h"
 #include "transport.h"
 #include "transport_p.h"
 #include "transportjob.h"
