@@ -28,6 +28,10 @@ set(mailtransport_widgets_srcs
     widgets/smtpconfigwidget.cpp
     )
 
+set(mailtransport_plugins_srcs
+    plugins/transportabstractplugin.cpp
+    ) 
+
 ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport)
 
 ki18n_wrap_ui(mailtransport_lib_srcs
@@ -42,6 +46,7 @@ add_library(KF5MailTransport
     ${mailtransport_lib_srcs}
     ${mailtransport_widgets_srcs}
     ${mailtransport_lib_smtp_srcs}
+    ${mailtransport_plugins_srcs}
     )
 
 generate_export_header(KF5MailTransport BASE_NAME mailtransport)
