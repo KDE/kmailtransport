@@ -26,7 +26,7 @@
 #ifndef MAILTRANSPORT_SMTPCONFIGWIDGET_H
 #define MAILTRANSPORT_SMTPCONFIGWIDGET_H
 
-#include "transportconfigwidget.h"
+#include "widgets/transportconfigwidget.h"
 
 namespace MailTransport {
 class Transport;

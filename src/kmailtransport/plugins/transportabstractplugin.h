@@ -24,6 +24,7 @@
 #include "mailtransport_export.h"
 namespace MailTransport {
 class TransportJob;
+class Transport;
 class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject
 {
     Q_OBJECT
@@ -32,6 +33,9 @@ public:
     ~TransportAbstractPlugin();
 
     virtual TransportJob *createTransportJob();
+    virtual QString name() const = 0;
+    virtual bool configureTransport(Transport *transport, QWidget *parent) = 0;
+    virtual void cleanUp(const QString &identifier);
 };
 }
 

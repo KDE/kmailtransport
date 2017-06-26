@@ -17,26 +17,17 @@
     02110-1301, USA.
 */
 
-#include "transportabstractplugin.h"
+#include "transportpluginmanager.h"
+
 using namespace MailTransport;
 
-TransportAbstractPlugin::TransportAbstractPlugin(QObject *parent)
+TransportPluginManager::TransportPluginManager(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-MailTransport::TransportAbstractPlugin::~TransportAbstractPlugin()
+TransportPluginManager::~TransportPluginManager()
 {
 
-}
-
-TransportJob *TransportAbstractPlugin::createTransportJob()
-{
-    return nullptr;
-}
-
-void TransportAbstractPlugin::cleanUp(const QString &identifier)
-{
-    Q_UNUSED(identifier);
 }

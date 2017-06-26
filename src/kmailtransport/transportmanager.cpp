@@ -28,7 +28,7 @@
 #include "widgets/addtransportdialog.h"
 #include "widgets/transportconfigdialog.h"
 #include "widgets/transportconfigwidget.h"
-#include "widgets/smtpconfigwidget.h"
+#include "smtp/smtpconfigwidget.h"
 
 #include <QApplication>
 #include <QDBusConnection>

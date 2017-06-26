@@ -27,7 +27,7 @@
 #include "transportconfigwidget.h"
 #include "transportmanager.h"
 #include "transporttype.h"
-#include "smtpconfigwidget.h"
+#include "smtp/smtpconfigwidget.h"
 
 #include <QDialogButtonBox>
 #include <QLabel>

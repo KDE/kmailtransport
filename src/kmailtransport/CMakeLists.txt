@@ -6,6 +6,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
 
 set(mailtransport_lib_smtp_srcs
     smtp/smtpjob.cpp
+    smtp/smtpconfigwidget.cpp
     )
 
 set(mailtransport_lib_srcs
@@ -25,11 +26,11 @@ set(mailtransport_widgets_srcs
     widgets/transportlistview.cpp
     widgets/transportmanagementwidget.cpp
     widgets/transportconfigdialog.cpp
-    widgets/smtpconfigwidget.cpp
     )
 
 set(mailtransport_plugins_srcs
     plugins/transportabstractplugin.cpp
+    plugins/transportpluginmanager.cpp
     ) 
 
 ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport)
