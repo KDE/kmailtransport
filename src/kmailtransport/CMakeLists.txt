@@ -110,6 +110,7 @@ ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
     HEADER_NAMES
     TransportComboBox
     TransportManagementWidget
+    TransportConfigWidget
     PREFIX MailTransport
     REQUIRED_HEADERS MailTransport_widgets_HEADERS
     RELATIVE widgets
