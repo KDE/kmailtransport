@@ -34,22 +34,24 @@ AkonadiMailTransportPlugin::~AkonadiMailTransportPlugin()
 
 }
 
-QString AkonadiMailTransportPlugin::name() const
-{
-    //TODO FIXME
-    return {};
-}
-
-bool AkonadiMailTransportPlugin::configureTransport(MailTransport::Transport *transport, QWidget *parent)
-{
-    //TODO FIXME
-    return false;
-}
-
 void AkonadiMailTransportPlugin::cleanUp(const QString &identifier)
 {
     Q_UNUSED(identifier);
     //TODO FIXME
 }
 
+QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::names() const
+{
+    //TODO
+    return {};
+}
+
+bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
+{
+    //TODO
+    return {};
+}
+
 #include "akonadimailtransportplugin.moc"
+
+

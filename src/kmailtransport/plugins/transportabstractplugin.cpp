@@ -32,7 +32,7 @@ TransportAbstractPlugin::~TransportAbstractPlugin()
 
 }
 
-TransportJob *TransportAbstractPlugin::createTransportJob()
+TransportJob *TransportAbstractPlugin::createTransportJob(const QString &identifier)
 {
     return nullptr;
 }

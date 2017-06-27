@@ -35,12 +35,15 @@ SMTPMailTransportPlugin::~SMTPMailTransportPlugin()
 
 }
 
-QString SMTPMailTransportPlugin::name() const
+QVector<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::names() const
 {
-    return i18n("SMTP");
+    MailTransport::TransportAbstractPluginInfo info;
+    info.name = i18n("SMTP");
+    info.identifier = QStringLiteral("smtp");
+    return QVector<MailTransport::TransportAbstractPluginInfo>() << info;
 }
 
-bool SMTPMailTransportPlugin::configureTransport(MailTransport::Transport *transport, QWidget *parent)
+bool SMTPMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
     //TODO FIXME
     return false;
@@ -53,3 +56,5 @@ void SMTPMailTransportPlugin::cleanUp(const QString &identifier)
 }
 
 #include "smtpmailtransportplugin.moc"
+
+

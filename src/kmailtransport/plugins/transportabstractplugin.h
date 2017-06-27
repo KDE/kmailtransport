@@ -21,10 +21,18 @@
 #define TRANSPORTABSTRACTPLUGIN_H
 
 #include <QObject>
+#include <QVector>
 #include "mailtransport_export.h"
 namespace MailTransport {
 class TransportJob;
 class Transport;
+
+struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo
+{
+    QString name;
+    QString identifier;
+};
+
 class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject
 {
     Q_OBJECT
@@ -32,11 +40,12 @@ public:
     explicit TransportAbstractPlugin(QObject *parent = nullptr);
     ~TransportAbstractPlugin();
 
-    virtual TransportJob *createTransportJob();
-    virtual QString name() const = 0;
-    virtual bool configureTransport(Transport *transport, QWidget *parent) = 0;
+    virtual TransportJob *createTransportJob(const QString &identifier);
+    virtual QVector<TransportAbstractPluginInfo> names() const = 0;
+    virtual bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent) = 0;
     virtual void cleanUp(const QString &identifier);
 };
 }
+Q_DECLARE_TYPEINFO(MailTransport::TransportAbstractPluginInfo, Q_MOVABLE_TYPE);
 
 #endif // TRANSPORTABSTRACTPLUGIN_H
