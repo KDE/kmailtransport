@@ -6,5 +6,5 @@ kcoreaddons_add_plugin(mailtransport_smtpplugin JSON smtpmailtransport.json SOUR
     ${mailtransport_smtpplugin_SRCS} INSTALL_NAMESPACE mailtransport)
 
 target_link_libraries(mailtransport_smtpplugin
-    KF5::MailTransport KF5::CoreAddons
+    KF5::MailTransport KF5::CoreAddons KF5::I18n
     )

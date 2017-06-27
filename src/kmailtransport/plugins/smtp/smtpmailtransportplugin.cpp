@@ -19,6 +19,7 @@
 
 #include "smtpmailtransportplugin.h"
 #include <kpluginfactory.h>
+#include <KLocalizedString>
 
 K_PLUGIN_FACTORY_WITH_JSON(SMTPMailTransportPluginFactory, "smtpmailtransport.json", registerPlugin<SMTPMailTransportPlugin>();
                            )
@@ -36,8 +37,7 @@ SMTPMailTransportPlugin::~SMTPMailTransportPlugin()
 
 QString SMTPMailTransportPlugin::name() const
 {
-    //TODO FIXME
-    return {};
+    return i18n("SMTP");
 }
 
 bool SMTPMailTransportPlugin::configureTransport(MailTransport::Transport *transport, QWidget *parent)

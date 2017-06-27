@@ -18,6 +18,7 @@
 */
 
 #include "transportabstractplugin.h"
+
 using namespace MailTransport;
 
 TransportAbstractPlugin::TransportAbstractPlugin(QObject *parent)
