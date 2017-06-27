@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "akonadimailtransport",
+        "Name": "Akonadi Mail Transport",
+        "ServiceTypes": [
+            "MailTransport/Plugin"
+        ],
+        "Version": "1.0"
+    }
+}
