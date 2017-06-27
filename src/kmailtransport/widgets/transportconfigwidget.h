@@ -27,6 +27,7 @@
 #define MAILTRANSPORT_TRANSPORTCONFIGWIDGET_H
 
 #include <QWidget>
+#include <mailtransport_export.h>
 
 class KConfigDialogManager;
 
@@ -52,7 +53,7 @@ class TransportConfigWidgetPrivate;
   @author Constantin Berzan <exit3219@gmail.com>
   @since 4.4
 */
-class TransportConfigWidget : public QWidget
+class MAILTRANSPORT_EXPORT TransportConfigWidget : public QWidget
 {
     Q_OBJECT
 
