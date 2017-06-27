@@ -26,7 +26,7 @@ TransportAbstractPlugin::TransportAbstractPlugin(QObject *parent)
 
 }
 
-MailTransport::TransportAbstractPlugin::~TransportAbstractPlugin()
+TransportAbstractPlugin::~TransportAbstractPlugin()
 {
 
 }

@@ -115,10 +115,19 @@ ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
     RELATIVE widgets
     )
 
+ecm_generate_headers(MailTransport_plugins_CamelCase_HEADERS
+    HEADER_NAMES
+    TransportAbstractPlugin
+    PREFIX MailTransport
+    REQUIRED_HEADERS MailTransport_plugins_HEADERS
+    RELATIVE plugins
+    )
+
 install(FILES
     ${MailTransport_CamelCase_HEADERS}
     ${MailTransport_widgets_CamelCase_HEADERS}
     ${MailTransport_smtp_CamelCase_HEADERS}
+    ${MailTransport_plugins_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/ COMPONENT Devel )
 
 install(FILES
@@ -126,6 +135,7 @@ install(FILES
     ${MailTransport_HEADERS}
     ${MailTransport_widgets_HEADERS}
     ${MailTransport_smtp_HEADERS}
+    ${MailTransport_plugins_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/transportbase.h
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransport COMPONENT Devel
