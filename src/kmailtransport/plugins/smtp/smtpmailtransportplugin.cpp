@@ -18,8 +18,12 @@
 */
 
 #include "smtpmailtransportplugin.h"
+#include <kpluginfactory.h>
 
-SMTPMailTransportPlugin::SMTPMailTransportPlugin(QObject *parent)
+K_PLUGIN_FACTORY_WITH_JSON(SMTPMailTransportPluginFactory, "smtpmailtransport.json", registerPlugin<SMTPMailTransportPlugin>();
+                           )
+
+SMTPMailTransportPlugin::SMTPMailTransportPlugin(QObject *parent, const QList<QVariant> &)
     : MailTransport::TransportAbstractPlugin(parent)
 {
 
@@ -44,5 +48,8 @@ bool SMTPMailTransportPlugin::configureTransport(MailTransport::Transport *trans
 
 void SMTPMailTransportPlugin::cleanUp(const QString &identifier)
 {
+    Q_UNUSED(identifier);
     //TODO FIXME
 }
+
+#include "smtpmailtransportplugin.moc"

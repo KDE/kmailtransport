@@ -21,12 +21,13 @@
 #define SMTPMAILTRANSPORTPLUGIN_H
 
 #include <MailTransport/TransportAbstractPlugin>
+#include <QVariant>
 
 class SMTPMailTransportPlugin : public MailTransport::TransportAbstractPlugin
 {
     Q_OBJECT
 public:
-    explicit SMTPMailTransportPlugin(QObject *parent = nullptr);
+    explicit SMTPMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~SMTPMailTransportPlugin();
 
     QString name() const override;
