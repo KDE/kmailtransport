@@ -20,6 +20,7 @@
 #include "transportpluginmanager.h"
 
 using namespace MailTransport;
+Q_GLOBAL_STATIC(TransportPluginManager, sInstance)
 
 TransportPluginManager::TransportPluginManager(QObject *parent)
     : QObject(parent)
@@ -31,3 +32,10 @@ TransportPluginManager::~TransportPluginManager()
 {
 
 }
+
+
+TransportPluginManager *TransportPluginManager::self()
+{
+    return sInstance;
+}
+

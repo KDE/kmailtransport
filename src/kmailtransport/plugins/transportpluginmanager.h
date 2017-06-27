@@ -29,6 +29,7 @@ public:
     explicit TransportPluginManager(QObject *parent = nullptr);
     ~TransportPluginManager();
 
+    static TransportPluginManager *self();
 };
 }
 
