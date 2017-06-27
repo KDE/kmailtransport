@@ -7,12 +7,16 @@ set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
 
 ########### next target ###############
 
+if (WIN32)
+    set(extra_LIB ws2_32)
+endif()
+
 set(test_responseparser_SRCS test_responseparser.cpp )
 
 add_executable( test_responseparser ${test_responseparser_SRCS} )
 add_test( test_responseparser test_responseparser )
 ecm_mark_as_test(smtp-responseparser)
-target_link_libraries(test_responseparser   Qt5::Test KF5::I18n KF5::KIOCore)
+target_link_libraries(test_responseparser   Qt5::Test KF5::I18n KF5::KIOCore ${extra_LIB})
 
 ########### next target ###############
 
@@ -23,7 +27,7 @@ add_executable( test_headergeneration  ${test_headergeneration_SRCS} )
 add_test( test_headergeneration test_headergeneration )
 ecm_mark_as_test(smtp-headergeneration)
 
-target_link_libraries(test_headergeneration  Qt5::Test )
+target_link_libraries(test_headergeneration  Qt5::Test ${extra_LIB})
 
 
 ########### next target ###############
@@ -35,7 +39,7 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/../../ ${Sasl2_INCLUDE_DIRS}  )
 add_executable( test_commands ${test_commands_SRCS} )
 add_test( test_commands test_commands )
 ecm_mark_as_test(smtp-commands)
-target_link_libraries(test_commands   KF5::KIOCore ${Sasl2_LIBRARIES} Qt5::Test KF5::I18n)
+target_link_libraries(test_commands   KF5::KIOCore ${Sasl2_LIBRARIES} Qt5::Test KF5::I18n ${extra_LIB})
 
 
 ########### next target ###############
