@@ -18,6 +18,11 @@
 */
 
 #include "transportpluginmanager.h"
+#include <kpluginmetadata.h>
+#include <KPluginLoader>
+#include <KPluginFactory>
+
+#include <MailTransport/TransportAbstractPlugin>
 
 using namespace MailTransport;
 
@@ -43,13 +48,15 @@ class MailTransportPluginInfo
 {
 public:
     MailTransportPluginInfo()
-        : /*plugin(nullptr),*/
+        : plugin(nullptr),
           isEnabled(true)
     {
 
     }
+
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
+    MailTransport::TransportAbstractPlugin *plugin;
     bool isEnabled;
 };
 
@@ -70,10 +77,23 @@ public:
 
     }
     void loadPlugin(MailTransportPluginInfo *item);
+    QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
+    QVector<MailTransportPluginInfo> mPluginList;
 private:
     TransportPluginManager *q;
 };
 
+QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManagerPrivate::pluginsList() const
+{
+    QVector<MailTransport::TransportAbstractPlugin *> lst;
+    QVector<MailTransportPluginInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QVector<MailTransportPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+        if (auto plugin = (*it).plugin) {
+            lst << plugin;
+        }
+    }
+    return lst;
+}
 
 TransportPluginManager::TransportPluginManager(QObject *parent)
     : QObject(parent),
@@ -87,9 +107,13 @@ TransportPluginManager::~TransportPluginManager()
     delete d;
 }
 
-
 TransportPluginManager *TransportPluginManager::self()
 {
     return sInstance->transportPluginManager;
+}
+
+QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManager::pluginsList() const
+{
+    return d->pluginsList();
 }
 
