@@ -22,6 +22,7 @@
 
 #include <QObject>
 namespace MailTransport {
+class TransportPluginManagerPrivate;
 class TransportPluginManager : public QObject
 {
     Q_OBJECT
@@ -30,6 +31,8 @@ public:
     ~TransportPluginManager();
 
     static TransportPluginManager *self();
+private:
+    TransportPluginManagerPrivate *const d;
 };
 }
 

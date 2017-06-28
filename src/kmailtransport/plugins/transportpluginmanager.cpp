@@ -20,22 +20,76 @@
 #include "transportpluginmanager.h"
 
 using namespace MailTransport;
-Q_GLOBAL_STATIC(TransportPluginManager, sInstance)
+
+class TransportPluginManagerInstancePrivate
+{
+public:
+    TransportPluginManagerInstancePrivate()
+        : transportPluginManager(new TransportPluginManager)
+    {
+    }
+
+    ~TransportPluginManagerInstancePrivate()
+    {
+        delete transportPluginManager;
+    }
+
+    TransportPluginManager *transportPluginManager;
+};
+
+Q_GLOBAL_STATIC(TransportPluginManagerInstancePrivate, sInstance)
+
+class MailTransportPluginInfo
+{
+public:
+    MailTransportPluginInfo()
+        : /*plugin(nullptr),*/
+          isEnabled(true)
+    {
+
+    }
+    QString metaDataFileNameBaseName;
+    QString metaDataFileName;
+    bool isEnabled;
+};
+
+namespace
+{
+QString pluginVersion()
+{
+    return QStringLiteral("1.0");
+}
+}
+
+class MailTransport::TransportPluginManagerPrivate
+{
+public:
+    TransportPluginManagerPrivate(TransportPluginManager *qq)
+        : q(qq)
+    {
+
+    }
+    void loadPlugin(MailTransportPluginInfo *item);
+private:
+    TransportPluginManager *q;
+};
+
 
 TransportPluginManager::TransportPluginManager(QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+      d(new TransportPluginManagerPrivate(this))
 {
 
 }
 
 TransportPluginManager::~TransportPluginManager()
 {
-
+    delete d;
 }
 
 
 TransportPluginManager *TransportPluginManager::self()
 {
-    return sInstance;
+    return sInstance->transportPluginManager;
 }
 
