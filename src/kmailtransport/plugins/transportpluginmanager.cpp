@@ -18,11 +18,14 @@
 */
 
 #include "transportpluginmanager.h"
+#include "mailtransport_debug.h"
 #include <kpluginmetadata.h>
 #include <KPluginLoader>
 #include <KPluginFactory>
 
 #include <MailTransport/TransportAbstractPlugin>
+
+#include <QFileInfo>
 
 using namespace MailTransport;
 
@@ -48,8 +51,7 @@ class MailTransportPluginInfo
 {
 public:
     MailTransportPluginInfo()
-        : plugin(nullptr),
-          isEnabled(true)
+        : plugin(nullptr)
     {
 
     }
@@ -57,7 +59,6 @@ public:
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     MailTransport::TransportAbstractPlugin *plugin;
-    bool isEnabled;
 };
 
 namespace
@@ -89,28 +90,19 @@ bool TransportPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return true;
     }
-/*
-    static const QString s_serviceTypeName = serviceTypeName;
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(pluginName, [](const KPluginMetaData & md) {
-        return md.serviceTypes().contains(s_serviceTypeName);
+     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("mailtransport"), [](const KPluginMetaData &md) {
+        return md.serviceTypes().contains(QStringLiteral("MailTransport/Plugin"));
     });
 
-    const QPair<QStringList, QStringList> pair = PimCommon::PluginUtil::loadPluginSetting(configGroupName(), configPrefixSettingKey());
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
     QSet<QString> unique;
     while (i.hasPrevious()) {
-        GenericPluginInfo info;
+        MailTransportPluginInfo info;
         const KPluginMetaData data = i.previous();
 
-        //1) get plugin data => name/description etc.
-        info.pluginData = PimCommon::PluginUtil::createPluginMetaData(data);
-        //2) look at if plugin is activated
-        const bool isPluginActivated = PimCommon::PluginUtil::isPluginActivated(pair.first, pair.second, info.pluginData.mEnableByDefault, info.pluginData.mIdentifier);
-        info.isEnabled = isPluginActivated;
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.metaDataFileName = data.fileName();
-
         if (pluginVersion() == data.version()) {
             // only load plugins once, even if found multiple times!
             if (unique.contains(info.metaDataFileNameBaseName)) {
@@ -120,35 +112,29 @@ bool TransportPluginManagerPrivate::initializePlugins()
             mPluginList.push_back(info);
             unique.insert(info.metaDataFileNameBaseName);
         } else {
-            qCWarning(PIMCOMMON_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
+            qCWarning(MAILTRANSPORT_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
-    QVector<GenericPluginInfo>::iterator end(mPluginList.end());
-    for (QVector<GenericPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
+    const QVector<MailTransportPluginInfo>::iterator end(mPluginList.end());
+    for (QVector<MailTransportPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }
-    */
     return true;
 }
 
 void TransportPluginManagerPrivate::loadPlugin(MailTransportPluginInfo *item)
 {
-    /*
     KPluginLoader pluginLoader(item->metaDataFileName);
     if (pluginLoader.factory()) {
-        item->plugin = pluginLoader.factory()->create<PluginEditorInit>(q, QVariantList() << item->metaDataFileNameBaseName);
-        item->plugin->setIsEnabled(item->isEnabled);
-        item->pluginData.mHasConfigureDialog = item->plugin->hasConfigureDialog();
-        mPluginDataList.append(item->pluginData);
+        item->plugin = pluginLoader.factory()->create<MailTransport::TransportAbstractPlugin>(q, QVariantList() << item->metaDataFileNameBaseName);
     }
-    */
 }
 
 
 QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManagerPrivate::pluginsList() const
 {
     QVector<MailTransport::TransportAbstractPlugin *> lst;
-    QVector<MailTransportPluginInfo>::ConstIterator end(mPluginList.constEnd());
+    const QVector<MailTransportPluginInfo>::ConstIterator end(mPluginList.constEnd());
     for (QVector<MailTransportPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if (auto plugin = (*it).plugin) {
             lst << plugin;

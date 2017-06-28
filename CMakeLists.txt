@@ -54,6 +54,10 @@ set_package_properties(Sasl2 PROPERTIES
                              TYPE OPTIONAL
 )
 
+if(BUILD_TESTING)
+   add_definitions(-DBUILD_TESTING)
+endif(BUILD_TESTING)
+
 ########### Targets ###########
 add_subdirectory(cmake)
 add_subdirectory(src)

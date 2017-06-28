@@ -17,26 +17,29 @@
     02110-1301, USA.
 */
 
-#ifndef TRANSPORTPLUGINMANAGER_H
-#define TRANSPORTPLUGINMANAGER_H
+#include "transportmanagertest.h"
+#include "kmailtransport/plugins/transportpluginmanager.h"
+#include <QCoreApplication>
+#include <MailTransport/TransportAbstractPlugin>
+#include <QDebug>
 
-#include <QObject>
-#include "kmailtransport_private_export.h"
-namespace MailTransport {
-class TransportAbstractPlugin;
-class TransportPluginManagerPrivate;
-class KMAILTRANSPORT_TESTS_EXPORT TransportPluginManager : public QObject
+TransportManagerTest::TransportManagerTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit TransportPluginManager(QObject *parent = nullptr);
-    ~TransportPluginManager();
 
-    static TransportPluginManager *self();
-    QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
-private:
-    TransportPluginManagerPrivate *const d;
-};
 }
 
-#endif // TRANSPORTPLUGINMANAGER_H
+int main(int argc, char **argv)
+{
+    QCoreApplication app(argc, argv);
+
+    const QVector<MailTransport::TransportAbstractPlugin *> lst = MailTransport::TransportPluginManager::self()->pluginsList();
+    for (MailTransport::TransportAbstractPlugin *plugin : lst) {
+        const QVector<MailTransport::TransportAbstractPluginInfo> lstPluginInfo = plugin->names();
+        for (const MailTransport::TransportAbstractPluginInfo &info : lstPluginInfo) {
+            qDebug() << "Plugin name " << info.name;
+        }
+    }
+    return 0;
+}
+

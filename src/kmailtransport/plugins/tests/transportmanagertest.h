@@ -17,26 +17,16 @@
     02110-1301, USA.
 */
 
-#ifndef TRANSPORTPLUGINMANAGER_H
-#define TRANSPORTPLUGINMANAGER_H
+#ifndef TRANSPORTMANAGERTEST_H
+#define TRANSPORTMANAGERTEST_H
 
 #include <QObject>
-#include "kmailtransport_private_export.h"
-namespace MailTransport {
-class TransportAbstractPlugin;
-class TransportPluginManagerPrivate;
-class KMAILTRANSPORT_TESTS_EXPORT TransportPluginManager : public QObject
+
+class TransportManagerTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit TransportPluginManager(QObject *parent = nullptr);
-    ~TransportPluginManager();
-
-    static TransportPluginManager *self();
-    QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
-private:
-    TransportPluginManagerPrivate *const d;
+    explicit TransportManagerTest(QObject *parent = nullptr);
 };
-}
 
-#endif // TRANSPORTPLUGINMANAGER_H
+#endif // TRANSPORTMANAGERTEST_H
