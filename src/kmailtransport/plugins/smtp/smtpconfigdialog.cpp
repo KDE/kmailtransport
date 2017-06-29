@@ -49,13 +49,7 @@ public:
 
     void okClicked();
     void slotTextChanged(const QString &text);
-    void slotEnabledOkButton(bool);
 };
-
-void SmtpConfigDialog::Private::slotEnabledOkButton(bool b)
-{
-    okButton->setEnabled(b);
-}
 
 void SmtpConfigDialog::Private::okClicked()
 {
@@ -76,7 +70,6 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     Q_ASSERT(transport);
     d->transport = transport;
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    bool pathIsEmpty = false;
     d->configWidget = new SMTPConfigWidget(transport, this);
     mainLayout->addWidget(d->configWidget);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
@@ -88,8 +81,6 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     connect(d->okButton, SIGNAL(clicked()), this, SLOT(okClicked()));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SmtpConfigDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SmtpConfigDialog::reject);
-
-    d->okButton->setEnabled(!pathIsEmpty);
 }
 
 SmtpConfigDialog::~SmtpConfigDialog()

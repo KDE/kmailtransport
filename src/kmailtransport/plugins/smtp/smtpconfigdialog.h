@@ -38,7 +38,6 @@ private:
 
     Q_PRIVATE_SLOT(d, void okClicked())
     Q_PRIVATE_SLOT(d, void slotTextChanged(const QString &))
-    Q_PRIVATE_SLOT(d, void slotEnabledOkButton(bool))
 };
 } // namespace MailTransport
 
