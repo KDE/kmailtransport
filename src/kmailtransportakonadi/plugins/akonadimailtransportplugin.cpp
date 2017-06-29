@@ -26,12 +26,10 @@ K_PLUGIN_FACTORY_WITH_JSON(AkonadiMailTransportPluginFactory, "akonadimailtransp
 AkonadiMailTransportPlugin::AkonadiMailTransportPlugin(QObject *parent, const QList<QVariant> &)
     : MailTransport::TransportAbstractPlugin(parent)
 {
-
 }
 
 AkonadiMailTransportPlugin::~AkonadiMailTransportPlugin()
 {
-
 }
 
 void AkonadiMailTransportPlugin::cleanUp(const QString &identifier)
@@ -53,5 +51,3 @@ bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, M
 }
 
 #include "akonadimailtransportplugin.moc"
-
-

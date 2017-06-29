@@ -24,12 +24,10 @@ using namespace MailTransport;
 TransportAbstractPlugin::TransportAbstractPlugin(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 TransportAbstractPlugin::~TransportAbstractPlugin()
 {
-
 }
 
 TransportJob *TransportAbstractPlugin::createTransportJob(const QString &identifier)

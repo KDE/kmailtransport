@@ -26,7 +26,6 @@
 TransportManagerTest::TransportManagerTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 int main(int argc, char **argv)
@@ -42,4 +41,3 @@ int main(int argc, char **argv)
     }
     return 0;
 }
-

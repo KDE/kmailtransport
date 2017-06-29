@@ -28,12 +28,10 @@ K_PLUGIN_FACTORY_WITH_JSON(SMTPMailTransportPluginFactory, "smtpmailtransport.js
 SMTPMailTransportPlugin::SMTPMailTransportPlugin(QObject *parent, const QList<QVariant> &)
     : MailTransport::TransportAbstractPlugin(parent)
 {
-
 }
 
 SMTPMailTransportPlugin::~SMTPMailTransportPlugin()
 {
-
 }
 
 QVector<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::names() const
@@ -62,5 +60,3 @@ void SMTPMailTransportPlugin::cleanUp(const QString &identifier)
 }
 
 #include "smtpmailtransportplugin.moc"
-
-

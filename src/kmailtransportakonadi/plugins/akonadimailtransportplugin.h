@@ -27,7 +27,9 @@ class AkonadiMailTransportPlugin : public MailTransport::TransportAbstractPlugin
 {
     Q_OBJECT
 public:
-    explicit AkonadiMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
+    explicit AkonadiMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
+    {
+    });
     ~AkonadiMailTransportPlugin();
 
     QVector<MailTransport::TransportAbstractPluginInfo> names() const override;

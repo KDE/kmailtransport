@@ -53,7 +53,6 @@ public:
     MailTransportPluginInfo()
         : plugin(nullptr)
     {
-
     }
 
     QString metaDataFileNameBaseName;
@@ -61,8 +60,7 @@ public:
     MailTransport::TransportAbstractPlugin *plugin;
 };
 
-namespace
-{
+namespace {
 QString pluginVersion()
 {
     return QStringLiteral("1.0");
@@ -77,6 +75,7 @@ public:
     {
         initializePlugins();
     }
+
     void loadPlugin(MailTransportPluginInfo *item);
     QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
     QVector<MailTransportPluginInfo> mPluginList;
@@ -90,7 +89,7 @@ bool TransportPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return true;
     }
-     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("mailtransport"), [](const KPluginMetaData &md) {
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("mailtransport"), [](const KPluginMetaData &md) {
         return md.serviceTypes().contains(QStringLiteral("MailTransport/Plugin"));
     });
 
@@ -130,7 +129,6 @@ void TransportPluginManagerPrivate::loadPlugin(MailTransportPluginInfo *item)
     }
 }
 
-
 QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManagerPrivate::pluginsList() const
 {
     QVector<MailTransport::TransportAbstractPlugin *> lst;
@@ -144,10 +142,9 @@ QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManagerPrivate:
 }
 
 TransportPluginManager::TransportPluginManager(QObject *parent)
-    : QObject(parent),
-      d(new TransportPluginManagerPrivate(this))
+    : QObject(parent)
+    , d(new TransportPluginManagerPrivate(this))
 {
-
 }
 
 TransportPluginManager::~TransportPluginManager()
@@ -164,4 +161,3 @@ QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManager::plugin
 {
     return d->pluginsList();
 }
-
