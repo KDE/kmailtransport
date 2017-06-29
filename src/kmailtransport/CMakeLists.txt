@@ -125,6 +125,10 @@ ecm_generate_headers(MailTransport_plugins_CamelCase_HEADERS
     )
 
 install(FILES
+    ${MailTransport_SOURCE_DIR}/src/kmailtransport/widgets/transportconfigwidget_p.h
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransport/private COMPONENT Devel )
+
+install(FILES
     ${MailTransport_CamelCase_HEADERS}
     ${MailTransport_widgets_CamelCase_HEADERS}
     ${MailTransport_smtp_CamelCase_HEADERS}
