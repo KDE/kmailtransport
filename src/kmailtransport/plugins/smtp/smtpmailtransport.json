@@ -2,6 +2,11 @@
     "KPlugin": {
         "Id": "smtpmailtransport",
         "Name": "SMTP Mail Transport",
+        "Name[ca]": "Transport de correu SMTP",
+        "Name[nl]": "E-mailtransport SMTP",
+        "Name[pt]": "Transporte de E-mail SMTP",
+        "Name[sv]": "SMTP e-postöverföring",
+        "Name[x-test]": "xxSMTP Mail Transportxx",
         "ServiceTypes": [
             "MailTransport/Plugin"
         ],
