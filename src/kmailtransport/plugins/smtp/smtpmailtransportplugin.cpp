@@ -18,6 +18,7 @@
 */
 
 #include "smtpmailtransportplugin.h"
+#include "smtpconfigdialog.h"
 #include <kpluginfactory.h>
 #include <KLocalizedString>
 
@@ -45,8 +46,13 @@ QVector<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::nam
 
 bool SMTPMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
-    //TODO FIXME
-    return false;
+    Q_UNUSED(identifier);
+    QPointer<MailTransport::SmtpConfigDialog> transportConfigDialog
+        = new MailTransport::SmtpConfigDialog(transport, parent);
+    transportConfigDialog->setWindowTitle(i18n("Configure account"));
+    bool okClicked = (transportConfigDialog->exec() == QDialog::Accepted);
+    delete transportConfigDialog;
+    return okClicked;
 }
 
 void SMTPMailTransportPlugin::cleanUp(const QString &identifier)
