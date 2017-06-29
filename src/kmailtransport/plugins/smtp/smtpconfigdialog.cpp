@@ -25,11 +25,8 @@
 #include "smtp/smtpconfigwidget.h"
 
 #include <QDialogButtonBox>
-#include <QString>
 #include <QVBoxLayout>
 #include <QPushButton>
-
-#include <KLocalizedString>
 
 using namespace MailTransport;
 
