@@ -33,6 +33,10 @@ int main(int argc, char **argv)
     QCoreApplication app(argc, argv);
 
     const QVector<MailTransport::TransportAbstractPlugin *> lst = MailTransport::TransportPluginManager::self()->pluginsList();
+    if (lst.isEmpty()) {
+        qDebug() << "Any plugin found. Please verify your installation";
+        return 0;
+    }
     for (MailTransport::TransportAbstractPlugin *plugin : lst) {
         const QVector<MailTransport::TransportAbstractPluginInfo> lstPluginInfo = plugin->names();
         for (const MailTransport::TransportAbstractPluginInfo &info : lstPluginInfo) {
