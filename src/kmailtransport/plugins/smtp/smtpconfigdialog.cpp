@@ -20,18 +20,15 @@
 #include "smtpconfigdialog.h"
 
 #include "transport.h"
-//#include "smtpconfigwidget.h"
 #include "transportmanager.h"
 #include "transporttype.h"
 #include "smtp/smtpconfigwidget.h"
 
 #include <QDialogButtonBox>
-#include <QLabel>
 #include <QString>
 #include <QVBoxLayout>
 #include <QPushButton>
 
-#include "mailtransport_debug.h"
 #include <KLocalizedString>
 
 using namespace MailTransport;
