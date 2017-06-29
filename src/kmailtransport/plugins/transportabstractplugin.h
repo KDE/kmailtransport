@@ -31,6 +31,7 @@ struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo
 {
     QString name;
     QString identifier;
+    QString description;
 };
 
 class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject
