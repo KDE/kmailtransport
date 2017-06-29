@@ -26,6 +26,7 @@ set(mailtransport_widgets_srcs
     widgets/transportlistview.cpp
     widgets/transportmanagementwidget.cpp
     widgets/transportconfigdialog.cpp
+    widgets/addtransportdialogng.cpp
     )
 
 set(mailtransport_plugins_srcs
@@ -175,6 +176,7 @@ install(FILES
 
 if(BUILD_TESTING)
     add_subdirectory(tests)
+    add_subdirectory(autotests)
     add_subdirectory(plugins/tests)
 endif()
 

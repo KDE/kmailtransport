@@ -69,3 +69,8 @@ QString TransportType::description() const
 {
     return d->mDescription;
 }
+
+QString TransportType::identifier() const
+{
+    return d->mIdentifier;
+}

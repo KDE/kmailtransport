@@ -98,6 +98,11 @@ public:
     */
     QString description() const;
 
+    /**
+     * Returns a plugin identifier
+     */
+    QString identifier() const;
+
 private:
     //@cond PRIVATE
     class Private;

@@ -19,9 +19,12 @@
 
 #include "akonadimailtransportplugin.h"
 #include <kpluginfactory.h>
+#include <AkonadiCore/AgentManager>
+#include <MailTransport/TransportAbstractPlugin>
 
+using namespace Akonadi;
 K_PLUGIN_FACTORY_WITH_JSON(AkonadiMailTransportPluginFactory, "akonadimailtransport.json", registerPlugin<AkonadiMailTransportPlugin>();
-                           )
+)
 
 AkonadiMailTransportPlugin::AkonadiMailTransportPlugin(QObject *parent, const QList<QVariant> &)
     : MailTransport::TransportAbstractPlugin(parent)
@@ -40,14 +43,35 @@ void AkonadiMailTransportPlugin::cleanUp(const QString &identifier)
 
 QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::names() const
 {
-    //TODO
-    return {};
+    QVector<MailTransport::TransportAbstractPluginInfo> lst;
+
+    for (const AgentType &atype : AgentManager::self()->types()) {
+        // TODO probably the string "MailTransport" should be #defined somewhere
+        // and used like that in the resources (?)
+        if ( atype.capabilities().contains( QStringLiteral( "MailTransport" ) ) ) {
+            MailTransport::TransportAbstractPluginInfo info;
+            info.name = atype.name();
+            info.description = atype.description();
+            info.identifier = atype.identifier();
+            lst << info;
+            /*
+        TransportType type;
+        type.d->mType = Transport::EnumType::Akonadi;
+        type.d->mAgentType = atype;
+        type.d->mName = atype.name();
+        type.d->mDescription = atype.description();
+        types << type;
+        kDebug() << "Found Akonadi type" << atype.name();
+        */
+        }
+    }
+    return lst;
 }
 
 bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
     //TODO
-    return {};
+    return false;
 }
 
 #include "akonadimailtransportplugin.moc"

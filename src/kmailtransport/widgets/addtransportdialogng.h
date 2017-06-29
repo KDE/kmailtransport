@@ -17,38 +17,49 @@
     02110-1301, USA.
 */
 
-#ifndef MAILTRANSPORT_TRANSPORTTYPE_P_H
-#define MAILTRANSPORT_TRANSPORTTYPE_P_H
+#ifndef MAILTRANSPORT_AddTransportDialogNG_H
+#define MAILTRANSPORT_AddTransportDialogNG_H
 
-#include <QSharedData>
-#include <QString>
+#include <QDialog>
 
 namespace MailTransport {
 /**
   @internal
+
+  A dialog for creating a new transport.  It asks the user for the transport
+  type and name, and then proceeds to configure the new transport.
+
+  To create a new transport from applications, use
+  TransportManager::showNewTransportDialog().
+
+  @author Constantin Berzan <exit3219@gmail.com>
+  @since 4.4
 */
-class TransportType::Private : public QSharedData
+class AddTransportDialogNG : public QDialog
 {
+    Q_OBJECT
+
 public:
-    Private()
-    {
-        mType = -1;
-    }
+    /**
+      Creates a new AddTransportDialogNG.
+    */
+    explicit AddTransportDialogNG(QWidget *parent = nullptr);
 
-    Private(const Private &other)
-        : QSharedData(other)
-    {
-        mType = other.mType;
-        mName = other.mName;
-        mDescription = other.mDescription;
-        mIdentifier = other.mIdentifier;
-    }
+    /**
+      Destroys the AddTransportDialogNG.
+    */
+    virtual ~AddTransportDialogNG();
 
-    int mType;
-    QString mName;
-    QString mDescription;
-    QString mIdentifier;
+    /* reimpl */
+    void accept() override;
+
+private:
+    class Private;
+    Private *const d;
+
+    Q_PRIVATE_SLOT(d, void updateOkButton())
+    Q_PRIVATE_SLOT(d, void doubleClicked())
 };
 } // namespace MailTransport
 
-#endif //MAILTRANSPORT_TRANSPORTTYPE_P_H
+#endif

@@ -278,6 +278,12 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent, ShowConditio
     return accepted;
 }
 
+bool TransportManager::configureTransport(const QString &identifier, Transport *transport, QWidget *parent)
+{
+    //FIXME
+    return false;
+}
+
 bool TransportManager::configureTransport(Transport *transport, QWidget *parent)
 {
     QPointer<TransportConfigDialog> transportConfigDialog
