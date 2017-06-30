@@ -24,7 +24,7 @@
 
 using namespace Akonadi;
 K_PLUGIN_FACTORY_WITH_JSON(AkonadiMailTransportPluginFactory, "akonadimailtransport.json", registerPlugin<AkonadiMailTransportPlugin>();
-)
+                           )
 
 AkonadiMailTransportPlugin::AkonadiMailTransportPlugin(QObject *parent, const QList<QVariant> &)
     : MailTransport::TransportAbstractPlugin(parent)
@@ -48,7 +48,7 @@ QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::
     for (const AgentType &atype : AgentManager::self()->types()) {
         // TODO probably the string "MailTransport" should be #defined somewhere
         // and used like that in the resources (?)
-        if ( atype.capabilities().contains( QStringLiteral( "MailTransport" ) ) ) {
+        if (atype.capabilities().contains(QStringLiteral("MailTransport"))) {
             MailTransport::TransportAbstractPluginInfo info;
             info.name = atype.name();
             info.description = atype.description();
