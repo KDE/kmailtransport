@@ -66,9 +66,13 @@ QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::
 
 bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
-
-    //TODO
-    return false;
+    AgentInstance instance = AgentManager::self()->instance( transport->host() );
+    if ( !instance.isValid() ) {
+        qWarning() << "Invalid resource instance" << transport->host();
+    }
+    instance.configure( parent ); // Async...
+    transport->writeConfig();
+    return true; // No way to know here if the user cancelled or not.
 }
 
 MailTransport::TransportJob *AkonadiMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
