@@ -46,6 +46,7 @@ public:
     virtual QVector<TransportAbstractPluginInfo> names() const = 0;
     virtual bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent) = 0;
     virtual void cleanUp(const QString &identifier);
+    virtual void initializeTransport(MailTransport::Transport *t, const QString &identifier);
 };
 }
 Q_DECLARE_TYPEINFO(MailTransport::TransportAbstractPluginInfo, Q_MOVABLE_TYPE);

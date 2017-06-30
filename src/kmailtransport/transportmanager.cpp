@@ -276,6 +276,14 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent, ShowConditio
     return accepted;
 }
 
+void TransportManager::initializeTransport(const QString &identifier, Transport *transport)
+{
+    TransportAbstractPlugin *plugin = TransportPluginManager::self()->plugin(identifier);
+    if (plugin) {
+        return plugin->initializeTransport(transport, identifier);
+    }
+}
+
 bool TransportManager::configureTransport(const QString &identifier, Transport *transport, QWidget *parent)
 {
     TransportAbstractPlugin *plugin = TransportPluginManager::self()->plugin(identifier);

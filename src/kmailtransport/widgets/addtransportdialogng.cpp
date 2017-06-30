@@ -169,7 +169,9 @@ void AddTransportDialogNG::accept()
     // Create a new transport and configure it.
     Transport *transport = TransportManager::self()->createTransport();
     transport->setName(d->ui.name->text().trimmed());
+    //transport->setTransportType(d->selectedType());
     transport->forceUniqueName();
+    TransportManager::self()->initializeTransport(d->selectedType(), transport);
     if (TransportManager::self()->configureTransport(d->selectedType(), transport, this)) {
         // The user clicked OK and the transport settings were saved.
         TransportManager::self()->addTransport(transport);

@@ -187,6 +187,7 @@ public:
     */
     bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent);
 
+    void initializeTransport(const QString &identifier, Transport *transport);
 public Q_SLOTS:
     /**
       Returns true if there are no mail transports at all.

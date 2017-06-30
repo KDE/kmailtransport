@@ -22,6 +22,8 @@
 #include <kpluginfactory.h>
 #include <AkonadiCore/AgentManager>
 #include <MailTransport/TransportAbstractPlugin>
+#include <AkonadiCore/AgentInstanceCreateJob>
+#include <MailTransport/Transport>
 #include <QDebug>
 
 using namespace Akonadi;
@@ -72,6 +74,16 @@ bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, M
 MailTransport::TransportJob *AkonadiMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
 {
     return new MailTransport::ResourceSendJob(t, this);
+}
+
+void AkonadiMailTransportPlugin::initializeTransport(MailTransport::Transport *t, const QString &identifier)
+{
+    Akonadi::AgentInstanceCreateJob *cjob = new AgentInstanceCreateJob( identifier );
+    if ( !cjob->exec() ) {
+        qWarning() << "Failed to create agent instance of type" << identifier;
+        return;
+    }
+    t->setHost( cjob->instance().identifier() );
 }
 
 #include "akonadimailtransportplugin.moc"

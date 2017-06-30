@@ -37,6 +37,7 @@ public:
 
     void cleanUp(const QString &identifier) override;
     MailTransport::TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) override;
+    void initializeTransport(MailTransport::Transport *t, const QString &identifier) override;
 };
 
 #endif // AkonadiMAILTRANSPORTPLUGIN_H
