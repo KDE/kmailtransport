@@ -472,6 +472,7 @@ void TransportManagerPrivate::fillTypes()
             TransportType type;
             type.d->mName = info.name;
             type.d->mDescription = info.description;
+            type.d->mIdentifier = info.identifier;
             types << type;
         }
     }
