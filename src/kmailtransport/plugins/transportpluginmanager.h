@@ -33,7 +33,10 @@ public:
     ~TransportPluginManager();
 
     static TransportPluginManager *self();
+
+    MailTransport::TransportAbstractPlugin *plugin(const QString &identifier);
     QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
+
 private:
     TransportPluginManagerPrivate *const d;
 };

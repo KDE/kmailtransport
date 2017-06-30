@@ -25,9 +25,9 @@
 #include "transportjob.h"
 #include "transporttype.h"
 #include "transporttype_p.h"
-#include "widgets/addtransportdialog.h"
-#include "widgets/transportconfigdialog.h"
-#include "widgets/transportconfigwidget.h"
+#include "plugins/transportpluginmanager.h"
+#include "plugins/transportabstractplugin.h"
+#include "widgets/addtransportdialogng.h"
 #include "smtp/smtpconfigwidget.h"
 
 #include <QApplication>
@@ -272,7 +272,7 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent, ShowConditio
         }
     }
 
-    QPointer<AddTransportDialog> dialog = new AddTransportDialog(parent);
+    QPointer<AddTransportDialogNG> dialog = new AddTransportDialogNG(parent);
     const bool accepted = (dialog->exec() == QDialog::Accepted);
     delete dialog;
     return accepted;
@@ -280,18 +280,11 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent, ShowConditio
 
 bool TransportManager::configureTransport(const QString &identifier, Transport *transport, QWidget *parent)
 {
-    //FIXME
+    TransportAbstractPlugin *plugin = TransportPluginManager::self()->plugin(identifier);
+    if (plugin) {
+        return plugin->configureTransport(identifier, transport, parent);
+    }
     return false;
-}
-
-bool TransportManager::configureTransport(Transport *transport, QWidget *parent)
-{
-    QPointer<TransportConfigDialog> transportConfigDialog
-        = new TransportConfigDialog(transport, parent);
-    transportConfigDialog->setWindowTitle(i18n("Configure account"));
-    bool okClicked = (transportConfigDialog->exec() == QDialog::Accepted);
-    delete transportConfigDialog;
-    return okClicked;
 }
 
 TransportJob *TransportManager::createTransportJob(int transportId)
@@ -302,9 +295,9 @@ TransportJob *TransportManager::createTransportJob(int transportId)
     }
     t = t->clone(); // Jobs delete their transports.
     t->updatePasswordState();
-    switch (t->type()) {
-    case Transport::EnumType::SMTP:
-        return new SmtpJob(t, this);
+    TransportAbstractPlugin *plugin = TransportPluginManager::self()->plugin(t->identifier());
+    if (plugin) {
+        return plugin->createTransportJob(t->identifier());
     }
     Q_ASSERT(false);
     return nullptr;
@@ -470,13 +463,13 @@ void TransportManagerPrivate::fillTypes()
 {
     Q_ASSERT(types.isEmpty());
 
-    // SMTP.
-    {
-        TransportType type;
-        type.d->mType = Transport::EnumType::SMTP;
-        type.d->mName = i18nc("@option SMTP transport", "SMTP");
-        type.d->mDescription = i18n("An SMTP server on the Internet");
-        types << type;
+    for (MailTransport::TransportAbstractPlugin * plugin : MailTransport::TransportPluginManager::self()->pluginsList()) {
+        for (const MailTransport::TransportAbstractPluginInfo &info : plugin->names()) {
+            TransportType type;
+            type.d->mName = info.name;
+            type.d->mDescription = info.description;
+            types << type;
+        }
     }
 }
 
@@ -702,3 +695,5 @@ void TransportManagerPrivate::jobResult(KJob *job)
 }
 
 #include "moc_transportmanager.cpp"
+
+#include <MailTransport/TransportAbstractPlugin>

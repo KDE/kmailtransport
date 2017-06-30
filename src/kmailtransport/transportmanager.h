@@ -185,8 +185,6 @@ public:
       @return True if the user clicked Ok, false if the user cancelled.
       @since 4.4
     */
-    bool configureTransport(Transport *transport, QWidget *parent);
-
     bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent);
 
 public Q_SLOTS:

@@ -17,16 +17,7 @@
       <whatsthis>The name that will be used when referring to this server.</whatsthis>
       <default code="true">i18n("Unnamed")</default>
     </entry>
-    <entry name="type" type="Enum">
-      <choices>
-        <choice name="SMTP">
-          <label>SMTP Server</label>
-        </choice>
-        <choice name="Akonadi">
-          <label>Akonadi Resource</label>
-        </choice>
-      </choices>
-      <label>Transport type</label>
+    <entry name="identifier" type="String">
       <default>SMTP</default>
     </entry>
     <entry name="host" type="String">

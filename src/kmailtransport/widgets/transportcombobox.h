@@ -59,7 +59,7 @@ public:
     /**
       Returns the type of the selected transport.
     */
-    TransportBase::EnumType::type transportType() const;
+    QString transportType() const;
 
 protected:
     void setTransportList(const QVector<int> &transportList);

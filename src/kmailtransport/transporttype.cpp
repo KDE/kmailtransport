@@ -47,17 +47,12 @@ TransportType &TransportType::operator=(const TransportType &other)
 
 bool TransportType::operator==(const TransportType &other) const
 {
-    return d->mType == other.d->mType;
+    return d->mIdentifier == other.d->mIdentifier;
 }
 
 bool TransportType::isValid() const
 {
-    return d->mType >= 0;
-}
-
-TransportBase::EnumType::type TransportType::type() const
-{
-    return static_cast<TransportBase::EnumType::type>(d->mType);
+    return !d->mIdentifier.isEmpty();
 }
 
 QString TransportType::name() const

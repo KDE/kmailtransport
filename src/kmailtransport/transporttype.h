@@ -83,12 +83,6 @@ public:
     bool isValid() const;
 
     /**
-      @internal
-      Returns the type of the transport.
-    */
-    TransportBase::EnumType::type type() const;
-
-    /**
       Returns the i18n'ed name of the transport type.
     */
     QString name() const;

@@ -19,7 +19,6 @@
 
 #include "transportmgr.h"
 
-#include <widgets/transportconfigdialog.h>
 #include <transportmanager.h>
 #include <widgets/transportmanagementwidget.h>
 #include <transportjob.h>
@@ -93,7 +92,8 @@ void TransportMgr::editBtnClicked()
     if (index < 0) {
         return;
     }
-    TransportManager::self()->configureTransport(TransportManager::self()->transportById(index), this);
+    const auto transport = TransportManager::self()->transportById(index);
+    TransportManager::self()->configureTransport(transport->identifier(), transport, this);
 }
 
 void TransportMgr::sendBtnClicked()

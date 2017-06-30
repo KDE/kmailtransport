@@ -62,10 +62,9 @@ void TransportComboBox::setCurrentTransport(int transportId)
     }
 }
 
-TransportBase::EnumType::type TransportComboBox::transportType() const
+QString TransportComboBox::transportType() const
 {
-    int transtype = TransportManager::self()->transportById(currentTransportId())->type();
-    return static_cast<TransportBase::EnumType::type>(transtype);
+    return TransportManager::self()->transportById(currentTransportId())->identifier();
 }
 
 void TransportComboBox::updateComboboxList()

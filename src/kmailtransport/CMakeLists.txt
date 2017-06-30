@@ -21,11 +21,9 @@ set(mailtransport_lib_srcs
 
 set(mailtransport_widgets_srcs
     widgets/transportconfigwidget.cpp
-    widgets/addtransportdialog.cpp
     widgets/transportcombobox.cpp
     widgets/transportlistview.cpp
     widgets/transportmanagementwidget.cpp
-    widgets/transportconfigdialog.cpp
     widgets/addtransportdialogng.cpp
     )
 

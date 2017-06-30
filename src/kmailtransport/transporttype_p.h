@@ -32,19 +32,16 @@ class TransportType::Private : public QSharedData
 public:
     Private()
     {
-        mType = -1;
     }
 
     Private(const Private &other)
         : QSharedData(other)
     {
-        mType = other.mType;
         mName = other.mName;
         mDescription = other.mDescription;
         mIdentifier = other.mIdentifier;
     }
 
-    int mType;
     QString mName;
     QString mDescription;
     QString mIdentifier;

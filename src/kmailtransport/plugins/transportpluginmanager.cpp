@@ -161,3 +161,15 @@ QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManager::plugin
 {
     return d->pluginsList();
 }
+
+MailTransport::TransportAbstractPlugin *TransportPluginManager::plugin(const QString &identifier)
+{
+    for (MailTransport::TransportAbstractPlugin *p : pluginsList()) {
+        for (const MailTransport::TransportAbstractPluginInfo &info : p->names()) {
+            if (info.identifier == identifier) {
+                return p;
+            }
+        }
+    }
+    return {};
+}
