@@ -124,13 +124,6 @@ public:
     */
     TransportType transportType() const;
 
-    /**
-      Sets the type of this transport.
-      @see TransportType.
-      @since 4.4
-    */
-    void setTransportType(const TransportType &type);
-
 protected:
     /**
       Creates a Transport object. Should only be used by TransportManager.

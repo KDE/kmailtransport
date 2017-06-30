@@ -30,9 +30,9 @@ TransportAbstractPlugin::~TransportAbstractPlugin()
 {
 }
 
-void TransportAbstractPlugin::cleanUp(const QString &identifier)
+void TransportAbstractPlugin::cleanUp(MailTransport::Transport *t)
 {
-    Q_UNUSED(identifier);
+    Q_UNUSED(t);
 }
 
 void TransportAbstractPlugin::initializeTransport(MailTransport::Transport *t, const QString &identifier)

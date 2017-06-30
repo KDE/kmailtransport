@@ -34,7 +34,6 @@ public:
 
     QVector<MailTransport::TransportAbstractPluginInfo> names() const override;
     bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;
-    void cleanUp(const QString &identifier) override;
     MailTransport::TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) override;
 };
 

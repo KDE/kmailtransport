@@ -57,12 +57,6 @@ bool SMTPMailTransportPlugin::configureTransport(const QString &identifier, Mail
     return okClicked;
 }
 
-void SMTPMailTransportPlugin::cleanUp(const QString &identifier)
-{
-    Q_UNUSED(identifier);
-    //TODO FIXME
-}
-
 MailTransport::TransportJob *SMTPMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
 {
     return new MailTransport::SmtpJob(t, this);

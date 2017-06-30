@@ -39,10 +39,13 @@ AkonadiMailTransportPlugin::~AkonadiMailTransportPlugin()
 {
 }
 
-void AkonadiMailTransportPlugin::cleanUp(const QString &identifier)
+void AkonadiMailTransportPlugin::cleanUp(MailTransport::Transport *t)
 {
-    Q_UNUSED(identifier);
-    //TODO FIXME
+    const AgentInstance instance = AgentManager::self()->instance(t->host());
+    if (!instance.isValid()) {
+        qWarning() << "Could not find resource instance for name:" << t->host();
+    }
+    AgentManager::self()->removeInstance(instance);
 }
 
 QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::names() const
@@ -87,7 +90,7 @@ void AkonadiMailTransportPlugin::initializeTransport(MailTransport::Transport *t
         qWarning() << "Failed to create agent instance of type" << identifier;
         return;
     }
-    t->setHost( cjob->instance().identifier() );
+    t->setHost(cjob->instance().identifier());
 }
 
 #include "akonadimailtransportplugin.moc"

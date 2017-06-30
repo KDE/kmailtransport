@@ -45,7 +45,7 @@ public:
     virtual TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) = 0;
     virtual QVector<TransportAbstractPluginInfo> names() const = 0;
     virtual bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent) = 0;
-    virtual void cleanUp(const QString &identifier);
+    virtual void cleanUp(MailTransport::Transport *t);
     virtual void initializeTransport(MailTransport::Transport *t, const QString &identifier);
 };
 }

@@ -335,10 +335,3 @@ TransportType Transport::transportType() const
     }
     return d->transportType;
 }
-
-void Transport::setTransportType(const TransportType &type)
-{
-    Q_ASSERT(type.isValid());
-    d->transportType = type;
-    setIdentifier(type.identifier());
-}

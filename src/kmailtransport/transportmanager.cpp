@@ -386,7 +386,7 @@ void TransportManager::removeTransport(int id)
     }
     auto plugin = MailTransport::TransportPluginManager::self()->plugin(t->identifier());
     if (plugin) {
-        plugin->cleanUp(t->identifier());
+        plugin->cleanUp(t);
     }
     emit transportRemoved(t->id(), t->name());
 
