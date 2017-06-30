@@ -18,9 +18,11 @@
 */
 
 #include "akonadimailtransportplugin.h"
+#include "resourcesendjob_p.h"
 #include <kpluginfactory.h>
 #include <AkonadiCore/AgentManager>
 #include <MailTransport/TransportAbstractPlugin>
+#include <QDebug>
 
 using namespace Akonadi;
 K_PLUGIN_FACTORY_WITH_JSON(AkonadiMailTransportPluginFactory, "akonadimailtransport.json", registerPlugin<AkonadiMailTransportPlugin>();
@@ -54,15 +56,6 @@ QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::
             info.description = atype.description();
             info.identifier = atype.identifier();
             lst << info;
-            /*
-        TransportType type;
-        type.d->mType = Transport::EnumType::Akonadi;
-        type.d->mAgentType = atype;
-        type.d->mName = atype.name();
-        type.d->mDescription = atype.description();
-        types << type;
-        kDebug() << "Found Akonadi type" << atype.name();
-        */
         }
     }
     return lst;
@@ -70,8 +63,14 @@ QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::
 
 bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
+
     //TODO
     return false;
+}
+
+MailTransport::TransportJob *AkonadiMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
+{
+    return new MailTransport::ResourceSendJob(t, this);
 }
 
 #include "akonadimailtransportplugin.moc"
