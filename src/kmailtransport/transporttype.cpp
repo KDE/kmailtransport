@@ -47,6 +47,7 @@ TransportType &TransportType::operator=(const TransportType &other)
 
 bool TransportType::operator==(const TransportType &other) const
 {
+    qDebug() << "d->mIdentifier "<<d->mIdentifier << " other.d->mIdentifier"<<other.d->mIdentifier;
     return d->mIdentifier == other.d->mIdentifier;
 }
 

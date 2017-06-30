@@ -32,6 +32,7 @@
 #include "transportmanager.h"
 #include "servertest.h"
 #include "mailtransport_defs.h"
+#include "mailtransportplugin_smtp_debug.h"
 
 #include <QAbstractButton>
 #include <QButtonGroup>
@@ -328,7 +329,7 @@ void SMTPConfigWidget::ensureValidAuthSelection()
 void SMTPConfigWidget::encryptionChanged(int enc)
 {
     Q_D(SMTPConfigWidget);
-    qCDebug(MAILTRANSPORT_LOG) << enc;
+    qCDebug(MAILTRANSPORT_SMTP_LOG) << enc;
 
     // adjust port
     if (enc == Transport::EnumEncryption::SSL) {

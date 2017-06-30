@@ -4,11 +4,6 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
     SOVERSION 5
     )
 
-set(mailtransport_lib_smtp_srcs
-    smtp/smtpjob.cpp
-    smtp/smtpconfigwidget.cpp
-    )
-
 set(mailtransport_lib_srcs
     transport.cpp
     transportmanager.cpp
@@ -37,7 +32,6 @@ ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debu
 ki18n_wrap_ui(mailtransport_lib_srcs
     ui/addtransportdialog.ui
     ui/transportmanagementwidget.ui
-    ui/smtpsettings.ui
     )
 
 kconfig_add_kcfg_files(mailtransport_lib_srcs transportbase.kcfgc)
@@ -45,7 +39,6 @@ kconfig_add_kcfg_files(mailtransport_lib_srcs transportbase.kcfgc)
 add_library(KF5MailTransport
     ${mailtransport_lib_srcs}
     ${mailtransport_widgets_srcs}
-    ${mailtransport_lib_smtp_srcs}
     ${mailtransport_plugins_srcs}
     )
 
@@ -96,15 +89,6 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
     REQUIRED_HEADERS MailTransport_HEADERS
     )
 
-ecm_generate_headers(MailTransport_smtp_CamelCase_HEADERS
-    HEADER_NAMES
-    SmtpJob
-    PREFIX MailTransport
-    REQUIRED_HEADERS MailTransport_smtp_HEADERS
-    RELATIVE smtp
-    )
-
-
 ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
     HEADER_NAMES
     TransportComboBox
@@ -130,7 +114,6 @@ install(FILES
 install(FILES
     ${MailTransport_CamelCase_HEADERS}
     ${MailTransport_widgets_CamelCase_HEADERS}
-    ${MailTransport_smtp_CamelCase_HEADERS}
     ${MailTransport_plugins_CamelCase_HEADERS}
     DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/ COMPONENT Devel )
 
@@ -138,7 +121,6 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_export.h
     ${MailTransport_HEADERS}
     ${MailTransport_widgets_HEADERS}
-    ${MailTransport_smtp_HEADERS}
     ${MailTransport_plugins_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/transportbase.h
 

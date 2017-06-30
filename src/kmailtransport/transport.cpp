@@ -160,7 +160,8 @@ void Transport::usrRead()
     {
         d->transportType = TransportType();
         d->transportType.d->mIdentifier = identifier();
-        qCDebug(MAILTRANSPORT_LOG) << "type" << identifier();
+        //qCDebug(MAILTRANSPORT_LOG) << "type" << identifier();
+        qDebug() << "set type" << identifier();
         // Now we have the type and possibly agentType.  Get the name, description
         // etc. from TransportManager.
         const TransportType::List &types = TransportManager::self()->types();

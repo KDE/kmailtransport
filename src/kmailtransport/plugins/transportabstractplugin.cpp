@@ -18,7 +18,7 @@
 */
 
 #include "transportabstractplugin.h"
-
+#include "mailtransport_debug.h"
 using namespace MailTransport;
 
 TransportAbstractPlugin::TransportAbstractPlugin(QObject *parent)
@@ -28,11 +28,6 @@ TransportAbstractPlugin::TransportAbstractPlugin(QObject *parent)
 
 TransportAbstractPlugin::~TransportAbstractPlugin()
 {
-}
-
-TransportJob *TransportAbstractPlugin::createTransportJob(const QString &identifier)
-{
-    return nullptr;
 }
 
 void TransportAbstractPlugin::cleanUp(const QString &identifier)

@@ -19,7 +19,6 @@
 
 #include "transportmanager.h"
 #include "mailtransport_defs.h"
-#include "smtp/smtpjob.h"
 #include "transport.h"
 #include "transport_p.h"
 #include "transportjob.h"
@@ -28,7 +27,6 @@
 #include "plugins/transportpluginmanager.h"
 #include "plugins/transportabstractplugin.h"
 #include "widgets/addtransportdialogng.h"
-#include "smtp/smtpconfigwidget.h"
 
 #include <QApplication>
 #include <QDBusConnection>
@@ -297,7 +295,7 @@ TransportJob *TransportManager::createTransportJob(int transportId)
     t->updatePasswordState();
     TransportAbstractPlugin *plugin = TransportPluginManager::self()->plugin(t->identifier());
     if (plugin) {
-        return plugin->createTransportJob(t->identifier());
+        return plugin->createTransportJob(t, t->identifier());
     }
     Q_ASSERT(false);
     return nullptr;
@@ -377,6 +375,10 @@ void TransportManager::removeTransport(int id)
     Transport *t = transportById(id, false);
     if (!t) {
         return;
+    }
+    auto plugin = MailTransport::TransportPluginManager::self()->plugin(t->identifier());
+    if (plugin) {
+        plugin->cleanUp(t->identifier());
     }
     emit transportRemoved(t->id(), t->name());
 

@@ -19,6 +19,7 @@
 
 #include "smtpmailtransportplugin.h"
 #include "smtpconfigdialog.h"
+#include "smtpjob.h"
 #include <kpluginfactory.h>
 #include <KLocalizedString>
 
@@ -61,4 +62,11 @@ void SMTPMailTransportPlugin::cleanUp(const QString &identifier)
     //TODO FIXME
 }
 
+MailTransport::TransportJob *SMTPMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
+{
+    return new MailTransport::SmtpJob(t, this);
+}
+
 #include "smtpmailtransportplugin.moc"
+
+

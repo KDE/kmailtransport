@@ -98,8 +98,7 @@ void TransportMgr::editBtnClicked()
 
 void TransportMgr::sendBtnClicked()
 {
-    TransportJob *job;
-    job = TransportManager::self()->createTransportJob(mComboBox->currentTransportId());
+    TransportJob *job = TransportManager::self()->createTransportJob(mComboBox->currentTransportId());
     if (!job) {
         qDebug() << "Invalid transport!";
         return;

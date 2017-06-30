@@ -22,7 +22,7 @@
 #include "transport.h"
 #include "transportmanager.h"
 #include "transporttype.h"
-#include "smtp/smtpconfigwidget.h"
+#include "smtpconfigwidget.h"
 
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
@@ -74,7 +74,6 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     mainLayout->addWidget(d->configWidget);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     d->okButton = buttonBox->button(QDialogButtonBox::Ok);
-    d->okButton->setEnabled(false);
     d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     mainLayout->addWidget(buttonBox);
 

@@ -27,7 +27,6 @@
 #define MAILTRANSPORT_SMTPCONFIGWIDGET_H
 
 #include "widgets/transportconfigwidget.h"
-#include "mailtransport_export.h"
 namespace MailTransport {
 class Transport;
 
@@ -40,7 +39,7 @@ class SMTPConfigWidgetPrivate;
   @internal
   Configuration widget for a SMTP transport.
 */
-class MAILTRANSPORT_EXPORT SMTPConfigWidget : public TransportConfigWidget
+class SMTPConfigWidget : public TransportConfigWidget
 {
     Q_OBJECT
 
