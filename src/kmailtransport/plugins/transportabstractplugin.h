@@ -32,6 +32,7 @@ struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo
     QString name;
     QString identifier;
     QString description;
+    bool isAkonadi = false;
 };
 
 class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject

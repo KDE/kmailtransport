@@ -97,6 +97,8 @@ public:
      */
     QString identifier() const;
 
+    bool isAkonadiResource() const;
+
 private:
     //@cond PRIVATE
     class Private;

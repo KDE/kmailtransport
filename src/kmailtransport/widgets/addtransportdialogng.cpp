@@ -124,7 +124,6 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
         treeItem->setText(0, type.name());
         treeItem->setText(1, type.description());
         treeItem->setData(0, Qt::UserRole, type.identifier());     // the transport type
-        qDebug() << " ADD type " << type.name() << "type.identifier()"<<type.identifier();
         //PORT ME
         /*
         if (type.type() == TransportBase::EnumType::SMTP) {

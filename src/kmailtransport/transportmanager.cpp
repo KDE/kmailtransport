@@ -475,6 +475,7 @@ void TransportManagerPrivate::fillTypes()
             type.d->mName = info.name;
             type.d->mDescription = info.description;
             type.d->mIdentifier = info.identifier;
+            type.d->mIsAkonadiResource = info.isAkonadi;
             types << type;
         }
     }

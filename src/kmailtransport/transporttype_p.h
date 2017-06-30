@@ -31,6 +31,7 @@ class TransportType::Private : public QSharedData
 {
 public:
     Private()
+        : mIsAkonadiResource(false)
     {
     }
 
@@ -40,11 +41,13 @@ public:
         mName = other.mName;
         mDescription = other.mDescription;
         mIdentifier = other.mIdentifier;
+        mIsAkonadiResource = other.mIsAkonadiResource;
     }
 
     QString mName;
     QString mDescription;
     QString mIdentifier;
+    bool mIsAkonadiResource;
 };
 } // namespace MailTransport
 

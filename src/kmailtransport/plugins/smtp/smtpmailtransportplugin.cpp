@@ -42,6 +42,7 @@ QVector<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::nam
     info.name = i18nc("@option SMTP transport", "SMTP");
     info.description = i18n("An SMTP server on the Internet");
     info.identifier = QStringLiteral("SMTP");
+    info.isAkonadi = false;
     return QVector<MailTransport::TransportAbstractPluginInfo>() << info;
 }
 
