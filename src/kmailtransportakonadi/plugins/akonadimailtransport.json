@@ -3,9 +3,11 @@
         "Id": "akonadimailtransport",
         "Name": "Akonadi Mail Transport",
         "Name[ca]": "Transport de correu de l'Akonadi",
+        "Name[cs]": "Přenos pošty Akonadi",
         "Name[nl]": "Akonadi e-mailtransport",
         "Name[pt]": "Transporte de E-mail do Akonadi",
         "Name[sv]": "Akonadi e-postöverföring",
+        "Name[uk]": "Надсилання пошти Akonadi",
         "Name[x-test]": "xxAkonadi Mail Transportxx",
         "ServiceTypes": [
             "MailTransport/Plugin"
