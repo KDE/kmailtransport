@@ -284,6 +284,7 @@ private:
 
     // These are used by our friend, Transport
     void emitChangesCommitted();
+    void updatePluginList();
 
 private:
     TransportManagerPrivate *const d;

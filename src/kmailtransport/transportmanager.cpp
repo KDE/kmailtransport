@@ -91,6 +91,7 @@ public:
     void prepareWallet();
     void validateDefault();
     void migrateToWallet();
+    void updatePluginList();
 
     // Slots
     void slotTransportsChanged();
@@ -473,6 +474,13 @@ void TransportManagerPrivate::fillTypes()
 {
     Q_ASSERT(types.isEmpty());
 
+    updatePluginList();
+    QObject::connect(MailTransport::TransportPluginManager::self(), &TransportPluginManager::updatePluginList, q, &TransportManager::updatePluginList);
+}
+
+void TransportManagerPrivate::updatePluginList()
+{
+    types.clear();
     for (MailTransport::TransportAbstractPlugin *plugin : MailTransport::TransportPluginManager::self()->pluginsList()) {
         if (plugin->names().isEmpty()) {
             qCDebug(MAILTRANSPORT_LOG) << "Plugin " << plugin << " doesn't provide plugin";
@@ -486,6 +494,12 @@ void TransportManagerPrivate::fillTypes()
             types << type;
         }
     }
+}
+
+
+void TransportManager::updatePluginList()
+{
+    d->updatePluginList();
 }
 
 void TransportManager::emitChangesCommitted()

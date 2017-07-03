@@ -33,10 +33,20 @@ K_PLUGIN_FACTORY_WITH_JSON(AkonadiMailTransportPluginFactory, "akonadimailtransp
 AkonadiMailTransportPlugin::AkonadiMailTransportPlugin(QObject *parent, const QList<QVariant> &)
     : MailTransport::TransportAbstractPlugin(parent)
 {
+    // Watch for appearing and disappearing types.
+    connect( AgentManager::self(), &AgentManager::typeAdded, this, &AkonadiMailTransportPlugin::slotUpdatePluginList);
+    connect( AgentManager::self(), &AgentManager::typeRemoved, this, &AkonadiMailTransportPlugin::slotUpdatePluginList);
 }
 
 AkonadiMailTransportPlugin::~AkonadiMailTransportPlugin()
 {
+}
+
+void AkonadiMailTransportPlugin::slotUpdatePluginList(const Akonadi::AgentType &type)
+{
+    if (type.capabilities().contains(QLatin1String("MailTransport"))) {
+        Q_EMIT updatePluginList();
+    }
 }
 
 void AkonadiMailTransportPlugin::cleanUp(MailTransport::Transport *t)

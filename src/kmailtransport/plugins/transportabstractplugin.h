@@ -47,6 +47,9 @@ public:
     virtual bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent) = 0;
     virtual void cleanUp(MailTransport::Transport *t);
     virtual void initializeTransport(MailTransport::Transport *t, const QString &identifier);
+
+Q_SIGNALS:
+    void updatePluginList();
 };
 }
 Q_DECLARE_TYPEINFO(MailTransport::TransportAbstractPluginInfo, Q_MOVABLE_TYPE);

@@ -37,6 +37,9 @@ public:
     MailTransport::TransportAbstractPlugin *plugin(const QString &identifier);
     QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
 
+Q_SIGNALS:
+    void updatePluginList();
+
 private:
     TransportPluginManagerPrivate *const d;
 };

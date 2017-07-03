@@ -126,6 +126,9 @@ void TransportPluginManagerPrivate::loadPlugin(MailTransportPluginInfo *item)
     KPluginLoader pluginLoader(item->metaDataFileName);
     if (pluginLoader.factory()) {
         item->plugin = pluginLoader.factory()->create<MailTransport::TransportAbstractPlugin>(q, QVariantList() << item->metaDataFileNameBaseName);
+        if (item->plugin) {
+            QObject::connect(item->plugin, &TransportAbstractPlugin::updatePluginList, q, &TransportPluginManager::updatePluginList);
+        }
     }
 }
 
