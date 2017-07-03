@@ -66,7 +66,6 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     : QDialog(parent)
     , d(new Private(this))
 {
-    qDebug() << " SmtpConfigDialog::SmtpConfigDialog()" << this;
     Q_ASSERT(transport);
     d->transport = transport;
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -84,7 +83,6 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
 
 SmtpConfigDialog::~SmtpConfigDialog()
 {
-    qDebug() << " SmtpConfigDialog::~SmtpConfigDialog()" << this;
     delete d;
 }
 

@@ -59,6 +59,7 @@ bool SMTPMailTransportPlugin::configureTransport(const QString &identifier, Mail
 
 MailTransport::TransportJob *SMTPMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
 {
+    Q_UNUSED(identifier);
     return new MailTransport::SmtpJob(t, this);
 }
 
