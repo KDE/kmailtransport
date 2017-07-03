@@ -124,12 +124,9 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
         treeItem->setText(0, type.name());
         treeItem->setText(1, type.description());
         treeItem->setData(0, Qt::UserRole, type.identifier());     // the transport type
-        //PORT ME
-        /*
-        if (type.type() == TransportBase::EnumType::SMTP) {
+        if (type.identifier() == QStringLiteral("SMTP")) {
             treeItem->setSelected(true); // select SMTP by default
         }
-        */
     }
     d->ui.typeListView->resizeColumnToContents(0);
 
