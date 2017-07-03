@@ -150,6 +150,9 @@ void SMTPConfigWidget::init()
     d->manager->addWidget(this);   // otherwise it doesn't find out about these widgets
     d->manager->updateWidgets();
 
+    d->ui.password->setEnabled(false);
+    d->ui.password->setWhatsThis(i18n("The password to send to the server for authorization."));
+
     d->encryptionGroup = new QButtonGroup(this);
     d->encryptionGroup->addButton(d->ui.encryptionNone, Transport::EnumEncryption::None);
     d->encryptionGroup->addButton(d->ui.encryptionSsl, Transport::EnumEncryption::SSL);
@@ -180,7 +183,7 @@ void SMTPConfigWidget::init()
     // load the password
     d->transport->updatePasswordState();
     if (d->transport->isComplete()) {
-        d->ui.password->setText(d->transport->password());
+        d->ui.password->setPassword(d->transport->password());
     } else {
         if (d->transport->requiresAuthentication()) {
             TransportManager::self()->loadPasswordsAsync();
@@ -224,7 +227,7 @@ void SMTPConfigWidget::apply()
     Q_D(SMTPConfigWidget);
     Q_ASSERT(d->manager);
     d->manager->updateSettings();
-    d->transport->setPassword(d->ui.password->text());
+    d->transport->setPassword(d->ui.password->password());
 
     KConfigGroup group(d->transport->config(), d->transport->currentGroup());
     const int index = d->ui.authCombo->currentIndex();
@@ -250,8 +253,8 @@ void SMTPConfigWidget::passwordsLoaded()
     // Load the password from the original to our cloned copy
     d->transport->updatePasswordState();
 
-    if (d->ui.password->text().isEmpty()) {
-        d->ui.password->setText(d->transport->password());
+    if (d->ui.password->password().isEmpty()) {
+        d->ui.password->setPassword(d->transport->password());
     }
 }
 
