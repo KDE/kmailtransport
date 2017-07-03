@@ -33,7 +33,7 @@ K_PLUGIN_FACTORY(MailTransportConfigFactory, registerPlugin<ConfigModule>();
 ConfigModule::ConfigModule(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
-    setButtons(nullptr);
+    setButtons(NoAdditionalButton);
     QVBoxLayout *l = new QVBoxLayout(this);
     l->setMargin(0);
     TransportManagementWidget *tmw = new TransportManagementWidget(this);
