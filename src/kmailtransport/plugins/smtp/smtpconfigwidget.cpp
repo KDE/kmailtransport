@@ -48,8 +48,8 @@ class MailTransport::SMTPConfigWidgetPrivate : public TransportConfigWidgetPriva
 public:
     ::Ui::SMTPSettings ui;
 
-    ServerTest *serverTest;
-    QButtonGroup *encryptionGroup;
+    ServerTest *serverTest = nullptr;
+    QButtonGroup *encryptionGroup = nullptr;
 
     // detected authentication capabilities
     QVector<int> noEncCapa, sslCapa, tlsCapa;
@@ -313,8 +313,10 @@ void SMTPConfigWidget::hostNameChanged(const QString &text)
     d->ui.kcfg_host->setCursorPosition(pos);
 
     d->resetAuthCapabilities();
-    for (int i = 0; d->encryptionGroup && i < d->encryptionGroup->buttons().count(); ++i) {
-        d->encryptionGroup->buttons().at(i)->setEnabled(true);
+    if (d->encryptionGroup) {
+        for (int i = 0;  i < d->encryptionGroup->buttons().count(); ++i) {
+            d->encryptionGroup->buttons().at(i)->setEnabled(true);
+        }
     }
 }
 

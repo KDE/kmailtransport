@@ -70,8 +70,10 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     d->transport = transport;
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     d->configWidget = new SMTPConfigWidget(transport, this);
+    d->configWidget->setObjectName(QStringLiteral("smtpconfigwidget"));
     mainLayout->addWidget(d->configWidget);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    buttonBox->setObjectName(QStringLiteral("buttons"));
     d->okButton = buttonBox->button(QDialogButtonBox::Ok);
     d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     mainLayout->addWidget(buttonBox);
