@@ -32,12 +32,11 @@ AddTransportDialogNG_gui::AddTransportDialogNG_gui(QWidget *parent)
     QPushButton *button = new QPushButton(QStringLiteral("Add transport"));
     layout->addWidget(button);
     connect(button, &QPushButton::clicked, this, [this] {
-                MailTransport::AddTransportDialogNG *dlg = new MailTransport::AddTransportDialogNG(this);
-                dlg->exec();
-                delete dlg;
-            });
+        MailTransport::AddTransportDialogNG *dlg = new MailTransport::AddTransportDialogNG(this);
+        dlg->exec();
+        delete dlg;
+    });
 }
-
 
 int main(int argc, char **argv)
 {

@@ -24,9 +24,7 @@
 
 #include <item.h>
 
-namespace MailTransport
-{
-
+namespace MailTransport {
 class ResourceSendJobPrivate;
 
 /**
@@ -64,9 +62,7 @@ private:
     ResourceSendJobPrivate *const d;
 
     Q_PRIVATE_SLOT(d, void slotEmitResult())
-
 };
-
 } // namespace MailTransport
 
 #endif // MAILTRANSPORT_RESOURCESENDJOB_H
