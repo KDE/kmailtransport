@@ -474,7 +474,6 @@ void TransportManagerPrivate::fillTypes()
     Q_ASSERT(types.isEmpty());
 
     for (MailTransport::TransportAbstractPlugin * plugin : MailTransport::TransportPluginManager::self()->pluginsList()) {
-        qDebug() << " plugin "<< plugin;
         if (plugin->names().isEmpty()) {
             qCDebug(MAILTRANSPORT_LOG) << "Plugin " << plugin << " doesn't provide plugin";
         }
