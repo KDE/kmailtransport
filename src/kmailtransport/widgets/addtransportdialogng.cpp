@@ -92,7 +92,6 @@ void AddTransportDialogNG::Private::doubleClicked()
 void AddTransportDialogNG::Private::updateOkButton()
 {
     // Make sure a type is selected before allowing the user to continue.
-    qDebug() << " selectedType()"<<selectedType();
     okButton->setEnabled(!selectedType().isEmpty() && !ui.name->text().trimmed().isEmpty());
 }
 
@@ -166,10 +165,11 @@ void AddTransportDialogNG::accept()
     // Create a new transport and configure it.
     Transport *transport = TransportManager::self()->createTransport();
     transport->setName(d->ui.name->text().trimmed());
-    transport->setIdentifier(d->selectedType());
+    const QString identifier = d->selectedType();
+    transport->setIdentifier(identifier);
     transport->forceUniqueName();
-    TransportManager::self()->initializeTransport(d->selectedType(), transport);
-    if (TransportManager::self()->configureTransport(d->selectedType(), transport, this)) {
+    TransportManager::self()->initializeTransport(identifier, transport);
+    if (TransportManager::self()->configureTransport(identifier, transport, this)) {
         // The user clicked OK and the transport settings were saved.
         TransportManager::self()->addTransport(transport);
         if (d->ui.setDefault->isChecked()) {
