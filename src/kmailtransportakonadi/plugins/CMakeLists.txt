@@ -3,6 +3,10 @@ set(mailtransport_akonadiplugin_SRCS
     resourcesendjob.cpp
     )
 
+ecm_qt_declare_logging_category(mailtransport_akonadiplugin_SRCS HEADER mailtransportplugin_akonadi_debug.h IDENTIFIER
+    MAILTRANSPORT_AKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransport.akonadiplugin)
+
+
 kcoreaddons_add_plugin(mailtransport_akonadiplugin JSON akonadimailtransport.json SOURCES
     ${mailtransport_akonadiplugin_SRCS} INSTALL_NAMESPACE mailtransport)
 

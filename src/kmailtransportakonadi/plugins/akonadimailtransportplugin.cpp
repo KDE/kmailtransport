@@ -19,12 +19,12 @@
 
 #include "akonadimailtransportplugin.h"
 #include "resourcesendjob_p.h"
+#include "mailtransportplugin_akonadi_debug.h"
 #include <kpluginfactory.h>
 #include <AkonadiCore/AgentManager>
 #include <MailTransport/TransportAbstractPlugin>
 #include <AkonadiCore/AgentInstanceCreateJob>
 #include <MailTransport/Transport>
-#include <QDebug>
 
 using namespace Akonadi;
 K_PLUGIN_FACTORY_WITH_JSON(AkonadiMailTransportPluginFactory, "akonadimailtransport.json", registerPlugin<AkonadiMailTransportPlugin>();
@@ -43,7 +43,7 @@ void AkonadiMailTransportPlugin::cleanUp(MailTransport::Transport *t)
 {
     const AgentInstance instance = AgentManager::self()->instance(t->host());
     if (!instance.isValid()) {
-        qWarning() << "Could not find resource instance for name:" << t->host();
+        qCWarning(MAILTRANSPORT_AKONADI_LOG) << "Could not find resource instance for name:" << t->host();
     }
     AgentManager::self()->removeInstance(instance);
 }
@@ -71,7 +71,7 @@ bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, M
 {
     AgentInstance instance = AgentManager::self()->instance( transport->host() );
     if ( !instance.isValid() ) {
-        qWarning() << "Invalid resource instance" << transport->host();
+        qCWarning(MAILTRANSPORT_AKONADI_LOG) << "Invalid resource instance" << transport->host();
     }
     instance.configure( parent ); // Async...
     transport->writeConfig();
@@ -87,7 +87,7 @@ void AkonadiMailTransportPlugin::initializeTransport(MailTransport::Transport *t
 {
     Akonadi::AgentInstanceCreateJob *cjob = new AgentInstanceCreateJob( identifier );
     if ( !cjob->exec() ) {
-        qWarning() << "Failed to create agent instance of type" << identifier;
+        qCWarning(MAILTRANSPORT_AKONADI_LOG) << "Failed to create agent instance of type" << identifier;
         return;
     }
     t->setHost(cjob->instance().identifier());
