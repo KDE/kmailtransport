@@ -583,7 +583,7 @@ void TransportManagerPrivate::prepareWallet()
 
 void TransportManager::loadPasswords()
 {
-    foreach (Transport *t, d->transports) {
+    for (Transport *t : qAsConst(d->transports)) {
         t->readPassword();
     }
 
@@ -603,7 +603,7 @@ void TransportManager::loadPasswordsAsync()
 
     // check if there is anything to do at all
     bool found = false;
-    foreach (Transport *t, d->transports) {
+    for (Transport *t : qAsConst(d->transports)) {
         if (!t->isComplete()) {
             found = true;
             break;
@@ -706,7 +706,7 @@ void TransportManagerPrivate::migrateToWallet()
     }
 
     // perform migration
-    foreach (Transport *t, transports) {
+    for (Transport *t : qAsConst(transports)) {
         if (t->needsWalletMigration()) {
             t->migrateToWallet();
         }

@@ -78,7 +78,7 @@ TransportMgr::TransportMgr()
 void TransportMgr::removeAllBtnClicked()
 {
     MailTransport::TransportManager *manager = MailTransport::TransportManager::self();
-    QList<Transport *> transports = manager->transports();
+    const QList<Transport *> transports = manager->transports();
     for (int i = 0; i < transports.count(); i++) {
         MailTransport::Transport *transport = transports.at(i);
         qDebug() << transport->host();

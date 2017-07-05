@@ -35,12 +35,12 @@ public:
     {
     }
 
-    Transport *transport;
     QString sender;
     QStringList to;
     QStringList cc;
     QStringList bcc;
     QByteArray data;
+    Transport *transport;
     QBuffer *buffer;
 };
 
