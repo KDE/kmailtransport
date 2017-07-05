@@ -29,18 +29,12 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class MailTransport::SendQueuedAction::Private
-{
-};
-
 SendQueuedAction::SendQueuedAction()
-    : d(new Private)
 {
 }
 
 SendQueuedAction::~SendQueuedAction()
 {
-    delete d;
 }
 
 ItemFetchScope SendQueuedAction::fetchScope() const
@@ -74,18 +68,12 @@ Job *SendQueuedAction::itemAction(const Item &item, FilterActionJob *parent) con
     return new ItemModifyJob(cp, parent);
 }
 
-class MailTransport::ClearErrorAction::Private
-{
-};
-
 ClearErrorAction::ClearErrorAction()
-    : d(new Private)
 {
 }
 
 ClearErrorAction::~ClearErrorAction()
 {
-    delete d;
 }
 
 ItemFetchScope ClearErrorAction::fetchScope() const
@@ -111,19 +99,13 @@ Job *ClearErrorAction::itemAction(const Item &item, FilterActionJob *parent) con
     return new ItemModifyJob(cp, parent);
 }
 
-class MailTransport::DispatchManualTransportAction::Private
-{
-};
-
 DispatchManualTransportAction::DispatchManualTransportAction(int transportId)
-    : d(new Private)
-    , mTransportId(transportId)
+    : mTransportId(transportId)
 {
 }
 
 DispatchManualTransportAction::~DispatchManualTransportAction()
 {
-    delete d;
 }
 
 ItemFetchScope DispatchManualTransportAction::fetchScope() const

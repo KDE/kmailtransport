@@ -53,10 +53,6 @@ public:
     bool itemAccepted(const Akonadi::Item &item) const override;
 
     Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const override;
-
-private:
-    class Private;
-    Private *const d;
 };
 
 /**
@@ -84,10 +80,6 @@ public:
     bool itemAccepted(const Akonadi::Item &item) const override;
 
     virtual Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const override;
-
-private:
-    class Private;
-    Private *const d;
 };
 
 /**
@@ -115,9 +107,6 @@ public:
     virtual Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const override;
 
 private:
-    class Private;
-    Private *const d;
-
     int mTransportId;
 };
 } // namespace MailTransport
