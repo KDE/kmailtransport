@@ -47,7 +47,7 @@ public:
       @param transport The transport object to use.
       @param parent The parent object.
     */
-    explicit ResourceSendJob(Transport *transport, QObject *parent = Q_NULLPTR);
+    explicit ResourceSendJob(Transport *transport, QObject *parent = nullptr);
 
     /**
       Destroys this job.
@@ -55,7 +55,7 @@ public:
     virtual ~ResourceSendJob();
 
 protected:
-    void doStart() Q_DECL_OVERRIDE;
+    void doStart() override;
 
 private:
     friend class ResourceSendJobPrivate;

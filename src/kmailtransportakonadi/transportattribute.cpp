@@ -27,6 +27,11 @@ using namespace MailTransport;
 class TransportAttribute::Private
 {
 public:
+    Private()
+        : mId(-1)
+    {
+
+    }
     int mId;
 };
 

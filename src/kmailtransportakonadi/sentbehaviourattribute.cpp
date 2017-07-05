@@ -25,6 +25,12 @@ using namespace MailTransport;
 class SentBehaviourAttribute::Private
 {
 public:
+    Private()
+        : mBehaviour(SentBehaviourAttribute::MoveToDefaultSentCollection),
+          mSilent(false)
+    {
+    }
+
     SentBehaviourAttribute::SentBehaviour mBehaviour;
     Akonadi::Collection mMoveToCollection;
     bool mSilent;
@@ -60,13 +66,13 @@ QByteArray SentBehaviourAttribute::serialized() const
 
     switch (d->mBehaviour) {
     case Delete:
-        out = "delete";
+        out = QByteArrayLiteral("delete");
         break;
     case MoveToCollection:
-        out = "moveTo" + QByteArray::number(d->mMoveToCollection.id());
+        out = QByteArrayLiteral("moveTo") + QByteArray::number(d->mMoveToCollection.id());
         break;
     case MoveToDefaultSentCollection:
-        out = "moveToDefault";
+        out = QByteArrayLiteral("moveToDefault");
         break;
     default:
         Q_ASSERT(false);
@@ -74,7 +80,7 @@ QByteArray SentBehaviourAttribute::serialized() const
     }
 
     if (d->mSilent) {
-        out += ",silent";
+        out += QByteArrayLiteral(",silent");
     }
 
     return out;
@@ -83,7 +89,7 @@ QByteArray SentBehaviourAttribute::serialized() const
 void SentBehaviourAttribute::deserialize(const QByteArray &data)
 {
     const QByteArrayList in = data.split(',');
-    Q_ASSERT(in.size() > 0);
+    Q_ASSERT(!in.isEmpty());
 
     const QByteArray attr0 = in[0];
     d->mMoveToCollection = Akonadi::Collection(-1);
