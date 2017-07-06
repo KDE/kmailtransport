@@ -36,38 +36,13 @@ using namespace Akonadi;
 using namespace KMime;
 using namespace MailTransport;
 
-/**
- * Private class that helps to provide binary compatibility between releases.
- * @internal
- */
-class MailTransport::ResourceSendJobPrivate
-{
-public:
-    ResourceSendJobPrivate(ResourceSendJob *qq)
-        : q(qq)
-    {
-    }
-
-    void slotEmitResult(); // slot
-
-    ResourceSendJob *const q;
-};
-
-void ResourceSendJobPrivate::slotEmitResult()
-{
-    // KCompositeJob took care of the error.
-    q->emitResult();
-}
-
 ResourceSendJob::ResourceSendJob(Transport *transport, QObject *parent)
     : TransportJob(transport, parent)
-    , d(new ResourceSendJobPrivate(this))
 {
 }
 
 ResourceSendJob::~ResourceSendJob()
 {
-    delete d;
 }
 
 void ResourceSendJob::doStart()
@@ -85,8 +60,14 @@ void ResourceSendJob::doStart()
     job->addressAttribute().setBcc(bcc());
     addSubjob(job);
     // Once the item is in the outbox, there is nothing more we can do.
-    connect(job, SIGNAL(result(KJob *)), this, SLOT(slotEmitResult()));
+    connect(job, &KJob::result, this, &ResourceSendJob::slotEmitResult);
     job->start();
+}
+
+void ResourceSendJob::slotEmitResult()
+{
+    // KCompositeJob took care of the error.
+    emitResult();
 }
 
 #include "moc_resourcesendjob_p.cpp"

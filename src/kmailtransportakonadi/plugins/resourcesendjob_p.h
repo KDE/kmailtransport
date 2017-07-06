@@ -25,8 +25,6 @@
 #include <item.h>
 
 namespace MailTransport {
-class ResourceSendJobPrivate;
-
 /**
   Mail transport job for an Akonadi resource-based transport.
 
@@ -58,10 +56,7 @@ protected:
     void doStart() override;
 
 private:
-    friend class ResourceSendJobPrivate;
-    ResourceSendJobPrivate *const d;
-
-    Q_PRIVATE_SLOT(d, void slotEmitResult())
+    void slotEmitResult();
 };
 } // namespace MailTransport
 
