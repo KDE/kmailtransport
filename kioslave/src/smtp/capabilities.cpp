@@ -46,7 +46,7 @@ Capabilities Capabilities::fromResponse(const Response &ehlo)
 
     QCStringList l = ehlo.lines();
 
-    for (QCStringList::const_iterator it = ++l.constBegin(); it != l.constEnd(); ++it) {
+    for (QCStringList::const_iterator it = ++l.constBegin(), end(l.constEnd()); it != end; ++it) {
         c.add(QString::fromLatin1(*it));
     }
 
@@ -106,8 +106,8 @@ QString Capabilities::createSpecialResponse(bool tls) const
 QStringList Capabilities::saslMethodsQSL() const
 {
     QStringList result;
-    for (QMap<QString, QStringList>::const_iterator it = mCapabilities.begin();
-         it != mCapabilities.end(); ++it) {
+    for (QMap<QString, QStringList>::const_iterator it = mCapabilities.begin(), end(mCapabilities.end());
+         it != end; ++it) {
         if (it.key() == QLatin1String("AUTH")) {
             result += it.value();
         } else if (it.key().startsWith(QLatin1String("AUTH="))) {

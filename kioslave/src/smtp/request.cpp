@@ -47,7 +47,7 @@ Request Request::fromURL(const QUrl &url)
 #ifndef NDEBUG
     qCDebug(SMTP_LOG) << "Parsing request from query:\n" << query.join(QLatin1Char('\n'));
 #endif
-    for (QStringList::const_iterator it = query.begin(); it != query.end(); ++it) {
+    for (QStringList::const_iterator it = query.begin(), end(query.end()); it != end; ++it) {
         int equalsPos = (*it).indexOf(QLatin1Char('='));
         if (equalsPos <= 0) {
             continue;
@@ -177,10 +177,10 @@ QByteArray Request::headerFields(const QString &fromRealName) const
     assert(hasFromAddress());   // should have been checked for by
     // caller (MAIL FROM comes before DATA)
 
-    QByteArray result = "From: " + formatFromAddress(fromRealName, fromAddress()) + "\r\n";
+    QByteArray result = QByteArrayLiteral("From: ") + formatFromAddress(fromRealName, fromAddress()) + QByteArrayLiteral("\r\n");
 
     if (!subject().isEmpty()) {
-        result += "Subject: " + formatSubject(subject()) + "\r\n";
+        result += QByteArrayLiteral("Subject: ") + formatSubject(subject()) + QByteArrayLiteral("\r\n");
     }
     if (!to().empty()) {
         result += QByteArrayLiteral("To: ") + to().join(QStringLiteral(",\r\n\t") /* line folding */).toLatin1() + "\r\n";

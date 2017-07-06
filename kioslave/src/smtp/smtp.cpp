@@ -235,7 +235,7 @@ void SMTPProtocol::put(const QUrl &url, int permissions, KIO::JobFlags flags)
     // Loop through our To and CC recipients, and send the proper
     // SMTP commands, for the benefit of the server.
     const QStringList recipients = request.recipients();
-    for (QStringList::const_iterator it = recipients.begin(); it != recipients.end(); ++it) {
+    for (QStringList::const_iterator it = recipients.begin(), end(recipients.end()); it != end; ++it) {
         queueCommand(new RcptToCommand(m_sessionIface, (*it).toLatin1()));
     }
 

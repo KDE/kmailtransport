@@ -174,7 +174,7 @@ QByteArray StartTLSCommand::nextCommandLine(TransactionState *ts)
     Q_UNUSED(ts)
     mComplete = true;
     mNeedResponse = true;
-    return "STARTTLS\r\n";
+    return QByteArrayLiteral("STARTTLS\r\n");
 }
 
 bool StartTLSCommand::processResponse(const Response &r, TransactionState *ts)
@@ -266,7 +266,7 @@ bool AuthCommand::saslInteract(void *in)
 
     //some mechanisms do not require username && pass, so don't need a popup
     //window for getting this info
-    for (; interact->id != SASL_CB_LIST_END; interact++) {
+    for (; interact->id != SASL_CB_LIST_END; ++interact) {
         if (interact->id == SASL_CB_AUTHNAME
             || interact->id == SASL_CB_PASS) {
             if (mAi->username.isEmpty() || mAi->password.isEmpty()) {
@@ -371,7 +371,7 @@ QByteArray AuthCommand::nextCommandLine(TransactionState *ts)
 //      qCDebug(SMTP_LOG) << "CC: '" << cmd << "'";
         mComplete = (result == SASL_OK);
     }
-    cmd += "\r\n";
+    cmd += QByteArrayLiteral("\r\n");
     return cmd;
 }
 
@@ -414,14 +414,14 @@ QByteArray MailFromCommand::nextCommandLine(TransactionState *ts)
     Q_UNUSED(ts)
     mComplete = true;
     mNeedResponse = true;
-    QByteArray cmdLine = "MAIL FROM:<" + mAddr + '>';
+    QByteArray cmdLine = QByteArrayLiteral("MAIL FROM:<") + mAddr + '>';
     if (m8Bit && haveCapability("8BITMIME")) {
-        cmdLine += " BODY=8BITMIME";
+        cmdLine += QByteArrayLiteral(" BODY=8BITMIME");
     }
     if (mSize && haveCapability("SIZE")) {
-        cmdLine += " SIZE=" + QByteArray().setNum(mSize);
+        cmdLine += QByteArrayLiteral(" SIZE=") + QByteArray().setNum(mSize);
     }
-    return cmdLine + "\r\n";
+    return cmdLine + QByteArrayLiteral("\r\n");
 }
 
 bool MailFromCommand::processResponse(const Response &r, TransactionState *ts)
@@ -446,7 +446,7 @@ QByteArray RcptToCommand::nextCommandLine(TransactionState *ts)
     Q_UNUSED(ts)
     mComplete = true;
     mNeedResponse = true;
-    return "RCPT TO:<" + mAddr + ">\r\n";
+    return QByteArrayLiteral("RCPT TO:<") + mAddr + QByteArrayLiteral(">\r\n");
 }
 
 bool RcptToCommand::processResponse(const Response &r, TransactionState *ts)
@@ -473,7 +473,7 @@ QByteArray DataCommand::nextCommandLine(TransactionState *ts)
     mComplete = true;
     mNeedResponse = true;
     ts->setDataCommandIssued(true);
-    return "DATA\r\n";
+    return QByteArrayLiteral("DATA\r\n");
 }
 
 void DataCommand::ungetCommandLine(const QByteArray &cmd, TransactionState *ts)
@@ -526,8 +526,8 @@ QByteArray TransferCommand::nextCommandLine(TransactionState *ts)
     assert(!isComplete());
     assert(!ts->failed());
 
-    static const QByteArray dotCRLF = ".\r\n";
-    static const QByteArray CRLFdotCRLF = "\r\n.\r\n";
+    static const QByteArray dotCRLF = QByteArrayLiteral(".\r\n");
+    static const QByteArray CRLFdotCRLF = QByteArrayLiteral("\r\n.\r\n");
 
     if (!mUngetBuffer.isEmpty()) {
         const QByteArray ret = mUngetBuffer;
@@ -619,7 +619,7 @@ QByteArray NoopCommand::nextCommandLine(TransactionState *ts)
     Q_UNUSED(ts)
     mComplete = true;
     mNeedResponse = true;
-    return "NOOP\r\n";
+    return QByteArrayLiteral("NOOP\r\n");
 }
 
 //
@@ -631,7 +631,7 @@ QByteArray RsetCommand::nextCommandLine(TransactionState *ts)
     Q_UNUSED(ts)
     mComplete = true;
     mNeedResponse = true;
-    return "RSET\r\n";
+    return QByteArrayLiteral("RSET\r\n");
 }
 
 //
@@ -643,6 +643,6 @@ QByteArray QuitCommand::nextCommandLine(TransactionState *ts)
     Q_UNUSED(ts)
     mComplete = true;
     mNeedResponse = true;
-    return "QUIT\r\n";
+    return QByteArrayLiteral("QUIT\r\n");
 }
 } // namespace KioSMTP
