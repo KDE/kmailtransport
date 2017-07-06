@@ -182,7 +182,7 @@ void ServerTestPrivate::handleSMTPIMAPResponse(int type, const QString &text)
     authenticationResults[type] = parseAuthenticationList(results);
 
     // if we couldn't parse any authentication modes, default to clear-text
-    if (authenticationResults[type].size() == 0) {
+    if (authenticationResults[type].isEmpty()) {
         authenticationResults[type] << Transport::EnumAuthenticationType::CLEAR;
     }
 
