@@ -105,8 +105,8 @@ QString TransactionState::errorMessage() const
     if (haveRejectedRecipients()) {
         QStringList recip;
         recip.reserve(mRejectedRecipients.count());
-        for (RejectedRecipientList::const_iterator it = mRejectedRecipients.begin();
-             it != mRejectedRecipients.end(); ++it) {
+        for (RejectedRecipientList::const_iterator it = mRejectedRecipients.begin(), end(mRejectedRecipients.end());
+             it != end; ++it) {
             recip.push_back((*it).recipient + QLatin1String(" (") + (*it).reason + QLatin1Char(')'));
         }
         return i18n("Message sending failed since the following recipients were rejected by the server:\n"
