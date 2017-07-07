@@ -22,8 +22,7 @@
 
 #include <MailTransport/TransportAbstractPlugin>
 #include <QVariant>
-namespace Akonadi
-{
+namespace Akonadi {
 class AgentType;
 }
 

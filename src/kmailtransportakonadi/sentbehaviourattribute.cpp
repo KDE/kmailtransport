@@ -26,8 +26,8 @@ class SentBehaviourAttribute::Private
 {
 public:
     Private()
-        : mBehaviour(SentBehaviourAttribute::MoveToDefaultSentCollection),
-          mSilent(false)
+        : mBehaviour(SentBehaviourAttribute::MoveToDefaultSentCollection)
+        , mSilent(false)
     {
     }
 

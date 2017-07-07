@@ -34,8 +34,8 @@ AkonadiMailTransportPlugin::AkonadiMailTransportPlugin(QObject *parent, const QL
     : MailTransport::TransportAbstractPlugin(parent)
 {
     // Watch for appearing and disappearing types.
-    connect( AgentManager::self(), &AgentManager::typeAdded, this, &AkonadiMailTransportPlugin::slotUpdatePluginList);
-    connect( AgentManager::self(), &AgentManager::typeRemoved, this, &AkonadiMailTransportPlugin::slotUpdatePluginList);
+    connect(AgentManager::self(), &AgentManager::typeAdded, this, &AkonadiMailTransportPlugin::slotUpdatePluginList);
+    connect(AgentManager::self(), &AgentManager::typeRemoved, this, &AkonadiMailTransportPlugin::slotUpdatePluginList);
 }
 
 AkonadiMailTransportPlugin::~AkonadiMailTransportPlugin()

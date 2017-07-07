@@ -30,8 +30,8 @@ public:
     Private()
         : mId(-1)
     {
-
     }
+
     int mId;
 };
 
