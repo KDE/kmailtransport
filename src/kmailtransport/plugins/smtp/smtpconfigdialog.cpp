@@ -31,61 +31,40 @@
 
 using namespace MailTransport;
 
-class MailTransport::SmtpConfigDialog::Private
-{
-public:
-    Private(SmtpConfigDialog *qq)
-        : transport(nullptr)
-        , configWidget(nullptr)
-        , q(qq)
-        , okButton(nullptr)
-    {
-    }
-
-    Transport *transport;
-    SMTPConfigWidget *configWidget;
-    SmtpConfigDialog *q;
-    QPushButton *okButton;
-
-    void okClicked();
-    void slotTextChanged(const QString &text);
-};
-
-void SmtpConfigDialog::Private::okClicked()
-{
-    configWidget->apply();
-    transport->save();
-}
-
-void SmtpConfigDialog::Private::slotTextChanged(const QString &text)
-{
-    okButton->setEnabled(!text.isEmpty());
-}
 
 SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this))
 {
     Q_ASSERT(transport);
-    d->transport = transport;
+    mTransport = transport;
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    d->configWidget = new SMTPConfigWidget(transport, this);
-    d->configWidget->setObjectName(QStringLiteral("smtpconfigwidget"));
-    mainLayout->addWidget(d->configWidget);
+    mConfigWidget = new SMTPConfigWidget(transport, this);
+    mConfigWidget->setObjectName(QStringLiteral("smtpconfigwidget"));
+    mainLayout->addWidget(mConfigWidget);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttons"));
-    d->okButton = buttonBox->button(QDialogButtonBox::Ok);
-    d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+    mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     mainLayout->addWidget(buttonBox);
 
-    connect(d->okButton, SIGNAL(clicked()), this, SLOT(okClicked()));
+    connect(mOkButton, &QAbstractButton::clicked, this, &SmtpConfigDialog::okClicked);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SmtpConfigDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SmtpConfigDialog::reject);
 }
 
 SmtpConfigDialog::~SmtpConfigDialog()
 {
-    delete d;
+}
+
+void SmtpConfigDialog::okClicked()
+{
+    mConfigWidget->apply();
+    mTransport->save();
+}
+
+void SmtpConfigDialog::slotTextChanged(const QString &text)
+{
+    mOkButton->setEnabled(!text.isEmpty());
 }
 
 #include "moc_smtpconfigdialog.cpp"

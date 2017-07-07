@@ -24,7 +24,7 @@
 
 namespace MailTransport {
 class Transport;
-
+class SMTPConfigWidget;
 class SmtpConfigDialog : public QDialog
 {
     Q_OBJECT
@@ -33,11 +33,12 @@ public:
     virtual ~SmtpConfigDialog();
 
 private:
-    class Private;
-    Private *const d;
+    void okClicked();
+    void slotTextChanged(const QString &text);
 
-    Q_PRIVATE_SLOT(d, void okClicked())
-    Q_PRIVATE_SLOT(d, void slotTextChanged(const QString &))
+    Transport *mTransport;
+    SMTPConfigWidget *mConfigWidget;
+    QPushButton *mOkButton;
 };
 } // namespace MailTransport
 
