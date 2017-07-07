@@ -95,7 +95,7 @@ MailTransport::TransportJob *AkonadiMailTransportPlugin::createTransportJob(Mail
 
 void AkonadiMailTransportPlugin::initializeTransport(MailTransport::Transport *t, const QString &identifier)
 {
-    Akonadi::AgentInstanceCreateJob *cjob = new AgentInstanceCreateJob(identifier);
+    AgentInstanceCreateJob *cjob = new AgentInstanceCreateJob(identifier);
     if (!cjob->exec()) {
         qCWarning(MAILTRANSPORT_AKONADI_LOG) << "Failed to create agent instance of type" << identifier;
         return;
