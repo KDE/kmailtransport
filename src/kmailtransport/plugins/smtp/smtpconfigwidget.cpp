@@ -150,7 +150,6 @@ void SMTPConfigWidget::init()
     d->manager->addWidget(this);   // otherwise it doesn't find out about these widgets
     d->manager->updateWidgets();
 
-    d->ui.password->setEnabled(false);
     d->ui.password->setWhatsThis(i18n("The password to send to the server for authorization."));
 
     d->encryptionGroup = new QButtonGroup(this);
