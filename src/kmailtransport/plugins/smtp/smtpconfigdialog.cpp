@@ -27,7 +27,6 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QPushButton>
-#include <QDebug>
 
 using namespace MailTransport;
 
