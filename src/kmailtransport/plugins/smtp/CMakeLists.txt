@@ -16,9 +16,7 @@ kcoreaddons_add_plugin(mailtransport_smtpplugin JSON smtpmailtransport.json SOUR
 
 target_link_libraries(mailtransport_smtpplugin
     KF5::MailTransport
-    KF5::CoreAddons
     KF5::I18n
-    Qt5::Widgets
     KF5::ConfigWidgets
     KF5::KIOCore
     KF5::Completion
