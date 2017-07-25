@@ -1,5 +1,0 @@
-[%General]
-Driver=QSQLITE
-
-[Search]
-Manager=Dummy
