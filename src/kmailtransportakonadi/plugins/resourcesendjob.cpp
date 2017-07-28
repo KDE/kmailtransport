@@ -21,16 +21,10 @@
 #include "../messagequeuejob.h"
 #include "transport.h"
 
-#include <QDBusConnection>
-#include <QDBusConnectionInterface>
-
 #include <kmime/kmime_message.h>
 
-#include <collection.h>
-#include <itemcreatejob.h>
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
-#include <addressattribute.h>
+#include <AkonadiCore/Collection>
+#include <Akonadi/KMime/AddressAttribute>
 
 using namespace Akonadi;
 using namespace KMime;
