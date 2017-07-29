@@ -48,10 +48,16 @@
 #define POP_PROTOCOL QStringLiteral("pop")
 #define POPS_PROTOCOL QStringLiteral("pops")
 
+#define NNTP_PROTOCOL QStringLiteral("nntp")
+#define NNTPS_PROTOCOL QStringLiteral("nntps")
+
 #define IMAP_PORT 143
 #define IMAPS_PORT 993
 
 #define POP_PORT 110
 #define POPS_PORT 995
+
+#define NNTP_PORT 119
+#define NNTPS_PORT 563
 
 #endif

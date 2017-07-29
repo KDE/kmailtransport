@@ -77,6 +77,7 @@ public:
     void handleSMTPIMAPResponse(int type, const QString &text);
     void sendInitialCapabilityQuery(MailTransport::Socket *socket);
     bool handlePopConversation(MailTransport::Socket *socket, int type, int stage, const QString &response, bool *shouldStartTLS);
+    bool handleNntpConversation(MailTransport::Socket *socket, int type, int *stage, const QString &response, bool *shouldStartTLS);
     QVector<int> parseAuthenticationList(const QStringList &authentications);
 
     // slots
@@ -320,6 +321,71 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
     return false;
 }
 
+bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, int type, int *stage, const QString &response, bool *shouldStartTLS)
+{
+    Q_ASSERT(shouldStartTLS != nullptr);
+    Q_ASSERT(stage != nullptr);
+
+    // Initial Greeting
+    if (*stage == 0) {
+        if (response.startsWith(QLatin1String("382 "))) {
+            return true;
+        }
+        if (!response.isEmpty() && !response.startsWith(QLatin1String("200 "))) {
+            return false;
+        }
+
+        socket->write(QStringLiteral("CAPABILITIES"));
+        return true;
+    }
+
+    // CAPABILITIES result
+    else if (*stage == 1) {
+        // Check whether we got "500 command 'CAPABILITIES' not recognized"
+        if (response.startsWith(QLatin1String("500 "))) {
+            return false;
+        }
+
+//     Example:
+//     101 Capability list:
+//     VERSION 2
+//     IMPLEMENTATION INN 2.5.4
+//     AUTHINFO USER SASL
+//     HDR
+//     LIST ACTIVE [etc]
+//     OVER
+//     POST
+//     READER
+//     SASL DIGEST-MD5 CRAM-MD5 NTLM PLAIN LOGIN
+//     STARTTLS
+//     .
+        const QVector<QStringRef> lines = response.splitRef(QLatin1String("\r\n"), QString::SkipEmptyParts);
+        for (const QStringRef &line : lines) {
+            if (line.compare(QLatin1String("STARTTLS"), Qt::CaseInsensitive) == 0) {
+                *shouldStartTLS = true;
+            } else if (line.startsWith(QLatin1String("AUTHINFO "), Qt::CaseInsensitive)) {
+                const QVector<QStringRef> authinfos = line.split(QLatin1Char(' '), QString::SkipEmptyParts);
+                const QString s(QStringLiteral("USER"));
+                const QStringRef ref(&s);
+                if (authinfos.contains(ref)) {
+                    authenticationResults[type].append(Transport::EnumAuthenticationType::CLEAR); // XXX
+                }
+            } else if (line.startsWith(QLatin1String("SASL "), Qt::CaseInsensitive)) {
+                const QStringList auths = line.mid(5).toString().split(QLatin1Char(' '), QString::SkipEmptyParts);
+                authenticationResults[type] += parseAuthenticationList(auths);
+            } else if (line == QLatin1String(".")) {
+                return false;
+            }
+        }
+        // We have not hit the end of the capabilities list yet,
+        // so avoid the stage counter to rise without reason.
+        --(*stage);
+        return true;
+    }
+
+    return false;
+}
+
 // slotReadNormal() handles normal (no) encryption and TLS encryption.
 // At first, the communication is not encrypted, but if the server supports
 // the STARTTLS/STLS keyword, the same authentication query is done again
@@ -345,11 +411,16 @@ void ServerTestPrivate::slotReadNormal(const QString &text)
     bool shouldStartTLS = false;
     normalStage++;
 
-    // Handle the whole POP converstation separatly, it is very different from
-    // IMAP and SMTP
+    // Handle the whole POP and NNTP converstations separatly, as
+    // they are very different from IMAP and SMTP
     if (testProtocol == POP_PROTOCOL) {
         if (handlePopConversation(normalSocket, encryptionMode, normalStage, text,
                                   &shouldStartTLS)) {
+            return;
+        }
+    } else if (testProtocol == NNTP_PROTOCOL) {
+        if (handleNntpConversation(normalSocket, encryptionMode, &normalStage, text,
+                                   &shouldStartTLS)) {
             return;
         }
     } else {
@@ -401,6 +472,12 @@ void ServerTestPrivate::slotReadSecure(const QString &text)
         bool dummy;
         if (handlePopConversation(secureSocket, Transport::EnumEncryption::SSL,
                                   secureStage, text, &dummy)) {
+            return;
+        }
+    } else if (testProtocol == NNTP_PROTOCOL) {
+        bool dummy;
+        if (handleNntpConversation(secureSocket, Transport::EnumEncryption::SSL,
+                                   &secureStage, text, &dummy)) {
             return;
         }
     } else {
@@ -503,6 +580,9 @@ void ServerTest::start()
     } else if (d->testProtocol == POP_PROTOCOL) {
         d->normalSocket->setPort(POP_PORT);
         d->secureSocket->setPort(POPS_PORT);
+    } else if (d->testProtocol == NNTP_PROTOCOL) {
+        d->normalSocket->setPort(NNTP_PORT);
+        d->secureSocket->setPort(NNTPS_PORT);
     }
 
     if (d->customPorts.contains(Transport::EnumEncryption::None)) {

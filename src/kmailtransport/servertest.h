@@ -91,6 +91,7 @@ public:
      * SMTP: 25, 465
      * POP: 110, 995
      * IMAP: 143, 993
+     * NNTP: 119, 563
      *
      * @param encryptionMode the port will only be used in this encryption mode.
      *                       Valid values for this are only 'None' and 'SSL'.
