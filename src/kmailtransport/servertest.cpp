@@ -31,6 +31,7 @@
 #include <QHostInfo>
 #include <QProgressBar>
 #include <QTimer>
+#include <QSet>
 
 // KDE
 #include "mailtransport_debug.h"
@@ -51,7 +52,7 @@ public:
     MailTransport::Socket *normalSocket;
     MailTransport::Socket *secureSocket;
 
-    QVector< int > connectionResults;
+    QSet< int > connectionResults;
     QHash< int, QVector<int> > authenticationResults;
     QSet< ServerTest::Capability > capabilityResults;
     QHash< int, uint > customPorts;
@@ -121,7 +122,13 @@ void ServerTestPrivate::finalResult()
     normalSocketFinished = false;
     tlsFinished = false;
 
-    emit q->finished(connectionResults);
+    QVector<int> resultsAsVector;
+    resultsAsVector.reserve(connectionResults.size());
+    foreach (int res, connectionResults) {
+        resultsAsVector.append(res);
+    }
+
+    emit q->finished(resultsAsVector);
 }
 
 QVector<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authentications)
