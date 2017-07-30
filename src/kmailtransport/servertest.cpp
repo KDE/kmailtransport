@@ -124,7 +124,7 @@ void ServerTestPrivate::finalResult()
 
     QVector<int> resultsAsVector;
     resultsAsVector.reserve(connectionResults.size());
-    foreach (int res, connectionResults) {
+    for (int res : qAsConst(connectionResults)) {
         resultsAsVector.append(res);
     }
 
