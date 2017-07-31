@@ -24,6 +24,7 @@
 #define MAILTRANSPORT_SMTPJOB_H
 
 #include <transportjob.h>
+#include <KSMTP/Session>
 
 namespace KIO {
 class Job;
@@ -65,13 +66,12 @@ protected:
 
 protected Q_SLOTS:
     void slotResult(KJob *job) override;
-    void slaveError(KIO::Slave *slave, int errorCode, const QString &errorMsg);
+    void sessionStateChanged(KSmtp::Session::State state);
 
 private:
     void startSmtpJob();
-
-private Q_SLOTS:
-    void dataRequest(KIO::Job *job, QByteArray &data);
+    void startLoginJob();
+    void startSendJob();
 
 private:
     friend class ::SmtpJobPrivate;

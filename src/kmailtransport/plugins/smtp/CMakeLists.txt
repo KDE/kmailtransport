@@ -1,3 +1,7 @@
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
+
 set(mailtransport_smtpplugin_SRCS
     smtpmailtransportplugin.cpp
     smtpconfigdialog.cpp
@@ -18,6 +22,7 @@ target_link_libraries(mailtransport_smtpplugin
     KF5::MailTransport
     KF5::I18n
     KF5::ConfigWidgets
-    KF5::KIOCore
+    KF5::KIOWidgets
     KF5::Completion
+    KPim::SMTP
     )

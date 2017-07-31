@@ -24,6 +24,7 @@
 #include "transport.h"
 #include "mailtransport_defs.h"
 #include "precommandjob.h"
+#include "sessionuiproxy.h"
 #include "mailtransportplugin_smtp_debug.h"
 
 #include <QBuffer>
@@ -34,36 +35,42 @@
 #include <QUrl>
 #include <QUrlQuery>
 #include "mailtransport_debug.h"
-#include <KIO/Job>
-#include <KIO/Scheduler>
 #include <KPasswordDialog>
+
+#include <KSMTP/Session>
+#include <KSMTP/LoginJob>
+#include <KSMTP/SendJob>
 
 using namespace MailTransport;
 
-class SlavePool
+class SessionPool
 {
 public:
-    SlavePool() : ref(0)
+    SessionPool() : ref(0)
     {
     }
 
     int ref;
-    QHash<int, KIO::Slave *> slaves;
+    QHash<int, KSmtp::Session*> sessions;
 
-    void removeSlave(KIO::Slave *slave, bool disconnect = false)
+    void removeSession(KSmtp::Session *session)
     {
-        qCDebug(MAILTRANSPORT_SMTP_LOG) << "Removing slave" << slave << "from pool";
-        const int slaveKey = slaves.key(slave);
-        if (slaveKey > 0) {
-            slaves.remove(slaveKey);
-            if (disconnect) {
-                KIO::Scheduler::disconnectSlave(slave);
-            }
+        qCDebug(MAILTRANSPORT_SMTP_LOG) << "Removing session" << session << "from the pool";
+        int key = sessions.key(session);
+        if (key > 0) {
+            QObject::connect(session, &KSmtp::Session::stateChanged,
+                            [session](KSmtp::Session::State state) {
+                                if (state == KSmtp::Session::Disconnected) {
+                                    session->deleteLater();
+                                }
+                            });
+            session->quit();
+            sessions.remove(key);
         }
     }
 };
 
-Q_GLOBAL_STATIC(SlavePool, s_slavePool)
+Q_GLOBAL_STATIC(SessionPool, s_sessionPool)
 
 /**
  * Private class that helps to provide binary compatibility between releases.
@@ -77,7 +84,8 @@ public:
     }
 
     SmtpJob *q;
-    KIO::Slave *slave;
+    KSmtp::Session *session;
+    KSmtp::SessionUiProxy::Ptr uiProxy;
     enum State {
         Idle, Precommand, Smtp
     } currentState;
@@ -89,26 +97,23 @@ SmtpJob::SmtpJob(Transport *transport, QObject *parent)
     , d(new SmtpJobPrivate(this))
 {
     d->currentState = SmtpJobPrivate::Idle;
-    d->slave = nullptr;
+    d->session = nullptr;
     d->finished = false;
-    if (!s_slavePool.isDestroyed()) {
-        s_slavePool->ref++;
+    d->uiProxy = KSmtp::SessionUiProxy::Ptr(new SmtpSessionUiProxy);
+    if (!s_sessionPool.isDestroyed()) {
+        s_sessionPool->ref++;
     }
-    KIO::Scheduler::connect(SIGNAL(slaveError(KIO::Slave *,int,QString)), this, SLOT(slaveError(KIO::Slave *,int,QString)));
 }
 
 SmtpJob::~SmtpJob()
 {
-    if (!s_slavePool.isDestroyed()) {
-        s_slavePool->ref--;
-        if (s_slavePool->ref == 0) {
-            qCDebug(MAILTRANSPORT_SMTP_LOG) << "clearing SMTP slave pool" << s_slavePool->slaves.count();
-            foreach (KIO::Slave *slave, s_slavePool->slaves) {
-                if (slave) {
-                    KIO::Scheduler::disconnectSlave(slave);
-                }
+    if (!s_sessionPool.isDestroyed()) {
+        s_sessionPool->ref--;
+        if (s_sessionPool->ref == 0) {
+            qCDebug(MAILTRANSPORT_SMTP_LOG) << "clearing SMTP session pool" << s_sessionPool->sessions.count();
+            while (!s_sessionPool->sessions.isEmpty()) {
+                s_sessionPool->removeSession(*(s_sessionPool->sessions.begin()));
             }
-            s_slavePool->slaves.clear();
         }
     }
     delete d;
@@ -116,12 +121,12 @@ SmtpJob::~SmtpJob()
 
 void SmtpJob::doStart()
 {
-    if (s_slavePool.isDestroyed()) {
+    if (s_sessionPool.isDestroyed()) {
         return;
     }
 
-    if ((!s_slavePool->slaves.isEmpty()
-         && s_slavePool->slaves.contains(transport()->id()))
+    if ((!s_sessionPool->sessions.isEmpty()
+         && s_sessionPool->sessions.contains(transport()->id()))
         || transport()->precommand().isEmpty()) {
         d->currentState = SmtpJobPrivate::Smtp;
         startSmtpJob();
@@ -135,118 +140,161 @@ void SmtpJob::doStart()
 
 void SmtpJob::startSmtpJob()
 {
-    if (s_slavePool.isDestroyed()) {
+    if (s_sessionPool.isDestroyed()) {
         return;
     }
 
-    QUrl destination;
-    destination.setScheme((transport()->encryption() == Transport::EnumEncryption::SSL)
-                          ? SMTPS_PROTOCOL : SMTP_PROTOCOL);
-    destination.setHost(transport()->host().trimmed());
-    destination.setPort(transport()->port());
-
-    QUrlQuery destinationQuery(destination);
-    destinationQuery.addQueryItem(QStringLiteral("headers"), QStringLiteral("0"));
-    destinationQuery.addQueryItem(QStringLiteral("from"), sender());
-
-    for (const QString &str : to()) {
-        destinationQuery.addQueryItem(QStringLiteral("to"), str);
-    }
-    for (const QString &str : cc()) {
-        destinationQuery.addQueryItem(QStringLiteral("cc"), str);
-    }
-    for (const QString &str : bcc()) {
-        destinationQuery.addQueryItem(QStringLiteral("bcc"), str);
+    d->session = s_sessionPool->sessions.value(transport()->id());
+    if (!d->session) {
+        d->session = new KSmtp::Session(transport()->host(), transport()->port());
+        d->session->setUiProxy(d->uiProxy);
+        if (transport()->specifyHostname()) {
+            d->session->setCustomHostname(transport()->localHostname());
+        }
+        s_sessionPool->sessions.insert(transport()->id(), d->session);
     }
 
-    if (transport()->specifyHostname()) {
-        destinationQuery.addQueryItem(QStringLiteral("hostname"), transport()->localHostname());
-    }
-
-    if (transport()->requiresAuthentication()) {
-        QString user = transport()->userName();
-        QString passwd = transport()->password();
-        if ((user.isEmpty() || passwd.isEmpty())
-            && transport()->authenticationType() != Transport::EnumAuthenticationType::GSSAPI) {
-            QPointer<KPasswordDialog> dlg
-                = new KPasswordDialog(
-                nullptr,
-                KPasswordDialog::ShowUsernameLine
-                |KPasswordDialog::ShowKeepPassword);
-            dlg->setPrompt(i18n("You need to supply a username and a password "
-                                "to use this SMTP server."));
-            dlg->setKeepPassword(transport()->storePassword());
-            dlg->addCommentLine(QString(), transport()->name());
-            dlg->setUsername(user);
-            dlg->setPassword(passwd);
-
-            bool gotIt = false;
-            if (dlg->exec()) {
-                transport()->setUserName(dlg->username());
-                transport()->setPassword(dlg->password());
-                transport()->setStorePassword(dlg->keepPassword());
-                transport()->save();
-                gotIt = true;
-            }
-            delete dlg;
-
-            if (!gotIt) {
-                setError(KilledJobError);
+    connect(d->session, &KSmtp::Session::stateChanged,
+            this, &SmtpJob::sessionStateChanged, Qt::UniqueConnection);
+    connect(d->session, &KSmtp::Session::connectionError,
+            this, [this](const QString &err) {
+                setError(KJob::UserDefinedError);
+                setErrorText(err);
+                s_sessionPool->removeSession(d->session);
                 emitResult();
-                return;
-            }
-        }
-        destination.setUserName(transport()->userName());
-        destination.setPassword(transport()->password());
-    }
+            });
 
-    // dotstuffing is now done by the slave (see setting of metadata)
-    if (!data().isEmpty()) {
-        // allow +5% for subsequent LF->CRLF and dotstuffing (an average
-        // over 2G-lines gives an average line length of 42-43):
-        destinationQuery.addQueryItem(QStringLiteral("size"),
-                                      QString::number(qRound(data().length() * 1.05)));
-    }
-
-    destination.setPath(QStringLiteral("/send"));
-    destination.setQuery(destinationQuery);
-
-    d->slave = s_slavePool->slaves.value(transport()->id());
-    if (!d->slave) {
-        KIO::MetaData slaveConfig;
-        slaveConfig.insert(QStringLiteral("tls"),
-                           (transport()->encryption() == Transport::EnumEncryption::TLS)
-                           ? QStringLiteral("on") : QStringLiteral("off"));
-        if (transport()->requiresAuthentication()) {
-            slaveConfig.insert(QStringLiteral("sasl"), transport()->authenticationTypeString());
-        }
-        d->slave = KIO::Scheduler::getConnectedSlave(destination, slaveConfig);
-        qCDebug(MAILTRANSPORT_SMTP_LOG) << "Created new SMTP slave" << d->slave;
-        s_slavePool->slaves.insert(transport()->id(), d->slave);
+    if (d->session->state() == KSmtp::Session::Disconnected) {
+        d->session->open();
     } else {
-        qCDebug(MAILTRANSPORT_SMTP_LOG) << "Re-using existing slave" << d->slave;
-    }
+        if (d->session->state() != KSmtp::Session::Authenticated) {
+            startLoginJob();
+        }
 
-    KIO::TransferJob *job = KIO::put(destination, -1, KIO::HideProgressInfo);
-    if (!d->slave || !job) {
-        setError(UserDefinedError);
-        setErrorText(i18n("Unable to create SMTP job."));
-        emitResult();
+        startSendJob();
+    }
+}
+
+void SmtpJob::sessionStateChanged(KSmtp::Session::State state)
+{
+    if (state == KSmtp::Session::Ready) {
+        startLoginJob();
+    } else if (state == KSmtp::Session::Authenticated) {
+        startSendJob();
+    }
+}
+
+void SmtpJob::startLoginJob()
+{
+    if (!transport()->requiresAuthentication()) {
+        startSendJob();
         return;
     }
 
-    job->addMetaData(QStringLiteral("lf2crlf+dotstuff"), QStringLiteral("slave"));
-    connect(job, &KIO::TransferJob::dataReq, this, &SmtpJob::dataRequest);
+    auto login = new KSmtp::LoginJob(d->session);
+    auto user = transport()->userName();
+    auto passwd = transport()->password();
+    if ((user.isEmpty() || passwd.isEmpty())
+        && transport()->authenticationType() != Transport::EnumAuthenticationType::GSSAPI) {
+        QPointer<KPasswordDialog> dlg
+            = new KPasswordDialog(
+            nullptr,
+            KPasswordDialog::ShowUsernameLine
+            |KPasswordDialog::ShowKeepPassword);
+        dlg->setPrompt(i18n("You need to supply a username and a password "
+                            "to use this SMTP server."));
+        dlg->setKeepPassword(transport()->storePassword());
+        dlg->addCommentLine(QString(), transport()->name());
+        dlg->setUsername(user);
+        dlg->setPassword(passwd);
 
-    addSubjob(job);
-    KIO::Scheduler::assignJobToSlave(d->slave, job);
+        bool gotIt = false;
+        if (dlg->exec()) {
+            transport()->setUserName(dlg->username());
+            transport()->setPassword(dlg->password());
+            transport()->setStorePassword(dlg->keepPassword());
+            transport()->save();
+            gotIt = true;
+        }
+        delete dlg;
 
-    setTotalAmount(KJob::Bytes, data().length());
+        if (!gotIt) {
+            setError(KilledJobError);
+            emitResult();
+            return;
+        }
+    }
+
+    login->setUserName(transport()->userName());
+    login->setPassword(transport()->password());
+    switch (transport()->authenticationType()) {
+    case TransportBase::EnumAuthenticationType::PLAIN:
+        login->setPreferedAuthMode(KSmtp::LoginJob::Plain);
+        break;
+    case TransportBase::EnumAuthenticationType::LOGIN:
+        login->setPreferedAuthMode(KSmtp::LoginJob::Login);
+        break;
+    case TransportBase::EnumAuthenticationType::CRAM_MD5:
+        login->setPreferedAuthMode(KSmtp::LoginJob::CramMD5);
+        break;
+    case TransportBase::EnumAuthenticationType::XOAUTH2:
+        login->setPreferedAuthMode(KSmtp::LoginJob::XOAuth);
+        break;
+    case TransportBase::EnumAuthenticationType::DIGEST_MD5:
+        login->setPreferedAuthMode(KSmtp::LoginJob::DigestMD5);
+        break;
+    case TransportBase::EnumAuthenticationType::NTLM:
+        login->setPreferedAuthMode(KSmtp::LoginJob::NTLM);
+        break;
+    case TransportBase::EnumAuthenticationType::GSSAPI:
+        login->setPreferedAuthMode(KSmtp::LoginJob::GSSAPI);
+        break;
+    default:
+        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown authentication mode" << transport()->authenticationTypeString();
+        break;
+    }
+
+    switch (transport()->encryption()) {
+    case Transport::EnumEncryption::None:
+        login->setEncryptionMode(KSmtp::LoginJob::Unencrypted);
+        break;
+    case Transport::EnumEncryption::TLS:
+        login->setEncryptionMode(KSmtp::LoginJob::TlsV1);
+        break;
+    case Transport::EnumEncryption::SSL:
+        login->setEncryptionMode(KSmtp::LoginJob::AnySslVersion);
+        break;
+    default:
+        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown encryption mode" << transport()->encryption();
+        break;
+
+    }
+
+    connect(login, &KJob::result, this, &SmtpJob::slotResult);
+    addSubjob(login);
+    login->start();
+    qCDebug(MAILTRANSPORT_SMTP_LOG) << "Login started";
+}
+
+void SmtpJob::startSendJob()
+{
+    auto send = new KSmtp::SendJob(d->session);
+    send->setFrom(sender());
+    send->setTo(to());
+    send->setCc(cc());
+    send->setBcc(bcc());
+    send->setData(data());
+
+    connect(send, &KJob::result, this, &SmtpJob::slotResult);
+    addSubjob(send);
+    send->start();
+
+    qCDebug(MAILTRANSPORT_SMTP_LOG) << "Send started";
 }
 
 bool SmtpJob::doKill()
 {
-    if (s_slavePool.isDestroyed()) {
+    if (s_sessionPool.isDestroyed()) {
         return false;
     }
 
@@ -256,10 +304,8 @@ bool SmtpJob::doKill()
     if (d->currentState == SmtpJobPrivate::Precommand) {
         return subjobs().first()->kill();
     } else if (d->currentState == SmtpJobPrivate::Smtp) {
-        KIO::SimpleJob *job = static_cast<KIO::SimpleJob *>(subjobs().first());
         clearSubjobs();
-        KIO::Scheduler::cancelJob(job);
-        s_slavePool->removeSlave(d->slave);
+        s_sessionPool->removeSession(d->session);
         return true;
     }
     return false;
@@ -267,7 +313,7 @@ bool SmtpJob::doKill()
 
 void SmtpJob::slotResult(KJob *job)
 {
-    if (s_slavePool.isDestroyed()) {
+    if (s_sessionPool.isDestroyed()) {
         return;
     }
 
@@ -298,7 +344,7 @@ void SmtpJob::slotResult(KJob *job)
     }
 
     if (errorCode && d->currentState == SmtpJobPrivate::Smtp) {
-        s_slavePool->removeSlave(d->slave, errorCode != KIO::ERR_SLAVE_DIED);
+        s_sessionPool->removeSession(d->session);
         TransportJob::slotResult(job);
         return;
     }
@@ -309,38 +355,7 @@ void SmtpJob::slotResult(KJob *job)
         startSmtpJob();
         return;
     }
-    if (!error()) {
-        emitResult();
-    }
-}
-
-void SmtpJob::dataRequest(KIO::Job *job, QByteArray &data)
-{
-    if (s_slavePool.isDestroyed()) {
-        return;
-    }
-
-    Q_UNUSED(job);
-    Q_ASSERT(job);
-    if (buffer()->atEnd()) {
-        data.clear();
-    } else {
-        Q_ASSERT(buffer()->isOpen());
-        data = buffer()->read(32 * 1024);
-    }
-    setProcessedAmount(KJob::Bytes, buffer()->pos());
-}
-
-void SmtpJob::slaveError(KIO::Slave *slave, int errorCode, const QString &errorMsg)
-{
-    if (s_slavePool.isDestroyed()) {
-        return;
-    }
-
-    s_slavePool->removeSlave(slave, errorCode != KIO::ERR_SLAVE_DIED);
-    if (d->slave == slave && !d->finished) {
-        setError(errorCode);
-        setErrorText(KIO::buildErrorString(errorCode, errorMsg));
+    if (!error() && !hasSubjobs()) {
         emitResult();
     }
 }
