@@ -27,6 +27,7 @@
 #include "plugins/transportpluginmanager.h"
 #include "plugins/transportabstractplugin.h"
 #include "widgets/addtransportdialogng.h"
+#include <MailTransport/TransportAbstractPlugin>
 
 #include <QApplication>
 #include <QDBusConnection>
@@ -169,7 +170,7 @@ TransportManager *TransportManager::self()
 
 Transport *TransportManager::transportById(int id, bool def) const
 {
-    foreach (Transport *t, d->transports) {
+    for (Transport *t : qAsConst(d->transports)) {
         if (t->id() == id) {
             return t;
         }
@@ -183,7 +184,7 @@ Transport *TransportManager::transportById(int id, bool def) const
 
 Transport *TransportManager::transportByName(const QString &name, bool def) const
 {
-    foreach (Transport *t, d->transports) {
+    for (Transport *t : qAsConst(d->transports)) {
         if (t->name() == name) {
             return t;
         }
@@ -340,7 +341,7 @@ QVector<int> TransportManager::transportIds() const
 {
     QVector<int> rv;
     rv.reserve(d->transports.count());
-    foreach (Transport *t, d->transports) {
+    for (Transport *t : qAsConst(d->transports)) {
         rv << t->id();
     }
     return rv;
@@ -350,7 +351,7 @@ QStringList TransportManager::transportNames() const
 {
     QStringList rv;
     rv.reserve(d->transports.count());
-    foreach (Transport *t, d->transports) {
+    for (Transport *t : qAsConst(d->transports)) {
         rv << t->name();
     }
     return rv;
@@ -724,4 +725,4 @@ void TransportManagerPrivate::jobResult(KJob *job)
 
 #include "moc_transportmanager.cpp"
 
-#include <MailTransport/TransportAbstractPlugin>
+
