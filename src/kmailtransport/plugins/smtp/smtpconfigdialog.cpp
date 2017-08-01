@@ -30,7 +30,6 @@
 
 using namespace MailTransport;
 
-
 SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     : QDialog(parent)
 {

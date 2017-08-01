@@ -22,8 +22,7 @@
 
 class QLineEdit;
 class QAction;
-namespace MailTransport
-{
+namespace MailTransport {
 class LineEditPassword : public QWidget
 {
 public:

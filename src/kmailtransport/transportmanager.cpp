@@ -496,7 +496,6 @@ void TransportManagerPrivate::updatePluginList()
     }
 }
 
-
 void TransportManager::updatePluginList()
 {
     d->updatePluginList();

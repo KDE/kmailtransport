@@ -51,7 +51,7 @@ public:
     }
 
     int ref;
-    QHash<int, KSmtp::Session*> sessions;
+    QHash<int, KSmtp::Session *> sessions;
 
     void removeSession(KSmtp::Session *session)
     {
@@ -59,11 +59,11 @@ public:
         int key = sessions.key(session);
         if (key > 0) {
             QObject::connect(session, &KSmtp::Session::stateChanged,
-                            [session](KSmtp::Session::State state) {
-                                if (state == KSmtp::Session::Disconnected) {
-                                    session->deleteLater();
-                                }
-                            });
+                             [session](KSmtp::Session::State state) {
+                if (state == KSmtp::Session::Disconnected) {
+                    session->deleteLater();
+                }
+            });
             session->quit();
             sessions.remove(key);
         }
@@ -158,11 +158,11 @@ void SmtpJob::startSmtpJob()
             this, &SmtpJob::sessionStateChanged, Qt::UniqueConnection);
     connect(d->session, &KSmtp::Session::connectionError,
             this, [this](const QString &err) {
-                setError(KJob::UserDefinedError);
-                setErrorText(err);
-                s_sessionPool->removeSession(d->session);
-                emitResult();
-            });
+        setError(KJob::UserDefinedError);
+        setErrorText(err);
+        s_sessionPool->removeSession(d->session);
+        emitResult();
+    });
 
     if (d->session->state() == KSmtp::Session::Disconnected) {
         d->session->open();
@@ -267,7 +267,6 @@ void SmtpJob::startLoginJob()
     default:
         qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown encryption mode" << transport()->encryption();
         break;
-
     }
 
     connect(login, &KJob::result, this, &SmtpJob::slotResult);

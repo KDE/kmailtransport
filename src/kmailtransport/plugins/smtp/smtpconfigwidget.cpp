@@ -316,7 +316,7 @@ void SMTPConfigWidget::hostNameChanged(const QString &text)
 
     d->resetAuthCapabilities();
     if (d->encryptionGroup) {
-        for (int i = 0;  i < d->encryptionGroup->buttons().count(); ++i) {
+        for (int i = 0; i < d->encryptionGroup->buttons().count(); ++i) {
             d->encryptionGroup->buttons().at(i)->setEnabled(true);
         }
     }

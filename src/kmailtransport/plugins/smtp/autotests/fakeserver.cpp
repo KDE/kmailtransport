@@ -23,9 +23,9 @@
 #include <QFile>
 #include <QDebug>
 
-FakeServer::FakeServer(QObject *parent) :
-    QThread(parent),
-    m_tcpServer(nullptr)
+FakeServer::FakeServer(QObject *parent)
+    : QThread(parent)
+    , m_tcpServer(nullptr)
 {
     moveToThread(this);
 }
@@ -38,16 +38,17 @@ QByteArray FakeServer::greeting()
 QList<QByteArray> FakeServer::greetingAndEhlo(bool multiline)
 {
     return QList<QByteArray>() << greeting()
-           << "C: EHLO 127.0.0.1"
-           << QByteArray("S: 250") + (multiline ? '-' : ' ') + "Localhost ready to roll";
+                               << "C: EHLO 127.0.0.1"
+                               << QByteArray("S: 250") + (multiline ? '-' : ' ') + "Localhost ready to roll";
 }
 
 QList<QByteArray> FakeServer::bye()
 {
-    return { "C: QUIT",
-             "S: 221 So long, and thanks for all the fish",
-             "X: "
-           };
+    return {
+               "C: QUIT",
+               "S: 221 So long, and thanks for all the fish",
+               "X: "
+    };
 }
 
 FakeServer::~FakeServer()
@@ -179,7 +180,7 @@ void FakeServer::writeServerPart(int scenarioNumber)
     QTcpSocket *clientSocket = m_clientSockets[scenarioNumber];
 
     while (!scenario.isEmpty()
-            && (scenario.first().startsWith("S: ") || scenario.first().startsWith("W: "))) {
+           && (scenario.first().startsWith("S: ") || scenario.first().startsWith("W: "))) {
         QByteArray rule = scenario.takeFirst();
 
         if (rule.startsWith("S: ")) {

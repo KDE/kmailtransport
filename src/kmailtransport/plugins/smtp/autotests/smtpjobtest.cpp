@@ -38,10 +38,10 @@ private Q_SLOTS:
     {
         QStandardPaths::setTestModeEnabled(true);
     }
-    
+
     void smtpJobTest_data()
     {
-        QTest::addColumn<QList<QByteArray>>("scenario");
+        QTest::addColumn<QList<QByteArray> >("scenario");
         QTest::addColumn<MailTransport::TransportBase::EnumAuthenticationType::type>("authType");
         QTest::addColumn<QString>("from");
         QTest::addColumn<QStringList>("to");
@@ -74,7 +74,9 @@ private Q_SLOTS:
         QTest::newRow("simple") << scenario << MailTransport::TransportBase::EnumAuthenticationType::LOGIN
                                 << QStringLiteral("Foo Bar <foo@bar.com>")
                                 << QStringList{}
-                                << QStringList{ QStringLiteral("bar@foo.com"), QStringLiteral("<bar@bar.foo>") }
+                                << QStringList{
+            QStringLiteral("bar@foo.com"), QStringLiteral("<bar@bar.foo>")
+            }
                                 << QByteArray("Hi Bob")
                                 << true;
     }

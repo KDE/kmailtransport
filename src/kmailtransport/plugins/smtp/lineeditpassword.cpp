@@ -17,7 +17,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "lineeditpassword.h"
 #include <KLocalizedString>
 #include <QIcon>
@@ -43,7 +42,6 @@ LineEditPassword::LineEditPassword(QWidget *parent)
 
 LineEditPassword::~LineEditPassword()
 {
-
 }
 
 void LineEditPassword::initialize()
@@ -64,8 +62,7 @@ void LineEditPassword::toggleEchoMode()
     if (mPasswordLineEdit->echoMode() == QLineEdit::Password) {
         mPasswordLineEdit->setEchoMode(QLineEdit::Normal);
         mToggleEchoModeAction->setIcon(QIcon::fromTheme(QStringLiteral("hint"), QIcon(QStringLiteral(":/icons/hint.svg"))));
-    }
-    else if (mPasswordLineEdit->echoMode() == QLineEdit::Normal) {
+    } else if (mPasswordLineEdit->echoMode() == QLineEdit::Normal) {
         mPasswordLineEdit->setEchoMode(QLineEdit::Password);
         mToggleEchoModeAction->setIcon(QIcon::fromTheme(QStringLiteral("visibility"), QIcon(QStringLiteral(":/icons/visibility.svg"))));
     }
