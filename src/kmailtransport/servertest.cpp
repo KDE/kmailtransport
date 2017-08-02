@@ -338,7 +338,6 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
         socket->write(QStringLiteral("CAPABILITIES"));
         return true;
     }
-
     // CAPABILITIES result
     else if (*stage == 1) {
         // Check whether we got "500 command 'CAPABILITIES' not recognized"

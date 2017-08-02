@@ -724,5 +724,3 @@ void TransportManagerPrivate::jobResult(KJob *job)
 }
 
 #include "moc_transportmanager.cpp"
-
-
