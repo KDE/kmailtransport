@@ -143,7 +143,7 @@ public:
 
     /**
      * Sets @p protocol the protocol to test, currently supported are
-     * "smtp", "pop" and "imap".
+     * "smtp", "pop", "imap", and "nntp".
      */
     void setProtocol(const QString &protocol);
 
