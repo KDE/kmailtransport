@@ -172,7 +172,7 @@ void SMTPConfigWidget::init()
 
     connect(d->ui.checkCapabilities, &QPushButton::clicked, this, &SMTPConfigWidget::checkSmtpCapabilities);
     connect(d->ui.kcfg_host, &QLineEdit::textChanged, this, &SMTPConfigWidget::hostNameChanged);
-    connect(d->encryptionGroup, static_cast<void (QButtonGroup::*)(int)>(&QButtonGroup::buttonClicked), this, &SMTPConfigWidget::encryptionChanged);
+    connect(d->encryptionGroup, QOverload<int>::of(&QButtonGroup::buttonClicked), this, &SMTPConfigWidget::encryptionChanged);
     connect(d->ui.kcfg_requiresAuthentication, &QCheckBox::toggled, this, &SMTPConfigWidget::ensureValidAuthSelection);
 
     if (!d->transport->isValid()) {
@@ -213,8 +213,7 @@ void SMTPConfigWidget::checkSmtpCapabilities()
     qApp->setOverrideCursor(Qt::BusyCursor);
 
     connect(d->serverTest, &ServerTest::finished, this, &SMTPConfigWidget::slotFinished);
-    connect(d->serverTest, &ServerTest::finished, qApp, [](){
-        qApp->restoreOverrideCursor();
+    connect(d->serverTest, &ServerTest::finished, qApp, [](){ qApp->restoreOverrideCursor();
     });
     d->ui.checkCapabilities->setEnabled(false);
     d->serverTest->start();
