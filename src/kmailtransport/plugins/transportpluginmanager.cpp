@@ -29,24 +29,6 @@
 
 using namespace MailTransport;
 
-class TransportPluginManagerInstancePrivate
-{
-public:
-    TransportPluginManagerInstancePrivate()
-        : transportPluginManager(new TransportPluginManager)
-    {
-    }
-
-    ~TransportPluginManagerInstancePrivate()
-    {
-        delete transportPluginManager;
-    }
-
-    TransportPluginManager *transportPluginManager;
-};
-
-Q_GLOBAL_STATIC(TransportPluginManagerInstancePrivate, sInstance)
-
 class MailTransportPluginInfo
 {
 public:
@@ -157,7 +139,8 @@ TransportPluginManager::~TransportPluginManager()
 
 TransportPluginManager *TransportPluginManager::self()
 {
-    return sInstance->transportPluginManager;
+    static TransportPluginManager s_self;
+    return &s_self;
 }
 
 QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManager::pluginsList() const
