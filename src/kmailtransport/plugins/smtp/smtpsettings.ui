@@ -103,7 +103,7 @@
            </widget>
           </item>
           <item row="3" column="1">
-           <widget class="MailTransport::LineEditPassword" name="password">
+           <widget class="KPasswordLineEdit" name="password">
            </widget>
           </item>
           <item row="4" column="1">
@@ -396,9 +396,9 @@
    <header>klineedit.h</header>
   </customwidget>
    <customwidget>
-    <class>MailTransport::LineEditPassword</class>
-    <extends>QLineEdit</extends>
-    <header>lineeditpassword.h</header>
+    <class>KPasswordLineEdit</class>
+    <extends>QWidget</extends>
+    <header>kpasswordlineedit.h</header>
    </customwidget>
  </customwidgets>
  <tabstops>

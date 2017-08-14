@@ -7,7 +7,6 @@ set(mailtransport_smtpplugin_SRCS
     smtpconfigdialog.cpp
     smtpjob.cpp
     smtpconfigwidget.cpp
-    lineeditpassword.cpp
     )
 qt5_add_resources(mailtransport_smtpplugin_SRCS icons.qrc)
 ki18n_wrap_ui(mailtransport_smtpplugin_SRCS
