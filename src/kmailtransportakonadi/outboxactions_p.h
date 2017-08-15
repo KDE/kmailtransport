@@ -79,7 +79,7 @@ public:
 
     bool itemAccepted(const Akonadi::Item &item) const override;
 
-    virtual Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const override;
+    Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const override;
 };
 
 /**
@@ -104,7 +104,7 @@ public:
 
     bool itemAccepted(const Akonadi::Item &item) const override;
 
-    virtual Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const override;
+    Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const override;
 
 private:
     int mTransportId;
