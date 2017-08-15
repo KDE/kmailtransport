@@ -284,7 +284,6 @@ void SmtpJob::startSendJob()
     send->setBcc(bcc());
     send->setData(data());
 
-    connect(send, &KJob::result, this, &SmtpJob::slotResult);
     addSubjob(send);
     send->start();
 
