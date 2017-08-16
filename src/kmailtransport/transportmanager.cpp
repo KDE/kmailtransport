@@ -46,7 +46,7 @@
 #include <KRandom>
 #include <Kdelibs4ConfigMigrator>
 
-#include <KWallet/kwallet.h>
+#include <KWallet>
 
 using namespace MailTransport;
 using namespace KWallet;
