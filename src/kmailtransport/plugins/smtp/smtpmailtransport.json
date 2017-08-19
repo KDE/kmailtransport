@@ -18,6 +18,7 @@
         "Name[sr@latin]": "Transport pošte SMTP‑om",
         "Name[sr]": "Транспорт поште СМТП‑ом",
         "Name[sv]": "SMTP e-postöverföring",
+        "Name[tr]": "SMTP Posta Aktarımı",
         "Name[uk]": "Надсилання пошти SMTP",
         "Name[x-test]": "xxSMTP Mail Transportxx",
         "ServiceTypes": [
