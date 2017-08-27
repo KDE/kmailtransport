@@ -59,7 +59,7 @@ private:
     void readClientPart(int scenarioNumber);
 
     QList< QList<QByteArray> > m_scenarios;
-    QTcpServer *m_tcpServer;
+    QTcpServer *m_tcpServer = nullptr;
     mutable QMutex m_mutex;
     QList<QTcpSocket *> m_clientSockets;
 };

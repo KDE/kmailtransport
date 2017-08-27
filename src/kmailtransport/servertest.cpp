@@ -49,18 +49,18 @@ public:
     QString fakeHostname;
     QString testProtocol;
 
-    MailTransport::Socket *normalSocket;
-    MailTransport::Socket *secureSocket;
+    MailTransport::Socket *normalSocket = nullptr;
+    MailTransport::Socket *secureSocket = nullptr;
 
     QSet< int > connectionResults;
     QHash< int, QVector<int> > authenticationResults;
     QSet< ServerTest::Capability > capabilityResults;
     QHash< int, uint > customPorts;
-    QTimer *normalSocketTimer;
-    QTimer *secureSocketTimer;
-    QTimer *progressTimer;
+    QTimer *normalSocketTimer = nullptr;
+    QTimer *secureSocketTimer = nullptr;
+    QTimer *progressTimer = nullptr;
 
-    QProgressBar *testProgress;
+    QProgressBar *testProgress = nullptr;
 
     bool secureSocketFinished;
     bool normalSocketFinished;

@@ -39,7 +39,6 @@ class AddTransportDialogNG::Private
 public:
     Private(AddTransportDialogNG *qq)
         : q(qq)
-        , okButton(nullptr)
     {
     }
 
@@ -54,7 +53,7 @@ public:
     void readConfig();
 
     AddTransportDialogNG *const q;
-    QPushButton *okButton;
+    QPushButton *okButton = nullptr;
     ::Ui::AddTransportDialog ui;
 };
 

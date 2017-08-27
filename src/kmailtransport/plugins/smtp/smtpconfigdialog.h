@@ -36,9 +36,9 @@ private:
     void okClicked();
     void slotTextChanged(const QString &text);
 
-    Transport *mTransport;
-    SMTPConfigWidget *mConfigWidget;
-    QPushButton *mOkButton;
+    Transport *mTransport = nullptr;
+    SMTPConfigWidget *mConfigWidget = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 } // namespace MailTransport
 

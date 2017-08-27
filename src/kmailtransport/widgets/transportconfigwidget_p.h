@@ -31,8 +31,8 @@ namespace MailTransport {
 class TransportConfigWidgetPrivate
 {
 public:
-    Transport *transport;
-    KConfigDialogManager *manager;
+    Transport *transport = nullptr;
+    KConfigDialogManager *manager = nullptr;
 
     virtual ~TransportConfigWidgetPrivate()
     {

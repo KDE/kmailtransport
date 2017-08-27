@@ -44,7 +44,7 @@ public:
     FilterActionJob *q;
     Collection collection;
     Item::List items;
-    FilterAction *functor;
+    FilterAction *functor = nullptr;
     ItemFetchScope fetchScope;
 
     // Q_SLOTS:

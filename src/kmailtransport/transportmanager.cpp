@@ -72,18 +72,18 @@ public:
         qDeleteAll(transports);
     }
 
-    KConfig *config;
+    KConfig *config = nullptr;
     QList<Transport *> transports;
     TransportType::List types;
     bool myOwnChange;
     bool appliedChange;
-    KWallet::Wallet *wallet;
+    KWallet::Wallet *wallet = nullptr;
     bool walletOpenFailed;
     bool walletAsyncOpen;
     int defaultTransportId;
     bool isMainInstance;
     QList<TransportJob *> walletQueue;
-    TransportManager *q;
+    TransportManager *q = nullptr;
 
     void readConfig();
     void writeConfig();

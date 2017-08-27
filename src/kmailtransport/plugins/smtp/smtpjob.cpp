@@ -84,7 +84,7 @@ public:
     }
 
     SmtpJob *q;
-    KSmtp::Session *session;
+    KSmtp::Session *session = nullptr;
     KSmtp::SessionUiProxy::Ptr uiProxy;
     enum State {
         Idle, Precommand, Smtp

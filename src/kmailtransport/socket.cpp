@@ -38,7 +38,7 @@ class SocketPrivate
 public:
     SocketPrivate(Socket *s);
     Socket *const q;
-    QSslSocket *socket;
+    QSslSocket *socket = nullptr;
     QString server;
     QString protocol;
     int port;

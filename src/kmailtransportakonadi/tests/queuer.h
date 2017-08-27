@@ -51,9 +51,12 @@ private Q_SLOTS:
     void jobInfoMessage(KJob *job, const QString &info, const QString &info2);
 
 private:
-    MailTransport::TransportComboBox *mComboBox;
-    QLineEdit *mSenderEdit, *mToEdit, *mCcEdit, *mBccEdit;
-    KTextEdit *mMailEdit;
+    MailTransport::TransportComboBox *mComboBox = nullptr;
+    QLineEdit *mSenderEdit = nullptr;
+    QLineEdit *mToEdit = nullptr;
+    QLineEdit *mCcEdit = nullptr;
+    QLineEdit *mBccEdit = nullptr;
+    KTextEdit *mMailEdit = nullptr;
 
     MailTransport::MessageQueueJob *createQueueJob();
 };

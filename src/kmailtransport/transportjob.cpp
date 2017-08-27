@@ -40,8 +40,8 @@ public:
     QStringList cc;
     QStringList bcc;
     QByteArray data;
-    Transport *transport;
-    QBuffer *buffer;
+    Transport *transport = nullptr;
+    QBuffer *buffer = nullptr;
 };
 
 TransportJob::TransportJob(Transport *transport, QObject *parent)

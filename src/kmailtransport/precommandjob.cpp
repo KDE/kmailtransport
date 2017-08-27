@@ -37,7 +37,7 @@ class PreCommandJobPrivate
 {
 public:
     PreCommandJobPrivate(PrecommandJob *parent);
-    QProcess *process;
+    QProcess *process = nullptr;
     QString precommand;
     PrecommandJob *q;
 

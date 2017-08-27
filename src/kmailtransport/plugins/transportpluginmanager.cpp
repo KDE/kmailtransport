@@ -39,7 +39,7 @@ public:
 
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
-    MailTransport::TransportAbstractPlugin *plugin;
+    MailTransport::TransportAbstractPlugin *plugin = nullptr;
 };
 
 namespace {
