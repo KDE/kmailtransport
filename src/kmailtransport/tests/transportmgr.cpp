@@ -37,9 +37,8 @@ using namespace MailTransport;
 TransportMgr::TransportMgr()
     : mCurrentJob(nullptr)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
+    QVBoxLayout *vbox = new QVBoxLayout(this);
     vbox->setMargin(0);
-    setLayout(vbox);
 
     vbox->addWidget(new TransportManagementWidget(this));
     mComboBox = new TransportComboBox(this);
