@@ -213,7 +213,8 @@ void SMTPConfigWidget::checkSmtpCapabilities()
     qApp->setOverrideCursor(Qt::BusyCursor);
 
     connect(d->serverTest, &ServerTest::finished, this, &SMTPConfigWidget::slotFinished);
-    connect(d->serverTest, &ServerTest::finished, qApp, [](){ qApp->restoreOverrideCursor();
+    connect(d->serverTest, &ServerTest::finished, qApp, [](){
+        qApp->restoreOverrideCursor();
     });
     d->ui.checkCapabilities->setEnabled(false);
     d->serverTest->start();
