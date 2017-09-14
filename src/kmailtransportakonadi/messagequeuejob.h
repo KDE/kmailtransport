@@ -27,7 +27,6 @@
 #include <MailTransportAkonadi/SentBehaviourAttribute>
 #include <MailTransportAkonadi/TransportAttribute>
 
-#include <QDateTime>
 #include <QString>
 #include <QStringList>
 

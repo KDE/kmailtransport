@@ -27,19 +27,18 @@
 #include "sessionuiproxy.h"
 #include "mailtransportplugin_smtp_debug.h"
 
-#include <QBuffer>
 #include <QHash>
 #include <QPointer>
 
 #include <KLocalizedString>
 #include <QUrl>
-#include <QUrlQuery>
 #include "mailtransport_debug.h"
 #include <KPasswordDialog>
 
 #include <KSMTP/Session>
 #include <KSMTP/LoginJob>
 #include <KSMTP/SendJob>
+
 
 using namespace MailTransport;
 

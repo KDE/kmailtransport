@@ -24,7 +24,6 @@
 #include <QTcpServer>
 #include <QTcpSocket>
 #include <QMutex>
-#include <QStringList>
 
 Q_DECLARE_METATYPE(QList<QByteArray>)
 
