@@ -21,6 +21,7 @@
         "Name[tr]": "Akonadi Posta Aktarımı",
         "Name[uk]": "Надсилання пошти Akonadi",
         "Name[x-test]": "xxAkonadi Mail Transportxx",
+        "Name[zh_CN]": "Akonadi 邮件传输",
         "ServiceTypes": [
             "MailTransport/Plugin"
         ],
