@@ -50,11 +50,6 @@ public:
 private:
     class Private;
     Private *const d;
-    Q_PRIVATE_SLOT(d, void defaultClicked())
-    Q_PRIVATE_SLOT(d, void removeClicked())
-    Q_PRIVATE_SLOT(d, void renameClicked())
-    Q_PRIVATE_SLOT(d, void editClicked())
-    Q_PRIVATE_SLOT(d, void addClicked())
     Q_PRIVATE_SLOT(d, void updateButtonState())
     Q_PRIVATE_SLOT(d, void slotCustomContextMenuRequested(const QPoint &))
 };

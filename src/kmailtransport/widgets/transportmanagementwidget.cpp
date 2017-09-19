@@ -66,11 +66,11 @@ TransportManagementWidget::TransportManagementWidget(QWidget *parent)
             SLOT(updateButtonState()));
     connect(d->ui.transportList, SIGNAL(itemDoubleClicked(QTreeWidgetItem*,int)),
             SLOT(editClicked()));
-    connect(d->ui.addButton, SIGNAL(clicked()), SLOT(addClicked()));
-    connect(d->ui.editButton, SIGNAL(clicked()), SLOT(editClicked()));
-    connect(d->ui.renameButton, SIGNAL(clicked()), SLOT(renameClicked()));
-    connect(d->ui.removeButton, SIGNAL(clicked()), SLOT(removeClicked()));
-    connect(d->ui.defaultButton, SIGNAL(clicked()), SLOT(defaultClicked()));
+    connect(d->ui.addButton, &QPushButton::clicked, this, [this]() { d->addClicked(); });
+    connect(d->ui.editButton, &QPushButton::clicked, this, [this]() { d->editClicked(); });
+    connect(d->ui.renameButton, &QPushButton::clicked, this, [this]() { d->renameClicked(); });
+    connect(d->ui.removeButton, &QPushButton::clicked, this, [this]() { d->removeClicked(); });
+    connect(d->ui.defaultButton, &QPushButton::clicked, this, [this]() { d->defaultClicked(); });
     connect(d->ui.transportList, SIGNAL(customContextMenuRequested(QPoint)),
             SLOT(slotCustomContextMenuRequested(QPoint)));
 }
