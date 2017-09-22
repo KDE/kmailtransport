@@ -62,16 +62,14 @@ TransportManagementWidget::TransportManagementWidget(QWidget *parent)
     d->updateButtonState();
 
     d->ui.transportList->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(d->ui.transportList, SIGNAL(currentItemChanged(QTreeWidgetItem*,QTreeWidgetItem*)),
-            SLOT(updateButtonState()));
+    connect(d->ui.transportList, &QTreeWidget::currentItemChanged, this, [this]() { d->updateButtonState(); });
     connect(d->ui.transportList, &QTreeWidget::itemDoubleClicked, this, [this]() { d->editClicked(); });
     connect(d->ui.addButton, &QPushButton::clicked, this, [this]() { d->addClicked(); });
     connect(d->ui.editButton, &QPushButton::clicked, this, [this]() { d->editClicked(); });
     connect(d->ui.renameButton, &QPushButton::clicked, this, [this]() { d->renameClicked(); });
     connect(d->ui.removeButton, &QPushButton::clicked, this, [this]() { d->removeClicked(); });
     connect(d->ui.defaultButton, &QPushButton::clicked, this, [this]() { d->defaultClicked(); });
-    connect(d->ui.transportList, SIGNAL(customContextMenuRequested(QPoint)),
-            SLOT(slotCustomContextMenuRequested(QPoint)));
+    connect(d->ui.transportList, &QTreeWidget::customContextMenuRequested, this, [this](QPoint p) { d->slotCustomContextMenuRequested(p);} );
 }
 
 TransportManagementWidget::~TransportManagementWidget()

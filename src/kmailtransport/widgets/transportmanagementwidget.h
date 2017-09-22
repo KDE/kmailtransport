@@ -50,8 +50,6 @@ public:
 private:
     class Private;
     Private *const d;
-    Q_PRIVATE_SLOT(d, void updateButtonState())
-    Q_PRIVATE_SLOT(d, void slotCustomContextMenuRequested(const QPoint &))
 };
 } // namespace MailTransport
 
