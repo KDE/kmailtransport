@@ -291,8 +291,6 @@ private:
 
     Q_PRIVATE_SLOT(d, void slotTransportsChanged())
     Q_PRIVATE_SLOT(d, void slotWalletOpened(bool success))
-    Q_PRIVATE_SLOT(d, void dbusServiceUnregistered())
-    Q_PRIVATE_SLOT(d, void jobResult(KJob *job))
 };
 } // namespace MailTransport
 
