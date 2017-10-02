@@ -154,20 +154,19 @@ void TransportManagementWidget::Private::defaultClicked()
 
 void TransportManagementWidget::Private::slotCustomContextMenuRequested(const QPoint &pos)
 {
-    QMenu *menu = new QMenu(q);
-    menu->addAction(i18n("Add..."), q, SLOT(addClicked()));
+    QMenu menu(q);
+    menu.addAction(i18n("Add..."), q, [this]() { addClicked(); });
     QTreeWidgetItem *item = ui.transportList->itemAt(pos);
     if (item) {
-        menu->addAction(i18n("Modify..."), q, SLOT(editClicked()));
-        menu->addAction(i18n("Rename"), q, SLOT(renameClicked()));
-        menu->addAction(i18n("Remove"), q, SLOT(removeClicked()));
+        menu.addAction(i18n("Modify..."), q, [this]() { editClicked(); });
+        menu.addAction(i18n("Rename"), q, [this]() { renameClicked(); });
+        menu.addAction(i18n("Remove"), q, [this]() { removeClicked(); });
         if (item->data(0, Qt::UserRole) != TransportManager::self()->defaultTransportId()) {
-            menu->addSeparator();
-            menu->addAction(i18n("Set as Default"), q, SLOT(defaultClicked()));
+            menu.addSeparator();
+            menu.addAction(i18n("Set as Default"), q, [this]() { defaultClicked(); });
         }
     }
-    menu->exec(ui.transportList->viewport()->mapToGlobal(pos));
-    delete menu;
+    menu.exec(ui.transportList->viewport()->mapToGlobal(pos));
 }
 
 #include "moc_transportmanagementwidget.cpp"
