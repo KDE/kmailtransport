@@ -136,11 +136,10 @@ void MessageQueueJobTest::testValidMessages()
 
 void MessageQueueJobTest::testInvalidMessages()
 {
-    MessageQueueJob *job = nullptr;
     Message::Ptr msg;
 
     // without message
-    job = new MessageQueueJob;
+    MessageQueueJob *job = new MessageQueueJob;
     job->transportAttribute().setTransportId(TransportManager::self()->defaultTransportId());
     job->addressAttribute().setTo(SPAM_ADDRESS);
     QVERIFY(!job->exec());
