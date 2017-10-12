@@ -281,7 +281,7 @@ void TransportManager::initializeTransport(const QString &identifier, Transport 
 {
     TransportAbstractPlugin *plugin = TransportPluginManager::self()->plugin(identifier);
     if (plugin) {
-        return plugin->initializeTransport(transport, identifier);
+        plugin->initializeTransport(transport, identifier);
     }
 }
 
