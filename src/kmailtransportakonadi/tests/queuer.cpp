@@ -107,8 +107,8 @@ void MessageQueuer::sendOnDateClicked()
     dt->setDisplayFormat(QStringLiteral("hh:mm:ss"));
     layout->addWidget(dt);
     auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, dialog);
-    connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
-    connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
+    connect(box, &QDialogButtonBox::accepted, dialog.data(), &QDialog::accept);
+    connect(box, &QDialogButtonBox::rejected, dialog.data(), &QDialog::reject);
     layout->addWidget(box);
     if (!dialog->exec() || !dialog) {
         return;
