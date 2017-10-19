@@ -52,8 +52,9 @@ public:
     /**
       Selects the given transport.
       @param transportId The transport identifier.
+      @return return true if we success to find transportId
     */
-    void setCurrentTransport(int transportId);
+    bool setCurrentTransport(int transportId);
 
     /**
       Returns the type of the selected transport.

@@ -54,12 +54,14 @@ int TransportComboBox::currentTransportId() const
     return -1;
 }
 
-void TransportComboBox::setCurrentTransport(int transportId)
+bool TransportComboBox::setCurrentTransport(int transportId)
 {
     const int i = d->transports.indexOf(transportId);
     if (i >= 0 && i < count()) {
         setCurrentIndex(i);
+        return true;
     }
+    return false;
 }
 
 QString TransportComboBox::transportType() const
