@@ -35,13 +35,12 @@ namespace MailTransport {
 class MAILTRANSPORT_EXPORT TransportComboBox : public QComboBox
 {
     Q_OBJECT
-
 public:
     /**
       Creates a new mail transport selection combo box.
       @param parent The paren widget.
     */
-    TransportComboBox(QWidget *parent = nullptr);
+    explicit TransportComboBox(QWidget *parent = nullptr);
 
     ~TransportComboBox();
 
