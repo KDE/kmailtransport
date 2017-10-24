@@ -61,6 +61,9 @@ public:
     */
     QString transportType() const;
 
+Q_SIGNALS:
+    void transportRemoved(int id, const QString &name);
+
 protected:
     void setTransportList(const QVector<int> &transportList);
 
