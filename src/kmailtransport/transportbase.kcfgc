@@ -7,3 +7,4 @@ SetUserTexts=true
 Visibility=MAILTRANSPORT_EXPORT
 IncludeFiles=mailtransport_export.h,KLocalizedString
 TranslationDomain=libmailtransport5
+TranslationSystem=kde
