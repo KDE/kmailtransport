@@ -39,7 +39,6 @@
 #include <KSMTP/LoginJob>
 #include <KSMTP/SendJob>
 
-
 using namespace MailTransport;
 
 class SessionPool

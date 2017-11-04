@@ -127,7 +127,9 @@ void FilterActionJob::doStart()
         Q_ASSERT(d->functor);
         d->fetchScope = d->functor->fetchScope();
         fjob->setFetchScope(d->fetchScope);
-        connect(fjob, &ItemFetchJob::result, this, [this](KJob *job) { d->fetchResult(job); });
+        connect(fjob, &ItemFetchJob::result, this, [this](KJob *job) {
+            d->fetchResult(job);
+        });
     } else {
         d->traverseItems();
     }

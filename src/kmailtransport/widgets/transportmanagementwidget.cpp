@@ -62,14 +62,30 @@ TransportManagementWidget::TransportManagementWidget(QWidget *parent)
     d->updateButtonState();
 
     d->ui.transportList->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(d->ui.transportList, &QTreeWidget::currentItemChanged, this, [this]() { d->updateButtonState(); });
-    connect(d->ui.transportList, &QTreeWidget::itemDoubleClicked, this, [this]() { d->editClicked(); });
-    connect(d->ui.addButton, &QPushButton::clicked, this, [this]() { d->addClicked(); });
-    connect(d->ui.editButton, &QPushButton::clicked, this, [this]() { d->editClicked(); });
-    connect(d->ui.renameButton, &QPushButton::clicked, this, [this]() { d->renameClicked(); });
-    connect(d->ui.removeButton, &QPushButton::clicked, this, [this]() { d->removeClicked(); });
-    connect(d->ui.defaultButton, &QPushButton::clicked, this, [this]() { d->defaultClicked(); });
-    connect(d->ui.transportList, &QTreeWidget::customContextMenuRequested, this, [this](QPoint p) { d->slotCustomContextMenuRequested(p);} );
+    connect(d->ui.transportList, &QTreeWidget::currentItemChanged, this, [this]() {
+        d->updateButtonState();
+    });
+    connect(d->ui.transportList, &QTreeWidget::itemDoubleClicked, this, [this]() {
+        d->editClicked();
+    });
+    connect(d->ui.addButton, &QPushButton::clicked, this, [this]() {
+        d->addClicked();
+    });
+    connect(d->ui.editButton, &QPushButton::clicked, this, [this]() {
+        d->editClicked();
+    });
+    connect(d->ui.renameButton, &QPushButton::clicked, this, [this]() {
+        d->renameClicked();
+    });
+    connect(d->ui.removeButton, &QPushButton::clicked, this, [this]() {
+        d->removeClicked();
+    });
+    connect(d->ui.defaultButton, &QPushButton::clicked, this, [this]() {
+        d->defaultClicked();
+    });
+    connect(d->ui.transportList, &QTreeWidget::customContextMenuRequested, this, [this](QPoint p) {
+        d->slotCustomContextMenuRequested(p);
+    });
 }
 
 TransportManagementWidget::~TransportManagementWidget()
@@ -155,15 +171,25 @@ void TransportManagementWidget::Private::defaultClicked()
 void TransportManagementWidget::Private::slotCustomContextMenuRequested(const QPoint &pos)
 {
     QMenu menu(q);
-    menu.addAction(i18n("Add..."), q, [this]() { addClicked(); });
+    menu.addAction(i18n("Add..."), q, [this]() {
+        addClicked();
+    });
     QTreeWidgetItem *item = ui.transportList->itemAt(pos);
     if (item) {
-        menu.addAction(i18n("Modify..."), q, [this]() { editClicked(); });
-        menu.addAction(i18n("Rename"), q, [this]() { renameClicked(); });
-        menu.addAction(i18n("Remove"), q, [this]() { removeClicked(); });
+        menu.addAction(i18n("Modify..."), q, [this]() {
+            editClicked();
+        });
+        menu.addAction(i18n("Rename"), q, [this]() {
+            renameClicked();
+        });
+        menu.addAction(i18n("Remove"), q, [this]() {
+            removeClicked();
+        });
         if (item->data(0, Qt::UserRole) != TransportManager::self()->defaultTransportId()) {
             menu.addSeparator();
-            menu.addAction(i18n("Set as Default"), q, [this]() { defaultClicked(); });
+            menu.addAction(i18n("Set as Default"), q, [this]() {
+                defaultClicked();
+            });
         }
     }
     menu.exec(ui.transportList->viewport()->mapToGlobal(pos));

@@ -59,10 +59,16 @@ PrecommandJob::PrecommandJob(const QString &precommand, QObject *parent)
 {
     d->precommand = precommand;
     d->process = new QProcess(this);
-    connect(d->process, &QProcess::started, this, [this]() { d->slotStarted(); });
-    connect(d->process, &QProcess::errorOccurred, this, [this](QProcess::ProcessError error) {  d->slotError(error); });
+    connect(d->process, &QProcess::started, this, [this]() {
+        d->slotStarted();
+    });
+    connect(d->process, &QProcess::errorOccurred, this, [this](QProcess::ProcessError error) {
+        d->slotError(error);
+    });
     connect(d->process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished),
-            this, [this](int val, QProcess::ExitStatus status) { d->slotFinished(val,status); });
+            this, [this](int val, QProcess::ExitStatus status) {
+        d->slotFinished(val, status);
+    });
 }
 
 PrecommandJob::~PrecommandJob()

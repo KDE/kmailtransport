@@ -141,7 +141,9 @@ TransportManager::TransportManager()
     QDBusServiceWatcher *watcher
         = new QDBusServiceWatcher(DBUS_SERVICE_NAME, QDBusConnection::sessionBus(),
                                   QDBusServiceWatcher::WatchForUnregistration, this);
-    connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, [this]() { d->dbusServiceUnregistered(); });
+    connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, [this]() {
+        d->dbusServiceUnregistered();
+    });
 
     QDBusConnection::sessionBus().connect(QString(), QString(),
                                           DBUS_INTERFACE_NAME, DBUS_CHANGE_SIGNAL,
@@ -227,7 +229,9 @@ void TransportManager::addTransport(Transport *transport)
 
 void TransportManager::schedule(TransportJob *job)
 {
-    connect(job, &TransportJob::result, this, [this](KJob*job) {d->jobResult(job);});
+    connect(job, &TransportJob::result, this, [this](KJob *job) {
+        d->jobResult(job);
+    });
 
     // check if the job is waiting for the wallet
     if (!job->transport()->isComplete()) {
