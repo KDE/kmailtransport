@@ -66,7 +66,7 @@ void AddTransportDialogNG::Private::writeConfig()
 void AddTransportDialogNG::Private::readConfig()
 {
     KConfigGroup group(KSharedConfig::openConfig(), "AddTransportDialog");
-    const QSize sizeDialog = group.readEntry("Size", QSize(300, TransportManager::self()->types().size() > 1 ? 200 : 80));
+    const QSize sizeDialog = group.readEntry("Size", QSize(300, TransportManager::self()->types().size() > 1 ? 300 : 160));
     if (sizeDialog.isValid()) {
         q->resize(sizeDialog);
     }
