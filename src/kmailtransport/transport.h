@@ -124,6 +124,8 @@ public:
     */
     TransportType transportType() const;
 
+    QByteArray toJson() const;
+
 protected:
     /**
       Creates a Transport object. Should only be used by TransportManager.

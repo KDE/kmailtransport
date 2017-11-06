@@ -334,3 +334,9 @@ TransportType Transport::transportType() const
     }
     return d->transportType;
 }
+
+QByteArray Transport::toJson() const
+{
+    //TODO create json info
+    return {};
+}
