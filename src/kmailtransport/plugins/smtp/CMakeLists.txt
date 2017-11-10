@@ -8,7 +8,6 @@ set(mailtransport_smtpplugin_SRCS
     smtpjob.cpp
     smtpconfigwidget.cpp
     )
-qt5_add_resources(mailtransport_smtpplugin_SRCS icons.qrc)
 ki18n_wrap_ui(mailtransport_smtpplugin_SRCS
     smtpsettings.ui
     )
