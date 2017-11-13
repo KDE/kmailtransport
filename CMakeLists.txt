@@ -7,7 +7,12 @@ project(MailTransport VERSION ${PIM_VERSION})
 set(KF5_VERSION "5.39.0")
 
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
-set(CMAKE_MODULE_PATH ${MailTransport_SOURCE_DIR}/cmake ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+
+# TODO: Remove the cmake directory when we'll require ECM >= 5.41.0
+if("${ECM_VERSION}" VERSION_LESS "5.41.0")
+  set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${MailTransport_SOURCE_DIR}/cmake)
+endif()
 
 include(GenerateExportHeader)
 include(ECMGenerateHeaders)
@@ -62,7 +67,9 @@ if(BUILD_TESTING)
 endif(BUILD_TESTING)
 
 ########### Targets ###########
+if("${ECM_VERSION}" VERSION_LESS "5.41.0")
 add_subdirectory(cmake)
+endif()
 add_subdirectory(src)
 
 install( FILES kmailtransport.renamecategories kmailtransport.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
