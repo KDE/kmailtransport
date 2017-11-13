@@ -9,11 +9,6 @@ set(KF5_VERSION "5.39.0")
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
-# TODO: Remove the cmake directory when we'll require ECM >= 5.41.0
-if("${ECM_VERSION}" VERSION_LESS "5.41.0")
-  set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${MailTransport_SOURCE_DIR}/cmake)
-endif()
-
 include(GenerateExportHeader)
 include(ECMGenerateHeaders)
 include(ECMGeneratePriFile)
@@ -26,10 +21,7 @@ include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
 include(ECMCoverageOption)
 
-
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
-
-
 
 set(KMAILTRANSPORT_LIB_VERSION ${PIM_VERSION})
 
@@ -55,17 +47,12 @@ add_definitions("-DQT_NO_CAST_FROM_ASCII -DQT_NO_CAST_TO_ASCII")
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
-find_package(Sasl2)
-set_package_properties(Sasl2 PROPERTIES TYPE OPTIONAL)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 
 ########### Targets ###########
-if("${ECM_VERSION}" VERSION_LESS "5.41.0")
-add_subdirectory(cmake)
-endif()
 add_subdirectory(src)
 
 install( FILES kmailtransport.renamecategories kmailtransport.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
