@@ -35,7 +35,7 @@ Runner::Runner()
 {
     Control::start();
 
-    QTimer::singleShot(0, this, SLOT(sendAbort()));
+    QTimer::singleShot(0, this, &Runner::sendAbort);
 }
 
 void Runner::sendAbort()
@@ -43,7 +43,7 @@ void Runner::sendAbort()
     const AgentInstance mda = DispatcherInterface().dispatcherInstance();
     if (!mda.isValid()) {
         qDebug() << "Invalid instance; waiting.";
-        QTimer::singleShot(1000, this, SLOT(sendAbort()));
+        QTimer::singleShot(1000, this, &Runner::sendAbort);
         return;
     }
 
