@@ -171,7 +171,7 @@ void TransportManagementWidget::Private::defaultClicked()
 void TransportManagementWidget::Private::slotCustomContextMenuRequested(const QPoint &pos)
 {
     QMenu menu(q);
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")),i18n("Add..."), q, [this]() {
+    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), q, [this]() {
         addClicked();
     });
     QTreeWidgetItem *item = ui.transportList->itemAt(pos);
@@ -182,7 +182,7 @@ void TransportManagementWidget::Private::slotCustomContextMenuRequested(const QP
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18n("Rename"), q, [this]() {
             renameClicked();
         });
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")),i18n("Remove"), q, [this]() {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Remove"), q, [this]() {
             removeClicked();
         });
         if (item->data(0, Qt::UserRole) != TransportManager::self()->defaultTransportId()) {
