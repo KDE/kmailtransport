@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
-set(PIM_VERSION "5.7.1")
+set(PIM_VERSION "5.7.2")
 
 project(MailTransport VERSION ${PIM_VERSION})
 
