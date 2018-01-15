@@ -37,7 +37,7 @@ TransportComboBox::TransportComboBox(QWidget *parent)
     : QComboBox(parent)
     , d(new TransportComboBoxPrivate)
 {
-    QMetaObject::invokeMethod(this, "updateComboboxList");
+    updateComboboxList();
     connect(TransportManager::self(), &TransportManager::transportsChanged, this, &TransportComboBox::updateComboboxList);
     connect(TransportManager::self(), &TransportManager::transportRemoved, this, &TransportComboBox::transportRemoved);
 }
