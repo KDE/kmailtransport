@@ -163,7 +163,7 @@ void SMTPConfigWidget::init()
 
     d->resetAuthCapabilities();
 
-    if (!KProtocolInfo::capabilities(SMTP_PROTOCOL).contains(QStringLiteral("SASL"))) {
+    if (!KProtocolInfo::capabilities(SMTP_PROTOCOL).contains(QLatin1String("SASL"))) {
         d->ui.authCombo->removeItem(d->ui.authCombo->findData(
                                         Transport::EnumAuthenticationType::NTLM));
         d->ui.authCombo->removeItem(d->ui.authCombo->findData(
