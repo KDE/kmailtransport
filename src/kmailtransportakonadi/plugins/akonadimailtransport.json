@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "akonadimailtransport",
         "Name": "Akonadi Mail Transport",
+        "Name[ar]": "نقولات بريد «أكونادي»",
         "Name[ast]": "Tresporte de corréu d'Akonadi",
         "Name[ca@valencia]": "Transport de correu de l'Akonadi",
         "Name[ca]": "Transport de correu de l'Akonadi",
