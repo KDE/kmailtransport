@@ -27,8 +27,12 @@
 #include <MailTransport/Transport>
 
 using namespace Akonadi;
-K_PLUGIN_FACTORY_WITH_JSON(AkonadiMailTransportPluginFactory, "akonadimailtransport.json", registerPlugin<AkonadiMailTransportPlugin>();
-                           )
+#include <kcoreaddons_version.h>
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 44, 0)
+#define K_PLUGIN_CLASS_WITH_JSON(classname, json) K_PLUGIN_FACTORY_WITH_JSON(classname ## Factory, json, registerPlugin<classname >();)
+#endif
+
+K_PLUGIN_CLASS_WITH_JSON(AkonadiMailTransportPlugin, "akonadimailtransport.json")
 
 AkonadiMailTransportPlugin::AkonadiMailTransportPlugin(QObject *parent, const QList<QVariant> &)
     : MailTransport::TransportAbstractPlugin(parent)
@@ -85,7 +89,7 @@ bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, M
         qCWarning(MAILTRANSPORT_AKONADI_LOG) << "Invalid resource instance" << transport->host();
     }
     instance.configure(parent);   // Async...
-    transport->writeConfig();
+    transport->save();
     return true; // No way to know here if the user cancelled or not.
 }
 
