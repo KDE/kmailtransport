@@ -30,7 +30,7 @@ class SmtpConfigDialog : public QDialog
     Q_OBJECT
 public:
     explicit SmtpConfigDialog(Transport *transport, QWidget *parent = nullptr);
-    virtual ~SmtpConfigDialog();
+    ~SmtpConfigDialog() override;
 
 private:
     void okClicked();

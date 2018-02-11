@@ -69,7 +69,7 @@ public:
     /**
       Destroys the widget.
     */
-    virtual ~TransportConfigWidget();
+    ~TransportConfigWidget() override;
 
     /**
       @internal

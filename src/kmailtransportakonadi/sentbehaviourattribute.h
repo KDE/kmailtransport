@@ -54,7 +54,7 @@ public:
     /**
       Destroys the SentBehaviourAttribute.
     */
-    virtual ~SentBehaviourAttribute();
+    ~SentBehaviourAttribute() override;
 
     /* reimpl */
     SentBehaviourAttribute *clone() const override;

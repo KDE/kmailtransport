@@ -47,7 +47,7 @@ public:
     /**
       Destructor
     */
-    virtual ~Transport();
+    ~Transport() override;
 
     typedef QList<Transport *> List;
 

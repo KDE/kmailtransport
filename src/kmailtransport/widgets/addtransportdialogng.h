@@ -49,7 +49,7 @@ public:
     /**
       Destroys the AddTransportDialogNG.
     */
-    virtual ~AddTransportDialogNG();
+    ~AddTransportDialogNG() override;
 
     /* reimpl */
     void accept() override;

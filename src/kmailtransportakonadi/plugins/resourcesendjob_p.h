@@ -50,7 +50,7 @@ public:
     /**
       Destroys this job.
     */
-    virtual ~ResourceSendJob();
+    ~ResourceSendJob() override;
 
 protected:
     void doStart() override;

@@ -45,7 +45,7 @@ public:
     /**
       Destroys the widget.
     */
-    virtual ~TransportManagementWidget();
+    ~TransportManagementWidget() override;
 
 private:
     class Private;

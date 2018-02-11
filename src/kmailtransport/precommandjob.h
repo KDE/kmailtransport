@@ -54,7 +54,7 @@ public:
     /**
       Destroys this job.
     */
-    virtual ~PrecommandJob();
+    ~PrecommandJob() override;
 
     /**
       Executes the precommand.

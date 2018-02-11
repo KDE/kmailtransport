@@ -96,7 +96,7 @@ public:
       Destroys the MessageQueueJob.
       This job deletes itself after finishing.
     */
-    virtual ~MessageQueueJob();
+    ~MessageQueueJob() override;
 
     /**
       Returns the message to be sent.

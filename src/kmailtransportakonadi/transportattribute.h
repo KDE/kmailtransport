@@ -47,7 +47,7 @@ public:
     /**
       Destroys this TransportAttribute.
     */
-    virtual ~TransportAttribute();
+    ~TransportAttribute() override;
 
     /* reimpl */
     TransportAttribute *clone() const override;

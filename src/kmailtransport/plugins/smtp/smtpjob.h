@@ -58,7 +58,7 @@ public:
     /**
       Deletes this job.
     */
-    virtual ~SmtpJob();
+    ~SmtpJob() override;
 
 protected:
     void doStart() override;

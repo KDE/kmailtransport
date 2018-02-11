@@ -55,7 +55,7 @@ public:
     /**
       Destroys the DispatchModeAttribute.
     */
-    virtual ~DispatchModeAttribute();
+    ~DispatchModeAttribute() override;
 
     /* reimpl */
     DispatchModeAttribute *clone() const override;

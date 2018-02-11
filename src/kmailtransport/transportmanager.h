@@ -61,7 +61,7 @@ public:
     /**
       Destructor.
     */
-    virtual ~TransportManager();
+    ~TransportManager() override;
 
     /**
       Returns the TransportManager instance.

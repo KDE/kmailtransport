@@ -48,7 +48,7 @@ public:
     /**
      * Destroys the error attribute.
      */
-    virtual ~ErrorAttribute();
+    ~ErrorAttribute() override;
 
     /**
      * Returns the i18n'ed error message.

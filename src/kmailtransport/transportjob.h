@@ -46,7 +46,7 @@ public:
     /**
       Deletes this transport job.
     */
-    virtual ~TransportJob();
+    ~TransportJob() override;
 
     /**
       Sets the sender of the mail.

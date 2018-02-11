@@ -120,7 +120,7 @@ public:
     /**
      * Destroys the sent action attribute.
      */
-    virtual ~SentActionAttribute();
+    ~SentActionAttribute() override;
 
     /**
      * Adds a new action to the attribute.
