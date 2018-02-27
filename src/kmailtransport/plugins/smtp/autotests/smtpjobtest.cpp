@@ -96,7 +96,9 @@ private Q_SLOTS:
         server.startAndWait();
 
         auto transport = MailTransport::TransportManager::self()->createTransport();
+        transport->setSpecifyHostname(true);
         transport->setHost(QStringLiteral("127.0.0.1"));
+        transport->setLocalHostname(QStringLiteral("127.0.0.1"));
         transport->setPort(5989);
         transport->setRequiresAuthentication(true);
         transport->setAuthenticationType(authType);
