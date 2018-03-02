@@ -282,6 +282,13 @@
             <item row="2" column="1">
              <widget class="QComboBox" name="authCombo"/>
             </item>
+            <item row="3" column="0" colspan="2">
+             <widget class="QCheckBox" name="kcfg_useProxy">
+              <property name="text">
+               <string>Connect using the system proxy settings</string>
+              </property>
+             </widget>
+            </item>
            </layout>
           </item>
          </layout>

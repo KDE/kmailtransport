@@ -98,6 +98,11 @@ However, if KWallet is not available, the password will be stored in the configu
       <label><!-- TODO --></label>
       <whatsthis>Enter the address that should be used to overwrite the default sender address.</whatsthis>
     </entry>
+    <entry name="useProxy" type="Bool">
+      <label>Connect using the system proxy settings</label>
+      <whatsthis>If checked, the system proxy settings will be used to connect to the mail server.</whatsthis>
+      <default>false</default>
+    </entry>
   </group>
 
 </kcfg>

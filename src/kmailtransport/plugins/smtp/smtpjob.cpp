@@ -145,6 +145,7 @@ void SmtpJob::startSmtpJob()
     d->session = s_sessionPool->sessions.value(transport()->id());
     if (!d->session) {
         d->session = new KSmtp::Session(transport()->host(), transport()->port());
+        d->session->setUseNetworkProxy(transport()->useProxy());
         d->session->setUiProxy(d->uiProxy);
         if (transport()->specifyHostname()) {
             d->session->setCustomHostname(transport()->localHostname());
