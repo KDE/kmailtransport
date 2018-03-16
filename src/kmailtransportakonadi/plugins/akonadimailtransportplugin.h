@@ -33,7 +33,7 @@ public:
     explicit AkonadiMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
     {
     });
-    ~AkonadiMailTransportPlugin();
+    ~AkonadiMailTransportPlugin() override;
 
     QVector<MailTransport::TransportAbstractPluginInfo> names() const override;
     bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;

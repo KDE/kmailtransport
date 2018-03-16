@@ -46,7 +46,7 @@ public:
     SendQueuedAction();
 
     /** Destroys this object. */
-    virtual ~SendQueuedAction();
+    ~SendQueuedAction() override;
 
     Akonadi::ItemFetchScope fetchScope() const override;
 
@@ -73,7 +73,7 @@ public:
     ClearErrorAction();
 
     /** Destroys this object. */
-    virtual ~ClearErrorAction();
+    ~ClearErrorAction() override;
 
     Akonadi::ItemFetchScope fetchScope() const override;
 
@@ -98,7 +98,7 @@ class DispatchManualTransportAction : public Akonadi::FilterAction
 public:
     DispatchManualTransportAction(int transportId);
 
-    virtual ~DispatchManualTransportAction();
+    ~DispatchManualTransportAction() override;
 
     Akonadi::ItemFetchScope fetchScope() const override;
 

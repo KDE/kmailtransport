@@ -162,7 +162,7 @@ public:
     /**
      * Destroys the filter action job.
      */
-    ~FilterActionJob();
+    ~FilterActionJob() override;
 
 protected:
     void doStart() override;

@@ -30,7 +30,7 @@ public:
     explicit SMTPMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
     {
     });
-    ~SMTPMailTransportPlugin();
+    ~SMTPMailTransportPlugin() override;
 
     QVector<MailTransport::TransportAbstractPluginInfo> names() const override;
     bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;

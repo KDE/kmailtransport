@@ -33,7 +33,6 @@ class TransportListView : public QTreeWidget
 
 public:
     explicit TransportListView(QWidget *parent = nullptr);
-    //virtual ~TransportListView() {}
 
     // overloaded from QTreeWidget
     void editItem(QTreeWidgetItem *item, int column = 0);
