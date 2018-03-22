@@ -628,7 +628,7 @@ void TransportManager::loadPasswordsAsync()
         d->wallet = Wallet::openWallet(Wallet::NetworkWallet(), window,
                                        Wallet::Asynchronous);
         if (d->wallet) {
-            connect(d->wallet, SIGNAL(walletOpened(bool)), SLOT(slotWalletOpened(bool)));
+            connect(d->wallet, &KWallet::Wallet::walletOpened, this, [this](bool status) { d->slotWalletOpened(status);});
             d->walletAsyncOpen = true;
         } else {
             d->walletOpenFailed = true;

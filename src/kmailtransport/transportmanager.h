@@ -290,7 +290,6 @@ private:
     TransportManagerPrivate *const d;
 
     Q_PRIVATE_SLOT(d, void slotTransportsChanged())
-    Q_PRIVATE_SLOT(d, void slotWalletOpened(bool success))
 };
 } // namespace MailTransport
 
