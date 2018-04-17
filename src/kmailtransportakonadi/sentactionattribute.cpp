@@ -91,7 +91,7 @@ bool SentActionAttribute::Action::operator==(const Action &other) const
     return (d->mType == other.d->mType) && (d->mValue == other.d->mValue);
 }
 
-class SentActionAttribute::Private
+class Q_DECL_HIDDEN SentActionAttribute::Private
 {
 public:
     Action::List mActions;

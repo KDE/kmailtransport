@@ -22,7 +22,7 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class SentBehaviourAttribute::Private
+class Q_DECL_HIDDEN SentBehaviourAttribute::Private
 {
 public:
     Private()

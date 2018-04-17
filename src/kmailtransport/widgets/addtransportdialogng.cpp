@@ -34,7 +34,7 @@ using namespace MailTransport;
 /**
   @internal
 */
-class AddTransportDialogNG::Private
+class Q_DECL_HIDDEN AddTransportDialogNG::Private
 {
 public:
     Private(AddTransportDialogNG *qq)

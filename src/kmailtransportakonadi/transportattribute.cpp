@@ -24,7 +24,7 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class TransportAttribute::Private
+class Q_DECL_HIDDEN TransportAttribute::Private
 {
 public:
     Private()
