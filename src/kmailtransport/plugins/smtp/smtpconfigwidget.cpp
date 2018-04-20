@@ -152,6 +152,7 @@ void SMTPConfigWidget::init()
 
     d->ui.password->setWhatsThis(i18n("The password to send to the server for authorization."));
 
+    d->ui.kcfg_userName->setClearButtonShown(true);
     d->encryptionGroup = new QButtonGroup(this);
     d->encryptionGroup->addButton(d->ui.encryptionNone, Transport::EnumEncryption::None);
     d->encryptionGroup->addButton(d->ui.encryptionSsl, Transport::EnumEncryption::SSL);
