@@ -152,6 +152,8 @@ QVector<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authe
             result << Transport::EnumAuthenticationType::GSSAPI;
         } else if (current == QLatin1String("ANONYMOUS")) {
             result << Transport::EnumAuthenticationType::ANONYMOUS;
+        } else if (current == QLatin1String("XOAUTH2")) {
+            result << Transport::EnumAuthenticationType::XOAUTH2;
         }
         // APOP is handled by handlePopConversation()
     }
@@ -175,10 +177,10 @@ void ServerTestPrivate::handleSMTPIMAPResponse(int type, const QString &text)
     }
 
     QStringList protocols;
-    protocols << QStringLiteral("LOGIN") << QStringLiteral("PLAIN")
-              << QStringLiteral("CRAM-MD5") << QStringLiteral("DIGEST-MD5")
-              << QStringLiteral("NTLM") << QStringLiteral("GSSAPI")
-              << QStringLiteral("ANONYMOUS");
+    protocols << QStringLiteral("XOAUTH2") << QStringLiteral("LOGIN")
+              << QStringLiteral("PLAIN") << QStringLiteral("CRAM-MD5")
+              << QStringLiteral("DIGEST-MD5") << QStringLiteral("NTLM")
+              << QStringLiteral("GSSAPI") << QStringLiteral("ANONYMOUS");
 
     QStringList results;
     for (int i = 0; i < protocols.count(); ++i) {
