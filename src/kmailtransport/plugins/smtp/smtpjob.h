@@ -31,6 +31,10 @@ class Job;
 class Slave;
 }
 
+namespace KGAPI2 {
+class Job;
+}
+
 class SmtpJobPrivate;
 
 namespace MailTransport {
@@ -69,6 +73,10 @@ protected Q_SLOTS:
     void sessionStateChanged(KSmtp::Session::State state);
 
 private:
+    void startPasswordRetrieval();
+    void requestToken(const QString &password = {});
+    void refreshToken(const QString &token);
+    void onTokenRequestFinished(KGAPI2::Job *result);
     void startSmtpJob();
     void startLoginJob();
     void startSendJob();

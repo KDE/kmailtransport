@@ -141,6 +141,8 @@ QString Transport::authenticationTypeString(int type)
         return QStringLiteral("APOP");
     case EnumAuthenticationType::ANONYMOUS:
         return i18nc("Authentication method", "Anonymous");
+    case EnumAuthenticationType::XOAUTH2:
+        return QStringLiteral("XOAUTH2");
     }
     Q_ASSERT(false);
     return QString();

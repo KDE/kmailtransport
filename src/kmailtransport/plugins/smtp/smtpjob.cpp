@@ -39,6 +39,12 @@
 #include <KSMTP/LoginJob>
 #include <KSMTP/SendJob>
 
+#include <KGAPI/Account>
+#include <KGAPI/AuthJob>
+
+#define GOOGLE_API_KEY QStringLiteral("554041944266.apps.googleusercontent.com")
+#define GOOGLE_API_SECRET QStringLiteral("mdT1DjzohxN3npUUzkENT0gO")
+
 using namespace MailTransport;
 
 class SessionPool
@@ -167,7 +173,7 @@ void SmtpJob::startSmtpJob()
         d->session->open();
     } else {
         if (d->session->state() != KSmtp::Session::Authenticated) {
-            startLoginJob();
+            startPasswordRetrieval();
         }
 
         startSendJob();
@@ -177,11 +183,75 @@ void SmtpJob::startSmtpJob()
 void SmtpJob::sessionStateChanged(KSmtp::Session::State state)
 {
     if (state == KSmtp::Session::Ready) {
-        startLoginJob();
+        startPasswordRetrieval();
     } else if (state == KSmtp::Session::Authenticated) {
         startSendJob();
     }
 }
+
+void SmtpJob::startPasswordRetrieval()
+{
+    if (!transport()->requiresAuthentication()) {
+        startSendJob();
+        return;
+    }
+
+    if (transport()->authenticationType() == TransportBase::EnumAuthenticationType::XOAUTH2) {
+        const auto tokens = transport()->password();
+        if (tokens.isEmpty()) {
+            requestToken();
+        } else {
+            const QString token = tokens.mid(tokens.indexOf(QLatin1Char('\001')) + 1);
+            if (token.isEmpty() || token == tokens) {
+                requestToken(token); // if token == tokens, assume it's account password
+            } else {
+                startLoginJob();
+            }
+        }
+    } else {
+        startLoginJob();
+    }
+}
+
+void SmtpJob::requestToken(const QString &password)
+{
+    auto acc = KGAPI2::AccountPtr::create(transport()->userName(),
+                                          QString(), QString(),
+                                          QList<QUrl>() << QUrl(QStringLiteral("https://mail.google.com/")));
+
+    auto authJob = new KGAPI2::AuthJob(acc, GOOGLE_API_KEY, GOOGLE_API_SECRET, this);
+    authJob->setUsername(transport()->userName());
+    authJob->setPassword(password);
+    connect(authJob, &KGAPI2::Job::finished, this, &SmtpJob::onTokenRequestFinished);
+}
+
+void SmtpJob::refreshToken(const QString &refreshToken)
+{
+    auto acc = KGAPI2::AccountPtr::create(transport()->userName(),
+                                          QString(), refreshToken,
+                                          QList<QUrl>() << QUrl(QStringLiteral("https://mail.google.com/")));
+    auto authJob = new KGAPI2::AuthJob(acc, GOOGLE_API_KEY, GOOGLE_API_SECRET, this);
+    authJob->setUsername(transport()->userName());
+    connect(authJob, &KGAPI2::Job::finished, this, &SmtpJob::onTokenRequestFinished);
+}
+
+void SmtpJob::onTokenRequestFinished(KGAPI2::Job *job)
+{
+    auto authJob = qobject_cast<KGAPI2::AuthJob*>(job);
+    if (authJob->error()) {
+        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Error obtaining XOAUTH2 token:" << authJob->errorString();
+        // TODO: CANCEL
+        return;
+    }
+
+    const auto account = authJob->account();
+    const QString tokens = QStringLiteral("%1\001%2").arg(account->accessToken(),
+                                                          account->refreshToken());
+    transport()->setPassword(tokens);
+    transport()->save();
+    startLoginJob();
+}
+
 
 void SmtpJob::startLoginJob()
 {
@@ -224,8 +294,12 @@ void SmtpJob::startLoginJob()
         }
     }
 
+    if (transport()->authenticationType() == Transport::EnumAuthenticationType::XOAUTH2) {
+        passwd = passwd.left(passwd.indexOf(QLatin1Char('\001')));
+    }
+
     login->setUserName(transport()->userName());
-    login->setPassword(transport()->password());
+    login->setPassword(passwd);
     switch (transport()->authenticationType()) {
     case TransportBase::EnumAuthenticationType::PLAIN:
         login->setPreferedAuthMode(KSmtp::LoginJob::Plain);
@@ -237,7 +311,7 @@ void SmtpJob::startLoginJob()
         login->setPreferedAuthMode(KSmtp::LoginJob::CramMD5);
         break;
     case TransportBase::EnumAuthenticationType::XOAUTH2:
-        login->setPreferedAuthMode(KSmtp::LoginJob::XOAuth);
+        login->setPreferedAuthMode(KSmtp::LoginJob::XOAuth2);
         break;
     case TransportBase::EnumAuthenticationType::DIGEST_MD5:
         login->setPreferedAuthMode(KSmtp::LoginJob::DigestMD5);

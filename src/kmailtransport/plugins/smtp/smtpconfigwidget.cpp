@@ -70,7 +70,8 @@ public:
                   << Transport::EnumAuthenticationType::CRAM_MD5
                   << Transport::EnumAuthenticationType::DIGEST_MD5
                   << Transport::EnumAuthenticationType::NTLM
-                  << Transport::EnumAuthenticationType::GSSAPI;
+                  << Transport::EnumAuthenticationType::GSSAPI
+                  << Transport::EnumAuthenticationType::XOAUTH2;
         sslCapa = tlsCapa = noEncCapa;
         updateAuthCapbilities();
     }

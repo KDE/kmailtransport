@@ -15,5 +15,6 @@ ecm_add_test(smtpjobtest.cpp
                    KF5::ConfigWidgets
                    KF5::KIOWidgets
                    KPim::SMTP
+                   KPim::GAPICore
     TEST_NAME smtpjobtest
 )

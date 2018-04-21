@@ -23,4 +23,5 @@ target_link_libraries(mailtransport_smtpplugin
     KF5::KIOWidgets
     KF5::Completion
     KPim::SMTP
+    KPim::GAPICore
     )
