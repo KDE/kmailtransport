@@ -189,9 +189,9 @@ void SmtpJob::sessionStateChanged(KSmtp::Session::State state)
     }
 }
 
-void SmtpJob::startPasswordRetrieval()
+void SmtpJob::startPasswordRetrieval(bool forceRefresh)
 {
-    if (!transport()->requiresAuthentication()) {
+    if (!transport()->requiresAuthentication() && !forceRefresh) {
         startSendJob();
         return;
     }
@@ -202,7 +202,7 @@ void SmtpJob::startPasswordRetrieval()
             requestToken();
         } else {
             const QString token = tokens.mid(tokens.indexOf(QLatin1Char('\001')) + 1);
-            if (token.isEmpty() || token == tokens) {
+            if (forceRefresh || token.isEmpty() || token == tokens) {
                 requestToken(token); // if token == tokens, assume it's account password
             } else {
                 startLoginJob();
@@ -386,6 +386,13 @@ void SmtpJob::slotResult(KJob *job)
 {
     if (s_sessionPool.isDestroyed()) {
         return;
+    }
+
+    if (qobject_cast<KSmtp::LoginJob*>(job)) {
+        if (job->error() == KSmtp::LoginJob::TokenExpired) {
+            startPasswordRetrieval(/*force refresh */ true);
+            return;
+        }
     }
 
     // The job has finished, so we don't care about any further errors. Set

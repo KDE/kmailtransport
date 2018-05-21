@@ -73,7 +73,7 @@ protected Q_SLOTS:
     void sessionStateChanged(KSmtp::Session::State state);
 
 private:
-    void startPasswordRetrieval();
+    void startPasswordRetrieval(bool forceRefresh = false);
     void requestToken(const QString &password = {});
     void refreshToken(const QString &token);
     void onTokenRequestFinished(KGAPI2::Job *result);
