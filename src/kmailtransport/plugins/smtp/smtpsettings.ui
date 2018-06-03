@@ -233,14 +233,14 @@
               <item>
                <widget class="QRadioButton" name="encryptionSsl">
                 <property name="text">
-                 <string>&amp;SSL</string>
+                 <string>&amp;SSL/TLS</string>
                 </property>
                </widget>
               </item>
               <item>
                <widget class="QRadioButton" name="encryptionTls">
                 <property name="text">
-                 <string>&amp;TLS</string>
+                 <string>START&amp;TLS</string>
                 </property>
                </widget>
               </item>
