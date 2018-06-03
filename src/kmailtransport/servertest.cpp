@@ -494,6 +494,14 @@ void ServerTestPrivate::slotReadSecure(const QString &text)
 
 void ServerTestPrivate::slotNormalNotPossible()
 {
+    if (testProtocol == SMTP_PROTOCOL && normalSocket->port() == SMTP_PORT) {
+        // For SMTP, fallback to port 25
+        normalSocket->setPort(SMTP_OLD_PORT);
+        normalSocket->reconnect();
+        normalSocketTimer->start(10000);
+        return;
+    }
+
     normalSocketTimer->stop();
     normalPossible = false;
     normalSocketFinished = true;

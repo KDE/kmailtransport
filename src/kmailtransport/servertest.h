@@ -88,7 +88,7 @@ public:
      *
      * If this function is never called, the default port is used, which is:
      * (normal first, then SSL)
-     * SMTP: 25, 465
+     * SMTP: 587 (falls back to 25), 465
      * POP: 110, 995
      * IMAP: 143, 993
      * NNTP: 119, 563

@@ -36,7 +36,8 @@
 #define SMTP_PROTOCOL QStringLiteral("smtp")
 #define SMTPS_PROTOCOL QStringLiteral("smtps")
 
-#define SMTP_PORT 25
+#define SMTP_PORT 587
+#define SMTP_OLD_PORT 25
 #define SMTPS_PORT 465
 
 // Because ServerTest is also capable of testing IMAP,
