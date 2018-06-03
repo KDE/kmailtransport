@@ -332,10 +332,10 @@ void SmtpJob::startLoginJob()
         login->setEncryptionMode(KSmtp::LoginJob::Unencrypted);
         break;
     case Transport::EnumEncryption::TLS:
-        login->setEncryptionMode(KSmtp::LoginJob::TlsV1);
+        login->setEncryptionMode(KSmtp::LoginJob::STARTTLS);
         break;
     case Transport::EnumEncryption::SSL:
-        login->setEncryptionMode(KSmtp::LoginJob::AnySslVersion);
+        login->setEncryptionMode(KSmtp::LoginJob::SSLorTLS);
         break;
     default:
         qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown encryption mode" << transport()->encryption();
