@@ -32,7 +32,7 @@ class Slave;
 }
 
 namespace KGAPI2 {
-class Job;
+class AccountPromise;
 }
 
 class SmtpJobPrivate;
@@ -74,9 +74,7 @@ protected Q_SLOTS:
 
 private:
     void startPasswordRetrieval(bool forceRefresh = false);
-    void requestToken(const QString &password = {});
-    void refreshToken(const QString &token);
-    void onTokenRequestFinished(KGAPI2::Job *result);
+    void onTokenRequestFinished(KGAPI2::AccountPromise *result);
     void startSmtpJob();
     void startLoginJob();
     void startSendJob();

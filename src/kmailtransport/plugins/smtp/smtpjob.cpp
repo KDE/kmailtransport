@@ -41,6 +41,7 @@
 
 #include <KGAPI/Account>
 #include <KGAPI/AuthJob>
+#include <KGAPI/AccountManager>
 
 #define GOOGLE_API_KEY QStringLiteral("554041944266.apps.googleusercontent.com")
 #define GOOGLE_API_SECRET QStringLiteral("mdT1DjzohxN3npUUzkENT0gO")
@@ -197,58 +198,45 @@ void SmtpJob::startPasswordRetrieval(bool forceRefresh)
     }
 
     if (transport()->authenticationType() == TransportBase::EnumAuthenticationType::XOAUTH2) {
-        const auto tokens = transport()->password();
-        if (tokens.isEmpty()) {
-            requestToken();
-        } else {
-            const QString token = tokens.mid(tokens.indexOf(QLatin1Char('\001')) + 1);
-            if (forceRefresh || token.isEmpty() || token == tokens) {
-                requestToken(token); // if token == tokens, assume it's account password
-            } else {
-                startLoginJob();
-            }
-        }
+        auto promise = KGAPI2::AccountManager::instance()->findAccount(
+            GOOGLE_API_KEY, transport()->userName(), { KGAPI2::Account::mailScopeUrl() });
+        connect(promise, &KGAPI2::AccountPromise::finished,
+                this, [forceRefresh, this](KGAPI2::AccountPromise *promise) {
+                    if (promise->account()) {
+                        if (forceRefresh) {
+                            promise = KGAPI2::AccountManager::instance()->refreshTokens(
+                                GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName());
+                        } else {
+                            onTokenRequestFinished(promise);
+                            return;
+                        }
+                    } else {
+                        promise = KGAPI2::AccountManager::instance()->getAccount(
+                            GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName(),
+                            { KGAPI2::Account::mailScopeUrl() });
+                    }
+                    connect(promise, &KGAPI2::AccountPromise::finished,
+                            this, &SmtpJob::onTokenRequestFinished);
+                });
     } else {
         startLoginJob();
     }
 }
 
-void SmtpJob::requestToken(const QString &password)
+void SmtpJob::onTokenRequestFinished(KGAPI2::AccountPromise *promise)
 {
-    auto acc = KGAPI2::AccountPtr::create(transport()->userName(),
-                                          QString(), QString(),
-                                          QList<QUrl>() << QUrl(QStringLiteral("https://mail.google.com/")));
-
-    auto authJob = new KGAPI2::AuthJob(acc, GOOGLE_API_KEY, GOOGLE_API_SECRET, this);
-    authJob->setUsername(transport()->userName());
-    authJob->setPassword(password);
-    connect(authJob, &KGAPI2::Job::finished, this, &SmtpJob::onTokenRequestFinished);
-}
-
-void SmtpJob::refreshToken(const QString &refreshToken)
-{
-    auto acc = KGAPI2::AccountPtr::create(transport()->userName(),
-                                          QString(), refreshToken,
-                                          QList<QUrl>() << QUrl(QStringLiteral("https://mail.google.com/")));
-    auto authJob = new KGAPI2::AuthJob(acc, GOOGLE_API_KEY, GOOGLE_API_SECRET, this);
-    authJob->setUsername(transport()->userName());
-    connect(authJob, &KGAPI2::Job::finished, this, &SmtpJob::onTokenRequestFinished);
-}
-
-void SmtpJob::onTokenRequestFinished(KGAPI2::Job *job)
-{
-    auto authJob = qobject_cast<KGAPI2::AuthJob*>(job);
-    if (authJob->error()) {
-        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Error obtaining XOAUTH2 token:" << authJob->errorString();
-        // TODO: CANCEL
+    if (promise->hasError()) {
+        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Error obtaining XOAUTH2 token:" << promise->errorText();
+        setError(KJob::UserDefinedError);
+        setErrorText(promise->errorText());
+        emitResult();
         return;
     }
 
-    const auto account = authJob->account();
+    const auto account = promise->account();
     const QString tokens = QStringLiteral("%1\001%2").arg(account->accessToken(),
                                                           account->refreshToken());
     transport()->setPassword(tokens);
-    transport()->save();
     startLoginJob();
 }
 
