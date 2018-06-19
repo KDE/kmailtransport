@@ -35,8 +35,8 @@ public:
     });
     ~AkonadiMailTransportPlugin() override;
 
-    QVector<MailTransport::TransportAbstractPluginInfo> names() const override;
-    bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;
+    Q_REQUIRED_RESULT QVector<MailTransport::TransportAbstractPluginInfo> names() const override;
+    Q_REQUIRED_RESULT bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;
 
     void cleanUp(MailTransport::Transport *t) override;
     MailTransport::TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) override;

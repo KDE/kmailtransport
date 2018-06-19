@@ -42,24 +42,24 @@ public:
     */
     explicit TransportComboBox(QWidget *parent = nullptr);
 
-    ~TransportComboBox();
+    ~TransportComboBox() override;
 
     /**
       Returns identifier of the currently selected mail transport.
     */
-    int currentTransportId() const;
+    Q_REQUIRED_RESULT int currentTransportId() const;
 
     /**
       Selects the given transport.
       @param transportId The transport identifier.
       @return return true if we success to find transportId
     */
-    bool setCurrentTransport(int transportId);
+    Q_REQUIRED_RESULT bool setCurrentTransport(int transportId);
 
     /**
       Returns the type of the selected transport.
     */
-    QString transportType() const;
+    Q_REQUIRED_RESULT QString transportType() const;
 
 Q_SIGNALS:
     void transportRemoved(int id, const QString &name);

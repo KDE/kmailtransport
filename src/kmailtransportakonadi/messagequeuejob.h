@@ -101,7 +101,7 @@ public:
     /**
       Returns the message to be sent.
     */
-    KMime::Message::Ptr message() const;
+    Q_REQUIRED_RESULT KMime::Message::Ptr message() const;
 
     /**
       Returns a reference to the dispatch mode attribue for this message.

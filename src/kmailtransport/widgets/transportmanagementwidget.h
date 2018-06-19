@@ -40,7 +40,7 @@ public:
       Creates a new TransportManagementWidget.
       @param parent The parent widget.
     */
-    TransportManagementWidget(QWidget *parent = nullptr);
+    explicit TransportManagementWidget(QWidget *parent = nullptr);
 
     /**
       Destroys the widget.

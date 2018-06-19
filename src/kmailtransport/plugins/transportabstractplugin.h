@@ -42,9 +42,9 @@ public:
     explicit TransportAbstractPlugin(QObject *parent = nullptr);
     ~TransportAbstractPlugin();
 
-    virtual TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) = 0;
-    virtual QVector<TransportAbstractPluginInfo> names() const = 0;
-    virtual bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent) = 0;
+    Q_REQUIRED_RESULT virtual TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) = 0;
+    Q_REQUIRED_RESULT virtual QVector<TransportAbstractPluginInfo> names() const = 0;
+    Q_REQUIRED_RESULT virtual bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent) = 0;
     virtual void cleanUp(MailTransport::Transport *t);
     virtual void initializeTransport(MailTransport::Transport *t, const QString &identifier);
 

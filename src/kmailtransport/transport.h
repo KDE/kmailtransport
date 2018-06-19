@@ -54,12 +54,12 @@ public:
     /**
       Returns true if this transport is valid, ie. has all necessary data set.
     */
-    bool isValid() const;
+    Q_REQUIRED_RESULT bool isValid() const;
 
     /**
       Returns the password of this transport.
     */
-    QString password();
+    Q_REQUIRED_RESULT QString password();
 
     /**
       Sets the password of this transport.
@@ -91,12 +91,12 @@ public:
       This is the way to find out if the password has already been loaded
       from the wallet.
     */
-    bool isComplete() const;
+    Q_REQUIRED_RESULT bool isComplete() const;
 
     /**
       Returns a string representation of the authentication type.
     */
-    QString authenticationTypeString() const;
+    Q_REQUIRED_RESULT QString authenticationTypeString() const;
 
     /**
       Returns a string representation of the authentication type.
@@ -122,9 +122,9 @@ public:
       @see TransportType.
       @since 4.4
     */
-    TransportType transportType() const;
+    Q_REQUIRED_RESULT TransportType transportType() const;
 
-    QByteArray toJson() const;
+    Q_REQUIRED_RESULT QByteArray toJson() const;
 
 protected:
     /**

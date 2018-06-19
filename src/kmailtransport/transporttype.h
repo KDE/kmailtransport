@@ -75,29 +75,29 @@ public:
     /**
      * Compares the transport type with the @p other.
      */
-    bool operator==(const TransportType &other) const;
+    Q_REQUIRED_RESULT bool operator==(const TransportType &other) const;
 
     /**
       Returns whether the transport type is valid.
     */
-    bool isValid() const;
+    Q_REQUIRED_RESULT bool isValid() const;
 
     /**
       Returns the i18n'ed name of the transport type.
     */
-    QString name() const;
+    Q_REQUIRED_RESULT QString name() const;
 
     /**
       Returns a description of the transport type.
     */
-    QString description() const;
+    Q_REQUIRED_RESULT QString description() const;
 
     /**
      * Returns a plugin identifier
      */
-    QString identifier() const;
+    Q_REQUIRED_RESULT QString identifier() const;
 
-    bool isAkonadiResource() const;
+    Q_REQUIRED_RESULT bool isAkonadiResource() const;
 
 private:
     //@cond PRIVATE

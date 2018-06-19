@@ -52,7 +52,7 @@ public:
       Returns the current instance of the mail dispatcher agent. May return an invalid
       AgentInstance in case it cannot find the mail dispatcher agent.
     */
-    Akonadi::AgentInstance dispatcherInstance() const;
+    Q_REQUIRED_RESULT Akonadi::AgentInstance dispatcherInstance() const;
 
     /**
       Looks for messages in the outbox with DispatchMode::Manual and marks them
