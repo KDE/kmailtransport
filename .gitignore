@@ -1,3 +1,4 @@
 *.kdev4
 *.unc-backup*
 *.unc-backup*
+/build/
