@@ -1,4 +1,3 @@
-org.kde.pim.smtp kioslave (smtp)
 org.kde.pim.mailtransport kmailtransport (kmailtransport)
 org.kde.pim.mailtransportakonadi kmailtransportakonadi (kmailtransportakonadi)
 org.kde.pim.mailtransport.smtpplugin kmailtransport (smtp plugin)
