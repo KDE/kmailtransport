@@ -34,7 +34,7 @@
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
 #include <QPointer>
-#include <QRegExp>
+#include <QRegularExpression>
 #include <QStringList>
 
 #include <KConfig>
@@ -414,17 +414,17 @@ void TransportManagerPrivate::readConfig()
     QList<Transport *> oldTransports = transports;
     transports.clear();
 
-    QRegExp re(QStringLiteral("^Transport (.+)$"));
+    QRegularExpression re(QStringLiteral("^Transport (.+)$"));
     const QStringList groups = config->groupList().filter(re);
     for (const QString &s : groups) {
-        if (re.indexIn(s) == -1) {
+        QRegularExpressionMatch match = re.match(s);
+        if (!match.hasMatch()) {
             continue;
         }
         Transport *t = nullptr;
-
         // see if we happen to have that one already
         foreach (Transport *old, oldTransports) {
-            if (old->currentGroup() == QLatin1String("Transport ") + re.cap(1)) {
+            if (old->currentGroup() == QLatin1String("Transport ") + match.captured(1)) {
                 qCDebug(MAILTRANSPORT_LOG) << "reloading existing transport:" << s;
                 t = old;
                 t->d->passwordNeedsUpdateFromWallet = true;
@@ -435,7 +435,7 @@ void TransportManagerPrivate::readConfig()
         }
 
         if (!t) {
-            t = new Transport(re.cap(1));
+            t = new Transport(match.captured(1));
         }
         if (t->id() <= 0) {
             t->setId(createId());
