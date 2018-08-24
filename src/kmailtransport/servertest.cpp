@@ -80,6 +80,10 @@ public:
     bool handleNntpConversation(MailTransport::Socket *socket, int type, int *stage, const QString &response, bool *shouldStartTLS);
     QVector<int> parseAuthenticationList(const QStringList &authentications);
 
+    inline bool isGmail(const QString &server) const {
+        return server.endsWith(QLatin1String("gmail.com")) || server.endsWith(QLatin1String("googlemail.com"));
+    }
+
     // slots
     void slotNormalPossible();
     void slotNormalNotPossible();
@@ -153,7 +157,9 @@ QVector<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authe
         } else if (current == QLatin1String("ANONYMOUS")) {
             result << Transport::EnumAuthenticationType::ANONYMOUS;
         } else if (current == QLatin1String("XOAUTH2")) {
-            result << Transport::EnumAuthenticationType::XOAUTH2;
+            if (isGmail(server)) {
+                result << Transport::EnumAuthenticationType::XOAUTH2;
+            }
         }
         // APOP is handled by handlePopConversation()
     }
@@ -177,7 +183,11 @@ void ServerTestPrivate::handleSMTPIMAPResponse(int type, const QString &text)
     }
 
     QStringList protocols;
-    protocols << QStringLiteral("XOAUTH2") << QStringLiteral("LOGIN")
+    if (isGmail(server)) {
+        protocols << QStringLiteral("XOAUTH2");
+    }
+
+    protocols << QStringLiteral("LOGIN")
               << QStringLiteral("PLAIN") << QStringLiteral("CRAM-MD5")
               << QStringLiteral("DIGEST-MD5") << QStringLiteral("NTLM")
               << QStringLiteral("GSSAPI") << QStringLiteral("ANONYMOUS");
