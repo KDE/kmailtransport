@@ -1,6 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
 set(PIM_VERSION "5.9.41")
-
 project(MailTransport VERSION ${PIM_VERSION})
 
 # ECM setup
@@ -30,6 +29,7 @@ set(AKONADI_LIB_VERSION "5.9.40")
 set(AKONADIMIME_LIB_VERSION "5.9.40")
 set(KSMTP_LIB_VERSION "5.9.40")
 set(KGAPI_LIB_VERSION "5.9.40")
+
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
 
 ########### Find packages ###########
