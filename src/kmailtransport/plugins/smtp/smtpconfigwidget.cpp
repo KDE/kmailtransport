@@ -76,6 +76,11 @@ public:
         updateAuthCapbilities();
     }
 
+    void enablePasswordLine()
+    {
+        ui.password->setEnabled(ui.kcfg_storePassword->isChecked());
+    }
+
     void updateAuthCapbilities()
     {
         if (serverTestFailed) {
@@ -115,6 +120,7 @@ public:
             ui.kcfg_requiresAuthentication->setVisible(true);
             ui.authCombo->setEnabled(true);
             ui.authLabel->setEnabled(true);
+            enablePasswordLine();
         }
     }
 };
@@ -176,7 +182,7 @@ void SMTPConfigWidget::init()
     connect(d->ui.kcfg_host, &QLineEdit::textChanged, this, &SMTPConfigWidget::hostNameChanged);
     connect(d->encryptionGroup, QOverload<int>::of(&QButtonGroup::buttonClicked), this, &SMTPConfigWidget::encryptionChanged);
     connect(d->ui.kcfg_requiresAuthentication, &QCheckBox::toggled, this, &SMTPConfigWidget::ensureValidAuthSelection);
-
+    connect(d->ui.kcfg_storePassword, &QCheckBox::toggled, this, &SMTPConfigWidget::enablePasswordLine);
     if (!d->transport->isValid()) {
         checkHighestEnabledButton(d->encryptionGroup);
     }
@@ -192,6 +198,12 @@ void SMTPConfigWidget::init()
     }
 
     hostNameChanged(d->transport->host());
+}
+
+void SMTPConfigWidget::enablePasswordLine()
+{
+    Q_D(SMTPConfigWidget);
+    d->enablePasswordLine();
 }
 
 void SMTPConfigWidget::checkSmtpCapabilities()
@@ -334,6 +346,7 @@ void SMTPConfigWidget::ensureValidAuthSelection()
 
     // adjust available authentication methods
     d->updateAuthCapbilities();
+    d->enablePasswordLine();
 }
 
 void SMTPConfigWidget::encryptionChanged(int enc)
