@@ -62,6 +62,7 @@ private:
     Q_DECLARE_PRIVATE(SMTPConfigWidget)
 
     void init();
+    void enablePasswordLine();
 };
 } // namespace MailTransport
 
