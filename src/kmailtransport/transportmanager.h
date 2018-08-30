@@ -227,6 +227,7 @@ public:
     */
     Q_SCRIPTABLE void removeTransport(int id);
 
+    void removePasswordFromWallet(int id);
 Q_SIGNALS:
     /**
       Emitted when transport settings have changed (by this or any other
