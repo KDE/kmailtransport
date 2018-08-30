@@ -228,6 +228,10 @@ void SMTPConfigWidget::apply()
     Q_D(SMTPConfigWidget);
     Q_ASSERT(d->manager);
     d->manager->updateSettings();
+    if (!d->ui.kcfg_storePassword->isChecked() && d->ui.kcfg_requiresAuthentication->isChecked()) {
+        //Delete stored password
+        TransportManager::self()->removePasswordFromWallet(d->transport->id());
+    }
     d->transport->setPassword(d->ui.password->password());
 
     KConfigGroup group(d->transport->config(), d->transport->currentGroup());

@@ -383,6 +383,14 @@ void TransportManager::setDefaultTransport(int id)
     d->writeConfig();
 }
 
+void TransportManager::removePasswordFromWallet(int id)
+{
+    Wallet *currentWallet = wallet();
+    if (currentWallet) {
+        currentWallet->removeEntry(QString::number(id));
+    }
+}
+
 void TransportManager::removeTransport(int id)
 {
     Transport *t = transportById(id, false);
