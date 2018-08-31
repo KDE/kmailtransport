@@ -284,10 +284,11 @@ void SmtpJob::startLoginJob()
 
     if (transport()->authenticationType() == Transport::EnumAuthenticationType::XOAUTH2) {
         passwd = passwd.left(passwd.indexOf(QLatin1Char('\001')));
+    } else {
+        passwd = transport()->password();
     }
-
     login->setUserName(transport()->userName());
-    login->setPassword(passwd);
+    login->setPassword(transport()->password());
     switch (transport()->authenticationType()) {
     case TransportBase::EnumAuthenticationType::PLAIN:
         login->setPreferedAuthMode(KSmtp::LoginJob::Plain);
