@@ -288,7 +288,7 @@ void SmtpJob::startLoginJob()
         passwd = transport()->password();
     }
     login->setUserName(transport()->userName());
-    login->setPassword(transport()->password());
+    login->setPassword(passwd);
     switch (transport()->authenticationType()) {
     case TransportBase::EnumAuthenticationType::PLAIN:
         login->setPreferedAuthMode(KSmtp::LoginJob::Plain);
