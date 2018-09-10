@@ -22,7 +22,6 @@
 #include "smtpjob.h"
 #include <kpluginfactory.h>
 #include <KLocalizedString>
-#include <kcoreaddons_version.h>
 
 K_PLUGIN_CLASS_WITH_JSON(SMTPMailTransportPlugin, "smtpmailtransport.json")
 
