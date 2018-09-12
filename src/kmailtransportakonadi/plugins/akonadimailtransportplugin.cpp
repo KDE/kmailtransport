@@ -83,6 +83,7 @@ bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, M
     AgentInstance instance = AgentManager::self()->instance(transport->host());
     if (!instance.isValid()) {
         qCWarning(MAILTRANSPORT_AKONADI_LOG) << "Invalid resource instance" << transport->host();
+        return false;
     }
     instance.configure(parent);   // Async...
     transport->save();
