@@ -104,33 +104,33 @@ public:
     Q_REQUIRED_RESULT KMime::Message::Ptr message() const;
 
     /**
-      Returns a reference to the dispatch mode attribue for this message.
+      Returns a reference to the dispatch mode attribute for this message.
       Modify the returned attribute to change the dispatch mode.
     */
     DispatchModeAttribute &dispatchModeAttribute();
 
     /**
-      Returns a reference to the address attribue for this message.
+      Returns a reference to the address attribute for this message.
       Modify the returned attribute to change the receivers or the from
       address.
     */
     Akonadi::AddressAttribute &addressAttribute();
 
     /**
-      Returns a reference to the transport attribue for this message.
+      Returns a reference to the transport attribute for this message.
       Modify the returned attribute to change the transport used for
       sending the mail.
     */
     TransportAttribute &transportAttribute();
 
     /**
-      Returns a reference to the sent behaviour attribue for this message.
+      Returns a reference to the sent behaviour attribute for this message.
       Modify the returned attribute to change the sent behaviour.
     */
     SentBehaviourAttribute &sentBehaviourAttribute();
 
     /**
-      Returns a reference to the sent action attribue for this message.
+      Returns a reference to the sent action attribute for this message.
       Modify the returned attribute to change the sent actions.
     */
     SentActionAttribute &sentActionAttribute();

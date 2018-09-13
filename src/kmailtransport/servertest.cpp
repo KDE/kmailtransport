@@ -315,7 +315,7 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
 //     S:.
         QString formattedReply = response;
 
-        // Get rid of trailling ".CRLF"
+        // Get rid of trailing ".CRLF"
         formattedReply.chop(3);
 
         // Get rid of the first +OK line
