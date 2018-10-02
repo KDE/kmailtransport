@@ -18,7 +18,7 @@ include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMQtDeclareLoggingCategory)
-include(ECMCoverageOption)
+
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
 
