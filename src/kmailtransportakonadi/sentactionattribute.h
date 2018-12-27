@@ -70,7 +70,7 @@ public:
         /**
          * Creates a new action.
          *
-         * @param action The action that shall be executed.
+         * @param type The type of action that shall be executed.
          * @param value The action specific argument.
          */
         Action(Type type, const QVariant &value);

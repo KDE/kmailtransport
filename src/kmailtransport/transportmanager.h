@@ -179,6 +179,7 @@ public:
 
     /**
       Open a configuration dialog for an existing transport.
+      @param identifier The identifier.
       @param transport The transport to configure.  It can be a new transport,
                        or one already managed by TransportManager.
       @param parent The parent widget for the dialog.

@@ -90,7 +90,7 @@ public:
 
   @see FilterActionJob
 
-  @author Torgny Nyblom <kde nyblom org>
+  @author Torgny Nyblom <kde@nyblom.org>
   @since 4.5
 */
 class DispatchManualTransportAction : public Akonadi::FilterAction
