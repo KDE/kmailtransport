@@ -100,7 +100,7 @@ public:
 
     /**
       Returns a string representation of the authentication type.
-      Convienence function when there isn't a Transport object
+      Convenience function when there isn't a Transport object
       instantiated.
 
       @since 4.5

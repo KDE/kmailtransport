@@ -397,7 +397,7 @@ void SmtpJob::slotResult(KJob *job)
     // (and triggers an assert in KMail).
     d->finished = true;
 
-    // Normally, calling TransportJob::slotResult() whould set the proper error code
+    // Normally, calling TransportJob::slotResult() would set the proper error code
     // for error() via KComposite::slotResult(). However, we can't call that here,
     // since that also emits the result signal.
     // In KMail, when there are multiple mails in the outbox, KMail tries to send

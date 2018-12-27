@@ -422,7 +422,7 @@ void ServerTestPrivate::slotReadNormal(const QString &text)
     bool shouldStartTLS = false;
     normalStage++;
 
-    // Handle the whole POP and NNTP converstations separatly, as
+    // Handle the whole POP and NNTP conversations separately, as
     // they are very different from IMAP and SMTP
     if (testProtocol == POP_PROTOCOL) {
         if (handlePopConversation(normalSocket, encryptionMode, normalStage, text,

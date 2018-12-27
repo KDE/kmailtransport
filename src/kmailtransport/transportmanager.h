@@ -133,7 +133,7 @@ public:
     MAILTRANSPORT_DEPRECATED TransportJob *createTransportJob(int transportId);
 
     /**
-      Creates a mail transport job for the given transport identifer,
+      Creates a mail transport job for the given transport identifier,
       or transport name.
       Returns 0 if the specified transport is invalid.
       @param transport A string defining a mail transport.

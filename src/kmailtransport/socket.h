@@ -40,7 +40,7 @@ class Socket : public QObject
 public:
 
     /**
-     * Contructor, it will not auto connect. Call reconnect() to connect to
+     * Constructor, it will not auto connect. Call reconnect() to connect to
      * the parameters given.
      * @param parent the parent
      */
