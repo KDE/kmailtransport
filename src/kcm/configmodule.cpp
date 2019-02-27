@@ -35,7 +35,7 @@ ConfigModule::ConfigModule(QWidget *parent, const QVariantList &args)
 {
     setButtons(NoAdditionalButton);
     QVBoxLayout *l = new QVBoxLayout(this);
-    l->setMargin(0);
+    l->setContentsMargins(0, 0, 0, 0);
     TransportManagementWidget *tmw = new TransportManagementWidget(this);
     l->addWidget(tmw);
 }
