@@ -38,7 +38,7 @@ TransportMgr::TransportMgr()
     : mCurrentJob(nullptr)
 {
     QVBoxLayout *vbox = new QVBoxLayout(this);
-    vbox->setMargin(0);
+    vbox->setContentsMargins(0, 0, 0, 0);
 
     vbox->addWidget(new TransportManagementWidget(this));
     mComboBox = new TransportComboBox(this);

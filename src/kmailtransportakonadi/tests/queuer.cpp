@@ -49,7 +49,7 @@ MessageQueuer::MessageQueuer()
         qFatal("Could not start Akonadi server.");
     }
     QVBoxLayout *vbox = new QVBoxLayout(this);
-    vbox->setMargin(0);
+    vbox->setContentsMargins(0, 0, 0, 0);
 
     mComboBox = new TransportComboBox(this);
     mComboBox->setEditable(true);
