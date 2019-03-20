@@ -431,7 +431,7 @@ void TransportManagerPrivate::readConfig()
         }
         Transport *t = nullptr;
         // see if we happen to have that one already
-        foreach (Transport *old, oldTransports) {
+        for (Transport *old : oldTransports) {
             if (old->currentGroup() == QLatin1String("Transport ") + match.captured(1)) {
                 qCDebug(MAILTRANSPORT_LOG) << "reloading existing transport:" << s;
                 t = old;

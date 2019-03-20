@@ -105,7 +105,8 @@ void TransportListView::fillTransportList()
     }
 
     clear();
-    foreach (Transport *t, TransportManager::self()->transports()) {
+    const auto lstTransports = TransportManager::self()->transports();
+    for (Transport *t : lstTransports) {
         QTreeWidgetItem *item = new QTreeWidgetItem(this);
         item->setData(0, Qt::UserRole, t->id());
         QString name = t->name();

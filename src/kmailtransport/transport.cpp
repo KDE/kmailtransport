@@ -80,7 +80,8 @@ void Transport::setPassword(const QString &passwd)
 void Transport::forceUniqueName()
 {
     QStringList existingNames;
-    foreach (Transport *t, TransportManager::self()->transports()) {
+    const auto lstTransports = TransportManager::self()->transports();
+    for (Transport *t : lstTransports) {
         if (t->id() != id()) {
             existingNames << t->name();
         }
