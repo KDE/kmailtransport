@@ -45,7 +45,7 @@
 #include <transport.h>
 #include <kmailtransportakonadi/transportattribute.h>
 #include <transportmanager.h>
-#include <qsignalspy.h>
+#include <QSignalSpy>
 
 #define SPAM_ADDRESS (QStringList() << QStringLiteral("idanoka@gmail.com"))
 
