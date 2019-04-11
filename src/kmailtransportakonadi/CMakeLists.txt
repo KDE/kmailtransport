@@ -108,7 +108,9 @@ install(FILES
 
 if(BUILD_TESTING)
     add_subdirectory(tests)
-    add_subdirectory(autotests)
+    if (KDEPIM_RUN_AKONADI_TEST)
+	    add_subdirectory(autotests)
+    endif()
 endif()
 
 add_subdirectory(plugins)

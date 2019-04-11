@@ -44,7 +44,7 @@ find_package(KF5AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPimSMTP ${KSMTP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPimGAPI ${KGAPI_LIB_VERSION} CONFIG REQUIRED)
 
-
+option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 # workaround for https://bugreports.qt.io/browse/QTBUG-74665 (bug in qt5.13 reevaluate it)
 if (${Qt5Widgets_VERSION} STRGREATER "5.13")
    MESSAGE(STATUS "Qt version: ${Qt5Widgets_VERSION} DISABLE compile without deprecated methods. bug QTBUG-74665")
