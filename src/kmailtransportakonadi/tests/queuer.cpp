@@ -146,8 +146,8 @@ MessageQueueJob *MessageQueuer::createQueueJob()
             this, &MessageQueuer::jobResult);
     connect(job, SIGNAL(percent(KJob*,ulong)),
             SLOT(jobPercent(KJob*,ulong)));
-    connect(job, SIGNAL(infoMessage(KJob*,QString,QString)),
-            SLOT(jobInfoMessage(KJob*,QString,QString)));
+    connect(job, &KJob::infoMessage,
+            this, &MessageQueuer::jobInfoMessage);
 
     return job;
 }

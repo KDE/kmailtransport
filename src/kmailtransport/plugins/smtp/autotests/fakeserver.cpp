@@ -84,7 +84,7 @@ void FakeServer::newConnection()
     QMutexLocker locker(&m_mutex);
 
     m_clientSockets << m_tcpServer->nextPendingConnection();
-    connect(m_clientSockets.last(), SIGNAL(readyRead()), this, SLOT(dataAvailable()));
+    connect(m_clientSockets.last(), &QIODevice::readyRead, this, &FakeServer::dataAvailable);
     //m_clientParsers << new KIMAP::ImapStreamParser( m_clientSockets.last(), true );
 
     QVERIFY(m_clientSockets.size() <= m_scenarios.size());
@@ -100,7 +100,7 @@ void FakeServer::run()
         return;
     }
 
-    connect(m_tcpServer, SIGNAL(newConnection()), this, SLOT(newConnection()));
+    connect(m_tcpServer, &QTcpServer::newConnection, this, &FakeServer::newConnection);
 
     exec();
 

@@ -67,7 +67,7 @@ void MessageQueueJobTest::initTestCase()
     // check that outbox is empty
     SpecialMailCollectionsRequestJob *rjob = new SpecialMailCollectionsRequestJob(this);
     rjob->requestDefaultCollection(SpecialMailCollections::Outbox);
-    QSignalSpy spy(rjob, SIGNAL(result(KJob*)));
+    QSignalSpy spy(rjob, &KJob::result);
     QVERIFY(spy.wait(10000));
     verifyOutboxContents(0);
 }
