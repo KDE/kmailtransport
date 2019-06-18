@@ -31,7 +31,6 @@
 #include <QPointer>
 
 #include <KLocalizedString>
-#include <QUrl>
 #include "mailtransport_debug.h"
 #include <KPasswordDialog>
 
