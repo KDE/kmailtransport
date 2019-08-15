@@ -3,6 +3,7 @@ description: Manage mail transport
 maintainer: mlaurent
 public_lib: true
 group: kdepim
+type: solution
 platforms:
     - name: All
 irc: akonadi
