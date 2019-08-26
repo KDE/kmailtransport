@@ -123,7 +123,7 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
         treeItem->setText(1, type.description());
         treeItem->setToolTip(1, type.description());
         treeItem->setData(0, Qt::UserRole, type.identifier());     // the transport type
-        if (type.identifier() == QStringLiteral("SMTP")) {
+        if (type.identifier() == QLatin1String("SMTP")) {
             treeItem->setSelected(true); // select SMTP by default
         }
     }
