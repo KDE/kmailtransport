@@ -384,7 +384,7 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
             } else if (line.startsWith(QLatin1String("SASL "), Qt::CaseInsensitive)) {
                 const QStringList auths = line.mid(5).toString().split(QLatin1Char(' '), QString::SkipEmptyParts);
                 authenticationResults[type] += parseAuthenticationList(auths);
-            } else if (line == QLatin1String(".")) {
+            } else if (line == QLatin1Char('.')) {
                 return false;
             }
         }
