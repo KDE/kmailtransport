@@ -7,7 +7,7 @@ find_package(Qt5Test CONFIG REQUIRED)
 set(tm_srcs transportmgr.cpp)
 add_executable(transportmgr ${tm_srcs})
 ecm_mark_as_test(transportmgr)
-target_link_libraries(transportmgr KF5MailTransport Qt5::Widgets KF5::I18n KF5::ConfigGui KF5::Completion KF5::TextWidgets KF5::CoreAddons)
+target_link_libraries(transportmgr KF5MailTransport Qt5::Widgets KF5::I18n KF5::ConfigGui KF5::TextWidgets KF5::CoreAddons)
 
 add_executable(servertest servertest.cpp)
 ecm_mark_as_test(servertest)
