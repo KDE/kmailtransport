@@ -20,7 +20,7 @@
 #include "smtpmailtransportplugin.h"
 #include "smtpconfigdialog.h"
 #include "smtpjob.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <KLocalizedString>
 
 K_PLUGIN_CLASS_WITH_JSON(SMTPMailTransportPlugin, "smtpmailtransport.json")

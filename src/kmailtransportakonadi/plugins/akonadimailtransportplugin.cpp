@@ -20,7 +20,7 @@
 #include "akonadimailtransportplugin.h"
 #include "resourcesendjob_p.h"
 #include "mailtransportplugin_akonadi_debug.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <AkonadiCore/AgentManager>
 #include <MailTransport/TransportAbstractPlugin>
 #include <AkonadiCore/AgentInstanceCreateJob>
