@@ -104,7 +104,7 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
         QWidget *widget = new QWidget(this);
         d->ui.setupUi(widget);
         mainLayout->addWidget(widget);
-        setWindowTitle(i18n("Create Outgoing Account"));
+        setWindowTitle(i18nc("@title:window", "Create Outgoing Account"));
         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
         d->okButton = buttonBox->button(QDialogButtonBox::Ok);
         d->okButton->setText(i18nc("create and configure a mail transport", "Create and Configure"));
