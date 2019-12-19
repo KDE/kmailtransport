@@ -721,7 +721,7 @@ bool ServerTest::isSecurePossible() const
 
 QList< ServerTest::Capability > ServerTest::capabilities() const
 {
-    return d->capabilityResults.toList();
+    return d->capabilityResults.values();
 }
 
 #include "moc_servertest.cpp"
