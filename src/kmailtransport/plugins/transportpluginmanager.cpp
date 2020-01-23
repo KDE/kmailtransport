@@ -71,9 +71,7 @@ bool TransportPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return true;
     }
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("mailtransport"), [](const KPluginMetaData &md) {
-        return md.serviceTypes().contains(QLatin1String("MailTransport/Plugin"));
-    });
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("mailtransport"));
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
