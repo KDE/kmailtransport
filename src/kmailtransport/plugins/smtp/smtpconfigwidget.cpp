@@ -180,7 +180,12 @@ void SMTPConfigWidget::init()
 
     connect(d->ui.checkCapabilities, &QPushButton::clicked, this, &SMTPConfigWidget::checkSmtpCapabilities);
     connect(d->ui.kcfg_host, &QLineEdit::textChanged, this, &SMTPConfigWidget::hostNameChanged);
+
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(d->encryptionGroup, qOverload<int>(&QButtonGroup::buttonClicked), this, &SMTPConfigWidget::encryptionChanged);
+#else
+    connect(d->encryptionGroup, &QButtonGroup::buttonClicked, this, &SMTPConfigWidget::encryptionAbstractButtonChanged);
+#endif
     connect(d->ui.kcfg_requiresAuthentication, &QCheckBox::toggled, this, &SMTPConfigWidget::ensureValidAuthSelection);
     connect(d->ui.kcfg_storePassword, &QCheckBox::toggled, this, &SMTPConfigWidget::enablePasswordLine);
     if (!d->transport->isValid()) {
@@ -347,6 +352,14 @@ void SMTPConfigWidget::ensureValidAuthSelection()
     // adjust available authentication methods
     d->updateAuthCapbilities();
     d->enablePasswordLine();
+}
+
+void SMTPConfigWidget::encryptionAbstractButtonChanged(QAbstractButton *button)
+{
+    Q_D(SMTPConfigWidget);
+    if (button) {
+        encryptionChanged(d->encryptionGroup->id(button));
+    }
 }
 
 void SMTPConfigWidget::encryptionChanged(int enc)

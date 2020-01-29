@@ -27,6 +27,7 @@
 #define MAILTRANSPORT_SMTPCONFIGWIDGET_H
 
 #include "widgets/transportconfigwidget.h"
+class QAbstractButton;
 namespace MailTransport {
 class Transport;
 
@@ -59,6 +60,7 @@ private Q_SLOTS:
     void ensureValidAuthSelection();
 
 private:
+    void encryptionAbstractButtonChanged(QAbstractButton *button);
     Q_DECLARE_PRIVATE(SMTPConfigWidget)
 
     void init();
