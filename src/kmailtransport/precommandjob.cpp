@@ -78,7 +78,7 @@ PrecommandJob::~PrecommandJob()
 
 void PrecommandJob::start()
 {
-    d->process->start(d->precommand);
+    d->process->start(d->precommand, QStringList());
 }
 
 void PreCommandJobPrivate::slotStarted()
