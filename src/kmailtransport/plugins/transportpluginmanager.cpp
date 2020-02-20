@@ -148,8 +148,10 @@ QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManager::plugin
 
 MailTransport::TransportAbstractPlugin *TransportPluginManager::plugin(const QString &identifier)
 {
-    for (MailTransport::TransportAbstractPlugin *p : pluginsList()) {
-        for (const MailTransport::TransportAbstractPluginInfo &info : p->names()) {
+    const QVector<MailTransport::TransportAbstractPlugin *> lstPlugins = pluginsList();
+    for (MailTransport::TransportAbstractPlugin *p : lstPlugins) {
+        const QVector<TransportAbstractPluginInfo> lstPluginInfo = p->names();
+        for (const MailTransport::TransportAbstractPluginInfo &info : lstPluginInfo) {
             if (info.identifier == identifier) {
                 return p;
             }

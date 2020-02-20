@@ -493,11 +493,13 @@ void TransportManagerPrivate::fillTypes()
 void TransportManagerPrivate::updatePluginList()
 {
     types.clear();
-    for (MailTransport::TransportAbstractPlugin *plugin : MailTransport::TransportPluginManager::self()->pluginsList()) {
+    const QVector<MailTransport::TransportAbstractPlugin *> lstPlugins = MailTransport::TransportPluginManager::self()->pluginsList();
+    for (MailTransport::TransportAbstractPlugin *plugin : lstPlugins) {
         if (plugin->names().isEmpty()) {
             qCDebug(MAILTRANSPORT_LOG) << "Plugin " << plugin << " doesn't provide plugin";
         }
-        for (const MailTransport::TransportAbstractPluginInfo &info : plugin->names()) {
+        const QVector<TransportAbstractPluginInfo> lstInfos = plugin->names();
+        for (const MailTransport::TransportAbstractPluginInfo &info : lstInfos) {
             TransportType type;
             type.d->mName = info.name;
             type.d->mDescription = info.description;
