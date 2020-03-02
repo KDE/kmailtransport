@@ -370,19 +370,31 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
 //     SASL DIGEST-MD5 CRAM-MD5 NTLM PLAIN LOGIN
 //     STARTTLS
 //     .
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
         const QVector<QStringRef> lines = response.splitRef(QStringLiteral("\r\n"), QString::SkipEmptyParts);
+#else
+        const QVector<QStringRef> lines = response.splitRef(QStringLiteral("\r\n"), Qt::SkipEmptyParts);
+#endif
         for (const QStringRef &line : lines) {
             if (line.compare(QLatin1String("STARTTLS"), Qt::CaseInsensitive) == 0) {
                 *shouldStartTLS = true;
             } else if (line.startsWith(QLatin1String("AUTHINFO "), Qt::CaseInsensitive)) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                 const QVector<QStringRef> authinfos = line.split(QLatin1Char(' '), QString::SkipEmptyParts);
+#else
+                const QVector<QStringRef> authinfos = line.split(QLatin1Char(' '), Qt::SkipEmptyParts);
+#endif
                 const QString s(QStringLiteral("USER"));
                 const QStringRef ref(&s);
                 if (authinfos.contains(ref)) {
                     authenticationResults[type].append(Transport::EnumAuthenticationType::CLEAR); // XXX
                 }
             } else if (line.startsWith(QLatin1String("SASL "), Qt::CaseInsensitive)) {
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                 const QStringList auths = line.mid(5).toString().split(QLatin1Char(' '), QString::SkipEmptyParts);
+#else
+                const QStringList auths = line.mid(5).toString().split(QLatin1Char(' '), Qt::SkipEmptyParts);
+#endif
                 authenticationResults[type] += parseAuthenticationList(auths);
             } else if (line == QLatin1Char('.')) {
                 return false;
