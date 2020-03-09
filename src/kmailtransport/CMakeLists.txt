@@ -27,7 +27,16 @@ set(mailtransport_plugins_srcs
     plugins/transportpluginmanager.cpp
     ) 
 
-ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport)
+
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport)
+else()
+    ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport
+        DESCRIPTION "kmailtransport (kmailtransport)"
+        OLD_CATEGORY_NAMES log_mailtransport
+        EXPORT MAILTRANSPORT
+    )
+endif()
 
 ki18n_wrap_ui(mailtransport_lib_srcs
     ui/addtransportdialog.ui

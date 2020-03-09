@@ -11,7 +11,16 @@ set(mailtransport_smtpplugin_SRCS
 ki18n_wrap_ui(mailtransport_smtpplugin_SRCS
     smtpsettings.ui
     )
-ecm_qt_declare_logging_category(mailtransport_smtpplugin_SRCS HEADER mailtransportplugin_smtp_debug.h IDENTIFIER MAILTRANSPORT_SMTP_LOG CATEGORY_NAME org.kde.pim.mailtransport.smtpplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(mailtransport_smtpplugin_SRCS HEADER mailtransportplugin_smtp_debug.h IDENTIFIER MAILTRANSPORT_SMTP_LOG CATEGORY_NAME org.kde.pim.mailtransport.smtpplugin)
+else()
+    ecm_qt_declare_logging_category(mailtransport_smtpplugin_SRCS HEADER mailtransportplugin_smtp_debug.h IDENTIFIER MAILTRANSPORT_SMTP_LOG CATEGORY_NAME org.kde.pim.mailtransport.smtpplugin
+        DESCRIPTION "kmailtransport (smtp plugin)"
+        OLD_CATEGORY_NAMES log_smtp
+        EXPORT MAILTRANSPORT
+    )
+endif()
+
 
 kcoreaddons_add_plugin(mailtransport_smtpplugin JSON smtpmailtransport.json SOURCES
     ${mailtransport_smtpplugin_SRCS} INSTALL_NAMESPACE mailtransport)

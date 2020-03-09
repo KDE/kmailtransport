@@ -20,7 +20,15 @@ set(mailtransportakonadi_lib_srcs
     filteractionjob.cpp
     )
 
-ecm_qt_declare_logging_category(mailtransportakonadi_lib_srcs HEADER mailtransportakonadi_debug.h IDENTIFIER MAILTRANSPORTAKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransportakonadi)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(mailtransportakonadi_lib_srcs HEADER mailtransportakonadi_debug.h IDENTIFIER MAILTRANSPORTAKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransportakonadi)
+else()
+    ecm_qt_declare_logging_category(mailtransportakonadi_lib_srcs HEADER mailtransportakonadi_debug.h IDENTIFIER MAILTRANSPORTAKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransportakonadi
+        DESCRIPTION "kmailtransportakonadi (kmailtransportakonadi)"
+        EXPORT MAILTRANSPORT
+    )
+endif()
+
 
 add_library(KF5MailTransportAkonadi ${mailtransportakonadi_lib_srcs}
     )

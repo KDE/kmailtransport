@@ -3,8 +3,17 @@ set(mailtransport_akonadiplugin_SRCS
     resourcesendjob.cpp
     )
 
-ecm_qt_declare_logging_category(mailtransport_akonadiplugin_SRCS HEADER mailtransportplugin_akonadi_debug.h IDENTIFIER
-    MAILTRANSPORT_AKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransport.akonadiplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(mailtransport_akonadiplugin_SRCS HEADER mailtransportplugin_akonadi_debug.h IDENTIFIER
+        MAILTRANSPORT_AKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransport.akonadiplugin)
+else()
+    ecm_qt_declare_logging_category(mailtransport_akonadiplugin_SRCS HEADER mailtransportplugin_akonadi_debug.h IDENTIFIER
+        MAILTRANSPORT_AKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransport.akonadiplugin
+        DESCRIPTION "kmailtransport (akonadi plugin)"
+        EXPORT MAILTRANSPORT
+    )
+endif()
+
 
 
 kcoreaddons_add_plugin(mailtransport_akonadiplugin JSON akonadimailtransport.json SOURCES
