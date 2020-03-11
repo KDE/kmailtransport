@@ -1,4 +1,0 @@
-org.kde.pim.mailtransport kmailtransport (kmailtransport) IDENTIFIER [MAILTRANSPORT_LOG]
-org.kde.pim.mailtransportakonadi kmailtransportakonadi (kmailtransportakonadi) IDENTIFIER [MAILTRANSPORTAKONADI_LOG]
-org.kde.pim.mailtransport.smtpplugin kmailtransport (smtp plugin) IDENTIFIER [MAILTRANSPORT_SMTP_LOG]
-org.kde.pim.mailtransport.akonadiplugin kmailtransport (akonadi plugin) IDENTIFIER [MAILTRANSPORT_AKONADI_LOG]
