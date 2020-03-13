@@ -721,7 +721,11 @@ bool ServerTest::isSecurePossible() const
 
 QList< ServerTest::Capability > ServerTest::capabilities() const
 {
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
     return d->capabilityResults.toList();
+#else
+    return QList<ServerTest::Capability>(d->capabilityResults.cbegin(), d->capabilityResults.cend());
+#endif
 }
 
 #include "moc_servertest.cpp"
