@@ -184,7 +184,7 @@ void SMTPConfigWidget::init()
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(d->encryptionGroup, qOverload<int>(&QButtonGroup::buttonClicked), this, &SMTPConfigWidget::encryptionChanged);
 #else
-    connect(d->encryptionGroup, &QButtonGroup::buttonClicked, this, &SMTPConfigWidget::encryptionAbstractButtonChanged);
+    connect(d->encryptionGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked), this, &SMTPConfigWidget::encryptionAbstractButtonChanged);
 #endif
     connect(d->ui.kcfg_requiresAuthentication, &QCheckBox::toggled, this, &SMTPConfigWidget::ensureValidAuthSelection);
     connect(d->ui.kcfg_storePassword, &QCheckBox::toggled, this, &SMTPConfigWidget::enablePasswordLine);
