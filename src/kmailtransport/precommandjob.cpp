@@ -83,7 +83,7 @@ void PrecommandJob::start()
 
 void PreCommandJobPrivate::slotStarted()
 {
-    emit q->infoMessage(q, i18n("Executing precommand"),
+    Q_EMIT q->infoMessage(q, i18n("Executing precommand"),
                         i18n("Executing precommand '%1'.", precommand));
 }
 

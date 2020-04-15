@@ -133,7 +133,7 @@ void ServerTestPrivate::finalResult()
         resultsAsVector.append(res);
     }
 
-    emit q->finished(resultsAsVector);
+    Q_EMIT q->finished(resultsAsVector);
 }
 
 QVector<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authentications)

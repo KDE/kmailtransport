@@ -70,7 +70,7 @@ void SocketPrivate::slotConnected()
 
     if (!secure) {
         qCDebug(MAILTRANSPORT_LOG) << "normal connect";
-        emit q->connected();
+        Q_EMIT q->connected();
     } else {
         qCDebug(MAILTRANSPORT_LOG) << "encrypted connect";
         socket->startClientEncryption();
@@ -83,7 +83,7 @@ void SocketPrivate::slotStateChanged(QAbstractSocket::SocketState state)
     qCDebug(MAILTRANSPORT_LOG) << "State is now:" << (int)state;
 #endif
     if (state == QAbstractSocket::UnconnectedState) {
-        emit q->failed();
+        Q_EMIT q->failed();
     }
 }
 
@@ -93,7 +93,7 @@ void SocketPrivate::slotModeChanged(QSslSocket::SslMode state)
     qCDebug(MAILTRANSPORT_LOG) << "Mode is now:" << state;
 #endif
     if (state == QSslSocket::SslClientMode) {
-        emit q->tlsDone();
+        Q_EMIT q->tlsDone();
     }
 }
 
@@ -115,7 +115,7 @@ void SocketPrivate::slotSocketRead()
     qCDebug(MAILTRANSPORT_LOG) << socket->isEncrypted() << m_msg.trimmed();
 #endif
 
-    emit q->data(m_msg);
+    Q_EMIT q->data(m_msg);
     m_msg.clear();
 }
 
@@ -125,7 +125,7 @@ void SocketPrivate::slotSslErrors(const QList<QSslError> &)
     /* We can safely ignore the errors, we are only interested in the
     capabilities. We're not sending auth info. */
     socket->ignoreSslErrors();
-    emit q->connected();
+    Q_EMIT q->connected();
 }
 
 // ------------------ end private ---------------------------//

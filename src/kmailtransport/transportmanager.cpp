@@ -401,7 +401,7 @@ void TransportManager::removeTransport(int id)
     if (plugin) {
         plugin->cleanUp(t);
     }
-    emit transportRemoved(t->id(), t->name());
+    Q_EMIT transportRemoved(t->id(), t->name());
 
     d->transports.removeAll(t);
     d->validateDefault();
@@ -519,8 +519,8 @@ void TransportManager::emitChangesCommitted()
 {
     d->myOwnChange = true; // prevent us from reading our changes again
     d->appliedChange = false; // but we have to read them at least once
-    emit transportsChanged();
-    emit changesCommitted();
+    Q_EMIT transportsChanged();
+    Q_EMIT changesCommitted();
 }
 
 void TransportManagerPrivate::slotTransportsChanged()
@@ -536,7 +536,7 @@ void TransportManagerPrivate::slotTransportsChanged()
     // FIXME: this deletes existing transport objects!
     readConfig();
     appliedChange = true; // to prevent recursion
-    emit q->transportsChanged();
+    Q_EMIT q->transportsChanged();
 }
 
 int TransportManagerPrivate::createId() const
@@ -607,7 +607,7 @@ void TransportManager::loadPasswords()
         job->start();
     }
 
-    emit passwordsChanged();
+    Q_EMIT passwordsChanged();
 }
 
 void TransportManager::loadPasswordsAsync()
