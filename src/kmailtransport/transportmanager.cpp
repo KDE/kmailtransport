@@ -669,7 +669,7 @@ void TransportManagerPrivate::validateDefault()
         if (q->isEmpty()) {
             defaultTransportId = -1;
         } else {
-            defaultTransportId = transports.first()->id();
+            defaultTransportId = transports.constFirst()->id();
             writeConfig();
         }
     }
