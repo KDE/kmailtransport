@@ -30,7 +30,6 @@
         "Name[sv]": "SMTP e-postöverföring",
         "Name[tr]": "SMTP Posta Aktarımı",
         "Name[uk]": "Надсилання пошти SMTP",
-        "Name[x-test]": "xxSMTP Mail Transportxx",
         "Name[zh_CN]": "SMTP 邮件传输",
         "Name[zh_TW]": "SMTP 郵件傳輸",
         "ServiceTypes": [
