@@ -26,7 +26,6 @@
 #include <QList>
 #include <QObject>
 
-class KJob;
 
 namespace KWallet {
 class Wallet;
