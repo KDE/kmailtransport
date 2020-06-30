@@ -34,6 +34,7 @@
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
 #include <QPointer>
+#include <QRandomGenerator>
 #include <QRegularExpression>
 #include <QStringList>
 
@@ -43,7 +44,6 @@
 #include <KEMailSettings>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <KRandom>
 #include <Kdelibs4ConfigMigrator>
 
 #include <KWallet>
@@ -547,7 +547,7 @@ int TransportManagerPrivate::createId() const
     usedIds << 0; // 0 is default for unknown
     int newId;
     do {
-        newId = KRandom::random();
+        newId = QRandomGenerator::global()->generate();
     } while (usedIds.contains(newId));
     return newId;
 }
