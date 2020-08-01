@@ -17,6 +17,7 @@
 #include <QHash>
 #include <QHostInfo>
 #include <QProgressBar>
+#include <QRegularExpression>
 #include <QTimer>
 #include <QSet>
 
@@ -242,10 +243,9 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
     // Initial Greeting
     if (stage == 0) {
         //Regexp taken from POP3 ioslave
-        QString responseWithoutCRLF = response;
-        responseWithoutCRLF.chop(2);
-        QRegExp re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"),
-                   Qt::CaseInsensitive);
+        const QString responseWithoutCRLF = response.chopped(2);
+        const QRegularExpression re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"),
+                                    QRegularExpression::CaseInsensitiveOption);
         if (responseWithoutCRLF.indexOf(re) != -1) {
             authenticationResults[type] << Transport::EnumAuthenticationType::APOP;
         }
