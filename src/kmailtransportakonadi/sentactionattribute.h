@@ -1,5 +1,5 @@
 /*
-  SPDX-FileCopyrightText: 2010 Klarälvdalens Datakonsult AB, a KDAB Group company, info@kdab.net
+  SPDX-FileCopyrightText: 2010 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.net>
   SPDX-FileContributor: Tobias Koenig <tokoe@kdab.com>
 
   SPDX-License-Identifier: LGPL-2.0-or-later

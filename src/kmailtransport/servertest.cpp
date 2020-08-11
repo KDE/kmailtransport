@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2006 - 2007 Volker Krause <vkrause@kde.org>
+  SPDX-FileCopyrightText: 2006-2007 Volker Krause <vkrause@kde.org>
   SPDX-FileCopyrightText: 2007 KovoKs <info@kovoks.nl>
   SPDX-FileCopyrightText: 2008 Thomas McGuire <thomas.mcguire@gmx.net>
 
