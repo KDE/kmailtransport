@@ -48,7 +48,7 @@ find_package(KPimGAPI ${KGAPI_LIB_VERSION} CONFIG REQUIRED)
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054900)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054A00)
 
 add_definitions(-DQT_NO_FOREACH)
 add_definitions(-DQT_NO_KEYWORDS)
