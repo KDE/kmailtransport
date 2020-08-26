@@ -268,11 +268,13 @@ void SmtpJob::startLoginJob()
         }
     }
 
+    // If dlg was Accepted, update passwd
+    passwd = transport()->password();
+
     if (transport()->authenticationType() == Transport::EnumAuthenticationType::XOAUTH2) {
         passwd = passwd.left(passwd.indexOf(QLatin1Char('\001')));
-    } else {
-        passwd = transport()->password();
     }
+
     login->setUserName(transport()->userName());
     login->setPassword(passwd);
     switch (transport()->authenticationType()) {
