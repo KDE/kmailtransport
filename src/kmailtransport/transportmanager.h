@@ -13,7 +13,6 @@
 #include <QList>
 #include <QObject>
 
-
 namespace KWallet {
 class Wallet;
 }

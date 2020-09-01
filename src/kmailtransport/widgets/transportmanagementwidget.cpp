@@ -133,10 +133,10 @@ void TransportManagementWidget::Private::removeClicked()
     }
     const int rc
         = KMessageBox::questionYesNo(
-        q,
-        i18n("Do you want to remove outgoing account '%1'?",
-             ui.transportList->currentItem()->text(0)),
-        i18n("Remove outgoing account?"));
+              q,
+              i18n("Do you want to remove outgoing account '%1'?",
+                   ui.transportList->currentItem()->text(0)),
+              i18n("Remove outgoing account?"));
     if (rc == KMessageBox::No) {
         return;
     }

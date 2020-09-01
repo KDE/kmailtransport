@@ -188,22 +188,22 @@ void SmtpJob::startPasswordRetrieval(bool forceRefresh)
             GOOGLE_API_KEY, transport()->userName(), { KGAPI2::Account::mailScopeUrl() });
         connect(promise, &KGAPI2::AccountPromise::finished,
                 this, [forceRefresh, this](KGAPI2::AccountPromise *promise) {
-                    if (promise->account()) {
-                        if (forceRefresh) {
-                            promise = KGAPI2::AccountManager::instance()->refreshTokens(
-                                GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName());
-                        } else {
-                            onTokenRequestFinished(promise);
-                            return;
-                        }
-                    } else {
-                        promise = KGAPI2::AccountManager::instance()->getAccount(
-                            GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName(),
-                            { KGAPI2::Account::mailScopeUrl() });
-                    }
-                    connect(promise, &KGAPI2::AccountPromise::finished,
-                            this, &SmtpJob::onTokenRequestFinished);
-                });
+            if (promise->account()) {
+                if (forceRefresh) {
+                    promise = KGAPI2::AccountManager::instance()->refreshTokens(
+                        GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName());
+                } else {
+                    onTokenRequestFinished(promise);
+                    return;
+                }
+            } else {
+                promise = KGAPI2::AccountManager::instance()->getAccount(
+                    GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName(),
+                    { KGAPI2::Account::mailScopeUrl() });
+            }
+            connect(promise, &KGAPI2::AccountPromise::finished,
+                    this, &SmtpJob::onTokenRequestFinished);
+        });
     } else {
         startLoginJob();
     }
@@ -226,7 +226,6 @@ void SmtpJob::onTokenRequestFinished(KGAPI2::AccountPromise *promise)
     startLoginJob();
 }
 
-
 void SmtpJob::startLoginJob()
 {
     if (!transport()->requiresAuthentication()) {
@@ -241,9 +240,9 @@ void SmtpJob::startLoginJob()
         && transport()->authenticationType() != Transport::EnumAuthenticationType::GSSAPI) {
         QPointer<KPasswordDialog> dlg
             = new KPasswordDialog(
-            nullptr,
-            KPasswordDialog::ShowUsernameLine
-            |KPasswordDialog::ShowKeepPassword);
+                  nullptr,
+                  KPasswordDialog::ShowUsernameLine
+                  |KPasswordDialog::ShowKeepPassword);
         dlg->setPrompt(i18n("You need to supply a username and a password "
                             "to use this SMTP server."));
         dlg->setKeepPassword(transport()->storePassword());
@@ -365,7 +364,7 @@ void SmtpJob::slotResult(KJob *job)
         return;
     }
 
-    if (qobject_cast<KSmtp::LoginJob*>(job)) {
+    if (qobject_cast<KSmtp::LoginJob *>(job)) {
         if (job->error() == KSmtp::LoginJob::TokenExpired) {
             startPasswordRetrieval(/*force refresh */ true);
             return;

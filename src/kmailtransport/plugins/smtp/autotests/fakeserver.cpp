@@ -34,9 +34,9 @@ QList<QByteArray> FakeServer::greetingAndEhlo(bool multiline)
 QList<QByteArray> FakeServer::bye()
 {
     return {
-               "C: QUIT",
-               "S: 221 So long, and thanks for all the fish",
-               "X: "
+        "C: QUIT",
+        "S: 221 So long, and thanks for all the fish",
+        "X: "
     };
 }
 
