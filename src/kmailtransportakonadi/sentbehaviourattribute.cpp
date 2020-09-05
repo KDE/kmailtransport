@@ -13,14 +13,12 @@ class Q_DECL_HIDDEN SentBehaviourAttribute::Private
 {
 public:
     Private()
-        : mBehaviour(SentBehaviourAttribute::MoveToDefaultSentCollection)
-        , mSilent(false)
     {
     }
 
-    SentBehaviourAttribute::SentBehaviour mBehaviour;
+    SentBehaviourAttribute::SentBehaviour mBehaviour = SentBehaviourAttribute::MoveToDefaultSentCollection;
     Akonadi::Collection mMoveToCollection;
-    bool mSilent;
+    bool mSilent = false;
 };
 
 SentBehaviourAttribute::SentBehaviourAttribute(SentBehaviour beh, const Collection &moveToCollection, bool sendSilently)

@@ -14,12 +14,7 @@ using namespace MailTransport;
 class Q_DECL_HIDDEN TransportAttribute::Private
 {
 public:
-    Private()
-        : mId(-1)
-    {
-    }
-
-    int mId;
+    int mId = -1;
 };
 
 TransportAttribute::TransportAttribute(int id)

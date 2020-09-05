@@ -24,7 +24,7 @@ public:
     Private(TransportManagementWidget *parent);
 
     Ui::TransportManagementWidget ui;
-    TransportManagementWidget *q;
+    TransportManagementWidget *const q;
 
     // Slots
     void defaultClicked();

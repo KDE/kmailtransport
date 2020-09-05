@@ -37,11 +37,7 @@ using namespace MailTransport;
 class SessionPool
 {
 public:
-    SessionPool() : ref(0)
-    {
-    }
-
-    int ref;
+    int ref = 0;
     QHash<int, KSmtp::Session *> sessions;
 
     void removeSession(KSmtp::Session *session)
@@ -74,7 +70,7 @@ public:
     {
     }
 
-    SmtpJob *q;
+    SmtpJob *const q;
     KSmtp::Session *session = nullptr;
     KSmtp::SessionUiProxy::Ptr uiProxy;
     enum State {

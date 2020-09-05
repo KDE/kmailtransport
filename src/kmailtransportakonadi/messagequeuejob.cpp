@@ -34,7 +34,6 @@ public:
     Private(MessageQueueJob *qq)
         : q(qq)
     {
-        started = false;
     }
 
     MessageQueueJob *const q;
@@ -45,7 +44,7 @@ public:
     SentBehaviourAttribute sentBehaviourAttribute;
     SentActionAttribute sentActionAttribute;
     AddressAttribute addressAttribute;
-    bool started;
+    bool started = false;
 
     /**
       Returns true if this message has everything it needs and is ready to be

@@ -26,7 +26,7 @@ public:
     PreCommandJobPrivate(PrecommandJob *parent);
     QProcess *process = nullptr;
     QString precommand;
-    PrecommandJob *q;
+    PrecommandJob *const q;
 
     // Slots
     void slotFinished(int, QProcess::ExitStatus);
@@ -35,8 +35,7 @@ public:
 };
 
 PreCommandJobPrivate::PreCommandJobPrivate(PrecommandJob *parent)
-    : process(nullptr)
-    , q(parent)
+    : q(parent)
 {
 }
 

@@ -19,11 +19,6 @@ using namespace MailTransport;
 class MailTransportPluginInfo
 {
 public:
-    MailTransportPluginInfo()
-        : plugin(nullptr)
-    {
-    }
-
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     MailTransport::TransportAbstractPlugin *plugin = nullptr;

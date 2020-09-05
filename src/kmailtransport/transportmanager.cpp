@@ -68,7 +68,7 @@ public:
     int defaultTransportId;
     bool isMainInstance;
     QList<TransportJob *> walletQueue;
-    TransportManager *q = nullptr;
+    TransportManager *const q;
 
     void readConfig();
     void writeConfig();

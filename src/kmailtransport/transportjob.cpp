@@ -16,12 +16,6 @@ using namespace MailTransport;
 class Q_DECL_HIDDEN MailTransport::TransportJob::Private
 {
 public:
-    Private()
-        : transport(nullptr)
-        , buffer(nullptr)
-    {
-    }
-
     QString sender;
     QStringList to;
     QStringList cc;

@@ -19,7 +19,6 @@ class Q_DECL_HIDDEN Akonadi::FilterActionJob::Private
 public:
     Private(FilterActionJob *qq)
         : q(qq)
-        , functor(nullptr)
     {
     }
 
@@ -28,7 +27,7 @@ public:
         delete functor;
     }
 
-    FilterActionJob *q;
+    FilterActionJob *const q;
     Collection collection;
     Item::List items;
     FilterAction *functor = nullptr;

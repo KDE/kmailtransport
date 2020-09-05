@@ -17,7 +17,6 @@ class SentActionAttribute::Action::Private : public QSharedData
 {
 public:
     Private()
-        : mType(Invalid)
     {
     }
 
@@ -28,7 +27,7 @@ public:
         mValue = other.mValue;
     }
 
-    Type mType;
+    Type mType = Invalid;
     QVariant mValue;
 };
 
