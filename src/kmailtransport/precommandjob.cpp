@@ -71,7 +71,7 @@ void PrecommandJob::start()
 void PreCommandJobPrivate::slotStarted()
 {
     Q_EMIT q->infoMessage(q, i18n("Executing precommand"),
-                        i18n("Executing precommand '%1'.", precommand));
+                          i18n("Executing precommand '%1'.", precommand));
 }
 
 void PreCommandJobPrivate::slotError(QProcess::ProcessError error)

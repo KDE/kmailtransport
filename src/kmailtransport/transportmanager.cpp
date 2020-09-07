@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2006 - 2007 Volker Krause <vkrause@kde.org>
+  SPDX-FileCopyrightText: 2006-2007 Volker Krause <vkrause@kde.org>
 
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
@@ -623,7 +623,9 @@ void TransportManager::loadPasswordsAsync()
         d->wallet = Wallet::openWallet(Wallet::NetworkWallet(), window,
                                        Wallet::Asynchronous);
         if (d->wallet) {
-            connect(d->wallet, &KWallet::Wallet::walletOpened, this, [this](bool status) { d->slotWalletOpened(status);});
+            connect(d->wallet, &KWallet::Wallet::walletOpened, this, [this](bool status) {
+                d->slotWalletOpened(status);
+            });
             d->walletAsyncOpen = true;
         } else {
             d->walletOpenFailed = true;

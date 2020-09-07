@@ -74,6 +74,8 @@ public:
     {
     }
 
+    void doLogin();
+
     SmtpJob *q;
     KSmtp::Session *session = nullptr;
     KSmtp::SessionUiProxy::Ptr uiProxy;
@@ -188,22 +190,22 @@ void SmtpJob::startPasswordRetrieval(bool forceRefresh)
             GOOGLE_API_KEY, transport()->userName(), { KGAPI2::Account::mailScopeUrl() });
         connect(promise, &KGAPI2::AccountPromise::finished,
                 this, [forceRefresh, this](KGAPI2::AccountPromise *promise) {
-                    if (promise->account()) {
-                        if (forceRefresh) {
-                            promise = KGAPI2::AccountManager::instance()->refreshTokens(
-                                GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName());
-                        } else {
-                            onTokenRequestFinished(promise);
-                            return;
-                        }
-                    } else {
-                        promise = KGAPI2::AccountManager::instance()->getAccount(
-                            GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName(),
-                            { KGAPI2::Account::mailScopeUrl() });
-                    }
-                    connect(promise, &KGAPI2::AccountPromise::finished,
-                            this, &SmtpJob::onTokenRequestFinished);
-                });
+            if (promise->account()) {
+                if (forceRefresh) {
+                    promise = KGAPI2::AccountManager::instance()->refreshTokens(
+                        GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName());
+                } else {
+                    onTokenRequestFinished(promise);
+                    return;
+                }
+            } else {
+                promise = KGAPI2::AccountManager::instance()->getAccount(
+                    GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName(),
+                    { KGAPI2::Account::mailScopeUrl() });
+            }
+            connect(promise, &KGAPI2::AccountPromise::finished,
+                    this, &SmtpJob::onTokenRequestFinished);
+        });
     } else {
         startLoginJob();
     }
@@ -226,7 +228,6 @@ void SmtpJob::onTokenRequestFinished(KGAPI2::AccountPromise *promise)
     startLoginJob();
 }
 
-
 void SmtpJob::startLoginJob()
 {
     if (!transport()->requiresAuthentication()) {
@@ -234,16 +235,16 @@ void SmtpJob::startLoginJob()
         return;
     }
 
-    auto login = new KSmtp::LoginJob(d->session);
     auto user = transport()->userName();
     auto passwd = transport()->password();
     if ((user.isEmpty() || passwd.isEmpty())
         && transport()->authenticationType() != Transport::EnumAuthenticationType::GSSAPI) {
         QPointer<KPasswordDialog> dlg
             = new KPasswordDialog(
-            nullptr,
-            KPasswordDialog::ShowUsernameLine
-            |KPasswordDialog::ShowKeepPassword);
+                  nullptr,
+                  KPasswordDialog::ShowUsernameLine
+                  |KPasswordDialog::ShowKeepPassword);
+        dlg->setAttribute(Qt::WA_DeleteOnClose, true);
         dlg->setPrompt(i18n("You need to supply a username and a password "
                             "to use this SMTP server."));
         dlg->setKeepPassword(transport()->storePassword());
@@ -251,31 +252,41 @@ void SmtpJob::startLoginJob()
         dlg->setUsername(user);
         dlg->setPassword(passwd);
 
-        bool gotIt = false;
-        if (dlg->exec()) {
+        connect(this, &KJob::result, dlg, &QDialog::reject);
+
+        connect(dlg, &QDialog::finished, this, [this, dlg](const int result) {
+            if (result == QDialog::Rejected) {
+                setError(KilledJobError);
+                emitResult();
+                return;
+            }
+
             transport()->setUserName(dlg->username());
             transport()->setPassword(dlg->password());
             transport()->setStorePassword(dlg->keepPassword());
             transport()->save();
-            gotIt = true;
-        }
-        delete dlg;
 
-        if (!gotIt) {
-            setError(KilledJobError);
-            emitResult();
-            return;
-        }
+            d->doLogin();
+        });
+        dlg->open();
+
+        return;
     }
 
-    if (transport()->authenticationType() == Transport::EnumAuthenticationType::XOAUTH2) {
+    d->doLogin();
+}
+
+void SmtpJobPrivate::doLogin()
+{
+    QString passwd = q->transport()->password();
+    if (q->transport()->authenticationType() == Transport::EnumAuthenticationType::XOAUTH2) {
         passwd = passwd.left(passwd.indexOf(QLatin1Char('\001')));
-    } else {
-        passwd = transport()->password();
     }
-    login->setUserName(transport()->userName());
+
+    auto login = new KSmtp::LoginJob(session);
+    login->setUserName(q->transport()->userName());
     login->setPassword(passwd);
-    switch (transport()->authenticationType()) {
+    switch (q->transport()->authenticationType()) {
     case TransportBase::EnumAuthenticationType::PLAIN:
         login->setPreferedAuthMode(KSmtp::LoginJob::Plain);
         break;
@@ -298,11 +309,11 @@ void SmtpJob::startLoginJob()
         login->setPreferedAuthMode(KSmtp::LoginJob::GSSAPI);
         break;
     default:
-        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown authentication mode" << transport()->authenticationTypeString();
+        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown authentication mode" << q->transport()->authenticationTypeString();
         break;
     }
 
-    switch (transport()->encryption()) {
+    switch (q->transport()->encryption()) {
     case Transport::EnumEncryption::None:
         login->setEncryptionMode(KSmtp::LoginJob::Unencrypted);
         break;
@@ -313,12 +324,12 @@ void SmtpJob::startLoginJob()
         login->setEncryptionMode(KSmtp::LoginJob::SSLorTLS);
         break;
     default:
-        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown encryption mode" << transport()->encryption();
+        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown encryption mode" << q->transport()->encryption();
         break;
     }
 
-    connect(login, &KJob::result, this, &SmtpJob::slotResult);
-    addSubjob(login);
+    q->connect(login, &KJob::result, q, &SmtpJob::slotResult);
+    q->addSubjob(login);
     login->start();
     qCDebug(MAILTRANSPORT_SMTP_LOG) << "Login started";
 }
@@ -363,7 +374,7 @@ void SmtpJob::slotResult(KJob *job)
         return;
     }
 
-    if (qobject_cast<KSmtp::LoginJob*>(job)) {
+    if (qobject_cast<KSmtp::LoginJob *>(job)) {
         if (job->error() == KSmtp::LoginJob::TokenExpired) {
             startPasswordRetrieval(/*force refresh */ true);
             return;
