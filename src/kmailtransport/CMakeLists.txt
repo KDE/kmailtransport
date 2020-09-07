@@ -59,6 +59,7 @@ target_link_libraries(KF5MailTransport
     KF5::Wallet
     PRIVATE
     KF5::I18n
+    KF5::KIOCore
     KF5::ConfigGui
     KF5::WidgetsAddons
     KF5::CoreAddons

@@ -1,5 +1,5 @@
 /*
-  SPDX-FileCopyrightText: 2006-2007 Volker Krause <vkrause@kde.org>
+  Copyright (c) 2006 - 2007 Volker Krause <vkrause@kde.org>
   SPDX-FileCopyrightText: 2007 KovoKs <info@kovoks.nl>
   SPDX-FileCopyrightText: 2008 Thomas McGuire <thomas.mcguire@gmx.net>
 
@@ -17,7 +17,6 @@
 #include <QHash>
 #include <QHostInfo>
 #include <QProgressBar>
-#include <QRegularExpression>
 #include <QTimer>
 #include <QSet>
 
@@ -68,8 +67,7 @@ public:
     bool handleNntpConversation(MailTransport::Socket *socket, int type, int *stage, const QString &response, bool *shouldStartTLS);
     QVector<int> parseAuthenticationList(const QStringList &authentications);
 
-    inline bool isGmail(const QString &server) const
-    {
+    inline bool isGmail(const QString &server) const {
         return server.endsWith(QLatin1String("gmail.com")) || server.endsWith(QLatin1String("googlemail.com"));
     }
 
@@ -244,9 +242,10 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
     // Initial Greeting
     if (stage == 0) {
         //Regexp taken from POP3 ioslave
-        const QString responseWithoutCRLF = response.chopped(2);
-        const QRegularExpression re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"),
-                                    QRegularExpression::CaseInsensitiveOption);
+        QString responseWithoutCRLF = response;
+        responseWithoutCRLF.chop(2);
+        QRegExp re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"),
+                   Qt::CaseInsensitive);
         if (responseWithoutCRLF.indexOf(re) != -1) {
             authenticationResults[type] << Transport::EnumAuthenticationType::APOP;
         }

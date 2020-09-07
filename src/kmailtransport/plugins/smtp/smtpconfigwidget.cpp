@@ -2,7 +2,7 @@
     SPDX-FileCopyrightText: 2009 Constantin Berzan <exit3219@gmail.com>
 
     Based on MailTransport code by:
-    SPDX-FileCopyrightText: 2006-2007 Volker Krause <vkrause@kde.org>
+    SPDX-FileCopyrightText: 2006 - 2007 Volker Krause <vkrause@kde.org>
     SPDX-FileCopyrightText: 2007 KovoKs <kovoks@kovoks.nl>
 
     Based on KMail code by:

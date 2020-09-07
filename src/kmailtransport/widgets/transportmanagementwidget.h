@@ -1,5 +1,5 @@
 /*
-  SPDX-FileCopyrightText: 2006-2007 Volker Krause <vkrause@kde.org>
+  Copyright (c) 2006 - 2007 Volker Krause <vkrause@kde.org>
 
   Based on KMail code by:
   SPDX-FileCopyrightText: 2001-2003 Marc Mutz <mutz@kde.org>

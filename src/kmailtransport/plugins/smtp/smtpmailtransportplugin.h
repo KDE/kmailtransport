@@ -14,7 +14,8 @@ class SMTPMailTransportPlugin : public MailTransport::TransportAbstractPlugin
 {
     Q_OBJECT
 public:
-    explicit SMTPMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {
+    explicit SMTPMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
+    {
     });
     ~SMTPMailTransportPlugin() override;
 
