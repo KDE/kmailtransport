@@ -6,7 +6,6 @@
 
 #include "transporttype.h"
 #include "transporttype_p.h"
-#include "transport.h"
 
 using namespace MailTransport;
 

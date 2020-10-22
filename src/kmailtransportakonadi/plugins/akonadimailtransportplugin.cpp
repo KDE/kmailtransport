@@ -9,7 +9,6 @@
 #include "mailtransportplugin_akonadi_debug.h"
 #include <KPluginFactory>
 #include <AkonadiCore/AgentManager>
-#include <MailTransport/TransportAbstractPlugin>
 #include <AkonadiCore/AgentInstanceCreateJob>
 #include <MailTransport/Transport>
 

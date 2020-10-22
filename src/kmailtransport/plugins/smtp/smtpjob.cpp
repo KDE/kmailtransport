@@ -21,7 +21,6 @@
 #include "mailtransport_debug.h"
 #include <KPasswordDialog>
 
-#include <KSMTP/Session>
 #include <KSMTP/LoginJob>
 #include <KSMTP/SendJob>
 

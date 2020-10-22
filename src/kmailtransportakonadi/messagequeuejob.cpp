@@ -13,7 +13,6 @@
 #include "mailtransportakonadi_debug.h"
 #include <KLocalizedString>
 
-#include <collection.h>
 #include <item.h>
 #include <itemcreatejob.h>
 #include <addressattribute.h>
