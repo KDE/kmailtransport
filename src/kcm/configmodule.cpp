@@ -21,9 +21,9 @@ ConfigModule::ConfigModule(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)
 {
     setButtons(NoAdditionalButton);
-    QVBoxLayout *l = new QVBoxLayout(this);
+    auto *l = new QVBoxLayout(this);
     l->setContentsMargins(0, 0, 0, 0);
-    TransportManagementWidget *tmw = new TransportManagementWidget(this);
+    auto *tmw = new TransportManagementWidget(this);
     l->addWidget(tmw);
 }
 

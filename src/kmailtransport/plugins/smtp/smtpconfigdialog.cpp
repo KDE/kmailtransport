@@ -22,7 +22,7 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
 {
     Q_ASSERT(transport);
     mTransport = transport;
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mConfigWidget = new SMTPConfigWidget(transport, this);
     mConfigWidget->setObjectName(QStringLiteral("smtpconfigwidget"));
     mainLayout->addWidget(mConfigWidget);

@@ -87,7 +87,7 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
 {
     // Setup UI.
     {
-        QVBoxLayout *mainLayout = new QVBoxLayout(this);
+        auto *mainLayout = new QVBoxLayout(this);
         QWidget *widget = new QWidget(this);
         d->ui.setupUi(widget);
         mainLayout->addWidget(widget);
@@ -105,7 +105,7 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
     // Populate type list.
     const auto transportTypes = TransportManager::self()->types();
     for (const TransportType &type : transportTypes) {
-        QTreeWidgetItem *treeItem = new QTreeWidgetItem(d->ui.typeListView);
+        auto *treeItem = new QTreeWidgetItem(d->ui.typeListView);
         treeItem->setText(0, type.name());
         treeItem->setText(1, type.description());
         treeItem->setToolTip(1, type.description());

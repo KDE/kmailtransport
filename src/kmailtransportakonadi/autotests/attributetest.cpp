@@ -73,7 +73,7 @@ void AttributeTest::testSerialization()
         cc << QStringLiteral("cc2@me.org");
         QStringList bcc(QStringLiteral("bcc1@me.org"));
         bcc << QStringLiteral("bcc2@me.org");
-        AddressAttribute *a = new AddressAttribute(from, to, cc, bcc);
+        auto *a = new AddressAttribute(from, to, cc, bcc);
         QByteArray data = a->serialized();
         delete a;
         a = new AddressAttribute;
@@ -92,7 +92,7 @@ void AttributeTest::testSerialization()
         qDebug() << "ms" << date.toString(QStringLiteral("z"));
         int ms = date.toString(QStringLiteral("z")).toInt();
         date = date.addMSecs(-ms);
-        DispatchModeAttribute *a = new DispatchModeAttribute(mode);
+        auto *a = new DispatchModeAttribute(mode);
         a->setSendAfter(date);
         QByteArray data = a->serialized();
         delete a;
@@ -105,7 +105,7 @@ void AttributeTest::testSerialization()
 
     {
         QString msg(QStringLiteral("The #!@$ing thing failed!"));
-        ErrorAttribute *a = new ErrorAttribute(msg);
+        auto *a = new ErrorAttribute(msg);
         QByteArray data = a->serialized();
         delete a;
         a = new ErrorAttribute;
@@ -115,7 +115,7 @@ void AttributeTest::testSerialization()
     }
 
     {
-        SentActionAttribute *a = new SentActionAttribute();
+        auto *a = new SentActionAttribute();
         const qlonglong id = 123456789012345ll;
 
         a->addAction(SentActionAttribute::Action::MarkAsReplied, QVariant(id));
@@ -225,7 +225,7 @@ void AttributeTest::testSerialization()
 
     {
         int id = 3219;
-        TransportAttribute *a = new TransportAttribute(id);
+        auto *a = new TransportAttribute(id);
         QByteArray data = a->serialized();
         delete a;
         a = new TransportAttribute;

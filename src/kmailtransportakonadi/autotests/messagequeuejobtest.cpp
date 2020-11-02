@@ -52,7 +52,7 @@ void MessageQueueJobTest::initTestCase()
     mda.setIsOnline(false);
 
     // check that outbox is empty
-    SpecialMailCollectionsRequestJob *rjob = new SpecialMailCollectionsRequestJob(this);
+    auto *rjob = new SpecialMailCollectionsRequestJob(this);
     rjob->requestDefaultCollection(SpecialMailCollections::Outbox);
     QSignalSpy spy(rjob, &KJob::result);
     QVERIFY(spy.wait(10000));
@@ -66,7 +66,7 @@ void MessageQueueJobTest::testValidMessages()
     QVERIFY2(tid >= 0, "I need a default transport, but there is none.");
 
     // send a valid message using the default transport
-    MessageQueueJob *qjob = new MessageQueueJob;
+    auto *qjob = new MessageQueueJob;
     qjob->transportAttribute().setTransportId(tid);
     Message::Ptr msg = Message::Ptr(new Message);
     msg->setContent("\nThis is message #1 from the MessageQueueJobTest unit test.\n");
@@ -87,30 +87,30 @@ void MessageQueueJobTest::testValidMessages()
     Item item = fjob->items().constFirst();
     QVERIFY(!item.remoteId().isEmpty());   // stored by the resource
     QVERIFY(item.hasPayload<Message::Ptr>());
-    AddressAttribute *addrA = item.attribute<AddressAttribute>();
+    auto *addrA = item.attribute<AddressAttribute>();
     QVERIFY(addrA);
     QVERIFY(addrA->from().isEmpty());
     QCOMPARE(addrA->to().count(), 1);
     QCOMPARE(addrA->to(), SPAM_ADDRESS);
     QCOMPARE(addrA->cc().count(), 0);
     QCOMPARE(addrA->bcc().count(), 0);
-    DispatchModeAttribute *dA = item.attribute<DispatchModeAttribute>();
+    auto *dA = item.attribute<DispatchModeAttribute>();
     QVERIFY(dA);
     QCOMPARE(dA->dispatchMode(), DispatchModeAttribute::Automatic);   // default mode
-    SentBehaviourAttribute *sA = item.attribute<SentBehaviourAttribute>();
+    auto *sA = item.attribute<SentBehaviourAttribute>();
     QVERIFY(sA);
     // default sent collection
     QCOMPARE(sA->sentBehaviour(), SentBehaviourAttribute::MoveToDefaultSentCollection);
-    TransportAttribute *tA = item.attribute<TransportAttribute>();
+    auto *tA = item.attribute<TransportAttribute>();
     QVERIFY(tA);
     QCOMPARE(tA->transportId(), tid);
-    ErrorAttribute *eA = item.attribute<ErrorAttribute>();
+    auto *eA = item.attribute<ErrorAttribute>();
     QVERIFY(!eA);   // no error
     QCOMPARE(item.flags().count(), 1);
     QVERIFY(item.flags().contains(Akonadi::MessageFlags::Queued));
 
     // delete message, for further tests
-    ItemDeleteJob *djob = new ItemDeleteJob(item);
+    auto *djob = new ItemDeleteJob(item);
     AKVERIFYEXEC(djob);
     verifyOutboxContents(0);
 
@@ -126,7 +126,7 @@ void MessageQueueJobTest::testInvalidMessages()
     Message::Ptr msg;
 
     // without message
-    MessageQueueJob *job = new MessageQueueJob;
+    auto *job = new MessageQueueJob;
     job->transportAttribute().setTransportId(TransportManager::self()->defaultTransportId());
     job->addressAttribute().setTo(SPAM_ADDRESS);
     QVERIFY(!job->exec());
@@ -166,7 +166,7 @@ void MessageQueueJobTest::verifyOutboxContents(qlonglong count)
     Collection outbox
         = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
     QVERIFY(outbox.isValid());
-    CollectionStatisticsJob *job = new CollectionStatisticsJob(outbox);
+    auto *job = new CollectionStatisticsJob(outbox);
     AKVERIFYEXEC(job);
     QCOMPARE(job->statistics().count(), count);
 }

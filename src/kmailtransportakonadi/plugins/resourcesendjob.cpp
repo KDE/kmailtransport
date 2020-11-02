@@ -30,7 +30,7 @@ void ResourceSendJob::doStart()
 {
     Message::Ptr msg = Message::Ptr(new Message);
     msg->setContent(data());
-    MessageQueueJob *job = new MessageQueueJob;
+    auto *job = new MessageQueueJob;
     job->setMessage(msg);
     job->transportAttribute().setTransportId(transport()->id());
     // Default dispatch mode (send now).

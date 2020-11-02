@@ -54,7 +54,7 @@ void DispatcherInterface::dispatchManually()
         return;
     }
 
-    FilterActionJob *mjob = new FilterActionJob(outbox, new SendQueuedAction, sInstance);
+    auto *mjob = new FilterActionJob(outbox, new SendQueuedAction, sInstance);
     QObject::connect(mjob, &KJob::result, sInstance(), &DispatcherInterfacePrivate::massModifyResult);
 }
 
@@ -67,7 +67,7 @@ void DispatcherInterface::retryDispatching()
         return;
     }
 
-    FilterActionJob *mjob = new FilterActionJob(outbox, new ClearErrorAction, sInstance);
+    auto *mjob = new FilterActionJob(outbox, new ClearErrorAction, sInstance);
     QObject::connect(mjob, &KJob::result, sInstance(), &DispatcherInterfacePrivate::massModifyResult);
 }
 
@@ -80,7 +80,7 @@ void DispatcherInterface::dispatchManualTransport(int transportId)
         return;
     }
 
-    FilterActionJob *mjob
+    auto *mjob
         = new FilterActionJob(outbox, new DispatchManualTransportAction(transportId), sInstance);
     QObject::connect(mjob, &KJob::result, sInstance(), &DispatcherInterfacePrivate::massModifyResult);
 }

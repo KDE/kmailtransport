@@ -104,7 +104,7 @@ SentActionAttribute::Action::List SentActionAttribute::actions() const
 
 SentActionAttribute *SentActionAttribute::clone() const
 {
-    SentActionAttribute *attribute = new SentActionAttribute;
+    auto *attribute = new SentActionAttribute;
     attribute->d->mActions = d->mActions;
 
     return attribute;
