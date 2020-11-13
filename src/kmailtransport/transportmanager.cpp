@@ -622,6 +622,7 @@ void TransportManager::loadPasswordsAsync()
 
         d->wallet = Wallet::openWallet(Wallet::NetworkWallet(), window,
                                        Wallet::Asynchronous);
+        //Already async. It will be easy to port to qt5keychain
         if (d->wallet) {
             connect(d->wallet, &KWallet::Wallet::walletOpened, this, [this](bool status) {
                 d->slotWalletOpened(status);
