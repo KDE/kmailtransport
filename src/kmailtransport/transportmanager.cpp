@@ -392,6 +392,7 @@ void TransportManager::removeTransport(int id)
     d->validateDefault();
     QString group = t->currentGroup();
     if (t->storePassword()) {
+        //Move async
         Wallet *currentWallet = wallet();
         if (currentWallet) {
             currentWallet->removeEntry(QString::number(t->id()));
