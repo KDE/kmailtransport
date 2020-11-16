@@ -55,7 +55,7 @@ set_package_properties(Qt5Keychain PROPERTIES
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054C00)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x054D00)
 
 add_definitions(-DQT_NO_FOREACH)
 add_definitions(-DQT_NO_KEYWORDS)
