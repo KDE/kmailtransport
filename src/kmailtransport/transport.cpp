@@ -253,34 +253,6 @@ void Transport::readPassword()
     }
     d->passwordLoaded = true;
 
-    // check whether there is a chance to find our password at all
-    if (Wallet::folderDoesNotExist(Wallet::NetworkWallet(), WALLET_FOLDER)
-        || Wallet::keyDoesNotExist(Wallet::NetworkWallet(), WALLET_FOLDER,
-                                   QString::number(id()))) {
-        // try migrating password from kmail
-        if (Wallet::folderDoesNotExist(Wallet::NetworkWallet(), KMAIL_WALLET_FOLDER)
-            || Wallet::keyDoesNotExist(Wallet::NetworkWallet(), KMAIL_WALLET_FOLDER,
-                                       QStringLiteral("transport-%1").arg(id()))) {
-            return;
-        }
-        qCDebug(MAILTRANSPORT_LOG) << "migrating password from kmail wallet";
-        KWallet::Wallet *wallet = TransportManager::self()->wallet();
-        if (wallet) {
-            QString pwd;
-            wallet->setFolder(KMAIL_WALLET_FOLDER);
-            if (wallet->readPassword(QStringLiteral("transport-%1").arg(id()), pwd) == 0) {
-                setPassword(pwd);
-                save();
-            } else {
-                d->password.clear();
-                d->passwordLoaded = false;
-            }
-            wallet->removeEntry(QStringLiteral("transport-%1").arg(id()));
-            wallet->setFolder(WALLET_FOLDER);
-        }
-        return;
-    }
-
     // finally try to open the wallet and read the password
     KWallet::Wallet *wallet = TransportManager::self()->wallet();
     if (wallet) {
