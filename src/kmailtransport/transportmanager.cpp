@@ -32,7 +32,8 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <Kdelibs4ConfigMigrator>
-
+#include <qt5keychain/keychain.h>
+using namespace QKeychain;
 #include <KWallet>
 
 using namespace MailTransport;
@@ -370,10 +371,9 @@ void TransportManager::setDefaultTransport(int id)
 
 void TransportManager::removePasswordFromWallet(int id)
 {
-    Wallet *currentWallet = wallet();
-    if (currentWallet) {
-        currentWallet->removeEntry(QString::number(id));
-    }
+    auto deleteJob = new DeletePasswordJob(WALLET_FOLDER);
+    deleteJob->setKey(QString::number(id));
+    deleteJob->start();
 }
 
 void TransportManager::removeTransport(int id)
