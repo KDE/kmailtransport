@@ -18,7 +18,8 @@
 #include <KMessageBox>
 #include <KStringHandler>
 #include <KWallet/KWallet>
-
+#include <qt5keychain/keychain.h>
+using namespace QKeychain;
 using namespace MailTransport;
 using namespace KWallet;
 
@@ -31,7 +32,6 @@ Transport::Transport(const QString &cfgGroup)
     d->passwordDirty = false;
     d->storePasswordInFile = false;
     d->needsWalletMigration = false;
-    d->passwordNeedsUpdateFromWallet = false;
     load();
 }
 
@@ -169,20 +169,6 @@ void Transport::usrRead()
     }
 
     if (d->passwordLoaded) {
-        if (d->passwordNeedsUpdateFromWallet) {
-            d->passwordNeedsUpdateFromWallet = false;
-            // read password if wallet is open, defer otherwise
-            if (Wallet::isOpen(Wallet::NetworkWallet())) {
-                // Don't read the password right away because this can lead
-                // to reentrancy problems in KDBusServiceStarter when an application
-                // run in Kontact creates the transports (due to a QEventLoop in the
-                // synchronous KWallet openWallet call).
-                QTimer::singleShot(0, this, &Transport::readPassword);
-            } else {
-                d->passwordLoaded = false;
-            }
-        }
-
         return;
     }
 
@@ -253,17 +239,24 @@ void Transport::readPassword()
     }
     d->passwordLoaded = true;
 
-    // finally try to open the wallet and read the password
-    KWallet::Wallet *wallet = TransportManager::self()->wallet();
-    if (wallet) {
-        QString pwd;
-        if (wallet->readPassword(QString::number(id()), pwd) == 0) {
-            setPassword(pwd);
-        } else {
-            d->password.clear();
-            d->passwordLoaded = false;
-        }
+    auto readJob = new ReadPasswordJob(WALLET_FOLDER, this);
+    connect(readJob, &Job::finished, this, &Transport::readTransportPasswordFinished);
+    readJob->setKey(QString::number(id()));
+    readJob->start();
+}
+
+void Transport::readTransportPasswordFinished(QKeychain::Job *baseJob)
+{
+    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    Q_ASSERT(job);
+    if (job->error()) {
+        d->password.clear();
+        d->passwordLoaded = false;
+        qWarning() << "We have an error during reading password " << job->errorString();
+    } else {
+        setPassword(job->textData());
     }
+
 }
 
 bool Transport::needsWalletMigration() const

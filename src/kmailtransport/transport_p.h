@@ -23,7 +23,6 @@ public:
     bool passwordDirty;
     bool storePasswordInFile;
     bool needsWalletMigration;
-    bool passwordNeedsUpdateFromWallet;
 };
 
 #endif
