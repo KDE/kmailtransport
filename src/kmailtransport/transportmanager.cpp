@@ -405,6 +405,40 @@ void TransportManager::removeTransport(int id)
 
 void TransportManagerPrivate::readConfig()
 {
+    QList<Transport *> oldTransports = transports;
+    transports.clear();
+
+    static QRegularExpression re(QStringLiteral("^Transport (.+)$"));
+    const QStringList groups = config->groupList().filter(re);
+    for (const QString &s : groups) {
+        const QRegularExpressionMatch match = re.match(s);
+        if (!match.hasMatch()) {
+            continue;
+        }
+        Transport *t = nullptr;
+        // see if we happen to have that one already
+        for (Transport *old : oldTransports) {
+            if (old->currentGroup() == QLatin1String("Transport ") + match.captured(1)) {
+                qCDebug(MAILTRANSPORT_LOG) << "reloading existing transport:" << s;
+                t = old;
+                t->load();
+                oldTransports.removeAll(old);
+                break;
+            }
+        }
+
+        if (!t) {
+            t = new Transport(match.captured(1));
+        }
+        if (t->id() <= 0) {
+            t->setId(createId());
+            t->save();
+        }
+        transports.append(t);
+    }
+
+    qDeleteAll(oldTransports);
+    oldTransports.clear();
     // read default transport
     KConfigGroup group(config, "General");
     defaultTransportId = group.readEntry("default-transport", 0);
