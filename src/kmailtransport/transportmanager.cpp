@@ -390,13 +390,11 @@ void TransportManager::removeTransport(int id)
 
     d->transports.removeAll(t);
     d->validateDefault();
-    QString group = t->currentGroup();
+    const QString group = t->currentGroup();
     if (t->storePassword()) {
-        //Move async
-        Wallet *currentWallet = wallet();
-        if (currentWallet) {
-            currentWallet->removeEntry(QString::number(t->id()));
-        }
+        auto deleteJob = new DeletePasswordJob(WALLET_FOLDER);
+        deleteJob->setKey(QString::number(t->id()));
+        deleteJob->start();
     }
     delete t;
     d->config->deleteGroup(group);
