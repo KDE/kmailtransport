@@ -176,8 +176,6 @@ void Transport::usrRead()
     KConfigGroup group(config(), currentGroup());
     if (group.hasKey("password")) {
         d->password = KStringHandler::obscure(group.readEntry("password"));
-    } else if (group.hasKey("password-kmail")) { //Legacy
-        d->password = KStringHandler::obscure(group.readEntry("password-kmail"));
     }
 
     if (!d->password.isEmpty()) {
