@@ -417,8 +417,10 @@ void TransportManagerPrivate::readConfig()
         }
         Transport *t = nullptr;
         // see if we happen to have that one already
+        const QString capturedString = match.captured(1);
+        const QString checkString = QLatin1String("Transport ") + capturedString;
         for (Transport *old : oldTransports) {
-            if (old->currentGroup() == QLatin1String("Transport ") + match.captured(1)) {
+            if (old->currentGroup() == checkString) {
                 qCDebug(MAILTRANSPORT_LOG) << "reloading existing transport:" << s;
                 t = old;
                 t->load();
@@ -428,7 +430,7 @@ void TransportManagerPrivate::readConfig()
         }
 
         if (!t) {
-            t = new Transport(match.captured(1));
+            t = new Transport(capturedString);
         }
         if (t->id() <= 0) {
             t->setId(createId());
