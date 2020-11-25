@@ -268,7 +268,6 @@ void Transport::migrateToWallet()
     d->needsWalletMigration = false;
     KConfigGroup group(config(), currentGroup());
     group.deleteEntry("password");
-    group.deleteEntry("password-kmail");
     d->passwordDirty = true;
     d->storePasswordInFile = false;
     save();
@@ -276,7 +275,7 @@ void Transport::migrateToWallet()
 
 Transport *Transport::clone() const
 {
-    QString id = currentGroup().mid(10);
+    const QString id = currentGroup().mid(10);
     return new Transport(id);
 }
 
