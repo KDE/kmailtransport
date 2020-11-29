@@ -8,7 +8,6 @@
 #include "widgets/transportmanagementwidget.h"
 
 #include <KPluginFactory>
-#include <KPluginLoader>
 
 #include <QVBoxLayout>
 
