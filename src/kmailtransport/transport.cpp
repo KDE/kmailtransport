@@ -10,7 +10,6 @@
 #include "transportmanager.h"
 #include "transporttype_p.h"
 
-#include <QTimer>
 
 #include <KConfigGroup>
 #include "mailtransport_debug.h"
