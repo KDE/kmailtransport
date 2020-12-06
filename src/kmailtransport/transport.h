@@ -94,7 +94,7 @@ public:
 
       @since 4.5
     */
-    static QString authenticationTypeString(int type);
+    static Q_REQUIRED_RESULT QString authenticationTypeString(int type);
 
     /**
       Returns a deep copy of this Transport object which will no longer be
@@ -126,7 +126,7 @@ protected:
     /**
       Returns true if the password was not stored in the wallet.
     */
-    bool needsWalletMigration() const;
+    Q_REQUIRED_RESULT bool needsWalletMigration() const;
 
     /**
       Try to migrate the password from the config file to the wallet.

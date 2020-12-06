@@ -90,27 +90,27 @@ protected:
     /**
       Returns the sender of the mail.
     */
-    QString sender() const;
+    Q_REQUIRED_RESULT QString sender() const;
 
     /**
       Returns the "To" receiver(s) of the mail.
     */
-    QStringList to() const;
+    Q_REQUIRED_RESULT QStringList to() const;
 
     /**
       Returns the "Cc" receiver(s) of the mail.
     */
-    QStringList cc() const;
+    Q_REQUIRED_RESULT QStringList cc() const;
 
     /**
       Returns the "Bcc" receiver(s) of the mail.
     */
-    QStringList bcc() const;
+    Q_REQUIRED_RESULT QStringList bcc() const;
 
     /**
       Returns the data of the mail.
     */
-    QByteArray data() const;
+    Q_REQUIRED_RESULT QByteArray data() const;
 
     /**
       Returns a QBuffer opened on the message data. This is useful for

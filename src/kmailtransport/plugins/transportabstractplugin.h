@@ -34,7 +34,7 @@ class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject
     Q_OBJECT
 public:
     explicit TransportAbstractPlugin(QObject *parent = nullptr);
-    ~TransportAbstractPlugin();
+    ~TransportAbstractPlugin() override;
 
     Q_REQUIRED_RESULT virtual TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) = 0;
     Q_REQUIRED_RESULT virtual QVector<TransportAbstractPluginInfo> names() const = 0;

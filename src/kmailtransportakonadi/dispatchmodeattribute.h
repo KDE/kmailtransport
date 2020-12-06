@@ -46,15 +46,15 @@ public:
 
     /* reimpl */
     DispatchModeAttribute *clone() const override;
-    QByteArray type() const override;
-    QByteArray serialized() const override;
+    Q_REQUIRED_RESULT QByteArray type() const override;
+    Q_REQUIRED_RESULT QByteArray serialized() const override;
     void deserialize(const QByteArray &data) override;
 
     /**
       Returns the dispatch mode for the message.
       @see DispatchMode.
     */
-    DispatchMode dispatchMode() const;
+    Q_REQUIRED_RESULT DispatchMode dispatchMode() const;
 
     /**
       Sets the dispatch mode for the message.
@@ -67,7 +67,7 @@ public:
       Returns the date and time when the message should be sent.
       Only valid if dispatchMode() is Automatic.
     */
-    QDateTime sendAfter() const;
+    Q_REQUIRED_RESULT QDateTime sendAfter() const;
 
     /**
       Sets the date and time when the message should be sent.

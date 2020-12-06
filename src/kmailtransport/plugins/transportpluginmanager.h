@@ -17,7 +17,7 @@ class KMAILTRANSPORT_TESTS_EXPORT TransportPluginManager : public QObject
     Q_OBJECT
 public:
     explicit TransportPluginManager(QObject *parent = nullptr);
-    ~TransportPluginManager();
+    ~TransportPluginManager() override;
 
     static TransportPluginManager *self();
 

@@ -49,12 +49,12 @@ public:
      *
      * @param parent The parent widget.
      */
-    ServerTest(QObject *parent = nullptr);
+    explicit ServerTest(QObject *parent = nullptr);
 
     /**
      * Destroys the server test.
      */
-    ~ServerTest();
+    ~ServerTest() override;
 
     /**
      * Sets the server to test.
@@ -64,7 +64,7 @@ public:
     /**
      * Returns the server to test.
      */
-    QString server() const;
+    Q_REQUIRED_RESULT QString server() const;
 
     /**
      * Set a custom port to use.
@@ -97,7 +97,7 @@ public:
      *
      * @since 4.1
      */
-    int port(Transport::EnumEncryption::type encryptionMode) const;
+    Q_REQUIRED_RESULT int port(Transport::EnumEncryption::type encryptionMode) const;
 
     /**
      * Sets a fake hostname for the test. This is currently only used when
@@ -114,7 +114,7 @@ public:
     /**
      * @return the fake hostname, as set before with @ref setFakeHostname
      */
-    QString fakeHostname() const;
+    Q_REQUIRED_RESULT QString fakeHostname() const;
 
     /**
      * Makes @p pb the progressbar to use. This class will call show()
@@ -137,7 +137,7 @@ public:
     /**
      * Returns the protocol.
      */
-    QString protocol() const;
+    Q_REQUIRED_RESULT QString protocol() const;
 
     /**
      * Starts the test. Will emit finished() when done.
@@ -149,13 +149,13 @@ public:
      * after the finished() signals has been sent.
      * @return an enum of the type Transport::EnumAuthenticationType
      */
-    QVector<int> normalProtocols() const;
+    Q_REQUIRED_RESULT QVector<int> normalProtocols() const;
 
     /**
      * tells you if the normal server is available
      * @since 4.5
      */
-    bool isNormalPossible() const;
+    Q_REQUIRED_RESULT bool isNormalPossible() const;
 
     /**
      * Get the protocols for the TLS connections. Call this only
@@ -163,20 +163,20 @@ public:
      * @return an enum of the type Transport::EnumAuthenticationType
      * @since 4.1
      */
-    QVector<int> tlsProtocols() const;
+    Q_REQUIRED_RESULT QVector<int> tlsProtocols() const;
 
     /**
      * Get the protocols for the SSL connections. Call this only
      * after the finished() signals has been sent.
      * @return an enum of the type Transport::EnumAuthenticationType
      */
-    QVector<int> secureProtocols() const;
+    Q_REQUIRED_RESULT QVector<int> secureProtocols() const;
 
     /**
      * tells you if the ssl server is available
      * @since 4.5
      */
-    bool isSecurePossible() const;
+    Q_REQUIRED_RESULT bool isSecurePossible() const;
 
     /**
      * Get the special capabilities of the server.
@@ -185,7 +185,7 @@ public:
      * @return the list of special capabilities of the server.
      * @since 4.1
      */
-    QList<Capability> capabilities() const;
+    Q_REQUIRED_RESULT QList<Capability> capabilities() const;
 
 Q_SIGNALS:
     /**
