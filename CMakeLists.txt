@@ -36,6 +36,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
 ########### Find packages ###########
 find_package(KF5KCMUtils ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5ConfigWidgets ${KF5_MIN_VERSION} CONFIG REQUIRED)
+#remove in the future
 find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5I18n ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5KIO ${KF5_MIN_VERSION} CONFIG REQUIRED)
