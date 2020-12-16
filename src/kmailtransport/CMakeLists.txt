@@ -46,6 +46,9 @@ add_library(KF5MailTransport
     ${mailtransport_widgets_srcs}
     ${mailtransport_plugins_srcs}
     )
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(KF5MailTransport PROPERTIES UNITY_BUILD ON)
+endif()
 
 generate_export_header(KF5MailTransport BASE_NAME mailtransport)
 

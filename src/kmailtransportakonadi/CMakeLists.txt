@@ -28,7 +28,9 @@ ecm_qt_declare_logging_category(mailtransportakonadi_lib_srcs HEADER mailtranspo
 
 add_library(KF5MailTransportAkonadi ${mailtransportakonadi_lib_srcs}
     )
-
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(KF5MailTransportAkonadi PROPERTIES UNITY_BUILD ON)
+endif()
 generate_export_header(KF5MailTransportAkonadi BASE_NAME mailtransportakonadi)
 
 add_library(KF5::MailTransportAkonadi ALIAS KF5MailTransportAkonadi)
