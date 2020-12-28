@@ -36,7 +36,7 @@ public:
     /**
      * Destructor
      */
-    ~Socket();
+    ~Socket() override;
 
     /**
      * Existing connection will be closed and a new connection will be
