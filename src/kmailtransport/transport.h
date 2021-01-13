@@ -140,6 +140,7 @@ private Q_SLOTS:
 
 private:
     void readTransportPasswordFinished(QKeychain::Job *baseJob);
+    void loadPassword();
     TransportPrivate *const d;
 };
 } // namespace MailTransport

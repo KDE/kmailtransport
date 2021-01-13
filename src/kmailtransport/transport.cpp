@@ -32,6 +32,7 @@ Transport::Transport(const QString &cfgGroup)
     d->storePasswordInFile = false;
     d->needsWalletMigration = false;
     load();
+    loadPassword();
 }
 
 Transport::~Transport()
@@ -44,12 +45,16 @@ bool Transport::isValid() const
     return (id() > 0) && !host().isEmpty() && port() <= 65536;
 }
 
-QString Transport::password()
+void Transport::loadPassword()
 {
     if (!d->passwordLoaded && requiresAuthentication() && storePassword()
         && d->password.isEmpty()) {
         readPassword();
     }
+}
+
+QString Transport::password()
+{
     return d->password;
 }
 
