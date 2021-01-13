@@ -34,7 +34,7 @@ QVector<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::nam
 
 bool SMTPMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
-    Q_UNUSED(identifier);
+    Q_UNUSED(identifier)
     QPointer<MailTransport::SmtpConfigDialog> transportConfigDialog
         = new MailTransport::SmtpConfigDialog(transport, parent);
     transportConfigDialog->setWindowTitle(i18nc("@title:window", "Configure account"));
@@ -45,7 +45,7 @@ bool SMTPMailTransportPlugin::configureTransport(const QString &identifier, Mail
 
 MailTransport::TransportJob *SMTPMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
 {
-    Q_UNUSED(identifier);
+    Q_UNUSED(identifier)
     return new MailTransport::SmtpJob(t, this);
 }
 

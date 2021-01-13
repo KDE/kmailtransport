@@ -161,13 +161,13 @@ void MessageQueuer::jobResult(KJob *job)
 
 void MessageQueuer::jobPercent(KJob *job, unsigned long percent)
 {
-    Q_UNUSED(job);
+    Q_UNUSED(job)
     qDebug() << percent << "%";
 }
 
 void MessageQueuer::jobInfoMessage(KJob *job, const QString &info, const QString &info2)
 {
-    Q_UNUSED(job);
+    Q_UNUSED(job)
     qDebug() << info;
     qDebug() << info2;
 }

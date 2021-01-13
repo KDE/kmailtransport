@@ -65,7 +65,7 @@ QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::
 
 bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
-    Q_UNUSED(identifier);
+    Q_UNUSED(identifier)
     AgentInstance instance = AgentManager::self()->instance(transport->host());
     if (!instance.isValid()) {
         qCWarning(MAILTRANSPORT_AKONADI_LOG) << "Invalid resource instance" << transport->host();
@@ -78,7 +78,7 @@ bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, M
 
 MailTransport::TransportJob *AkonadiMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
 {
-    Q_UNUSED(identifier);
+    Q_UNUSED(identifier)
     return new MailTransport::ResourceSendJob(t, this);
 }
 
