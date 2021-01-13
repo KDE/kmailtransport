@@ -50,16 +50,17 @@ public:
 
     QProgressBar *testProgress = nullptr;
 
-    bool secureSocketFinished;
-    bool normalSocketFinished;
-    bool tlsFinished;
+    bool secureSocketFinished = false;
+    bool normalSocketFinished = false;
+    bool tlsFinished = false;
     bool popSupportsTLS;
     int normalStage;
     int secureStage;
     int encryptionMode;
 
-    bool normalPossible;
-    bool securePossible;
+    bool normalPossible = true;
+    bool securePossible = true;
+
 
     void finalResult();
     void handleSMTPIMAPResponse(int type, const QString &text);
@@ -87,12 +88,6 @@ public:
 
 ServerTestPrivate::ServerTestPrivate(ServerTest *test)
     : q(test)
-    , testProgress(nullptr)
-    , secureSocketFinished(false)
-    , normalSocketFinished(false)
-    , tlsFinished(false)
-    , normalPossible(true)
-    , securePossible(true)
 {
 }
 

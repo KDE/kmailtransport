@@ -61,7 +61,7 @@ void AddTransportDialogNG::Private::readConfig()
 
 QString AddTransportDialogNG::Private::selectedType() const
 {
-    QList<QTreeWidgetItem *> sel = ui.typeListView->selectedItems();
+    const QList<QTreeWidgetItem *> sel = ui.typeListView->selectedItems();
     if (!sel.empty()) {
         return sel.first()->data(0, Qt::UserRole).toString();
     }
@@ -87,7 +87,7 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
 {
     // Setup UI.
     {
-        auto *mainLayout = new QVBoxLayout(this);
+        auto mainLayout = new QVBoxLayout(this);
         QWidget *widget = new QWidget(this);
         d->ui.setupUi(widget);
         mainLayout->addWidget(widget);
@@ -105,7 +105,7 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
     // Populate type list.
     const auto transportTypes = TransportManager::self()->types();
     for (const TransportType &type : transportTypes) {
-        auto *treeItem = new QTreeWidgetItem(d->ui.typeListView);
+        auto treeItem = new QTreeWidgetItem(d->ui.typeListView);
         treeItem->setText(0, type.name());
         treeItem->setText(1, type.description());
         treeItem->setToolTip(1, type.description());

@@ -68,7 +68,7 @@ void TransportListView::commitData(QWidget *editor)
         return;
     }
     QTreeWidgetItem *item = selectedItems().first();
-    auto *edit = dynamic_cast<QLineEdit *>(editor);  // krazy:exclude=qclasses
+    auto edit = dynamic_cast<QLineEdit *>(editor);  // krazy:exclude=qclasses
     Q_ASSERT(edit);   // original code had if
 
     const int id = item->data(0, Qt::UserRole).toInt();
@@ -94,7 +94,7 @@ void TransportListView::fillTransportList()
     clear();
     const auto lstTransports = TransportManager::self()->transports();
     for (Transport *t : lstTransports) {
-        auto *item = new QTreeWidgetItem(this);
+        auto item = new QTreeWidgetItem(this);
         item->setData(0, Qt::UserRole, t->id());
         QString name = t->name();
         if (TransportManager::self()->defaultTransportId() == t->id()) {

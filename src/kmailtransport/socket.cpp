@@ -27,8 +27,8 @@ public:
     QSslSocket *socket = nullptr;
     QString server;
     QString protocol;
-    int port;
-    bool secure;
+    int port = 0;
+    bool secure = false;
 
     // slots
     void slotConnected();
@@ -44,9 +44,6 @@ private:
 
 SocketPrivate::SocketPrivate(Socket *s)
     : q(s)
-    , socket(nullptr)
-    , port(0)
-    , secure(false)
 {
 }
 

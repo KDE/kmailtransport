@@ -41,7 +41,7 @@ public:
       @param transportId The transport identifier.
       @return return true if we success to find transportId
     */
-    Q_REQUIRED_RESULT bool setCurrentTransport(int transportId);
+    bool setCurrentTransport(int transportId);
 
     /**
       Returns the type of the selected transport.

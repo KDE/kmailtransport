@@ -61,13 +61,13 @@ public:
     KConfig *config = nullptr;
     QList<Transport *> transports;
     TransportType::List types;
-    bool myOwnChange;
-    bool appliedChange;
+    bool myOwnChange = false;
+    bool appliedChange = false;
     KWallet::Wallet *wallet = nullptr;
-    bool walletOpenFailed;
-    bool walletAsyncOpen;
-    int defaultTransportId;
-    bool isMainInstance;
+    bool walletOpenFailed = false;
+    bool walletAsyncOpen = false;
+    int defaultTransportId = -1;
+    bool isMainInstance = false;
     QList<TransportJob *> walletQueue;
     TransportManager *const q;
 
@@ -112,12 +112,6 @@ TransportManager::TransportManager()
     migrate.migrate();
 
     qAddPostRoutine(destroyStaticTransportManager);
-    d->myOwnChange = false;
-    d->appliedChange = false;
-    d->wallet = nullptr;
-    d->walletOpenFailed = false;
-    d->walletAsyncOpen = false;
-    d->defaultTransportId = -1;
     d->config = new KConfig(QStringLiteral("mailtransports"));
 
     QDBusConnection::sessionBus().registerObject(DBUS_OBJECT_PATH, this,
