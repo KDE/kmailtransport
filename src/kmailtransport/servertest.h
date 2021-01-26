@@ -11,12 +11,13 @@
 #include <mailtransport_export.h>
 #include <transport.h>
 
-#include <QObject>
 #include <QList>
+#include <QObject>
 
 class QProgressBar;
 
-namespace MailTransport {
+namespace MailTransport
+{
 class ServerTestPrivate;
 
 /**
@@ -32,7 +33,6 @@ class MAILTRANSPORT_EXPORT ServerTest : public QObject
     Q_PROPERTY(QProgressBar *progressBar READ progressBar WRITE setProgressBar)
 
 public:
-
     /**
      * This enumeration has the special capabilities a server might
      * support. This covers only capabilities not related to authentication.
@@ -40,8 +40,8 @@ public:
      */
     enum Capability {
         Pipelining, ///< POP3 only. The server supports pipeplining of commands
-        Top,        ///< POP3 only. The server supports fetching only the headers
-        UIDL        ///< POP3 only. The server has support for unique identifiers
+        Top, ///< POP3 only. The server supports fetching only the headers
+        UIDL ///< POP3 only. The server has support for unique identifiers
     };
 
     /**

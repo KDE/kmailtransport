@@ -11,7 +11,8 @@
 
 #include <QSslSocket>
 
-namespace MailTransport {
+namespace MailTransport
+{
 class SocketPrivate;
 
 /**
@@ -25,7 +26,6 @@ class Socket : public QObject
     Q_OBJECT
 
 public:
-
     /**
      * Constructor, it will not auto connect. Call reconnect() to connect to
      * the parameters given.

@@ -14,7 +14,8 @@
 
 class TransportComboBoxPrivate;
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   A combo-box for selecting a mail transport.
   It is updated automatically when transports are added, changed, or removed.

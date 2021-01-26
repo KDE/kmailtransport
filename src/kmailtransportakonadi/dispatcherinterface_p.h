@@ -10,7 +10,8 @@
 
 class KJob;
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   @internal
 */
@@ -19,7 +20,6 @@ class DispatcherInterfacePrivate : public QObject
     Q_OBJECT
 
 public:
-
 public Q_SLOTS:
     void massModifyResult(KJob *job);
 };

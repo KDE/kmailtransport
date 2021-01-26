@@ -7,10 +7,11 @@
 #ifndef MAILTRANSPORT_AddTransportDialogNG_H
 #define MAILTRANSPORT_AddTransportDialogNG_H
 
-#include <QDialog>
 #include "kmailtransport_private_export.h"
+#include <QDialog>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   @internal
 

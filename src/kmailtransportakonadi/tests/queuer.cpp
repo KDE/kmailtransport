@@ -11,10 +11,10 @@
 #include <QPointer>
 #include <QPushButton>
 
+#include <KTextEdit>
 #include <QApplication>
 #include <QDateTimeEdit>
 #include <QLineEdit>
-#include <KTextEdit>
 #include <QVBoxLayout>
 #include <control.h>
 
@@ -24,8 +24,8 @@
 
 #include <kmailtransportakonadi/dispatchmodeattribute.h>
 #include <kmailtransportakonadi/messagequeuejob.h>
-#include <transportmanager.h>
 #include <transport.h>
+#include <transportmanager.h>
 
 using namespace KMime;
 using namespace MailTransport;
@@ -122,19 +122,13 @@ MessageQueueJob *MessageQueuer::createQueueJob()
     // default dispatch mode
     // default sent-mail collection
     job->addressAttribute().setFrom(mSenderEdit->text());
-    job->addressAttribute().setTo(mToEdit->text().isEmpty()
-                                  ? QStringList() : mToEdit->text().split(QLatin1Char(',')));
-    job->addressAttribute().setCc(mCcEdit->text().isEmpty()
-                                  ? QStringList() : mCcEdit->text().split(QLatin1Char(',')));
-    job->addressAttribute().setBcc(mBccEdit->text().isEmpty()
-                                   ? QStringList() : mBccEdit->text().split(QLatin1Char(',')));
+    job->addressAttribute().setTo(mToEdit->text().isEmpty() ? QStringList() : mToEdit->text().split(QLatin1Char(',')));
+    job->addressAttribute().setCc(mCcEdit->text().isEmpty() ? QStringList() : mCcEdit->text().split(QLatin1Char(',')));
+    job->addressAttribute().setBcc(mBccEdit->text().isEmpty() ? QStringList() : mBccEdit->text().split(QLatin1Char(',')));
 
-    connect(job, &MessageQueueJob::result,
-            this, &MessageQueuer::jobResult);
-    connect(job, SIGNAL(percent(KJob*,ulong)),
-            SLOT(jobPercent(KJob*,ulong)));
-    connect(job, &KJob::infoMessage,
-            this, &MessageQueuer::jobInfoMessage);
+    connect(job, &MessageQueueJob::result, this, &MessageQueuer::jobResult);
+    connect(job, SIGNAL(percent(KJob *, ulong)), SLOT(jobPercent(KJob *, ulong)));
+    connect(job, &KJob::infoMessage, this, &MessageQueuer::jobInfoMessage);
 
     return job;
 }

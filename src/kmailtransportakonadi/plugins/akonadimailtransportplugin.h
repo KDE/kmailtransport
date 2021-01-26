@@ -9,7 +9,8 @@
 
 #include <MailTransport/TransportAbstractPlugin>
 #include <QVariant>
-namespace Akonadi {
+namespace Akonadi
+{
 class AgentType;
 }
 
@@ -17,8 +18,7 @@ class AkonadiMailTransportPlugin : public MailTransport::TransportAbstractPlugin
 {
     Q_OBJECT
 public:
-    explicit AkonadiMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {
-    });
+    explicit AkonadiMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~AkonadiMailTransportPlugin() override;
 
     Q_REQUIRED_RESULT QVector<MailTransport::TransportAbstractPluginInfo> names() const override;

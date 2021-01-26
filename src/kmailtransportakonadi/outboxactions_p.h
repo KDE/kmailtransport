@@ -7,14 +7,15 @@
 #ifndef MAILTRANSPORT_OUTBOXACTIONS_P_H
 #define MAILTRANSPORT_OUTBOXACTIONS_P_H
 
-#include <mailtransportakonadi_export.h>
-#include <filteractionjob_p.h>
 #include "transportattribute.h"
+#include <filteractionjob_p.h>
+#include <mailtransportakonadi_export.h>
 
 #include <itemfetchscope.h>
 #include <job.h>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   FilterAction that finds all messages with a DispatchMode of Manual
   and assigns them a DispatchMode of Immediately.

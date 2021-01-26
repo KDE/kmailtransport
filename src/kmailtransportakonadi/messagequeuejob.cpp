@@ -6,16 +6,16 @@
 
 #include "messagequeuejob.h"
 
-#include "transport.h"
 #include "kmailtransportakonadi/transportattribute.h"
+#include "transport.h"
 #include "transportmanager.h"
 
 #include "mailtransportakonadi_debug.h"
 #include <KLocalizedString>
 
+#include <addressattribute.h>
 #include <item.h>
 #include <itemcreatejob.h>
-#include <addressattribute.h>
 #include <messageflags.h>
 #include <specialmailcollections.h>
 #include <specialmailcollectionsrequestjob.h>
@@ -64,8 +64,7 @@ bool MessageQueueJob::Private::validate()
         return false;
     }
 
-    if ((addressAttribute.to().count() + addressAttribute.cc().count()
-         +addressAttribute.bcc().count()) == 0) {
+    if ((addressAttribute.to().count() + addressAttribute.cc().count() + addressAttribute.bcc().count()) == 0) {
         q->setError(UserDefinedError);
         q->setErrorText(i18n("Message has no recipients."));
         q->emitResult();
@@ -80,14 +79,12 @@ bool MessageQueueJob::Private::validate()
         return false;
     }
 
-    if (sentBehaviourAttribute.sentBehaviour() == SentBehaviourAttribute::MoveToCollection
-        && !(sentBehaviourAttribute.moveToCollection().isValid())) {
+    if (sentBehaviourAttribute.sentBehaviour() == SentBehaviourAttribute::MoveToCollection && !(sentBehaviourAttribute.moveToCollection().isValid())) {
         q->setError(UserDefinedError);
         q->setErrorText(i18n("Message has invalid sent-mail folder."));
         q->emitResult();
         return false;
-    } else if (sentBehaviourAttribute.sentBehaviour()
-               == SentBehaviourAttribute::MoveToDefaultSentCollection) {
+    } else if (sentBehaviourAttribute.sentBehaviour() == SentBehaviourAttribute::MoveToDefaultSentCollection) {
         // TODO require SpecialMailCollections::SentMail here?
     }
 
@@ -111,8 +108,7 @@ void MessageQueueJob::Private::outboxRequestResult(KJob *job)
         return;
     }
 
-    auto *requestJob
-        = qobject_cast<SpecialMailCollectionsRequestJob *>(job);
+    auto *requestJob = qobject_cast<SpecialMailCollectionsRequestJob *>(job);
     if (!requestJob) {
         return;
     }
@@ -136,7 +132,7 @@ void MessageQueueJob::Private::outboxRequestResult(KJob *job)
     // Store the item in the outbox.
     const Collection collection = requestJob->collection();
     Q_ASSERT(collection.isValid());
-    auto *cjob = new ItemCreateJob(item, collection);   // job autostarts
+    auto *cjob = new ItemCreateJob(item, collection); // job autostarts
     q->addSubjob(cjob);
 }
 

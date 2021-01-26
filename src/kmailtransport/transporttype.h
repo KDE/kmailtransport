@@ -12,7 +12,8 @@
 
 #include <QString>
 
-namespace MailTransport {
+namespace MailTransport
+{
 class AddTransportDialog;
 class TransportManager;
 

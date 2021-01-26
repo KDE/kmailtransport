@@ -10,23 +10,24 @@
 #include "servertest.h"
 #include "socket.h"
 
-#include <transportbase.h>
 #include <mailtransport_defs.h>
+#include <transportbase.h>
 
 // Qt
 #include <QHash>
 #include <QHostInfo>
 #include <QProgressBar>
 #include <QRegularExpression>
-#include <QTimer>
 #include <QSet>
+#include <QTimer>
 
 // KDE
 #include "mailtransport_debug.h"
 
 using namespace MailTransport;
 
-namespace MailTransport {
+namespace MailTransport
+{
 class ServerTestPrivate
 {
 public:
@@ -40,10 +41,10 @@ public:
     MailTransport::Socket *normalSocket = nullptr;
     MailTransport::Socket *secureSocket = nullptr;
 
-    QSet< int > connectionResults;
-    QHash< int, QVector<int> > authenticationResults;
-    QSet< ServerTest::Capability > capabilityResults;
-    QHash< int, uint > customPorts;
+    QSet<int> connectionResults;
+    QHash<int, QVector<int>> authenticationResults;
+    QSet<ServerTest::Capability> capabilityResults;
+    QHash<int, uint> customPorts;
     QTimer *normalSocketTimer = nullptr;
     QTimer *secureSocketTimer = nullptr;
     QTimer *progressTimer = nullptr;
@@ -60,7 +61,6 @@ public:
 
     bool normalPossible = true;
     bool securePossible = true;
-
 
     void finalResult();
     void handleSMTPIMAPResponse(int type, const QString &text);
@@ -99,9 +99,9 @@ void ServerTestPrivate::finalResult()
 
     qCDebug(MAILTRANSPORT_LOG) << "Modes:" << connectionResults;
     qCDebug(MAILTRANSPORT_LOG) << "Capabilities:" << capabilityResults;
-    qCDebug(MAILTRANSPORT_LOG) << "Normal:" <<  q->normalProtocols();
-    qCDebug(MAILTRANSPORT_LOG) << "SSL:" <<  q->secureProtocols();
-    qCDebug(MAILTRANSPORT_LOG) << "TLS:" <<  q->tlsProtocols();
+    qCDebug(MAILTRANSPORT_LOG) << "Normal:" << q->normalProtocols();
+    qCDebug(MAILTRANSPORT_LOG) << "SSL:" << q->secureProtocols();
+    qCDebug(MAILTRANSPORT_LOG) << "TLS:" << q->tlsProtocols();
 
     if (testProgress) {
         testProgress->hide();
@@ -123,8 +123,7 @@ void ServerTestPrivate::finalResult()
 QVector<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authentications)
 {
     QVector<int> result;
-    for (QStringList::ConstIterator it = authentications.begin();
-         it != authentications.end(); ++it) {
+    for (QStringList::ConstIterator it = authentications.begin(); it != authentications.end(); ++it) {
         QString current = (*it).toUpper();
         if (current == QLatin1String("LOGIN")) {
             result << Transport::EnumAuthenticationType::LOGIN;
@@ -171,9 +170,7 @@ void ServerTestPrivate::handleSMTPIMAPResponse(int type, const QString &text)
         protocols << QStringLiteral("XOAUTH2");
     }
 
-    protocols << QStringLiteral("LOGIN")
-              << QStringLiteral("PLAIN") << QStringLiteral("CRAM-MD5")
-              << QStringLiteral("DIGEST-MD5") << QStringLiteral("NTLM")
+    protocols << QStringLiteral("LOGIN") << QStringLiteral("PLAIN") << QStringLiteral("CRAM-MD5") << QStringLiteral("DIGEST-MD5") << QStringLiteral("NTLM")
               << QStringLiteral("GSSAPI") << QStringLiteral("ANONYMOUS");
 
     QStringList results;
@@ -238,24 +235,21 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
 
     // Initial Greeting
     if (stage == 0) {
-        //Regexp taken from POP3 ioslave
+        // Regexp taken from POP3 ioslave
         const QString responseWithoutCRLF = response.chopped(2);
-        const QRegularExpression re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"),
-                                    QRegularExpression::CaseInsensitiveOption);
+        const QRegularExpression re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"), QRegularExpression::CaseInsensitiveOption);
         if (responseWithoutCRLF.indexOf(re) != -1) {
             authenticationResults[type] << Transport::EnumAuthenticationType::APOP;
         }
 
-        //Each server is supposed to support clear text login
+        // Each server is supposed to support clear text login
         authenticationResults[type] << Transport::EnumAuthenticationType::CLEAR;
 
         // If we are in TLS stage, the server does not send the initial greeting.
         // Assume that the APOP availability is the same as with an unsecured connection.
         if (type == Transport::EnumEncryption::TLS
-            && authenticationResults[Transport::EnumEncryption::None].
-            contains(Transport::EnumAuthenticationType::APOP)) {
-            authenticationResults[Transport::EnumEncryption::TLS]
-                << Transport::EnumAuthenticationType::APOP;
+            && authenticationResults[Transport::EnumEncryption::None].contains(Transport::EnumAuthenticationType::APOP)) {
+            authenticationResults[Transport::EnumEncryption::TLS] << Transport::EnumAuthenticationType::APOP;
         }
 
         socket->write(QStringLiteral("CAPA"));
@@ -263,15 +257,15 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
     }
     // CAPA result
     else if (stage == 1) {
-//     Example:
-//     CAPA
-//     +OK
-//     TOP
-//     USER
-//     SASL LOGIN CRAM-MD5
-//     UIDL
-//     RESP-CODES
-//     .
+        //     Example:
+        //     CAPA
+        //     +OK
+        //     TOP
+        //     USER
+        //     SASL LOGIN CRAM-MD5
+        //     UIDL
+        //     RESP-CODES
+        //     .
         if (response.contains(QLatin1String("TOP"))) {
             capabilityResults += ServerTest::Top;
         }
@@ -290,26 +284,22 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
     }
     // AUTH response
     else if (stage == 2) {
-//     Example:
-//     C: AUTH
-//     S: +OK List of supported authentication methods follows
-//     S: LOGIN
-//     S: CRAM-MD5
-//     S:.
+        //     Example:
+        //     C: AUTH
+        //     S: +OK List of supported authentication methods follows
+        //     S: LOGIN
+        //     S: CRAM-MD5
+        //     S:.
         QString formattedReply = response;
 
         // Get rid of trailing ".CRLF"
         formattedReply.chop(3);
 
         // Get rid of the first +OK line
-        formattedReply = formattedReply.right(formattedReply.size()
-                                              -formattedReply.indexOf(QLatin1Char('\n')) - 1);
-        formattedReply
-            = formattedReply.replace(QLatin1Char(' '), QLatin1Char('-')).
-              replace(QLatin1String("\r\n"), QLatin1String(" "));
+        formattedReply = formattedReply.right(formattedReply.size() - formattedReply.indexOf(QLatin1Char('\n')) - 1);
+        formattedReply = formattedReply.replace(QLatin1Char(' '), QLatin1Char('-')).replace(QLatin1String("\r\n"), QLatin1String(" "));
 
-        authenticationResults[type]
-            += parseAuthenticationList(formattedReply.split(QLatin1Char(' ')));
+        authenticationResults[type] += parseAuthenticationList(formattedReply.split(QLatin1Char(' ')));
     }
 
     *shouldStartTLS = popSupportsTLS;
@@ -340,19 +330,19 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
             return false;
         }
 
-//     Example:
-//     101 Capability list:
-//     VERSION 2
-//     IMPLEMENTATION INN 2.5.4
-//     AUTHINFO USER SASL
-//     HDR
-//     LIST ACTIVE [etc]
-//     OVER
-//     POST
-//     READER
-//     SASL DIGEST-MD5 CRAM-MD5 NTLM PLAIN LOGIN
-//     STARTTLS
-//     .
+        //     Example:
+        //     101 Capability list:
+        //     VERSION 2
+        //     IMPLEMENTATION INN 2.5.4
+        //     AUTHINFO USER SASL
+        //     HDR
+        //     LIST ACTIVE [etc]
+        //     OVER
+        //     POST
+        //     READER
+        //     SASL DIGEST-MD5 CRAM-MD5 NTLM PLAIN LOGIN
+        //     STARTTLS
+        //     .
         const QVector<QStringRef> lines = response.splitRef(QStringLiteral("\r\n"), Qt::SkipEmptyParts);
         for (const QStringRef &line : lines) {
             if (line.compare(QLatin1String("STARTTLS"), Qt::CaseInsensitive) == 0) {
@@ -408,13 +398,11 @@ void ServerTestPrivate::slotReadNormal(const QString &text)
     // Handle the whole POP and NNTP conversations separately, as
     // they are very different from IMAP and SMTP
     if (testProtocol == POP_PROTOCOL) {
-        if (handlePopConversation(normalSocket, encryptionMode, normalStage, text,
-                                  &shouldStartTLS)) {
+        if (handlePopConversation(normalSocket, encryptionMode, normalStage, text, &shouldStartTLS)) {
             return;
         }
     } else if (testProtocol == NNTP_PROTOCOL) {
-        if (handleNntpConversation(normalSocket, encryptionMode, &normalStage, text,
-                                   &shouldStartTLS)) {
+        if (handleNntpConversation(normalSocket, encryptionMode, &normalStage, text, &shouldStartTLS)) {
             return;
         }
     } else {
@@ -464,14 +452,12 @@ void ServerTestPrivate::slotReadSecure(const QString &text)
     secureStage++;
     if (testProtocol == POP_PROTOCOL) {
         bool dummy;
-        if (handlePopConversation(secureSocket, Transport::EnumEncryption::SSL,
-                                  secureStage, text, &dummy)) {
+        if (handlePopConversation(secureSocket, Transport::EnumEncryption::SSL, secureStage, text, &dummy)) {
             return;
         }
     } else if (testProtocol == NNTP_PROTOCOL) {
         bool dummy;
-        if (handleNntpConversation(secureSocket, Transport::EnumEncryption::SSL,
-                                   &secureStage, text, &dummy)) {
+        if (handleNntpConversation(secureSocket, Transport::EnumEncryption::SSL, &secureStage, text, &dummy)) {
             return;
         }
     } else {
@@ -596,8 +582,7 @@ void ServerTest::start()
 
     connect(d->normalSocket, SIGNAL(connected()), SLOT(slotNormalPossible()));
     connect(d->normalSocket, SIGNAL(failed()), SLOT(slotNormalNotPossible()));
-    connect(d->normalSocket, SIGNAL(data(QString)),
-            SLOT(slotReadNormal(QString)));
+    connect(d->normalSocket, SIGNAL(data(QString)), SLOT(slotReadNormal(QString)));
     connect(d->normalSocket, SIGNAL(tlsDone()), SLOT(slotTlsDone()));
     d->normalSocket->reconnect();
     d->normalSocketTimer->start(10000);
@@ -609,8 +594,7 @@ void ServerTest::start()
         d->secureSocket->setSecure(true);
         connect(d->secureSocket, SIGNAL(connected()), SLOT(slotSslPossible()));
         connect(d->secureSocket, SIGNAL(failed()), SLOT(slotSslNotPossible()));
-        connect(d->secureSocket, SIGNAL(data(QString)),
-                SLOT(slotReadSecure(QString)));
+        connect(d->secureSocket, SIGNAL(data(QString)), SLOT(slotReadSecure(QString)));
         d->secureSocket->reconnect();
         d->secureSocketTimer->start(10000);
     } else {
@@ -635,8 +619,7 @@ void ServerTest::setServer(const QString &server)
 
 void ServerTest::setPort(Transport::EnumEncryption::type encryptionMode, uint port)
 {
-    Q_ASSERT(encryptionMode == Transport::EnumEncryption::None
-             || encryptionMode == Transport::EnumEncryption::SSL);
+    Q_ASSERT(encryptionMode == Transport::EnumEncryption::None || encryptionMode == Transport::EnumEncryption::SSL);
     d->customPorts.insert(encryptionMode, port);
 }
 
@@ -663,8 +646,7 @@ QString ServerTest::server() const
 
 int ServerTest::port(TransportBase::EnumEncryption::type encryptionMode) const
 {
-    Q_ASSERT(encryptionMode == Transport::EnumEncryption::None
-             || encryptionMode == Transport::EnumEncryption::SSL);
+    Q_ASSERT(encryptionMode == Transport::EnumEncryption::None || encryptionMode == Transport::EnumEncryption::SSL);
     if (d->customPorts.contains(encryptionMode)) {
         return d->customPorts.value(static_cast<int>(encryptionMode));
     } else {
@@ -702,7 +684,7 @@ bool ServerTest::isSecurePossible() const
     return d->securePossible;
 }
 
-QList< ServerTest::Capability > ServerTest::capabilities() const
+QList<ServerTest::Capability> ServerTest::capabilities() const
 {
     return d->capabilityResults.values();
 }

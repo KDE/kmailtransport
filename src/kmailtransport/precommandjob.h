@@ -17,7 +17,8 @@
 
 class PreCommandJobPrivate;
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   Job to execute a command.
   This is used often for sending or receiving mails, for example to set up
@@ -50,7 +51,6 @@ public:
     void start() override;
 
 protected:
-
     /**
       Reimplemented from KJob.
     */

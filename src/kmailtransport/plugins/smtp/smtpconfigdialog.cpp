@@ -6,14 +6,14 @@
 
 #include "smtpconfigdialog.h"
 
+#include "smtpconfigwidget.h"
 #include "transport.h"
 #include "transportmanager.h"
 #include "transporttype.h"
-#include "smtpconfigwidget.h"
 
 #include <QDialogButtonBox>
-#include <QVBoxLayout>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace MailTransport;
 

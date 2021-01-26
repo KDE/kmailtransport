@@ -109,8 +109,7 @@ void TransportJob::start()
 {
     if (!transport()->isValid()) {
         setError(UserDefinedError);
-        setErrorText(i18n("The outgoing account \"%1\" is not correctly configured.",
-                          transport()->name()));
+        setErrorText(i18n("The outgoing account \"%1\" is not correctly configured.", transport()->name()));
         emitResult();
         return;
     }

@@ -7,8 +7,8 @@
 #include "smtpmailtransportplugin.h"
 #include "smtpconfigdialog.h"
 #include "smtpjob.h"
-#include <KPluginFactory>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(SMTPMailTransportPlugin, "smtpmailtransport.json")
 
@@ -35,8 +35,7 @@ QVector<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::nam
 bool SMTPMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
     Q_UNUSED(identifier)
-    QPointer<MailTransport::SmtpConfigDialog> transportConfigDialog
-        = new MailTransport::SmtpConfigDialog(transport, parent);
+    QPointer<MailTransport::SmtpConfigDialog> transportConfigDialog = new MailTransport::SmtpConfigDialog(transport, parent);
     transportConfigDialog->setWindowTitle(i18nc("@title:window", "Configure account"));
     bool okClicked = (transportConfigDialog->exec() == QDialog::Accepted);
     delete transportConfigDialog;

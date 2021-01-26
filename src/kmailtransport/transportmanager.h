@@ -13,11 +13,13 @@
 #include <QList>
 #include <QObject>
 
-namespace KWallet {
+namespace KWallet
+{
 class Wallet;
 }
 
-namespace MailTransport {
+namespace MailTransport
+{
 class Transport;
 class TransportJob;
 class TransportManagerPrivate;
@@ -42,7 +44,6 @@ class MAILTRANSPORT_EXPORT TransportManager : public QObject
     friend class TransportManagerPrivate;
 
 public:
-
     /**
       Destructor.
     */
@@ -147,8 +148,8 @@ public:
 
     /// Describes when to show the transport creation dialog
     enum ShowCondition {
-        Always,              ///< Show the transport creation dialog unconditionally
-        IfNoTransportExists  ///< Only show the transport creation dialog if no transport currently
+        Always, ///< Show the transport creation dialog unconditionally
+        IfNoTransportExists ///< Only show the transport creation dialog if no transport currently
         ///  exists. Ask the user if he wants to add a transport in
         ///  the other case.
     };
@@ -174,6 +175,7 @@ public:
     bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent);
 
     void initializeTransport(const QString &identifier, Transport *transport);
+
 public:
     /**
       Returns true if there are no mail transports at all.
@@ -268,7 +270,6 @@ protected:
     TransportManager();
 
 private:
-
     // These are used by our friend, Transport
     void emitChangesCommitted();
     void updatePluginList();

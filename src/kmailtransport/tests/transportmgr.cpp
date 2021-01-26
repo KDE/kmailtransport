@@ -6,16 +6,16 @@
 
 #include "transportmgr.h"
 
+#include <QVBoxLayout>
+#include <transport.h>
+#include <transportjob.h>
 #include <transportmanager.h>
 #include <widgets/transportmanagementwidget.h>
-#include <transportjob.h>
-#include <transport.h>
-#include <QVBoxLayout>
 
-#include <QApplication>
-#include <QLineEdit>
-#include <QDebug>
 #include <KTextEdit>
+#include <QApplication>
+#include <QDebug>
+#include <QLineEdit>
 
 #include <QPushButton>
 
@@ -94,12 +94,9 @@ void TransportMgr::sendBtnClicked()
     job->setCc(mCcEdit->text().isEmpty() ? QStringList() : mCcEdit->text().split(QLatin1Char(',')));
     job->setBcc(mBccEdit->text().isEmpty() ? QStringList() : mBccEdit->text().split(QLatin1Char(',')));
     job->setData(mMailEdit->document()->toPlainText().toLatin1());
-    connect(job, &KJob::result,
-            this, &TransportMgr::jobResult);
-    connect(job, SIGNAL(percent(KJob*,ulong)),
-            SLOT(jobPercent(KJob*,ulong)));
-    connect(job, &KJob::infoMessage,
-            this, &TransportMgr::jobInfoMessage);
+    connect(job, &KJob::result, this, &TransportMgr::jobResult);
+    connect(job, SIGNAL(percent(KJob *, ulong)), SLOT(jobPercent(KJob *, ulong)));
+    connect(job, &KJob::infoMessage, this, &TransportMgr::jobInfoMessage);
     mCurrentJob = job;
     TransportManager::self()->schedule(job);
 }

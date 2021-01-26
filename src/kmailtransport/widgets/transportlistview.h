@@ -9,7 +9,8 @@
 
 #include <QTreeWidget>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   @internal
   A QTreeWidget for transports.

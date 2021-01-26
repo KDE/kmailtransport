@@ -8,9 +8,9 @@
 #include "../src/kmailtransport/widgets/addtransportdialogng.h"
 
 #include <QApplication>
-#include <QStandardPaths>
 #include <QHBoxLayout>
 #include <QPushButton>
+#include <QStandardPaths>
 
 AddTransportDialogNG_gui::AddTransportDialogNG_gui(QWidget *parent)
     : QWidget(parent)

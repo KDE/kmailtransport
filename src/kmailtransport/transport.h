@@ -12,10 +12,12 @@
 #include <transporttype.h>
 
 class TransportPrivate;
-namespace QKeychain {
+namespace QKeychain
+{
 class Job;
 }
-namespace MailTransport {
+namespace MailTransport
+{
 class TransportType;
 
 /**

@@ -10,7 +10,8 @@
 #include <QSharedData>
 #include <QString>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   @internal
 */
@@ -37,4 +38,4 @@ public:
 };
 } // namespace MailTransport
 
-#endif //MAILTRANSPORT_TRANSPORTTYPE_P_H
+#endif // MAILTRANSPORT_TRANSPORTTYPE_P_H

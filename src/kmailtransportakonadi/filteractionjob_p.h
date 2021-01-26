@@ -12,7 +12,8 @@
 #include <item.h>
 #include <transactionsequence.h>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Collection;
 class ItemFetchScope;
 class Job;

@@ -11,8 +11,8 @@
 #include "transportmanager.h"
 
 #include <QObject>
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 Q_DECLARE_METATYPE(MailTransport::TransportBase::EnumAuthenticationType::type)
 
@@ -28,7 +28,7 @@ private Q_SLOTS:
 
     void smtpJobTest_data()
     {
-        QTest::addColumn<QList<QByteArray> >("scenario");
+        QTest::addColumn<QList<QByteArray>>("scenario");
         QTest::addColumn<MailTransport::TransportBase::EnumAuthenticationType::type>("authType");
         QTest::addColumn<QString>("from");
         QTest::addColumn<QStringList>("to");
@@ -37,8 +37,7 @@ private Q_SLOTS:
         QTest::addColumn<bool>("success");
 
         QList<QByteArray> scenario;
-        scenario << FakeServer::greetingAndEhlo()
-                 << "S: 250 AUTH PLAIN LOGIN"
+        scenario << FakeServer::greetingAndEhlo() << "S: 250 AUTH PLAIN LOGIN"
                  << "C: AUTH LOGIN"
                  << "S: 334 VXNlcm5hbWU6"
                  << "C: bG9naW4=" // "login".toBase64()
@@ -56,16 +55,9 @@ private Q_SLOTS:
                  << "C: Hi Bob"
                  << "C: "
                  << "C: ."
-                 << "S: 250 Ok transfer done"
-                 << FakeServer::bye();
-        QTest::newRow("simple") << scenario << MailTransport::TransportBase::EnumAuthenticationType::LOGIN
-                                << QStringLiteral("Foo Bar <foo@bar.com>")
-                                << QStringList{}
-                                << QStringList{
-            QStringLiteral("bar@foo.com"), QStringLiteral("<bar@bar.foo>")
-            }
-                                << QByteArray("Hi Bob")
-                                << true;
+                 << "S: 250 Ok transfer done" << FakeServer::bye();
+        QTest::newRow("simple") << scenario << MailTransport::TransportBase::EnumAuthenticationType::LOGIN << QStringLiteral("Foo Bar <foo@bar.com>")
+                                << QStringList{} << QStringList{QStringLiteral("bar@foo.com"), QStringLiteral("<bar@bar.foo>")} << QByteArray("Hi Bob") << true;
     }
 
     void smtpJobTest()

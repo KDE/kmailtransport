@@ -15,7 +15,8 @@
 
 #include "widgets/transportconfigwidget.h"
 class QAbstractButton;
-namespace MailTransport {
+namespace MailTransport
+{
 class Transport;
 
 /**

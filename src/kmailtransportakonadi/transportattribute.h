@@ -11,7 +11,8 @@
 
 #include <attribute.h>
 
-namespace MailTransport {
+namespace MailTransport
+{
 class Transport;
 
 /**

@@ -7,18 +7,18 @@
 #ifndef TRANSPORTABSTRACTPLUGIN_H
 #define TRANSPORTABSTRACTPLUGIN_H
 
+#include "mailtransport_export.h"
 #include <QObject>
 #include <QVector>
-#include "mailtransport_export.h"
-namespace MailTransport {
+namespace MailTransport
+{
 class TransportJob;
 class Transport;
 /**
  * @brief The TransportAbstractPluginInfo struct
  * @author Laurent Montel <montel@kde.org>
  */
-struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo
-{
+struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo {
     QString name;
     QString identifier;
     QString description;

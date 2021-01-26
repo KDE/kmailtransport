@@ -13,7 +13,8 @@
 
 #include <attribute.h>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   Attribute determining how and when a message from the outbox should be
   dispatched.  Messages can be sent immediately, sent only when the user
@@ -29,9 +30,9 @@ public:
       Determines how the message is sent.
     */
     enum DispatchMode {
-        Automatic,    ///< Send message as soon as possible, but no earlier than
+        Automatic, ///< Send message as soon as possible, but no earlier than
         ///  specified by setSendAfter()
-        Manual        ///< Send message only when the user requests so.
+        Manual ///< Send message only when the user requests so.
     };
 
     /**

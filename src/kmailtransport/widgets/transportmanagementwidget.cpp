@@ -8,9 +8,9 @@
 */
 
 #include "transportmanagementwidget.h"
-#include "ui_transportmanagementwidget.h"
-#include "transportmanager.h"
 #include "transport.h"
+#include "transportmanager.h"
+#include "ui_transportmanagementwidget.h"
 
 #include <KMessageBox>
 #include <QMenu>
@@ -20,7 +20,6 @@ using namespace MailTransport;
 class Q_DECL_HIDDEN TransportManagementWidget::Private
 {
 public:
-
     Private(TransportManagementWidget *parent);
 
     Ui::TransportManagementWidget ui;
@@ -92,8 +91,7 @@ void TransportManagementWidget::Private::updateButtonState()
         ui.editButton->setEnabled(true);
         ui.renameButton->setEnabled(true);
         ui.removeButton->setEnabled(true);
-        if (ui.transportList->currentItem()->data(0, Qt::UserRole)
-            == TransportManager::self()->defaultTransportId()) {
+        if (ui.transportList->currentItem()->data(0, Qt::UserRole) == TransportManager::self()->defaultTransportId()) {
             ui.defaultButton->setEnabled(false);
         } else {
             ui.defaultButton->setEnabled(true);
@@ -131,18 +129,14 @@ void TransportManagementWidget::Private::removeClicked()
     if (!ui.transportList->currentItem()) {
         return;
     }
-    const int rc
-        = KMessageBox::questionYesNo(
-              q,
-              i18n("Do you want to remove outgoing account '%1'?",
-                   ui.transportList->currentItem()->text(0)),
-              i18n("Remove outgoing account?"));
+    const int rc = KMessageBox::questionYesNo(q,
+                                              i18n("Do you want to remove outgoing account '%1'?", ui.transportList->currentItem()->text(0)),
+                                              i18n("Remove outgoing account?"));
     if (rc == KMessageBox::No) {
         return;
     }
 
-    TransportManager::self()->removeTransport(
-        ui.transportList->currentItem()->data(0, Qt::UserRole).toInt());
+    TransportManager::self()->removeTransport(ui.transportList->currentItem()->data(0, Qt::UserRole).toInt());
 }
 
 void TransportManagementWidget::Private::defaultClicked()
@@ -151,8 +145,7 @@ void TransportManagementWidget::Private::defaultClicked()
         return;
     }
 
-    TransportManager::self()->setDefaultTransport(
-        ui.transportList->currentItem()->data(0, Qt::UserRole).toInt());
+    TransportManager::self()->setDefaultTransport(ui.transportList->currentItem()->data(0, Qt::UserRole).toInt());
 }
 
 void TransportManagementWidget::Private::slotCustomContextMenuRequested(const QPoint &pos)

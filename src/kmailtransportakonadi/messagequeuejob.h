@@ -19,12 +19,13 @@
 
 #include <KCompositeJob>
 
-#include <collection.h>
 #include <Akonadi/KMime/AddressAttribute>
+#include <collection.h>
 
 #include <kmime/kmime_message.h>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   @short Provides an interface for sending email.
 

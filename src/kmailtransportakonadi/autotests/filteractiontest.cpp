@@ -10,12 +10,12 @@
 
 #include <attributefactory.h>
 #include <collectioncreatejob.h>
+#include <filteractionjob_p.h>
 #include <itemcreatejob.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
 #include <itemmodifyjob.h>
 #include <qtest_akonadi.h>
-#include <filteractionjob_p.h>
 
 using namespace Akonadi;
 

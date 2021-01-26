@@ -11,9 +11,10 @@
 
 #include <agentinstance.h>
 
-//krazy:excludeall=dpointer
+// krazy:excludeall=dpointer
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   @short An interface for applications to interact with the dispatcher agent.
 
@@ -29,7 +30,6 @@ namespace MailTransport {
 class MAILTRANSPORTAKONADI_EXPORT DispatcherInterface
 {
 public:
-
     /**
       Creates a new dispatcher interface.
     */

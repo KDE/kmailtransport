@@ -5,14 +5,13 @@
 */
 
 #include "transport.h"
-#include "transport_p.h"
 #include "mailtransport_defs.h"
+#include "transport_p.h"
 #include "transportmanager.h"
 #include "transporttype_p.h"
 
-
-#include <KConfigGroup>
 #include "mailtransport_debug.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStringHandler>
@@ -47,8 +46,7 @@ bool Transport::isValid() const
 
 void Transport::loadPassword()
 {
-    if (!d->passwordLoaded && requiresAuthentication() && storePassword()
-        && d->password.isEmpty()) {
+    if (!d->passwordLoaded && requiresAuthentication() && storePassword() && d->password.isEmpty()) {
         readPassword();
     }
 }
@@ -80,8 +78,12 @@ void Transport::forceUniqueName()
     int suffix = 1;
     QString origName = name();
     while (existingNames.contains(name())) {
-        setName(i18nc("%1: name; %2: number appended to it to make "
-                      "it unique among a list of names", "%1 #%2", origName, suffix));
+        setName(
+            i18nc("%1: name; %2: number appended to it to make "
+                  "it unique among a list of names",
+                  "%1 #%2",
+                  origName,
+                  suffix));
         ++suffix;
     }
 }
@@ -154,13 +156,13 @@ void Transport::usrRead()
     {
         d->transportType = TransportType();
         d->transportType.d->mIdentifier = identifier();
-        //qCDebug(MAILTRANSPORT_LOG) << "type" << identifier();
+        // qCDebug(MAILTRANSPORT_LOG) << "type" << identifier();
         // Now we have the type and possibly agentType.  Get the name, description
         // etc. from TransportManager.
         const TransportType::List &types = TransportManager::self()->types();
         int index = types.indexOf(d->transportType);
         if (index != -1) {
-            d->transportType = types[ index ];
+            d->transportType = types[index];
         } else {
             qCWarning(MAILTRANSPORT_LOG) << "Type unknown to manager.";
             d->transportType.d->mName = i18nc("An unknown transport type", "Unknown");
@@ -199,19 +201,21 @@ bool Transport::usrSave()
         Wallet *wallet = TransportManager::self()->wallet();
         if (!wallet || wallet->writePassword(QString::number(id()), d->password) != 0) {
             // wallet saving failed, ask if we should store in the config file instead
-            if (d->storePasswordInFile || KMessageBox::warningYesNo(
-                    nullptr,
-                    i18n("KWallet is not available. It is strongly recommended to use "
-                         "KWallet for managing your passwords.\n"
-                         "However, the password can be stored in the configuration "
-                         "file instead. The password is stored in an obfuscated format, "
-                         "but should not be considered secure from decryption efforts "
-                         "if access to the configuration file is obtained.\n"
-                         "Do you want to store the password for server '%1' in the "
-                         "configuration file?", name()),
-                    i18n("KWallet Not Available"),
-                    KGuiItem(i18n("Store Password")),
-                    KGuiItem(i18n("Do Not Store Password"))) == KMessageBox::Yes) {
+            if (d->storePasswordInFile
+                || KMessageBox::warningYesNo(nullptr,
+                                             i18n("KWallet is not available. It is strongly recommended to use "
+                                                  "KWallet for managing your passwords.\n"
+                                                  "However, the password can be stored in the configuration "
+                                                  "file instead. The password is stored in an obfuscated format, "
+                                                  "but should not be considered secure from decryption efforts "
+                                                  "if access to the configuration file is obtained.\n"
+                                                  "Do you want to store the password for server '%1' in the "
+                                                  "configuration file?",
+                                                  name()),
+                                             i18n("KWallet Not Available"),
+                                             KGuiItem(i18n("Store Password")),
+                                             KGuiItem(i18n("Do Not Store Password")))
+                    == KMessageBox::Yes) {
                 // write to config file
                 KConfigGroup group(config(), currentGroup());
                 group.writeEntry("password", KStringHandler::obscure(storePassword));
@@ -258,7 +262,6 @@ void Transport::readTransportPasswordFinished(QKeychain::Job *baseJob)
     } else {
         setPassword(job->textData());
     }
-
 }
 
 bool Transport::needsWalletMigration() const

@@ -11,7 +11,8 @@
 
 #include <item.h>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   Mail transport job for an Akonadi resource-based transport.
 

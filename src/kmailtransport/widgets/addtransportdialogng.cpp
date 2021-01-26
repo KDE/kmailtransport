@@ -35,7 +35,7 @@ public:
       Enables the OK button if a type is selected.
     */
     void updateOkButton(); // slot
-    void doubleClicked(); //slot
+    void doubleClicked(); // slot
     void writeConfig();
     void readConfig();
 
@@ -109,7 +109,7 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
         treeItem->setText(0, type.name());
         treeItem->setText(1, type.description());
         treeItem->setToolTip(1, type.description());
-        treeItem->setData(0, Qt::UserRole, type.identifier());     // the transport type
+        treeItem->setData(0, Qt::UserRole, type.identifier()); // the transport type
         if (type.identifier() == QLatin1String("SMTP")) {
             treeItem->setSelected(true); // select SMTP by default
         }
@@ -135,7 +135,7 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
     connect(d->ui.typeListView, &QTreeWidget::itemDoubleClicked, this, [this]() {
         d->doubleClicked();
     });
-    connect(d->ui.name, &QLineEdit:: textChanged, this, [this]() {
+    connect(d->ui.name, &QLineEdit::textChanged, this, [this]() {
         d->updateOkButton();
     });
     d->readConfig();

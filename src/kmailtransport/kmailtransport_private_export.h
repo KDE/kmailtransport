@@ -11,11 +11,11 @@
 
 /* Classes which are exported only for unit tests */
 #ifdef BUILD_TESTING
-# ifndef KMAILTRANSPORT_TESTS_EXPORT
-#  define KMAILTRANSPORT_TESTS_EXPORT MAILTRANSPORT_EXPORT
-# endif
+#ifndef KMAILTRANSPORT_TESTS_EXPORT
+#define KMAILTRANSPORT_TESTS_EXPORT MAILTRANSPORT_EXPORT
+#endif
 #else /* not compiling tests */
-# define KMAILTRANSPORT_TESTS_EXPORT
+#define KMAILTRANSPORT_TESTS_EXPORT
 #endif
 
 #endif

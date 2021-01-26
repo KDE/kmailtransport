@@ -6,13 +6,13 @@
 
 #include "transportmanager.h"
 #include "mailtransport_defs.h"
+#include "plugins/transportabstractplugin.h"
+#include "plugins/transportpluginmanager.h"
 #include "transport.h"
 #include "transport_p.h"
 #include "transportjob.h"
 #include "transporttype.h"
 #include "transporttype_p.h"
-#include "plugins/transportpluginmanager.h"
-#include "plugins/transportabstractplugin.h"
 #include "widgets/addtransportdialogng.h"
 #include <MailTransport/TransportAbstractPlugin>
 
@@ -25,9 +25,9 @@
 #include <QRegularExpression>
 #include <QStringList>
 
+#include "mailtransport_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
-#include "mailtransport_debug.h"
 #include <KEMailSettings>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -39,7 +39,8 @@ using namespace QKeychain;
 using namespace MailTransport;
 using namespace KWallet;
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
  * Private class that helps to provide binary compatibility between releases.
  * @internal
@@ -91,7 +92,8 @@ public:
 class StaticTransportManager : public TransportManager
 {
 public:
-    StaticTransportManager() : TransportManager()
+    StaticTransportManager()
+        : TransportManager()
     {
     }
 };
@@ -114,20 +116,14 @@ TransportManager::TransportManager()
     qAddPostRoutine(destroyStaticTransportManager);
     d->config = new KConfig(QStringLiteral("mailtransports"));
 
-    QDBusConnection::sessionBus().registerObject(DBUS_OBJECT_PATH, this,
-                                                 QDBusConnection::ExportScriptableSlots
-                                                 |QDBusConnection::ExportScriptableSignals);
+    QDBusConnection::sessionBus().registerObject(DBUS_OBJECT_PATH, this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
-    QDBusServiceWatcher *watcher
-        = new QDBusServiceWatcher(DBUS_SERVICE_NAME, QDBusConnection::sessionBus(),
-                                  QDBusServiceWatcher::WatchForUnregistration, this);
+    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(DBUS_SERVICE_NAME, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForUnregistration, this);
     connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, [this]() {
         d->dbusServiceUnregistered();
     });
 
-    QDBusConnection::sessionBus().connect(QString(), QString(),
-                                          DBUS_INTERFACE_NAME, DBUS_CHANGE_SIGNAL,
-                                          this, SLOT(slotTransportsChanged()));
+    QDBusConnection::sessionBus().connect(QString(), QString(), DBUS_INTERFACE_NAME, DBUS_CHANGE_SIGNAL, this, SLOT(slotTransportsChanged()));
 
     d->isMainInstance = QDBusConnection::sessionBus().registerService(DBUS_SERVICE_NAME);
 
@@ -176,7 +172,7 @@ Transport *TransportManager::transportByName(const QString &name, bool def) cons
     return nullptr;
 }
 
-QList< Transport * > TransportManager::transports() const
+QList<Transport *> TransportManager::transports() const
 {
     return d->transports;
 }
@@ -613,9 +609,8 @@ void TransportManager::loadPasswordsAsync()
             window = qApp->topLevelWidgets().first()->winId();
         }
 
-        d->wallet = Wallet::openWallet(Wallet::NetworkWallet(), window,
-                                       Wallet::Asynchronous);
-        //Already async. It will be easy to port to qt5keychain
+        d->wallet = Wallet::openWallet(Wallet::NetworkWallet(), window, Wallet::Asynchronous);
+        // Already async. It will be easy to port to qt5keychain
         if (d->wallet) {
             connect(d->wallet, &KWallet::Wallet::walletOpened, this, [this](bool status) {
                 d->slotWalletOpened(status);
@@ -684,17 +679,18 @@ void TransportManagerPrivate::migrateToWallet()
     }
 
     // ask user if he wants to migrate
-    int result = KMessageBox::questionYesNoList(
-        nullptr,
-        i18n("The following mail transports store their passwords in an "
-             "unencrypted configuration file.\nFor security reasons, "
-             "please consider migrating these passwords to KWallet, the "
-             "KDE Wallet management tool,\nwhich stores sensitive data "
-             "for you in a strongly encrypted file.\n"
-             "Do you want to migrate your passwords to KWallet?"),
-        names, i18n("Question"),
-        KGuiItem(i18n("Migrate")), KGuiItem(i18n("Keep")),
-        QStringLiteral("WalletMigrate"));
+    int result = KMessageBox::questionYesNoList(nullptr,
+                                                i18n("The following mail transports store their passwords in an "
+                                                     "unencrypted configuration file.\nFor security reasons, "
+                                                     "please consider migrating these passwords to KWallet, the "
+                                                     "KDE Wallet management tool,\nwhich stores sensitive data "
+                                                     "for you in a strongly encrypted file.\n"
+                                                     "Do you want to migrate your passwords to KWallet?"),
+                                                names,
+                                                i18n("Question"),
+                                                KGuiItem(i18n("Migrate")),
+                                                KGuiItem(i18n("Keep")),
+                                                QStringLiteral("WalletMigrate"));
     if (result != KMessageBox::Yes) {
         return;
     }

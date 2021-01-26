@@ -7,9 +7,10 @@
 #ifndef TRANSPORTPLUGINMANAGER_H
 #define TRANSPORTPLUGINMANAGER_H
 
-#include <QObject>
 #include "kmailtransport_private_export.h"
-namespace MailTransport {
+#include <QObject>
+namespace MailTransport
+{
 class TransportAbstractPlugin;
 class TransportPluginManagerPrivate;
 class KMAILTRANSPORT_TESTS_EXPORT TransportPluginManager : public QObject

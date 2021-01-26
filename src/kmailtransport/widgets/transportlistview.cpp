@@ -24,9 +24,7 @@ using namespace MailTransport;
 TransportListView::TransportListView(QWidget *parent)
     : QTreeWidget(parent)
 {
-    setHeaderLabels(QStringList()
-                    << i18nc("@title:column email transport name", "Name")
-                    << i18nc("@title:column email transport type", "Type"));
+    setHeaderLabels(QStringList() << i18nc("@title:column email transport name", "Name") << i18nc("@title:column email transport type", "Type"));
     setRootIsDecorated(false);
     header()->setSectionsMovable(false);
     header()->setSectionResizeMode(QHeaderView::ResizeToContents);
@@ -68,8 +66,8 @@ void TransportListView::commitData(QWidget *editor)
         return;
     }
     QTreeWidgetItem *item = selectedItems().first();
-    auto edit = dynamic_cast<QLineEdit *>(editor);  // krazy:exclude=qclasses
-    Q_ASSERT(edit);   // original code had if
+    auto edit = dynamic_cast<QLineEdit *>(editor); // krazy:exclude=qclasses
+    Q_ASSERT(edit); // original code had if
 
     const int id = item->data(0, Qt::UserRole).toInt();
     Transport *t = TransportManager::self()->transportById(id);

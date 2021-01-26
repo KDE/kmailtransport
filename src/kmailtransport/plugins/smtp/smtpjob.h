@@ -10,21 +10,24 @@
 #ifndef MAILTRANSPORT_SMTPJOB_H
 #define MAILTRANSPORT_SMTPJOB_H
 
-#include <transportjob.h>
 #include <KSMTP/Session>
+#include <transportjob.h>
 
-namespace KIO {
+namespace KIO
+{
 class Job;
 class Slave;
 }
 
-namespace KGAPI2 {
+namespace KGAPI2
+{
 class AccountPromise;
 }
 
 class SmtpJobPrivate;
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   Mail transport job for SMTP.
   Internally, all jobs for a specific transport are queued to use the same

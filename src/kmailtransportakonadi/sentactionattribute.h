@@ -15,7 +15,8 @@
 #include <QVector>
 #include <attribute.h>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
  * @short An Attribute that stores the action to execute after sending.
  *
@@ -38,9 +39,9 @@ public:
          * Describes the action type.
          */
         enum Type {
-            Invalid,         ///< An invalid action.
-            MarkAsReplied,   ///< The message will be marked as replied.
-            MarkAsForwarded  ///< The message will be marked as forwarded.
+            Invalid, ///< An invalid action.
+            MarkAsReplied, ///< The message will be marked as replied.
+            MarkAsForwarded ///< The message will be marked as forwarded.
         };
 
         /**

@@ -9,7 +9,8 @@
 
 #include <QDialog>
 
-namespace MailTransport {
+namespace MailTransport
+{
 class Transport;
 class SMTPConfigWidget;
 class SmtpConfigDialog : public QDialog

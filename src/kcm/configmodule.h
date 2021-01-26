@@ -9,7 +9,8 @@
 
 #include <KCModule>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   KCModule for transport management.
 */

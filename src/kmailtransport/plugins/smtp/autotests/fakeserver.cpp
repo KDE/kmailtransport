@@ -8,9 +8,9 @@
 
 #include "fakeserver.h"
 
-#include <QTest>
-#include <QFile>
 #include <QDebug>
+#include <QFile>
+#include <QTest>
 
 FakeServer::FakeServer(QObject *parent)
     : QThread(parent)
@@ -26,18 +26,12 @@ QByteArray FakeServer::greeting()
 
 QList<QByteArray> FakeServer::greetingAndEhlo(bool multiline)
 {
-    return QList<QByteArray>() << greeting()
-                               << "C: EHLO 127.0.0.1"
-                               << QByteArray("S: 250") + (multiline ? '-' : ' ') + "Localhost ready to roll";
+    return QList<QByteArray>() << greeting() << "C: EHLO 127.0.0.1" << QByteArray("S: 250") + (multiline ? '-' : ' ') + "Localhost ready to roll";
 }
 
 QList<QByteArray> FakeServer::bye()
 {
-    return {
-        "C: QUIT",
-        "S: 221 So long, and thanks for all the fish",
-        "X: "
-    };
+    return {"C: QUIT", "S: 221 So long, and thanks for all the fish", "X: "};
 }
 
 FakeServer::~FakeServer()
@@ -74,7 +68,7 @@ void FakeServer::newConnection()
 
     m_clientSockets << m_tcpServer->nextPendingConnection();
     connect(m_clientSockets.last(), &QIODevice::readyRead, this, &FakeServer::dataAvailable);
-    //m_clientParsers << new KIMAP::ImapStreamParser( m_clientSockets.last(), true );
+    // m_clientParsers << new KIMAP::ImapStreamParser( m_clientSockets.last(), true );
 
     QVERIFY(m_clientSockets.size() <= m_scenarios.size());
 
@@ -127,7 +121,7 @@ void FakeServer::addScenarioFromFile(const QString &fileName)
 
     // When loading from files we never have the authentication phase
     // force jumping directly to authenticated state.
-    //scenario << preauth();
+    // scenario << preauth();
 
     while (!file.atEnd()) {
         scenario << file.readLine().trimmed();
@@ -168,8 +162,7 @@ void FakeServer::writeServerPart(int scenarioNumber)
     QList<QByteArray> scenario = m_scenarios[scenarioNumber];
     QTcpSocket *clientSocket = m_clientSockets[scenarioNumber];
 
-    while (!scenario.isEmpty()
-           && (scenario.first().startsWith("S: ") || scenario.first().startsWith("W: "))) {
+    while (!scenario.isEmpty() && (scenario.first().startsWith("S: ") || scenario.first().startsWith("W: "))) {
         QByteArray rule = scenario.takeFirst();
 
         if (rule.startsWith("S: ")) {

@@ -15,7 +15,8 @@
 
 class QBuffer;
 
-namespace MailTransport {
+namespace MailTransport
+{
 class Transport;
 
 /**

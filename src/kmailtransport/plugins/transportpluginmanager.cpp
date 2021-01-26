@@ -6,9 +6,9 @@
 
 #include "transportpluginmanager.h"
 #include "mailtransport_debug.h"
-#include <kpluginmetadata.h>
-#include <KPluginLoader>
 #include <KPluginFactory>
+#include <KPluginLoader>
+#include <kpluginmetadata.h>
 
 #include <MailTransport/TransportAbstractPlugin>
 
@@ -24,7 +24,8 @@ public:
     MailTransport::TransportAbstractPlugin *plugin = nullptr;
 };
 
-namespace {
+namespace
+{
 QString pluginVersion()
 {
     return QStringLiteral("1.0");
@@ -44,6 +45,7 @@ public:
     QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
     QVector<MailTransportPluginInfo> mPluginList;
     bool initializePlugins();
+
 private:
     TransportPluginManager *q;
 };

@@ -14,7 +14,8 @@
 
 #include <QWidget>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   A widget to manage mail transports.
 */

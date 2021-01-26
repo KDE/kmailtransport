@@ -8,25 +8,25 @@
 */
 
 #include "smtpjob.h"
-#include "transport.h"
 #include "mailtransport_defs.h"
+#include "mailtransportplugin_smtp_debug.h"
 #include "precommandjob.h"
 #include "sessionuiproxy.h"
-#include "mailtransportplugin_smtp_debug.h"
+#include "transport.h"
 
 #include <QHash>
 #include <QPointer>
 
-#include <KLocalizedString>
 #include "mailtransport_debug.h"
+#include <KLocalizedString>
 #include <KPasswordDialog>
 
 #include <KSMTP/LoginJob>
 #include <KSMTP/SendJob>
 
 #include <KGAPI/Account>
-#include <KGAPI/AuthJob>
 #include <KGAPI/AccountManager>
+#include <KGAPI/AuthJob>
 
 #define GOOGLE_API_KEY QStringLiteral("554041944266.apps.googleusercontent.com")
 #define GOOGLE_API_SECRET QStringLiteral("mdT1DjzohxN3npUUzkENT0gO")
@@ -44,8 +44,7 @@ public:
         qCDebug(MAILTRANSPORT_SMTP_LOG) << "Removing session" << session << "from the pool";
         int key = sessions.key(session);
         if (key > 0) {
-            QObject::connect(session, &KSmtp::Session::stateChanged,
-                             [session](KSmtp::Session::State state) {
+            QObject::connect(session, &KSmtp::Session::stateChanged, [session](KSmtp::Session::State state) {
                 if (state == KSmtp::Session::Disconnected) {
                     session->deleteLater();
                 }
@@ -65,7 +64,8 @@ Q_GLOBAL_STATIC(SessionPool, s_sessionPool)
 class SmtpJobPrivate
 {
 public:
-    SmtpJobPrivate(SmtpJob *parent) : q(parent)
+    SmtpJobPrivate(SmtpJob *parent)
+        : q(parent)
     {
     }
 
@@ -74,9 +74,7 @@ public:
     SmtpJob *const q;
     KSmtp::Session *session = nullptr;
     KSmtp::SessionUiProxy::Ptr uiProxy;
-    enum State {
-        Idle, Precommand, Smtp
-    } currentState;
+    enum State { Idle, Precommand, Smtp } currentState;
     bool finished;
 };
 
@@ -113,9 +111,7 @@ void SmtpJob::doStart()
         return;
     }
 
-    if ((!s_sessionPool->sessions.isEmpty()
-         && s_sessionPool->sessions.contains(transport()->id()))
-        || transport()->precommand().isEmpty()) {
+    if ((!s_sessionPool->sessions.isEmpty() && s_sessionPool->sessions.contains(transport()->id())) || transport()->precommand().isEmpty()) {
         d->currentState = SmtpJobPrivate::Smtp;
         startSmtpJob();
     } else {
@@ -143,10 +139,8 @@ void SmtpJob::startSmtpJob()
         s_sessionPool->sessions.insert(transport()->id(), d->session);
     }
 
-    connect(d->session, &KSmtp::Session::stateChanged,
-            this, &SmtpJob::sessionStateChanged, Qt::UniqueConnection);
-    connect(d->session, &KSmtp::Session::connectionError,
-            this, [this](const QString &err) {
+    connect(d->session, &KSmtp::Session::stateChanged, this, &SmtpJob::sessionStateChanged, Qt::UniqueConnection);
+    connect(d->session, &KSmtp::Session::connectionError, this, [this](const QString &err) {
         setError(KJob::UserDefinedError);
         setErrorText(err);
         s_sessionPool->removeSession(d->session);
@@ -181,25 +175,22 @@ void SmtpJob::startPasswordRetrieval(bool forceRefresh)
     }
 
     if (transport()->authenticationType() == TransportBase::EnumAuthenticationType::XOAUTH2) {
-        auto promise = KGAPI2::AccountManager::instance()->findAccount(
-            GOOGLE_API_KEY, transport()->userName(), { KGAPI2::Account::mailScopeUrl() });
-        connect(promise, &KGAPI2::AccountPromise::finished,
-                this, [forceRefresh, this](KGAPI2::AccountPromise *promise) {
+        auto promise = KGAPI2::AccountManager::instance()->findAccount(GOOGLE_API_KEY, transport()->userName(), {KGAPI2::Account::mailScopeUrl()});
+        connect(promise, &KGAPI2::AccountPromise::finished, this, [forceRefresh, this](KGAPI2::AccountPromise *promise) {
             if (promise->account()) {
                 if (forceRefresh) {
-                    promise = KGAPI2::AccountManager::instance()->refreshTokens(
-                        GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName());
+                    promise = KGAPI2::AccountManager::instance()->refreshTokens(GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName());
                 } else {
                     onTokenRequestFinished(promise);
                     return;
                 }
             } else {
-                promise = KGAPI2::AccountManager::instance()->getAccount(
-                    GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName(),
-                    { KGAPI2::Account::mailScopeUrl() });
+                promise = KGAPI2::AccountManager::instance()->getAccount(GOOGLE_API_KEY,
+                                                                         GOOGLE_API_SECRET,
+                                                                         transport()->userName(),
+                                                                         {KGAPI2::Account::mailScopeUrl()});
             }
-            connect(promise, &KGAPI2::AccountPromise::finished,
-                    this, &SmtpJob::onTokenRequestFinished);
+            connect(promise, &KGAPI2::AccountPromise::finished, this, &SmtpJob::onTokenRequestFinished);
         });
     } else {
         startLoginJob();
@@ -217,8 +208,7 @@ void SmtpJob::onTokenRequestFinished(KGAPI2::AccountPromise *promise)
     }
 
     const auto account = promise->account();
-    const QString tokens = QStringLiteral("%1\001%2").arg(account->accessToken(),
-                                                          account->refreshToken());
+    const QString tokens = QStringLiteral("%1\001%2").arg(account->accessToken(), account->refreshToken());
     transport()->setPassword(tokens);
     startLoginJob();
 }
@@ -232,16 +222,12 @@ void SmtpJob::startLoginJob()
 
     auto user = transport()->userName();
     auto passwd = transport()->password();
-    if ((user.isEmpty() || passwd.isEmpty())
-        && transport()->authenticationType() != Transport::EnumAuthenticationType::GSSAPI) {
-        QPointer<KPasswordDialog> dlg
-            = new KPasswordDialog(
-                  nullptr,
-                  KPasswordDialog::ShowUsernameLine
-                  |KPasswordDialog::ShowKeepPassword);
+    if ((user.isEmpty() || passwd.isEmpty()) && transport()->authenticationType() != Transport::EnumAuthenticationType::GSSAPI) {
+        QPointer<KPasswordDialog> dlg = new KPasswordDialog(nullptr, KPasswordDialog::ShowUsernameLine | KPasswordDialog::ShowKeepPassword);
         dlg->setAttribute(Qt::WA_DeleteOnClose, true);
-        dlg->setPrompt(i18n("You need to supply a username and a password "
-                            "to use this SMTP server."));
+        dlg->setPrompt(
+            i18n("You need to supply a username and a password "
+                 "to use this SMTP server."));
         dlg->setKeepPassword(transport()->storePassword());
         dlg->addCommentLine(QString(), transport()->name());
         dlg->setUsername(user);

@@ -11,7 +11,8 @@
 
 #include <KConfigDialogManager>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   @internal
 */

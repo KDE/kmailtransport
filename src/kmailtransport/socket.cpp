@@ -18,7 +18,8 @@
 
 using namespace MailTransport;
 
-namespace MailTransport {
+namespace MailTransport
+{
 class SocketPrivate
 {
 public:
@@ -128,7 +129,7 @@ Socket::~Socket()
 
 void Socket::reconnect()
 {
-    qCDebug(MAILTRANSPORT_LOG) << "Connecting to:" << d->server <<  ":" <<  d->port;
+    qCDebug(MAILTRANSPORT_LOG) << "Connecting to:" << d->server << ":" << d->port;
 
 #ifdef comm_debug
     // qCDebug(MAILTRANSPORT_LOG) << d->protocol;
@@ -144,15 +145,12 @@ void Socket::reconnect()
 
     d->socket->setProtocol(QSsl::AnyProtocol);
 
-    connect(d->socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)),
-            SLOT(slotStateChanged(QAbstractSocket::SocketState)));
-    connect(d->socket, SIGNAL(modeChanged(QSslSocket::SslMode)),
-            SLOT(slotModeChanged(QSslSocket::SslMode)));
+    connect(d->socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)), SLOT(slotStateChanged(QAbstractSocket::SocketState)));
+    connect(d->socket, SIGNAL(modeChanged(QSslSocket::SslMode)), SLOT(slotModeChanged(QSslSocket::SslMode)));
     connect(d->socket, SIGNAL(connected()), SLOT(slotConnected()));
     connect(d->socket, SIGNAL(readyRead()), SLOT(slotSocketRead()));
     connect(d->socket, &QSslSocket::encrypted, this, &Socket::connected);
-    connect(d->socket, SIGNAL(sslErrors(QList<QSslError>)),
-            SLOT(slotSslErrors(QList<QSslError>)));
+    connect(d->socket, SIGNAL(sslErrors(QList<QSslError>)), SLOT(slotSslErrors(QList<QSslError>)));
 }
 
 void Socket::write(const QString &text)

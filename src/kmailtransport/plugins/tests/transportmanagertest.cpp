@@ -6,8 +6,8 @@
 
 #include "transportmanagertest.h"
 #include "kmailtransport/plugins/transportpluginmanager.h"
-#include <QCoreApplication>
 #include <MailTransport/TransportAbstractPlugin>
+#include <QCoreApplication>
 #include <QDebug>
 
 TransportManagerTest::TransportManagerTest(QObject *parent)

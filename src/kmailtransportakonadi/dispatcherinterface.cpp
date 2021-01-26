@@ -11,10 +11,10 @@
 
 #include "mailtransportakonadi_debug.h"
 
+#include "kmailtransportakonadi/transportattribute.h"
 #include <agentmanager.h>
 #include <collection.h>
 #include <specialmailcollections.h>
-#include "kmailtransportakonadi/transportattribute.h"
 
 using namespace Akonadi;
 using namespace MailTransport;
@@ -37,8 +37,7 @@ DispatcherInterface::DispatcherInterface()
 
 AgentInstance DispatcherInterface::dispatcherInstance() const
 {
-    AgentInstance a
-        = AgentManager::self()->instance(QStringLiteral("akonadi_maildispatcher_agent"));
+    AgentInstance a = AgentManager::self()->instance(QStringLiteral("akonadi_maildispatcher_agent"));
     if (!a.isValid()) {
         qCWarning(MAILTRANSPORTAKONADI_LOG) << "Could not get MDA instance.";
     }
@@ -47,10 +46,9 @@ AgentInstance DispatcherInterface::dispatcherInstance() const
 
 void DispatcherInterface::dispatchManually()
 {
-    Collection outbox
-        = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
+    Collection outbox = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
     if (!outbox.isValid()) {
-//    qCritical() << "Could not access Outbox.";
+        //    qCritical() << "Could not access Outbox.";
         return;
     }
 
@@ -60,10 +58,9 @@ void DispatcherInterface::dispatchManually()
 
 void DispatcherInterface::retryDispatching()
 {
-    Collection outbox
-        = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
+    Collection outbox = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
     if (!outbox.isValid()) {
-//    qCritical() << "Could not access Outbox.";
+        //    qCritical() << "Could not access Outbox.";
         return;
     }
 
@@ -73,15 +70,13 @@ void DispatcherInterface::retryDispatching()
 
 void DispatcherInterface::dispatchManualTransport(int transportId)
 {
-    Collection outbox
-        = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
+    Collection outbox = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
     if (!outbox.isValid()) {
-//    qCritical() << "Could not access Outbox.";
+        //    qCritical() << "Could not access Outbox.";
         return;
     }
 
-    auto *mjob
-        = new FilterActionJob(outbox, new DispatchManualTransportAction(transportId), sInstance);
+    auto *mjob = new FilterActionJob(outbox, new DispatchManualTransportAction(transportId), sInstance);
     QObject::connect(mjob, &KJob::result, sInstance(), &DispatcherInterfacePrivate::massModifyResult);
 }
 

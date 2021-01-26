@@ -14,19 +14,19 @@
 #include "smtpconfigwidget.h"
 #include "ui_smtpsettings.h"
 
-#include "widgets/transportconfigwidget_p.h"
-#include "transport.h"
-#include "transportmanager.h"
-#include "servertest.h"
 #include "mailtransport_defs.h"
 #include "mailtransportplugin_smtp_debug.h"
+#include "servertest.h"
+#include "transport.h"
+#include "transportmanager.h"
+#include "widgets/transportconfigwidget_p.h"
 
 #include <QAbstractButton>
 #include <QButtonGroup>
 
-#include <KProtocolInfo>
 #include "mailtransport_debug.h"
 #include <KMessageBox>
+#include <KProtocolInfo>
 
 using namespace MailTransport;
 
@@ -45,19 +45,14 @@ public:
 
     static void addAuthenticationItem(QComboBox *combo, int authenticationType)
     {
-        combo->addItem(Transport::authenticationTypeString(authenticationType),
-                       QVariant(authenticationType));
+        combo->addItem(Transport::authenticationTypeString(authenticationType), QVariant(authenticationType));
     }
 
     void resetAuthCapabilities()
     {
         noEncCapa.clear();
-        noEncCapa << Transport::EnumAuthenticationType::LOGIN
-                  << Transport::EnumAuthenticationType::PLAIN
-                  << Transport::EnumAuthenticationType::CRAM_MD5
-                  << Transport::EnumAuthenticationType::DIGEST_MD5
-                  << Transport::EnumAuthenticationType::NTLM
-                  << Transport::EnumAuthenticationType::GSSAPI
+        noEncCapa << Transport::EnumAuthenticationType::LOGIN << Transport::EnumAuthenticationType::PLAIN << Transport::EnumAuthenticationType::CRAM_MD5
+                  << Transport::EnumAuthenticationType::DIGEST_MD5 << Transport::EnumAuthenticationType::NTLM << Transport::EnumAuthenticationType::GSSAPI
                   << Transport::EnumAuthenticationType::XOAUTH2;
         sslCapa = tlsCapa = noEncCapa;
         updateAuthCapbilities();
@@ -141,7 +136,7 @@ void SMTPConfigWidget::init()
     d->serverTestFailed = false;
 
     d->ui.setupUi(this);
-    d->manager->addWidget(this);   // otherwise it doesn't find out about these widgets
+    d->manager->addWidget(this); // otherwise it doesn't find out about these widgets
     d->manager->updateWidgets();
 
     d->ui.password->setWhatsThis(i18n("The password to send to the server for authorization."));
@@ -159,10 +154,8 @@ void SMTPConfigWidget::init()
     d->resetAuthCapabilities();
 
     if (!KProtocolInfo::capabilities(SMTP_PROTOCOL).contains(QLatin1String("SASL"))) {
-        d->ui.authCombo->removeItem(d->ui.authCombo->findData(
-                                        Transport::EnumAuthenticationType::NTLM));
-        d->ui.authCombo->removeItem(d->ui.authCombo->findData(
-                                        Transport::EnumAuthenticationType::GSSAPI));
+        d->ui.authCombo->removeItem(d->ui.authCombo->findData(Transport::EnumAuthenticationType::NTLM));
+        d->ui.authCombo->removeItem(d->ui.authCombo->findData(Transport::EnumAuthenticationType::GSSAPI));
     }
 
     connect(d->ui.checkCapabilities, &QPushButton::clicked, this, &SMTPConfigWidget::checkSmtpCapabilities);
@@ -219,7 +212,7 @@ void SMTPConfigWidget::checkSmtpCapabilities()
     qApp->setOverrideCursor(Qt::BusyCursor);
 
     connect(d->serverTest, &ServerTest::finished, this, &SMTPConfigWidget::slotFinished);
-    connect(d->serverTest, &ServerTest::finished, qApp, [](){
+    connect(d->serverTest, &ServerTest::finished, qApp, []() {
         qApp->restoreOverrideCursor();
     });
     d->ui.checkCapabilities->setEnabled(false);
@@ -233,7 +226,7 @@ void SMTPConfigWidget::apply()
     Q_ASSERT(d->manager);
     d->manager->updateSettings();
     if (!d->ui.kcfg_storePassword->isChecked() && d->ui.kcfg_requiresAuthentication->isChecked()) {
-        //Delete stored password
+        // Delete stored password
         TransportManager::self()->removePasswordFromWallet(d->transport->id());
     }
     d->transport->setPassword(d->ui.password->password());
@@ -300,7 +293,7 @@ void SMTPConfigWidget::slotFinished(const QVector<int> &results)
     }
     d->sslCapa = d->serverTest->secureProtocols();
     d->updateAuthCapbilities();
-    //Show correct port from capabilities.
+    // Show correct port from capabilities.
     if (d->ui.encryptionSsl->isEnabled()) {
         const int portValue = d->serverTest->port(Transport::EnumEncryption::SSL);
         d->ui.kcfg_port->setValue(portValue == -1 ? SMTPS_PORT : portValue);

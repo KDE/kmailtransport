@@ -4,14 +4,14 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "resourcesendjob_p.h"
 #include "../messagequeuejob.h"
+#include "resourcesendjob_p.h"
 #include "transport.h"
 
 #include <kmime/kmime_message.h>
 
-#include <AkonadiCore/Collection>
 #include <Akonadi/KMime/AddressAttribute>
+#include <AkonadiCore/Collection>
 
 using namespace Akonadi;
 using namespace KMime;

@@ -13,8 +13,7 @@
 
 using namespace MailTransport;
 
-K_PLUGIN_FACTORY(MailTransportConfigFactory, registerPlugin<ConfigModule>();
-                 )
+K_PLUGIN_FACTORY(MailTransportConfigFactory, registerPlugin<ConfigModule>();)
 
 ConfigModule::ConfigModule(QWidget *parent, const QVariantList &args)
     : KCModule(parent, args)

@@ -8,31 +8,31 @@
 
 #include <QStringList>
 
+#include <addressattribute.h>
 #include <agentinstance.h>
 #include <agentmanager.h>
 #include <collection.h>
 #include <collectionstatistics.h>
 #include <collectionstatisticsjob.h>
 #include <control.h>
+#include <itemdeletejob.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
-#include <itemdeletejob.h>
-#include <qtest_akonadi.h>
-#include <addressattribute.h>
 #include <messageflags.h>
+#include <qtest_akonadi.h>
 #include <specialmailcollections.h>
 #include <specialmailcollectionsrequestjob.h>
 
 #include <kmime/kmime_message.h>
 
+#include <QSignalSpy>
 #include <kmailtransportakonadi/dispatchmodeattribute.h>
 #include <kmailtransportakonadi/errorattribute.h>
 #include <kmailtransportakonadi/messagequeuejob.h>
 #include <kmailtransportakonadi/sentbehaviourattribute.h>
-#include <transport.h>
 #include <kmailtransportakonadi/transportattribute.h>
+#include <transport.h>
 #include <transportmanager.h>
-#include <QSignalSpy>
 
 #define SPAM_ADDRESS (QStringList() << QStringLiteral("idanoka@gmail.com"))
 
@@ -78,14 +78,13 @@ void MessageQueueJobTest::testValidMessages()
     // fetch the message and verify it
     QTest::qWait(1000);
     verifyOutboxContents(1);
-    ItemFetchJob *fjob = new ItemFetchJob(
-        SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox));
+    ItemFetchJob *fjob = new ItemFetchJob(SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox));
     fjob->fetchScope().fetchFullPayload();
     fjob->fetchScope().fetchAllAttributes();
     AKVERIFYEXEC(fjob);
     QCOMPARE(fjob->items().count(), 1);
     Item item = fjob->items().constFirst();
-    QVERIFY(!item.remoteId().isEmpty());   // stored by the resource
+    QVERIFY(!item.remoteId().isEmpty()); // stored by the resource
     QVERIFY(item.hasPayload<Message::Ptr>());
     auto *addrA = item.attribute<AddressAttribute>();
     QVERIFY(addrA);
@@ -96,7 +95,7 @@ void MessageQueueJobTest::testValidMessages()
     QCOMPARE(addrA->bcc().count(), 0);
     auto *dA = item.attribute<DispatchModeAttribute>();
     QVERIFY(dA);
-    QCOMPARE(dA->dispatchMode(), DispatchModeAttribute::Automatic);   // default mode
+    QCOMPARE(dA->dispatchMode(), DispatchModeAttribute::Automatic); // default mode
     auto *sA = item.attribute<SentBehaviourAttribute>();
     QVERIFY(sA);
     // default sent collection
@@ -105,7 +104,7 @@ void MessageQueueJobTest::testValidMessages()
     QVERIFY(tA);
     QCOMPARE(tA->transportId(), tid);
     auto *eA = item.attribute<ErrorAttribute>();
-    QVERIFY(!eA);   // no error
+    QVERIFY(!eA); // no error
     QCOMPARE(item.flags().count(), 1);
     QVERIFY(item.flags().contains(Akonadi::MessageFlags::Queued));
 
@@ -134,8 +133,9 @@ void MessageQueueJobTest::testInvalidMessages()
     // without recipients
     job = new MessageQueueJob;
     msg = Message::Ptr(new Message);
-    msg->setContent("\nThis is a message sent from the MessageQueueJobTest unittest."
-                    " This shouldn't have been sent.\n");
+    msg->setContent(
+        "\nThis is a message sent from the MessageQueueJobTest unittest."
+        " This shouldn't have been sent.\n");
     job->setMessage(msg);
     job->transportAttribute().setTransportId(TransportManager::self()->defaultTransportId());
     QVERIFY(!job->exec());
@@ -143,8 +143,9 @@ void MessageQueueJobTest::testInvalidMessages()
     // without transport
     job = new MessageQueueJob;
     msg = Message::Ptr(new Message);
-    msg->setContent("\nThis is a message sent from the MessageQueueJobTest unittest."
-                    " This shouldn't have been sent.\n");
+    msg->setContent(
+        "\nThis is a message sent from the MessageQueueJobTest unittest."
+        " This shouldn't have been sent.\n");
     job->setMessage(msg);
     job->addressAttribute().setTo(SPAM_ADDRESS);
     QVERIFY(!job->exec());
@@ -152,8 +153,9 @@ void MessageQueueJobTest::testInvalidMessages()
     // with MoveToCollection and no sent-mail folder
     job = new MessageQueueJob;
     msg = Message::Ptr(new Message);
-    msg->setContent("\nThis is a message sent from the MessageQueueJobTest unittest."
-                    " This shouldn't have been sent.\n");
+    msg->setContent(
+        "\nThis is a message sent from the MessageQueueJobTest unittest."
+        " This shouldn't have been sent.\n");
     job->setMessage(msg);
     job->addressAttribute().setTo(SPAM_ADDRESS);
     job->sentBehaviourAttribute().setSentBehaviour(SentBehaviourAttribute::MoveToCollection);
@@ -163,8 +165,7 @@ void MessageQueueJobTest::testInvalidMessages()
 void MessageQueueJobTest::verifyOutboxContents(qlonglong count)
 {
     QVERIFY(SpecialMailCollections::self()->hasDefaultCollection(SpecialMailCollections::Outbox));
-    Collection outbox
-        = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
+    Collection outbox = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
     QVERIFY(outbox.isValid());
     auto *job = new CollectionStatisticsJob(outbox);
     AKVERIFYEXEC(job);

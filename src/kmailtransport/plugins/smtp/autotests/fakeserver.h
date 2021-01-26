@@ -9,10 +9,10 @@
 #ifndef KSMTP_FAKESERVER_H
 #define KSMTP_FAKESERVER_H
 
-#include <QThread>
+#include <QMutex>
 #include <QTcpServer>
 #include <QTcpSocket>
-#include <QMutex>
+#include <QThread>
 
 Q_DECLARE_METATYPE(QList<QByteArray>)
 
@@ -46,7 +46,7 @@ private:
     void writeServerPart(int scenarioNumber);
     void readClientPart(int scenarioNumber);
 
-    QList< QList<QByteArray> > m_scenarios;
+    QList<QList<QByteArray>> m_scenarios;
     QTcpServer *m_tcpServer = nullptr;
     mutable QMutex m_mutex;
     QList<QTcpSocket *> m_clientSockets;

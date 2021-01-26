@@ -6,9 +6,9 @@
 
 #include "outboxactions_p.h"
 
-#include "mailtransportakonadi_debug.h"
 #include "kmailtransportakonadi/dispatchmodeattribute.h"
 #include "kmailtransportakonadi/errorattribute.h"
+#include "mailtransportakonadi_debug.h"
 
 #include <itemmodifyjob.h>
 #include <messageflags.h>
@@ -47,7 +47,7 @@ bool SendQueuedAction::itemAccepted(const Item &item) const
 Job *SendQueuedAction::itemAction(const Item &item, FilterActionJob *parent) const
 {
     Item cp = item;
-    cp.addAttribute(new DispatchModeAttribute);   // defaults to Automatic
+    cp.addAttribute(new DispatchModeAttribute); // defaults to Automatic
     if (cp.hasAttribute<ErrorAttribute>()) {
         cp.removeAttribute<ErrorAttribute>();
         cp.clearFlag(Akonadi::MessageFlags::HasError);
@@ -125,7 +125,7 @@ Job *DispatchManualTransportAction::itemAction(const Item &item, FilterActionJob
     Item cp = item;
     cp.attribute<TransportAttribute>()->setTransportId(mTransportId);
     cp.removeAttribute<DispatchModeAttribute>();
-    cp.addAttribute(new DispatchModeAttribute);   // defaults to Automatic
+    cp.addAttribute(new DispatchModeAttribute); // defaults to Automatic
     cp.setFlag(Akonadi::MessageFlags::Queued);
     return new ItemModifyJob(cp, parent);
 }

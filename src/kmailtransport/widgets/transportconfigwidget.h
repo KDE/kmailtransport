@@ -18,7 +18,8 @@
 
 class KConfigDialogManager;
 
-namespace MailTransport {
+namespace MailTransport
+{
 class Transport;
 class TransportConfigWidgetPrivate;
 

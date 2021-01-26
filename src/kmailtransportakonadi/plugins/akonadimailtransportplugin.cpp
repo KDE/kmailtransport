@@ -5,11 +5,11 @@
 */
 
 #include "akonadimailtransportplugin.h"
-#include "resourcesendjob_p.h"
 #include "mailtransportplugin_akonadi_debug.h"
-#include <KPluginFactory>
-#include <AkonadiCore/AgentManager>
+#include "resourcesendjob_p.h"
 #include <AkonadiCore/AgentInstanceCreateJob>
+#include <AkonadiCore/AgentManager>
+#include <KPluginFactory>
 #include <MailTransport/Transport>
 
 using namespace Akonadi;
@@ -71,7 +71,7 @@ bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, M
         qCWarning(MAILTRANSPORT_AKONADI_LOG) << "Invalid resource instance" << transport->host();
         return false;
     }
-    instance.configure(parent);   // Async...
+    instance.configure(parent); // Async...
     transport->save();
     return true; // No way to know here if the user cancelled or not.
 }

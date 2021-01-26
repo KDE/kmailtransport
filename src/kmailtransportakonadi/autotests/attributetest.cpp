@@ -6,9 +6,9 @@
 
 #include "attributetest.h"
 
+#include <addressattribute.h>
 #include <attributefactory.h>
 #include <qtest_akonadi.h>
-#include <addressattribute.h>
 
 #include <kmailtransportakonadi/dispatchmodeattribute.h>
 #include <kmailtransportakonadi/errorattribute.h>
@@ -153,7 +153,7 @@ void AttributeTest::testSerialization()
         delete a;
     }
 
-    //MoveToCollection + silently
+    // MoveToCollection + silently
     {
         SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::MoveToCollection;
         Collection::Id id = 123456789012345ll;
@@ -175,7 +175,7 @@ void AttributeTest::testSerialization()
         delete copy;
     }
 
-    //Delete + silently
+    // Delete + silently
     {
         SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::Delete;
         Collection::Id id = 123456789012345ll;
@@ -187,19 +187,19 @@ void AttributeTest::testSerialization()
         a = new SentBehaviourAttribute;
         a->deserialize(data);
         QCOMPARE(beh, a->sentBehaviour());
-        //When delete we move to -1
+        // When delete we move to -1
         QCOMPARE(a->moveToCollection().id(), -1);
         QCOMPARE(sendSilently, a->sendSilently());
         SentBehaviourAttribute *copy = a->clone();
         QCOMPARE(copy->sentBehaviour(), beh);
-        //When delete we move to -1
+        // When delete we move to -1
         QCOMPARE(copy->moveToCollection().id(), -1);
         QCOMPARE(copy->sendSilently(), sendSilently);
         delete a;
         delete copy;
     }
 
-    //MoveToDefaultSentCollection + silently
+    // MoveToDefaultSentCollection + silently
     {
         SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::MoveToDefaultSentCollection;
         Collection::Id id = 123456789012345ll;
@@ -211,12 +211,12 @@ void AttributeTest::testSerialization()
         a = new SentBehaviourAttribute;
         a->deserialize(data);
         QCOMPARE(beh, a->sentBehaviour());
-        //When movetodefaultsendCollection we move to -1
+        // When movetodefaultsendCollection we move to -1
         QCOMPARE(a->moveToCollection().id(), -1);
         QCOMPARE(sendSilently, a->sendSilently());
         SentBehaviourAttribute *copy = a->clone();
         QCOMPARE(copy->sentBehaviour(), beh);
-        //When movetodefaultsendCollection we move to -1
+        // When movetodefaultsendCollection we move to -1
         QCOMPARE(copy->moveToCollection().id(), -1);
         QCOMPARE(copy->sendSilently(), sendSilently);
         delete a;
