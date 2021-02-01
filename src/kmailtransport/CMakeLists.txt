@@ -67,8 +67,8 @@ target_link_libraries(KF5MailTransport
     KF5::CoreAddons
     KF5::Wallet
     KF5::ConfigWidgets
-    Qt::DBus
-    Qt::Network
+    Qt5::DBus
+    Qt5::Network
     qt5keychain
     )
 

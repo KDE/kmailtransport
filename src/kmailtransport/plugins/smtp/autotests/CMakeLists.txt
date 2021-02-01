@@ -8,8 +8,8 @@ ecm_add_test(smtpjobtest.cpp
              ../smtpjob.cpp
              ${CMAKE_CURRENT_BINARY_DIR}/../mailtransportplugin_smtp_debug.cpp
              fakeserver.cpp
-    LINK_LIBRARIES Qt::Network
-                   Qt::Test
+    LINK_LIBRARIES Qt5::Network
+                   Qt5::Test
                    KF5::MailTransport
                    KF5::I18n
                    KF5::ConfigWidgets
