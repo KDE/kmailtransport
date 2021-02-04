@@ -24,7 +24,7 @@ using namespace MailTransport;
 TransportMgr::TransportMgr()
     : mCurrentJob(nullptr)
 {
-    auto *vbox = new QVBoxLayout(this);
+    auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(0, 0, 0, 0);
 
     vbox->addWidget(new TransportManagementWidget(this));
@@ -114,7 +114,7 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("transportmgr"));
 
-    auto *t = new TransportMgr();
+    auto t = new TransportMgr();
     t->show();
     app.exec();
     delete t;

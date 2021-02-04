@@ -109,7 +109,7 @@ void FilterActionJob::doStart()
 {
     if (d->collection.isValid()) {
         qCDebug(MAILTRANSPORTAKONADI_LOG) << "Fetching collection" << d->collection.id();
-        auto *fjob = new ItemFetchJob(d->collection, this);
+        auto fjob = new ItemFetchJob(d->collection, this);
         Q_ASSERT(d->functor);
         d->fetchScope = d->functor->fetchScope();
         fjob->setFetchScope(d->fetchScope);

@@ -22,7 +22,7 @@ Runner::Runner()
 {
     Control::start();
 
-    auto *rjob = new SpecialMailCollectionsRequestJob(this);
+    auto rjob = new SpecialMailCollectionsRequestJob(this);
     rjob->requestDefaultCollection(SpecialMailCollections::Outbox);
     connect(rjob, &SpecialMailCollectionsRequestJob::result, this, &Runner::checkFolders);
     rjob->start();

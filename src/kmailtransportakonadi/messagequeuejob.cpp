@@ -108,7 +108,7 @@ void MessageQueueJob::Private::outboxRequestResult(KJob *job)
         return;
     }
 
-    auto *requestJob = qobject_cast<SpecialMailCollectionsRequestJob *>(job);
+    auto requestJob = qobject_cast<SpecialMailCollectionsRequestJob *>(job);
     if (!requestJob) {
         return;
     }
@@ -132,7 +132,7 @@ void MessageQueueJob::Private::outboxRequestResult(KJob *job)
     // Store the item in the outbox.
     const Collection collection = requestJob->collection();
     Q_ASSERT(collection.isValid());
-    auto *cjob = new ItemCreateJob(item, collection); // job autostarts
+    auto cjob = new ItemCreateJob(item, collection); // job autostarts
     q->addSubjob(cjob);
 }
 
@@ -184,7 +184,7 @@ void MessageQueueJob::setMessage(const Message::Ptr &message)
 
 void MessageQueueJob::start()
 {
-    auto *rjob = new SpecialMailCollectionsRequestJob(this);
+    auto rjob = new SpecialMailCollectionsRequestJob(this);
     rjob->requestDefaultCollection(SpecialMailCollections::Outbox);
     connect(rjob, &SpecialMailCollectionsRequestJob::result, this, [this](KJob *job) {
         d->outboxRequestResult(job);

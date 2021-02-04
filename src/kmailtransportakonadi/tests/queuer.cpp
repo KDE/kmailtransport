@@ -35,7 +35,7 @@ MessageQueuer::MessageQueuer()
     if (!Akonadi::Control::start()) {
         qFatal("Could not start Akonadi server.");
     }
-    auto *vbox = new QVBoxLayout(this);
+    auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(0, 0, 0, 0);
 
     mComboBox = new TransportComboBox(this);
@@ -89,7 +89,7 @@ void MessageQueuer::sendOnDateClicked()
 {
     QPointer<QDialog> dialog = new QDialog(this);
     auto layout = new QVBoxLayout(dialog);
-    auto *dt = new QDateTimeEdit(dialog);
+    auto dt = new QDateTimeEdit(dialog);
     dt->setDateTime(QDateTime::currentDateTime());
     dt->setDisplayFormat(QStringLiteral("hh:mm:ss"));
     layout->addWidget(dt);
@@ -116,7 +116,7 @@ MessageQueueJob *MessageQueuer::createQueueJob()
     msg->setContent(QByteArray("\n") + mMailEdit->document()->toPlainText().toLatin1());
     qDebug() << "msg:" << msg->encodedContent(true);
 
-    auto *job = new MessageQueueJob();
+    auto job = new MessageQueueJob();
     job->setMessage(msg);
     job->transportAttribute().setTransportId(mComboBox->currentTransportId());
     // default dispatch mode
@@ -138,7 +138,7 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     app.setApplicationName(QStringLiteral("messagequeuer"));
 
-    auto *t = new MessageQueuer();
+    auto t = new MessageQueuer();
     t->show();
     app.exec();
     delete t;

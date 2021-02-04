@@ -33,7 +33,7 @@ DispatchModeAttribute::~DispatchModeAttribute()
 
 DispatchModeAttribute *DispatchModeAttribute::clone() const
 {
-    auto *const cloned = new DispatchModeAttribute(d->mMode);
+    auto const cloned = new DispatchModeAttribute(d->mMode);
     cloned->setSendAfter(d->mDueDate);
     return cloned;
 }

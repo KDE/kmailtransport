@@ -253,7 +253,7 @@ void Transport::readPassword()
 
 void Transport::readTransportPasswordFinished(QKeychain::Job *baseJob)
 {
-    auto *job = qobject_cast<ReadPasswordJob *>(baseJob);
+    auto job = qobject_cast<ReadPasswordJob *>(baseJob);
     Q_ASSERT(job);
     if (job->error()) {
         d->password.clear();

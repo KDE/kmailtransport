@@ -52,7 +52,7 @@ void MessageQueueJobTest::initTestCase()
     mda.setIsOnline(false);
 
     // check that outbox is empty
-    auto *rjob = new SpecialMailCollectionsRequestJob(this);
+    auto rjob = new SpecialMailCollectionsRequestJob(this);
     rjob->requestDefaultCollection(SpecialMailCollections::Outbox);
     QSignalSpy spy(rjob, &KJob::result);
     QVERIFY(spy.wait(10000));
@@ -66,7 +66,7 @@ void MessageQueueJobTest::testValidMessages()
     QVERIFY2(tid >= 0, "I need a default transport, but there is none.");
 
     // send a valid message using the default transport
-    auto *qjob = new MessageQueueJob;
+    auto qjob = new MessageQueueJob;
     qjob->transportAttribute().setTransportId(tid);
     Message::Ptr msg = Message::Ptr(new Message);
     msg->setContent("\nThis is message #1 from the MessageQueueJobTest unit test.\n");
@@ -109,7 +109,7 @@ void MessageQueueJobTest::testValidMessages()
     QVERIFY(item.flags().contains(Akonadi::MessageFlags::Queued));
 
     // delete message, for further tests
-    auto *djob = new ItemDeleteJob(item);
+    auto djob = new ItemDeleteJob(item);
     AKVERIFYEXEC(djob);
     verifyOutboxContents(0);
 
@@ -125,7 +125,7 @@ void MessageQueueJobTest::testInvalidMessages()
     Message::Ptr msg;
 
     // without message
-    auto *job = new MessageQueueJob;
+    auto job = new MessageQueueJob;
     job->transportAttribute().setTransportId(TransportManager::self()->defaultTransportId());
     job->addressAttribute().setTo(SPAM_ADDRESS);
     QVERIFY(!job->exec());
@@ -167,7 +167,7 @@ void MessageQueueJobTest::verifyOutboxContents(qlonglong count)
     QVERIFY(SpecialMailCollections::self()->hasDefaultCollection(SpecialMailCollections::Outbox));
     Collection outbox = SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox);
     QVERIFY(outbox.isValid());
-    auto *job = new CollectionStatisticsJob(outbox);
+    auto job = new CollectionStatisticsJob(outbox);
     AKVERIFYEXEC(job);
     QCOMPARE(job->statistics().count(), count);
 }
