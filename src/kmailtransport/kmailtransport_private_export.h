@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KMAILTRANSPORTPRIVATE_EXPORT_H
-#define KMAILTRANSPORTPRIVATE_EXPORT_H
+#pragma once
 
 #include "mailtransport_export.h"
 
@@ -18,4 +17,3 @@
 #define KMAILTRANSPORT_TESTS_EXPORT
 #endif
 
-#endif

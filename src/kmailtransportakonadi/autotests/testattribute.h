@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TESTATTRIBUTE_H
-#define TESTATTRIBUTE_H
+#pragma once
 
 #include <attribute.h>
 
@@ -42,4 +41,3 @@ public:
     QByteArray data;
 };
 
-#endif

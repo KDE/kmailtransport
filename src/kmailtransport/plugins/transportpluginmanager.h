@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TRANSPORTPLUGINMANAGER_H
-#define TRANSPORTPLUGINMANAGER_H
+#pragma once
 
 #include "kmailtransport_private_export.h"
 #include <QObject>
@@ -33,4 +32,3 @@ private:
 };
 }
 
-#endif // TRANSPORTPLUGINMANAGER_H

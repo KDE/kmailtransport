@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TRANSPORTMANAGERTEST_H
-#define TRANSPORTMANAGERTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -16,4 +15,3 @@ public:
     explicit TransportManagerTest(QObject *parent = nullptr);
 };
 
-#endif // TRANSPORTMANAGERTEST_H

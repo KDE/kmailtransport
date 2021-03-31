@@ -6,8 +6,7 @@
   SPDX-License-Identifier: LGPL-2.1-or-later
 */
 
-#ifndef KSMTP_FAKESERVER_H
-#define KSMTP_FAKESERVER_H
+#pragma once
 
 #include <QMutex>
 #include <QTcpServer>
@@ -52,4 +51,3 @@ private:
     QList<QTcpSocket *> m_clientSockets;
 };
 
-#endif // KSMTP_FAKESERVER_H

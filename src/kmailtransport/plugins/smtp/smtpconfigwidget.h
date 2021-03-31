@@ -10,8 +10,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_SMTPCONFIGWIDGET_H
-#define MAILTRANSPORT_SMTPCONFIGWIDGET_H
+#pragma once
 
 #include "widgets/transportconfigwidget.h"
 class QAbstractButton;
@@ -56,4 +55,3 @@ private:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_SMTPCONFIGWIDGET_H

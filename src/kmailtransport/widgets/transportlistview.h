@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_TRANSPORTLISTVIEW_H
-#define MAILTRANSPORT_TRANSPORTLISTVIEW_H
+#pragma once
 
 #include <QTreeWidget>
 
@@ -33,4 +32,3 @@ private Q_SLOTS:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_TRANSPORTLISTVIEW_H

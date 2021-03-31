@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_SMTPCONFIGDIALOG_H
-#define MAILTRANSPORT_SMTPCONFIGDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -30,4 +29,3 @@ private:
 };
 } // namespace MailTransport
 
-#endif

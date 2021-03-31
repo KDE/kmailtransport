@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_AddTransportDialogNG_H
-#define MAILTRANSPORT_AddTransportDialogNG_H
+#pragma once
 
 #include "kmailtransport_private_export.h"
 #include <QDialog>
@@ -48,4 +47,3 @@ private:
 };
 } // namespace MailTransport
 
-#endif

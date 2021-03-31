@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_CONFIGMODULE_H
-#define MAILTRANSPORT_CONFIGMODULE_H
+#pragma once
 
 #include <KCModule>
 
@@ -22,4 +21,3 @@ public:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_CONFIGMODULE_H

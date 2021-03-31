@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_SENTACTIONATTRIBUTE_H
-#define MAILTRANSPORT_SENTACTIONATTRIBUTE_H
+#pragma once
 
 #include <mailtransportakonadi_export.h>
 
@@ -137,4 +136,3 @@ private:
 }
 Q_DECLARE_TYPEINFO(MailTransport::SentActionAttribute::Action, Q_MOVABLE_TYPE);
 
-#endif

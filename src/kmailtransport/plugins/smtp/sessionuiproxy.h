@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SESSIONUIPROXY_H_
-#define SESSIONUIPROXY_H_
+#pragma once
 
 #include <KSMTP/SessionUiProxy>
 #include <kio/sslui.h>
@@ -19,4 +18,3 @@ public:
     }
 };
 
-#endif

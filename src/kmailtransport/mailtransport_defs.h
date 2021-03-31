@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_MAILTRANSPORT_DEFS_H
-#define MAILTRANSPORT_MAILTRANSPORT_DEFS_H
+#pragma once
 
 /**
   @file mailtransport_defs.h
@@ -48,4 +47,3 @@
 #define NNTP_PORT 119
 #define NNTPS_PORT 563
 
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_TRANSPORTCONFIGWIDGET_P_H
-#define MAILTRANSPORT_TRANSPORTCONFIGWIDGET_P_H
+#pragma once
 
 #include "transport.h"
 
@@ -28,4 +27,3 @@ public:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_TRANSPORTCONFIGWIDGET_P_H

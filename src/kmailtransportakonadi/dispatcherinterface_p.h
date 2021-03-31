@@ -3,8 +3,7 @@
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef MAILTRANSPORT_DISPATCHERINTERFACE_P_H
-#define MAILTRANSPORT_DISPATCHERINTERFACE_P_H
+#pragma once
 
 #include <QObject>
 
@@ -25,4 +24,3 @@ public Q_SLOTS:
 };
 }
 
-#endif

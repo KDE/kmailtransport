@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ADDTRANSPORTDIALOGNG_GUI_H
-#define ADDTRANSPORTDIALOGNG_GUI_H
+#pragma once
 
 #include <QWidget>
 
@@ -16,4 +15,3 @@ public:
     explicit AddTransportDialogNG_gui(QWidget *parent = nullptr);
 };
 
-#endif // ADDTRANSPORTDIALOGNG_GUI_H

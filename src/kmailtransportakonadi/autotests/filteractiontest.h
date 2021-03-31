@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef FILTERACTIONTEST_H
-#define FILTERACTIONTEST_H
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -28,4 +27,3 @@ private:
     Akonadi::Item createItem(const Akonadi::Collection &col, bool accept);
 };
 
-#endif

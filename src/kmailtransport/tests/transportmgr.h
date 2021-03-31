@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TRANSPORTMGR_H
-#define TRANSPORTMGR_H
+#pragma once
 
 #define USES_DEPRECATED_MAILTRANSPORT_API
 
@@ -42,4 +41,3 @@ private:
     KJob *mCurrentJob = nullptr;
 };
 
-#endif

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_MESSAGEQUEUEJOB_H
-#define MAILTRANSPORT_MESSAGEQUEUEJOB_H
+#pragma once
 
 #include <mailtransportakonadi_export.h>
 
@@ -149,4 +148,3 @@ private:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_MESSAGEQUEUEJOB_H

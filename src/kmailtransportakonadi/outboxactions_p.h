@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_OUTBOXACTIONS_P_H
-#define MAILTRANSPORT_OUTBOXACTIONS_P_H
+#pragma once
 
 #include "transportattribute.h"
 #include <filteractionjob_p.h>
@@ -99,4 +98,3 @@ private:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_OUTBOXACTIONS_P_H

@@ -5,8 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MESSAGEQUEUER_H
-#define MESSAGEQUEUER_H
+#pragma once
 
 #include <QWidget>
 #include <widgets/transportcombobox.h>
@@ -49,4 +48,3 @@ private:
     MailTransport::MessageQueueJob *createQueueJob();
 };
 
-#endif

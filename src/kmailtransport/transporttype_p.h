@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_TRANSPORTTYPE_P_H
-#define MAILTRANSPORT_TRANSPORTTYPE_P_H
+#pragma once
 
 #include <QSharedData>
 #include <QString>
@@ -38,4 +37,3 @@ public:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_TRANSPORTTYPE_P_H

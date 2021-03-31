@@ -7,8 +7,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_SMTPJOB_H
-#define MAILTRANSPORT_SMTPJOB_H
+#pragma once
 
 #include <KSMTP/Session>
 #include <transportjob.h>
@@ -75,4 +74,3 @@ private:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_SMTPJOB_H

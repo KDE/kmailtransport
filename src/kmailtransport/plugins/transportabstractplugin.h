@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TRANSPORTABSTRACTPLUGIN_H
-#define TRANSPORTABSTRACTPLUGIN_H
+#pragma once
 
 #include "mailtransport_export.h"
 #include <QObject>
@@ -48,4 +47,3 @@ Q_SIGNALS:
 }
 Q_DECLARE_TYPEINFO(MailTransport::TransportAbstractPluginInfo, Q_MOVABLE_TYPE);
 
-#endif // TRANSPORTABSTRACTPLUGIN_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_TRANSPORT_P_H
-#define MAILTRANSPORT_TRANSPORT_P_H
+#pragma once
 
 #include "transporttype.h"
 
@@ -25,4 +24,3 @@ public:
     bool needsWalletMigration;
 };
 
-#endif

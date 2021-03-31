@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_SENTBEHAVIOURATTRIBUTE_H
-#define MAILTRANSPORT_SENTBEHAVIOURATTRIBUTE_H
+#pragma once
 
 #include <mailtransportakonadi_export.h>
 
@@ -100,4 +99,3 @@ private:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_SENTBEHAVIOURATTRIBUTE_H

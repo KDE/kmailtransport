@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_ERRORATTRIBUTE_H
-#define MAILTRANSPORT_ERRORATTRIBUTE_H
+#pragma once
 
 #include <mailtransportakonadi_export.h>
 
@@ -62,4 +61,3 @@ private:
 };
 }
 
-#endif

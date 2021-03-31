@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef AkonadiMAILTRANSPORTPLUGIN_H
-#define AkonadiMAILTRANSPORTPLUGIN_H
+#pragma once
 
 #include <MailTransport/TransportAbstractPlugin>
 #include <QVariant>
@@ -32,4 +31,3 @@ private:
     void slotUpdatePluginList(const Akonadi::AgentType &type);
 };
 
-#endif // AkonadiMAILTRANSPORTPLUGIN_H

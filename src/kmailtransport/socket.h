@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_SOCKET_H
-#define MAILTRANSPORT_SOCKET_H
+#pragma once
 
 #include <mailtransport_export.h>
 
@@ -118,4 +117,3 @@ Q_SIGNALS:
 };
 } // namespace MailTransport
 
-#endif // MAILTRANSPORT_SOCKET_H

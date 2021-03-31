@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_TRANSPORTTYPE_H
-#define MAILTRANSPORT_TRANSPORTTYPE_H
+#pragma once
 
 #include "mailtransport_export.h"
 #include "transport.h"
@@ -98,4 +97,3 @@ private:
 Q_DECLARE_METATYPE(MailTransport::TransportType)
 Q_DECLARE_TYPEINFO(MailTransport::TransportType, Q_MOVABLE_TYPE);
 
-#endif // MAILTRANSPORT_TRANSPORTTYPE_H
