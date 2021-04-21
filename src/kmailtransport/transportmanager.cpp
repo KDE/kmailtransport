@@ -31,7 +31,10 @@
 #include <KEMailSettings>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <kcoreaddons_version.h>
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
+#endif
 #include <qt5keychain/keychain.h>
 using namespace QKeychain;
 #include <KWallet>
@@ -109,10 +112,11 @@ TransportManager::TransportManager()
     : QObject()
     , d(new TransportManagerPrivate(this))
 {
+#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Kdelibs4ConfigMigrator migrate(QStringLiteral("transportmanager"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("mailtransports"));
     migrate.migrate();
-
+#endif
     qAddPostRoutine(destroyStaticTransportManager);
     d->config = new KConfig(QStringLiteral("mailtransports"));
 
