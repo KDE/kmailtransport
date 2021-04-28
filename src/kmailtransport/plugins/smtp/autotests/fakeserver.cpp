@@ -10,6 +10,7 @@
 
 #include <QDebug>
 #include <QFile>
+#include <QTcpServer>
 #include <QTest>
 
 FakeServer::FakeServer(QObject *parent)
