@@ -16,7 +16,7 @@ AddTransportDialogNG_gui::AddTransportDialogNG_gui(QWidget *parent)
     : QWidget(parent)
 {
     auto layout = new QHBoxLayout(this);
-    QPushButton *button = new QPushButton(QStringLiteral("Add transport"));
+    auto button = new QPushButton(QStringLiteral("Add transport"));
     layout->addWidget(button);
     connect(button, &QPushButton::clicked, this, [this] {
         auto dlg = new MailTransport::AddTransportDialogNG(this);

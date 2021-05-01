@@ -31,7 +31,7 @@ TransportMgr::TransportMgr()
     mComboBox = new TransportComboBox(this);
     mComboBox->setEditable(true);
     vbox->addWidget(mComboBox);
-    QPushButton *b = new QPushButton(QStringLiteral("&Edit"), this);
+    auto b = new QPushButton(QStringLiteral("&Edit"), this);
     vbox->addWidget(b);
     connect(b, &QPushButton::clicked, this, &TransportMgr::editBtnClicked);
     b = new QPushButton(QStringLiteral("&Remove all transports"), this);

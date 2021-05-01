@@ -140,7 +140,7 @@ void AttributeTest::testSerialization()
     {
         SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::MoveToCollection;
         Collection::Id id = 123456789012345ll;
-        SentBehaviourAttribute *a = new SentBehaviourAttribute(beh, Collection(id));
+        auto a = new SentBehaviourAttribute(beh, Collection(id));
         bool sendSilently = true;
         a->setSendSilently(sendSilently);
         QByteArray data = a->serialized();
@@ -157,7 +157,7 @@ void AttributeTest::testSerialization()
     {
         SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::MoveToCollection;
         Collection::Id id = 123456789012345ll;
-        SentBehaviourAttribute *a = new SentBehaviourAttribute(beh, Collection(id));
+        auto a = new SentBehaviourAttribute(beh, Collection(id));
         bool sendSilently = true;
         a->setSendSilently(sendSilently);
         QByteArray data = a->serialized();
@@ -179,7 +179,7 @@ void AttributeTest::testSerialization()
     {
         SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::Delete;
         Collection::Id id = 123456789012345ll;
-        SentBehaviourAttribute *a = new SentBehaviourAttribute(beh, Collection(id));
+        auto a = new SentBehaviourAttribute(beh, Collection(id));
         bool sendSilently = true;
         a->setSendSilently(sendSilently);
         QByteArray data = a->serialized();
@@ -203,7 +203,7 @@ void AttributeTest::testSerialization()
     {
         SentBehaviourAttribute::SentBehaviour beh = SentBehaviourAttribute::MoveToDefaultSentCollection;
         Collection::Id id = 123456789012345ll;
-        SentBehaviourAttribute *a = new SentBehaviourAttribute(beh, Collection(id));
+        auto a = new SentBehaviourAttribute(beh, Collection(id));
         bool sendSilently = true;
         a->setSendSilently(sendSilently);
         QByteArray data = a->serialized();

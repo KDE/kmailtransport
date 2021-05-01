@@ -116,7 +116,7 @@ void SmtpJob::doStart()
         startSmtpJob();
     } else {
         d->currentState = SmtpJobPrivate::Precommand;
-        PrecommandJob *job = new PrecommandJob(transport()->precommand(), this);
+        auto job = new PrecommandJob(transport()->precommand(), this);
         addSubjob(job);
         job->start();
     }

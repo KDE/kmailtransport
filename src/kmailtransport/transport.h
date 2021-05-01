@@ -39,7 +39,7 @@ public:
     */
     ~Transport() override;
 
-    typedef QList<Transport *> List;
+    using List = QList<Transport *>;
 
     /**
       Returns true if this transport is valid, ie. has all necessary data set.

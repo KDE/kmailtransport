@@ -26,7 +26,7 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     mConfigWidget = new SMTPConfigWidget(transport, this);
     mConfigWidget->setObjectName(QStringLiteral("smtpconfigwidget"));
     mainLayout->addWidget(mConfigWidget);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttons"));
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);

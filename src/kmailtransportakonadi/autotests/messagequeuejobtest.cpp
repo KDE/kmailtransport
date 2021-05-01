@@ -78,7 +78,7 @@ void MessageQueueJobTest::testValidMessages()
     // fetch the message and verify it
     QTest::qWait(1000);
     verifyOutboxContents(1);
-    ItemFetchJob *fjob = new ItemFetchJob(SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox));
+    auto fjob = new ItemFetchJob(SpecialMailCollections::self()->defaultCollection(SpecialMailCollections::Outbox));
     fjob->fetchScope().fetchFullPayload();
     fjob->fetchScope().fetchAllAttributes();
     AKVERIFYEXEC(fjob);
@@ -86,24 +86,24 @@ void MessageQueueJobTest::testValidMessages()
     Item item = fjob->items().constFirst();
     QVERIFY(!item.remoteId().isEmpty()); // stored by the resource
     QVERIFY(item.hasPayload<Message::Ptr>());
-    auto *addrA = item.attribute<AddressAttribute>();
+    auto addrA = item.attribute<AddressAttribute>();
     QVERIFY(addrA);
     QVERIFY(addrA->from().isEmpty());
     QCOMPARE(addrA->to().count(), 1);
     QCOMPARE(addrA->to(), SPAM_ADDRESS);
     QCOMPARE(addrA->cc().count(), 0);
     QCOMPARE(addrA->bcc().count(), 0);
-    auto *dA = item.attribute<DispatchModeAttribute>();
+    auto dA = item.attribute<DispatchModeAttribute>();
     QVERIFY(dA);
     QCOMPARE(dA->dispatchMode(), DispatchModeAttribute::Automatic); // default mode
-    auto *sA = item.attribute<SentBehaviourAttribute>();
+    auto sA = item.attribute<SentBehaviourAttribute>();
     QVERIFY(sA);
     // default sent collection
     QCOMPARE(sA->sentBehaviour(), SentBehaviourAttribute::MoveToDefaultSentCollection);
-    auto *tA = item.attribute<TransportAttribute>();
+    auto tA = item.attribute<TransportAttribute>();
     QVERIFY(tA);
     QCOMPARE(tA->transportId(), tid);
-    auto *eA = item.attribute<ErrorAttribute>();
+    auto eA = item.attribute<ErrorAttribute>();
     QVERIFY(!eA); // no error
     QCOMPARE(item.flags().count(), 1);
     QVERIFY(item.flags().contains(Akonadi::MessageFlags::Queued));

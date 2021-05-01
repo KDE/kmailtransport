@@ -46,7 +46,7 @@ public:
         /**
          * Describes a list of sent actions.
          */
-        typedef QVector<Action> List;
+        using List = QVector<Action>;
 
         /**
          * Creates a new invalid action.

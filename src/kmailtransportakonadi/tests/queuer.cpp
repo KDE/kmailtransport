@@ -59,7 +59,7 @@ MessageQueuer::MessageQueuer()
     mMailEdit->setAcceptRichText(false);
     mMailEdit->setLineWrapMode(QTextEdit::NoWrap);
     vbox->addWidget(mMailEdit);
-    QPushButton *b = new QPushButton(QStringLiteral("&Send Now"), this);
+    auto b = new QPushButton(QStringLiteral("&Send Now"), this);
     vbox->addWidget(b);
     connect(b, &QPushButton::clicked, this, &MessageQueuer::sendNowClicked);
     b = new QPushButton(QStringLiteral("Send &Queued"), this);

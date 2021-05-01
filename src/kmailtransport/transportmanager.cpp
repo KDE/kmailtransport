@@ -122,7 +122,7 @@ TransportManager::TransportManager()
 
     QDBusConnection::sessionBus().registerObject(DBUS_OBJECT_PATH, this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
-    QDBusServiceWatcher *watcher = new QDBusServiceWatcher(DBUS_SERVICE_NAME, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForUnregistration, this);
+    auto watcher = new QDBusServiceWatcher(DBUS_SERVICE_NAME, QDBusConnection::sessionBus(), QDBusServiceWatcher::WatchForUnregistration, this);
     connect(watcher, &QDBusServiceWatcher::serviceUnregistered, this, [this]() {
         d->dbusServiceUnregistered();
     });
@@ -189,7 +189,7 @@ TransportType::List TransportManager::types() const
 Transport *TransportManager::createTransport() const
 {
     int id = d->createId();
-    Transport *t = new Transport(QString::number(id));
+    auto t = new Transport(QString::number(id));
     t->setId(id);
     return t;
 }

@@ -37,7 +37,7 @@ public:
     /**
       Describes a list of transport types.
     */
-    typedef QVector<TransportType> List;
+    using List = QVector<TransportType>;
 
     /**
       Constructs a new TransportType.
