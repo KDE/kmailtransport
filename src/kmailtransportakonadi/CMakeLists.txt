@@ -53,7 +53,7 @@ target_link_libraries(KF5MailTransportAkonadi
     )
 
 set_target_properties(KF5MailTransportAkonadi PROPERTIES
-    VERSION ${MAILTRANSPORT_VERSION_STRING}
+    VERSION ${MAILTRANSPORT_VERSION}
     SOVERSION ${MAILTRANSPORT_SOVERSION}
     EXPORT_NAME MailTransportAkonadi
     )

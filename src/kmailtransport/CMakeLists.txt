@@ -73,7 +73,7 @@ target_link_libraries(KF5MailTransport
     )
 
 set_target_properties(KF5MailTransport PROPERTIES
-    VERSION ${MAILTRANSPORT_VERSION_STRING}
+    VERSION ${MAILTRANSPORT_VERSION}
     SOVERSION ${MAILTRANSPORT_SOVERSION}
     EXPORT_NAME MailTransport
     )
