@@ -20,5 +20,5 @@ target_link_libraries(mailtransport_akonadiplugin
     KF5::AkonadiCore
     KF5::I18n
     KF5::ConfigWidgets
-    Qt5::DBus
+    Qt::DBus
     )
