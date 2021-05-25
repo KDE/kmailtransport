@@ -1,5 +1,6 @@
-set(mailtransport_kcm_srcs configmodule.cpp)
-add_library(kcm_mailtransport MODULE ${mailtransport_kcm_srcs})
+
+add_library(kcm_mailtransport MODULE)
+target_sources(kcm_mailtransport PRIVATE configmodule.cpp)
 target_link_libraries(kcm_mailtransport
                         KF5::KCMUtils
                         KF5::ConfigWidgets

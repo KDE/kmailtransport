@@ -1,10 +1,12 @@
+add_library(KF5MailTransport)
+add_library(KF5::MailTransport ALIAS KF5MailTransport)
 ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfigVersion.cmake"
     SOVERSION 5
     )
 
-set(mailtransport_lib_srcs
+target_sources(KF5MailTransport PRIVATE
     transport.cpp
     transportmanager.cpp
     transporttype.cpp
@@ -14,7 +16,7 @@ set(mailtransport_lib_srcs
     servertest.cpp
     )
 
-set(mailtransport_widgets_srcs
+target_sources(KF5MailTransport PRIVATE
     widgets/transportconfigwidget.cpp
     widgets/transportcombobox.cpp
     widgets/transportlistview.cpp
@@ -22,37 +24,30 @@ set(mailtransport_widgets_srcs
     widgets/addtransportdialogng.cpp
     )
 
-set(mailtransport_plugins_srcs
+target_sources(KF5MailTransport PRIVATE
     plugins/transportabstractplugin.cpp
     plugins/transportpluginmanager.cpp
     ) 
 
 
-ecm_qt_declare_logging_category(mailtransport_lib_srcs HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport
+ecm_qt_declare_logging_category(KF5MailTransport HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport
         DESCRIPTION "kmailtransport (kmailtransport)"
         OLD_CATEGORY_NAMES log_mailtransport
         EXPORT MAILTRANSPORT
     )
 
-ki18n_wrap_ui(mailtransport_lib_srcs
+ki18n_wrap_ui(KF5MailTransport
     ui/addtransportdialog.ui
     ui/transportmanagementwidget.ui
     )
 
-kconfig_add_kcfg_files(mailtransport_lib_srcs transportbase.kcfgc)
+kconfig_add_kcfg_files(KF5MailTransport transportbase.kcfgc)
 
-add_library(KF5MailTransport
-    ${mailtransport_lib_srcs}
-    ${mailtransport_widgets_srcs}
-    ${mailtransport_plugins_srcs}
-    )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5MailTransport PROPERTIES UNITY_BUILD ON)
 endif()
 
 generate_export_header(KF5MailTransport BASE_NAME mailtransport)
-
-add_library(KF5::MailTransport ALIAS KF5MailTransport)
 
 target_include_directories(KF5MailTransport INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport;${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransport>")
 target_include_directories(KF5MailTransport PUBLIC "$<BUILD_INTERFACE:${MailTransport_SOURCE_DIR}/src;${MailTransport_BINARY_DIR}/src>")

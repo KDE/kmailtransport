@@ -1,3 +1,7 @@
+add_library(KF5MailTransportAkonadi)
+add_library(KF5::MailTransportAkonadi ALIAS KF5MailTransportAkonadi)
+
+
 ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransportakonadi_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportAkonadiConfigVersion.cmake"
@@ -7,7 +11,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
 
 
 
-set(mailtransportakonadi_lib_srcs
+target_sources(KF5MailTransportAkonadi PRIVATE
     dispatcherinterface.cpp
     attributeregistrar.cpp
     dispatchmodeattribute.cpp
@@ -20,21 +24,15 @@ set(mailtransportakonadi_lib_srcs
     filteractionjob.cpp
     )
 
-ecm_qt_declare_logging_category(mailtransportakonadi_lib_srcs HEADER mailtransportakonadi_debug.h IDENTIFIER MAILTRANSPORTAKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransportakonadi
+ecm_qt_declare_logging_category(KF5MailTransportAkonadi HEADER mailtransportakonadi_debug.h IDENTIFIER MAILTRANSPORTAKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransportakonadi
         DESCRIPTION "kmailtransportakonadi (kmailtransportakonadi)"
         EXPORT MAILTRANSPORT
     )
 
-
-add_library(KF5MailTransportAkonadi ${mailtransportakonadi_lib_srcs}
-    )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KF5MailTransportAkonadi PROPERTIES UNITY_BUILD ON)
 endif()
 generate_export_header(KF5MailTransportAkonadi BASE_NAME mailtransportakonadi)
-
-add_library(KF5::MailTransportAkonadi ALIAS KF5MailTransportAkonadi)
-
 
 target_include_directories(KF5MailTransportAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransportAkonadi;${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransportakonadi>")
 target_include_directories(KF5MailTransportAkonadi PUBLIC "$<BUILD_INTERFACE:${MailTransport_SOURCE_DIR}/src;${MailTransport_BINARY_DIR}/src>")
