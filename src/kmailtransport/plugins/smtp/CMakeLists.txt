@@ -1,25 +1,24 @@
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
+kcoreaddons_add_plugin(mailtransport_smtpplugin JSON smtpmailtransport.json INSTALL_NAMESPACE mailtransport)
 
-set(mailtransport_smtpplugin_SRCS
+target_sources(mailtransport_smtpplugin PRIVATE
     smtpmailtransportplugin.cpp
     smtpconfigdialog.cpp
     smtpjob.cpp
     smtpconfigwidget.cpp
     )
-ki18n_wrap_ui(mailtransport_smtpplugin_SRCS
+ki18n_wrap_ui(mailtransport_smtpplugin
     smtpsettings.ui
     )
-ecm_qt_declare_logging_category(mailtransport_smtpplugin_SRCS HEADER mailtransportplugin_smtp_debug.h IDENTIFIER MAILTRANSPORT_SMTP_LOG CATEGORY_NAME org.kde.pim.mailtransport.smtpplugin
+ecm_qt_declare_logging_category(mailtransport_smtpplugin HEADER mailtransportplugin_smtp_debug.h IDENTIFIER MAILTRANSPORT_SMTP_LOG CATEGORY_NAME org.kde.pim.mailtransport.smtpplugin
         DESCRIPTION "kmailtransport (smtp plugin)"
         OLD_CATEGORY_NAMES log_smtp
         EXPORT MAILTRANSPORT
     )
 
 
-kcoreaddons_add_plugin(mailtransport_smtpplugin JSON smtpmailtransport.json SOURCES
-    ${mailtransport_smtpplugin_SRCS} INSTALL_NAMESPACE mailtransport)
 
 target_link_libraries(mailtransport_smtpplugin
     KF5::MailTransport

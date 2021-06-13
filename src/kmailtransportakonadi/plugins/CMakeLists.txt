@@ -1,9 +1,10 @@
-set(mailtransport_akonadiplugin_SRCS
+kcoreaddons_add_plugin(mailtransport_akonadiplugin JSON akonadimailtransport.json INSTALL_NAMESPACE mailtransport)
+target_sources(mailtransport_akonadiplugin PRIVATE
     akonadimailtransportplugin.cpp
     resourcesendjob.cpp
     )
 
-ecm_qt_declare_logging_category(mailtransport_akonadiplugin_SRCS HEADER mailtransportplugin_akonadi_debug.h IDENTIFIER
+ecm_qt_declare_logging_category(mailtransport_akonadiplugin HEADER mailtransportplugin_akonadi_debug.h IDENTIFIER
         MAILTRANSPORT_AKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransport.akonadiplugin
         DESCRIPTION "kmailtransport (akonadi plugin)"
         EXPORT MAILTRANSPORT
@@ -11,8 +12,6 @@ ecm_qt_declare_logging_category(mailtransport_akonadiplugin_SRCS HEADER mailtran
 
 
 
-kcoreaddons_add_plugin(mailtransport_akonadiplugin JSON akonadimailtransport.json SOURCES
-    ${mailtransport_akonadiplugin_SRCS} INSTALL_NAMESPACE mailtransport)
 
 target_link_libraries(mailtransport_akonadiplugin
     KF5::MailTransportAkonadi
