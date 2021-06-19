@@ -1,4 +1,3 @@
-find_package(Qt5Test CONFIG REQUIRED)
 find_package(KF5DBusAddons CONFIG REQUIRED)
 
 # Akonadi testrunner-based tests:
