@@ -1,7 +1,5 @@
 include(ECMAddTests)
 
-find_package(Qt5Test ${QT_REQUIRED_VERSION} REQUIRED)
-
 include_directories(${CMAKE_CURRENT_BINARY_DIR}/..)
 
 ecm_add_test(smtpjobtest.cpp
