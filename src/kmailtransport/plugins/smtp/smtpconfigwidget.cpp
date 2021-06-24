@@ -25,6 +25,7 @@
 #include <QButtonGroup>
 
 #include "mailtransport_debug.h"
+#include <KAuthorized>
 #include <KMessageBox>
 #include <KProtocolInfo>
 
@@ -136,6 +137,7 @@ void SMTPConfigWidget::init()
     d->serverTestFailed = false;
 
     d->ui.setupUi(this);
+    d->ui.password->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
     d->manager->addWidget(this); // otherwise it doesn't find out about these widgets
     d->manager->updateWidgets();
 
