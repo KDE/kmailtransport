@@ -78,7 +78,7 @@ public:
         }
 
         ui.authCombo->clear();
-        for (int authType : qAsConst(capa)) {
+        for (int authType : std::as_const(capa)) {
             addAuthenticationItem(ui.authCombo, authType);
         }
 

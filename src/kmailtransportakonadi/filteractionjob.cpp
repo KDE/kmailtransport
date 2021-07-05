@@ -57,7 +57,7 @@ void FilterActionJob::Private::traverseItems()
 {
     Q_ASSERT(functor);
     qCDebug(MAILTRANSPORTAKONADI_LOG) << "Traversing" << items.count() << "items.";
-    for (const Item &item : qAsConst(items)) {
+    for (const Item &item : std::as_const(items)) {
         if (functor->itemAccepted(item)) {
             functor->itemAction(item, q);
             qCDebug(MAILTRANSPORTAKONADI_LOG) << "Added subjob for item" << item.id();

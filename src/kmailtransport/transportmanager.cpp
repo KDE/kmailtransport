@@ -151,7 +151,7 @@ TransportManager *TransportManager::self()
 
 Transport *TransportManager::transportById(int id, bool def) const
 {
-    for (Transport *t : qAsConst(d->transports)) {
+    for (Transport *t : std::as_const(d->transports)) {
         if (t->id() == id) {
             return t;
         }
@@ -165,7 +165,7 @@ Transport *TransportManager::transportById(int id, bool def) const
 
 Transport *TransportManager::transportByName(const QString &name, bool def) const
 {
-    for (Transport *t : qAsConst(d->transports)) {
+    for (Transport *t : std::as_const(d->transports)) {
         if (t->name() == name) {
             return t;
         }
@@ -324,7 +324,7 @@ QVector<int> TransportManager::transportIds() const
 {
     QVector<int> rv;
     rv.reserve(d->transports.count());
-    for (Transport *t : qAsConst(d->transports)) {
+    for (Transport *t : std::as_const(d->transports)) {
         rv << t->id();
     }
     return rv;
@@ -334,7 +334,7 @@ QStringList TransportManager::transportNames() const
 {
     QStringList rv;
     rv.reserve(d->transports.count());
-    for (Transport *t : qAsConst(d->transports)) {
+    for (Transport *t : std::as_const(d->transports)) {
         rv << t->name();
     }
     return rv;
@@ -521,7 +521,7 @@ int TransportManagerPrivate::createId() const
 {
     QVector<int> usedIds;
     usedIds.reserve(1 + transports.count());
-    for (Transport *t : qAsConst(transports)) {
+    for (Transport *t : std::as_const(transports)) {
         usedIds << t->id();
     }
     usedIds << 0; // 0 is default for unknown
@@ -574,7 +574,7 @@ void TransportManagerPrivate::prepareWallet()
 
 void TransportManager::loadPasswords()
 {
-    for (Transport *t : qAsConst(d->transports)) {
+    for (Transport *t : std::as_const(d->transports)) {
         t->readPassword();
     }
 
@@ -594,7 +594,7 @@ void TransportManager::loadPasswordsAsync()
 
     // check if there is anything to do at all
     bool found = false;
-    for (Transport *t : qAsConst(d->transports)) {
+    for (Transport *t : std::as_const(d->transports)) {
         if (!t->isComplete()) {
             found = true;
             break;
@@ -673,7 +673,7 @@ void TransportManagerPrivate::migrateToWallet()
 
     // check if migration is needed
     QStringList names;
-    for (Transport *t : qAsConst(transports)) {
+    for (Transport *t : std::as_const(transports)) {
         if (t->needsWalletMigration()) {
             names << t->name();
         }
@@ -700,7 +700,7 @@ void TransportManagerPrivate::migrateToWallet()
     }
 
     // perform migration
-    for (Transport *t : qAsConst(transports)) {
+    for (Transport *t : std::as_const(transports)) {
         if (t->needsWalletMigration()) {
             t->migrateToWallet();
         }

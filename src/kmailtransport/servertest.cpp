@@ -113,7 +113,7 @@ void ServerTestPrivate::finalResult()
 
     QVector<int> resultsAsVector;
     resultsAsVector.reserve(connectionResults.size());
-    for (int res : qAsConst(connectionResults)) {
+    for (int res : std::as_const(connectionResults)) {
         resultsAsVector.append(res);
     }
 

@@ -148,7 +148,7 @@ bool FakeServer::isAllScenarioDone() const
 {
     QMutexLocker locker(&m_mutex);
 
-    for (const auto &scenario : qAsConst(m_scenarios)) {
+    for (const auto &scenario : std::as_const(m_scenarios)) {
         if (!scenario.isEmpty()) {
             qDebug() << scenario;
             return false;

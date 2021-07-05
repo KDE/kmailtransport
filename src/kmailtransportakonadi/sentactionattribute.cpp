@@ -120,7 +120,7 @@ QByteArray SentActionAttribute::serialized() const
 {
     QVariantList list;
     list.reserve(d->mActions.count());
-    for (const Action &action : qAsConst(d->mActions)) {
+    for (const Action &action : std::as_const(d->mActions)) {
         QVariantMap map;
         map.insert(QString::number(action.type()), action.value());
 
@@ -145,7 +145,7 @@ void SentActionAttribute::deserialize(const QByteArray &data)
     QVariantList list;
     stream >> list;
 
-    for (const QVariant &variant : qAsConst(list)) {
+    for (const QVariant &variant : std::as_const(list)) {
         const QVariantMap map = variant.toMap();
         QMap<QString, QVariant>::const_iterator it = map.cbegin();
         const QMap<QString, QVariant>::const_iterator itEnd = map.cend();
