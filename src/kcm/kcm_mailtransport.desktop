@@ -3,10 +3,10 @@ Icon=network-workgroup
 Type=Service
 X-KDE-ServiceTypes=KCModule
 
-X-KDE-ModuleType=Library
+
 X-KDE-Library=kcm_mailtransport
 X-KDE-FactoryName=kcm_mailtransport
-X-KDE-HasReadOnlyMode=false
+
 X-KDE-ParentApp=
 X-KDE-ParentComponents=
 X-KDE-CfgDlgHierarchy=
