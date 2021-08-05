@@ -9,7 +9,6 @@ X-KDE-FactoryName=kcm_mailtransport
 
 
 X-KDE-ParentComponents=
-X-KDE-CfgDlgHierarchy=
 
 Name=Mail Transport
 Name[ar]=نقل البريد
