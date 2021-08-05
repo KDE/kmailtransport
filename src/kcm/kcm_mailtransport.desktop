@@ -7,7 +7,7 @@ X-KDE-ServiceTypes=KCModule
 X-KDE-Library=kcm_mailtransport
 X-KDE-FactoryName=kcm_mailtransport
 
-X-KDE-ParentApp=
+
 X-KDE-ParentComponents=
 X-KDE-CfgDlgHierarchy=
 
