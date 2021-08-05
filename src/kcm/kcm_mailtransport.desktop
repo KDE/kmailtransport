@@ -8,7 +8,7 @@ X-KDE-Library=kcm_mailtransport
 X-KDE-FactoryName=kcm_mailtransport
 
 
-X-KDE-ParentComponents=
+
 
 Name=Mail Transport
 Name[ar]=نقل البريد
