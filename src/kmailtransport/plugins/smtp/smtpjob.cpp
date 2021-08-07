@@ -16,7 +16,6 @@
 #include <KAuthorized>
 #include <QHash>
 #include <QPointer>
-#include <kwidgetsaddons_version.h>
 
 #include "mailtransport_debug.h"
 #include <KLocalizedString>
@@ -233,9 +232,7 @@ void SmtpJob::startLoginJob()
         dlg->addCommentLine(QString(), transport()->name());
         dlg->setUsername(user);
         dlg->setPassword(passwd);
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 84, 0)
         dlg->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
-#endif
 
         connect(this, &KJob::result, dlg, &QDialog::reject);
 
