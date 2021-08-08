@@ -527,7 +527,7 @@ int TransportManagerPrivate::createId() const
     usedIds << 0; // 0 is default for unknown
     int newId;
     do {
-        newId = QRandomGenerator::global()->generate();
+        newId = QRandomGenerator::global()->bounded(1, RAND_MAX);
     } while (usedIds.contains(newId));
     return newId;
 }
