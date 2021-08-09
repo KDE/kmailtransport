@@ -520,14 +520,14 @@ void TransportManagerPrivate::slotTransportsChanged()
 int TransportManagerPrivate::createId() const
 {
     QVector<int> usedIds;
-    usedIds.reserve(1 + transports.count());
+    usedIds.reserve(transports.size());
     for (Transport *t : std::as_const(transports)) {
         usedIds << t->id();
     }
-    usedIds << 0; // 0 is default for unknown
     int newId;
     do {
-        newId = QRandomGenerator::global()->generate();
+        // 0 is default for unknown, so use 1 as lower value accepted
+        newId = QRandomGenerator::global()->bounded(1, RAND_MAX);
     } while (usedIds.contains(newId));
     return newId;
 }
