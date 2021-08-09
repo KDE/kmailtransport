@@ -48,8 +48,9 @@ void MessageQueueJobTest::initTestCase()
 
     // Switch MDA offline to avoid spam.
     AgentInstance mda = AgentManager::self()->instance(QStringLiteral("akonadi_maildispatcher_agent"));
-    QVERIFY(mda.isValid());
-    mda.setIsOnline(false);
+    if (mda.isValid()) {
+        mda.setIsOnline(false);
+    }
 
     // check that outbox is empty
     auto rjob = new SpecialMailCollectionsRequestJob(this);
