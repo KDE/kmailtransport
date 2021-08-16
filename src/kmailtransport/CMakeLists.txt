@@ -161,4 +161,31 @@ if(BUILD_TESTING)
     add_subdirectory(plugins/tests)
 endif()
 
+if (BUILD_QCH)
+    ecm_add_qch(
+        KF5MailTransport_QCH
+        NAME KMailTransport
+        BASE_NAME KF5MailTransport
+        VERSION ${PIM_VERSION}
+        ORG_DOMAIN org.kde
+        SOURCES # using only public headers, to cover only public API
+            ${MailTransport_HEADERS}
+            ${MailTransport_widgets_HEADERS}
+            ${MailTransport_plugins_HEADERS}
+        #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
+        #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
+        LINK_QCHS
+            Qt5Core_QCH
+            Qt5Gui_QCH
+            Qt5Widgets_QCH
+        INCLUDE_DIRS
+            ${CMAKE_CURRENT_BINARY_DIR}
+        BLANK_MACROS
+            MAILTRANSPORT_EXPORT
+        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
+        COMPONENT Devel
+    )
+endif()
+
 add_subdirectory(plugins/smtp)
