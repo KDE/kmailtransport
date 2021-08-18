@@ -56,7 +56,7 @@ bool TransportPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return true;
     }
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 85, 0)
+#if KCOREADDONS_VERSION <= QT_VERSION_CHECK(5, 85, 0)
     const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("mailtransport"));
 #else
     const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("mailtransport"));
