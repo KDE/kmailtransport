@@ -22,6 +22,7 @@ class MailTransportPluginInfo
 public:
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
+    KPluginMetaData data;
     MailTransport::TransportAbstractPlugin *plugin = nullptr;
 };
 
@@ -70,6 +71,7 @@ bool TransportPluginManagerPrivate::initializePlugins()
 
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.metaDataFileName = data.fileName();
+        info.data = data;
         if (pluginVersion() == data.version()) {
             info.plugin = nullptr;
             mPluginList.push_back(info);
@@ -87,11 +89,10 @@ bool TransportPluginManagerPrivate::initializePlugins()
 void TransportPluginManagerPrivate::loadPlugin(MailTransportPluginInfo *item)
 {
 #if KCOREADDONS_VERSION > QT_VERSION_CHECK(5, 85, 0)
-    const auto loadResult = KPluginFactory::instantiatePlugin<MailTransport::TransportAbstractPlugin>(KPluginMetaData(item->metaDataFileName), q);
-    if (loadResult) {
-        if (item->plugin) {
-            QObject::connect(item->plugin, &TransportAbstractPlugin::updatePluginList, q, &TransportPluginManager::updatePluginList);
-        }
+    if (auto plugin =
+            KPluginFactory::instantiatePlugin<MailTransport::TransportAbstractPlugin>(item->data, q, QVariantList() << item->metaDataFileNameBaseName).plugin) {
+        item->plugin = plugin;
+        QObject::connect(plugin, &TransportAbstractPlugin::updatePluginList, q, &TransportPluginManager::updatePluginList);
     }
 #else
     KPluginLoader pluginLoader(item->metaDataFileName);
