@@ -17,6 +17,7 @@ target_link_libraries(mailtransport_akonadiplugin
     KF5::MailTransportAkonadi
     KF5::CoreAddons
     KF5::AkonadiCore
+    KF5::AkonadiWidgets
     KF5::I18n
     KF5::ConfigWidgets
     Qt::DBus
