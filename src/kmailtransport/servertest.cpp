@@ -343,7 +343,11 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
         //     SASL DIGEST-MD5 CRAM-MD5 NTLM PLAIN LOGIN
         //     STARTTLS
         //     .
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+        const QVector<QStringView> lines = QStringView(response).split(QStringLiteral("\r\n"), Qt::SkipEmptyParts);
+#else
         const QVector<QStringRef> lines = response.splitRef(QStringLiteral("\r\n"), Qt::SkipEmptyParts);
+#endif
         for (const QStringRef &line : lines) {
             if (line.compare(QLatin1String("STARTTLS"), Qt::CaseInsensitive) == 0) {
                 *shouldStartTLS = true;
