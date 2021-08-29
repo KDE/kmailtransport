@@ -345,10 +345,11 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
         //     .
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
         const QVector<QStringView> lines = QStringView(response).split(QStringLiteral("\r\n"), Qt::SkipEmptyParts);
+        for (const QStringView line : lines) {
 #else
         const QVector<QStringRef> lines = response.splitRef(QStringLiteral("\r\n"), Qt::SkipEmptyParts);
-#endif
         for (const QStringRef &line : lines) {
+#endif
             if (line.compare(QLatin1String("STARTTLS"), Qt::CaseInsensitive) == 0) {
                 *shouldStartTLS = true;
             } else if (line.startsWith(QLatin1String("AUTHINFO "), Qt::CaseInsensitive)) {
