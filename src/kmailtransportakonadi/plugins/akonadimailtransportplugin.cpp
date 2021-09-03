@@ -49,7 +49,8 @@ QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::
 {
     QVector<MailTransport::TransportAbstractPluginInfo> lst;
 
-    for (const AgentType &atype : AgentManager::self()->types()) {
+    const auto types{AgentManager::self()->types()};
+    for (const AgentType &atype : types) {
         // TODO probably the string "MailTransport" should be #defined somewhere
         // and used like that in the resources (?)
         if (atype.capabilities().contains(QLatin1String("MailTransport"))) {

@@ -127,7 +127,9 @@ MessageQueueJob *MessageQueuer::createQueueJob()
     job->addressAttribute().setBcc(mBccEdit->text().isEmpty() ? QStringList() : mBccEdit->text().split(QLatin1Char(',')));
 
     connect(job, &MessageQueueJob::result, this, &MessageQueuer::jobResult);
-    connect(job, SIGNAL(percent(KJob *, ulong)), SLOT(jobPercent(KJob *, ulong)));
+    // clang-format off
+    connect(job, SIGNAL(percent(KJob*, ulong)), SLOT(jobPercent(KJob*, ulong)));
+    // clang-format on
     connect(job, &KJob::infoMessage, this, &MessageQueuer::jobInfoMessage);
 
     return job;

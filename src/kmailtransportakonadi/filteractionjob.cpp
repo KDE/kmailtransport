@@ -46,7 +46,7 @@ void FilterActionJob::Private::fetchResult(KJob *job)
         return;
     }
 
-    auto fjob = dynamic_cast<ItemFetchJob *>(job);
+    auto fjob = qobject_cast<ItemFetchJob *>(job);
     Q_ASSERT(fjob);
     Q_ASSERT(items.isEmpty());
     items = fjob->items();
