@@ -4,8 +4,8 @@
 Dependencies:
 - 'on': ['@all']
   'require':
-    'kde/pim/akonadi' : '@latest'
-    'kde/pim/akonadi-mime' : '@latest'
-    'kde/pim/kmime' : '@latest'
-    'kde/pim/ksmtp' : '@latest'
-    'kde/pim/libkgapi' : '@latest'
+    'kde/pim/akonadi' : '@same'
+    'kde/pim/akonadi-mime' : '@same'
+    'kde/pim/kmime' : '@same'
+    'kde/pim/ksmtp' : '@same'
+    'kde/pim/libkgapi' : '@same'
