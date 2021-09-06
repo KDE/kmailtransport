@@ -1,0 +1,11 @@
+# SPDX-FileCopyrightText: None
+# SPDX-License-Identifier: CC0-1.0
+
+Dependencies:
+- 'on': ['@all']
+  'require':
+    'kde/pim/akonadi' : '@latest'
+    'kde/pim/akonadi-mime' : '@latest'
+    'kde/pim/kmime' : '@latest'
+    'kde/pim/ksmtp' : '@latest'
+    'kde/pim/libkgapi' : '@latest'
