@@ -8,7 +8,7 @@
 
 #include <mailtransportakonadi_export.h>
 
-#include <item.h>
+#include <Akonadi/Item>
 #include <transactionsequence.h>
 
 namespace Akonadi

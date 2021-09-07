@@ -8,18 +8,18 @@
 
 #include <QStringList>
 
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionStatistics>
+#include <Akonadi/CollectionStatisticsJob>
+#include <Akonadi/Control>
+#include <Akonadi/ItemDeleteJob>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <addressattribute.h>
-#include <agentinstance.h>
-#include <agentmanager.h>
-#include <collection.h>
-#include <collectionstatistics.h>
-#include <collectionstatisticsjob.h>
-#include <control.h>
-#include <itemdeletejob.h>
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
+#include <akonadi/agentinstance.h>
+#include <akonadi/agentmanager.h>
+#include <akonadi/qtest_akonadi.h>
 #include <messageflags.h>
-#include <qtest_akonadi.h>
 #include <specialmailcollections.h>
 #include <specialmailcollectionsrequestjob.h>
 

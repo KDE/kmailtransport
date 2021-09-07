@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <attribute.h>
+#include <akonadi/attribute.h>
 
 /* Attribute used for testing by various unit tests. */
 class TestAttribute : public Akonadi::Attribute

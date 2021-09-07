@@ -8,10 +8,10 @@
 #include <collectionpathresolver_p.h>
 #include <testattribute.h>
 
+#include <Akonadi/ItemCreateJob>
 #include <attributefactory.h>
 #include <collectioncreatejob.h>
 #include <filteractionjob_p.h>
-#include <itemcreatejob.h>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
 #include <itemmodifyjob.h>

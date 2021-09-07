@@ -12,7 +12,7 @@
 #include <QSharedDataPointer>
 #include <QVariant>
 #include <QVector>
-#include <attribute.h>
+#include <akonadi/attribute.h>
 
 namespace MailTransport
 {

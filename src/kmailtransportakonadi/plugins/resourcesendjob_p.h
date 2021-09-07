@@ -8,7 +8,7 @@
 
 #include <transportjob.h>
 
-#include <item.h>
+#include <Akonadi/Item>
 
 namespace MailTransport
 {

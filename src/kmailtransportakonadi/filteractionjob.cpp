@@ -6,7 +6,7 @@
 
 #include "filteractionjob_p.h"
 
-#include <collection.h>
+#include <Akonadi/Collection>
 #include <itemfetchjob.h>
 #include <itemfetchscope.h>
 
