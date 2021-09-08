@@ -10,7 +10,7 @@
 #include "kmailtransportakonadi/errorattribute.h"
 #include "mailtransportakonadi_debug.h"
 
-#include <itemmodifyjob.h>
+#include <Akonadi/ItemModifyJob>
 #include <messageflags.h>
 
 using namespace Akonadi;

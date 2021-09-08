@@ -10,8 +10,8 @@
 #include <filteractionjob_p.h>
 #include <mailtransportakonadi_export.h>
 
-#include <itemfetchscope.h>
-#include <job.h>
+#include <Akonadi/Job>
+#include <akonadi/itemfetchscope.h>
 
 namespace MailTransport
 {

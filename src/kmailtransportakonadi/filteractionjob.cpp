@@ -7,8 +7,8 @@
 #include "filteractionjob_p.h"
 
 #include <Akonadi/Collection>
-#include <itemfetchjob.h>
-#include <itemfetchscope.h>
+#include <Akonadi/ItemFetchJob>
+#include <akonadi/itemfetchscope.h>
 
 #include "mailtransportakonadi_debug.h"
 

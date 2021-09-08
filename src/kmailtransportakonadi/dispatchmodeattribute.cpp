@@ -8,7 +8,7 @@
 
 #include "mailtransportakonadi_debug.h"
 
-#include <attributefactory.h>
+#include <akonadi/attributefactory.h>
 
 using namespace Akonadi;
 using namespace MailTransport;
