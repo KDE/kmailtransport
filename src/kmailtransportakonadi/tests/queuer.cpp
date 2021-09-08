@@ -11,12 +11,12 @@
 #include <QPointer>
 #include <QPushButton>
 
+#include <Akonadi/Control>
 #include <KTextEdit>
 #include <QApplication>
 #include <QDateTimeEdit>
 #include <QLineEdit>
 #include <QVBoxLayout>
-#include <control.h>
 
 #include <QDebug>
 #include <QDialog>

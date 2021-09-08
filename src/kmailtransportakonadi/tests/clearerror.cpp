@@ -9,7 +9,7 @@
 #include <QApplication>
 
 #include <Akonadi/Collection>
-#include <control.h>
+#include <Akonadi/Control>
 #include <filteractionjob_p.h>
 #include <kmailtransportakonadi/dispatcherinterface.h>
 #include <specialmailcollections.h>

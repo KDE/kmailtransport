@@ -11,7 +11,7 @@
 #include <QApplication>
 #include <QDebug>
 
-#include <control.h>
+#include <Akonadi/Control>
 
 #include <kmailtransportakonadi/dispatcherinterface.h>
 
