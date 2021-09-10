@@ -10,7 +10,7 @@
 
 #include <QString>
 
-#include <akonadi/attribute.h>
+#include <Akonadi/Attribute>
 
 namespace MailTransport
 {

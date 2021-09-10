@@ -10,7 +10,7 @@
 #include "sentbehaviourattribute.h"
 #include "transportattribute.h"
 
-#include <akonadi/attributefactory.h>
+#include <Akonadi/AttributeFactory>
 
 namespace
 {

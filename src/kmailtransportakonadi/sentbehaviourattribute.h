@@ -8,8 +8,8 @@
 
 #include <mailtransportakonadi_export.h>
 
+#include <Akonadi/Attribute>
 #include <Akonadi/Collection>
-#include <akonadi/attribute.h>
 
 namespace MailTransport
 {

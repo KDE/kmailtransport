@@ -9,10 +9,10 @@
 
 #include <mailtransportakonadi_export.h>
 
+#include <Akonadi/Attribute>
 #include <QSharedDataPointer>
 #include <QVariant>
 #include <QVector>
-#include <akonadi/attribute.h>
 
 namespace MailTransport
 {

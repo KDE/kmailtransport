@@ -8,12 +8,12 @@
 #include <collectionpathresolver_p.h>
 #include <testattribute.h>
 
+#include <Akonadi/AttributeFactory>
 #include <Akonadi/CollectionCreateJob>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <Akonadi/ItemModifyJob>
-#include <akonadi/attributefactory.h>
-#include <akonadi/itemfetchscope.h>
 #include <akonadi/qtest_akonadi.h>
 #include <filteractionjob_p.h>
 

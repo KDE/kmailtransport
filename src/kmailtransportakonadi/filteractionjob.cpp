@@ -8,7 +8,7 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/ItemFetchJob>
-#include <akonadi/itemfetchscope.h>
+#include <Akonadi/ItemFetchScope>
 
 #include "mailtransportakonadi_debug.h"
 
