@@ -5,10 +5,8 @@
 */
 
 #include "transportpluginmanager.h"
-#include "kcoreaddons_version.h"
 #include "mailtransport_debug.h"
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <kpluginmetadata.h>
 
 #include <MailTransport/TransportAbstractPlugin>
@@ -57,11 +55,7 @@ bool TransportPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return true;
     }
-#if KCOREADDONS_VERSION <= QT_VERSION_CHECK(5, 85, 0)
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("mailtransport"));
-#else
     const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("mailtransport"));
-#endif
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
@@ -88,21 +82,11 @@ bool TransportPluginManagerPrivate::initializePlugins()
 
 void TransportPluginManagerPrivate::loadPlugin(MailTransportPluginInfo *item)
 {
-#if KCOREADDONS_VERSION > QT_VERSION_CHECK(5, 85, 0)
     if (auto plugin =
             KPluginFactory::instantiatePlugin<MailTransport::TransportAbstractPlugin>(item->data, q, QVariantList() << item->metaDataFileNameBaseName).plugin) {
         item->plugin = plugin;
         QObject::connect(plugin, &TransportAbstractPlugin::updatePluginList, q, &TransportPluginManager::updatePluginList);
     }
-#else
-    KPluginLoader pluginLoader(item->metaDataFileName);
-    if (pluginLoader.factory()) {
-        item->plugin = pluginLoader.factory()->create<MailTransport::TransportAbstractPlugin>(q, QVariantList() << item->metaDataFileNameBaseName);
-        if (item->plugin) {
-            QObject::connect(item->plugin, &TransportAbstractPlugin::updatePluginList, q, &TransportPluginManager::updatePluginList);
-        }
-    }
-#endif
 }
 
 QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManagerPrivate::pluginsList() const
