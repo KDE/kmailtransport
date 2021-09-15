@@ -6,8 +6,8 @@
 
 #pragma once
 
+#include <KIO/SslUi>
 #include <KSMTP/SessionUiProxy>
-#include <kio/sslui.h>
 
 class SmtpSessionUiProxy : public KSmtp::SessionUiProxy
 {

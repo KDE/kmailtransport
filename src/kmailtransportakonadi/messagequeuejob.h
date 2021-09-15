@@ -21,7 +21,7 @@
 #include <Akonadi/Collection>
 #include <Akonadi/KMime/AddressAttribute>
 
-#include <kmime/kmime_message.h>
+#include <KMime/KMimeMessage>
 
 namespace MailTransport
 {

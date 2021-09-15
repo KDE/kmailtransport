@@ -8,7 +8,7 @@
 #include "resourcesendjob_p.h"
 #include "transport.h"
 
-#include <kmime/kmime_message.h>
+#include <KMime/KMimeMessage>
 
 #include <Akonadi/Collection>
 #include <Akonadi/KMime/AddressAttribute>

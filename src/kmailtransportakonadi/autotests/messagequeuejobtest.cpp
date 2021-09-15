@@ -23,7 +23,7 @@
 #include <specialmailcollections.h>
 #include <specialmailcollectionsrequestjob.h>
 
-#include <kmime/kmime_message.h>
+#include <KMime/KMimeMessage>
 
 #include <QSignalSpy>
 #include <kmailtransportakonadi/dispatchmodeattribute.h>
