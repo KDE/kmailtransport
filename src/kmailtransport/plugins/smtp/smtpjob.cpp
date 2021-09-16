@@ -133,6 +133,20 @@ void SmtpJob::startSmtpJob()
         d->session = new KSmtp::Session(transport()->host(), transport()->port());
         d->session->setUseNetworkProxy(transport()->useProxy());
         d->session->setUiProxy(d->uiProxy);
+        switch (transport()->encryption()) {
+        case Transport::EnumEncryption::None:
+            d->session->setEncryptionMode(KSmtp::Session::Unencrypted);
+            break;
+        case Transport::EnumEncryption::TLS:
+            d->session->setEncryptionMode(KSmtp::Session::STARTTLS);
+            break;
+        case Transport::EnumEncryption::SSL:
+            d->session->setEncryptionMode(KSmtp::Session::TLS);
+            break;
+        default:
+            qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown encryption mode" << transport()->encryption();
+            break;
+        }
         if (transport()->specifyHostname()) {
             d->session->setCustomHostname(transport()->localHostname());
         }
@@ -292,21 +306,6 @@ void SmtpJobPrivate::doLogin()
         break;
     default:
         qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown authentication mode" << q->transport()->authenticationTypeString();
-        break;
-    }
-
-    switch (q->transport()->encryption()) {
-    case Transport::EnumEncryption::None:
-        login->setEncryptionMode(KSmtp::LoginJob::Unencrypted);
-        break;
-    case Transport::EnumEncryption::TLS:
-        login->setEncryptionMode(KSmtp::LoginJob::STARTTLS);
-        break;
-    case Transport::EnumEncryption::SSL:
-        login->setEncryptionMode(KSmtp::LoginJob::SSLorTLS);
-        break;
-    default:
-        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Unknown encryption mode" << q->transport()->encryption();
         break;
     }
 
