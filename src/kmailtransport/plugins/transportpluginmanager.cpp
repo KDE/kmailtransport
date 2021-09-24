@@ -44,16 +44,16 @@ public:
     void loadPlugin(MailTransportPluginInfo *item);
     QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
     QVector<MailTransportPluginInfo> mPluginList;
-    bool initializePlugins();
+    void initializePlugins();
 
 private:
     TransportPluginManager *q;
 };
 
-bool TransportPluginManagerPrivate::initializePlugins()
+void TransportPluginManagerPrivate::initializePlugins()
 {
     if (!mPluginList.isEmpty()) {
-        return true;
+        return;
     }
     const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("mailtransport"));
 
@@ -77,7 +77,6 @@ bool TransportPluginManagerPrivate::initializePlugins()
     for (QVector<MailTransportPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }
-    return true;
 }
 
 void TransportPluginManagerPrivate::loadPlugin(MailTransportPluginInfo *item)

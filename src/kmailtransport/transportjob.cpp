@@ -21,6 +21,7 @@ public:
     QStringList cc;
     QStringList bcc;
     QByteArray data;
+    bool dsn = false;
     Transport *transport = nullptr;
     QBuffer *buffer = nullptr;
 };
@@ -69,6 +70,11 @@ Transport *TransportJob::transport() const
     return d->transport;
 }
 
+void TransportJob::setDeliveryStatusNotification(bool enabled)
+{
+    d->dsn = enabled;
+}
+
 QString TransportJob::sender() const
 {
     return d->sender;
@@ -103,6 +109,11 @@ QBuffer *TransportJob::buffer()
         Q_ASSERT(d->buffer->isOpen());
     }
     return d->buffer;
+}
+
+bool TransportJob::deliveryStatusNotification() const
+{
+    return d->dsn;
 }
 
 void TransportJob::start()

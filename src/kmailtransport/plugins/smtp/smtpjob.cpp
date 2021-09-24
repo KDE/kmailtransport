@@ -323,6 +323,7 @@ void SmtpJob::startSendJob()
     send->setCc(cc());
     send->setBcc(bcc());
     send->setData(data());
+    send->setDeliveryStatusNotification(deliveryStatusNotification());
 
     addSubjob(send);
     send->start();

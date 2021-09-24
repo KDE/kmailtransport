@@ -77,6 +77,11 @@ public:
     */
     Transport *transport() const;
 
+    /**
+       Sets the content of the mail.
+    */
+    void setDeliveryStatusNotification(bool enabled);
+
 protected:
     /**
       Creates a new mail transport job.
@@ -122,6 +127,11 @@ protected:
       Do the actual work, implement in your subclass.
     */
     virtual void doStart() = 0;
+
+    /**
+      Returns true if DSN is enabled.
+    */
+    Q_REQUIRED_RESULT bool deliveryStatusNotification() const;
 
 private:
     //@cond PRIVATE
