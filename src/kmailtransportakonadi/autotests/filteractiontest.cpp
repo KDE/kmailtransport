@@ -111,7 +111,8 @@ void FilterActionTest::testMassModifyItems()
     fjob->fetchScope().fetchAllAttributes();
     AKVERIFYEXEC(fjob);
     QCOMPARE(fjob->items().count(), 10);
-    foreach (const Item &item, fjob->items()) {
+    const auto fJobItems{fjob->items()};
+    for (const Item &item : fJobItems) {
         QVERIFY(item.hasAttribute<TestAttribute>());
         const QByteArray data = item.attribute<TestAttribute>()->data;
         if (data == unacceptable) {
@@ -145,7 +146,8 @@ void FilterActionTest::testMassModifyCollection()
     fjob->fetchScope().fetchAllAttributes();
     AKVERIFYEXEC(fjob);
     QCOMPARE(fjob->items().count(), 10);
-    foreach (const Item &item, fjob->items()) {
+    const auto fjobItems{fjob->items()};
+    for (const Item &item : fjobItems) {
         QVERIFY(item.hasAttribute<TestAttribute>());
         const QByteArray data = item.attribute<TestAttribute>()->data;
         if (data == unacceptable) {
