@@ -15,7 +15,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStringHandler>
-#include <KWallet/KWallet>
+#include <KWallet>
 #include <qt5keychain/keychain.h>
 using namespace QKeychain;
 using namespace MailTransport;
