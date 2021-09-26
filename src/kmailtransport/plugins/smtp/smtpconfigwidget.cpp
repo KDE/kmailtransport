@@ -163,7 +163,7 @@ void SMTPConfigWidget::init()
     connect(d->ui.checkCapabilities, &QPushButton::clicked, this, &SMTPConfigWidget::checkSmtpCapabilities);
     connect(d->ui.kcfg_host, &QLineEdit::textChanged, this, &SMTPConfigWidget::hostNameChanged);
 
-    connect(d->encryptionGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked), this, &SMTPConfigWidget::encryptionAbstractButtonChanged);
+    connect(d->encryptionGroup, &QButtonGroup::buttonClicked, this, &SMTPConfigWidget::encryptionAbstractButtonChanged);
     connect(d->ui.kcfg_requiresAuthentication, &QCheckBox::toggled, this, &SMTPConfigWidget::ensureValidAuthSelection);
     connect(d->ui.kcfg_storePassword, &QCheckBox::toggled, this, &SMTPConfigWidget::enablePasswordLine);
     if (!d->transport->isValid()) {
