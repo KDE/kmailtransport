@@ -119,7 +119,7 @@ protected:
       Creates a Transport object. Should only be used by TransportManager.
       @param cfgGroup The KConfig group to read its data from.
     */
-    Transport(const QString &cfgGroup);
+    explicit Transport(const QString &cfgGroup);
 
     void usrRead() override;
     bool usrSave() override;

@@ -64,7 +64,7 @@ Q_GLOBAL_STATIC(SessionPool, s_sessionPool)
 class SmtpJobPrivate
 {
 public:
-    SmtpJobPrivate(SmtpJob *parent)
+    explicit SmtpJobPrivate(SmtpJob *parent)
         : q(parent)
     {
     }

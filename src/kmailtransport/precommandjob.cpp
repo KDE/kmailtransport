@@ -23,7 +23,7 @@ using namespace MailTransport;
 class PreCommandJobPrivate
 {
 public:
-    PreCommandJobPrivate(PrecommandJob *parent);
+    explicit PreCommandJobPrivate(PrecommandJob *parent);
     QProcess *process = nullptr;
     QString precommand;
     PrecommandJob *const q;

@@ -83,7 +83,7 @@ public:
 class DispatchManualTransportAction : public Akonadi::FilterAction
 {
 public:
-    DispatchManualTransportAction(int transportId);
+    explicit DispatchManualTransportAction(int transportId);
 
     ~DispatchManualTransportAction() override;
 

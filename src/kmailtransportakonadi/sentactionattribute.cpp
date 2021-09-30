@@ -22,9 +22,9 @@ public:
 
     Private(const Private &other)
         : QSharedData(other)
+        , mType(other.mType)
+        , mValue(other.mValue)
     {
-        mType = other.mType;
-        mValue = other.mValue;
     }
 
     Type mType = Invalid;
