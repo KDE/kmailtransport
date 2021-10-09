@@ -15,6 +15,7 @@
 namespace MailTransport
 {
 class Transport;
+class TransportAttributePrivate;
 
 /**
   Attribute determining which transport to use for sending a message.
@@ -62,8 +63,7 @@ public:
     void setTransportId(int id);
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<TransportAttributePrivate> const d;
 };
 } // namespace MailTransport
 

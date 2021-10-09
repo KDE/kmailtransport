@@ -18,6 +18,8 @@
 
 namespace MailTransport
 {
+class SentActionAttributePrivate;
+
 /**
  * @short An Attribute that stores the action to execute after sending.
  *
@@ -131,8 +133,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<SentActionAttributePrivate> const d;
     //@endcond
 };
 }

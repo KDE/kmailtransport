@@ -9,14 +9,14 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class Q_DECL_HIDDEN ErrorAttribute::Private
+class MailTransport::ErrorAttributePrivate
 {
 public:
     QString mMessage;
 };
 
 ErrorAttribute::ErrorAttribute(const QString &msg)
-    : d(new Private)
+    : d(new ErrorAttributePrivate)
 {
     d->mMessage = msg;
 }

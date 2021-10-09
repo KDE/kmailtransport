@@ -19,6 +19,7 @@ class QBuffer;
 namespace MailTransport
 {
 class Transport;
+class TransportJobPrivate;
 
 /**
   Abstract base class for all mail transport jobs.
@@ -137,8 +138,7 @@ protected:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<TransportJobPrivate> const d;
     //@endcond
 };
 } // namespace MailTransport

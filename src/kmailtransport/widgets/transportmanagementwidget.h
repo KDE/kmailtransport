@@ -17,6 +17,8 @@
 
 namespace MailTransport
 {
+class TransportManagementWidgetPrivate;
+
 /**
   A widget to manage mail transports.
 */
@@ -37,8 +39,7 @@ public:
     ~TransportManagementWidget() override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<TransportManagementWidgetPrivate> const d;
 };
 } // namespace MailTransport
 

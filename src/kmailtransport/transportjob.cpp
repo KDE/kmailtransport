@@ -13,7 +13,7 @@
 
 using namespace MailTransport;
 
-class Q_DECL_HIDDEN MailTransport::TransportJob::Private
+class MailTransport::TransportJobPrivate
 {
 public:
     QString sender;
@@ -28,7 +28,7 @@ public:
 
 TransportJob::TransportJob(Transport *transport, QObject *parent)
     : KCompositeJob(parent)
-    , d(new Private)
+    , d(new TransportJobPrivate)
 {
     d->transport = transport;
     d->buffer = nullptr;

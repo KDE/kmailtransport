@@ -13,6 +13,8 @@
 
 namespace MailTransport
 {
+class AddTransportDialogNGPrivate;
+
 /**
   @internal
 
@@ -44,8 +46,7 @@ public:
     void accept() override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<AddTransportDialogNGPrivate> const d;
 };
 } // namespace MailTransport
 

@@ -11,14 +11,14 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class Q_DECL_HIDDEN TransportAttribute::Private
+class MailTransport::TransportAttributePrivate
 {
 public:
     int mId = -1;
 };
 
 TransportAttribute::TransportAttribute(int id)
-    : d(new Private)
+    : d(new TransportAttributePrivate)
 {
     d->mId = id;
 }

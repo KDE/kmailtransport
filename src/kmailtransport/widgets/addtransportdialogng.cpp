@@ -21,10 +21,10 @@ using namespace MailTransport;
 /**
   @internal
 */
-class Q_DECL_HIDDEN AddTransportDialogNG::Private
+class MailTransport::AddTransportDialogNGPrivate
 {
 public:
-    Private(AddTransportDialogNG *qq)
+    explicit AddTransportDialogNGPrivate(AddTransportDialogNG *qq)
         : q(qq)
     {
     }
@@ -44,13 +44,13 @@ public:
     ::Ui::AddTransportDialog ui;
 };
 
-void AddTransportDialogNG::Private::writeConfig()
+void AddTransportDialogNGPrivate::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), "AddTransportDialog");
     group.writeEntry("Size", q->size());
 }
 
-void AddTransportDialogNG::Private::readConfig()
+void AddTransportDialogNGPrivate::readConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), "AddTransportDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(300, TransportManager::self()->types().size() > 1 ? 300 : 160));
@@ -59,7 +59,7 @@ void AddTransportDialogNG::Private::readConfig()
     }
 }
 
-QString AddTransportDialogNG::Private::selectedType() const
+QString AddTransportDialogNGPrivate::selectedType() const
 {
     const QList<QTreeWidgetItem *> sel = ui.typeListView->selectedItems();
     if (!sel.empty()) {
@@ -68,14 +68,14 @@ QString AddTransportDialogNG::Private::selectedType() const
     return {};
 }
 
-void AddTransportDialogNG::Private::doubleClicked()
+void AddTransportDialogNGPrivate::doubleClicked()
 {
     if (!selectedType().isEmpty() && !ui.name->text().trimmed().isEmpty()) {
         q->accept();
     }
 }
 
-void AddTransportDialogNG::Private::updateOkButton()
+void AddTransportDialogNGPrivate::updateOkButton()
 {
     // Make sure a type is selected before allowing the user to continue.
     okButton->setEnabled(!selectedType().isEmpty() && !ui.name->text().trimmed().isEmpty());
@@ -83,7 +83,7 @@ void AddTransportDialogNG::Private::updateOkButton()
 
 AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this))
+    , d(new AddTransportDialogNGPrivate(this))
 {
     // Setup UI.
     {

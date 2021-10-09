@@ -14,15 +14,15 @@
 
 using namespace Akonadi;
 
-class Q_DECL_HIDDEN Akonadi::FilterActionJob::Private
+class Akonadi::FilterActionJobPrivate
 {
 public:
-    Private(FilterActionJob *qq)
+    FilterActionJobPrivate(FilterActionJob *qq)
         : q(qq)
     {
     }
 
-    ~Private()
+    ~FilterActionJobPrivate()
     {
         delete functor;
     }
@@ -39,7 +39,7 @@ public:
     void traverseItems();
 };
 
-void FilterActionJob::Private::fetchResult(KJob *job)
+void FilterActionJobPrivate::fetchResult(KJob *job)
 {
     if (job->error()) {
         // KCompositeJob takes care of errors.
@@ -53,7 +53,7 @@ void FilterActionJob::Private::fetchResult(KJob *job)
     traverseItems();
 }
 
-void FilterActionJob::Private::traverseItems()
+void FilterActionJobPrivate::traverseItems()
 {
     Q_ASSERT(functor);
     qCDebug(MAILTRANSPORTAKONADI_LOG) << "Traversing" << items.count() << "items.";
@@ -77,7 +77,7 @@ FilterAction::~FilterAction()
 
 FilterActionJob::FilterActionJob(const Item &item, FilterAction *functor, QObject *parent)
     : TransactionSequence(parent)
-    , d(new Private(this))
+    , d(new FilterActionJobPrivate(this))
 {
     d->functor = functor;
     d->items << item;
@@ -85,7 +85,7 @@ FilterActionJob::FilterActionJob(const Item &item, FilterAction *functor, QObjec
 
 FilterActionJob::FilterActionJob(const Item::List &items, FilterAction *functor, QObject *parent)
     : TransactionSequence(parent)
-    , d(new Private(this))
+    , d(new FilterActionJobPrivate(this))
 {
     d->functor = functor;
     d->items = items;
@@ -93,7 +93,7 @@ FilterActionJob::FilterActionJob(const Item::List &items, FilterAction *functor,
 
 FilterActionJob::FilterActionJob(const Collection &collection, FilterAction *functor, QObject *parent)
     : TransactionSequence(parent)
-    , d(new Private(this))
+    , d(new FilterActionJobPrivate(this))
 {
     d->functor = functor;
     Q_ASSERT(collection.isValid());

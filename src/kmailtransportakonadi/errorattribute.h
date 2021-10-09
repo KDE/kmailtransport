@@ -16,6 +16,8 @@
 
 namespace MailTransport
 {
+class ErrorAttributePrivate;
+
 /**
  * @short An Attribute to mark messages that failed to be sent.
  *
@@ -57,8 +59,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<ErrorAttributePrivate> const d;
     //@endcond
 };
 }

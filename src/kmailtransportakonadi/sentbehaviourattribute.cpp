@@ -9,10 +9,10 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class Q_DECL_HIDDEN SentBehaviourAttribute::Private
+class MailTransport::SentBehaviourAttributePrivate
 {
 public:
-    Private()
+    SentBehaviourAttributePrivate()
     {
     }
 
@@ -22,7 +22,7 @@ public:
 };
 
 SentBehaviourAttribute::SentBehaviourAttribute(SentBehaviour beh, const Collection &moveToCollection, bool sendSilently)
-    : d(new Private)
+    : d(new SentBehaviourAttributePrivate)
 {
     d->mBehaviour = beh;
     d->mMoveToCollection = moveToCollection;

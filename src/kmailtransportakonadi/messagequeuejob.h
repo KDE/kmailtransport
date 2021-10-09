@@ -27,6 +27,8 @@
 
 namespace MailTransport
 {
+class MessageQueueJobPrivate;
+
 /**
   @short Provides an interface for sending email.
 
@@ -144,9 +146,8 @@ protected Q_SLOTS:
     void slotResult(KJob *) override;
 
 private:
-    class Private;
-    friend class Private;
-    std::unique_ptr<Private> const d;
+    friend class MessageQueueJobPrivate;
+    std::unique_ptr<MessageQueueJobPrivate> const d;
 };
 } // namespace MailTransport
 

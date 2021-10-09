@@ -76,14 +76,14 @@ bool SentActionAttribute::Action::operator==(const Action &other) const
     return (d->mType == other.d->mType) && (d->mValue == other.d->mValue);
 }
 
-class Q_DECL_HIDDEN SentActionAttribute::Private
+class MailTransport::SentActionAttributePrivate
 {
 public:
-    Action::List mActions;
+    SentActionAttribute::Action::List mActions;
 };
 
 SentActionAttribute::SentActionAttribute()
-    : d(new Private)
+    : d(new SentActionAttributePrivate)
 {
 }
 

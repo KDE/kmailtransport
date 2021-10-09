@@ -15,6 +15,8 @@
 
 namespace MailTransport
 {
+class SentBehaviourAttributePrivate;
+
 /**
   Attribute determining what will happen to a message after it is sent.  The
   message can be deleted from the Outbox, moved to the default sent-mail
@@ -96,8 +98,7 @@ public:
     void setSendSilently(bool sendSilently);
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<SentBehaviourAttributePrivate> const d;
 };
 } // namespace MailTransport
 

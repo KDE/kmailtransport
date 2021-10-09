@@ -94,6 +94,7 @@ public:
     virtual Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const = 0;
 };
 
+class FilterActionJobPrivate;
 /**
  * @short Job to filter and apply an action on a set of items.
  *
@@ -158,8 +159,8 @@ protected:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    friend class FilterActionJobPrivate;
+    std::unique_ptr<FilterActionJobPrivate> const d;
     //@endcond
 };
 } // namespace Akonadi

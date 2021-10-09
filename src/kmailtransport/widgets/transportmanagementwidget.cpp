@@ -17,10 +17,10 @@
 
 using namespace MailTransport;
 
-class Q_DECL_HIDDEN TransportManagementWidget::Private
+class MailTransport::TransportManagementWidgetPrivate
 {
 public:
-    Private(TransportManagementWidget *parent);
+    explicit TransportManagementWidgetPrivate(TransportManagementWidget *parent);
 
     Ui::TransportManagementWidget ui;
     TransportManagementWidget *const q;
@@ -35,14 +35,14 @@ public:
     void slotCustomContextMenuRequested(const QPoint &);
 };
 
-TransportManagementWidget::Private::Private(TransportManagementWidget *parent)
+TransportManagementWidgetPrivate::TransportManagementWidgetPrivate(TransportManagementWidget *parent)
     : q(parent)
 {
 }
 
 TransportManagementWidget::TransportManagementWidget(QWidget *parent)
     : QWidget(parent)
-    , d(new Private(this))
+    , d(new TransportManagementWidgetPrivate(this))
 {
     d->ui.setupUi(this);
     d->updateButtonState();
@@ -76,7 +76,7 @@ TransportManagementWidget::TransportManagementWidget(QWidget *parent)
 
 TransportManagementWidget::~TransportManagementWidget() = default;
 
-void TransportManagementWidget::Private::updateButtonState()
+void TransportManagementWidgetPrivate::updateButtonState()
 {
     // TODO figure out current item vs. selected item (in almost every function)
     if (!ui.transportList->currentItem()) {
@@ -96,12 +96,12 @@ void TransportManagementWidget::Private::updateButtonState()
     }
 }
 
-void TransportManagementWidget::Private::addClicked()
+void TransportManagementWidgetPrivate::addClicked()
 {
     TransportManager::self()->showTransportCreationDialog(q);
 }
 
-void TransportManagementWidget::Private::editClicked()
+void TransportManagementWidgetPrivate::editClicked()
 {
     if (!ui.transportList->currentItem()) {
         return;
@@ -112,7 +112,7 @@ void TransportManagementWidget::Private::editClicked()
     TransportManager::self()->configureTransport(transport->identifier(), transport, q);
 }
 
-void TransportManagementWidget::Private::renameClicked()
+void TransportManagementWidgetPrivate::renameClicked()
 {
     if (!ui.transportList->currentItem()) {
         return;
@@ -121,7 +121,7 @@ void TransportManagementWidget::Private::renameClicked()
     ui.transportList->editItem(ui.transportList->currentItem(), 0);
 }
 
-void TransportManagementWidget::Private::removeClicked()
+void TransportManagementWidgetPrivate::removeClicked()
 {
     if (!ui.transportList->currentItem()) {
         return;
@@ -136,7 +136,7 @@ void TransportManagementWidget::Private::removeClicked()
     TransportManager::self()->removeTransport(ui.transportList->currentItem()->data(0, Qt::UserRole).toInt());
 }
 
-void TransportManagementWidget::Private::defaultClicked()
+void TransportManagementWidgetPrivate::defaultClicked()
 {
     if (!ui.transportList->currentItem()) {
         return;
@@ -145,7 +145,7 @@ void TransportManagementWidget::Private::defaultClicked()
     TransportManager::self()->setDefaultTransport(ui.transportList->currentItem()->data(0, Qt::UserRole).toInt());
 }
 
-void TransportManagementWidget::Private::slotCustomContextMenuRequested(const QPoint &pos)
+void TransportManagementWidgetPrivate::slotCustomContextMenuRequested(const QPoint &pos)
 {
     QMenu menu(q);
     menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), q, [this]() {

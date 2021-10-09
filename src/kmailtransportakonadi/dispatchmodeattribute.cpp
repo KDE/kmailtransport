@@ -13,15 +13,15 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class Q_DECL_HIDDEN DispatchModeAttribute::Private
+class MailTransport::DispatchModeAttributePrivate
 {
 public:
-    DispatchMode mMode;
+    DispatchModeAttribute::DispatchMode mMode;
     QDateTime mDueDate;
 };
 
 DispatchModeAttribute::DispatchModeAttribute(DispatchMode mode)
-    : d(new Private)
+    : d(new DispatchModeAttributePrivate)
 {
     d->mMode = mode;
 }

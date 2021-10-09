@@ -16,6 +16,8 @@
 
 namespace MailTransport
 {
+class DispatchModeAttributePrivate;
+
 /**
   Attribute determining how and when a message from the outbox should be
   dispatched.  Messages can be sent immediately, sent only when the user
@@ -79,8 +81,7 @@ public:
     void setSendAfter(const QDateTime &date);
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<DispatchModeAttributePrivate> const d;
 };
 } // namespace MailTransport
 

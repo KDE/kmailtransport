@@ -27,10 +27,10 @@ using namespace MailTransport;
 /**
   @internal
 */
-class Q_DECL_HIDDEN MailTransport::MessageQueueJob::Private
+class MailTransport::MessageQueueJobPrivate
 {
 public:
-    Private(MessageQueueJob *qq)
+    explicit MessageQueueJobPrivate(MessageQueueJob *qq)
         : q(qq)
     {
     }
@@ -55,17 +55,17 @@ public:
     void outboxRequestResult(KJob *job);
 };
 
-bool MessageQueueJob::Private::validate()
+bool MessageQueueJobPrivate::validate()
 {
     if (!message) {
-        q->setError(UserDefinedError);
+        q->setError(KJob::UserDefinedError);
         q->setErrorText(i18n("Empty message."));
         q->emitResult();
         return false;
     }
 
     if ((addressAttribute.to().count() + addressAttribute.cc().count() + addressAttribute.bcc().count()) == 0) {
-        q->setError(UserDefinedError);
+        q->setError(KJob::UserDefinedError);
         q->setErrorText(i18n("Message has no recipients."));
         q->emitResult();
         return false;
@@ -73,14 +73,14 @@ bool MessageQueueJob::Private::validate()
 
     const int transport = transportAttribute.transportId();
     if (TransportManager::self()->transportById(transport, false) == nullptr) {
-        q->setError(UserDefinedError);
+        q->setError(KJob::UserDefinedError);
         q->setErrorText(i18n("Message has invalid transport."));
         q->emitResult();
         return false;
     }
 
     if (sentBehaviourAttribute.sentBehaviour() == SentBehaviourAttribute::MoveToCollection && !(sentBehaviourAttribute.moveToCollection().isValid())) {
-        q->setError(UserDefinedError);
+        q->setError(KJob::UserDefinedError);
         q->setErrorText(i18n("Message has invalid sent-mail folder."));
         q->emitResult();
         return false;
@@ -91,7 +91,7 @@ bool MessageQueueJob::Private::validate()
     return true; // all ok
 }
 
-void MessageQueueJob::Private::outboxRequestResult(KJob *job)
+void MessageQueueJobPrivate::outboxRequestResult(KJob *job)
 {
     Q_ASSERT(!started);
     started = true;
@@ -138,7 +138,7 @@ void MessageQueueJob::Private::outboxRequestResult(KJob *job)
 
 MessageQueueJob::MessageQueueJob(QObject *parent)
     : KCompositeJob(parent)
-    , d(new Private(this))
+    , d(new MessageQueueJobPrivate(this))
 {
 }
 
