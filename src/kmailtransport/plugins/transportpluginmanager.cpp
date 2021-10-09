@@ -106,10 +106,7 @@ TransportPluginManager::TransportPluginManager(QObject *parent)
 {
 }
 
-TransportPluginManager::~TransportPluginManager()
-{
-    delete d;
-}
+TransportPluginManager::~TransportPluginManager() = default;
 
 TransportPluginManager *TransportPluginManager::self()
 {

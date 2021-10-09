@@ -56,10 +56,7 @@ PrecommandJob::PrecommandJob(const QString &precommand, QObject *parent)
     });
 }
 
-PrecommandJob::~PrecommandJob()
-{
-    delete d;
-}
+PrecommandJob::~PrecommandJob() = default;
 
 void PrecommandJob::start()
 {

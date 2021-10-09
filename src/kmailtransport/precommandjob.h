@@ -14,6 +14,8 @@
 
 #include <KJob>
 
+#include <memory>
+
 class PreCommandJobPrivate;
 
 namespace MailTransport
@@ -57,7 +59,7 @@ protected:
 
 private:
     friend class ::PreCommandJobPrivate;
-    PreCommandJobPrivate *const d;
+    std::unique_ptr<PreCommandJobPrivate> const d;
 };
 } // namespace MailTransport
 

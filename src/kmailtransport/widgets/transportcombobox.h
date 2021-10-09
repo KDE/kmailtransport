@@ -11,6 +11,8 @@
 
 #include <QComboBox>
 
+#include <memory>
+
 class TransportComboBoxPrivate;
 
 namespace MailTransport
@@ -61,7 +63,7 @@ public Q_SLOTS:
     void updateComboboxList();
 
 private:
-    TransportComboBoxPrivate *const d;
+    std::unique_ptr<TransportComboBoxPrivate> const d;
 };
 } // namespace MailTransport
 

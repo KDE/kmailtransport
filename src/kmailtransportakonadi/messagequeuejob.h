@@ -23,6 +23,8 @@
 
 #include <KMime/KMimeMessage>
 
+#include <memory>
+
 namespace MailTransport
 {
 /**
@@ -144,7 +146,7 @@ protected Q_SLOTS:
 private:
     class Private;
     friend class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 } // namespace MailTransport
 

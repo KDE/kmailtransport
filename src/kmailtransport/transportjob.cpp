@@ -37,7 +37,6 @@ TransportJob::TransportJob(Transport *transport, QObject *parent)
 TransportJob::~TransportJob()
 {
     delete d->transport;
-    delete d;
 }
 
 void TransportJob::setSender(const QString &sender)

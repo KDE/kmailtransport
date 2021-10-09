@@ -12,6 +12,8 @@
 
 #include <KCompositeJob>
 
+#include <memory>
+
 class QBuffer;
 
 namespace MailTransport
@@ -136,7 +138,7 @@ protected:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 } // namespace MailTransport

@@ -23,10 +23,7 @@ TransportAttribute::TransportAttribute(int id)
     d->mId = id;
 }
 
-TransportAttribute::~TransportAttribute()
-{
-    delete d;
-}
+TransportAttribute::~TransportAttribute() = default;
 
 TransportAttribute *TransportAttribute::clone() const
 {

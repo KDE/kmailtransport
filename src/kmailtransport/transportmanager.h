@@ -12,6 +12,8 @@
 #include <QList>
 #include <QObject>
 
+#include <memory>
+
 namespace KWallet
 {
 class Wallet;
@@ -274,7 +276,7 @@ private:
     void updatePluginList();
 
 private:
-    TransportManagerPrivate *const d;
+    std::unique_ptr<TransportManagerPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void slotTransportsChanged())
 };

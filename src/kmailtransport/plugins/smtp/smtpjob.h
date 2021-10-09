@@ -12,6 +12,8 @@
 #include <KSMTP/Session>
 #include <transportjob.h>
 
+#include <memory>
+
 namespace KIO
 {
 class Job;
@@ -70,7 +72,7 @@ private:
 
 private:
     friend class ::SmtpJobPrivate;
-    SmtpJobPrivate *const d;
+    std::unique_ptr<SmtpJobPrivate> const d;
 };
 } // namespace MailTransport
 

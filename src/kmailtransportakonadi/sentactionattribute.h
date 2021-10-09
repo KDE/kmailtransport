@@ -14,6 +14,8 @@
 #include <QVariant>
 #include <QVector>
 
+#include <memory>
+
 namespace MailTransport
 {
 /**
@@ -130,7 +132,7 @@ public:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 }

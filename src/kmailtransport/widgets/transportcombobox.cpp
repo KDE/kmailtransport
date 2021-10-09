@@ -29,10 +29,7 @@ TransportComboBox::TransportComboBox(QWidget *parent)
     connect(TransportManager::self(), &TransportManager::transportRemoved, this, &TransportComboBox::transportRemoved);
 }
 
-TransportComboBox::~TransportComboBox()
-{
-    delete d;
-}
+TransportComboBox::~TransportComboBox() = default;
 
 int TransportComboBox::currentTransportId() const
 {

@@ -34,10 +34,7 @@ Transport::Transport(const QString &cfgGroup)
     loadPassword();
 }
 
-Transport::~Transport()
-{
-    delete d;
-}
+Transport::~Transport() = default;
 
 bool Transport::isValid() const
 {

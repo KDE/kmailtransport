@@ -144,7 +144,6 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
 AddTransportDialogNG::~AddTransportDialogNG()
 {
     d->writeConfig();
-    delete d;
 }
 
 void AddTransportDialogNG::accept()

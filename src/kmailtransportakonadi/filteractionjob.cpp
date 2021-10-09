@@ -100,10 +100,7 @@ FilterActionJob::FilterActionJob(const Collection &collection, FilterAction *fun
     d->collection = collection;
 }
 
-FilterActionJob::~FilterActionJob()
-{
-    delete d;
-}
+FilterActionJob::~FilterActionJob() = default;
 
 void FilterActionJob::doStart()
 {

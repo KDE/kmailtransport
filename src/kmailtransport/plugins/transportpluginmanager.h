@@ -8,6 +8,9 @@
 
 #include "kmailtransport_private_export.h"
 #include <QObject>
+
+#include <memory>
+
 namespace MailTransport
 {
 class TransportAbstractPlugin;
@@ -28,7 +31,7 @@ Q_SIGNALS:
     void updatePluginList();
 
 private:
-    TransportPluginManagerPrivate *const d;
+    std::unique_ptr<TransportPluginManagerPrivate> const d;
 };
 }
 

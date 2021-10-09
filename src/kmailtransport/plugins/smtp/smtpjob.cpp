@@ -102,7 +102,6 @@ SmtpJob::~SmtpJob()
             }
         }
     }
-    delete d;
 }
 
 void SmtpJob::doStart()

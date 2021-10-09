@@ -11,6 +11,8 @@
 #include <Akonadi/Item>
 #include <Akonadi/TransactionSequence>
 
+#include <memory>
+
 namespace Akonadi
 {
 class Collection;
@@ -157,7 +159,7 @@ protected:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 } // namespace Akonadi

@@ -10,6 +10,8 @@
 
 #include <QSslSocket>
 
+#include <memory>
+
 namespace MailTransport
 {
 class SocketPrivate;
@@ -86,7 +88,7 @@ public:
 
 private:
     Q_DECLARE_PRIVATE(Socket)
-    SocketPrivate *const d;
+    std::unique_ptr<SocketPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void slotConnected())
     Q_PRIVATE_SLOT(d, void slotStateChanged(QAbstractSocket::SocketState state))

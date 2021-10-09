@@ -142,10 +142,7 @@ MessageQueueJob::MessageQueueJob(QObject *parent)
 {
 }
 
-MessageQueueJob::~MessageQueueJob()
-{
-    delete d;
-}
+MessageQueueJob::~MessageQueueJob() = default;
 
 Message::Ptr MessageQueueJob::message() const
 {

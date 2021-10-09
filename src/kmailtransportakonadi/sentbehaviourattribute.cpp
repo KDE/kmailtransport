@@ -29,10 +29,7 @@ SentBehaviourAttribute::SentBehaviourAttribute(SentBehaviour beh, const Collecti
     d->mSilent = sendSilently;
 }
 
-SentBehaviourAttribute::~SentBehaviourAttribute()
-{
-    delete d;
-}
+SentBehaviourAttribute::~SentBehaviourAttribute() = default;
 
 SentBehaviourAttribute *SentBehaviourAttribute::clone() const
 {

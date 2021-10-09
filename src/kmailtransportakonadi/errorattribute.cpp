@@ -21,10 +21,7 @@ ErrorAttribute::ErrorAttribute(const QString &msg)
     d->mMessage = msg;
 }
 
-ErrorAttribute::~ErrorAttribute()
-{
-    delete d;
-}
+ErrorAttribute::~ErrorAttribute() = default;
 
 ErrorAttribute *ErrorAttribute::clone() const
 {

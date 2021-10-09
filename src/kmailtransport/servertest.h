@@ -13,6 +13,8 @@
 #include <QList>
 #include <QObject>
 
+#include <memory>
+
 class QProgressBar;
 
 namespace MailTransport
@@ -195,7 +197,7 @@ Q_SIGNALS:
 
 private:
     Q_DECLARE_PRIVATE(ServerTest)
-    ServerTestPrivate *const d;
+    std::unique_ptr<ServerTestPrivate> const d;
 
     Q_PRIVATE_SLOT(d, void slotNormalPossible())
     Q_PRIVATE_SLOT(d, void slotTlsDone())

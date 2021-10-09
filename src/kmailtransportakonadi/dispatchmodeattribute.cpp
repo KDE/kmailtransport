@@ -26,10 +26,7 @@ DispatchModeAttribute::DispatchModeAttribute(DispatchMode mode)
     d->mMode = mode;
 }
 
-DispatchModeAttribute::~DispatchModeAttribute()
-{
-    delete d;
-}
+DispatchModeAttribute::~DispatchModeAttribute() = default;
 
 DispatchModeAttribute *DispatchModeAttribute::clone() const
 {

@@ -87,10 +87,7 @@ SentActionAttribute::SentActionAttribute()
 {
 }
 
-SentActionAttribute::~SentActionAttribute()
-{
-    delete d;
-}
+SentActionAttribute::~SentActionAttribute() = default;
 
 void SentActionAttribute::addAction(Action::Type type, const QVariant &value)
 {

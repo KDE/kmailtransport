@@ -532,14 +532,11 @@ ServerTest::ServerTest(QObject *parent)
     connect(d->progressTimer, SIGNAL(timeout()), SLOT(slotUpdateProgress()));
 }
 
-ServerTest::~ServerTest()
-{
-    delete d;
-}
+ServerTest::~ServerTest() = default;
 
 void ServerTest::start()
 {
-    qCDebug(MAILTRANSPORT_LOG) << d;
+    qCDebug(MAILTRANSPORT_LOG) << d.get();
 
     d->connectionResults.clear();
     d->authenticationResults.clear();

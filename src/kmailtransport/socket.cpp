@@ -124,7 +124,6 @@ Socket::Socket(QObject *parent)
 Socket::~Socket()
 {
     qCDebug(MAILTRANSPORT_LOG);
-    delete d;
 }
 
 void Socket::reconnect()

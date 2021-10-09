@@ -35,10 +35,7 @@ TransportConfigWidget::TransportConfigWidget(TransportConfigWidgetPrivate &dd, T
     init(transport);
 }
 
-TransportConfigWidget::~TransportConfigWidget()
-{
-    delete d_ptr;
-}
+TransportConfigWidget::~TransportConfigWidget() = default;
 
 void TransportConfigWidget::init(Transport *transport)
 {

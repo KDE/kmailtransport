@@ -10,6 +10,8 @@
 #include <transportbase.h>
 #include <transporttype.h>
 
+#include <memory>
+
 class TransportPrivate;
 namespace QKeychain
 {
@@ -142,7 +144,9 @@ private Q_SLOTS:
 private:
     void readTransportPasswordFinished(QKeychain::Job *baseJob);
     void loadPassword();
-    TransportPrivate *const d;
+
+private:
+    std::unique_ptr<TransportPrivate> const d;
 };
 } // namespace MailTransport
 

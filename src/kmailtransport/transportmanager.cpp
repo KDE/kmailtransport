@@ -137,7 +137,6 @@ TransportManager::TransportManager()
 TransportManager::~TransportManager()
 {
     qRemovePostRoutine(destroyStaticTransportManager);
-    delete d;
 }
 
 TransportManager *TransportManager::self()

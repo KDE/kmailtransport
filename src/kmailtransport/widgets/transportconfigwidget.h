@@ -15,6 +15,8 @@
 #include <QWidget>
 #include <mailtransport_export.h>
 
+#include <memory>
+
 class KConfigDialogManager;
 
 namespace MailTransport
@@ -76,7 +78,7 @@ public Q_SLOTS:
     virtual void apply();
 
 protected:
-    TransportConfigWidgetPrivate *const d_ptr;
+    std::unique_ptr<TransportConfigWidgetPrivate> const d_ptr;
     TransportConfigWidget(TransportConfigWidgetPrivate &dd, Transport *transport, QWidget *parent);
 
 private:

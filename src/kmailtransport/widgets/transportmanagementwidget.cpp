@@ -74,10 +74,7 @@ TransportManagementWidget::TransportManagementWidget(QWidget *parent)
     });
 }
 
-TransportManagementWidget::~TransportManagementWidget()
-{
-    delete d;
-}
+TransportManagementWidget::~TransportManagementWidget() = default;
 
 void TransportManagementWidget::Private::updateButtonState()
 {
