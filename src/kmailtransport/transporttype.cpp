@@ -10,7 +10,7 @@
 using namespace MailTransport;
 
 TransportType::TransportType()
-    : d(new Private)
+    : d(new TransportTypePrivate)
 {
 }
 

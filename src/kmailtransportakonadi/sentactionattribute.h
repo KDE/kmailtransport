@@ -19,6 +19,7 @@
 namespace MailTransport
 {
 class SentActionAttributePrivate;
+class SentActionAttributeActionPrivate;
 
 /**
  * @short An Attribute that stores the action to execute after sending.
@@ -97,8 +98,7 @@ public:
 
     private:
         //@cond PRIVATE
-        class Private;
-        QSharedDataPointer<Private> d;
+        QSharedDataPointer<SentActionAttributeActionPrivate> d;
         //@endcond
     };
 

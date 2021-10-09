@@ -15,6 +15,7 @@ namespace MailTransport
 {
 class AddTransportDialog;
 class TransportManager;
+class TransportTypePrivate;
 
 /**
   @short A representation of a transport type.
@@ -88,8 +89,7 @@ public:
 
 private:
     //@cond PRIVATE
-    class Private;
-    QSharedDataPointer<Private> d;
+    QSharedDataPointer<TransportTypePrivate> d;
     //@endcond
 };
 } // namespace MailTransport

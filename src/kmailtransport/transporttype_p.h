@@ -14,14 +14,14 @@ namespace MailTransport
 /**
   @internal
 */
-class TransportType::Private : public QSharedData
+class TransportTypePrivate : public QSharedData
 {
 public:
-    Private()
+    TransportTypePrivate()
     {
     }
 
-    Private(const Private &other)
+    TransportTypePrivate(const TransportTypePrivate &other)
         : QSharedData(other)
     {
         mName = other.mName;

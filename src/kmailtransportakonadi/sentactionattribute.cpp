@@ -13,31 +13,31 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-class SentActionAttribute::Action::Private : public QSharedData
+class MailTransport::SentActionAttributeActionPrivate : public QSharedData
 {
 public:
-    Private()
+    SentActionAttributeActionPrivate()
     {
     }
 
-    Private(const Private &other)
+    SentActionAttributeActionPrivate(const SentActionAttributeActionPrivate &other)
         : QSharedData(other)
         , mType(other.mType)
         , mValue(other.mValue)
     {
     }
 
-    Type mType = Invalid;
+    SentActionAttribute::Action::Type mType = SentActionAttribute::Action::Invalid;
     QVariant mValue;
 };
 
 SentActionAttribute::Action::Action()
-    : d(new Private)
+    : d(new SentActionAttributeActionPrivate)
 {
 }
 
 SentActionAttribute::Action::Action(Type type, const QVariant &value)
-    : d(new Private)
+    : d(new SentActionAttributeActionPrivate)
 {
     d->mType = type;
     d->mValue = value;
