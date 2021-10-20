@@ -146,239 +146,232 @@
       <attribute name="title">
        <string comment="advanced smtp settings">Advanced</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_7">
-       <item>
-        <widget class="QGroupBox" name="encryptionGroup">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="title">
+      <layout class="QFormLayout" name="formLayout">
+       <item row="0" column="0" colspan="2">
+        <widget class="KTitleWidget" name="ktitlewidget_2">
+         <property name="text">
           <string>Connection Settings</string>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_5">
-          <item>
-           <widget class="QStackedWidget" name="checkCapabilitiesStack">
-            <property name="currentIndex">
-             <number>0</number>
-            </property>
-            <widget class="QWidget" name="page">
-             <layout class="QVBoxLayout" name="verticalLayout_3">
-              <item>
-               <widget class="QPushButton" name="checkCapabilities">
-                <property name="text">
-                 <string>Auto Detect</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="page_2">
-             <layout class="QVBoxLayout" name="verticalLayout_4">
-              <item>
-               <widget class="QProgressBar" name="checkCapabilitiesProgress">
-                <property name="value">
-                 <number>0</number>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="noAuthPossible">
-            <property name="visible">
-             <bool>false</bool>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::Box</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="lineWidth">
-             <number>0</number>
-            </property>
-            <property name="text">
-             <string>This server does not support authentication</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QFormLayout" name="formLayout_2">
-            <property name="fieldGrowthPolicy">
-             <enum>QFormLayout::ExpandingFieldsGrow</enum>
-            </property>
-            <item row="0" column="0">
-             <widget class="QLabel" name="label">
-              <property name="text">
-               <string>Encryption:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <layout class="QHBoxLayout" name="encryptHLayout">
-              <item>
-               <widget class="QRadioButton" name="encryptionNone">
-                <property name="text">
-                 <string>&amp;None</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QRadioButton" name="encryptionSsl">
-                <property name="text">
-                 <string>&amp;SSL/TLS</string>
-                </property>
-               </widget>
-              </item>
-              <item>
-               <widget class="QRadioButton" name="encryptionTls">
-                <property name="text">
-                 <string>START&amp;TLS</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="portLabel">
-              <property name="text">
-               <string>&amp;Port:</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-              </property>
-              <property name="buddy">
-               <cstring>kcfg_port</cstring>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="1">
-             <widget class="QSpinBox" name="kcfg_port">
-              <property name="minimum">
-               <number>1</number>
-              </property>
-              <property name="maximum">
-               <number>65535</number>
-              </property>
-              <property name="value">
-               <number>25</number>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="0">
-             <widget class="QLabel" name="authLabel">
-              <property name="text">
-               <string>Authentication:</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QComboBox" name="authCombo"/>
-            </item>
-            <item row="3" column="0" colspan="2">
-             <widget class="QCheckBox" name="kcfg_useProxy">
-              <property name="text">
-               <string>Connect using the system proxy settings</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-         </layout>
         </widget>
        </item>
-       <item>
-        <widget class="QGroupBox" name="groupBox_2">
-         <property name="title">
+       <item row="1" column="0" colspan="2">
+        <widget class="QLabel" name="noAuthPossible">
+         <property name="visible">
+          <bool>false</bool>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::Box</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string>This server does not support authentication</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QStackedWidget" name="checkCapabilitiesStack">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="page">
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <widget class="QPushButton" name="checkCapabilities">
+             <property name="text">
+              <string>Auto Detect</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="page_2">
+          <layout class="QVBoxLayout" name="verticalLayout_4">
+           <item>
+            <widget class="QProgressBar" name="checkCapabilitiesProgress">
+             <property name="value">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="3" column="0" colspan="2">
+        <layout class="QFormLayout" name="formLayout_2">
+         <property name="fieldGrowthPolicy">
+          <enum>QFormLayout::ExpandingFieldsGrow</enum>
+         </property>
+         <item row="0" column="0">
+          <widget class="QLabel" name="label">
+           <property name="text">
+            <string>Encryption:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <layout class="QHBoxLayout" name="encryptHLayout">
+           <item>
+            <widget class="QRadioButton" name="encryptionNone">
+             <property name="text">
+              <string>&amp;None</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="encryptionSsl">
+             <property name="text">
+              <string>&amp;SSL/TLS</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="encryptionTls">
+             <property name="text">
+              <string>START&amp;TLS</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="portLabel">
+           <property name="text">
+            <string>&amp;Port:</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           </property>
+           <property name="buddy">
+            <cstring>kcfg_port</cstring>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="kcfg_port">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>65535</number>
+           </property>
+           <property name="value">
+            <number>25</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="authLabel">
+           <property name="text">
+            <string>Authentication:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QComboBox" name="authCombo"/>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <widget class="QCheckBox" name="kcfg_useProxy">
+           <property name="text">
+            <string>Connect using the system proxy settings</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="4" column="0" colspan="2">
+        <widget class="KTitleWidget" name="ktitlewidget_3">
+         <property name="text">
           <string>SMTP Settings</string>
          </property>
-         <layout class="QFormLayout" name="formLayout">
-          <item row="0" column="0" colspan="2">
-           <widget class="QCheckBox" name="kcfg_specifyHostname">
-            <property name="text">
-             <string>Sen&amp;d custom hostname to server</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0">
-           <widget class="QLabel" name="hostnameLabel">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>Hostna&amp;me:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="buddy">
-             <cstring>kcfg_localHostname</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="KLineEdit" name="kcfg_localHostname">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="trapEnterKeyEvent" stdset="0">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0" colspan="2">
-           <widget class="QCheckBox" name="kcfg_specifySenderOverwriteAddress">
-            <property name="text">
-             <string>Use custom sender address</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="label_2">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>Sender Address:</string>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="KLineEdit" name="kcfg_senderOverwriteAddress">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="trapEnterKeyEvent" stdset="0">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="0">
-           <widget class="QLabel" name="precommandLabel">
-            <property name="text">
-             <string>Precommand:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="KLineEdit" name="kcfg_precommand">
-            <property name="trapEnterKeyEvent" stdset="0">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-         </layout>
         </widget>
        </item>
-       <item>
+       <item row="5" column="0" colspan="2">
+        <widget class="QCheckBox" name="kcfg_specifyHostname">
+         <property name="text">
+          <string>Sen&amp;d custom hostname to server</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="0">
+        <widget class="QLabel" name="hostnameLabel">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Hostna&amp;me:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>kcfg_localHostname</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1">
+        <widget class="KLineEdit" name="kcfg_localHostname">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="trapEnterKeyEvent" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QCheckBox" name="kcfg_specifySenderOverwriteAddress">
+         <property name="text">
+          <string>Use custom sender address</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="0">
+        <widget class="QLabel" name="label_2">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>Sender Address:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1">
+        <widget class="KLineEdit" name="kcfg_senderOverwriteAddress">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="trapEnterKeyEvent" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="0">
+        <widget class="QLabel" name="precommandLabel">
+         <property name="text">
+          <string>Precommand:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="KLineEdit" name="kcfg_precommand">
+         <property name="trapEnterKeyEvent" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="0">
         <spacer name="verticalSpacer_2">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -420,11 +413,6 @@
   <tabstop>encryptionSsl</tabstop>
   <tabstop>encryptionTls</tabstop>
   <tabstop>authCombo</tabstop>
-  <tabstop>kcfg_specifyHostname</tabstop>
-  <tabstop>kcfg_localHostname</tabstop>
-  <tabstop>kcfg_specifySenderOverwriteAddress</tabstop>
-  <tabstop>kcfg_senderOverwriteAddress</tabstop>
-  <tabstop>kcfg_precommand</tabstop>
  </tabstops>
  <resources/>
  <connections>
