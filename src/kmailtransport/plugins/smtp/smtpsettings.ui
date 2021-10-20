@@ -278,7 +278,7 @@
          <item row="2" column="1">
           <widget class="QComboBox" name="authCombo"/>
          </item>
-         <item row="3" column="0" colspan="2">
+         <item row="3" column="1">
           <widget class="QCheckBox" name="kcfg_useProxy">
            <property name="text">
             <string>Connect using the system proxy settings</string>
@@ -291,13 +291,6 @@
         <widget class="KTitleWidget" name="ktitlewidget_3">
          <property name="text">
           <string>SMTP Settings</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0" colspan="2">
-        <widget class="QCheckBox" name="kcfg_specifyHostname">
-         <property name="text">
-          <string>Sen&amp;d custom hostname to server</string>
          </property>
         </widget>
        </item>
@@ -324,13 +317,6 @@
          </property>
          <property name="trapEnterKeyEvent" stdset="0">
           <bool>true</bool>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="0" colspan="2">
-        <widget class="QCheckBox" name="kcfg_specifySenderOverwriteAddress">
-         <property name="text">
-          <string>Use custom sender address</string>
          </property>
         </widget>
        </item>
@@ -383,6 +369,20 @@
           </size>
          </property>
         </spacer>
+       </item>
+       <item row="5" column="1">
+        <widget class="QCheckBox" name="kcfg_specifyHostname">
+         <property name="text">
+          <string>Sen&amp;d custom hostname to server</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QCheckBox" name="kcfg_specifySenderOverwriteAddress">
+         <property name="text">
+          <string>Use custom sender address</string>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
