@@ -8,7 +8,7 @@
     <x>0</x>
     <y>0</y>
     <width>411</width>
-    <height>474</height>
+    <height>492</height>
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
@@ -33,103 +33,101 @@
       <attribute name="title">
        <string comment="general smtp settings">General</string>
       </attribute>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QGroupBox" name="groupBox">
-         <property name="title">
+      <layout class="QFormLayout" name="formLayout_3">
+       <item row="0" column="0" colspan="2">
+        <widget class="KTitleWidget" name="ktitlewidget">
+         <property name="text">
           <string>Account Information</string>
          </property>
-         <layout class="QGridLayout" name="gridLayout">
-          <item row="0" column="0">
-           <widget class="QLabel" name="hostLabel">
-            <property name="text">
-             <string>Outgoing &amp;mail server:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="buddy">
-             <cstring>kcfg_host</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="KLineEdit" name="kcfg_host">
-            <property name="trapEnterKeyEvent" stdset="0">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="usernameLabel">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>&amp;Login:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="buddy">
-             <cstring>kcfg_userName</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="1">
-           <widget class="KLineEdit" name="kcfg_userName">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="trapEnterKeyEvent" stdset="0">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
-           <widget class="QLabel" name="passwordLabel">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>P&amp;assword:</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="buddy">
-             <cstring>password</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
-           <widget class="KPasswordLineEdit" name="password">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="4" column="1">
-           <widget class="QCheckBox" name="kcfg_storePassword">
-            <property name="enabled">
-             <bool>false</bool>
-            </property>
-            <property name="text">
-             <string>&amp;Store SMTP password</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="1">
-           <widget class="QCheckBox" name="kcfg_requiresAuthentication">
-            <property name="text">
-             <string>Server &amp;requires authentication</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
         </widget>
        </item>
-       <item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="hostLabel">
+         <property name="text">
+          <string>Outgoing &amp;mail server:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>kcfg_host</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="KLineEdit" name="kcfg_host">
+         <property name="trapEnterKeyEvent" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QCheckBox" name="kcfg_requiresAuthentication">
+         <property name="text">
+          <string>Server &amp;requires authentication</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="0">
+        <widget class="QLabel" name="usernameLabel">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>&amp;Login:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>kcfg_userName</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="KLineEdit" name="kcfg_userName">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="trapEnterKeyEvent" stdset="0">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0">
+        <widget class="QLabel" name="passwordLabel">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>P&amp;assword:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="buddy">
+          <cstring>password</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="KPasswordLineEdit" name="password">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QCheckBox" name="kcfg_storePassword">
+         <property name="enabled">
+          <bool>false</bool>
+         </property>
+         <property name="text">
+          <string>&amp;Store SMTP password</string>
+         </property>
+        </widget>
+       </item>
+       <item row="11" column="1">
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -137,7 +135,7 @@
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>40</height>
+           <height>208</height>
           </size>
          </property>
         </spacer>
@@ -405,19 +403,18 @@
    <extends>QLineEdit</extends>
    <header>klineedit.h</header>
   </customwidget>
-   <customwidget>
-    <class>KPasswordLineEdit</class>
-    <extends>QWidget</extends>
-    <header>kpasswordlineedit.h</header>
-   </customwidget>
+  <customwidget>
+   <class>KPasswordLineEdit</class>
+   <extends>QWidget</extends>
+   <header>kpasswordlineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>KTitleWidget</class>
+   <extends>QWidget</extends>
+   <header>ktitlewidget.h</header>
+  </customwidget>
  </customwidgets>
  <tabstops>
-  <tabstop>tabWidget</tabstop>
-  <tabstop>kcfg_host</tabstop>
-  <tabstop>kcfg_requiresAuthentication</tabstop>
-  <tabstop>kcfg_userName</tabstop>
-  <tabstop>password</tabstop>
-  <tabstop>kcfg_storePassword</tabstop>
   <tabstop>checkCapabilities</tabstop>
   <tabstop>encryptionNone</tabstop>
   <tabstop>encryptionSsl</tabstop>
