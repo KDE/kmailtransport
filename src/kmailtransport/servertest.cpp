@@ -236,7 +236,7 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
     // Initial Greeting
     if (stage == 0) {
         // Regexp taken from POP3 ioslave
-        const QString responseWithoutCRLF = response.chopped(2);
+        const QString responseWithoutCRLF = response.isEmpty() ? response : response.chopped(2);
         static const QRegularExpression re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"), QRegularExpression::CaseInsensitiveOption);
         if (responseWithoutCRLF.indexOf(re) != -1) {
             authenticationResults[type] << Transport::EnumAuthenticationType::APOP;
