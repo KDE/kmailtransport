@@ -235,11 +235,13 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
 
     // Initial Greeting
     if (stage == 0) {
-        // Regexp taken from POP3 ioslave
-        const QString responseWithoutCRLF = response.chopped(2);
-        const QRegularExpression re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"), QRegularExpression::CaseInsensitiveOption);
-        if (responseWithoutCRLF.indexOf(re) != -1) {
-            authenticationResults[type] << Transport::EnumAuthenticationType::APOP;
+        if (!response.isEmpty()) {
+            // Regexp taken from POP3 ioslave
+            const QString responseWithoutCRLF = response.chopped(2);
+            const QRegularExpression re(QStringLiteral("<[A-Za-z0-9\\.\\-_]+@[A-Za-z0-9\\.\\-_]+>$"), QRegularExpression::CaseInsensitiveOption);
+            if (responseWithoutCRLF.indexOf(re) != -1) {
+                authenticationResults[type] << Transport::EnumAuthenticationType::APOP;
+            }
         }
 
         // Each server is supposed to support clear text login
