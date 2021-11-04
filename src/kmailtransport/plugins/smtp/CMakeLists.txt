@@ -8,6 +8,12 @@ target_sources(mailtransport_smtpplugin PRIVATE
     smtpconfigdialog.cpp
     smtpjob.cpp
     smtpconfigwidget.cpp
+    smtpconfigdialog.h
+    smtpjob.h
+    sessionuiproxy.h
+    smtpmailtransportplugin.h
+    smtpconfigwidget.h
+
     )
 ki18n_wrap_ui(mailtransport_smtpplugin
     smtpsettings.ui

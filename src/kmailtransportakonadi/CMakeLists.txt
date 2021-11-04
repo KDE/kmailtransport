@@ -22,6 +22,18 @@ target_sources(KF5MailTransportAkonadi PRIVATE
     messagequeuejob.cpp
     outboxactions.cpp
     filteractionjob.cpp
+
+    filteractionjob_p.h
+    errorattribute.h
+    outboxactions_p.h
+    dispatcherinterface_p.h
+    sentbehaviourattribute.h
+    messagequeuejob.h
+    sentactionattribute.h
+    transportattribute.h
+    dispatchmodeattribute.h
+    dispatcherinterface.h
+
     )
 
 ecm_qt_declare_logging_category(KF5MailTransportAkonadi HEADER mailtransportakonadi_debug.h IDENTIFIER MAILTRANSPORTAKONADI_LOG CATEGORY_NAME org.kde.pim.mailtransportakonadi

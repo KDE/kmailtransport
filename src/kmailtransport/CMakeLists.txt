@@ -28,7 +28,27 @@ target_sources(KF5MailTransport PRIVATE
     plugins/transportabstractplugin.cpp
     plugins/transportpluginmanager.cpp
     ) 
-
+target_sources(KF5MailTransport PRIVATE
+    transporttype_p.h
+    mailtransport_defs.h
+    socket.h
+    precommandjob.h
+    transport_p.h
+    transport.h
+    kmailtransport_private_export.h
+    plugins/transportpluginmanager.h
+    plugins/transportabstractplugin.h
+    widgets/addtransportdialogng.h
+    widgets/transportcombobox.h
+    widgets/transportlistview.h
+    widgets/transportconfigwidget_p.h
+    widgets/transportconfigwidget.h
+    widgets/transportmanagementwidget.h
+    transportjob.h
+    transportmanager.h
+    transporttype.h
+    servertest.h
+    )
 
 ecm_qt_declare_logging_category(KF5MailTransport HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport
         DESCRIPTION "kmailtransport (kmailtransport)"

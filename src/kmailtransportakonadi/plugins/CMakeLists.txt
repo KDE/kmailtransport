@@ -2,6 +2,8 @@ kcoreaddons_add_plugin(mailtransport_akonadiplugin JSON akonadimailtransport.jso
 target_sources(mailtransport_akonadiplugin PRIVATE
     akonadimailtransportplugin.cpp
     resourcesendjob.cpp
+    resourcesendjob_p.h
+    akonadimailtransportplugin.h
     )
 
 ecm_qt_declare_logging_category(mailtransport_akonadiplugin HEADER mailtransportplugin_akonadi_debug.h IDENTIFIER
