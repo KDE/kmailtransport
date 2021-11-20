@@ -78,7 +78,7 @@ public:
     void readConfig();
     void writeConfig();
     void fillTypes();
-    int createId() const;
+    Q_REQUIRED_RESULT int createId() const;
     void prepareWallet();
     void validateDefault();
     void migrateToWallet();

@@ -29,7 +29,7 @@ public:
     {
     }
 
-    QString selectedType() const;
+    Q_REQUIRED_RESULT QString selectedType() const;
 
     /**
       Enables the OK button if a type is selected.
