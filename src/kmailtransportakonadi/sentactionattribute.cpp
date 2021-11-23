@@ -16,16 +16,11 @@ using namespace MailTransport;
 class MailTransport::SentActionAttributeActionPrivate : public QSharedData
 {
 public:
-    SentActionAttributeActionPrivate()
-    {
-    }
+    SentActionAttributeActionPrivate() = default;
 
     SentActionAttributeActionPrivate(const SentActionAttributeActionPrivate &other)
-        : QSharedData(other)
-        , mType(other.mType)
-        , mValue(other.mValue)
-    {
-    }
+
+        = default;
 
     SentActionAttribute::Action::Type mType = SentActionAttribute::Action::Invalid;
     QVariant mValue;
@@ -44,13 +39,10 @@ SentActionAttribute::Action::Action(Type type, const QVariant &value)
 }
 
 SentActionAttribute::Action::Action(const Action &other)
-    : d(other.d)
-{
-}
 
-SentActionAttribute::Action::~Action()
-{
-}
+    = default;
+
+SentActionAttribute::Action::~Action() = default;
 
 SentActionAttribute::Action::Type SentActionAttribute::Action::type() const
 {

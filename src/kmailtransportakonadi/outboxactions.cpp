@@ -16,13 +16,9 @@
 using namespace Akonadi;
 using namespace MailTransport;
 
-SendQueuedAction::SendQueuedAction()
-{
-}
+SendQueuedAction::SendQueuedAction() = default;
 
-SendQueuedAction::~SendQueuedAction()
-{
-}
+SendQueuedAction::~SendQueuedAction() = default;
 
 ItemFetchScope SendQueuedAction::fetchScope() const
 {
@@ -55,13 +51,9 @@ Job *SendQueuedAction::itemAction(const Item &item, FilterActionJob *parent) con
     return new ItemModifyJob(cp, parent);
 }
 
-ClearErrorAction::ClearErrorAction()
-{
-}
+ClearErrorAction::ClearErrorAction() = default;
 
-ClearErrorAction::~ClearErrorAction()
-{
-}
+ClearErrorAction::~ClearErrorAction() = default;
 
 ItemFetchScope ClearErrorAction::fetchScope() const
 {
@@ -91,9 +83,7 @@ DispatchManualTransportAction::DispatchManualTransportAction(int transportId)
 {
 }
 
-DispatchManualTransportAction::~DispatchManualTransportAction()
-{
-}
+DispatchManualTransportAction::~DispatchManualTransportAction() = default;
 
 ItemFetchScope DispatchManualTransportAction::fetchScope() const
 {

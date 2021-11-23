@@ -15,13 +15,10 @@ TransportType::TransportType()
 }
 
 TransportType::TransportType(const TransportType &other)
-    : d(other.d)
-{
-}
 
-TransportType::~TransportType()
-{
-}
+    = default;
+
+TransportType::~TransportType() = default;
 
 TransportType &TransportType::operator=(const TransportType &other)
 {

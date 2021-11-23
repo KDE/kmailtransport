@@ -55,7 +55,7 @@ QByteArray DispatchModeAttribute::serialized() const
     }
 
     Q_ASSERT(false);
-    return QByteArray(); // suppress control-reaches-end-of-non-void-function warning
+    return {}; // suppress control-reaches-end-of-non-void-function warning
 }
 
 void DispatchModeAttribute::deserialize(const QByteArray &data)

@@ -71,9 +71,7 @@ void FilterActionJobPrivate::traverseItems()
     q->commit();
 }
 
-FilterAction::~FilterAction()
-{
-}
+FilterAction::~FilterAction() = default;
 
 FilterActionJob::FilterActionJob(const Item &item, FilterAction *functor, QObject *parent)
     : TransactionSequence(parent)

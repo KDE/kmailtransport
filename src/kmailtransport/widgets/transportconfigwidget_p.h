@@ -21,9 +21,7 @@ public:
     Transport *transport = nullptr;
     KConfigDialogManager *manager = nullptr;
 
-    virtual ~TransportConfigWidgetPrivate()
-    {
-    }
+    virtual ~TransportConfigWidgetPrivate() = default;
 };
 } // namespace MailTransport
 

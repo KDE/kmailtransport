@@ -17,9 +17,7 @@ namespace MailTransport
 class TransportTypePrivate : public QSharedData
 {
 public:
-    TransportTypePrivate()
-    {
-    }
+    TransportTypePrivate() = default;
 
     TransportTypePrivate(const TransportTypePrivate &other)
         : QSharedData(other)

@@ -37,9 +37,7 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SmtpConfigDialog::reject);
 }
 
-SmtpConfigDialog::~SmtpConfigDialog()
-{
-}
+SmtpConfigDialog::~SmtpConfigDialog() = default;
 
 void SmtpConfigDialog::okClicked()
 {

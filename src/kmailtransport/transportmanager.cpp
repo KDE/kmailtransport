@@ -345,7 +345,7 @@ QString TransportManager::defaultTransportName() const
     if (t) {
         return t->name();
     }
-    return QString();
+    return {};
 }
 
 int TransportManager::defaultTransportId() const

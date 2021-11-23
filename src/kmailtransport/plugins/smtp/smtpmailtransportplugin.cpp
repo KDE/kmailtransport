@@ -17,9 +17,7 @@ SMTPMailTransportPlugin::SMTPMailTransportPlugin(QObject *parent, const QList<QV
 {
 }
 
-SMTPMailTransportPlugin::~SMTPMailTransportPlugin()
-{
-}
+SMTPMailTransportPlugin::~SMTPMailTransportPlugin() = default;
 
 QVector<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::names() const
 {

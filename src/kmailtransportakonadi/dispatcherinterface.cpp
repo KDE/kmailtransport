@@ -31,9 +31,7 @@ void DispatcherInterfacePrivate::massModifyResult(KJob *job)
     }
 }
 
-DispatcherInterface::DispatcherInterface()
-{
-}
+DispatcherInterface::DispatcherInterface() = default;
 
 AgentInstance DispatcherInterface::dispatcherInstance() const
 {

@@ -136,7 +136,7 @@ QString Transport::authenticationTypeString(int type)
         return QStringLiteral("XOAUTH2");
     }
     Q_ASSERT(false);
-    return QString();
+    return {};
 }
 
 void Transport::usrRead()

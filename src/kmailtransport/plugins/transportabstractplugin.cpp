@@ -13,9 +13,7 @@ TransportAbstractPlugin::TransportAbstractPlugin(QObject *parent)
 {
 }
 
-TransportAbstractPlugin::~TransportAbstractPlugin()
-{
-}
+TransportAbstractPlugin::~TransportAbstractPlugin() = default;
 
 void TransportAbstractPlugin::cleanUp(MailTransport::Transport *t)
 {

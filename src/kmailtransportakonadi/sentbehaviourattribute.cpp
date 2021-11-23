@@ -12,9 +12,7 @@ using namespace MailTransport;
 class MailTransport::SentBehaviourAttributePrivate
 {
 public:
-    SentBehaviourAttributePrivate()
-    {
-    }
+    SentBehaviourAttributePrivate() = default;
 
     SentBehaviourAttribute::SentBehaviour mBehaviour = SentBehaviourAttribute::MoveToDefaultSentCollection;
     Akonadi::Collection mMoveToCollection;
@@ -58,7 +56,7 @@ QByteArray SentBehaviourAttribute::serialized() const
         break;
     default:
         Q_ASSERT(false);
-        return QByteArray();
+        return {};
     }
 
     if (d->mSilent) {

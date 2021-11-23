@@ -22,9 +22,7 @@ ResourceSendJob::ResourceSendJob(Transport *transport, QObject *parent)
 {
 }
 
-ResourceSendJob::~ResourceSendJob()
-{
-}
+ResourceSendJob::~ResourceSendJob() = default;
 
 void ResourceSendJob::doStart()
 {

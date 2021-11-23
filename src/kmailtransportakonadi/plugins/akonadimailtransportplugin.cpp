@@ -25,9 +25,7 @@ AkonadiMailTransportPlugin::AkonadiMailTransportPlugin(QObject *parent, const QL
     connect(AgentManager::self(), &AgentManager::typeRemoved, this, &AkonadiMailTransportPlugin::slotUpdatePluginList);
 }
 
-AkonadiMailTransportPlugin::~AkonadiMailTransportPlugin()
-{
-}
+AkonadiMailTransportPlugin::~AkonadiMailTransportPlugin() = default;
 
 void AkonadiMailTransportPlugin::slotUpdatePluginList(const Akonadi::AgentType &type)
 {
