@@ -5,6 +5,7 @@ Dependencies:
 - 'on': ['@all']
   'require':
     'frameworks/extra-cmake-modules': '@latest'
+    'frameworks/kcmutils': '@latest'
     'pim/akonadi' : '@same'
     'pim/akonadi-mime' : '@same'
     'pim/kmime' : '@same'
