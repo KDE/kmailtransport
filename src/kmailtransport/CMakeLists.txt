@@ -69,7 +69,7 @@ endif()
 
 generate_export_header(KF5MailTransport BASE_NAME mailtransport)
 
-target_include_directories(KF5MailTransport INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport;${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransport>")
+target_include_directories(KF5MailTransport INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/MailTransport;${KDE_INSTALL_INCLUDEDIR_KF}/mailtransport>")
 target_include_directories(KF5MailTransport PUBLIC "$<BUILD_INTERFACE:${MailTransport_SOURCE_DIR}/src;${MailTransport_BINARY_DIR}/src>")
 
 target_link_libraries(KF5MailTransport
@@ -82,8 +82,8 @@ target_link_libraries(KF5MailTransport
     KF5::CoreAddons
     KF5::Wallet
     KF5::ConfigWidgets
-    Qt::DBus
-    Qt::Network
+    Qt${QT_MAJOR_VERSION}::DBus
+    Qt${QT_MAJOR_VERSION}::Network
     qt5keychain
     )
 
@@ -131,13 +131,13 @@ ecm_generate_headers(MailTransport_plugins_CamelCase_HEADERS
 
 install(FILES
     ${MailTransport_SOURCE_DIR}/src/kmailtransport/widgets/transportconfigwidget_p.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransport/private COMPONENT Devel )
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/mailtransport/private COMPONENT Devel )
 
 install(FILES
     ${MailTransport_CamelCase_HEADERS}
     ${MailTransport_widgets_CamelCase_HEADERS}
     ${MailTransport_plugins_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/ COMPONENT Devel )
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransport/ COMPONENT Devel )
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_export.h
@@ -146,10 +146,10 @@ install(FILES
     ${MailTransport_plugins_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/transportbase.h
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransport COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/mailtransport COMPONENT Devel
     )
 
-ecm_generate_pri_file(BASE_NAME KMailTransport LIB_NAME KF5MailTransport DEPS "KWallet" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransport/)
+ecm_generate_pri_file(BASE_NAME KMailTransport LIB_NAME KF5MailTransport DEPS "KWallet" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransport/)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 
@@ -172,7 +172,7 @@ install(EXPORT KF5MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" 
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
     )
 
 

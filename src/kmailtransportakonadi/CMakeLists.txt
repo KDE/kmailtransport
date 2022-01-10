@@ -46,7 +46,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 generate_export_header(KF5MailTransportAkonadi BASE_NAME mailtransportakonadi)
 
-target_include_directories(KF5MailTransportAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransportAkonadi;${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransportakonadi>")
+target_include_directories(KF5MailTransportAkonadi INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/MailTransportAkonadi;${KDE_INSTALL_INCLUDEDIR_KF}/mailtransportakonadi>")
 target_include_directories(KF5MailTransportAkonadi PUBLIC "$<BUILD_INTERFACE:${MailTransport_SOURCE_DIR}/src;${MailTransport_BINARY_DIR}/src>")
 
 
@@ -86,16 +86,16 @@ ecm_generate_headers(MailTransport_kmailtransportakonadi_CamelCase_HEADERS
 
 install(FILES
     ${MailTransport_kmailtransportakonadi_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransportAkonadi COMPONENT Devel )
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransportAkonadi COMPONENT Devel )
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransportakonadi_export.h
     ${MailTransport_kmailtransportakonadi_HEADERS}
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5}/mailtransportakonadi COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/mailtransportakonadi COMPONENT Devel
     )
 
-ecm_generate_pri_file(BASE_NAME KMailTransportAkonadi LIB_NAME KF5MailTransportAkonadi DEPS "KMailTransport AkonadiCore KMime AkonadiMime" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF5}/MailTransportAkonadi/)
+ecm_generate_pri_file(BASE_NAME KMailTransportAkonadi LIB_NAME KF5MailTransportAkonadi DEPS "KMailTransport AkonadiCore KMime AkonadiMime" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransportAkonadi/)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 
@@ -119,7 +119,7 @@ install(FILES
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransportakonadi_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF5} COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
     )
 
 if(BUILD_TESTING)
