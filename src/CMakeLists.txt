@@ -1,5 +1,7 @@
 
 add_subdirectory(kmailtransport)
-add_subdirectory(kmailtransportakonadi)
+if (TARGET KF5::AkonadiCore)
+    add_subdirectory(kmailtransportakonadi)
+endif()
 add_subdirectory(kcm)
 

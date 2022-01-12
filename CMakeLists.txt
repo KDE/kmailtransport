@@ -50,14 +50,20 @@ find_package(KF5Wallet ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5I18n ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5KIO ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG REQUIRED)
+
+if (QT_MAJOR_VERSION STREQUAL "6")
+    find_package(KF5Akonadi ${AKONADI_LIB_VERSION} CONFIG)
+    find_package(KF5AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG)
+else()
+    find_package(KF5AkonadiMime ${AKONADIMIME_LIB_VERSION} CONFIG REQUIRED)
+    find_package(KF5Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
+endif()
 find_package(KPimSMTP ${KSMTP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPimGAPI ${KGAPI_LIB_VERSION} CONFIG REQUIRED)
 
 #it will replace kwallet support
-find_package(Qt5Keychain CONFIG)
-set_package_properties(Qt5Keychain PROPERTIES
+find_package(Qt${QT_MAJOR_VERSION}Keychain CONFIG)
+set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
@@ -66,7 +72,7 @@ add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
 add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055A00)
 
 if(BUILD_TESTING)
-    find_package(Qt5Test CONFIG REQUIRED)
+    find_package(Qt${QT_MAJOR_VERSION}Test CONFIG REQUIRED)
    add_definitions(-DBUILD_TESTING)
 endif(BUILD_TESTING)
 

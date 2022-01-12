@@ -31,11 +31,14 @@
 #include <KEMailSettings>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <kcoreaddons_version.h>
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <Kdelibs4ConfigMigrator>
-#endif
 #include <qt5keychain/keychain.h>
+#else
+#include <qt6keychain/keychain.h>
+
+#endif
+
 using namespace QKeychain;
 #include <KWallet>
 
@@ -112,7 +115,7 @@ TransportManager::TransportManager()
     : QObject()
     , d(new TransportManagerPrivate(this))
 {
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Kdelibs4ConfigMigrator migrate(QStringLiteral("transportmanager"));
     migrate.setConfigFiles(QStringList() << QStringLiteral("mailtransports"));
     migrate.migrate();

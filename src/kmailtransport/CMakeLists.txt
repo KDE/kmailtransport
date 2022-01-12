@@ -84,8 +84,14 @@ target_link_libraries(KF5MailTransport
     KF5::ConfigWidgets
     Qt${QT_MAJOR_VERSION}::DBus
     Qt${QT_MAJOR_VERSION}::Network
-    qt5keychain
     )
+
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(KF5MailTransport PRIVATE qt6keychain)
+else()
+    target_link_libraries(KF5MailTransport PRIVATE qt5keychain)
+endif()
+
 
 set_target_properties(KF5MailTransport PROPERTIES
     VERSION ${MAILTRANSPORT_VERSION}

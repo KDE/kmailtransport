@@ -353,9 +353,17 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
             if (line.compare(QLatin1String("STARTTLS"), Qt::CaseInsensitive) == 0) {
                 *shouldStartTLS = true;
             } else if (line.startsWith(QLatin1String("AUTHINFO "), Qt::CaseInsensitive)) {
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
                 const QVector<QStringRef> authinfos = line.split(QLatin1Char(' '), Qt::SkipEmptyParts);
+#else
+                const QVector<QStringView> authinfos = QStringView(line).split(QLatin1Char(' '), Qt::SkipEmptyParts);
+#endif
                 const QString s(QStringLiteral("USER"));
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
                 const QStringRef ref(&s);
+#else
+                const QStringView ref(s);
+#endif
                 if (authinfos.contains(ref)) {
                     authenticationResults[type].append(Transport::EnumAuthenticationType::CLEAR); // XXX
                 }
