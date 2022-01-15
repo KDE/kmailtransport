@@ -119,7 +119,7 @@ install(FILES
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransportakonadi_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF} COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransportAkonadi COMPONENT Devel
     )
 
 if(BUILD_TESTING)
