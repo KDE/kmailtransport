@@ -97,7 +97,7 @@ public:
 
       @since 4.5
     */
-    static Q_REQUIRED_RESULT QString authenticationTypeString(int type);
+    Q_REQUIRED_RESULT static QString authenticationTypeString(int type);
 
     /**
       Returns a deep copy of this Transport object which will no longer be
