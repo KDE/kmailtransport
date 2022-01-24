@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include "transport.h"
+#include "mailtransport/transport.h"
 
 #include <KConfigDialogManager>
 

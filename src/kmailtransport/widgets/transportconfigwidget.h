@@ -12,8 +12,8 @@
 
 #pragma once
 
+#include "mailtransport_export.h"
 #include <QWidget>
-#include <mailtransport_export.h>
 
 #include <memory>
 

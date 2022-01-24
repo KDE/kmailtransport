@@ -9,7 +9,7 @@
 
 #pragma once
 
-#include <mailtransport_export.h>
+#include "mailtransport_export.h"
 
 #include <QWidget>
 

@@ -6,8 +6,8 @@
 
 #pragma once
 
-#include <mailtransport_export.h>
-#include <transporttype.h>
+#include "mailtransport_export.h"
+#include "transporttype.h"
 
 #include <QList>
 #include <QObject>

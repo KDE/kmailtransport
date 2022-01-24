@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <mailtransportakonadi_export.h>
+#include "mailtransportakonadi_export.h"
 
 #include <Akonadi/Attribute>
 #include <QSharedDataPointer>

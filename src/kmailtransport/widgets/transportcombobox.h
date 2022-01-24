@@ -6,8 +6,8 @@
 
 #pragma once
 
-#include <mailtransport_export.h>
-#include <transportbase.h>
+#include "mailtransport_export.h"
+#include "transportbase.h"
 
 #include <QComboBox>
 

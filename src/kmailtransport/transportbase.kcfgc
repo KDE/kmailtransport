@@ -5,6 +5,6 @@ Mutators=true
 ItemAccessors=true
 SetUserTexts=true
 Visibility=MAILTRANSPORT_EXPORT
-IncludeFiles=mailtransport_export.h,KLocalizedString
+IncludeFiles=\"mailtransport_export.h\",KLocalizedString
 TranslationDomain=libmailtransport5
 TranslationSystem=kde

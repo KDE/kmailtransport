@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <mailtransport_export.h>
-#include <transportbase.h>
-#include <transporttype.h>
+#include "mailtransport_export.h"
+#include "transportbase.h"
+#include "transporttype.h"
 
 #include <memory>
 

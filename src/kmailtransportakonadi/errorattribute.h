@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <mailtransportakonadi_export.h>
+#include "mailtransportakonadi_export.h"
 
 #include <QString>
 

@@ -6,9 +6,9 @@
 
 #pragma once
 
+#include "mailtransportakonadi_export.h"
 #include "transportattribute.h"
 #include <filteractionjob_p.h>
-#include <mailtransportakonadi_export.h>
 
 #include <Akonadi/ItemFetchScope>
 #include <Akonadi/Job>
