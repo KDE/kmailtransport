@@ -24,6 +24,7 @@ file(GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES *.cpp *.h *.c)
 kde_clang_format(${ALL_CLANG_FORMAT_SOURCE_FILES})
 
 include(ECMQtDeclareLoggingCategory)
+include(ECMDeprecationSettings)
 include(ECMAddQch)
 
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
@@ -68,8 +69,8 @@ set_package_properties(Qt${QT_MAJOR_VERSION}Keychain PROPERTIES
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
 
-add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050f02)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055B00)
+ecm_set_disabled_deprecation_versions(QT 5.15.2 KF 5.91.0)
+
 
 if(BUILD_TESTING)
     find_package(Qt${QT_MAJOR_VERSION}Test CONFIG REQUIRED)
