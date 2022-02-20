@@ -8,6 +8,7 @@
 #include "sentactionattribute.h"
 
 #include <QDataStream>
+#include <QIODevice>
 #include <QSharedData>
 
 using namespace Akonadi;
