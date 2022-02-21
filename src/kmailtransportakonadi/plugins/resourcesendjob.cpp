@@ -10,8 +10,8 @@
 
 #include <KMime/KMimeMessage>
 
+#include <Akonadi/AddressAttribute>
 #include <Akonadi/Collection>
-#include <Akonadi/KMime/AddressAttribute>
 
 using namespace Akonadi;
 using namespace KMime;

@@ -11,7 +11,7 @@
 #include "mailtransportakonadi_debug.h"
 
 #include <Akonadi/ItemModifyJob>
-#include <messageflags.h>
+#include <Akonadi/MessageFlags>
 
 using namespace Akonadi;
 using namespace MailTransport;

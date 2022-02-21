@@ -6,8 +6,8 @@
 
 #include "attributetest.h"
 
+#include <Akonadi/AddressAttribute>
 #include <Akonadi/AttributeFactory>
-#include <addressattribute.h>
 #include <akonadi/qtest_akonadi.h>
 
 #include <kmailtransportakonadi/dispatchmodeattribute.h>

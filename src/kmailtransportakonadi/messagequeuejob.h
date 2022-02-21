@@ -18,8 +18,8 @@
 
 #include <KCompositeJob>
 
+#include <Akonadi/AddressAttribute>
 #include <Akonadi/Collection>
-#include <Akonadi/KMime/AddressAttribute>
 
 #include <KMime/KMimeMessage>
 

@@ -10,10 +10,10 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/Control>
+#include <Akonadi/SpecialMailCollections>
+#include <Akonadi/SpecialMailCollectionsRequestJob>
 #include <filteractionjob_p.h>
 #include <kmailtransportakonadi/dispatcherinterface.h>
-#include <specialmailcollections.h>
-#include <specialmailcollectionsrequestjob.h>
 
 using namespace Akonadi;
 using namespace MailTransport;

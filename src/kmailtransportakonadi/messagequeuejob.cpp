@@ -13,12 +13,12 @@
 #include "mailtransportakonadi_debug.h"
 #include <KLocalizedString>
 
+#include <Akonadi/AddressAttribute>
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
-#include <addressattribute.h>
-#include <messageflags.h>
-#include <specialmailcollections.h>
-#include <specialmailcollectionsrequestjob.h>
+#include <Akonadi/MessageFlags>
+#include <Akonadi/SpecialMailCollections>
+#include <Akonadi/SpecialMailCollectionsRequestJob>
 
 using namespace Akonadi;
 using namespace KMime;

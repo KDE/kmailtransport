@@ -8,6 +8,7 @@
 
 #include <QStringList>
 
+#include <Akonadi/AddressAttribute>
 #include <Akonadi/AgentInstance>
 #include <Akonadi/AgentManager>
 #include <Akonadi/Collection>
@@ -17,11 +18,10 @@
 #include <Akonadi/ItemDeleteJob>
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
-#include <addressattribute.h>
+#include <Akonadi/MessageFlags>
+#include <Akonadi/SpecialMailCollections>
+#include <Akonadi/SpecialMailCollectionsRequestJob>
 #include <akonadi/qtest_akonadi.h>
-#include <messageflags.h>
-#include <specialmailcollections.h>
-#include <specialmailcollectionsrequestjob.h>
 
 #include <KMime/KMimeMessage>
 
