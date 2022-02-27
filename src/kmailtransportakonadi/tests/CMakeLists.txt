@@ -6,7 +6,7 @@ find_package(KF5TextWidgets ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(queuer_srcs queuer.cpp)
 add_executable(queuer ${queuer_srcs})
 ecm_mark_as_test(queuer)
-target_link_libraries(queuer KF5MailTransportAkonadi Qt${QT_MAJOR_VERSION}::Widgets KF5::I18n KF5::ConfigGui KF5::TextWidgets)
+target_link_libraries(queuer KF5MailTransportAkonadi KF5MailTransport Qt${QT_MAJOR_VERSION}::Widgets KF5::I18n KF5::ConfigGui KF5::TextWidgets)
 
 set( sendqueued_srcs sendqueued.cpp )
 add_executable( sendqueued ${sendqueued_srcs} )

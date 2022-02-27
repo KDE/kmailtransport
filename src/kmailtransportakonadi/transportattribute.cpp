@@ -6,8 +6,6 @@
 
 #include "transportattribute.h"
 
-#include "transportmanager.h"
-
 using namespace Akonadi;
 using namespace MailTransport;
 
@@ -49,11 +47,6 @@ void TransportAttribute::deserialize(const QByteArray &data)
 int TransportAttribute::transportId() const
 {
     return d->mId;
-}
-
-Transport *TransportAttribute::transport() const
-{
-    return TransportManager::self()->transportById(d->mId, false);
 }
 
 void TransportAttribute::setTransportId(int id)

@@ -14,7 +14,6 @@
 
 namespace MailTransport
 {
-class Transport;
 class TransportAttributePrivate;
 
 /**
@@ -51,12 +50,6 @@ public:
     */
     Q_REQUIRED_RESULT int transportId() const;
 
-    /**
-      Returns the transport object corresponding to the transport id contained
-      in this attribute.
-      @see Transport.
-    */
-    Transport *transport() const;
     /**
       Sets the transport id to use for sending this message.
     */

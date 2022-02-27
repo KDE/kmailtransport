@@ -7,8 +7,6 @@
 #include "messagequeuejob.h"
 
 #include "kmailtransportakonadi/transportattribute.h"
-#include "transport.h"
-#include "transportmanager.h"
 
 #include "mailtransportakonadi_debug.h"
 #include <KLocalizedString>
@@ -67,14 +65,6 @@ bool MessageQueueJobPrivate::validate()
     if ((addressAttribute.to().count() + addressAttribute.cc().count() + addressAttribute.bcc().count()) == 0) {
         q->setError(KJob::UserDefinedError);
         q->setErrorText(i18n("Message has no recipients."));
-        q->emitResult();
-        return false;
-    }
-
-    const int transport = transportAttribute.transportId();
-    if (TransportManager::self()->transportById(transport, false) == nullptr) {
-        q->setError(KJob::UserDefinedError);
-        q->setErrorText(i18n("Message has invalid transport."));
         q->emitResult();
         return false;
     }
