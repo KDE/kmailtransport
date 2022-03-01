@@ -86,11 +86,7 @@ target_link_libraries(KF5MailTransport
     Qt${QT_MAJOR_VERSION}::Network
     )
 
-if (QT_MAJOR_VERSION STREQUAL "6")
-    target_link_libraries(KF5MailTransport PRIVATE qt6keychain)
-else()
-    target_link_libraries(KF5MailTransport PRIVATE qt5keychain)
-endif()
+target_link_libraries(KF5MailTransport PRIVATE qt${QT_MAJOR_VERSION}keychain)
 
 
 set_target_properties(KF5MailTransport PROPERTIES
