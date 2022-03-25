@@ -20,4 +20,3 @@ public:
     Q_REQUIRED_RESULT bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;
     Q_REQUIRED_RESULT MailTransport::TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) override;
 };
-

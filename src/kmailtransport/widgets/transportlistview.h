@@ -31,4 +31,3 @@ private Q_SLOTS:
     void fillTransportList();
 };
 } // namespace MailTransport
-

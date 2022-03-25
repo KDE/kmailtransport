@@ -62,4 +62,3 @@ private:
     std::unique_ptr<PreCommandJobPrivate> const d;
 };
 } // namespace MailTransport
-

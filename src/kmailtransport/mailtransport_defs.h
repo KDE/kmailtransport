@@ -46,4 +46,3 @@
 
 #define NNTP_PORT 119
 #define NNTPS_PORT 563
-

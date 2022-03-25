@@ -62,4 +62,3 @@ public:
     void dispatchManualTransport(int transportId);
 };
 } // namespace MailTransport
-

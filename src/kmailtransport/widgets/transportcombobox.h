@@ -66,4 +66,3 @@ private:
     std::unique_ptr<TransportComboBoxPrivate> const d;
 };
 } // namespace MailTransport
-

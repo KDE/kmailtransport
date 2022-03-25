@@ -14,4 +14,3 @@ class AddTransportDialogNG_gui : public QWidget
 public:
     explicit AddTransportDialogNG_gui(QWidget *parent = nullptr);
 };
-

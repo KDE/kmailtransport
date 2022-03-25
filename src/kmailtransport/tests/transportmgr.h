@@ -40,4 +40,3 @@ private:
     KTextEdit *mMailEdit = nullptr;
     KJob *mCurrentJob = nullptr;
 };
-

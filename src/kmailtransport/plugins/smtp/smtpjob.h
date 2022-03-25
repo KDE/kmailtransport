@@ -75,4 +75,3 @@ private:
     std::unique_ptr<SmtpJobPrivate> const d;
 };
 } // namespace MailTransport
-

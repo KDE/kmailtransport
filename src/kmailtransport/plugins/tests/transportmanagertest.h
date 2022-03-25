@@ -14,4 +14,3 @@ class TransportManagerTest : public QObject
 public:
     explicit TransportManagerTest(QObject *parent = nullptr);
 };
-

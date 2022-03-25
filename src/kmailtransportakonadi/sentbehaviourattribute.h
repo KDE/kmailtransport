@@ -101,4 +101,3 @@ private:
     std::unique_ptr<SentBehaviourAttributePrivate> const d;
 };
 } // namespace MailTransport
-

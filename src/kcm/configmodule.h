@@ -20,4 +20,3 @@ public:
     explicit ConfigModule(QWidget *parent = nullptr, const QVariantList &args = QVariantList());
 };
 } // namespace MailTransport
-

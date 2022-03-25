@@ -138,4 +138,3 @@ private:
 };
 }
 Q_DECLARE_TYPEINFO(MailTransport::SentActionAttribute::Action, Q_MOVABLE_TYPE);
-

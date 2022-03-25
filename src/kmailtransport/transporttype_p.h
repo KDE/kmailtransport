@@ -34,4 +34,3 @@ public:
     bool mIsAkonadiResource = false;
 };
 } // namespace MailTransport
-

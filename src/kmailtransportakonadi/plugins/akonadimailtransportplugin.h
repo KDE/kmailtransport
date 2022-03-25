@@ -30,4 +30,3 @@ public:
 private:
     void slotUpdatePluginList(const Akonadi::AgentType &type);
 };
-

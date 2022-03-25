@@ -24,4 +24,3 @@ public:
     virtual ~TransportConfigWidgetPrivate() = default;
 };
 } // namespace MailTransport
-

@@ -209,4 +209,3 @@ private:
     Q_PRIVATE_SLOT(d, void slotUpdateProgress())
 };
 } // namespace MailTransport
-

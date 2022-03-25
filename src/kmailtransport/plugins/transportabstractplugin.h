@@ -46,4 +46,3 @@ Q_SIGNALS:
 };
 }
 Q_DECLARE_TYPEINFO(MailTransport::TransportAbstractPluginInfo, Q_MOVABLE_TYPE);
-

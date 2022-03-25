@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define KMAILTRANSPORT_TESTS_EXPORT
 #endif
-

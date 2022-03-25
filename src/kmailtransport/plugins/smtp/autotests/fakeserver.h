@@ -49,4 +49,3 @@ private:
     mutable QMutex m_mutex;
     QList<QTcpSocket *> m_clientSockets;
 };
-

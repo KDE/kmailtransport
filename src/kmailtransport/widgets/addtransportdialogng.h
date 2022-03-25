@@ -49,4 +49,3 @@ private:
     std::unique_ptr<AddTransportDialogNGPrivate> const d;
 };
 } // namespace MailTransport
-

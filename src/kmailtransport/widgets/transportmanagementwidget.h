@@ -42,4 +42,3 @@ private:
     std::unique_ptr<TransportManagementWidgetPrivate> const d;
 };
 } // namespace MailTransport
-

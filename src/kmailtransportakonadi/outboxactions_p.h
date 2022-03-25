@@ -97,4 +97,3 @@ private:
     int mTransportId;
 };
 } // namespace MailTransport
-

@@ -23,4 +23,3 @@ public:
     bool storePasswordInFile;
     bool needsWalletMigration;
 };
-

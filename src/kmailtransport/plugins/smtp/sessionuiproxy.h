@@ -17,4 +17,3 @@ public:
         return KIO::SslUi::askIgnoreSslErrors(errorData, KIO::SslUi::RecallAndStoreRules);
     }
 };
-

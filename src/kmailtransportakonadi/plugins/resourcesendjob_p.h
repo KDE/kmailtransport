@@ -46,4 +46,3 @@ private:
     void slotEmitResult();
 };
 } // namespace MailTransport
-

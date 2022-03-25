@@ -28,4 +28,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 } // namespace MailTransport
-

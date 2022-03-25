@@ -150,4 +150,3 @@ private:
     std::unique_ptr<MessageQueueJobPrivate> const d;
 };
 } // namespace MailTransport
-

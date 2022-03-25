@@ -54,4 +54,3 @@ private:
     void enablePasswordLine();
 };
 } // namespace MailTransport
-

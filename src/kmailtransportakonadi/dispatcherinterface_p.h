@@ -23,4 +23,3 @@ public Q_SLOTS:
     void massModifyResult(KJob *job);
 };
 }
-

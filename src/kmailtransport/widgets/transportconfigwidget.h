@@ -87,4 +87,3 @@ private:
     void init(Transport *transport);
 };
 } // namespace MailTransport
-

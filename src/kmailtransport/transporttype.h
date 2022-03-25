@@ -96,4 +96,3 @@ private:
 
 Q_DECLARE_METATYPE(MailTransport::TransportType)
 Q_DECLARE_TYPEINFO(MailTransport::TransportType, Q_MOVABLE_TYPE);
-

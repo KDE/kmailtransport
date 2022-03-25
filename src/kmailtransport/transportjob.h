@@ -142,4 +142,3 @@ private:
     //@endcond
 };
 } // namespace MailTransport
-

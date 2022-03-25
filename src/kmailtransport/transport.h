@@ -149,4 +149,3 @@ private:
     std::unique_ptr<TransportPrivate> const d;
 };
 } // namespace MailTransport
-
