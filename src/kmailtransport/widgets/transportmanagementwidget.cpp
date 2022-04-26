@@ -48,9 +48,6 @@ TransportManagementWidget::TransportManagementWidget(QWidget *parent)
     d->updateButtonState();
 
     d->ui.transportList->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(d->ui.transportList, &QTreeWidget::currentItemChanged, this, [this]() {
-        d->updateButtonState();
-    });
     connect(d->ui.transportList, &QTreeWidget::itemDoubleClicked, this, [this]() {
         d->editClicked();
     });
@@ -72,26 +69,33 @@ TransportManagementWidget::TransportManagementWidget(QWidget *parent)
     connect(d->ui.transportList, &QTreeWidget::customContextMenuRequested, this, [this](QPoint p) {
         d->slotCustomContextMenuRequested(p);
     });
+    connect(d->ui.transportList, &QTreeWidget::itemSelectionChanged, this, [this]() {
+        d->updateButtonState();
+    });
 }
 
 TransportManagementWidget::~TransportManagementWidget() = default;
 
 void TransportManagementWidgetPrivate::updateButtonState()
 {
-    // TODO figure out current item vs. selected item (in almost every function)
-    if (!ui.transportList->currentItem()) {
+    const int nbItems{ui.transportList->selectedItems().count()};
+    if (nbItems == 0) {
         ui.editButton->setEnabled(false);
         ui.renameButton->setEnabled(false);
         ui.removeButton->setEnabled(false);
         ui.defaultButton->setEnabled(false);
     } else {
-        ui.editButton->setEnabled(true);
-        ui.renameButton->setEnabled(true);
-        ui.removeButton->setEnabled(true);
-        if (ui.transportList->currentItem()->data(0, Qt::UserRole) == TransportManager::self()->defaultTransportId()) {
-            ui.defaultButton->setEnabled(false);
+        ui.editButton->setEnabled(nbItems == 1);
+        ui.renameButton->setEnabled(nbItems == 1);
+        ui.removeButton->setEnabled(nbItems >= 1);
+        if (nbItems == 1) {
+            if (ui.transportList->currentItem()->data(0, Qt::UserRole) == TransportManager::self()->defaultTransportId()) {
+                ui.defaultButton->setEnabled(false);
+            } else {
+                ui.defaultButton->setEnabled(true);
+            }
         } else {
-            ui.defaultButton->setEnabled(true);
+            ui.defaultButton->setEnabled(false);
         }
     }
 }
@@ -103,48 +107,51 @@ void TransportManagementWidgetPrivate::addClicked()
 
 void TransportManagementWidgetPrivate::editClicked()
 {
-    if (!ui.transportList->currentItem()) {
+    if (ui.transportList->selectedItems().isEmpty()) {
         return;
     }
 
-    const int currentId = ui.transportList->currentItem()->data(0, Qt::UserRole).toInt();
+    const int currentId = ui.transportList->selectedItems().at(0)->data(0, Qt::UserRole).toInt();
     Transport *transport = TransportManager::self()->transportById(currentId);
     TransportManager::self()->configureTransport(transport->identifier(), transport, q);
 }
 
 void TransportManagementWidgetPrivate::renameClicked()
 {
-    if (!ui.transportList->currentItem()) {
+    if (ui.transportList->selectedItems().isEmpty()) {
         return;
     }
 
-    ui.transportList->editItem(ui.transportList->currentItem(), 0);
+    ui.transportList->editItem(ui.transportList->selectedItems().at(0), 0);
 }
 
 void TransportManagementWidgetPrivate::removeClicked()
 {
-    if (!ui.transportList->currentItem()) {
+    const auto selectedItems{ui.transportList->selectedItems()};
+    if (selectedItems.isEmpty()) {
         return;
     }
-    const int rc = KMessageBox::questionYesNo(q,
-                                              i18n("Do you want to remove outgoing account '%1'?", ui.transportList->currentItem()->text(0)),
-                                              i18n("Remove outgoing account?"),
-                                              KStandardGuiItem::remove(),
-                                              KStandardGuiItem::cancel());
+    const int nbAccount{selectedItems.count()};
+    const QString msg = (selectedItems.count() == 1)
+        ? i18n("Do you want to remove outgoing account '%1'?", ui.transportList->selectedItems().at(0)->text(0))
+        : i18np("Do you really want to remove this %1 outgoing account?", "Do you really want to remove these %1 outgoing accounts?", nbAccount);
+
+    const int rc = KMessageBox::questionYesNo(q, msg, i18n("Remove outgoing account?"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
     if (rc == KMessageBox::No) {
         return;
     }
-
-    TransportManager::self()->removeTransport(ui.transportList->currentItem()->data(0, Qt::UserRole).toInt());
+    for (QTreeWidgetItem *selecteditem : selectedItems) {
+        TransportManager::self()->removeTransport(selecteditem->data(0, Qt::UserRole).toInt());
+    }
 }
 
 void TransportManagementWidgetPrivate::defaultClicked()
 {
-    if (!ui.transportList->currentItem()) {
+    if (ui.transportList->selectedItems().isEmpty()) {
         return;
     }
 
-    TransportManager::self()->setDefaultTransport(ui.transportList->currentItem()->data(0, Qt::UserRole).toInt());
+    TransportManager::self()->setDefaultTransport(ui.transportList->selectedItems().at(0)->data(0, Qt::UserRole).toInt());
 }
 
 void TransportManagementWidgetPrivate::slotCustomContextMenuRequested(const QPoint &pos)
