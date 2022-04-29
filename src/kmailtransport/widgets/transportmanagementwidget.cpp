@@ -168,6 +168,7 @@ void TransportManagementWidgetPrivate::slotCustomContextMenuRequested(const QPoi
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18n("Rename"), q, [this]() {
             renameClicked();
         });
+        menu.addSeparator();
         menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Remove"), q, [this]() {
             removeClicked();
         });
