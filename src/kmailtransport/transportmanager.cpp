@@ -11,7 +11,6 @@
 #include "transport.h"
 #include "transport_p.h"
 #include "transportjob.h"
-#include "transporttype.h"
 #include "transporttype_p.h"
 #include "widgets/addtransportdialogng.h"
 #include <MailTransport/TransportAbstractPlugin>

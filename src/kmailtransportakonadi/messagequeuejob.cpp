@@ -11,7 +11,6 @@
 #include "mailtransportakonadi_debug.h"
 #include <KLocalizedString>
 
-#include <Akonadi/AddressAttribute>
 #include <Akonadi/Item>
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/MessageFlags>
