@@ -78,7 +78,7 @@ TransportManagementWidget::~TransportManagementWidget() = default;
 
 void TransportManagementWidgetPrivate::updateButtonState()
 {
-    const int nbItems{ui.transportList->selectedItems().count()};
+    const auto nbItems{ui.transportList->selectedItems().count()};
     if (nbItems == 0) {
         ui.editButton->setEnabled(false);
         ui.renameButton->setEnabled(false);
@@ -131,7 +131,7 @@ void TransportManagementWidgetPrivate::removeClicked()
     if (selectedItems.isEmpty()) {
         return;
     }
-    const int nbAccount{selectedItems.count()};
+    const auto nbAccount{selectedItems.count()};
     const QString msg = (selectedItems.count() == 1)
         ? i18n("Do you want to remove outgoing account '%1'?", ui.transportList->selectedItems().at(0)->text(0))
         : i18np("Do you really want to remove this %1 outgoing account?", "Do you really want to remove these %1 outgoing accounts?", nbAccount);
