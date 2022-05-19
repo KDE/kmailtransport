@@ -17,7 +17,7 @@ using namespace Akonadi;
 class Akonadi::FilterActionJobPrivate
 {
 public:
-    FilterActionJobPrivate(FilterActionJob *qq)
+    explicit FilterActionJobPrivate(FilterActionJob *qq)
         : q(qq)
     {
     }

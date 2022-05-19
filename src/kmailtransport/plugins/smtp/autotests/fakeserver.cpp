@@ -15,7 +15,6 @@
 
 FakeServer::FakeServer(QObject *parent)
     : QThread(parent)
-    , m_tcpServer(nullptr)
 {
     moveToThread(this);
 }
