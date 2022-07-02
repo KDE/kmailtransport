@@ -3,6 +3,7 @@
         "Id": "smtpmailtransport",
         "Name": "SMTP Mail Transport",
         "Name[ar]": "نقولات بريد SMTP",
+        "Name[bg]": "Пощенски транспорт SMTP",
         "Name[ca@valencia]": "Transport de correu SMTP",
         "Name[ca]": "Transport de correu SMTP",
         "Name[cs]": "Přenos pošty SMTP",
