@@ -3,7 +3,7 @@ include(ECMMarkAsTest)
 
 find_package(KF5TextWidgets ${KF5_MIN_VERSION} CONFIG REQUIRED)
 
-add_executable(transportmgr transportmgr.cpp)
+add_executable(transportmgr transportmgr.cpp transportmgr.h)
 ecm_mark_as_test(transportmgr)
 target_link_libraries(transportmgr KF5MailTransport Qt${QT_MAJOR_VERSION}::Widgets KF5::I18n KF5::ConfigGui KF5::TextWidgets KF5::CoreAddons)
 
