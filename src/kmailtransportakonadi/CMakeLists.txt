@@ -67,7 +67,7 @@ set_target_properties(KF5MailTransportAkonadi PROPERTIES
     )
 
 
-install(TARGETS KF5MailTransportAkonadi EXPORT KF5MailTransportAkonadiTargets ${KF5_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KF5MailTransportAkonadi EXPORT KF5MailTransportAkonadiTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(MailTransport_kmailtransportakonadi_CamelCase_HEADERS
     HEADER_NAMES
