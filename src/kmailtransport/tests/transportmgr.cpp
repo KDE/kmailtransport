@@ -95,7 +95,7 @@ void TransportMgr::sendBtnClicked()
     job->setBcc(mBccEdit->text().isEmpty() ? QStringList() : mBccEdit->text().split(QLatin1Char(',')));
     job->setData(mMailEdit->document()->toPlainText().toLatin1());
     connect(job, &KJob::result, this, &TransportMgr::jobResult);
-    connect(job, SIGNAL(percent(KJob *, ulong)), SLOT(jobPercent(KJob *, ulong)));
+    connect(job, &TransportJob::percentChanged, this, &TransportMgr::jobPercent);
     connect(job, &KJob::infoMessage, this, &TransportMgr::jobInfoMessage);
     mCurrentJob = job;
     TransportManager::self()->schedule(job);
