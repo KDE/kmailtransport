@@ -14,7 +14,6 @@
 #include "transportconfigwidget.h"
 #include "transport.h"
 #include "transportconfigwidget_p.h"
-#include "transportmanager.h"
 
 #include "mailtransport_debug.h"
 #include <KConfigDialogManager>

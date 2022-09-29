@@ -6,12 +6,10 @@
 
 #include "addtransportdialogng.h"
 #include "transport.h"
-#include "transportconfigwidget.h"
 #include "transportmanager.h"
 #include "transporttype.h"
 #include "ui_addtransportdialog.h"
 
-#include "mailtransport_debug.h"
 #include <QDialogButtonBox>
 
 #include <QPushButton>

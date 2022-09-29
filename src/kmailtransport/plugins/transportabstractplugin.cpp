@@ -5,7 +5,6 @@
 */
 
 #include "transportabstractplugin.h"
-#include "mailtransport_debug.h"
 using namespace MailTransport;
 
 TransportAbstractPlugin::TransportAbstractPlugin(QObject *parent)
