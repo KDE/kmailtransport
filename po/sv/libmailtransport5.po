@@ -1,0 +1,836 @@
+# translation of libmailtransport.po to Swedish
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2007, 2008, 2009, 2010, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2022.
+msgid ""
+msgstr ""
+"Project-Id-Version: libmailtransport\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-30 00:46+0000\n"
+"PO-Revision-Date: 2022-04-27 20:14+0200\n"
+"Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
+"Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.08.1\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (id), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:12
+#, kde-format
+msgid "Unique identifier"
+msgstr "Unik identifierare"
+
+#. i18n: ectx: label, entry (name), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:16
+#, kde-format
+msgid "User-visible transport name"
+msgstr "Överföringsnamn synligt för användare"
+
+#. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:17
+#, kde-format
+msgid "The name that will be used when referring to this server."
+msgstr "Namnet som kommer att användas för att referera till servern."
+
+#: kmailtransport/mailtransport.kcfg:18
+#, kde-format
+msgid "Unnamed"
+msgstr "Namnlös"
+
+#. i18n: ectx: label, entry (host), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:24
+#, kde-format
+msgid "Host name of the server"
+msgstr "Serverns värddatornamn"
+
+#. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:25
+#, kde-format
+msgid "The domain name or numerical address of the SMTP server."
+msgstr "Domännamnet eller den numeriska adressen för SMTP-servern."
+
+#. i18n: ectx: label, entry (port), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:28
+#, kde-format
+msgid "Port number of the server"
+msgstr "Serverns portnummer"
+
+#. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:29
+#, kde-format
+msgid ""
+"The port number that the SMTP server is listening on. The default port is 25."
+msgstr "Portnumret som SMTP-servern lyssnar på. Standardporten är 25."
+
+#. i18n: ectx: label, entry (userName), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:33
+#, kde-format
+msgid "User name needed for login"
+msgstr "Användarnamn som behövs för inloggning"
+
+#. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:34
+#, kde-format
+msgid "The user name to send to the server for authorization."
+msgstr "Användarnamn att skicka till servern för behörighetskontroll."
+
+#. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:37
+#, kde-format
+msgid "Command to execute before sending a mail"
+msgstr "Kommando att köra innan ett brev skickas"
+
+#. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:38
+#, kde-format
+msgid ""
+"A command to run locally, prior to sending email. This can be used to set up "
+"SSH tunnels, for example. Leave it empty if no command should be run."
+msgstr ""
+"Ett kommado att köra lokalt innan brev skickas. Det kan till exempel "
+"användas för att ställa in en SSH-tunnel. Lämna det tomt om inget kommando "
+"ska köras.      "
+
+#. i18n: ectx: label, entry (options), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:41
+#, kde-format
+msgid "Options added to mailtransport method"
+msgstr "Alternativ tillagda i brevöverföringsmetod"
+
+#. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:44
+#, kde-format
+msgid "Server requires authentication"
+msgstr "Servern kräver identifiering"
+
+#. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:45
+#, kde-format
+msgid ""
+"Check this option if your SMTP server requires authentication before "
+"accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
+msgstr ""
+"Markera alternativet om SMTP-servern kräver behörighetskontroll innan brev "
+"accepteras. Detta är känt som 'Behörighetskontrollerad SMTP' eller "
+"ASMTP.      "
+
+#. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:49
+#, kde-format
+msgid "Store password"
+msgstr "Lagra lösenord"
+
+#. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:52
+#, kde-format
+msgid ""
+"Check this option to have your password stored.\n"
+"If KWallet is available the password will be stored there, which is "
+"considered safe.\n"
+"However, if KWallet is not available, the password will be stored in the "
+"configuration file. The password is stored in an obfuscated format, but "
+"should not be considered secure from decryption efforts if access to the "
+"configuration file is obtained."
+msgstr ""
+"Markera alternativet för att lagra ditt lösenord.\n"
+"Om plånboken är tillgänglig lagras lösenorden där, vilket anses vara "
+"säkert.\n"
+"Dock lagras lösenorden i inställningsfilen om plånboken inte är tillgänglig. "
+"Lösenordet lagras med ett fördunklat format, men kan inte anses säkert för "
+"dekrypteringsförsök om åtkomst till konfigurationsfilen erhålls."
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:56
+#, kde-format
+msgid "Encryption method used for communication"
+msgstr "Krypteringsmetod använd för kommunikation"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:59
+#, kde-format
+msgid "No encryption"
+msgstr "Ingen kryptering"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:62
+#, kde-format
+msgid "SSL encryption"
+msgstr "SSL-kryptering"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:65
+#, kde-format
+msgid "TLS encryption"
+msgstr "TLS-kryptering"
+
+#. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:70
+#, kde-format
+msgid "Authentication method"
+msgstr "Behörighetskontrollmetod"
+
+#. i18n: ectx: label, entry (specifyHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:87 kmailtransport/mailtransport.kcfg:92
+#: kmailtransport/mailtransport.kcfg:96 kmailtransport/mailtransport.kcfg:101
+#, kde-format
+msgid "<!-- TODO -->"
+msgstr "<!-- ATT GÖRA -->"
+
+#. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:88
+#, kde-format
+msgid ""
+"Check this option to use a custom hostname when identifying to the mail "
+"server. This is useful when your system's hostname may not be set correctly "
+"or to mask your system's true hostname."
+msgstr ""
+"Markera alternativet för att använda ett eget värddatornamn vid "
+"identifiering på e-postservern. Det är användbart när systemets "
+"värddatornamn kanske inte är riktigt inställt, eller för att maskera "
+"systemets verkliga värddatornamn."
+
+#. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:93
+#, kde-format
+msgid "Enter the hostname that should be used when identifying to the server."
+msgstr "Ange värddatornamn som ska användas vid identifikation på servern."
+
+#. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:97
+#, kde-format
+msgid ""
+"Check this option to use a custom sender address when identifying to the "
+"mail server. If not checked, the address from the identity is used."
+msgstr ""
+"Markera alternativet för att använda en egen avsändaradress vid "
+"identifiering på e-postservern. Om det inte är markerat, används adressen "
+"från identiteten."
+
+#. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:102
+#, kde-format
+msgid ""
+"Enter the address that should be used to overwrite the default sender "
+"address."
+msgstr ""
+"Ange adressen som ska användas för att skriva över standardavsändaradressen."
+
+#. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
+#: kmailtransport/mailtransport.kcfg:105
+#: kmailtransport/plugins/smtp/smtpsettings.ui:284
+#, kde-format
+msgid "Connect using the system proxy settings"
+msgstr "Anslut med användning av systemets proxyinställningar"
+
+#. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:106
+#, kde-format
+msgid ""
+"If checked, the system proxy settings will be used to connect to the mail "
+"server."
+msgstr ""
+"Om markerad, används systemets proxyinställningar för att ansluta till e-"
+"postservern."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:144
+#, kde-format
+msgid "The password to send to the server for authorization."
+msgstr "Lösenord att skicka till servern för behörighetskontroll."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
+#, kde-format
+msgid ""
+"Failed to check capabilities. Please verify port and authentication mode."
+msgstr ""
+"Misslyckades kontrollera funktionalitet. Verifiera port och inställningen av "
+"behörighetskontroll."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
+#, kde-format
+msgid "Check Capabilities Failed"
+msgstr "Misslyckades kontrollera funktionalitet"
+
+#: kmailtransport/plugins/smtp/smtpjob.cpp:242
+#, kde-format
+msgid "You need to supply a username and a password to use this SMTP server."
+msgstr ""
+"Du måste ange ett användarnamn och ett lösenord för att använda den här SMTP-"
+"servern."
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:26
+#, kde-format
+msgctxt "@option SMTP transport"
+msgid "SMTP"
+msgstr "SMTP"
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
+#, kde-format
+msgid "An SMTP server on the Internet"
+msgstr "En SMTP-server på Internet"
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure account"
+msgstr "Anpassa konto"
+
+#. i18n: ectx: attribute (title), widget (QWidget, smptTab)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:34
+#, kde-format
+msgctxt "general smtp settings"
+msgid "General"
+msgstr "Allmänt"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:40
+#, kde-format
+msgid "Account Information"
+msgstr "Kontoinformation"
+
+#. i18n: ectx: property (text), widget (QLabel, hostLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:47
+#, kde-format
+msgid "Outgoing &mail server:"
+msgstr "Server för utgående &brev:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:67
+#, kde-format
+msgid "Server &requires authentication"
+msgstr "Servern k&räver behörighetskontroll"
+
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:77
+#, kde-format
+msgid "&Login:"
+msgstr "Användarna&mn:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:103
+#, kde-format
+msgid "P&assword:"
+msgstr "&Lösenord:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:126
+#, kde-format
+msgid "&Store SMTP password"
+msgstr "&Lagra SMTP-lösenord"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:147
+#, kde-format
+msgctxt "advanced smtp settings"
+msgid "Advanced"
+msgstr "Avancerat"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:153
+#, kde-format
+msgid "Connection Settings"
+msgstr "Anslutningsinställningar"
+
+#. i18n: ectx: property (text), widget (QLabel, noAuthPossible)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:172
+#, kde-format
+msgid "This server does not support authentication"
+msgstr "Servern stöder inte behörighetskontroll"
+
+#. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:189
+#, kde-format
+msgid "Auto Detect"
+msgstr "Detektera automatiskt"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:216
+#, kde-format
+msgid "Encryption:"
+msgstr "Kryptering:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:225
+#, kde-format
+msgid "&None"
+msgstr "I&ngen"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:232
+#, kde-format
+msgid "&SSL/TLS"
+msgstr "&SSL/TLS"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:239
+#, kde-format
+msgid "START&TLS"
+msgstr "START&TLS"
+
+#. i18n: ectx: property (text), widget (QLabel, portLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Port:"
+
+#. i18n: ectx: property (text), widget (QLabel, authLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:274
+#, kde-format
+msgid "Authentication:"
+msgstr "Behörighetskontroll:"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:293
+#, kde-format
+msgid "SMTP Settings"
+msgstr "SMTP-inställningar"
+
+#. i18n: ectx: property (text), widget (QLabel, hostnameLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:303
+#, kde-format
+msgid "Hostna&me:"
+msgstr "Värddatorna&mn:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:329
+#, kde-format
+msgid "Sender Address:"
+msgstr "Avsändaradress:"
+
+#. i18n: ectx: property (text), widget (QLabel, precommandLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:346
+#, kde-format
+msgid "Precommand:"
+msgstr "Förkommando:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:376
+#, kde-format
+msgid "Sen&d custom hostname to server"
+msgstr "Skicka eget värd&datornamn till servern"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:383
+#, kde-format
+msgid "Use custom sender address"
+msgstr "Använ egen avsändaradress"
+
+#: kmailtransport/precommandjob.cpp:68
+#, kde-format
+msgid "Executing precommand"
+msgstr "Kör förkommando"
+
+#: kmailtransport/precommandjob.cpp:68
+#, kde-format
+msgid "Executing precommand '%1'."
+msgstr "Kör förkommando '%1'."
+
+#: kmailtransport/precommandjob.cpp:75
+#, kde-format
+msgid "Unable to start precommand '%1'."
+msgstr "Kunde inte starta förkommandot \"%1\"."
+
+#: kmailtransport/precommandjob.cpp:77
+#, kde-format
+msgid "Error while executing precommand '%1'."
+msgstr "Fel vid körning av förkommandot '%1'."
+
+#: kmailtransport/precommandjob.cpp:93
+#, kde-format
+msgid "The precommand crashed."
+msgstr "Förkommandot kraschade."
+
+#: kmailtransport/precommandjob.cpp:96
+#, kde-format
+msgid "The precommand exited with code %1."
+msgstr "Förkommandot avslutades med koden %1."
+
+#: kmailtransport/transport.cpp:85
+#, kde-format
+msgctxt ""
+"%1: name; %2: number appended to it to make it unique among a list of names"
+msgid "%1 #%2"
+msgstr "%1 - %2"
+
+#: kmailtransport/transport.cpp:134
+#, kde-format
+msgctxt "Authentication method"
+msgid "Clear text"
+msgstr "Klartext"
+
+#: kmailtransport/transport.cpp:138
+#, kde-format
+msgctxt "Authentication method"
+msgid "Anonymous"
+msgstr "Anonym"
+
+#: kmailtransport/transport.cpp:169
+#, kde-format
+msgctxt "An unknown transport type"
+msgid "Unknown"
+msgstr "Okänd"
+
+#: kmailtransport/transport.cpp:207
+#, kde-format
+msgid ""
+"KWallet is not available. It is strongly recommended to use KWallet for "
+"managing your passwords.\n"
+"However, the password can be stored in the configuration file instead. The "
+"password is stored in an obfuscated format, but should not be considered "
+"secure from decryption efforts if access to the configuration file is "
+"obtained.\n"
+"Do you want to store the password for server '%1' in the configuration file?"
+msgstr ""
+"Plånboken är inte tillgänglig. Du rekommenderas starkt att använda plånboken "
+"för att hantera lösenord.\n"
+"Dock kan lösenorden istället lagras i inställningsfilen. Lösenordet lagras "
+"med ett fördunklat format, men kan inte anses säkert för dekrypteringsförsök "
+"om åtkomst till konfigurationsfilen erhålls.\n"
+"Vill du lagra lösenordet till servern '%1' i inställningsfilen?"
+
+#: kmailtransport/transport.cpp:216
+#, kde-format
+msgid "KWallet Not Available"
+msgstr "Kwallet inte tillgänglig"
+
+#: kmailtransport/transport.cpp:217
+#, kde-format
+msgid "Store Password"
+msgstr "Lagra lösenord"
+
+#: kmailtransport/transport.cpp:218
+#, kde-format
+msgid "Do Not Store Password"
+msgstr "Lagra inte lösenord"
+
+#: kmailtransport/transportjob.cpp:122
+#, kde-format
+msgid "The outgoing account \"%1\" is not correctly configured."
+msgstr "Utgående kontot \"%1\" är inte riktigt inställt."
+
+#: kmailtransport/transportmanager.cpp:232
+#, kde-format
+msgid "Default Transport"
+msgstr "Förvald överföring"
+
+#: kmailtransport/transportmanager.cpp:251
+#, kde-format
+msgid "You must create an outgoing account before sending."
+msgstr "Du måste skapa ett utgående konto innan du skickar någonting."
+
+#: kmailtransport/transportmanager.cpp:252
+#, kde-format
+msgid "Create Account Now?"
+msgstr "Skapa konto nu?"
+
+#: kmailtransport/transportmanager.cpp:253
+#, kde-format
+msgid "Create Account Now"
+msgstr "Skapa konto nu"
+
+#: kmailtransport/transportmanager.cpp:688
+#, kde-format
+msgid ""
+"The following mail transports store their passwords in an unencrypted "
+"configuration file.\n"
+"For security reasons, please consider migrating these passwords to KWallet, "
+"the KDE Wallet management tool,\n"
+"which stores sensitive data for you in a strongly encrypted file.\n"
+"Do you want to migrate your passwords to KWallet?"
+msgstr ""
+"Följande brevöverföringar lagrar sina lösenord i en okrypterad "
+"inställningsfil.\n"
+"Av säkerhetsskäl rekommenderas att använda flytta dessa lösenord till "
+"plånboken, KDE:s hanteringsverktyg för att lagra lösenord, Kwallet,\n"
+"som lagrar känslig data åt dig i en säkert krypterad fil.\n"
+"Vill du flytta lösenorden till plånboken?"
+
+#: kmailtransport/transportmanager.cpp:695
+#, kde-format
+msgid "Question"
+msgstr "Fråga"
+
+#: kmailtransport/transportmanager.cpp:696
+#, kde-format
+msgid "Migrate"
+msgstr "Flytta"
+
+#: kmailtransport/transportmanager.cpp:697
+#, kde-format
+msgid "Keep"
+msgstr "Behåll"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
+#: kmailtransport/ui/addtransportdialog.ui:20
+#, kde-format
+msgid "Step One: Select Transport Type"
+msgstr "Steg ett: Välj överföringstyp"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kmailtransport/ui/addtransportdialog.ui:38
+#, kde-format
+msgctxt "The name of a mail transport"
+msgid "Name:"
+msgstr "Namn:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDefault)
+#: kmailtransport/ui/addtransportdialog.ui:48
+#, kde-format
+msgid "Make this the default outgoing account"
+msgstr "Gör det här till utgående standardkonto."
+
+#. i18n: ectx: property (text), widget (QLabel, descLabel)
+#: kmailtransport/ui/addtransportdialog.ui:61
+#, kde-format
+msgid "Select an account type from the list below:"
+msgstr "Välj en kontotyp i listan nedan."
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: kmailtransport/ui/addtransportdialog.ui:81
+#, kde-format
+msgid "Type"
+msgstr "Typ"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: kmailtransport/ui/addtransportdialog.ui:86
+#, kde-format
+msgid "Description"
+msgstr "Beskrivning"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:17
+#, kde-format
+msgid "Remo&ve"
+msgstr "Ta &bort"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:24
+#, kde-format
+msgid "&Set as Default"
+msgstr "Använd som &standardvärde"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:54
+#, kde-format
+msgid "A&dd..."
+msgstr "&Lägg till..."
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:61
+#, kde-format
+msgid "&Rename"
+msgstr "&Byt namn"
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:68
+#, kde-format
+msgid "&Modify..."
+msgstr "&Ändra..."
+
+#: kmailtransport/widgets/addtransportdialogng.cpp:92
+#, kde-format
+msgctxt "@title:window"
+msgid "Create Outgoing Account"
+msgstr "Skapa utgående konto"
+
+#: kmailtransport/widgets/addtransportdialogng.cpp:95
+#, kde-format
+msgctxt "create and configure a mail transport"
+msgid "Create and Configure"
+msgstr "Skapa och anpassa"
+
+#: kmailtransport/widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Namn"
+
+#: kmailtransport/widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Typ"
+
+#: kmailtransport/widgets/transportlistview.cpp:99
+#, kde-format
+msgctxt "@label the default mail transport"
+msgid " (Default)"
+msgstr " (Förval)"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:136
+#, kde-format
+msgid "Do you want to remove outgoing account '%1'?"
+msgstr "Vill du ta bort utgående kontot '%1'?"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:137
+#, kde-format
+msgid "Do you really want to remove this %1 outgoing account?"
+msgid_plural "Do you really want to remove these %1 outgoing accounts?"
+msgstr[0] "Vill du verkligen ta bort %1 utgående konto?"
+msgstr[1] "Vill du verkligen ta bort de %1 utgående kontona?"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#, kde-format
+msgid "Remove outgoing account?"
+msgstr "Ta bort utgående konto?"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:160
+#, kde-format
+msgid "Add..."
+msgstr "Lägg till..."
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:165
+#, kde-format
+msgid "Modify..."
+msgstr "Ändra..."
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:168
+#, kde-format
+msgid "Rename"
+msgstr "Byt namn"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:172
+#, kde-format
+msgid "Remove"
+msgstr "Ta bort"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:177
+#, kde-format
+msgid "Set as Default"
+msgstr "Använd som standardvärde"
+
+#: kmailtransportakonadi/messagequeuejob.cpp:59
+#, kde-format
+msgid "Empty message."
+msgstr "Tomt brev."
+
+#: kmailtransportakonadi/messagequeuejob.cpp:66
+#, kde-format
+msgid "Message has no recipients."
+msgstr "Brevet har inga mottagare."
+
+#: kmailtransportakonadi/messagequeuejob.cpp:73
+#, kde-format
+msgid "Message has invalid sent-mail folder."
+msgstr "Brevet har ogiltig korg för skickade brev."
+
+#~ msgid "Message has invalid transport."
+#~ msgstr "Brevet har ogiltig överföring."
+
+#~ msgid "Change the visibility of the password"
+#~ msgstr "Ändra lösenordets synlighet"
+
+#~ msgid "Unable to create SMTP job."
+#~ msgstr "Kunde inte skapa SMTP-jobb."
+
+#~ msgid "SMTP Server"
+#~ msgstr "SMTP-server"
+
+#~ msgid "Akonadi Resource"
+#~ msgstr "Akonadi-resurs"
+
+#~ msgid "Transport type"
+#~ msgstr "Överföringstyp"
+
+#~ msgid "This outgoing account cannot be configured."
+#~ msgstr "Utgående konto kan inte ställas in."
+
+#~ msgid "SMTP"
+#~ msgstr "SMTP"
+
+#~ msgid "Hos&tname:"
+#~ msgstr "&Värddatornamn:"
+
+#~ msgid "Local sendmail"
+#~ msgstr "Lokal sendmail"
+
+#~ msgid "Failed to execute mailer program %1"
+#~ msgstr "Kan inte starta mailerprogrammet %1"
+
+#~ msgid "Sendmail exited abnormally."
+#~ msgstr "Sendmail avslutades onormalt."
+
+#~ msgid "Sendmail exited abnormally: %1"
+#~ msgstr "Sendmail avslutades onormalt: %1"
+
+#~ msgctxt "@option sendmail transport"
+#~ msgid "Sendmail"
+#~ msgstr "Sendmail"
+
+#~ msgid "A local sendmail installation"
+#~ msgstr "En lokal installation av sendmail"
+
+#~ msgid "Sendmail &Location:"
+#~ msgstr "SSendmails p&lats:"
+
+#~ msgid "Mail &server:"
+#~ msgstr "Post&server:"
+
+#~ msgid "Edit..."
+#~ msgstr "Redigera..."
+
+#~ msgid "text"
+#~ msgstr "text"
+
+#~ msgid "Check &What the Server Supports"
+#~ msgstr "Kontrollera &vad servern stödjer"
+
+#~ msgid "Authentication Method"
+#~ msgstr "Behörighetskontrollmetod"
+
+#~ msgid "&LOGIN"
+#~ msgstr "&LOGIN"
+
+#~ msgid "&PLAIN"
+#~ msgstr "&PLAIN"
+
+#~ msgid "CRAM-MD&5"
+#~ msgstr "CRAM-MD&5"
+
+#~ msgid "&DIGEST-MD5"
+#~ msgstr "&DIGEST-MD5"
+
+#~ msgid "&GSSAPI"
+#~ msgstr "&GSSAPI"
+
+#~ msgid "&NTLM"
+#~ msgstr "&NTLM"
+
+#~ msgid "Message has invalid due date."
+#~ msgstr "Brevet har felaktigt färdigdatum."
+
+#~ msgid "Transport: Sendmail"
+#~ msgstr "Brevöverföring: Sendmail"
+
+#~ msgid "&Location:"
+#~ msgstr "&Plats:"
+
+#~ msgid "Choos&e..."
+#~ msgstr "V&älj..."
+
+#~ msgid "Transport: SMTP"
+#~ msgstr "Brevöverföring: SMTP"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "Use Sendmail"
+#~ msgstr "Använd Sendmail"
+
+#~ msgid "Only local files allowed."
+#~ msgstr "Endast lokala filer är tillåtna."
+
+#~ msgctxt "@title:window"
+#~ msgid "Add Transport"
+#~ msgstr "Lägg till brevöverföring"
+
+#~ msgctxt "@title:window"
+#~ msgid "Modify Transport"
+#~ msgstr "Ändra brevöverföring"

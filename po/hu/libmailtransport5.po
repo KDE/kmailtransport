@@ -1,0 +1,835 @@
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Tamas Szanto <tszanto@interware.hu>, 2007.
+# Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2012, 2014.
+# Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
+msgid ""
+msgstr ""
+"Project-Id-Version: KDE 4.3\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-30 00:46+0000\n"
+"PO-Revision-Date: 2014-09-04 15:25+0200\n"
+"Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
+"Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.5\n"
+
+#. i18n: ectx: label, entry (id), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:12
+#, kde-format
+msgid "Unique identifier"
+msgstr "Egyedi azonosító"
+
+#. i18n: ectx: label, entry (name), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:16
+#, kde-format
+msgid "User-visible transport name"
+msgstr "Megjelenített továbbítónév"
+
+#. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:17
+#, kde-format
+msgid "The name that will be used when referring to this server."
+msgstr "A kiszolgáló hivatkozási neve."
+
+#: kmailtransport/mailtransport.kcfg:18
+#, kde-format
+msgid "Unnamed"
+msgstr "Névtelen"
+
+#. i18n: ectx: label, entry (host), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:24
+#, kde-format
+msgid "Host name of the server"
+msgstr "A kiszolgáló gépneve"
+
+#. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:25
+#, kde-format
+msgid "The domain name or numerical address of the SMTP server."
+msgstr "Az SMTP-kiszolgáló tartományneve vagy numerikus címe."
+
+#. i18n: ectx: label, entry (port), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:28
+#, kde-format
+msgid "Port number of the server"
+msgstr "Port"
+
+#. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:29
+#, kde-format
+msgid ""
+"The port number that the SMTP server is listening on. The default port is 25."
+msgstr ""
+"Ezen a TCP-porton kommunikál az SMTP-kiszolgáló. Alapértelmezett értéke 25."
+
+#. i18n: ectx: label, entry (userName), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:33
+#, kde-format
+msgid "User name needed for login"
+msgstr "Felhasználónév"
+
+#. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:34
+#, kde-format
+msgid "The user name to send to the server for authorization."
+msgstr "A felhasználóazonosításhoz szükséges név."
+
+#. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:37
+#, kde-format
+msgid "Command to execute before sending a mail"
+msgstr "Üzenet elküldése előtt végrehajtandó parancs"
+
+#. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:38
+#, kde-format
+msgid ""
+"A command to run locally, prior to sending email. This can be used to set up "
+"SSH tunnels, for example. Leave it empty if no command should be run."
+msgstr ""
+"E-mail elküldése előtt lefuttatandó helyi parancs. Használatával "
+"beállíthatja például a használandó SSL-csatornát. Hagyja üresen, ha nem kell "
+"parancsot futtatni."
+
+#. i18n: ectx: label, entry (options), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:41
+#, kde-format
+msgid "Options added to mailtransport method"
+msgstr ""
+
+#. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:44
+#, kde-format
+msgid "Server requires authentication"
+msgstr "A kiszolgáló eléréséhez felhasználóazonosítás szükséges."
+
+#. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:45
+#, kde-format
+msgid ""
+"Check this option if your SMTP server requires authentication before "
+"accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
+msgstr ""
+"Jelölje be, ha az SMTP-kiszolgáló eléréséhez név és jelszó megadása "
+"szükséges. Ezt „Hitelesített SMTP”-nek vagy ASMTP-nek is nevezik."
+
+#. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:49
+#, kde-format
+msgid "Store password"
+msgstr "A jelszó mentése"
+
+#. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:52
+#, kde-format
+msgid ""
+"Check this option to have your password stored.\n"
+"If KWallet is available the password will be stored there, which is "
+"considered safe.\n"
+"However, if KWallet is not available, the password will be stored in the "
+"configuration file. The password is stored in an obfuscated format, but "
+"should not be considered secure from decryption efforts if access to the "
+"configuration file is obtained."
+msgstr ""
+"Jelölje be, ha el szeretné menteni a jelszót.\n"
+"Ha a KWallet aktiválva van, akkor az fogja elmenteni a jelszót. Ez a "
+"választható legbiztonságosabb tárolási mód.\n"
+"Ha a KWallet nem érhető el, a jelszó a beállítófájlba lesz elmentve. A "
+"jelszó némileg elmaszkírozott formában lesz elmentve, de ebből könnyen "
+"visszanyerhető az eredeti jelszó, ezért nem tekinthető biztonságos "
+"megoldásnak."
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:56
+#, kde-format
+msgid "Encryption method used for communication"
+msgstr "Titkosítási mód"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:59
+#, kde-format
+msgid "No encryption"
+msgstr "Nincs titkosítás"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:62
+#, kde-format
+msgid "SSL encryption"
+msgstr "SSL"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:65
+#, kde-format
+msgid "TLS encryption"
+msgstr "TLS"
+
+#. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:70
+#, kde-format
+msgid "Authentication method"
+msgstr "Felhasználóazonosítási mód"
+
+#. i18n: ectx: label, entry (specifyHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:87 kmailtransport/mailtransport.kcfg:92
+#: kmailtransport/mailtransport.kcfg:96 kmailtransport/mailtransport.kcfg:101
+#, kde-format
+msgid "<!-- TODO -->"
+msgstr "<!-- TODO -->"
+
+#. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:88
+#, kde-format
+msgid ""
+"Check this option to use a custom hostname when identifying to the mail "
+"server. This is useful when your system's hostname may not be set correctly "
+"or to mask your system's true hostname."
+msgstr ""
+"Jelölje be ezt, ha egy megadott gépnéven szeretne kommunikálni a levelezési "
+"kiszolgálóval. Akkor lehet hasznos, ha a gépnév nem megfelelő vagy esetleg "
+"el szeretné rejteni, melyik gépről küldi el az üzenetet."
+
+#. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:93
+#, kde-format
+msgid "Enter the hostname that should be used when identifying to the server."
+msgstr "Adja meg a kiszolgáló gépnevét."
+
+#. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:97
+#, kde-format
+msgid ""
+"Check this option to use a custom sender address when identifying to the "
+"mail server. If not checked, the address from the identity is used."
+msgstr ""
+"Jelölje be ezt, ha egyéni küldő címet szeretne használni a "
+"levelezőkiszolgálóra történő azonosításkor. Ha nincs bejelölve, az "
+"identitásból származó cím lesz használva."
+
+#. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:102
+#, kde-format
+msgid ""
+"Enter the address that should be used to overwrite the default sender "
+"address."
+msgstr ""
+"Adja meg azt a címet, amelyet az alapértelmezett küldő címének felülírására "
+"használhat."
+
+#. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
+#: kmailtransport/mailtransport.kcfg:105
+#: kmailtransport/plugins/smtp/smtpsettings.ui:284
+#, kde-format
+msgid "Connect using the system proxy settings"
+msgstr ""
+
+#. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:106
+#, kde-format
+msgid ""
+"If checked, the system proxy settings will be used to connect to the mail "
+"server."
+msgstr ""
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:144
+#, kde-format
+msgid "The password to send to the server for authorization."
+msgstr "A névhez tartozó jelszó."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
+#, kde-format
+msgid ""
+"Failed to check capabilities. Please verify port and authentication mode."
+msgstr ""
+"Nem sikerült ellenőrizni a képességeket. Nézze át a port és hitelesítési mód "
+"beállításait."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
+#, kde-format
+msgid "Check Capabilities Failed"
+msgstr "Nem sikerült ellenőrizni a képességeket"
+
+#: kmailtransport/plugins/smtp/smtpjob.cpp:242
+#, kde-format
+msgid "You need to supply a username and a password to use this SMTP server."
+msgstr "Az SMTP-kiszolgáló eléréséhez név és jelszó megadása szükséges."
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:26
+#, kde-format
+msgctxt "@option SMTP transport"
+msgid "SMTP"
+msgstr "SMTP"
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
+#, kde-format
+msgid "An SMTP server on the Internet"
+msgstr "Egy SMTP kiszolgáló az interneten"
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:37
+#, fuzzy, kde-format
+#| msgid "Configure account"
+msgctxt "@title:window"
+msgid "Configure account"
+msgstr "Fiók beállítása"
+
+#. i18n: ectx: attribute (title), widget (QWidget, smptTab)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:34
+#, kde-format
+msgctxt "general smtp settings"
+msgid "General"
+msgstr "Általános"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:40
+#, kde-format
+msgid "Account Information"
+msgstr "Fiókinformációk"
+
+#. i18n: ectx: property (text), widget (QLabel, hostLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:47
+#, fuzzy, kde-format
+#| msgid "Outgoing mail &server:"
+msgid "Outgoing &mail server:"
+msgstr "Levél&kiküldési kiszolgáló:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:67
+#, kde-format
+msgid "Server &requires authentication"
+msgstr "A &kiszolgáló eléréshez meg kell adni egy érvényes nevet és jelszót."
+
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:77
+#, kde-format
+msgid "&Login:"
+msgstr "&Név:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:103
+#, kde-format
+msgid "P&assword:"
+msgstr "&Jelszó:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:126
+#, kde-format
+msgid "&Store SMTP password"
+msgstr "A jelszó &elmentése"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:147
+#, kde-format
+msgctxt "advanced smtp settings"
+msgid "Advanced"
+msgstr "Speciális"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:153
+#, kde-format
+msgid "Connection Settings"
+msgstr "Kapcsolódási beállítások"
+
+#. i18n: ectx: property (text), widget (QLabel, noAuthPossible)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:172
+#, kde-format
+msgid "This server does not support authentication"
+msgstr "A kiszolgáló nem támogat felhasználóazonosítást"
+
+#. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:189
+#, kde-format
+msgid "Auto Detect"
+msgstr "Automatikus felismerés"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:216
+#, kde-format
+msgid "Encryption:"
+msgstr "Titkosítás:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:225
+#, kde-format
+msgid "&None"
+msgstr "&Egyik sem"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:232
+#, fuzzy, kde-format
+#| msgid "&SSL"
+msgid "&SSL/TLS"
+msgstr "&SSL"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:239
+#, fuzzy, kde-format
+#| msgid "&TLS"
+msgid "START&TLS"
+msgstr "&TLS"
+
+#. i18n: ectx: property (text), widget (QLabel, portLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Port:"
+
+#. i18n: ectx: property (text), widget (QLabel, authLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:274
+#, kde-format
+msgid "Authentication:"
+msgstr "Hitelesítés:"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:293
+#, kde-format
+msgid "SMTP Settings"
+msgstr "SMTP beállítások"
+
+#. i18n: ectx: property (text), widget (QLabel, hostnameLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:303
+#, kde-format
+msgid "Hostna&me:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:329
+#, kde-format
+msgid "Sender Address:"
+msgstr "Küldő címe:"
+
+#. i18n: ectx: property (text), widget (QLabel, precommandLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:346
+#, kde-format
+msgid "Precommand:"
+msgstr "Előparancs:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:376
+#, kde-format
+msgid "Sen&d custom hostname to server"
+msgstr "Egyedi &gépnév jelzése a kiszolgálónak"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:383
+#, kde-format
+msgid "Use custom sender address"
+msgstr "Egyéni küldő cím használata"
+
+#: kmailtransport/precommandjob.cpp:68
+#, kde-format
+msgid "Executing precommand"
+msgstr "Előparancs végrehajtása"
+
+#: kmailtransport/precommandjob.cpp:68
+#, kde-format
+msgid "Executing precommand '%1'."
+msgstr "Előparancs végrehajtása: '%1'"
+
+#: kmailtransport/precommandjob.cpp:75
+#, kde-format
+msgid "Unable to start precommand '%1'."
+msgstr "Nem sikerült elindítani ezt az előparancsot: „%1”"
+
+#: kmailtransport/precommandjob.cpp:77
+#, kde-format
+msgid "Error while executing precommand '%1'."
+msgstr "Hiba az előparancs végrehajtása közben: „%1”"
+
+#: kmailtransport/precommandjob.cpp:93
+#, kde-format
+msgid "The precommand crashed."
+msgstr "Az előparancs lefagyott."
+
+#: kmailtransport/precommandjob.cpp:96
+#, kde-format
+msgid "The precommand exited with code %1."
+msgstr "Az előparancs befejeződött, kilépési kód: %1"
+
+#: kmailtransport/transport.cpp:85
+#, kde-format
+msgctxt ""
+"%1: name; %2: number appended to it to make it unique among a list of names"
+msgid "%1 #%2"
+msgstr "%1 #%2"
+
+#: kmailtransport/transport.cpp:134
+#, kde-format
+msgctxt "Authentication method"
+msgid "Clear text"
+msgstr "Sima szöveg"
+
+#: kmailtransport/transport.cpp:138
+#, kde-format
+msgctxt "Authentication method"
+msgid "Anonymous"
+msgstr "Névtelen"
+
+#: kmailtransport/transport.cpp:169
+#, kde-format
+msgctxt "An unknown transport type"
+msgid "Unknown"
+msgstr "Ismeretlen"
+
+#: kmailtransport/transport.cpp:207
+#, kde-format
+msgid ""
+"KWallet is not available. It is strongly recommended to use KWallet for "
+"managing your passwords.\n"
+"However, the password can be stored in the configuration file instead. The "
+"password is stored in an obfuscated format, but should not be considered "
+"secure from decryption efforts if access to the configuration file is "
+"obtained.\n"
+"Do you want to store the password for server '%1' in the configuration file?"
+msgstr ""
+"A KWallet nem érhető el. A KWallet a legbiztonságosabb, ezért ajánlott "
+"jelszómentési lehetőség.\n"
+"A jelszó elmenthető a beállítófájlba is. Ilyenkor a jelszó nehezen "
+"felismerhető, maszkírozott formában lesz elmentve, de ebből a jelszó könnyen "
+"visszafejthető, ezért nem tekinthető biztonságos eljárásnak.\n"
+"El szeretné menteni a(z) '%1' kiszolgáló eléréséhez használt jelszót a "
+"beállítófájlba?"
+
+#: kmailtransport/transport.cpp:216
+#, kde-format
+msgid "KWallet Not Available"
+msgstr "A KWallet nem érhető el"
+
+#: kmailtransport/transport.cpp:217
+#, kde-format
+msgid "Store Password"
+msgstr "A jelszó elmentése"
+
+#: kmailtransport/transport.cpp:218
+#, kde-format
+msgid "Do Not Store Password"
+msgstr "A jelszót nem kell elmenteni"
+
+#: kmailtransport/transportjob.cpp:122
+#, kde-format
+msgid "The outgoing account \"%1\" is not correctly configured."
+msgstr "A(z) „%1” kimenő fiók nincs helyesen beállítva."
+
+#: kmailtransport/transportmanager.cpp:232
+#, kde-format
+msgid "Default Transport"
+msgstr "Alapértelmezett továbbító"
+
+#: kmailtransport/transportmanager.cpp:251
+#, kde-format
+msgid "You must create an outgoing account before sending."
+msgstr "Létre kell hoznia egy kimenő fiókot a küldés előtt."
+
+#: kmailtransport/transportmanager.cpp:252
+#, kde-format
+msgid "Create Account Now?"
+msgstr "Új fiók létrehozása?"
+
+#: kmailtransport/transportmanager.cpp:253
+#, kde-format
+msgid "Create Account Now"
+msgstr "Fiók létrehozása most"
+
+#: kmailtransport/transportmanager.cpp:688
+#, kde-format
+msgid ""
+"The following mail transports store their passwords in an unencrypted "
+"configuration file.\n"
+"For security reasons, please consider migrating these passwords to KWallet, "
+"the KDE Wallet management tool,\n"
+"which stores sensitive data for you in a strongly encrypted file.\n"
+"Do you want to migrate your passwords to KWallet?"
+msgstr ""
+"Az alábbi továbbítók nem titkosított beállítófájlban tárolják az eléréshez "
+"szükséges jelszót.\n"
+"A KWallet jelszótároló a választható legbiztonságosabb, erős titkosítást "
+"alkalmazó jelszótárolási mód, ezért érdemes áttérni a használatára.\n"
+"Át szeretné helyezni a jelszavakat a KWalletbe?"
+
+#: kmailtransport/transportmanager.cpp:695
+#, kde-format
+msgid "Question"
+msgstr "Kérdés"
+
+#: kmailtransport/transportmanager.cpp:696
+#, kde-format
+msgid "Migrate"
+msgstr "Migrálás"
+
+#: kmailtransport/transportmanager.cpp:697
+#, kde-format
+msgid "Keep"
+msgstr "Megtartás"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
+#: kmailtransport/ui/addtransportdialog.ui:20
+#, kde-format
+msgid "Step One: Select Transport Type"
+msgstr "Első lépés: Válasszon továbbítótípust"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kmailtransport/ui/addtransportdialog.ui:38
+#, kde-format
+msgctxt "The name of a mail transport"
+msgid "Name:"
+msgstr "Név:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDefault)
+#: kmailtransport/ui/addtransportdialog.ui:48
+#, fuzzy, kde-format
+#| msgid "Make this the default outgoing account."
+msgid "Make this the default outgoing account"
+msgstr "Legyen ez az alapértelmezett kimenő fiók."
+
+#. i18n: ectx: property (text), widget (QLabel, descLabel)
+#: kmailtransport/ui/addtransportdialog.ui:61
+#, kde-format
+msgid "Select an account type from the list below:"
+msgstr "Válasszon ki egy fióktípust az alábbi listából:"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: kmailtransport/ui/addtransportdialog.ui:81
+#, kde-format
+msgid "Type"
+msgstr "Típus"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: kmailtransport/ui/addtransportdialog.ui:86
+#, kde-format
+msgid "Description"
+msgstr "Leírás"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:17
+#, kde-format
+msgid "Remo&ve"
+msgstr "&Eltávolítás"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:24
+#, kde-format
+msgid "&Set as Default"
+msgstr "Beállítá&s alapértelmezésnek"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:54
+#, kde-format
+msgid "A&dd..."
+msgstr "&Hozzáadás..."
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:61
+#, kde-format
+msgid "&Rename"
+msgstr "Átneve&zés"
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:68
+#, kde-format
+msgid "&Modify..."
+msgstr "Mó&dosítás..."
+
+#: kmailtransport/widgets/addtransportdialogng.cpp:92
+#, fuzzy, kde-format
+#| msgid "Create Outgoing Account"
+msgctxt "@title:window"
+msgid "Create Outgoing Account"
+msgstr "Kimenő azonosító létrehozása"
+
+#: kmailtransport/widgets/addtransportdialogng.cpp:95
+#, kde-format
+msgctxt "create and configure a mail transport"
+msgid "Create and Configure"
+msgstr "Létrehozás és beállítás"
+
+#: kmailtransport/widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Név"
+
+#: kmailtransport/widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Típus"
+
+#: kmailtransport/widgets/transportlistview.cpp:99
+#, kde-format
+msgctxt "@label the default mail transport"
+msgid " (Default)"
+msgstr " (Alapértelmezés)"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:136
+#, kde-format
+msgid "Do you want to remove outgoing account '%1'?"
+msgstr "Szeretné eltávolítani a(z) „%1” kimenő fiókot?"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:137
+#, fuzzy, kde-format
+#| msgid "Do you want to remove outgoing account '%1'?"
+msgid "Do you really want to remove this %1 outgoing account?"
+msgid_plural "Do you really want to remove these %1 outgoing accounts?"
+msgstr[0] "Szeretné eltávolítani a(z) „%1” kimenő fiókot?"
+msgstr[1] "Szeretné eltávolítani a(z) „%1” kimenő fiókot?"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#, kde-format
+msgid "Remove outgoing account?"
+msgstr "Kimenő fiók eltávolítása?"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:160
+#, kde-format
+msgid "Add..."
+msgstr "Hozzáadás…"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:165
+#, kde-format
+msgid "Modify..."
+msgstr "Módosítás…"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:168
+#, kde-format
+msgid "Rename"
+msgstr "Átnevezés"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:172
+#, kde-format
+msgid "Remove"
+msgstr "Eltávolítás"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:177
+#, kde-format
+msgid "Set as Default"
+msgstr "Beállítás alapértelmezettként"
+
+#: kmailtransportakonadi/messagequeuejob.cpp:59
+#, kde-format
+msgid "Empty message."
+msgstr "Üres üzenet."
+
+#: kmailtransportakonadi/messagequeuejob.cpp:66
+#, kde-format
+msgid "Message has no recipients."
+msgstr "Az üzenetnek nincsenek címzettjei."
+
+#: kmailtransportakonadi/messagequeuejob.cpp:73
+#, kde-format
+msgid "Message has invalid sent-mail folder."
+msgstr "Az üzenetnek érvénytelen elküldött levelek mappája van."
+
+#~ msgid "Message has invalid transport."
+#~ msgstr "Az üzenetnek érvénytelen továbbítása van."
+
+#~ msgid "Unable to create SMTP job."
+#~ msgstr "Nem sikerült létrehozni egy SMTP-feladatot."
+
+#~ msgid "SMTP Server"
+#~ msgstr "SMTP-kiszolgáló"
+
+#~ msgid "Akonadi Resource"
+#~ msgstr "Akonadi-erőforrás"
+
+#~ msgid "Transport type"
+#~ msgstr "Továbbító típus"
+
+#~ msgid "This outgoing account cannot be configured."
+#~ msgstr "Ez a kimenő fiók nem állítható be."
+
+#, fuzzy
+#~| msgctxt "@option SMTP transport"
+#~| msgid "SMTP"
+#~ msgid "SMTP"
+#~ msgstr "SMTP"
+
+#~ msgid "Hos&tname:"
+#~ msgstr "Gé&pnév:"
+
+#~ msgid "Local sendmail"
+#~ msgstr "Helyi sendmail"
+
+#~ msgid "Failed to execute mailer program %1"
+#~ msgstr "Nem sikerült végrehajtani a(z) %1 üzenetküldő programot"
+
+#~ msgid "Sendmail exited abnormally."
+#~ msgstr "A Sendmail hibajelzéssel fejeződött be."
+
+#~ msgid "Sendmail exited abnormally: %1"
+#~ msgstr "A Sendmail hibajelzéssel lépett ki: %1"
+
+#~ msgctxt "@option sendmail transport"
+#~ msgid "Sendmail"
+#~ msgstr "Sendmail"
+
+#~ msgid "A local sendmail installation"
+#~ msgstr "Egy helyi sendmail telepítés"
+
+#~ msgid "Sendmail &Location:"
+#~ msgstr "A sendmail &elérési útja:"
+
+#~ msgid "Mail &server:"
+#~ msgstr "Levél&kiszolgáló:"
+
+#~ msgid "Edit..."
+#~ msgstr "Szerkesztés…"
+
+#~ msgid "Check &What the Server Supports"
+#~ msgstr "A kiszolgálón támogatott &funkciók"
+
+#~ msgid "Authentication Method"
+#~ msgstr "Felhasználóazonosítási mód"
+
+#~ msgid "&LOGIN"
+#~ msgstr "&LOGIN"
+
+#~ msgid "&PLAIN"
+#~ msgstr "&PLAIN"
+
+#~ msgid "CRAM-MD&5"
+#~ msgstr "CRAM-MD&5"
+
+#~ msgid "&DIGEST-MD5"
+#~ msgstr "&DIGEST-MD5"
+
+#~ msgid "&GSSAPI"
+#~ msgstr "&GSSAPI"
+
+#~ msgid "&NTLM"
+#~ msgstr "&NTLM"
+
+#~ msgid "Transport: Sendmail"
+#~ msgstr "Továbbító: Sendmail"
+
+#~ msgid "&Location:"
+#~ msgstr "&Hely:"
+
+#~ msgid "Choos&e..."
+#~ msgstr "Vá&lasszon..."
+
+#~ msgid "Transport: SMTP"
+#~ msgstr "Továbbító: SMTP"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "Use Sendmail"
+#~ msgstr "Sendmail"
+
+#~ msgid "Only local files allowed."
+#~ msgstr "Csak helyi fájlokat lehet használni."
+
+#~ msgctxt "@title:window"
+#~ msgid "Add Transport"
+#~ msgstr "Továbbító hozzáadása"
+
+#~ msgctxt "@title:window"
+#~ msgid "Modify Transport"
+#~ msgstr "Továbbító módosítása"

@@ -1,0 +1,731 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: libmailtransport\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-30 00:46+0000\n"
+"PO-Revision-Date: 2022-05-04 18:53+0100\n"
+"Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
+"Language-Team: Portuguese <kde-i18n-doc@kde.org>\n"
+"Language: pt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-POFile-SpellExtra: MD NTLM sendmail PLAIN STMP GSSAPI KWallet CRAM LOGIN\n"
+"X-POFile-SpellExtra: ASMTP DIGEST STARTTLS\n"
+"X-POFile-IgnoreConsistency: Type\n"
+
+#. i18n: ectx: label, entry (id), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:12
+#, kde-format
+msgid "Unique identifier"
+msgstr "Identificador único"
+
+#. i18n: ectx: label, entry (name), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:16
+#, kde-format
+msgid "User-visible transport name"
+msgstr "Nome do transporte visível para o utilizador"
+
+#. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:17
+#, kde-format
+msgid "The name that will be used when referring to this server."
+msgstr "O nome que será usado ao fazer referência a este servidor."
+
+#: kmailtransport/mailtransport.kcfg:18
+#, kde-format
+msgid "Unnamed"
+msgstr "Sem nome"
+
+#. i18n: ectx: label, entry (host), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:24
+#, kde-format
+msgid "Host name of the server"
+msgstr "Nome do servidor"
+
+#. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:25
+#, kde-format
+msgid "The domain name or numerical address of the SMTP server."
+msgstr "O nome do domínio ou o endereço numérico do servidor de STMP."
+
+#. i18n: ectx: label, entry (port), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:28
+#, kde-format
+msgid "Port number of the server"
+msgstr "Número de porto do servidor"
+
+#. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:29
+#, kde-format
+msgid ""
+"The port number that the SMTP server is listening on. The default port is 25."
+msgstr ""
+"O número do porto onde o servidor de SMTP está à espera. O porto por omissão "
+"é o 25."
+
+#. i18n: ectx: label, entry (userName), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:33
+#, kde-format
+msgid "User name needed for login"
+msgstr "Utilizador necessário na autenticação"
+
+#. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:34
+#, kde-format
+msgid "The user name to send to the server for authorization."
+msgstr "O nome do utilizador a enviar o servidor aquando da autorização."
+
+#. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:37
+#, kde-format
+msgid "Command to execute before sending a mail"
+msgstr "Comando a executar antes de enviar um e-mail"
+
+#. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:38
+#, kde-format
+msgid ""
+"A command to run locally, prior to sending email. This can be used to set up "
+"SSH tunnels, for example. Leave it empty if no command should be run."
+msgstr ""
+"Um comando a executar localmente, antes de enviar o e-mail.  Pode ser usado "
+"para configurar túneis de SSH, por exemplo. Deixe em branco, se não deseja "
+"executar nenhum comando."
+
+#. i18n: ectx: label, entry (options), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:41
+#, kde-format
+msgid "Options added to mailtransport method"
+msgstr "Opções adicionadas ao método do transporte de e-mail"
+
+#. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:44
+#, kde-format
+msgid "Server requires authentication"
+msgstr "O servidor necessita de autenticação"
+
+#. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:45
+#, kde-format
+msgid ""
+"Check this option if your SMTP server requires authentication before "
+"accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
+msgstr ""
+"Assinale esta opção se o seu servidor de SMTP necessitar de autenticação "
+"antes de aceitar o e-mail. Isto é conhecido como 'Autenticação em SMTP' ou "
+"simplesmente ASMTP."
+
+#. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:49
+#, kde-format
+msgid "Store password"
+msgstr "Guardar a senha"
+
+#. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:52
+#, kde-format
+msgid ""
+"Check this option to have your password stored.\n"
+"If KWallet is available the password will be stored there, which is "
+"considered safe.\n"
+"However, if KWallet is not available, the password will be stored in the "
+"configuration file. The password is stored in an obfuscated format, but "
+"should not be considered secure from decryption efforts if access to the "
+"configuration file is obtained."
+msgstr ""
+"Assinale esta opção para guardar a sua senha.\n"
+"Se o KWallet estiver disponível, a senha será guardada nele, o que é "
+"considerado seguro.\n"
+"Contudo, se o KWallet não estiver disponível, a senha será guardada no "
+"ficheiro de configuração.\n"
+"A senha é guardada de forma obscura, mas não deverá ser considerada segura "
+"com algum esforço de descodificação, se for possível aceder ao ficheiro de "
+"configuração."
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:56
+#, kde-format
+msgid "Encryption method used for communication"
+msgstr "Método de encriptação usado na comunicação"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:59
+#, kde-format
+msgid "No encryption"
+msgstr "Sem encriptação"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:62
+#, kde-format
+msgid "SSL encryption"
+msgstr "Encriptação SSL"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:65
+#, kde-format
+msgid "TLS encryption"
+msgstr "Encriptação TLS"
+
+#. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:70
+#, kde-format
+msgid "Authentication method"
+msgstr "Método de autenticação"
+
+#. i18n: ectx: label, entry (specifyHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:87 kmailtransport/mailtransport.kcfg:92
+#: kmailtransport/mailtransport.kcfg:96 kmailtransport/mailtransport.kcfg:101
+#, kde-format
+msgid "<!-- TODO -->"
+msgstr "<!-- POR FAZER -->"
+
+#. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:88
+#, kde-format
+msgid ""
+"Check this option to use a custom hostname when identifying to the mail "
+"server. This is useful when your system's hostname may not be set correctly "
+"or to mask your system's true hostname."
+msgstr ""
+"Assinale esta opção para usar um nome de máquina personalizado, ao "
+"identificar-se no servidor de e-mail. Isto é útil quando o nome do seu "
+"sistema não estiver configurado correctamente ou para mascarar o nome "
+"verdadeiro do seu sistema."
+
+#. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:93
+#, kde-format
+msgid "Enter the hostname that should be used when identifying to the server."
+msgstr ""
+"Indique o nome da máquina que deverá usar para o servidor na identificação."
+
+#. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:97
+#, kde-format
+msgid ""
+"Check this option to use a custom sender address when identifying to the "
+"mail server. If not checked, the address from the identity is used."
+msgstr ""
+"Assinale esta opção para usar um endereço de remetente de máquina "
+"personalizado, ao identificar-se no servidor de e-mail. Se não estiver "
+"assinalada, é usado o endereço da identidade."
+
+#. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:102
+#, kde-format
+msgid ""
+"Enter the address that should be used to overwrite the default sender "
+"address."
+msgstr ""
+"Indique o endereço que deverá ser usado para substituir o endereço de "
+"remetente predefinido."
+
+#. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
+#: kmailtransport/mailtransport.kcfg:105
+#: kmailtransport/plugins/smtp/smtpsettings.ui:284
+#, kde-format
+msgid "Connect using the system proxy settings"
+msgstr "Ligar com a configuração de 'proxy' do sistema"
+
+#. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:106
+#, kde-format
+msgid ""
+"If checked, the system proxy settings will be used to connect to the mail "
+"server."
+msgstr ""
+"Se a opção estiver assinalada, serão usadas as definições do 'proxy' do "
+"sistema para se ligar ao servidor de e-mail."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:144
+#, kde-format
+msgid "The password to send to the server for authorization."
+msgstr "A senha a enviar para o servidor na autorização."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
+#, kde-format
+msgid ""
+"Failed to check capabilities. Please verify port and authentication mode."
+msgstr ""
+"Não foi possível obter as capacidades. Verifique por favor o porto e o modo "
+"de autenticação."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
+#, kde-format
+msgid "Check Capabilities Failed"
+msgstr "Verificação das Capacidades sem Sucesso"
+
+#: kmailtransport/plugins/smtp/smtpjob.cpp:242
+#, kde-format
+msgid "You need to supply a username and a password to use this SMTP server."
+msgstr ""
+"Tem de indicar um nome de utilizador e uma senha para usar este servidor de "
+"SMTP."
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:26
+#, kde-format
+msgctxt "@option SMTP transport"
+msgid "SMTP"
+msgstr "SMTP"
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
+#, kde-format
+msgid "An SMTP server on the Internet"
+msgstr "Um servidor de SMTP na Internet"
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure account"
+msgstr "Configurar a conta"
+
+#. i18n: ectx: attribute (title), widget (QWidget, smptTab)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:34
+#, kde-format
+msgctxt "general smtp settings"
+msgid "General"
+msgstr "Geral"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:40
+#, kde-format
+msgid "Account Information"
+msgstr "Informações da Conta"
+
+#. i18n: ectx: property (text), widget (QLabel, hostLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:47
+#, kde-format
+msgid "Outgoing &mail server:"
+msgstr "&Servidor de envio do correio:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:67
+#, kde-format
+msgid "Server &requires authentication"
+msgstr "O servidor necessita de &autenticação"
+
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:77
+#, kde-format
+msgid "&Login:"
+msgstr "Uti&lizador:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:103
+#, kde-format
+msgid "P&assword:"
+msgstr "Senh&a:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:126
+#, kde-format
+msgid "&Store SMTP password"
+msgstr "Guardar a &senha de SMTP"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:147
+#, kde-format
+msgctxt "advanced smtp settings"
+msgid "Advanced"
+msgstr "Avançado"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:153
+#, kde-format
+msgid "Connection Settings"
+msgstr "Configuração da Ligação"
+
+#. i18n: ectx: property (text), widget (QLabel, noAuthPossible)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:172
+#, kde-format
+msgid "This server does not support authentication"
+msgstr "Este servidor não suporta a autenticação"
+
+#. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:189
+#, kde-format
+msgid "Auto Detect"
+msgstr "Detectar Automaticamente"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:216
+#, kde-format
+msgid "Encryption:"
+msgstr "Encriptação:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:225
+#, kde-format
+msgid "&None"
+msgstr "&Nenhuma"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:232
+#, kde-format
+msgid "&SSL/TLS"
+msgstr "&SSL/TLS"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:239
+#, kde-format
+msgid "START&TLS"
+msgstr "START&TLS"
+
+#. i18n: ectx: property (text), widget (QLabel, portLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Porto:"
+
+#. i18n: ectx: property (text), widget (QLabel, authLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:274
+#, kde-format
+msgid "Authentication:"
+msgstr "Autenticação:"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:293
+#, kde-format
+msgid "SMTP Settings"
+msgstr "Configuração do SMTP"
+
+#. i18n: ectx: property (text), widget (QLabel, hostnameLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:303
+#, kde-format
+msgid "Hostna&me:"
+msgstr "&Máquina:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:329
+#, kde-format
+msgid "Sender Address:"
+msgstr "Endereço do Remetente:"
+
+#. i18n: ectx: property (text), widget (QLabel, precommandLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:346
+#, kde-format
+msgid "Precommand:"
+msgstr "Pré-comando:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:376
+#, kde-format
+msgid "Sen&d custom hostname to server"
+msgstr "Enviar um nome &de máquina específico para o servidor"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:383
+#, kde-format
+msgid "Use custom sender address"
+msgstr "Usar um endereço de remetente personalizado"
+
+#: kmailtransport/precommandjob.cpp:68
+#, kde-format
+msgid "Executing precommand"
+msgstr "A executar o pré-comando"
+
+#: kmailtransport/precommandjob.cpp:68
+#, kde-format
+msgid "Executing precommand '%1'."
+msgstr "A executar o pré-comando '%1'."
+
+#: kmailtransport/precommandjob.cpp:75
+#, kde-format
+msgid "Unable to start precommand '%1'."
+msgstr "Não foi possível iniciar o pré-comando '%1'."
+
+#: kmailtransport/precommandjob.cpp:77
+#, kde-format
+msgid "Error while executing precommand '%1'."
+msgstr "Ocorreu um erro ao executar o pré-comando '%1'."
+
+#: kmailtransport/precommandjob.cpp:93
+#, kde-format
+msgid "The precommand crashed."
+msgstr "O pré-comando estoirou."
+
+#: kmailtransport/precommandjob.cpp:96
+#, kde-format
+msgid "The precommand exited with code %1."
+msgstr "O pré-comando saiu com o código %1."
+
+#: kmailtransport/transport.cpp:85
+#, kde-format
+msgctxt ""
+"%1: name; %2: number appended to it to make it unique among a list of names"
+msgid "%1 #%2"
+msgstr "%1 #%2"
+
+#: kmailtransport/transport.cpp:134
+#, kde-format
+msgctxt "Authentication method"
+msgid "Clear text"
+msgstr "Texto simples"
+
+#: kmailtransport/transport.cpp:138
+#, kde-format
+msgctxt "Authentication method"
+msgid "Anonymous"
+msgstr "Anónimo"
+
+#: kmailtransport/transport.cpp:169
+#, kde-format
+msgctxt "An unknown transport type"
+msgid "Unknown"
+msgstr "Desconhecido"
+
+#: kmailtransport/transport.cpp:207
+#, kde-format
+msgid ""
+"KWallet is not available. It is strongly recommended to use KWallet for "
+"managing your passwords.\n"
+"However, the password can be stored in the configuration file instead. The "
+"password is stored in an obfuscated format, but should not be considered "
+"secure from decryption efforts if access to the configuration file is "
+"obtained.\n"
+"Do you want to store the password for server '%1' in the configuration file?"
+msgstr ""
+"O KWallet não está disponível. É altamente recomendado usar o KWallet para "
+"gerir as suas senhas.\n"
+"Contudo, a senha pode ser guardada no ficheiro de configuração em "
+"alternativa. A senha é guardada de forma obscura, mas não deverá ser "
+"considerada segura com algum esforço de descodificação, se for possível "
+"aceder ao ficheiro de configuração.\n"
+"Deseja guardar a senha para o servidor '%1' no ficheiro de configuração?"
+
+#: kmailtransport/transport.cpp:216
+#, kde-format
+msgid "KWallet Not Available"
+msgstr "KWallet Não Disponível"
+
+#: kmailtransport/transport.cpp:217
+#, kde-format
+msgid "Store Password"
+msgstr "Guardar a Senha"
+
+#: kmailtransport/transport.cpp:218
+#, kde-format
+msgid "Do Not Store Password"
+msgstr "Não Guardar a Senha"
+
+#: kmailtransport/transportjob.cpp:122
+#, kde-format
+msgid "The outgoing account \"%1\" is not correctly configured."
+msgstr "A conta de envio \"%1\" não está configurada correctamente."
+
+#: kmailtransport/transportmanager.cpp:232
+#, kde-format
+msgid "Default Transport"
+msgstr "Transporte por Omissão"
+
+#: kmailtransport/transportmanager.cpp:251
+#, kde-format
+msgid "You must create an outgoing account before sending."
+msgstr "Deve criar uma conta de envio antes de enviar algo."
+
+#: kmailtransport/transportmanager.cpp:252
+#, kde-format
+msgid "Create Account Now?"
+msgstr "Criar uma Conta Agora?"
+
+#: kmailtransport/transportmanager.cpp:253
+#, kde-format
+msgid "Create Account Now"
+msgstr "Criar uma Conta Agora"
+
+#: kmailtransport/transportmanager.cpp:688
+#, kde-format
+msgid ""
+"The following mail transports store their passwords in an unencrypted "
+"configuration file.\n"
+"For security reasons, please consider migrating these passwords to KWallet, "
+"the KDE Wallet management tool,\n"
+"which stores sensitive data for you in a strongly encrypted file.\n"
+"Do you want to migrate your passwords to KWallet?"
+msgstr ""
+"Os seguintes transportes de correio guardam as senhas no ficheiro de "
+"configuração.\n"
+"Por razões de segurança, pense em migrar estas senhas para a KWallet, a "
+"ferramenta de gestão da Carteira do KDE, que guarda os dados importantes num "
+"ficheiro altamente encriptado.\n"
+"Deseja migrar as suas senhas para a KWallet?"
+
+#: kmailtransport/transportmanager.cpp:695
+#, kde-format
+msgid "Question"
+msgstr "Pergunta"
+
+#: kmailtransport/transportmanager.cpp:696
+#, kde-format
+msgid "Migrate"
+msgstr "Migrar"
+
+#: kmailtransport/transportmanager.cpp:697
+#, kde-format
+msgid "Keep"
+msgstr "Manter"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
+#: kmailtransport/ui/addtransportdialog.ui:20
+#, kde-format
+msgid "Step One: Select Transport Type"
+msgstr "Passo 1: Seleccionar o Tipo de Transporte"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kmailtransport/ui/addtransportdialog.ui:38
+#, kde-format
+msgctxt "The name of a mail transport"
+msgid "Name:"
+msgstr "Nome:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDefault)
+#: kmailtransport/ui/addtransportdialog.ui:48
+#, kde-format
+msgid "Make this the default outgoing account"
+msgstr "Tornar esta a conta de saída por omissão"
+
+#. i18n: ectx: property (text), widget (QLabel, descLabel)
+#: kmailtransport/ui/addtransportdialog.ui:61
+#, kde-format
+msgid "Select an account type from the list below:"
+msgstr "Seleccione um tipo de conta na lista abaixo:"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: kmailtransport/ui/addtransportdialog.ui:81
+#, kde-format
+msgid "Type"
+msgstr "Tipo"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: kmailtransport/ui/addtransportdialog.ui:86
+#, kde-format
+msgid "Description"
+msgstr "Descrição"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:17
+#, kde-format
+msgid "Remo&ve"
+msgstr "Remo&ver"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:24
+#, kde-format
+msgid "&Set as Default"
+msgstr "E&scolher por Omissão"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:54
+#, kde-format
+msgid "A&dd..."
+msgstr "A&dicionar..."
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:61
+#, kde-format
+msgid "&Rename"
+msgstr "Muda&r o Nome"
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:68
+#, kde-format
+msgid "&Modify..."
+msgstr "&Modificar..."
+
+#: kmailtransport/widgets/addtransportdialogng.cpp:92
+#, kde-format
+msgctxt "@title:window"
+msgid "Create Outgoing Account"
+msgstr "Criar uma Conta de Saída"
+
+#: kmailtransport/widgets/addtransportdialogng.cpp:95
+#, kde-format
+msgctxt "create and configure a mail transport"
+msgid "Create and Configure"
+msgstr "Criar e Configurar"
+
+#: kmailtransport/widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Nome"
+
+#: kmailtransport/widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Tipo"
+
+#: kmailtransport/widgets/transportlistview.cpp:99
+#, kde-format
+msgctxt "@label the default mail transport"
+msgid " (Default)"
+msgstr " (Por omissão)"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:136
+#, kde-format
+msgid "Do you want to remove outgoing account '%1'?"
+msgstr "Deseja remove a conta de envio '%1'?"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:137
+#, kde-format
+msgid "Do you really want to remove this %1 outgoing account?"
+msgid_plural "Do you really want to remove these %1 outgoing accounts?"
+msgstr[0] "Deseja realmente remover %1 conta de envio?"
+msgstr[1] "Deseja realmente remover as %1 contas de envio?"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#, kde-format
+msgid "Remove outgoing account?"
+msgstr "Remover a conta de envio?"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:160
+#, kde-format
+msgid "Add..."
+msgstr "Adicionar..."
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:165
+#, kde-format
+msgid "Modify..."
+msgstr "Modificar..."
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:168
+#, kde-format
+msgid "Rename"
+msgstr "Mudar o Nome"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:172
+#, kde-format
+msgid "Remove"
+msgstr "Remover"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:177
+#, kde-format
+msgid "Set as Default"
+msgstr "Escolher por Omissão"
+
+#: kmailtransportakonadi/messagequeuejob.cpp:59
+#, kde-format
+msgid "Empty message."
+msgstr "A mensagem está vazia."
+
+#: kmailtransportakonadi/messagequeuejob.cpp:66
+#, kde-format
+msgid "Message has no recipients."
+msgstr "A mensagem não tem destinatários."
+
+#: kmailtransportakonadi/messagequeuejob.cpp:73
+#, kde-format
+msgid "Message has invalid sent-mail folder."
+msgstr "A mensagem tem uma pasta 'enviado' inválida."

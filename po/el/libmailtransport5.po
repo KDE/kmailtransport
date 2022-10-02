@@ -1,0 +1,854 @@
+# translation of libmailtransport.po to Greek
+# Copyright (C) YEAR This_file_is_part_of_KDE
+# This file is distributed under the same license as the PACKAGE package.
+#
+# Spiros Georgaras <sng@hellug.gr>, 2007, 2008.
+# Toussis Manolis <manolis@koppermind.homelinux.org>, 2007, 2008, 2009.
+# Bouklis Panos <panos@echidna-band.com>, 2012.
+# Dimitrios Glentadakis <dglent@gmail.com>, 2012, 2013.
+# Stelios <sstavra@gmail.com>, 2012, 2020.
+# Dimitris Kardarakos <dimkard@gmail.com>, 2014.
+msgid ""
+msgstr ""
+"Project-Id-Version: libmailtransport\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2022-09-30 00:46+0000\n"
+"PO-Revision-Date: 2020-09-13 12:45+0300\n"
+"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"Language-Team: Greek <kde-i18n-el@kde.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Lokalize 20.04.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. i18n: ectx: label, entry (id), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:12
+#, kde-format
+msgid "Unique identifier"
+msgstr "Μοναδικό αναγνωριστικό"
+
+#. i18n: ectx: label, entry (name), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:16
+#, kde-format
+msgid "User-visible transport name"
+msgstr "Ορατό όνομα μεταφορέα"
+
+#. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:17
+#, kde-format
+msgid "The name that will be used when referring to this server."
+msgstr ""
+"Το όνομα που θα χρησιμοποιηθεί όταν γίνεται αναφορά σε αυτόν το διακομιστή."
+
+#: kmailtransport/mailtransport.kcfg:18
+#, kde-format
+msgid "Unnamed"
+msgstr "Χωρίς όνομα"
+
+#. i18n: ectx: label, entry (host), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:24
+#, kde-format
+msgid "Host name of the server"
+msgstr "Το όνομα του διακομιστή"
+
+#. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:25
+#, kde-format
+msgid "The domain name or numerical address of the SMTP server."
+msgstr "Το όνομα τομέα ή η αριθμητική διεύθυνση του διακομιστή SMTP."
+
+#. i18n: ectx: label, entry (port), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:28
+#, kde-format
+msgid "Port number of the server"
+msgstr "Ο αριθμός θύρας του διακομιστή"
+
+#. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:29
+#, kde-format
+msgid ""
+"The port number that the SMTP server is listening on. The default port is 25."
+msgstr ""
+"Ο αριθμός θύρας στον οποίο ακούει ο διακομιστής SMTP. Η προκαθορισμένη θύρα "
+"είναι η 25."
+
+#. i18n: ectx: label, entry (userName), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:33
+#, kde-format
+msgid "User name needed for login"
+msgstr "Το όνομα χρήστη για τη σύνδεση"
+
+#. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:34
+#, kde-format
+msgid "The user name to send to the server for authorization."
+msgstr "Το όνομα χρήστη που θα αποσταλεί στο διακομιστή για εξουσιοδότηση."
+
+#. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:37
+#, kde-format
+msgid "Command to execute before sending a mail"
+msgstr "Εντολή που θα εκτελεστεί πριν την αποστολή του μηνύματος"
+
+#. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:38
+#, kde-format
+msgid ""
+"A command to run locally, prior to sending email. This can be used to set up "
+"SSH tunnels, for example. Leave it empty if no command should be run."
+msgstr ""
+"Μία εντολή που θα εκτελεστεί τοπικά, πριν την αποστολή του μηνύματος. Μπορεί "
+"να χρησιμοποιηθεί για τη ρύθμιση SSH tunnels, για παράδειγμα. Αφήστε το κενό "
+"αν δε χρειάζεται να εκτελεστεί κάποια εντολή.      "
+
+#. i18n: ectx: label, entry (options), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:41
+#, kde-format
+msgid "Options added to mailtransport method"
+msgstr "Προστέθηκαν επιλογές στη μέθοδο μεταφορέα"
+
+#. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:44
+#, kde-format
+msgid "Server requires authentication"
+msgstr "Ο διακομιστής απαιτεί ταυτοποίηση"
+
+#. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:45
+#, kde-format
+msgid ""
+"Check this option if your SMTP server requires authentication before "
+"accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
+msgstr ""
+"Ενεργοποιήστε αυτήν την επιλογή αν ο διακομιστής SMTP απαιτεί ταυτοποίηση "
+"για να αποδεχτεί μηνύματα. Αυτό είναι γνωστό ως 'Authenticated SMTP' ή πιο "
+"απλά ASMTP.      "
+
+#. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:49
+#, kde-format
+msgid "Store password"
+msgstr "Αποθήκευση κωδικού πρόσβασης"
+
+#. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:52
+#, kde-format
+msgid ""
+"Check this option to have your password stored.\n"
+"If KWallet is available the password will be stored there, which is "
+"considered safe.\n"
+"However, if KWallet is not available, the password will be stored in the "
+"configuration file. The password is stored in an obfuscated format, but "
+"should not be considered secure from decryption efforts if access to the "
+"configuration file is obtained."
+msgstr ""
+"Ενεργοποιήστε αυτήν την επιλογή για να αποθηκευτεί ο κωδικός πρόσβασής σας.\n"
+"Αν είναι διαθέσιμο το KWallet, ο κωδικός πρόσβασης θα αποθηκευτεί εκεί, "
+"πράγμα που θεωρείται ασφαλές.\n"
+"Αν όμως το KWallet δεν είναι διαθέσιμο, ο κωδικός πρόσβασης θα αποθηκευτεί "
+"στο αρχείο διαμόρφωσης. Ο κωδικός πρόσβασης θα αποθηκευτεί σε κωδικοποιημένη "
+"μορφή, αλλά δε θα πρέπει να θεωρείται ανθεκτική έναντι σε προσπάθειες "
+"αποκωδικοποίησής του, αν κάποιος αποκτήσει πρόσβαση στο αρχείο διαμόρφωσης."
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:56
+#, kde-format
+msgid "Encryption method used for communication"
+msgstr "Μέθοδος κωδικοποίησης που θα χρησιμοποιηθεί για την επικοινωνία"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:59
+#, kde-format
+msgid "No encryption"
+msgstr "Χωρίς κρυπτογράφηση"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:62
+#, kde-format
+msgid "SSL encryption"
+msgstr "Κρυπτογράφηση SSL"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:65
+#, kde-format
+msgid "TLS encryption"
+msgstr "Κρυπτογράφηση TLS"
+
+#. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:70
+#, kde-format
+msgid "Authentication method"
+msgstr "Μέθοδος ταυτοποίησης"
+
+#. i18n: ectx: label, entry (specifyHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:87 kmailtransport/mailtransport.kcfg:92
+#: kmailtransport/mailtransport.kcfg:96 kmailtransport/mailtransport.kcfg:101
+#, kde-format
+msgid "<!-- TODO -->"
+msgstr "<!-- TODO -->"
+
+#. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:88
+#, kde-format
+msgid ""
+"Check this option to use a custom hostname when identifying to the mail "
+"server. This is useful when your system's hostname may not be set correctly "
+"or to mask your system's true hostname."
+msgstr ""
+"Ενεργοποιήστε αυτήν την επιλογή για να χρησιμοποιήσετε ένα προσαρμοσμένο "
+"όνομα υπολογιστή κατά την ταυτοποίηση στο διακομιστή αλληλογραφίας. Αυτό "
+"είναι χρήσιμο όταν το όνομα του υπολογιστή σας δεν μπορεί να ρυθμιστεί σωστά "
+"ή αν πρέπει να αποστείλετε ένα διαφορετικό όνομα υπολογιστή.      "
+
+#. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:93
+#, kde-format
+msgid "Enter the hostname that should be used when identifying to the server."
+msgstr ""
+"Δώστε το όνομα υπολογιστή που θα χρησιμοποιηθεί κατά την ταυτοποίηση στο "
+"διακομιστή."
+
+#. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:97
+#, kde-format
+msgid ""
+"Check this option to use a custom sender address when identifying to the "
+"mail server. If not checked, the address from the identity is used."
+msgstr ""
+"Ενεργοποιήστε αυτήν την επιλογή για να χρησιμοποιήσετε μία προσαρμοσμένη "
+"διεύθυνση αποστολέα κατά την ταυτοποίηση στο διακομιστή αλληλογραφίας. Αν "
+"δεν επιλεγεί, θα χρησιμοποιηθεί η διεύθυνση από την ταυτότητα."
+
+#. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:102
+#, kde-format
+msgid ""
+"Enter the address that should be used to overwrite the default sender "
+"address."
+msgstr ""
+"Εισάγετε τη διεύθυνση που πρέπει να χρησιμοποιηθεί για να αντικαταστήσει την "
+"προεπιλεγμένη διεύθυνση αποστολέα."
+
+#. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
+#: kmailtransport/mailtransport.kcfg:105
+#: kmailtransport/plugins/smtp/smtpsettings.ui:284
+#, kde-format
+msgid "Connect using the system proxy settings"
+msgstr "Σύνδεση με χρήση των ρυθμίσεων του διαμεσολαβητή του συστήματος"
+
+#. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
+#: kmailtransport/mailtransport.kcfg:106
+#, kde-format
+msgid ""
+"If checked, the system proxy settings will be used to connect to the mail "
+"server."
+msgstr ""
+"Αν επιλεγεί, οι ρυθμίσεις του διαμεσολαβητή του συστήματος θα "
+"χρησιμοποιηθούν για τη σύνδεση με τον διακομιστή αλληλογραφίας."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:144
+#, kde-format
+msgid "The password to send to the server for authorization."
+msgstr "Ο κωδικός πρόσβασης που στέλνεται στο διακομιστή για εξουσιοδότηση."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
+#, kde-format
+msgid ""
+"Failed to check capabilities. Please verify port and authentication mode."
+msgstr ""
+"Αποτυχία ελέγχου δυνατοτήτων. Επαληθεύστε τη θύρα και τημέθοδο ταυτοποίησης."
+
+#: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
+#, kde-format
+msgid "Check Capabilities Failed"
+msgstr "Αποτυχία ελέγχου δυνατότήτων"
+
+#: kmailtransport/plugins/smtp/smtpjob.cpp:242
+#, kde-format
+msgid "You need to supply a username and a password to use this SMTP server."
+msgstr ""
+"Πρέπει να δώσετε όνομα χρήστη και κωδικό πρόσβασης για να χρησιμοποιήσετε "
+"αυτόν το διακομιστή SMTP."
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:26
+#, kde-format
+msgctxt "@option SMTP transport"
+msgid "SMTP"
+msgstr "SMTP"
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
+#, kde-format
+msgid "An SMTP server on the Internet"
+msgstr "Ένα διακομιστής SMTP στο διαδίκτυο"
+
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:37
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure account"
+msgstr "Διαμόρφωση λογαριασμού"
+
+#. i18n: ectx: attribute (title), widget (QWidget, smptTab)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:34
+#, kde-format
+msgctxt "general smtp settings"
+msgid "General"
+msgstr "Γενικά"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:40
+#, kde-format
+msgid "Account Information"
+msgstr "Πληροφορίες λογαριασμού"
+
+#. i18n: ectx: property (text), widget (QLabel, hostLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:47
+#, kde-format
+msgid "Outgoing &mail server:"
+msgstr "Διακομιστής εξερχο&μένων:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:67
+#, kde-format
+msgid "Server &requires authentication"
+msgstr "Ο διακομιστής απαιτεί &ταυτοποίηση"
+
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:77
+#, kde-format
+msgid "&Login:"
+msgstr "Ό&νομα χρήστη:"
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:103
+#, kde-format
+msgid "P&assword:"
+msgstr "Κ&ωδικός πρόσβασης:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:126
+#, kde-format
+msgid "&Store SMTP password"
+msgstr "&Αποθήκευση κωδικού πρόσβασης SMTP"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:147
+#, kde-format
+msgctxt "advanced smtp settings"
+msgid "Advanced"
+msgstr "Για προχωρημένους"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:153
+#, kde-format
+msgid "Connection Settings"
+msgstr "Ρυθμίσεις σύνδεσης"
+
+#. i18n: ectx: property (text), widget (QLabel, noAuthPossible)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:172
+#, kde-format
+msgid "This server does not support authentication"
+msgstr "Ο διακομιστής υποστηρίζει ταυτοποίηση"
+
+#. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:189
+#, kde-format
+msgid "Auto Detect"
+msgstr "Αυτόματος εντοπισμός"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:216
+#, kde-format
+msgid "Encryption:"
+msgstr "Κρυπτογράφηση:"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:225
+#, kde-format
+msgid "&None"
+msgstr "&Καμία"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:232
+#, kde-format
+msgid "&SSL/TLS"
+msgstr "&SSL/TLS"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:239
+#, kde-format
+msgid "START&TLS"
+msgstr "START&TLS"
+
+#. i18n: ectx: property (text), widget (QLabel, portLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:248
+#, kde-format
+msgid "&Port:"
+msgstr "&Θύρα:"
+
+#. i18n: ectx: property (text), widget (QLabel, authLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:274
+#, kde-format
+msgid "Authentication:"
+msgstr "Ταυτοποίηση:"
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:293
+#, kde-format
+msgid "SMTP Settings"
+msgstr "Ρυθμίσεις SMTP"
+
+#. i18n: ectx: property (text), widget (QLabel, hostnameLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:303
+#, kde-format
+msgid "Hostna&me:"
+msgstr "Υπολογισ&τής:"
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:329
+#, kde-format
+msgid "Sender Address:"
+msgstr "Διεύθυνση αποστολέα:"
+
+#. i18n: ectx: property (text), widget (QLabel, precommandLabel)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:346
+#, kde-format
+msgid "Precommand:"
+msgstr "Προεντολή:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:376
+#, kde-format
+msgid "Sen&d custom hostname to server"
+msgstr "&Αποστολή προσαρμοσμένου ονόματος υπολογιστή στο διακομιστή"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
+#: kmailtransport/plugins/smtp/smtpsettings.ui:383
+#, kde-format
+msgid "Use custom sender address"
+msgstr "Χρήση προσαρμοσμένης διεύθυνσης αποστολέα"
+
+#: kmailtransport/precommandjob.cpp:68
+#, kde-format
+msgid "Executing precommand"
+msgstr "Εκτέλεση προεντολής"
+
+#: kmailtransport/precommandjob.cpp:68
+#, kde-format
+msgid "Executing precommand '%1'."
+msgstr "Εκτέλεση της προεντολής '%1'."
+
+#: kmailtransport/precommandjob.cpp:75
+#, kde-format
+msgid "Unable to start precommand '%1'."
+msgstr "Αδύνατη η εκκίνηση της προεντολής '%1'."
+
+#: kmailtransport/precommandjob.cpp:77
+#, kde-format
+msgid "Error while executing precommand '%1'."
+msgstr "Σφάλμα κατά την εκτέλεση της προεντολής '%1'."
+
+#: kmailtransport/precommandjob.cpp:93
+#, kde-format
+msgid "The precommand crashed."
+msgstr "Η προεντολή κατέρρευσε."
+
+#: kmailtransport/precommandjob.cpp:96
+#, kde-format
+msgid "The precommand exited with code %1."
+msgstr "Η προεντολή τερμάτισε με κωδικό %1."
+
+#: kmailtransport/transport.cpp:85
+#, kde-format
+msgctxt ""
+"%1: name; %2: number appended to it to make it unique among a list of names"
+msgid "%1 #%2"
+msgstr "%1 #%2"
+
+#: kmailtransport/transport.cpp:134
+#, kde-format
+msgctxt "Authentication method"
+msgid "Clear text"
+msgstr "Καθαρισμός κειμένου"
+
+#: kmailtransport/transport.cpp:138
+#, kde-format
+msgctxt "Authentication method"
+msgid "Anonymous"
+msgstr "Ανώνυμος"
+
+#: kmailtransport/transport.cpp:169
+#, kde-format
+msgctxt "An unknown transport type"
+msgid "Unknown"
+msgstr "Άγνωστος"
+
+#: kmailtransport/transport.cpp:207
+#, kde-format
+msgid ""
+"KWallet is not available. It is strongly recommended to use KWallet for "
+"managing your passwords.\n"
+"However, the password can be stored in the configuration file instead. The "
+"password is stored in an obfuscated format, but should not be considered "
+"secure from decryption efforts if access to the configuration file is "
+"obtained.\n"
+"Do you want to store the password for server '%1' in the configuration file?"
+msgstr ""
+"Το KWallet δεν είναι διαθέσιμο. Η χρήση του συστήνεται για τη διαχείριση των "
+"κωδικών πρόσβασής σας.\n"
+"Παρόλα αυτά, ο κωδικός πρόσβασης μπορεί να αποθηκευτεί στο αρχείο "
+"διαμόρφωσης. Ο κωδικός πρόσβασης θα αποθηκευτεί σε κωδικοποιημένη μορφή, "
+"αλλά δε θα πρέπει να θεωρείται ανθεκτική έναντι σε προσπάθειες "
+"αποκωδικοποίησής του, αν κάποιος αποκτήσει πρόσβαση στο αρχείο διαμόρφωσης.\n"
+"Θέλετε να αποθηκεύσετε τον κωδικό πρόσβασης του διακομιστή '%1' στο αρχείο "
+"διαμόρφωσης;"
+
+#: kmailtransport/transport.cpp:216
+#, kde-format
+msgid "KWallet Not Available"
+msgstr "Το KWallet δεν είναι διαθέσιμο"
+
+#: kmailtransport/transport.cpp:217
+#, kde-format
+msgid "Store Password"
+msgstr "Αποθήκευση κωδικού πρόσβασης"
+
+#: kmailtransport/transport.cpp:218
+#, kde-format
+msgid "Do Not Store Password"
+msgstr "Μη αποθήκευση κωδικού πρόσβασης"
+
+#: kmailtransport/transportjob.cpp:122
+#, kde-format
+msgid "The outgoing account \"%1\" is not correctly configured."
+msgstr "Ο λογαριασμός εξερχομένων \"%1\" δεν είναι σωστά διαμορφωμένος."
+
+#: kmailtransport/transportmanager.cpp:232
+#, kde-format
+msgid "Default Transport"
+msgstr "Προκαθορισμένος μεταφορέας"
+
+#: kmailtransport/transportmanager.cpp:251
+#, kde-format
+msgid "You must create an outgoing account before sending."
+msgstr "Πρέπει να ρυθμίσετε ένα λογαριασμό εξερχομένων πριν την αποστολή."
+
+#: kmailtransport/transportmanager.cpp:252
+#, kde-format
+msgid "Create Account Now?"
+msgstr "Δημιουργία λογαριασμού τώρα;"
+
+#: kmailtransport/transportmanager.cpp:253
+#, kde-format
+msgid "Create Account Now"
+msgstr "Δημιουργία λογαριασμού τώρα"
+
+#: kmailtransport/transportmanager.cpp:688
+#, kde-format
+msgid ""
+"The following mail transports store their passwords in an unencrypted "
+"configuration file.\n"
+"For security reasons, please consider migrating these passwords to KWallet, "
+"the KDE Wallet management tool,\n"
+"which stores sensitive data for you in a strongly encrypted file.\n"
+"Do you want to migrate your passwords to KWallet?"
+msgstr ""
+"Οι ακόλουθοι μεταφορείς αλληλογραφίας αποθηκεύουν τους κωδικούς πρόσβασης σε "
+"ένα κρυπτογραφημένο αρχείο διαμόρφωσης.\n"
+"Συνίσταται η χρήση του KWallet για την αποθήκευση κωδικών πρόσβασης για "
+"λόγους ασφαλείας, το εργαλείο διαχείρισης πορτοφολιού του KDE,\n"
+"το οποίο αποθηκεύει ευαίσθητα δεδομένα σε ένα ισχυρά κρυπτογραφημένο "
+"αρχείο.\n"
+"Επιθυμείτε τη μεταφορά των κωδικών πρόσβασής σας στο KWallet;"
+
+#: kmailtransport/transportmanager.cpp:695
+#, kde-format
+msgid "Question"
+msgstr "Ερώτηση"
+
+#: kmailtransport/transportmanager.cpp:696
+#, kde-format
+msgid "Migrate"
+msgstr "Μεταφορά"
+
+#: kmailtransport/transportmanager.cpp:697
+#, kde-format
+msgid "Keep"
+msgstr "Διατήρηση"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
+#: kmailtransport/ui/addtransportdialog.ui:20
+#, kde-format
+msgid "Step One: Select Transport Type"
+msgstr "Βήμα ένα: Επιλογή τύπου μεταφοράς"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: kmailtransport/ui/addtransportdialog.ui:38
+#, kde-format
+msgctxt "The name of a mail transport"
+msgid "Name:"
+msgstr "Όνομα:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDefault)
+#: kmailtransport/ui/addtransportdialog.ui:48
+#, kde-format
+msgid "Make this the default outgoing account"
+msgstr "Να γίνει ο προεπιλεγμένος λογαριασμός εξερχομένων"
+
+#. i18n: ectx: property (text), widget (QLabel, descLabel)
+#: kmailtransport/ui/addtransportdialog.ui:61
+#, kde-format
+msgid "Select an account type from the list below:"
+msgstr "Επιλέξτε ένα τύπο λογαριασμού από την παρακάτω λίστα:"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: kmailtransport/ui/addtransportdialog.ui:81
+#, kde-format
+msgid "Type"
+msgstr "Τύπος"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: kmailtransport/ui/addtransportdialog.ui:86
+#, kde-format
+msgid "Description"
+msgstr "Περιγραφή"
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:17
+#, kde-format
+msgid "Remo&ve"
+msgstr "&Αφαίρεση"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:24
+#, kde-format
+msgid "&Set as Default"
+msgstr "&Ορισμός προεπιλογής"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:54
+#, kde-format
+msgid "A&dd..."
+msgstr "Προσ&θήκη..."
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:61
+#, kde-format
+msgid "&Rename"
+msgstr "&Μετονομασία"
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: kmailtransport/ui/transportmanagementwidget.ui:68
+#, kde-format
+msgid "&Modify..."
+msgstr "&Τροποποίηση..."
+
+#: kmailtransport/widgets/addtransportdialogng.cpp:92
+#, kde-format
+msgctxt "@title:window"
+msgid "Create Outgoing Account"
+msgstr "Δημιουργία λογαριασμού εξερχομένων"
+
+#: kmailtransport/widgets/addtransportdialogng.cpp:95
+#, kde-format
+msgctxt "create and configure a mail transport"
+msgid "Create and Configure"
+msgstr "Δημιουργία και διαμόρφωση"
+
+#: kmailtransport/widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Όνομα"
+
+#: kmailtransport/widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Τύπος"
+
+#: kmailtransport/widgets/transportlistview.cpp:99
+#, kde-format
+msgctxt "@label the default mail transport"
+msgid " (Default)"
+msgstr " (Προκαθορισμένος)"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:136
+#, kde-format
+msgid "Do you want to remove outgoing account '%1'?"
+msgstr "Θέλετε να αφαιρέσετε το λογαριασμό εξερχομένων '%1';"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:137
+#, fuzzy, kde-format
+#| msgid "Do you want to remove outgoing account '%1'?"
+msgid "Do you really want to remove this %1 outgoing account?"
+msgid_plural "Do you really want to remove these %1 outgoing accounts?"
+msgstr[0] "Θέλετε να αφαιρέσετε το λογαριασμό εξερχομένων '%1';"
+msgstr[1] "Θέλετε να αφαιρέσετε το λογαριασμό εξερχομένων '%1';"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#, kde-format
+msgid "Remove outgoing account?"
+msgstr "Αφαίρεση λογαριασμού εξερχομένων;"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:160
+#, kde-format
+msgid "Add..."
+msgstr "Προσθήκη..."
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:165
+#, kde-format
+msgid "Modify..."
+msgstr "Επεξεργασία..."
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:168
+#, kde-format
+msgid "Rename"
+msgstr "Μετονομασία"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:172
+#, kde-format
+msgid "Remove"
+msgstr "Αφαίρεση"
+
+#: kmailtransport/widgets/transportmanagementwidget.cpp:177
+#, kde-format
+msgid "Set as Default"
+msgstr "Ορισμός προεπιλογής"
+
+#: kmailtransportakonadi/messagequeuejob.cpp:59
+#, kde-format
+msgid "Empty message."
+msgstr "Κενό μήνυμα."
+
+#: kmailtransportakonadi/messagequeuejob.cpp:66
+#, kde-format
+msgid "Message has no recipients."
+msgstr "Το μήνυμα δεν έχει παραλήπτες."
+
+#: kmailtransportakonadi/messagequeuejob.cpp:73
+#, kde-format
+msgid "Message has invalid sent-mail folder."
+msgstr "Το μήνυμα έχει μη έγκυρο φάκελο απεσταλμένων."
+
+#~ msgid "Message has invalid transport."
+#~ msgstr "Το μήνυμα έχει μη έγκυρο μεταφορέα."
+
+#~ msgid "Unable to create SMTP job."
+#~ msgstr "Αδύνατη η δημιουργία μιας εργασίας SMTP."
+
+#~ msgid "SMTP Server"
+#~ msgstr "Διακομιστής SMTP"
+
+#~ msgid "Akonadi Resource"
+#~ msgstr "Πόρος Akonadi"
+
+#~ msgid "Transport type"
+#~ msgstr "Τύπος μεταφορέα"
+
+#~ msgid "This outgoing account cannot be configured."
+#~ msgstr "Ο λογαριασμός εξερχομένων δεν μπορεί να διαμορφωθεί."
+
+#, fuzzy
+#~| msgctxt "@option SMTP transport"
+#~| msgid "SMTP"
+#~ msgid "SMTP"
+#~ msgstr "SMTP"
+
+#~ msgid "Hos&tname:"
+#~ msgstr "Ό&νομα υπολογιστή:"
+
+#~ msgid "Local sendmail"
+#~ msgstr "Τοπικό sendmail"
+
+#~ msgid "Failed to execute mailer program %1"
+#~ msgstr "Αποτυχία εκτέλεσης του προγράμματος αλληλογραφίας %1"
+
+#~ msgid "Sendmail exited abnormally."
+#~ msgstr "Το sendmail τερμάτισε αντικανονικά."
+
+#~ msgid "Sendmail exited abnormally: %1"
+#~ msgstr "Το sendmail τερμάτισε αντικανονικά: %1"
+
+#~ msgctxt "@option sendmail transport"
+#~ msgid "Sendmail"
+#~ msgstr "Sendmail"
+
+#~ msgid "A local sendmail installation"
+#~ msgstr "Τοπική εγκατάσταση sendmail"
+
+#~ msgid "Sendmail &Location:"
+#~ msgstr "Τοποθεσία του &sendmail:"
+
+#~ msgid "Mail &server:"
+#~ msgstr "Διακομιστής &αλληλογραφίας:"
+
+#~ msgid "Edit..."
+#~ msgstr "Επεξεργασία..."
+
+#~ msgid "Check &What the Server Supports"
+#~ msgstr "Έλεγχος &για το τι υποστηρίζει ο διακομιστής"
+
+#~ msgid "Authentication Method"
+#~ msgstr "Μέθοδος ταυτοποίησης"
+
+#~ msgid "&LOGIN"
+#~ msgstr "&LOGIN"
+
+#~ msgid "&PLAIN"
+#~ msgstr "&PLAIN"
+
+#~ msgid "CRAM-MD&5"
+#~ msgstr "CRAM-MD&5"
+
+#~ msgid "&DIGEST-MD5"
+#~ msgstr "&DIGEST-MD5"
+
+#~ msgid "&GSSAPI"
+#~ msgstr "&GSSAPI"
+
+#~ msgid "&NTLM"
+#~ msgstr "&NTLM"
+
+#~ msgid "Transport: Sendmail"
+#~ msgstr "Μεταφορέας: Sendmail"
+
+#~ msgid "&Location:"
+#~ msgstr "Τοπο&θεσία:"
+
+#~ msgid "Choos&e..."
+#~ msgstr "&Επιλογή..."
+
+#~ msgid "Transport: SMTP"
+#~ msgstr "Μεταφορέας: SMTP"
+
+#~ msgid "1"
+#~ msgstr "1"
+
+#~ msgid "Use Sendmail"
+#~ msgstr "Χρήση του Sendmail"
+
+#~ msgid "Only local files allowed."
+#~ msgstr "Επιτρέπονται μόνο τοπικά αρχεία."
+
+#~ msgctxt "@title:window"
+#~ msgid "Add Transport"
+#~ msgstr "Προσθήκη μεταφορέα"
+
+#~ msgctxt "@title:window"
+#~ msgid "Modify Transport"
+#~ msgstr "Τροποποίηση μεταφορέα"
+
+#~ msgid "SM&TP"
+#~ msgstr "SM&TP"
+
+#~ msgid "&Sendmail"
+#~ msgstr "&Sendmail"
+
+#~ msgid "Add Transport"
+#~ msgstr "Προσθήκη μεταφορέα"
