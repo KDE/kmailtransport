@@ -638,7 +638,7 @@ msgstr "Afi&g..."
 #: kmailtransport/ui/transportmanagementwidget.ui:61
 #, kde-format
 msgid "&Rename"
-msgstr "&Canvia el nom"
+msgstr "Ca&nvia el nom"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: kmailtransport/ui/transportmanagementwidget.ui:68
