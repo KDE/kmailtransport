@@ -201,17 +201,19 @@ bool Transport::usrSave()
 {
     if (requiresAuthentication() && storePassword() && d->passwordDirty) {
         const QString storePassword = d->password;
-        Wallet *wallet = TransportManager::self()->wallet();
-        if (!wallet || wallet->writePassword(QString::number(id()), d->password) != 0) {
-            // wallet saving failed, ask if we should store in the config file instead
-            if (d->storePasswordInFile
+        auto writeJob = new WritePasswordJob(WALLET_FOLDER, this);
+        connect(writeJob, &Job::finished, this, [=]{
+            if (writeJob->error()) {
+                qWarning(MAILTRANSPORT_LOG()) << "WritePasswordJob failed with: " << writeJob->errorString();
+                // wallet saving failed, ask if we should store in the config file instead
+                if (d->storePasswordInFile
 #if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
-                || KMessageBox::warningTwoActions(nullptr,
+                    || KMessageBox::warningTwoActions(nullptr,
 #else
-                || KMessageBox::warningYesNo(nullptr,
+                    || KMessageBox::warningYesNo(nullptr,
 #endif
-                                                  i18n("KWallet is not available. It is strongly recommended to use "
-                                                       "KWallet for managing your passwords.\n"
+                                                  i18n("QKeychain not found a backend for storing your password. "
+                                                       "It is strongly recommended to use strong backend for managing your passwords.\n"
                                                        "However, the password can be stored in the configuration "
                                                        "file instead. The password is stored in an obfuscated format, "
                                                        "but should not be considered secure from decryption efforts "
@@ -227,12 +229,20 @@ bool Transport::usrSave()
 #else
                     == KMessageBox::Yes) {
 #endif
-                // write to config file
-                KConfigGroup group(config(), currentGroup());
-                group.writeEntry("password", KStringHandler::obscure(storePassword));
-                d->storePasswordInFile = true;
+                    // write to config file
+                    KConfigGroup group(config(), currentGroup());
+                    group.writeEntry("password", KStringHandler::obscure(storePassword));
+                    d->storePasswordInFile = true;
+                }
             }
-        }
+        });
+
+        writeJob->setKey(QString::number(id()));
+        writeJob->setTextData(storePassword);
+        QEventLoop loop;
+        connect(writeJob, &Job::finished, &loop, &QEventLoop::quit);
+        writeJob->start();
+        loop.exec();
         d->passwordDirty = false;
     }
 
