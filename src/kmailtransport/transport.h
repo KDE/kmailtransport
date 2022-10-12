@@ -141,6 +141,12 @@ private Q_SLOTS:
     // Used by our friend, TransportManager
     void readPassword();
 
+Q_SIGNALS:
+    /**
+      Emitted when passwords have been loaded from QKeyChain.
+    */
+    void passwordLoaded();
+
 private:
     void readTransportPasswordFinished(QKeychain::Job *baseJob);
     void loadPassword();

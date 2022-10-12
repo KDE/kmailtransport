@@ -283,6 +283,7 @@ void Transport::readTransportPasswordFinished(QKeychain::Job *baseJob)
     } else {
         setPassword(job->textData());
     }
+    Q_EMIT passwordLoaded();
 }
 
 bool Transport::needsWalletMigration() const

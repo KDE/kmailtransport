@@ -76,6 +76,7 @@ public:
     int defaultTransportId = -1;
     bool isMainInstance = false;
     QList<TransportJob *> walletQueue;
+    QMap<Transport*, QMetaObject::Connection> passwordConnections;
     TransportManager *const q;
 
     void readConfig();
@@ -91,6 +92,7 @@ public:
     void slotTransportsChanged();
     void slotWalletOpened(bool success);
     void dbusServiceUnregistered();
+    void startQueuedJobs();
     void jobResult(KJob *job);
 };
 }
@@ -577,60 +579,60 @@ void TransportManagerPrivate::prepareWallet()
 
 void TransportManager::loadPasswords()
 {
+    QEventLoop loop;
     for (Transport *t : std::as_const(d->transports)) {
+        if (d->passwordConnections.contains(t)) {
+            continue;
+        }
+        auto conn = connect(t, &Transport::passwordLoaded, this, [&](){
+            disconnect(d->passwordConnections[t]);
+            d->passwordConnections.remove(t);
+            if (d->passwordConnections.count() == 0) {
+                loop.exit();
+            }
+        });
+        d->passwordConnections[t] = conn;
         t->readPassword();
     }
+    loop.exec();
 
-    // flush the wallet queue
-    const QList<TransportJob *> copy = d->walletQueue;
-    d->walletQueue.clear();
-    for (TransportJob *job : copy) {
-        job->start();
-    }
-
+    d->startQueuedJobs();
     Q_EMIT passwordsChanged();
 }
 
 void TransportManager::loadPasswordsAsync()
 {
-    qCDebug(MAILTRANSPORT_LOG);
-
-    // check if there is anything to do at all
-    bool found = false;
     for (Transport *t : std::as_const(d->transports)) {
         if (!t->isComplete()) {
-            found = true;
-            break;
-        }
-    }
-    if (!found) {
-        return;
-    }
-
-    // async wallet opening
-    if (!d->wallet && !d->walletOpenFailed) {
-        WId window = 0;
-        if (qApp->activeWindow()) {
-            window = qApp->activeWindow()->winId();
-        } else if (!QApplication::topLevelWidgets().isEmpty()) {
-            window = qApp->topLevelWidgets().first()->winId();
-        }
-
-        d->wallet = Wallet::openWallet(Wallet::NetworkWallet(), window, Wallet::Asynchronous);
-        // Already async. It will be easy to port to qt5keychain
-        if (d->wallet) {
-            connect(d->wallet, &KWallet::Wallet::walletOpened, this, [this](bool status) {
-                d->slotWalletOpened(status);
+            if (d->passwordConnections.contains(t)) {
+                continue;
+            }
+            auto conn = connect(t, &Transport::passwordLoaded, this, [&](){
+                disconnect(d->passwordConnections[t]);
+                d->passwordConnections.remove(t);
+                if (d->passwordConnections.count() == 0) {
+                    d->startQueuedJobs();
+                    Q_EMIT passwordsChanged();
+                }
             });
-            d->walletAsyncOpen = true;
-        } else {
-            d->walletOpenFailed = true;
-            loadPasswords();
+            d->passwordConnections[t] = conn;
+            t->readPassword();
         }
-        return;
     }
-    if (d->wallet && !d->walletAsyncOpen) {
-        loadPasswords();
+}
+
+void TransportManagerPrivate::startQueuedJobs()
+{
+    QList<TransportJob *> jobsToDel;
+    for (auto job : walletQueue) {
+        if (job->transport()->isComplete()) {
+            job->start();
+            jobsToDel << job;
+        }
+    }
+
+    for (auto job: jobsToDel) {
+        walletQueue.removeAll(job);
     }
 }
 
