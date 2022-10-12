@@ -25,7 +25,6 @@
 #endif
 using namespace QKeychain;
 using namespace MailTransport;
-using namespace KWallet;
 
 Transport::Transport(const QString &cfgGroup)
     : TransportBase(cfgGroup)
@@ -189,7 +188,10 @@ void Transport::usrRead()
 
     if (!d->password.isEmpty()) {
         d->passwordLoaded = true;
-        if (Wallet::isEnabled()) {
+        if (KWallet::Wallet::isEnabled()) {
+            //TODO: Needs to replaced with a check, if a backend is available.
+            // 2022-10-12: QtKeyChain has no method to request, if there is any backend.
+            // see https://github.com/frankosterfeld/qtkeychain/issues/224
             d->needsWalletMigration = true;
         } else {
             d->storePasswordInFile = true;
