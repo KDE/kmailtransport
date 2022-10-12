@@ -40,10 +40,8 @@
 #endif
 
 using namespace QKeychain;
-#include <KWallet>
 
 using namespace MailTransport;
-using namespace KWallet;
 
 namespace MailTransport
 {
@@ -70,8 +68,6 @@ public:
     TransportType::List types;
     bool myOwnChange = false;
     bool appliedChange = false;
-    KWallet::Wallet *wallet = nullptr;
-    bool walletOpenFailed = false;
     bool walletAsyncOpen = false;
     int defaultTransportId = -1;
     bool isMainInstance = false;
@@ -90,7 +86,6 @@ public:
 
     // Slots
     void slotTransportsChanged();
-    void slotWalletOpened(bool success);
     void dbusServiceUnregistered();
     void startQueuedJobs();
     void jobResult(KJob *job);
@@ -537,46 +532,6 @@ int TransportManagerPrivate::createId() const
     return newId;
 }
 
-KWallet::Wallet *TransportManager::wallet()
-{
-    if (d->wallet && d->wallet->isOpen()) {
-        return d->wallet;
-    }
-
-    if (!Wallet::isEnabled() || d->walletOpenFailed) {
-        return nullptr;
-    }
-
-    WId window = 0;
-    if (qApp->activeWindow()) {
-        window = qApp->activeWindow()->winId();
-    } else if (!QApplication::topLevelWidgets().isEmpty()) {
-        window = qApp->topLevelWidgets().first()->winId();
-    }
-
-    delete d->wallet;
-    d->wallet = Wallet::openWallet(Wallet::NetworkWallet(), window);
-
-    if (!d->wallet) {
-        d->walletOpenFailed = true;
-        return nullptr;
-    }
-
-    d->prepareWallet();
-    return d->wallet;
-}
-
-void TransportManagerPrivate::prepareWallet()
-{
-    if (!wallet) {
-        return;
-    }
-    if (!wallet->hasFolder(WALLET_FOLDER)) {
-        wallet->createFolder(WALLET_FOLDER);
-    }
-    wallet->setFolder(WALLET_FOLDER);
-}
-
 void TransportManager::loadPasswords()
 {
     QEventLoop loop;
@@ -634,20 +589,6 @@ void TransportManagerPrivate::startQueuedJobs()
     for (auto job: jobsToDel) {
         walletQueue.removeAll(job);
     }
-}
-
-void TransportManagerPrivate::slotWalletOpened(bool success)
-{
-    qCDebug(MAILTRANSPORT_LOG);
-    walletAsyncOpen = false;
-    if (!success) {
-        walletOpenFailed = true;
-        delete wallet;
-        wallet = nullptr;
-    } else {
-        prepareWallet();
-    }
-    q->loadPasswords();
 }
 
 void TransportManagerPrivate::validateDefault()

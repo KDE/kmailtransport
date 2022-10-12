@@ -14,11 +14,6 @@
 
 #include <memory>
 
-namespace KWallet
-{
-class Wallet;
-}
-
 namespace MailTransport
 {
 class Transport;
@@ -254,12 +249,6 @@ Q_SIGNALS:
     void transportRenamed(int id, const QString &oldName, const QString &newName);
 
 protected:
-    /**
-      Returns a pointer to an open wallet if available, 0 otherwise.
-      The wallet is opened synchronously if necessary.
-    */
-    KWallet::Wallet *wallet();
-
     /**
       Loads all passwords synchronously.
     */
