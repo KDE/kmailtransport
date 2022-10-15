@@ -13,6 +13,8 @@
 #include "ui_transportmanagementwidget.h"
 
 #include <KMessageBox>
+#include <kwidgetsaddons_version.h>
+
 #include <QMenu>
 
 using namespace MailTransport;
@@ -136,8 +138,16 @@ void TransportManagementWidgetPrivate::removeClicked()
         ? i18n("Do you want to remove outgoing account '%1'?", ui.transportList->selectedItems().at(0)->text(0))
         : i18np("Do you really want to remove this %1 outgoing account?", "Do you really want to remove these %1 outgoing accounts?", nbAccount);
 
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    const int rc = KMessageBox::questionTwoActions(q, msg, i18n("Remove outgoing account?"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
+#else
     const int rc = KMessageBox::questionYesNo(q, msg, i18n("Remove outgoing account?"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
+#endif
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+    if (rc == KMessageBox::ButtonCode::SecondaryAction) {
+#else
     if (rc == KMessageBox::No) {
+#endif
         return;
     }
     for (QTreeWidgetItem *selecteditem : selectedItems) {

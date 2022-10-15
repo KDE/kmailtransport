@@ -16,6 +16,8 @@
 #include <KMessageBox>
 #include <KStringHandler>
 #include <KWallet>
+#include <kwidgetsaddons_version.h>
+
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <qt5keychain/keychain.h>
 #else
@@ -203,20 +205,28 @@ bool Transport::usrSave()
         if (!wallet || wallet->writePassword(QString::number(id()), d->password) != 0) {
             // wallet saving failed, ask if we should store in the config file instead
             if (d->storePasswordInFile
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                || KMessageBox::warningTwoActions(nullptr,
+#else
                 || KMessageBox::warningYesNo(nullptr,
-                                             i18n("KWallet is not available. It is strongly recommended to use "
-                                                  "KWallet for managing your passwords.\n"
-                                                  "However, the password can be stored in the configuration "
-                                                  "file instead. The password is stored in an obfuscated format, "
-                                                  "but should not be considered secure from decryption efforts "
-                                                  "if access to the configuration file is obtained.\n"
-                                                  "Do you want to store the password for server '%1' in the "
-                                                  "configuration file?",
-                                                  name()),
-                                             i18n("KWallet Not Available"),
-                                             KGuiItem(i18n("Store Password")),
-                                             KGuiItem(i18n("Do Not Store Password")))
+#endif
+                                                  i18n("KWallet is not available. It is strongly recommended to use "
+                                                       "KWallet for managing your passwords.\n"
+                                                       "However, the password can be stored in the configuration "
+                                                       "file instead. The password is stored in an obfuscated format, "
+                                                       "but should not be considered secure from decryption efforts "
+                                                       "if access to the configuration file is obtained.\n"
+                                                       "Do you want to store the password for server '%1' in the "
+                                                       "configuration file?",
+                                                       name()),
+                                                  i18n("KWallet Not Available"),
+                                                  KGuiItem(i18n("Store Password")),
+                                                  KGuiItem(i18n("Do Not Store Password")))
+#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
+                    == KMessageBox::ButtonCode::PrimaryAction) {
+#else
                     == KMessageBox::Yes) {
+#endif
                 // write to config file
                 KConfigGroup group(config(), currentGroup());
                 group.writeEntry("password", KStringHandler::obscure(storePassword));
