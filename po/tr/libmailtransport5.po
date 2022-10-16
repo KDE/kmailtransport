@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-30 00:46+0000\n"
+"POT-Creation-Date: 2022-10-16 00:47+0000\n"
 "PO-Revision-Date: 2022-04-27 12:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -457,32 +457,32 @@ msgstr "Ön komut çöktü."
 msgid "The precommand exited with code %1."
 msgstr "Ön komuttan '%1' kodu ile çıkıldı."
 
-#: kmailtransport/transport.cpp:85
+#: kmailtransport/transport.cpp:87
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:134
+#: kmailtransport/transport.cpp:136
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Metni temizle"
 
-#: kmailtransport/transport.cpp:138
+#: kmailtransport/transport.cpp:140
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonim"
 
-#: kmailtransport/transport.cpp:169
+#: kmailtransport/transport.cpp:171
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: kmailtransport/transport.cpp:207
+#: kmailtransport/transport.cpp:213
 #, kde-format
 msgid ""
 "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -502,17 +502,17 @@ msgstr ""
 "'%1' sunucusu için parolanızı yapılandırma dosyasında saklamak istiyor "
 "musunuz?"
 
-#: kmailtransport/transport.cpp:216
+#: kmailtransport/transport.cpp:222
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet Kullanılabilir Değil"
 
-#: kmailtransport/transport.cpp:217
+#: kmailtransport/transport.cpp:223
 #, kde-format
 msgid "Store Password"
 msgstr "Parolayı Kaydet"
 
-#: kmailtransport/transport.cpp:218
+#: kmailtransport/transport.cpp:224
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Parolayı Kaydetme"
@@ -522,27 +522,27 @@ msgstr "Parolayı Kaydetme"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "\"%1\" giden hesabı, doğru bir şekilde yapılandırılmamış."
 
-#: kmailtransport/transportmanager.cpp:232
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Default Transport"
 msgstr "Öntanımlı Aktarım"
 
-#: kmailtransport/transportmanager.cpp:251
+#: kmailtransport/transportmanager.cpp:252
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Göndermeden önce bir giden e-posta hesabı oluşturmalısınız."
 
-#: kmailtransport/transportmanager.cpp:252
+#: kmailtransport/transportmanager.cpp:253
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Şimdi Yeni Hesap Oluşturulsun mu?"
 
-#: kmailtransport/transportmanager.cpp:253
+#: kmailtransport/transportmanager.cpp:254
 #, kde-format
 msgid "Create Account Now"
 msgstr "Şimdi Yeni Hesap Oluştur"
 
-#: kmailtransport/transportmanager.cpp:688
+#: kmailtransport/transportmanager.cpp:693
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -559,17 +559,17 @@ msgstr ""
 "KDE Cüzdan Yönetim aracı KWallet içerisine taşımaya dikkat edin.\n"
 "Parolalarınızı KWallet içerisine taşımak istiyor musunuz?"
 
-#: kmailtransport/transportmanager.cpp:695
+#: kmailtransport/transportmanager.cpp:700
 #, kde-format
 msgid "Question"
 msgstr "Soru"
 
-#: kmailtransport/transportmanager.cpp:696
+#: kmailtransport/transportmanager.cpp:701
 #, kde-format
 msgid "Migrate"
 msgstr "Taşı"
 
-#: kmailtransport/transportmanager.cpp:697
+#: kmailtransport/transportmanager.cpp:702
 #, kde-format
 msgid "Keep"
 msgstr "Koru"
@@ -671,44 +671,45 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (Öntanımlı)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:136
+#: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "'%1' giden hesabını kaldırmak istiyor musunuz?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:137
+#: kmailtransport/widgets/transportmanagementwidget.cpp:139
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "%1 giden hesabını gerçekten kaldırmak istiyor musunuz?"
 msgstr[1] "%1 giden hesabını gerçekten kaldırmak istiyor musunuz?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#: kmailtransport/widgets/transportmanagementwidget.cpp:142
+#: kmailtransport/widgets/transportmanagementwidget.cpp:144
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Giden e-posta hesabı kaldırılsın mı?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:160
+#: kmailtransport/widgets/transportmanagementwidget.cpp:170
 #, kde-format
 msgid "Add..."
 msgstr "Ekle..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:165
+#: kmailtransport/widgets/transportmanagementwidget.cpp:175
 #, kde-format
 msgid "Modify..."
 msgstr "Değiştir..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:168
+#: kmailtransport/widgets/transportmanagementwidget.cpp:178
 #, kde-format
 msgid "Rename"
 msgstr "Yeniden Adlandır"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:172
+#: kmailtransport/widgets/transportmanagementwidget.cpp:182
 #, kde-format
 msgid "Remove"
 msgstr "Kaldır"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:177
+#: kmailtransport/widgets/transportmanagementwidget.cpp:187
 #, kde-format
 msgid "Set as Default"
 msgstr "Öntanımlı Olarak Ayarla"
