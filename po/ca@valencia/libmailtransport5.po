@@ -82,7 +82,7 @@ msgstr "Nom d'usuari necessari per a iniciar la sessió"
 #: kmailtransport/mailtransport.kcfg:34
 #, kde-format
 msgid "The user name to send to the server for authorization."
-msgstr "El nom d'usuari a enviar al servidor per a l'autorització."
+msgstr "El nom d'usuari que s'enviarà al servidor per a l'autorització."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:37
@@ -97,7 +97,7 @@ msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
 "SSH tunnels, for example. Leave it empty if no command should be run."
 msgstr ""
-"Una ordre que s'ha d'executar localment, abans d'enviar un correu. Açò pot "
+"Una ordre que s'executarà localment, abans d'enviar un correu. Açò pot "
 "servir per a establir túnels SSH, per exemple. Deixeu-ho buit si no s'ha "
 "d'executar cap ordre."
 
@@ -253,7 +253,7 @@ msgstr ""
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:144
 #, kde-format
 msgid "The password to send to the server for authorization."
-msgstr "La contrasenya a enviar al servidor per a l'autorització."
+msgstr "La contrasenya que s'enviarà al servidor per a l'autorització."
 
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
 #, kde-format
