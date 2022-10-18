@@ -251,7 +251,8 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent, ShowConditio
                                                      KMessageBox::WarningContinueCancel,
                                                      i18n("You must create an outgoing account before sending."),
                                                      i18n("Create Account Now?"),
-                                                     KGuiItem(i18n("Create Account Now")));
+                                                     KGuiItem(i18n("Create Account Now")),
+                                                     KStandardGuiItem::cancel());
         if (response != KMessageBox::Continue) {
             return false;
         }
