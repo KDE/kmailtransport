@@ -7,7 +7,7 @@
 #include "transportpluginmanager.h"
 #include "mailtransport_debug.h"
 #include <KPluginFactory>
-#include <kpluginmetadata.h>
+#include <KPluginMetaData>
 
 #include <MailTransport/TransportAbstractPlugin>
 
