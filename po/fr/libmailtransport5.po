@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-04-28 07:34+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@neuf.fr>\n"
 "Language-Team: French <kde-francophone@kde.org>\n"
@@ -554,7 +554,7 @@ msgstr "Créer le compte maintenant ?"
 msgid "Create Account Now"
 msgstr "Créer le compte maintenant"
 
-#: kmailtransport/transportmanager.cpp:693
+#: kmailtransport/transportmanager.cpp:694
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -571,17 +571,17 @@ msgstr ""
 "qui conserve les données sensibles dans un fichier au chiffrement robuste.\n"
 "Voulez-vous déplacer vos mots de passe vers KWallet ?"
 
-#: kmailtransport/transportmanager.cpp:700
+#: kmailtransport/transportmanager.cpp:701
 #, kde-format
 msgid "Question"
 msgstr "Question"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:702
 #, kde-format
 msgid "Migrate"
 msgstr "Migrer"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:703
 #, kde-format
 msgid "Keep"
 msgstr "Conserver"

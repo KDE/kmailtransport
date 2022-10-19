@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-07-08 11:25+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -537,7 +537,7 @@ msgstr "Да се създаде ли профила сега?"
 msgid "Create Account Now"
 msgstr "Създаване на профил сега"
 
-#: kmailtransport/transportmanager.cpp:693
+#: kmailtransport/transportmanager.cpp:694
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -554,17 +554,17 @@ msgstr ""
 "която съхранява чувствителни данни за вас в силно криптиран файл.\n"
 "Искате ли да мигрирате паролите си в KWallet?"
 
-#: kmailtransport/transportmanager.cpp:700
+#: kmailtransport/transportmanager.cpp:701
 #, kde-format
 msgid "Question"
 msgstr "Въпрос"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:702
 #, kde-format
 msgid "Migrate"
 msgstr "Мигриране"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:703
 #, kde-format
 msgid "Keep"
 msgstr "Запазване"

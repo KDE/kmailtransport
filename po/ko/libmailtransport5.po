@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-05-15 22:33+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -522,7 +522,7 @@ msgstr "지금 계정을 만드시겠습니까?"
 msgid "Create Account Now"
 msgstr "지금 계정 만들기"
 
-#: kmailtransport/transportmanager.cpp:693
+#: kmailtransport/transportmanager.cpp:694
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -538,17 +538,17 @@ msgstr ""
 "이 도구는 암호를 암호화된 파일에 저장합니다.\n"
 "KWallet으로 암호를 이전하시겠습니까?"
 
-#: kmailtransport/transportmanager.cpp:700
+#: kmailtransport/transportmanager.cpp:701
 #, kde-format
 msgid "Question"
 msgstr "질문"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:702
 #, kde-format
 msgid "Migrate"
 msgstr "이전"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:703
 #, kde-format
 msgid "Keep"
 msgstr "유지"

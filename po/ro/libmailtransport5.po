@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2009-08-22 18:40+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Română <kde-i18n-ro@kde.org>\n"
@@ -544,7 +544,7 @@ msgstr "Creați contul acum?"
 msgid "Create Account Now"
 msgstr "Creează contul acum"
 
-#: kmailtransport/transportmanager.cpp:693
+#: kmailtransport/transportmanager.cpp:694
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -555,17 +555,17 @@ msgid ""
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
 
-#: kmailtransport/transportmanager.cpp:700
+#: kmailtransport/transportmanager.cpp:701
 #, kde-format
 msgid "Question"
 msgstr "Întrebare"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:702
 #, kde-format
 msgid "Migrate"
 msgstr "Migrează"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:703
 #, kde-format
 msgid "Keep"
 msgstr "Păstrează"

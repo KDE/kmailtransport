@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-10-02 15:49\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -519,7 +519,7 @@ msgstr "现在就创建账户吗？"
 msgid "Create Account Now"
 msgstr "现在创建账户"
 
-#: kmailtransport/transportmanager.cpp:693
+#: kmailtransport/transportmanager.cpp:694
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -533,17 +533,17 @@ msgstr ""
 "为安全起见，推荐您使用 KWallet 密码库对敏感数据进行强加密存储。\n"
 "您想要将您的密码迁移到 KWallet 中吗？"
 
-#: kmailtransport/transportmanager.cpp:700
+#: kmailtransport/transportmanager.cpp:701
 #, kde-format
 msgid "Question"
 msgstr "询问"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:702
 #, kde-format
 msgid "Migrate"
 msgstr "迁移"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:703
 #, kde-format
 msgid "Keep"
 msgstr "保留"

@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2010-02-28 18:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -574,7 +574,7 @@ msgstr "จะสร้างบัญชีผู้ใช้งานเดี
 msgid "Create Account Now"
 msgstr "สร้างบัญชีผู้ใช้งานเดี๋ยวนี้"
 
-#: kmailtransport/transportmanager.cpp:693
+#: kmailtransport/transportmanager.cpp:694
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -592,17 +592,17 @@ msgstr ""
 "ซึ่งจะมีการจัดเก็บข้อมูลในรูปแบบแฟ้มเข้ารหัสที่แข็งแกร่งมาก\n"
 "คุณต้องการจะทำการผนวกรวมรหัสผ่านของคุณเข้าไปยังระบบกระเป๋าคุมข้อมูล-K หรือไม่ ?"
 
-#: kmailtransport/transportmanager.cpp:700
+#: kmailtransport/transportmanager.cpp:701
 #, kde-format
 msgid "Question"
 msgstr "คำถาม"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:702
 #, kde-format
 msgid "Migrate"
 msgstr "ผนวกรวม"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:703
 #, kde-format
 msgid "Keep"
 msgstr "คงไว้"

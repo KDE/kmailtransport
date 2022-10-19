@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-16 00:47+0000\n"
+"POT-Creation-Date: 2022-10-19 00:47+0000\n"
 "PO-Revision-Date: 2022-04-27 12:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -542,7 +542,7 @@ msgstr "Şimdi Yeni Hesap Oluşturulsun mu?"
 msgid "Create Account Now"
 msgstr "Şimdi Yeni Hesap Oluştur"
 
-#: kmailtransport/transportmanager.cpp:693
+#: kmailtransport/transportmanager.cpp:694
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -559,17 +559,17 @@ msgstr ""
 "KDE Cüzdan Yönetim aracı KWallet içerisine taşımaya dikkat edin.\n"
 "Parolalarınızı KWallet içerisine taşımak istiyor musunuz?"
 
-#: kmailtransport/transportmanager.cpp:700
+#: kmailtransport/transportmanager.cpp:701
 #, kde-format
 msgid "Question"
 msgstr "Soru"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:702
 #, kde-format
 msgid "Migrate"
 msgstr "Taşı"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:703
 #, kde-format
 msgid "Keep"
 msgstr "Koru"
