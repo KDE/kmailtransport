@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-19 00:47+0000\n"
+"POT-Creation-Date: 2022-10-22 00:46+0000\n"
 "PO-Revision-Date: 2019-03-22 00:54+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -441,36 +441,45 @@ msgstr "執行前置命令失敗。"
 msgid "The precommand exited with code %1."
 msgstr "前置命令結束傳回碼 %1。"
 
-#: kmailtransport/transport.cpp:87
+#: kmailtransport/transport.cpp:86
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:136
+#: kmailtransport/transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "明碼"
 
-#: kmailtransport/transport.cpp:140
+#: kmailtransport/transport.cpp:139
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "匿名"
 
-#: kmailtransport/transport.cpp:171
+#: kmailtransport/transport.cpp:170
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "未知"
 
-#: kmailtransport/transport.cpp:213
-#, kde-format
+#: kmailtransport/transport.cpp:217
+#, fuzzy, kde-format
+#| msgid ""
+#| "KWallet is not available. It is strongly recommended to use KWallet for "
+#| "managing your passwords.\n"
+#| "However, the password can be stored in the configuration file instead. "
+#| "The password is stored in an obfuscated format, but should not be "
+#| "considered secure from decryption efforts if access to the configuration "
+#| "file is obtained.\n"
+#| "Do you want to store the password for server '%1' in the configuration "
+#| "file?"
 msgid ""
-"KWallet is not available. It is strongly recommended to use KWallet for "
-"managing your passwords.\n"
+"QKeychain not found a backend for storing your password. It is strongly "
+"recommended to use strong backend for managing your passwords.\n"
 "However, the password can be stored in the configuration file instead. The "
 "password is stored in an obfuscated format, but should not be considered "
 "secure from decryption efforts if access to the configuration file is "
@@ -482,17 +491,17 @@ msgstr ""
 "這仍然不保證密碼可以安全地不被破解。\n"
 "您確定要將帳號 %1 的密碼存在設定檔中嗎？"
 
-#: kmailtransport/transport.cpp:222
+#: kmailtransport/transport.cpp:226
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "無法使用 KWallet"
 
-#: kmailtransport/transport.cpp:223
+#: kmailtransport/transport.cpp:227
 #, kde-format
 msgid "Store Password"
 msgstr "儲存密碼"
 
-#: kmailtransport/transport.cpp:224
+#: kmailtransport/transport.cpp:228
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "不要儲存"
@@ -502,27 +511,27 @@ msgstr "不要儲存"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "外送帳號 %1 未正確設定。"
 
-#: kmailtransport/transportmanager.cpp:233
+#: kmailtransport/transportmanager.cpp:230
 #, kde-format
 msgid "Default Transport"
 msgstr "預設傳送設定"
 
-#: kmailtransport/transportmanager.cpp:252
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "您必須建立外送郵件帳號才能傳送信件。"
 
-#: kmailtransport/transportmanager.cpp:253
+#: kmailtransport/transportmanager.cpp:250
 #, kde-format
 msgid "Create Account Now?"
 msgstr "要現在建立帳號嗎？"
 
-#: kmailtransport/transportmanager.cpp:254
+#: kmailtransport/transportmanager.cpp:251
 #, kde-format
 msgid "Create Account Now"
 msgstr "現在建立帳號"
 
-#: kmailtransport/transportmanager.cpp:694
+#: kmailtransport/transportmanager.cpp:637
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -536,17 +545,17 @@ msgstr ""
 "強烈建議使用 KWallet 來儲存密碼，因為有較高的安全性。\n"
 "您要將您的密碼移到 KWallet 中嗎？"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:644
 #, kde-format
 msgid "Question"
 msgstr "問題"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:645
 #, kde-format
 msgid "Migrate"
 msgstr "請幫我移動"
 
-#: kmailtransport/transportmanager.cpp:703
+#: kmailtransport/transportmanager.cpp:646
 #, kde-format
 msgid "Keep"
 msgstr "保持現狀"

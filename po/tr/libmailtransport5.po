@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-19 00:47+0000\n"
+"POT-Creation-Date: 2022-10-22 00:46+0000\n"
 "PO-Revision-Date: 2022-04-27 12:58+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -457,36 +457,45 @@ msgstr "Ön komut çöktü."
 msgid "The precommand exited with code %1."
 msgstr "Ön komuttan '%1' kodu ile çıkıldı."
 
-#: kmailtransport/transport.cpp:87
+#: kmailtransport/transport.cpp:86
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:136
+#: kmailtransport/transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Metni temizle"
 
-#: kmailtransport/transport.cpp:140
+#: kmailtransport/transport.cpp:139
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonim"
 
-#: kmailtransport/transport.cpp:171
+#: kmailtransport/transport.cpp:170
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: kmailtransport/transport.cpp:213
-#, kde-format
+#: kmailtransport/transport.cpp:217
+#, fuzzy, kde-format
+#| msgid ""
+#| "KWallet is not available. It is strongly recommended to use KWallet for "
+#| "managing your passwords.\n"
+#| "However, the password can be stored in the configuration file instead. "
+#| "The password is stored in an obfuscated format, but should not be "
+#| "considered secure from decryption efforts if access to the configuration "
+#| "file is obtained.\n"
+#| "Do you want to store the password for server '%1' in the configuration "
+#| "file?"
 msgid ""
-"KWallet is not available. It is strongly recommended to use KWallet for "
-"managing your passwords.\n"
+"QKeychain not found a backend for storing your password. It is strongly "
+"recommended to use strong backend for managing your passwords.\n"
 "However, the password can be stored in the configuration file instead. The "
 "password is stored in an obfuscated format, but should not be considered "
 "secure from decryption efforts if access to the configuration file is "
@@ -502,17 +511,17 @@ msgstr ""
 "'%1' sunucusu için parolanızı yapılandırma dosyasında saklamak istiyor "
 "musunuz?"
 
-#: kmailtransport/transport.cpp:222
+#: kmailtransport/transport.cpp:226
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet Kullanılabilir Değil"
 
-#: kmailtransport/transport.cpp:223
+#: kmailtransport/transport.cpp:227
 #, kde-format
 msgid "Store Password"
 msgstr "Parolayı Kaydet"
 
-#: kmailtransport/transport.cpp:224
+#: kmailtransport/transport.cpp:228
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Parolayı Kaydetme"
@@ -522,27 +531,27 @@ msgstr "Parolayı Kaydetme"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "\"%1\" giden hesabı, doğru bir şekilde yapılandırılmamış."
 
-#: kmailtransport/transportmanager.cpp:233
+#: kmailtransport/transportmanager.cpp:230
 #, kde-format
 msgid "Default Transport"
 msgstr "Öntanımlı Aktarım"
 
-#: kmailtransport/transportmanager.cpp:252
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Göndermeden önce bir giden e-posta hesabı oluşturmalısınız."
 
-#: kmailtransport/transportmanager.cpp:253
+#: kmailtransport/transportmanager.cpp:250
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Şimdi Yeni Hesap Oluşturulsun mu?"
 
-#: kmailtransport/transportmanager.cpp:254
+#: kmailtransport/transportmanager.cpp:251
 #, kde-format
 msgid "Create Account Now"
 msgstr "Şimdi Yeni Hesap Oluştur"
 
-#: kmailtransport/transportmanager.cpp:694
+#: kmailtransport/transportmanager.cpp:637
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -559,17 +568,17 @@ msgstr ""
 "KDE Cüzdan Yönetim aracı KWallet içerisine taşımaya dikkat edin.\n"
 "Parolalarınızı KWallet içerisine taşımak istiyor musunuz?"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:644
 #, kde-format
 msgid "Question"
 msgstr "Soru"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:645
 #, kde-format
 msgid "Migrate"
 msgstr "Taşı"
 
-#: kmailtransport/transportmanager.cpp:703
+#: kmailtransport/transportmanager.cpp:646
 #, kde-format
 msgid "Keep"
 msgstr "Koru"

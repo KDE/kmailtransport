@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-19 00:47+0000\n"
+"POT-Creation-Date: 2022-10-22 00:46+0000\n"
 "PO-Revision-Date: 2022-04-27 14:15+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -461,36 +461,45 @@ msgstr "L'ordre prèvia ha fallat."
 msgid "The precommand exited with code %1."
 msgstr "L'ordre prèvia ha sortit amb el codi %1."
 
-#: kmailtransport/transport.cpp:87
+#: kmailtransport/transport.cpp:86
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 núm. %2"
 
-#: kmailtransport/transport.cpp:136
+#: kmailtransport/transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Text en clar"
 
-#: kmailtransport/transport.cpp:140
+#: kmailtransport/transport.cpp:139
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anònim"
 
-#: kmailtransport/transport.cpp:171
+#: kmailtransport/transport.cpp:170
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: kmailtransport/transport.cpp:213
-#, kde-format
+#: kmailtransport/transport.cpp:217
+#, fuzzy, kde-format
+#| msgid ""
+#| "KWallet is not available. It is strongly recommended to use KWallet for "
+#| "managing your passwords.\n"
+#| "However, the password can be stored in the configuration file instead. "
+#| "The password is stored in an obfuscated format, but should not be "
+#| "considered secure from decryption efforts if access to the configuration "
+#| "file is obtained.\n"
+#| "Do you want to store the password for server '%1' in the configuration "
+#| "file?"
 msgid ""
-"KWallet is not available. It is strongly recommended to use KWallet for "
-"managing your passwords.\n"
+"QKeychain not found a backend for storing your password. It is strongly "
+"recommended to use strong backend for managing your passwords.\n"
 "However, the password can be stored in the configuration file instead. The "
 "password is stored in an obfuscated format, but should not be considered "
 "secure from decryption efforts if access to the configuration file is "
@@ -505,17 +514,17 @@ msgstr ""
 "configuració.\n"
 "Voleu desar la contrasenya per al servidor «%1» en el fitxer de configuració?"
 
-#: kmailtransport/transport.cpp:222
+#: kmailtransport/transport.cpp:226
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "El KWallet no està disponible"
 
-#: kmailtransport/transport.cpp:223
+#: kmailtransport/transport.cpp:227
 #, kde-format
 msgid "Store Password"
 msgstr "Emmagatzema la contrasenya"
 
-#: kmailtransport/transport.cpp:224
+#: kmailtransport/transport.cpp:228
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "No emmagatzemis la contrasenya"
@@ -525,27 +534,27 @@ msgstr "No emmagatzemis la contrasenya"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "El compte sortint «%1» no està configurat correctament."
 
-#: kmailtransport/transportmanager.cpp:233
+#: kmailtransport/transportmanager.cpp:230
 #, kde-format
 msgid "Default Transport"
 msgstr "Transport predeterminat"
 
-#: kmailtransport/transportmanager.cpp:252
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Heu de crear un compte sortint abans d'enviar."
 
-#: kmailtransport/transportmanager.cpp:253
+#: kmailtransport/transportmanager.cpp:250
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Creo un compte ara?"
 
-#: kmailtransport/transportmanager.cpp:254
+#: kmailtransport/transportmanager.cpp:251
 #, kde-format
 msgid "Create Account Now"
 msgstr "Crea un compte ara"
 
-#: kmailtransport/transportmanager.cpp:694
+#: kmailtransport/transportmanager.cpp:637
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -562,17 +571,17 @@ msgstr ""
 "confidencials en un fitxer robustament encriptat.\n"
 "Voleu migrar les contrasenyes al KWallet?"
 
-#: kmailtransport/transportmanager.cpp:701
+#: kmailtransport/transportmanager.cpp:644
 #, kde-format
 msgid "Question"
 msgstr "Pregunta"
 
-#: kmailtransport/transportmanager.cpp:702
+#: kmailtransport/transportmanager.cpp:645
 #, kde-format
 msgid "Migrate"
 msgstr "Migra"
 
-#: kmailtransport/transportmanager.cpp:703
+#: kmailtransport/transportmanager.cpp:646
 #, kde-format
 msgid "Keep"
 msgstr "Conserva"
