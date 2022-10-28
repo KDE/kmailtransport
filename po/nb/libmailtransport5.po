@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-09-30 00:46+0000\n"
+"POT-Creation-Date: 2022-10-22 00:46+0000\n"
 "PO-Revision-Date: 2014-09-23 22:07+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -450,60 +450,54 @@ msgstr "Forkommandoen krasjet."
 msgid "The precommand exited with code %1."
 msgstr "Forkommandoen avsluttet med kode %1."
 
-#: kmailtransport/transport.cpp:85
+#: kmailtransport/transport.cpp:86
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 nr. %2"
 
-#: kmailtransport/transport.cpp:134
+#: kmailtransport/transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Klartekst"
 
-#: kmailtransport/transport.cpp:138
+#: kmailtransport/transport.cpp:139
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonym"
 
-#: kmailtransport/transport.cpp:169
+#: kmailtransport/transport.cpp:170
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Ukjent"
 
-#: kmailtransport/transport.cpp:207
+#: kmailtransport/transport.cpp:217
 #, kde-format
 msgid ""
-"KWallet is not available. It is strongly recommended to use KWallet for "
-"managing your passwords.\n"
+"QKeychain not found a backend for storing your password. It is strongly "
+"recommended to use strong backend for managing your passwords.\n"
 "However, the password can be stored in the configuration file instead. The "
 "password is stored in an obfuscated format, but should not be considered "
 "secure from decryption efforts if access to the configuration file is "
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
-"KWallet er ikke tilgjengelig. Det anbefales på det sterkeste å bruke KWallet "
-"til å holde styr på passordene.\n"
-"Passordet kan lagres i oppsettsfila i stedet. Passordet lagres i et "
-"forvrengt format, men bør ikke anses som sikkert mot dekryptering hvis noen "
-"får tilgang til oppsettsfila.\n"
-"Vil du lagre passordet for tjeneren «%1» i oppsettsfila?"
 
-#: kmailtransport/transport.cpp:216
+#: kmailtransport/transport.cpp:226
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet er ikke tilgjengelig"
 
-#: kmailtransport/transport.cpp:217
+#: kmailtransport/transport.cpp:227
 #, kde-format
 msgid "Store Password"
 msgstr "Lagre Passord"
 
-#: kmailtransport/transport.cpp:218
+#: kmailtransport/transport.cpp:228
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Ikke lagre passord"
@@ -513,27 +507,27 @@ msgstr "Ikke lagre passord"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Sendingskontoen «%1» er ikke satt opp riktig."
 
-#: kmailtransport/transportmanager.cpp:232
+#: kmailtransport/transportmanager.cpp:230
 #, kde-format
 msgid "Default Transport"
 msgstr "Standardtransport"
 
-#: kmailtransport/transportmanager.cpp:251
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Du må lage en sendingskonto før du sender."
 
-#: kmailtransport/transportmanager.cpp:252
+#: kmailtransport/transportmanager.cpp:250
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Opprette konto nå?"
 
-#: kmailtransport/transportmanager.cpp:253
+#: kmailtransport/transportmanager.cpp:251
 #, kde-format
 msgid "Create Account Now"
 msgstr "Opprett konto nå"
 
-#: kmailtransport/transportmanager.cpp:688
+#: kmailtransport/transportmanager.cpp:637
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -550,17 +544,17 @@ msgstr ""
 "sensitive data for deg i en fil med sterk kryptering.\n"
 "Vil du at passordene skal flyttes over til KWallet?"
 
-#: kmailtransport/transportmanager.cpp:695
+#: kmailtransport/transportmanager.cpp:644
 #, kde-format
 msgid "Question"
 msgstr "Spørsmål"
 
-#: kmailtransport/transportmanager.cpp:696
+#: kmailtransport/transportmanager.cpp:645
 #, kde-format
 msgid "Migrate"
 msgstr "Flytt"
 
-#: kmailtransport/transportmanager.cpp:697
+#: kmailtransport/transportmanager.cpp:646
 #, kde-format
 msgid "Keep"
 msgstr "Behold"
@@ -662,44 +656,45 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (Standard)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:136
+#: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Er det sikkert at du vil fjerne sendingskonto %1?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:137
+#: kmailtransport/widgets/transportmanagementwidget.cpp:139
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#: kmailtransport/widgets/transportmanagementwidget.cpp:142
+#: kmailtransport/widgets/transportmanagementwidget.cpp:144
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Fjerne sendingskonto?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:160
+#: kmailtransport/widgets/transportmanagementwidget.cpp:170
 #, kde-format
 msgid "Add..."
 msgstr "Legg til …"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:165
+#: kmailtransport/widgets/transportmanagementwidget.cpp:175
 #, kde-format
 msgid "Modify..."
 msgstr "Endre …"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:168
+#: kmailtransport/widgets/transportmanagementwidget.cpp:178
 #, kde-format
 msgid "Rename"
 msgstr "Endre navn"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:172
+#: kmailtransport/widgets/transportmanagementwidget.cpp:182
 #, kde-format
 msgid "Remove"
 msgstr "Fjern"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:177
+#: kmailtransport/widgets/transportmanagementwidget.cpp:187
 #, kde-format
 msgid "Set as Default"
 msgstr "Velg som standard"
