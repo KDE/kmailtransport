@@ -1,7 +1,7 @@
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
-kcoreaddons_add_plugin(mailtransport_smtpplugin INSTALL_NAMESPACE "kf${QT_MAJOR_VERSION}/mailtransport")
+kcoreaddons_add_plugin(mailtransport_smtpplugin INSTALL_NAMESPACE "pim${QT_MAJOR_VERSION}/mailtransport")
 
 target_sources(mailtransport_smtpplugin PRIVATE
     smtpmailtransportplugin.cpp
