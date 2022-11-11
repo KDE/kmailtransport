@@ -55,7 +55,7 @@ void TransportPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return;
     }
-    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("kf" QT_STRINGIFY(QT_VERSION_MAJOR) "/mailtransport"));
+    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim" QT_STRINGIFY(QT_VERSION_MAJOR) "/mailtransport"));
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
