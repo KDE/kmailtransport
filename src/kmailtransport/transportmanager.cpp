@@ -23,7 +23,6 @@
 #include <QRandomGenerator>
 #include <QRegularExpression>
 #include <QStringList>
-#include <kwidgetsaddons_version.h>
 
 #include "mailtransport_debug.h"
 #include <KConfig>
@@ -629,11 +628,7 @@ void TransportManagerPrivate::migrateToWallet()
     }
 
     // ask user if he wants to migrate
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     int result = KMessageBox::questionTwoActionsList(nullptr,
-#else
-    int result = KMessageBox::questionYesNoList(nullptr,
-#endif
                                                      i18n("The following mail transports store their passwords in an "
                                                           "unencrypted configuration file.\nFor security reasons, "
                                                           "please consider migrating these passwords to KWallet, the "
@@ -645,11 +640,7 @@ void TransportManagerPrivate::migrateToWallet()
                                                      KGuiItem(i18n("Migrate")),
                                                      KGuiItem(i18n("Keep")),
                                                      QStringLiteral("WalletMigrate"));
-#if KWIDGETSADDONS_VERSION >= QT_VERSION_CHECK(5, 100, 0)
     if (result != KMessageBox::ButtonCode::PrimaryAction) {
-#else
-    if (result != KMessageBox::Yes) {
-#endif
         return;
     }
 
