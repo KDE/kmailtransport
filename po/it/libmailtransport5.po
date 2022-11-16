@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:46+0000\n"
-"PO-Revision-Date: 2022-04-29 18:48+0200\n"
+"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"PO-Revision-Date: 2022-11-13 00:08+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 23.03.70\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:12
@@ -456,42 +456,33 @@ msgstr "Il precomando è andato in crash."
 msgid "The precommand exited with code %1."
 msgstr "Il precomando è terminato con codice %1."
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:85
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:135
+#: kmailtransport/transport.cpp:134
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Testo in chiaro"
 
-#: kmailtransport/transport.cpp:139
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonimo"
 
-#: kmailtransport/transport.cpp:170
+#: kmailtransport/transport.cpp:169
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Sconosciuto"
 
-#: kmailtransport/transport.cpp:217
-#, fuzzy, kde-format
-#| msgid ""
-#| "KWallet is not available. It is strongly recommended to use KWallet for "
-#| "managing your passwords.\n"
-#| "However, the password can be stored in the configuration file instead. "
-#| "The password is stored in an obfuscated format, but should not be "
-#| "considered secure from decryption efforts if access to the configuration "
-#| "file is obtained.\n"
-#| "Do you want to store the password for server '%1' in the configuration "
-#| "file?"
+#: kmailtransport/transport.cpp:212
+#, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
 "recommended to use strong backend for managing your passwords.\n"
@@ -501,25 +492,25 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
-"Il portafogli di KDE non è disponibile. Si raccomanda caldamente di usare il "
-"portafogli di KDE per gestire le password.\n"
+"QKeyChain non ha trovato un motore per la memorizzazione della password. Si "
+"raccomanda caldamente di usare un motore robusto per gestire le password.\n"
 "Tuttavia, la password può essere salvata anche nel file di configurazione. "
 "La password viene salvata in un formato difficile da leggere, ma non "
 "dovrebbe essere considerata al sicuro da tentativi di decifrazione se "
 "qualcuno dovesse ottenere accesso al file di configurazione.\n"
 "Vuoi salvare la password per il server «%1» nel file di configurazione?"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:221
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "Portafogli di KDE non disponibile"
 
-#: kmailtransport/transport.cpp:227
+#: kmailtransport/transport.cpp:222
 #, kde-format
 msgid "Store Password"
 msgstr "Salva la password"
 
-#: kmailtransport/transport.cpp:228
+#: kmailtransport/transport.cpp:223
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Non salvare la password"
@@ -529,27 +520,27 @@ msgstr "Non salvare la password"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "L'account di uscita «%1» non è configurato correttamente."
 
-#: kmailtransport/transportmanager.cpp:230
+#: kmailtransport/transportmanager.cpp:229
 #, kde-format
 msgid "Default Transport"
 msgstr "Trasporto predefinito"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Devi creare un account di uscita prima di inviare."
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Crea l'account adesso?"
 
-#: kmailtransport/transportmanager.cpp:251
+#: kmailtransport/transportmanager.cpp:250
 #, kde-format
 msgid "Create Account Now"
 msgstr "Crea l'account adesso"
 
-#: kmailtransport/transportmanager.cpp:637
+#: kmailtransport/transportmanager.cpp:632
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -566,17 +557,17 @@ msgstr ""
 "che memorizza i tuoi dati sensibili in un file fortemente cifrato.\n"
 "Vuoi far migrare le password al portafogli di KDE?"
 
-#: kmailtransport/transportmanager.cpp:644
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Question"
 msgstr "Domanda"
 
-#: kmailtransport/transportmanager.cpp:645
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Migrate"
 msgstr "Migra"
 
-#: kmailtransport/transportmanager.cpp:646
+#: kmailtransport/transportmanager.cpp:641
 #, kde-format
 msgid "Keep"
 msgstr "Mantieni"
@@ -678,45 +669,44 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (predefinito)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:138
+#: kmailtransport/widgets/transportmanagementwidget.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Vuoi rimuovere l'account di uscita «%1»?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Vuoi davvero rimuovere questo %1 account di uscita?"
 msgstr[1] "Vuoi davvero rimuovere questi %1 account di uscita?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:142
-#: kmailtransport/widgets/transportmanagementwidget.cpp:144
+#: kmailtransport/widgets/transportmanagementwidget.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Rimuovi l'account di uscita?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:170
+#: kmailtransport/widgets/transportmanagementwidget.cpp:161
 #, kde-format
 msgid "Add..."
 msgstr "Aggiungi..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:175
+#: kmailtransport/widgets/transportmanagementwidget.cpp:166
 #, kde-format
 msgid "Modify..."
 msgstr "Modifica..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:178
+#: kmailtransport/widgets/transportmanagementwidget.cpp:169
 #, kde-format
 msgid "Rename"
 msgstr "Rinomina"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:182
+#: kmailtransport/widgets/transportmanagementwidget.cpp:173
 #, kde-format
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:187
+#: kmailtransport/widgets/transportmanagementwidget.cpp:178
 #, kde-format
 msgid "Set as Default"
 msgstr "Imposta come predefinito"

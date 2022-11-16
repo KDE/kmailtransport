@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:46+0000\n"
+"POT-Creation-Date: 2022-11-16 00:47+0000\n"
 "PO-Revision-Date: 2014-09-04 15:25+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -454,32 +454,32 @@ msgstr "Az előparancs lefagyott."
 msgid "The precommand exited with code %1."
 msgstr "Az előparancs befejeződött, kilépési kód: %1"
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:85
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:135
+#: kmailtransport/transport.cpp:134
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Sima szöveg"
 
-#: kmailtransport/transport.cpp:139
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Névtelen"
 
-#: kmailtransport/transport.cpp:170
+#: kmailtransport/transport.cpp:169
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: kmailtransport/transport.cpp:217
+#: kmailtransport/transport.cpp:212
 #, fuzzy, kde-format
 #| msgid ""
 #| "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -507,17 +507,17 @@ msgstr ""
 "El szeretné menteni a(z) '%1' kiszolgáló eléréséhez használt jelszót a "
 "beállítófájlba?"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:221
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "A KWallet nem érhető el"
 
-#: kmailtransport/transport.cpp:227
+#: kmailtransport/transport.cpp:222
 #, kde-format
 msgid "Store Password"
 msgstr "A jelszó elmentése"
 
-#: kmailtransport/transport.cpp:228
+#: kmailtransport/transport.cpp:223
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "A jelszót nem kell elmenteni"
@@ -527,27 +527,27 @@ msgstr "A jelszót nem kell elmenteni"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "A(z) „%1” kimenő fiók nincs helyesen beállítva."
 
-#: kmailtransport/transportmanager.cpp:230
+#: kmailtransport/transportmanager.cpp:229
 #, kde-format
 msgid "Default Transport"
 msgstr "Alapértelmezett továbbító"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Létre kell hoznia egy kimenő fiókot a küldés előtt."
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Új fiók létrehozása?"
 
-#: kmailtransport/transportmanager.cpp:251
+#: kmailtransport/transportmanager.cpp:250
 #, kde-format
 msgid "Create Account Now"
 msgstr "Fiók létrehozása most"
 
-#: kmailtransport/transportmanager.cpp:637
+#: kmailtransport/transportmanager.cpp:632
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -563,17 +563,17 @@ msgstr ""
 "alkalmazó jelszótárolási mód, ezért érdemes áttérni a használatára.\n"
 "Át szeretné helyezni a jelszavakat a KWalletbe?"
 
-#: kmailtransport/transportmanager.cpp:644
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Question"
 msgstr "Kérdés"
 
-#: kmailtransport/transportmanager.cpp:645
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Migrate"
 msgstr "Migrálás"
 
-#: kmailtransport/transportmanager.cpp:646
+#: kmailtransport/transportmanager.cpp:641
 #, kde-format
 msgid "Keep"
 msgstr "Megtartás"
@@ -677,12 +677,12 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (Alapértelmezés)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:138
+#: kmailtransport/widgets/transportmanagementwidget.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Szeretné eltávolítani a(z) „%1” kimenő fiókot?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -690,33 +690,32 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Szeretné eltávolítani a(z) „%1” kimenő fiókot?"
 msgstr[1] "Szeretné eltávolítani a(z) „%1” kimenő fiókot?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:142
-#: kmailtransport/widgets/transportmanagementwidget.cpp:144
+#: kmailtransport/widgets/transportmanagementwidget.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Kimenő fiók eltávolítása?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:170
+#: kmailtransport/widgets/transportmanagementwidget.cpp:161
 #, kde-format
 msgid "Add..."
 msgstr "Hozzáadás…"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:175
+#: kmailtransport/widgets/transportmanagementwidget.cpp:166
 #, kde-format
 msgid "Modify..."
 msgstr "Módosítás…"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:178
+#: kmailtransport/widgets/transportmanagementwidget.cpp:169
 #, kde-format
 msgid "Rename"
 msgstr "Átnevezés"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:182
+#: kmailtransport/widgets/transportmanagementwidget.cpp:173
 #, kde-format
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:187
+#: kmailtransport/widgets/transportmanagementwidget.cpp:178
 #, kde-format
 msgid "Set as Default"
 msgstr "Beállítás alapértelmezettként"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:46+0000\n"
+"POT-Creation-Date: 2022-11-16 00:47+0000\n"
 "PO-Revision-Date: 2019-12-18 19:47+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -447,32 +447,32 @@ msgstr "Eelkäsku tabas krahh."
 msgid "The precommand exited with code %1."
 msgstr "Eelkäsk lõpetas koodiga %1."
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:85
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:135
+#: kmailtransport/transport.cpp:134
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Lihttekst"
 
-#: kmailtransport/transport.cpp:139
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonüümne"
 
-#: kmailtransport/transport.cpp:170
+#: kmailtransport/transport.cpp:169
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Tundmatu"
 
-#: kmailtransport/transport.cpp:217
+#: kmailtransport/transport.cpp:212
 #, fuzzy, kde-format
 #| msgid ""
 #| "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -499,17 +499,17 @@ msgstr ""
 "seadistustefailile võivad teatud pingutusega juurdepääsu saada ka võõrad.\n"
 "Kas salvestada serveri '%1' parool seadistustefaili?"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:221
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet pole saadaval"
 
-#: kmailtransport/transport.cpp:227
+#: kmailtransport/transport.cpp:222
 #, kde-format
 msgid "Store Password"
 msgstr "Salvesta parool"
 
-#: kmailtransport/transport.cpp:228
+#: kmailtransport/transport.cpp:223
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Ära salvesta parooli"
@@ -519,27 +519,27 @@ msgstr "Ära salvesta parooli"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Väljuvate kirjade konto \"%1\" ei ole korrektselt seadistatud."
 
-#: kmailtransport/transportmanager.cpp:230
+#: kmailtransport/transportmanager.cpp:229
 #, kde-format
 msgid "Default Transport"
 msgstr "Vaikimisi kirjade saatmise viis"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Enne saatmist tuleb luua väljuvate kirjade konto."
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Kas luua konto nüüd?"
 
-#: kmailtransport/transportmanager.cpp:251
+#: kmailtransport/transportmanager.cpp:250
 #, kde-format
 msgid "Create Account Now"
 msgstr "Loo konto nüüd"
 
-#: kmailtransport/transportmanager.cpp:637
+#: kmailtransport/transportmanager.cpp:632
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -556,17 +556,17 @@ msgstr ""
 "mis salvestab sinu tundlikud andmed tugevasti krüptitud faili.\n"
 "Kas kanda paroolid üle KWalletisse?"
 
-#: kmailtransport/transportmanager.cpp:644
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Question"
 msgstr "Küsimus"
 
-#: kmailtransport/transportmanager.cpp:645
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Migrate"
 msgstr "Kanna üle"
 
-#: kmailtransport/transportmanager.cpp:646
+#: kmailtransport/transportmanager.cpp:641
 #, kde-format
 msgid "Keep"
 msgstr "Hoia alles"
@@ -668,12 +668,12 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (vaikimisi)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:138
+#: kmailtransport/widgets/transportmanagementwidget.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Kas eemaldada väljuvate kirjade konto \"%1\"?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -681,33 +681,32 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Kas eemaldada väljuvate kirjade konto \"%1\"?"
 msgstr[1] "Kas eemaldada väljuvate kirjade konto \"%1\"?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:142
-#: kmailtransport/widgets/transportmanagementwidget.cpp:144
+#: kmailtransport/widgets/transportmanagementwidget.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Kas eemaldada väljuvate kirjade konto?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:170
+#: kmailtransport/widgets/transportmanagementwidget.cpp:161
 #, kde-format
 msgid "Add..."
 msgstr "Lisa..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:175
+#: kmailtransport/widgets/transportmanagementwidget.cpp:166
 #, kde-format
 msgid "Modify..."
 msgstr "Muuda..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:178
+#: kmailtransport/widgets/transportmanagementwidget.cpp:169
 #, kde-format
 msgid "Rename"
 msgstr "Muuda nime"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:182
+#: kmailtransport/widgets/transportmanagementwidget.cpp:173
 #, kde-format
 msgid "Remove"
 msgstr "Eemalda"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:187
+#: kmailtransport/widgets/transportmanagementwidget.cpp:178
 #, kde-format
 msgid "Set as Default"
 msgstr "Sea vaikeväärtuseks"

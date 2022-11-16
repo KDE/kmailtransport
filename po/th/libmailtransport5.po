@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-10-22 00:46+0000\n"
+"POT-Creation-Date: 2022-11-16 00:47+0000\n"
 "PO-Revision-Date: 2010-02-28 18:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -488,32 +488,32 @@ msgstr "การทำงานของคำสั่งที่ใช้ก
 msgid "The precommand exited with code %1."
 msgstr "คำสั่งที่ใช้ก่อนจบการทำงานด้วยรหัส %1"
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:85
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:135
+#: kmailtransport/transport.cpp:134
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr ""
 
-#: kmailtransport/transport.cpp:139
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr ""
 
-#: kmailtransport/transport.cpp:170
+#: kmailtransport/transport.cpp:169
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "ไม่ทราบ"
 
-#: kmailtransport/transport.cpp:217
+#: kmailtransport/transport.cpp:212
 #, fuzzy, kde-format
 #| msgid ""
 #| "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -542,17 +542,17 @@ msgstr ""
 "คุณแน่ใจหรือไม่ว่า ต้องการจะทำการจัดเก็บรหัสผ่านสำหรับเซิร์ฟเวอร์ '%1' ไว้ในแฟ้มค่าปรับแต่งจริง "
 "ๆ ?"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:221
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "ไม่มีโปรแกรมกระเป๋าคุมข้อมูล-K (KWallet) อยู่"
 
-#: kmailtransport/transport.cpp:227
+#: kmailtransport/transport.cpp:222
 #, kde-format
 msgid "Store Password"
 msgstr "จัดเก็บรหัสผ่าน"
 
-#: kmailtransport/transport.cpp:228
+#: kmailtransport/transport.cpp:223
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "ไม่ต้องจัดเก็บรหัสผ่าน"
@@ -563,27 +563,27 @@ msgstr "ไม่ต้องจัดเก็บรหัสผ่าน"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "บริการจัดส่งจดหมาย \"%1\" ถูกปรับแต่งค่าไว้อย่างไม่ถูกต้อง"
 
-#: kmailtransport/transportmanager.cpp:230
+#: kmailtransport/transportmanager.cpp:229
 #, kde-format
 msgid "Default Transport"
 msgstr "เครื่องมือส่งจดหมายปริยาย"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "คุณต้องสร้างบัญชีผู้ใช้สำหรับจัดส่งจดหมายก่อน จึงจะทำการส่งได้"
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now?"
 msgstr "จะสร้างบัญชีผู้ใช้งานเดี๋ยวนี้หรือไม่ ?"
 
-#: kmailtransport/transportmanager.cpp:251
+#: kmailtransport/transportmanager.cpp:250
 #, kde-format
 msgid "Create Account Now"
 msgstr "สร้างบัญชีผู้ใช้งานเดี๋ยวนี้"
 
-#: kmailtransport/transportmanager.cpp:637
+#: kmailtransport/transportmanager.cpp:632
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -601,17 +601,17 @@ msgstr ""
 "ซึ่งจะมีการจัดเก็บข้อมูลในรูปแบบแฟ้มเข้ารหัสที่แข็งแกร่งมาก\n"
 "คุณต้องการจะทำการผนวกรวมรหัสผ่านของคุณเข้าไปยังระบบกระเป๋าคุมข้อมูล-K หรือไม่ ?"
 
-#: kmailtransport/transportmanager.cpp:644
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Question"
 msgstr "คำถาม"
 
-#: kmailtransport/transportmanager.cpp:645
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Migrate"
 msgstr "ผนวกรวม"
 
-#: kmailtransport/transportmanager.cpp:646
+#: kmailtransport/transportmanager.cpp:641
 #, kde-format
 msgid "Keep"
 msgstr "คงไว้"
@@ -715,49 +715,48 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr "(ค่าปริยาย)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:138
+#: kmailtransport/widgets/transportmanagementwidget.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr ""
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:139
+#: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:142
-#: kmailtransport/widgets/transportmanagementwidget.cpp:144
+#: kmailtransport/widgets/transportmanagementwidget.cpp:140
 #, fuzzy, kde-format
 #| msgid "Create Outgoing Account"
 msgid "Remove outgoing account?"
 msgstr "สร้างบัญชีผู้ใช้สำหรับส่งจดหมาย"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:170
+#: kmailtransport/widgets/transportmanagementwidget.cpp:161
 #, fuzzy, kde-format
 #| msgid "A&dd..."
 msgid "Add..."
 msgstr "เพิ่ม..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:175
+#: kmailtransport/widgets/transportmanagementwidget.cpp:166
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgid "Modify..."
 msgstr "แก้ไข..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:178
+#: kmailtransport/widgets/transportmanagementwidget.cpp:169
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename"
 msgstr "เป&ลี่ยนชื่อ"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:182
+#: kmailtransport/widgets/transportmanagementwidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
 msgid "Remove"
 msgstr "เ&อาออก"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:187
+#: kmailtransport/widgets/transportmanagementwidget.cpp:178
 #, fuzzy, kde-format
 #| msgid "&Set as Default"
 msgid "Set as Default"
