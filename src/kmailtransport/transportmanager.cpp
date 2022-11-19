@@ -243,12 +243,11 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent, ShowConditio
             return true;
         }
 
-        const int response = KMessageBox::messageBox(parent,
-                                                     KMessageBox::WarningContinueCancel,
-                                                     i18n("You must create an outgoing account before sending."),
-                                                     i18n("Create Account Now?"),
-                                                     KGuiItem(i18n("Create Account Now")),
-                                                     KStandardGuiItem::cancel());
+        const int response = KMessageBox::warningContinueCancel(parent,
+                                                                i18n("You must create an outgoing account before sending."),
+                                                                i18n("Create Account Now?"),
+                                                                KGuiItem(i18n("Create Account Now")),
+                                                                KStandardGuiItem::cancel());
         if (response != KMessageBox::Continue) {
             return false;
         }
