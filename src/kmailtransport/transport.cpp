@@ -188,9 +188,9 @@ void Transport::usrRead()
     if (!d->password.isEmpty()) {
         d->passwordLoaded = true;
         if (KWallet::Wallet::isEnabled()) {
-            //TODO: Needs to replaced with a check, if a backend is available.
-            // 2022-10-12: QtKeyChain has no method to request, if there is any backend.
-            // see https://github.com/frankosterfeld/qtkeychain/issues/224
+            // TODO: Needs to replaced with a check, if a backend is available.
+            //  2022-10-12: QtKeyChain has no method to request, if there is any backend.
+            //  see https://github.com/frankosterfeld/qtkeychain/issues/224
             d->needsWalletMigration = true;
         } else {
             d->storePasswordInFile = true;
@@ -203,7 +203,7 @@ bool Transport::usrSave()
     if (requiresAuthentication() && storePassword() && d->passwordDirty) {
         const QString storePassword = d->password;
         auto writeJob = new WritePasswordJob(WALLET_FOLDER, this);
-        connect(writeJob, &Job::finished, this, [=]{
+        connect(writeJob, &Job::finished, this, [=] {
             if (writeJob->error()) {
                 qWarning(MAILTRANSPORT_LOG()) << "WritePasswordJob failed with: " << writeJob->errorString();
                 // wallet saving failed, ask if we should store in the config file instead

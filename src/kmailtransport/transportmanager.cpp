@@ -71,7 +71,7 @@ public:
     int defaultTransportId = -1;
     bool isMainInstance = false;
     QList<TransportJob *> walletQueue;
-    QMap<Transport*, QMetaObject::Connection> passwordConnections;
+    QMap<Transport *, QMetaObject::Connection> passwordConnections;
     TransportManager *const q;
 
     void readConfig();
@@ -537,7 +537,7 @@ void TransportManager::loadPasswords()
         if (d->passwordConnections.contains(t)) {
             continue;
         }
-        auto conn = connect(t, &Transport::passwordLoaded, this, [&](){
+        auto conn = connect(t, &Transport::passwordLoaded, this, [&]() {
             disconnect(d->passwordConnections[t]);
             d->passwordConnections.remove(t);
             if (d->passwordConnections.count() == 0) {
@@ -560,7 +560,7 @@ void TransportManager::loadPasswordsAsync()
             if (d->passwordConnections.contains(t)) {
                 continue;
             }
-            auto conn = connect(t, &Transport::passwordLoaded, this, [&](){
+            auto conn = connect(t, &Transport::passwordLoaded, this, [&]() {
                 disconnect(d->passwordConnections[t]);
                 d->passwordConnections.remove(t);
                 if (d->passwordConnections.count() == 0) {
@@ -584,7 +584,7 @@ void TransportManagerPrivate::startQueuedJobs()
         }
     }
 
-    for (auto job: jobsToDel) {
+    for (auto job : jobsToDel) {
         walletQueue.removeAll(job);
     }
 }
