@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-21 00:47+0000\n"
 "PO-Revision-Date: 2019-12-18 19:47+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -524,22 +524,22 @@ msgstr "Väljuvate kirjade konto \"%1\" ei ole korrektselt seadistatud."
 msgid "Default Transport"
 msgstr "Vaikimisi kirjade saatmise viis"
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:247
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Enne saatmist tuleb luua väljuvate kirjade konto."
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Kas luua konto nüüd?"
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now"
 msgstr "Loo konto nüüd"
 
-#: kmailtransport/transportmanager.cpp:632
+#: kmailtransport/transportmanager.cpp:631
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -556,17 +556,17 @@ msgstr ""
 "mis salvestab sinu tundlikud andmed tugevasti krüptitud faili.\n"
 "Kas kanda paroolid üle KWalletisse?"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:638
 #, kde-format
 msgid "Question"
 msgstr "Küsimus"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Migrate"
 msgstr "Kanna üle"
 
-#: kmailtransport/transportmanager.cpp:641
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Keep"
 msgstr "Hoia alles"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-21 00:47+0000\n"
 "PO-Revision-Date: 2022-08-08 17:22+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -527,22 +527,22 @@ msgstr "Den udgående konto \"%1\" er ikke konfigureret korrekt."
 msgid "Default Transport"
 msgstr "Standardtransport"
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:247
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Du skal oprette en udgående konto før afsendelse."
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Opret en konto nu?"
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now"
 msgstr "Opret konto nu"
 
-#: kmailtransport/transportmanager.cpp:632
+#: kmailtransport/transportmanager.cpp:631
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -559,17 +559,17 @@ msgstr ""
 "som gemmer følsomme data for dig i en stærkt krypteret fil.\n"
 "Vil du flytte dine adgangskoder til KWallet?"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:638
 #, kde-format
 msgid "Question"
 msgstr "Spørgsmål"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Migrate"
 msgstr "Flyt"
 
-#: kmailtransport/transportmanager.cpp:641
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Keep"
 msgstr "Behold"

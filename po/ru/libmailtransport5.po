@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-21 00:47+0000\n"
 "PO-Revision-Date: 2022-10-02 14:32+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -539,22 +539,22 @@ msgstr "Учётная запись «%1» не настроена должны�
 msgid "Default Transport"
 msgstr "Транспорт по умолчанию"
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:247
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Сначала необходимо создать учётную запись для отправки почты."
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Создать учётную запись сейчас?"
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now"
 msgstr "Создать учётную запись"
 
-#: kmailtransport/transportmanager.cpp:632
+#: kmailtransport/transportmanager.cpp:631
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -570,17 +570,17 @@ msgstr ""
 "пароли и прочие важные данные.\n"
 "Перенести пароли в бумажник KDE?"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:638
 #, kde-format
 msgid "Question"
 msgstr "Вопрос"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Migrate"
 msgstr "Перенести в бумажник"
 
-#: kmailtransport/transportmanager.cpp:641
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Keep"
 msgstr "Оставить в файлах"

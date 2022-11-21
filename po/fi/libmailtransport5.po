@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-21 00:47+0000\n"
 "PO-Revision-Date: 2022-07-18 22:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -529,22 +529,22 @@ msgstr "Lähetystilin ”%1” asetuksia ei voi muokata."
 msgid "Default Transport"
 msgstr "Oletusvälitys"
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:247
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Ennen lähettämistä sinun on luotava lähtevä tili."
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Luodaanko tili nyt?"
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now"
 msgstr "Luo tili nyt"
 
-#: kmailtransport/transportmanager.cpp:632
+#: kmailtransport/transportmanager.cpp:631
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -561,17 +561,17 @@ msgstr ""
 "joka tallentaa yksityiset tietosi vahvasti salattuun tiedostoon.\n"
 "Haluatko siirtää salasanasi KWalletiin?"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:638
 #, kde-format
 msgid "Question"
 msgstr "Kysymys"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Migrate"
 msgstr "Siirrä"
 
-#: kmailtransport/transportmanager.cpp:641
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Keep"
 msgstr "Pidä"

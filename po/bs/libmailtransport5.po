@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-21 00:47+0000\n"
 "PO-Revision-Date: 2013-11-15 13:49+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -527,22 +527,22 @@ msgstr "Odlazni nalog \"%1\" nije ispravno konfigurisan."
 msgid "Default Transport"
 msgstr "Podrazumijevani transport"
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:247
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Morate kreirati izlazni račun prije slanja."
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Kreirati račun?"
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now"
 msgstr "Kreirati račun sada"
 
-#: kmailtransport/transportmanager.cpp:632
+#: kmailtransport/transportmanager.cpp:631
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -559,17 +559,17 @@ msgstr ""
 "koji sprema osjetljive podatke u jako šifrovanu datoteku.\n"
 "Da li želite prebaciti lozinke u KWallet?"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:638
 #, kde-format
 msgid "Question"
 msgstr "Pitanje"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Migrate"
 msgstr "Prebaci"
 
-#: kmailtransport/transportmanager.cpp:641
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Keep"
 msgstr "Zadrži"

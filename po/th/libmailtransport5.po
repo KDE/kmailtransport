@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-16 00:47+0000\n"
+"POT-Creation-Date: 2022-11-21 00:47+0000\n"
 "PO-Revision-Date: 2010-02-28 18:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -568,22 +568,22 @@ msgstr "บริการจัดส่งจดหมาย \"%1\" ถูก�
 msgid "Default Transport"
 msgstr "เครื่องมือส่งจดหมายปริยาย"
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:247
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "คุณต้องสร้างบัญชีผู้ใช้สำหรับจัดส่งจดหมายก่อน จึงจะทำการส่งได้"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "Create Account Now?"
 msgstr "จะสร้างบัญชีผู้ใช้งานเดี๋ยวนี้หรือไม่ ?"
 
-#: kmailtransport/transportmanager.cpp:250
+#: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now"
 msgstr "สร้างบัญชีผู้ใช้งานเดี๋ยวนี้"
 
-#: kmailtransport/transportmanager.cpp:632
+#: kmailtransport/transportmanager.cpp:631
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -601,17 +601,17 @@ msgstr ""
 "ซึ่งจะมีการจัดเก็บข้อมูลในรูปแบบแฟ้มเข้ารหัสที่แข็งแกร่งมาก\n"
 "คุณต้องการจะทำการผนวกรวมรหัสผ่านของคุณเข้าไปยังระบบกระเป๋าคุมข้อมูล-K หรือไม่ ?"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:638
 #, kde-format
 msgid "Question"
 msgstr "คำถาม"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Migrate"
 msgstr "ผนวกรวม"
 
-#: kmailtransport/transportmanager.cpp:641
+#: kmailtransport/transportmanager.cpp:640
 #, kde-format
 msgid "Keep"
 msgstr "คงไว้"
