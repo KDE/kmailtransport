@@ -308,7 +308,6 @@ void SmtpJobPrivate::doLogin()
         break;
     }
 
-    q->connect(login, &KJob::result, q, &SmtpJob::slotResult);
     q->addSubjob(login);
     login->start();
     qCDebug(MAILTRANSPORT_SMTP_LOG) << "Login started";
@@ -352,11 +351,12 @@ bool SmtpJob::doKill()
 void SmtpJob::slotResult(KJob *job)
 {
     if (s_sessionPool.isDestroyed()) {
+        removeSubjob(job);
         return;
     }
-
     if (qobject_cast<KSmtp::LoginJob *>(job)) {
         if (job->error() == KSmtp::LoginJob::TokenExpired) {
+            removeSubjob(job);
             startPasswordRetrieval(/*force refresh */ true);
             return;
         }
