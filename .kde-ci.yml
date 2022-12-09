@@ -11,3 +11,4 @@ Dependencies:
     'pim/kmime' : '@same'
     'pim/ksmtp' : '@same'
     'pim/libkgapi' : '@same'
+    'third-party/qtkeychain': '@latest'
