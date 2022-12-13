@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-21 00:47+0000\n"
-"PO-Revision-Date: 2022-12-11 10:14+0100\n"
+"PO-Revision-Date: 2022-12-12 07:29+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -135,6 +135,11 @@ msgid ""
 "should not be considered secure from decryption efforts if access to the "
 "configuration file is obtained."
 msgstr ""
+"ჩართეთ ეს პარამეტრი, თუ გნებავთ, თქვენი პაროლი დავიმახსოვროთ.\n"
+"თუ KWallet ხელმისაწვდომია, პაროლები იქ შეინახება და ეს უაფრთხოდაა მიჩნეული.\n"
+"მაგრამ თუ KWallet-ი ხელმისაწვდომი არაა, პაროლი კონფიგურაციის ფაილში იქნება "
+"შენახული. პაროლი დამახინჯებულ ფორმატში იქნება, მაგრამ ეს არ დაგიცავთ, თუ "
+"ვინმემ თქვენს ფაილებთან წვდომა მიიღო."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:56
@@ -184,6 +189,9 @@ msgid ""
 "server. This is useful when your system's hostname may not be set correctly "
 "or to mask your system's true hostname."
 msgstr ""
+"ჩართეთ ელფოსტის სერვერთან იდენტიფიკაციისთვის ჰოსტის ხელით მითითებული სახელის "
+"გამოსაყენებლად. ეს სასარგებლოა, როცა სისტემის ჰოსტის სახელი არასწორია, ან "
+"სისტემის ნამდვილი ჰოსტის სახელის დამალვა გსურთ."
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:93
@@ -200,6 +208,8 @@ msgid ""
 "Check this option to use a custom sender address when identifying to the "
 "mail server. If not checked, the address from the identity is used."
 msgstr ""
+"ჩართეთ, თუ ელფოსტის სერვერთან იდენტიფიცირებისას გამგზავნის მისამართი ხელით "
+"გნებავთ, მიუთითოთ. თუ ჩართული არაა, იდენტიფიკაციის ელფოსტას გამოვიყენებთ."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:102
@@ -476,6 +486,12 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
+"QKeychain ვერ იპოვა უკანაბოლო თქვენი პაროლის შესანახად. მკაცრად "
+"რეკომენდირებულია ძლიერი უკანაბოლოს გამოყენება თქვენი პაროლების მართვისთვის.\n"
+"ამასთან, პაროლის შენახვა შესაძლებელია კონფიგურაციის ფაილში. პაროლი ინახება "
+"დაბინდულ ფორმატში, მაგრამ არ უნდა ჩაითვალოს უსაფრთხოდ გაშიფვრის "
+"ძალისხმევისგან, თუ კონფიგურაციის ფაილზე წვდომა მიიღება.\n"
+"გსურთ შეინახოთ პაროლი სერვერისთვის '%1' კონფიგურაციის ფაილში?"
 
 #: kmailtransport/transport.cpp:221
 #, kde-format
@@ -527,6 +543,12 @@ msgid ""
 "which stores sensitive data for you in a strongly encrypted file.\n"
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
+"შემდეგი ფოსტის ტრანსპორტი ინახავს მათ პაროლებს დაუშიფრავ კონფიგურაციის "
+"ფაილში.\n"
+"უსაფრთხოების მიზეზების გამო, გთხოვთ გაითვალისწინოთ ამ პაროლების მიგრაცია "
+"KWallet- ში, KDE Wallet მართვის ინსტრუმენტზე,\n"
+"რომელი ინახავს მგრძნობიარე მონაცემებს თქვენთვის მკაცრად დაშიფრულ ფაილში.\n"
+"გსურთ თქვენი პაროლების მიგრაცია KWallet- ში?"
 
 #: kmailtransport/transportmanager.cpp:638
 #, kde-format
