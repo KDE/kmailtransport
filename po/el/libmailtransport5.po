@@ -6,21 +6,21 @@
 # Toussis Manolis <manolis@koppermind.homelinux.org>, 2007, 2008, 2009.
 # Bouklis Panos <panos@echidna-band.com>, 2012.
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012, 2013.
-# Stelios <sstavra@gmail.com>, 2012, 2020.
+# Stelios <sstavra@gmail.com>, 2012, 2020, 2023.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014.
 msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-21 00:47+0000\n"
-"PO-Revision-Date: 2020-09-13 12:45+0300\n"
+"PO-Revision-Date: 2023-01-07 09:12+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 20.04.2\n"
+"X-Generator: Lokalize 21.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
@@ -149,7 +149,7 @@ msgstr ""
 "πράγμα που θεωρείται ασφαλές.\n"
 "Αν όμως το KWallet δεν είναι διαθέσιμο, ο κωδικός πρόσβασης θα αποθηκευτεί "
 "στο αρχείο διαμόρφωσης. Ο κωδικός πρόσβασης θα αποθηκευτεί σε κωδικοποιημένη "
-"μορφή, αλλά δε θα πρέπει να θεωρείται ανθεκτική έναντι σε προσπάθειες "
+"μορφή, αλλά δε θα πρέπει να θεωρείται ανθεκτική έναντι προσπαθειών "
 "αποκωδικοποίησής του, αν κάποιος αποκτήσει πρόσβαση στο αρχείο διαμόρφωσης."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
@@ -262,12 +262,12 @@ msgstr "Ο κωδικός πρόσβασης που στέλνεται στο δ
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
-"Αποτυχία ελέγχου δυνατοτήτων. Επαληθεύστε τη θύρα και τημέθοδο ταυτοποίησης."
+"Αποτυχία ελέγχου δυνατοτήτων. Επαληθεύστε τη θύρα και τη μέθοδο ταυτοποίησης."
 
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
 #, kde-format
 msgid "Check Capabilities Failed"
-msgstr "Αποτυχία ελέγχου δυνατότήτων"
+msgstr "Αποτυχία ελέγχου δυνατοτήτων"
 
 #: kmailtransport/plugins/smtp/smtpjob.cpp:242
 #, kde-format
@@ -489,16 +489,7 @@ msgid "Unknown"
 msgstr "Άγνωστος"
 
 #: kmailtransport/transport.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "KWallet is not available. It is strongly recommended to use KWallet for "
-#| "managing your passwords.\n"
-#| "However, the password can be stored in the configuration file instead. "
-#| "The password is stored in an obfuscated format, but should not be "
-#| "considered secure from decryption efforts if access to the configuration "
-#| "file is obtained.\n"
-#| "Do you want to store the password for server '%1' in the configuration "
-#| "file?"
+#, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
 "recommended to use strong backend for managing your passwords.\n"
@@ -508,12 +499,13 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
-"Το KWallet δεν είναι διαθέσιμο. Η χρήση του συστήνεται για τη διαχείριση των "
-"κωδικών πρόσβασής σας.\n"
-"Παρόλα αυτά, ο κωδικός πρόσβασης μπορεί να αποθηκευτεί στο αρχείο "
-"διαμόρφωσης. Ο κωδικός πρόσβασης θα αποθηκευτεί σε κωδικοποιημένη μορφή, "
-"αλλά δε θα πρέπει να θεωρείται ανθεκτική έναντι σε προσπάθειες "
-"αποκωδικοποίησής του, αν κάποιος αποκτήσει πρόσβαση στο αρχείο διαμόρφωσης.\n"
+"Το QKeychain δεν βρήκε ένα σύστημα υποστήριξης για αποθήκευση κωδικών "
+"πρόσβασης. Συστήνεται η χρήση ενός ισχυρού συστήματος υποστήριξης για τη "
+"διαχείριση των κωδικών σας.\n"
+"Ωστόσο, ο κωδικός πρόσβασης μπορεί να αποθηκευτεί στο αρχείο διαμόρφωσης. Ο "
+"κωδικός πρόσβασης θα αποθηκευτεί σε κωδικοποιημένη μορφή, αλλά δε θα πρέπει "
+"να θεωρείται ανθεκτική έναντι προσπαθειών αποκωδικοποίησής του, αν κάποιος "
+"αποκτήσει πρόσβαση στο αρχείο διαμόρφωσης.\n"
 "Θέλετε να αποθηκεύσετε τον κωδικό πρόσβασης του διακομιστή '%1' στο αρχείο "
 "διαμόρφωσης;"
 
@@ -573,7 +565,7 @@ msgstr ""
 "λόγους ασφαλείας, το εργαλείο διαχείρισης πορτοφολιού του KDE,\n"
 "το οποίο αποθηκεύει ευαίσθητα δεδομένα σε ένα ισχυρά κρυπτογραφημένο "
 "αρχείο.\n"
-"Επιθυμείτε τη μεταφορά των κωδικών πρόσβασής σας στο KWallet;"
+"Επιθυμείτε τη μεταφορά των κωδικών σας στο KWallet;"
 
 #: kmailtransport/transportmanager.cpp:638
 #, kde-format
@@ -693,12 +685,11 @@ msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Θέλετε να αφαιρέσετε το λογαριασμό εξερχομένων '%1';"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:138
-#, fuzzy, kde-format
-#| msgid "Do you want to remove outgoing account '%1'?"
+#, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] "Θέλετε να αφαιρέσετε το λογαριασμό εξερχομένων '%1';"
-msgstr[1] "Θέλετε να αφαιρέσετε το λογαριασμό εξερχομένων '%1';"
+msgstr[0] "Θέλετε να αφαιρέσετε αυτόν τον %1 λογαριασμό εξερχομένων;"
+msgstr[1] "Θέλετε να αφαιρέσετε αυτούς τους '%1' λογαριασμούς εξερχομένων;"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:140
 #, kde-format
