@@ -12,6 +12,6 @@ ecm_mark_as_test(servertest)
 target_link_libraries(servertest KF5MailTransport KF5::I18n KF5::ConfigGui Qt::Widgets)
 
 
-add_executable(addtransportdialogng_gui addtransportdialogng_gui.cpp)
+add_executable(addtransportdialogng_gui addtransportdialogng_gui.cpp addtransportdialogng_gui.h)
 ecm_mark_as_test(addtransportdialogng_gui)
 target_link_libraries(addtransportdialogng_gui KF5MailTransport KF5::I18n KF5::ConfigGui Qt::Widgets)
