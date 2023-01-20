@@ -1,7 +1,7 @@
 
 include(ECMMarkAsTest)
 
-find_package(KF5TextWidgets ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5TextWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 set(queuer_srcs queuer.cpp queuer.h)
 add_executable(queuer ${queuer_srcs})

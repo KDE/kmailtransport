@@ -2,6 +2,6 @@
 
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR} ${CMAKE_MODULE_PATH})
 include(CMakeFindDependencyMacro)
-find_dependency(KF5Wallet "@KF5_MIN_VERSION@")
+find_dependency(KF5Wallet "@KF_MIN_VERSION@")
 
 include("${CMAKE_CURRENT_LIST_DIR}/KF5MailTransportTargets.cmake")

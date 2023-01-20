@@ -1,7 +1,7 @@
 
 include(ECMMarkAsTest)
 
-find_package(KF5TextWidgets ${KF5_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF5TextWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 add_executable(transportmgr transportmgr.cpp transportmgr.h)
 ecm_mark_as_test(transportmgr)
