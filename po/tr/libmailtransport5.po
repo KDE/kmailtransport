@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022.
+# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-11-21 00:47+0000\n"
-"PO-Revision-Date: 2022-10-22 13:04+0300\n"
+"PO-Revision-Date: 2023-01-21 15:30+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.08.1\n"
+"X-Generator: Lokalize 22.12.1\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:12
@@ -142,12 +142,11 @@ msgid ""
 "configuration file is obtained."
 msgstr ""
 "Parolalarınızın depolanmasını istiyorsanız bu seçeneği işaretleyin.\n"
-"Eğer KWallet kullanılabilirse, parolalarınız güvenli olarak düşünülen "
-"KWallet içerisine kaydedilecektir.\n"
-"Bununla birlikte KWallet yoksa, parolanız yapılandırma dosyasına "
-"kaydedilecek. Parolalar karıştırılmış şekilde kaydedilir ancak yapılandırma "
-"dosyanız birisinin eline geçerse parolanızın şifrelemesinin çözülemeyeceğini "
-"düşünmeyin."
+"Eğer K Cüzdan varsa parolalarınız güvenli olduğu varsayılan K Cüzdan'a "
+"kaydedilecektir.\n"
+"Eğer K Cüzdan kullanılamıyorsa parolanız yapılandırma dosyasına kaydedilir. "
+"Parolalar karıştırılmış şekilde kaydedilir; ancak yapılandırma dosyanız "
+"birisinin eline geçerse parolanızın şifresinin çözülemeyeceğini düşünmeyin."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:56
@@ -505,7 +504,7 @@ msgstr ""
 #: kmailtransport/transport.cpp:221
 #, kde-format
 msgid "KWallet Not Available"
-msgstr "KWallet Kullanılabilir Değil"
+msgstr "K Cüzdan Kullanılamıyor"
 
 #: kmailtransport/transport.cpp:222
 #, kde-format
@@ -552,12 +551,10 @@ msgid ""
 "which stores sensitive data for you in a strongly encrypted file.\n"
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
-"Aşağıdaki posta gönderim parolaları şifrelenmemiş bir yapılandırma dosyasına "
-"kaydedilecek.\n"
-"Güvenlik nedeniyle hassas verilerinizi güçlü bir şekilde şifrelenmiş "
-"dosyalarda saklayan,\n"
-"KDE Cüzdan Yönetim aracı KWallet içerisine taşımaya dikkat edin.\n"
-"Parolalarınızı KWallet içerisine taşımak istiyor musunuz?"
+"Aşağıdaki posta gönderim parolaları şifrelenmemiş bir yapılandırma\n"
+"dosyasına kaydedilecek. Güvenlik nedeniyle hassas verilerinizi güçlü\n"
+"bir şekilde şifrelenmiş dosyalarda saklayan K Cüzdan ile saklamaya çalışın.\n"
+"Parolalarınızı K Cüzdan'a taşımak istiyor musunuz?"
 
 #: kmailtransport/transportmanager.cpp:638
 #, kde-format
