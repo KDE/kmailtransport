@@ -18,10 +18,10 @@ ecm_qt_declare_logging_category(mailtransport_akonadiplugin HEADER mailtransport
 target_link_libraries(mailtransport_akonadiplugin
     KF5::MailTransportAkonadi
     KF5::MailTransport
-    KF5::CoreAddons
+    KF${KF_MAJOR_VERSION}::CoreAddons
     KF5::AkonadiCore
     KF5::AkonadiWidgets
-    KF5::I18n
-    KF5::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
     Qt::DBus
     )

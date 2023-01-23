@@ -74,14 +74,14 @@ target_include_directories(KF5MailTransport PUBLIC "$<BUILD_INTERFACE:${MailTran
 
 target_link_libraries(KF5MailTransport
     PUBLIC
-    KF5::Wallet
+    KF${KF_MAJOR_VERSION}::Wallet
     PRIVATE
-    KF5::I18n
-    KF5::ConfigGui
-    KF5::WidgetsAddons
-    KF5::CoreAddons
-    KF5::Wallet
-    KF5::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::ConfigGui
+    KF${KF_MAJOR_VERSION}::WidgetsAddons
+    KF${KF_MAJOR_VERSION}::CoreAddons
+    KF${KF_MAJOR_VERSION}::Wallet
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
     Qt::DBus
     Qt::Network
     )

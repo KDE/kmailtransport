@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: CC0-1.0
 
 Dependencies:
-- 'on': ['@all']
+- 'on': ['Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5']
   'require':
     'frameworks/extra-cmake-modules': '@latest'
     'frameworks/kcmutils': '@latest'
@@ -11,4 +11,15 @@ Dependencies:
     'pim/kmime' : '@same'
     'pim/ksmtp' : '@same'
     'pim/libkgapi' : '@same'
+    'third-party/qtkeychain': '@latest'
+
+- 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6']
+  'require':
+    'frameworks/extra-cmake-modules': '@latest-kf6'
+    'frameworks/kcmutils': '@latest-kf6'
+    'pim/akonadi' : '@latest-kf6'
+    'pim/akonadi-mime' : '@latest-kf6'
+    'pim/kmime' : '@latest-kf6'
+    'pim/ksmtp' : '@latest-kf6'
+    'pim/libkgapi' : '@latest-kf6'
     'third-party/qtkeychain': '@latest'

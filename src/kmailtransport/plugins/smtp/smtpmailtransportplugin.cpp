@@ -9,6 +9,7 @@
 #include "smtpjob.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(SMTPMailTransportPlugin, "smtpmailtransport.json")
 

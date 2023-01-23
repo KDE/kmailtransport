@@ -9,9 +9,9 @@ ecm_add_test(smtpjobtest.cpp
     LINK_LIBRARIES Qt::Network
                    Qt::Test
                    KF5::MailTransport
-                   KF5::I18n
-                   KF5::ConfigWidgets
-                   KF5::KIOWidgets
+                   KF${KF_MAJOR_VERSION}::I18n
+                   KF${KF_MAJOR_VERSION}::ConfigWidgets
+                   KF${KF_MAJOR_VERSION}::KIOWidgets
                    KPim::SMTP
                    KPim::GAPICore
     TEST_NAME smtpjobtest

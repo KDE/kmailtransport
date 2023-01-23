@@ -27,6 +27,14 @@ include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(ECMAddQch)
 
+if (QT_MAJOR_VERSION STREQUAL "6")
+    set(QT_REQUIRED_VERSION "6.4.0")
+    set(KF_MIN_VERSION "5.240.0")
+    set(KF_MAJOR_VERSION "6")
+else()
+    set(KF_MIN_VERSION "5.100.0")
+    set(KF_MAJOR_VERSION "5")
+endif()
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
@@ -44,12 +52,12 @@ set(KGAPI_LIB_VERSION "5.22.40")
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
 
 ########### Find packages ###########
-find_package(KF5KCMUtils ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}KCMUtils ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 #remove in the future
-find_package(KF5Wallet ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
-find_package(KF5KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}Wallet ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Mime ${KMIME_LIB_VERSION} CONFIG REQUIRED)
 
 if (QT_MAJOR_VERSION STREQUAL "6")

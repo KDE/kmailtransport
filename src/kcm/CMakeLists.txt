@@ -2,9 +2,9 @@
 add_library(kcm_mailtransport MODULE)
 target_sources(kcm_mailtransport PRIVATE configmodule.cpp configmodule.h)
 target_link_libraries(kcm_mailtransport
-                        KF5::KCMUtils
-                        KF5::ConfigWidgets
-                        KF5::CoreAddons
+                        KF${KF_MAJOR_VERSION}::KCMUtils
+                        KF${KF_MAJOR_VERSION}::ConfigWidgets
+                        KF${KF_MAJOR_VERSION}::CoreAddons
                         KF5::MailTransport
 )
 

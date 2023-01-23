@@ -1,12 +1,12 @@
 
 include(ECMMarkAsTest)
 
-find_package(KF5TextWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF${KF_MAJOR_VERSION}TextWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 set(queuer_srcs queuer.cpp queuer.h)
 add_executable(queuer ${queuer_srcs})
 ecm_mark_as_test(queuer)
-target_link_libraries(queuer KF5MailTransportAkonadi KF5MailTransport Qt::Widgets KF5::I18n KF5::ConfigGui KF5::TextWidgets)
+target_link_libraries(queuer KF5MailTransportAkonadi KF5MailTransport Qt::Widgets KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::ConfigGui KF${KF_MAJOR_VERSION}::TextWidgets)
 
 set( sendqueued_srcs sendqueued.cpp sendqueued.h)
 add_executable( sendqueued ${sendqueued_srcs} )

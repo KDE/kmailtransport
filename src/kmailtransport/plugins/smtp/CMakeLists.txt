@@ -28,9 +28,9 @@ ecm_qt_declare_logging_category(mailtransport_smtpplugin HEADER mailtransportplu
 
 target_link_libraries(mailtransport_smtpplugin
     KF5::MailTransport
-    KF5::I18n
-    KF5::ConfigWidgets
-    KF5::KIOWidgets
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::ConfigWidgets
+    KF${KF_MAJOR_VERSION}::KIOWidgets
     KPim::SMTP
     KPim::GAPICore
     )

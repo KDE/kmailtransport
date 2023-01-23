@@ -56,8 +56,8 @@ target_link_libraries(KF5MailTransportAkonadi
     KF5::Mime
     KF5::AkonadiMime
     PRIVATE
-    KF5::I18n
-    KF5::CoreAddons
+    KF${KF_MAJOR_VERSION}::I18n
+    KF${KF_MAJOR_VERSION}::CoreAddons
     )
 
 set_target_properties(KF5MailTransportAkonadi PROPERTIES

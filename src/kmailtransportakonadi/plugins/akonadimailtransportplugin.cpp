@@ -12,6 +12,7 @@
 #include <Akonadi/AgentManager>
 #include <KPluginFactory>
 #include <MailTransport/Transport>
+#include <QPointer>
 
 using namespace Akonadi;
 
