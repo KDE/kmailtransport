@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-21 00:47+0000\n"
+"POT-Creation-Date: 2023-01-24 00:59+0000\n"
 "PO-Revision-Date: 2019-12-18 19:47+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -260,18 +260,18 @@ msgstr "Omaduste kontrollimine nurjus"
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "Selle SMTP serveri kasutamiseks on vaja kasutajanime ja parooli."
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:26
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "SMTP server internetis"
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:37
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:38
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

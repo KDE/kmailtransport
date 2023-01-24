@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-21 00:47+0000\n"
+"POT-Creation-Date: 2023-01-24 00:59+0000\n"
 "PO-Revision-Date: 2010-01-01 17:14+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -300,18 +300,18 @@ msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
 "Jums jānorāda lietotāja vārds un parole, lai izmantotu šo SMTP serveri."
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:26
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "SMTP serveris internetā"
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:37
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:38
 #, fuzzy, kde-format
 #| msgid "Configure account"
 msgctxt "@title:window"

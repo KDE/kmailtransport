@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-21 00:47+0000\n"
+"POT-Creation-Date: 2023-01-24 00:59+0000\n"
 "PO-Revision-Date: 2008-01-28 13:21+0530\n"
 "Last-Translator: Ravishankar Shrivastava <aviratlami@aol.in>\n"
 "Language-Team: Hindi <indlinux-hindi@lists.sourceforge.net>\n"
@@ -244,19 +244,19 @@ msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
 "इस एसएमटीपी सर्वर का उपयोग करने के लिए आपको एक उपयोक्ता नाम तथा पासवर्ड देना होगा."
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:26
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
 #, fuzzy, kde-format
 #| msgid "SMTP"
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "एसएमटीपी"
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr ""
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:37
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:38
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

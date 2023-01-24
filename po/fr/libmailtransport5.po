@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-21 00:47+0000\n"
+"POT-Creation-Date: 2023-01-24 00:59+0000\n"
 "PO-Revision-Date: 2023-01-05 20:19+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -283,18 +283,18 @@ msgstr ""
 "Vous devez fournir un nom d'utilisateur et un mot de passe pour utiliser ce "
 "serveur SMTP."
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:26
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "Un serveur SMTP sur Internet"
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:37
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:38
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

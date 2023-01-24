@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2022-11-21 00:47+0000\n"
+"POT-Creation-Date: 2023-01-24 00:59+0000\n"
 "PO-Revision-Date: 2013-11-15 13:49+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -259,18 +259,18 @@ msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
 "Morate unijeti korisničko ime i šifru ako želite pristupiti SMTP serveru."
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:26
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "SMTP server na internetu"
 
-#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:37
+#: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:38
 #, fuzzy, kde-format
 #| msgid "Configure account"
 msgctxt "@title:window"
