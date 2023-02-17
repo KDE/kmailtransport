@@ -12,6 +12,7 @@
 #include "transportmanager.h"
 #include "ui_transportmanagementwidget.h"
 
+#include <KLocalizedString>
 #include <KMessageBox>
 
 #include <QMenu>
