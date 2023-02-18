@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-24 00:59+0000\n"
+"POT-Creation-Date: 2023-02-18 01:00+0000\n"
 "PO-Revision-Date: 2022-10-22 19:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -652,12 +652,12 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (المبدئيّ)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:137
+#: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "أتريد إزالة الحساب الصادر '%1'؟"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:138
+#: kmailtransport/widgets/transportmanagementwidget.cpp:139
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
@@ -668,32 +668,32 @@ msgstr[3] "أتريد إزالة هذه %1 الحسابات الصادرة حق�
 msgstr[4] "أتريد إزالة هذه %1 حساباً صادرة حقاً؟"
 msgstr[5] "أتريد إزالة هذه %1 حساب صادرة حقاً؟"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:140
+#: kmailtransport/widgets/transportmanagementwidget.cpp:141
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "إزالة الحساب الصادر؟"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:161
+#: kmailtransport/widgets/transportmanagementwidget.cpp:162
 #, kde-format
 msgid "Add..."
 msgstr "أضف..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:166
+#: kmailtransport/widgets/transportmanagementwidget.cpp:167
 #, kde-format
 msgid "Modify..."
 msgstr "عدّل..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:169
+#: kmailtransport/widgets/transportmanagementwidget.cpp:170
 #, kde-format
 msgid "Rename"
 msgstr "غيّر الاسم"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:173
+#: kmailtransport/widgets/transportmanagementwidget.cpp:174
 #, kde-format
 msgid "Remove"
 msgstr "أزل"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:178
+#: kmailtransport/widgets/transportmanagementwidget.cpp:179
 #, kde-format
 msgid "Set as Default"
 msgstr "اضبطها كمبدئيّة"

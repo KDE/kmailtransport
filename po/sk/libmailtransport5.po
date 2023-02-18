@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-24 00:59+0000\n"
+"POT-Creation-Date: 2023-02-18 01:00+0000\n"
 "PO-Revision-Date: 2021-01-14 15:31+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -668,12 +668,12 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (Predvolené)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:137
+#: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Chcete vymazať odchádzajúci účet '%1'?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:138
+#: kmailtransport/widgets/transportmanagementwidget.cpp:139
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -682,32 +682,32 @@ msgstr[0] "Chcete vymazať odchádzajúci účet '%1'?"
 msgstr[1] "Chcete vymazať odchádzajúci účet '%1'?"
 msgstr[2] "Chcete vymazať odchádzajúci účet '%1'?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:140
+#: kmailtransport/widgets/transportmanagementwidget.cpp:141
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Odstrániť odchádzajúci účet?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:161
+#: kmailtransport/widgets/transportmanagementwidget.cpp:162
 #, kde-format
 msgid "Add..."
 msgstr "Pridať..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:166
+#: kmailtransport/widgets/transportmanagementwidget.cpp:167
 #, kde-format
 msgid "Modify..."
 msgstr "Upraviť..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:169
+#: kmailtransport/widgets/transportmanagementwidget.cpp:170
 #, kde-format
 msgid "Rename"
 msgstr "Premenovať"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:173
+#: kmailtransport/widgets/transportmanagementwidget.cpp:174
 #, kde-format
 msgid "Remove"
 msgstr "Odstrániť"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:178
+#: kmailtransport/widgets/transportmanagementwidget.cpp:179
 #, kde-format
 msgid "Set as Default"
 msgstr "Nastaviť ako predvolené"

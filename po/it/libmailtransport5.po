@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-01-24 00:59+0000\n"
+"POT-Creation-Date: 2023-02-18 01:00+0000\n"
 "PO-Revision-Date: 2022-11-13 00:08+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
@@ -669,44 +669,44 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (predefinito)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:137
+#: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Vuoi rimuovere l'account di uscita «%1»?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:138
+#: kmailtransport/widgets/transportmanagementwidget.cpp:139
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Vuoi davvero rimuovere questo %1 account di uscita?"
 msgstr[1] "Vuoi davvero rimuovere questi %1 account di uscita?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:140
+#: kmailtransport/widgets/transportmanagementwidget.cpp:141
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Rimuovi l'account di uscita?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:161
+#: kmailtransport/widgets/transportmanagementwidget.cpp:162
 #, kde-format
 msgid "Add..."
 msgstr "Aggiungi..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:166
+#: kmailtransport/widgets/transportmanagementwidget.cpp:167
 #, kde-format
 msgid "Modify..."
 msgstr "Modifica..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:169
+#: kmailtransport/widgets/transportmanagementwidget.cpp:170
 #, kde-format
 msgid "Rename"
 msgstr "Rinomina"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:173
+#: kmailtransport/widgets/transportmanagementwidget.cpp:174
 #, kde-format
 msgid "Remove"
 msgstr "Rimuovi"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:178
+#: kmailtransport/widgets/transportmanagementwidget.cpp:179
 #, kde-format
 msgid "Set as Default"
 msgstr "Imposta come predefinito"
