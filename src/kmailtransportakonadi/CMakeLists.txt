@@ -53,7 +53,7 @@ target_include_directories(KF5MailTransportAkonadi PUBLIC "$<BUILD_INTERFACE:${M
 target_link_libraries(KF5MailTransportAkonadi
     PUBLIC
     KF5::AkonadiCore
-    KF5::Mime
+    KPim${KF_MAJOR_VERSION}::Mime
     KF5::AkonadiMime
     PRIVATE
     KF${KF_MAJOR_VERSION}::I18n
