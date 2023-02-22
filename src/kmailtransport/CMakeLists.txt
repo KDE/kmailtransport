@@ -172,7 +172,7 @@ install(FILES
     COMPONENT Devel
     )
 
-install(EXPORT KPim${KF_MAJOR_VERSION}MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}MailTransportTargets.cmake NAMESPACE KF5::)
+install(EXPORT KPim${KF_MAJOR_VERSION}MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}MailTransportTargets.cmake NAMESPACE KPim${KF_MAJOR_VERSION}::)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h
