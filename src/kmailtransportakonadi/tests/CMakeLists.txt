@@ -11,12 +11,12 @@ target_link_libraries(queuer KPim${KF_MAJOR_VERSION}::MailTransportAkonadi KPim$
 set( sendqueued_srcs sendqueued.cpp sendqueued.h)
 add_executable( sendqueued ${sendqueued_srcs} )
 ecm_mark_as_test(sendqueued)
-target_link_libraries( sendqueued KPim${KF_MAJOR_VERSION}MailTransportAkonadi  KF5::AkonadiMime Qt::Widgets)
+target_link_libraries( sendqueued KPim${KF_MAJOR_VERSION}MailTransportAkonadi  KPim${KF_MAJOR_VERSION}::AkonadiMime Qt::Widgets)
 
 set( clearerror_srcs clearerror.cpp clearerror.h)
 add_executable( clearerror ${clearerror_srcs} )
 ecm_mark_as_test(clearerror)
-target_link_libraries( clearerror KPim${KF_MAJOR_VERSION}MailTransportAkonadi  KF5::AkonadiMime Qt::Widgets)
+target_link_libraries( clearerror KPim${KF_MAJOR_VERSION}MailTransportAkonadi  KPim${KF_MAJOR_VERSION}::AkonadiMime Qt::Widgets)
 
 set( abort_srcs abort.cpp abort.h)
 add_executable( abort ${abort_srcs} )

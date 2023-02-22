@@ -54,7 +54,7 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}MailTransportAkonadi
     PUBLIC
     KF5::AkonadiCore
     KPim${KF_MAJOR_VERSION}::Mime
-    KF5::AkonadiMime
+    KPim${KF_MAJOR_VERSION}::AkonadiMime
     PRIVATE
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::CoreAddons
