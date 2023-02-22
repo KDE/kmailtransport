@@ -5,7 +5,7 @@ target_link_libraries(kcm_mailtransport
                         KF${KF_MAJOR_VERSION}::KCMUtils
                         KF${KF_MAJOR_VERSION}::ConfigWidgets
                         KF${KF_MAJOR_VERSION}::CoreAddons
-                        KF5::MailTransport
+                        KPim${KF_MAJOR_VERSION}::MailTransport
 )
 
 install(TARGETS kcm_mailtransport DESTINATION ${KDE_INSTALL_PLUGINDIR})

@@ -101,12 +101,12 @@ kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 
 if (BUILD_QCH)
     ecm_install_qch_export(
-        TARGETS KF5MailTransport_QCH
-        FILE KF5MailTransportQchTargets.cmake
+        TARGETS KPim${KF_MAJOR_VERSION}MailTransport_QCH
+        FILE KPim${KF_MAJOR_VERSION}MailTransportQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
     )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KF5MailTransportQchTargets.cmake\")")
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim${KF_MAJOR_VERSION}MailTransportQchTargets.cmake\")")
 endif()
 
 ki18n_install(po)

@@ -1,12 +1,14 @@
-add_library(KF5MailTransport)
-add_library(KF5::MailTransport ALIAS KF5MailTransport)
+add_library(KPim${KF_MAJOR_VERSION}MailTransport)
+add_library(KPim${KF_MAJOR_VERSION}::MailTransport ALIAS KPim${KF_MAJOR_VERSION}MailTransport)
+add_library(KF5::MailTransport ALIAS KPim${KF_MAJOR_VERSION}MailTransport)
+
 ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h"
-    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfigVersion.cmake"
+    PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}MailTransportConfigVersion.cmake"
     SOVERSION 5
     )
 
-target_sources(KF5MailTransport PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}MailTransport PRIVATE
     transport.cpp
     transportmanager.cpp
     transporttype.cpp
@@ -16,7 +18,7 @@ target_sources(KF5MailTransport PRIVATE
     servertest.cpp
     )
 
-target_sources(KF5MailTransport PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}MailTransport PRIVATE
     widgets/transportconfigwidget.cpp
     widgets/transportcombobox.cpp
     widgets/transportlistview.cpp
@@ -24,11 +26,11 @@ target_sources(KF5MailTransport PRIVATE
     widgets/addtransportdialogng.cpp
     )
 
-target_sources(KF5MailTransport PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}MailTransport PRIVATE
     plugins/transportabstractplugin.cpp
     plugins/transportpluginmanager.cpp
     ) 
-target_sources(KF5MailTransport PRIVATE
+target_sources(KPim${KF_MAJOR_VERSION}MailTransport PRIVATE
     transporttype_p.h
     mailtransport_defs.h
     socket.h
@@ -50,29 +52,29 @@ target_sources(KF5MailTransport PRIVATE
     servertest.h
     )
 
-ecm_qt_declare_logging_category(KF5MailTransport HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport
+ecm_qt_declare_logging_category(KPim${KF_MAJOR_VERSION}MailTransport HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport
         DESCRIPTION "kmailtransport (kmailtransport)"
         OLD_CATEGORY_NAMES log_mailtransport
         EXPORT MAILTRANSPORT
     )
 
-ki18n_wrap_ui(KF5MailTransport
+ki18n_wrap_ui(KPim${KF_MAJOR_VERSION}MailTransport
     ui/addtransportdialog.ui
     ui/transportmanagementwidget.ui
     )
 
-kconfig_add_kcfg_files(KF5MailTransport transportbase.kcfgc)
+kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}MailTransport transportbase.kcfgc)
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(KF5MailTransport PROPERTIES UNITY_BUILD ON)
+    set_target_properties(KPim${KF_MAJOR_VERSION}MailTransport PROPERTIES UNITY_BUILD ON)
 endif()
 
-generate_export_header(KF5MailTransport BASE_NAME mailtransport)
+generate_export_header(KPim${KF_MAJOR_VERSION}MailTransport BASE_NAME mailtransport)
 
-target_include_directories(KF5MailTransport INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR_KF}/MailTransport>")
-target_include_directories(KF5MailTransport PUBLIC "$<BUILD_INTERFACE:${MailTransport_SOURCE_DIR}/src;${MailTransport_BINARY_DIR}/src>")
+target_include_directories(KPim${KF_MAJOR_VERSION}MailTransport INTERFACE "$<INSTALL_INTERFACE:${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/MailTransport>")
+target_include_directories(KPim${KF_MAJOR_VERSION}MailTransport PUBLIC "$<BUILD_INTERFACE:${MailTransport_SOURCE_DIR}/src;${MailTransport_BINARY_DIR}/src>")
 
-target_link_libraries(KF5MailTransport
+target_link_libraries(KPim${KF_MAJOR_VERSION}MailTransport
     PUBLIC
     KF${KF_MAJOR_VERSION}::Wallet
     PRIVATE
@@ -86,17 +88,17 @@ target_link_libraries(KF5MailTransport
     Qt::Network
     )
 
-target_link_libraries(KF5MailTransport PRIVATE qt${QT_MAJOR_VERSION}keychain)
+target_link_libraries(KPim${KF_MAJOR_VERSION}MailTransport PRIVATE qt${QT_MAJOR_VERSION}keychain)
 
 
-set_target_properties(KF5MailTransport PROPERTIES
+set_target_properties(KPim${KF_MAJOR_VERSION}MailTransport PROPERTIES
     VERSION ${MAILTRANSPORT_VERSION}
     SOVERSION ${MAILTRANSPORT_SOVERSION}
     EXPORT_NAME MailTransport
     )
 
 
-install(TARGETS KF5MailTransport EXPORT KF5MailTransportTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KPim${KF_MAJOR_VERSION}MailTransport EXPORT KPim${KF_MAJOR_VERSION}MailTransportTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES mailtransport.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 
@@ -133,13 +135,13 @@ ecm_generate_headers(MailTransport_plugins_CamelCase_HEADERS
 
 install(FILES
     ${MailTransport_SOURCE_DIR}/src/kmailtransport/widgets/transportconfigwidget_p.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransport/mailtransport/private COMPONENT Devel )
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/MailTransport/mailtransport/private COMPONENT Devel )
 
 install(FILES
     ${MailTransport_CamelCase_HEADERS}
     ${MailTransport_widgets_CamelCase_HEADERS}
     ${MailTransport_plugins_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransport/MailTransport/ COMPONENT Devel )
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/MailTransport/MailTransport/ COMPONENT Devel )
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_export.h
@@ -148,33 +150,33 @@ install(FILES
     ${MailTransport_plugins_HEADERS}
     ${CMAKE_CURRENT_BINARY_DIR}/transportbase.h
 
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransport/mailtransport COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/MailTransport/mailtransport COMPONENT Devel
     )
 
-ecm_generate_pri_file(BASE_NAME KMailTransport LIB_NAME KF5MailTransport DEPS "KWallet" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransport/)
+ecm_generate_pri_file(BASE_NAME KMailTransport LIB_NAME KPim${KF_MAJOR_VERSION}MailTransport DEPS "KWallet" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/MailTransport/)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
-
+set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim${KF_MAJOR_VERSION}MailTransport")
+set(MAILTRANSPORT_KF5_COMPAT FALSE)
 configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KF5MailTransportConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfig.cmake"
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimMailTransportConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}MailTransportConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
     )
 
 install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfigVersion.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}MailTransportConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}MailTransportConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
     )
 
-install(EXPORT KF5MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KF5MailTransportTargets.cmake NAMESPACE KF5::)
+install(EXPORT KPim${KF_MAJOR_VERSION}MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim${KF_MAJOR_VERSION}MailTransportTargets.cmake NAMESPACE KF5::)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR_KF}/MailTransport COMPONENT Devel
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/MailTransport COMPONENT Devel
     )
 
 
@@ -185,9 +187,9 @@ endif()
 
 if (BUILD_QCH)
     ecm_add_qch(
-        KF5MailTransport_QCH
+        KPim${KF_MAJOR_VERSION}MailTransport_QCH
         NAME KMailTransport
-        BASE_NAME KF5MailTransport
+        BASE_NAME KPim${KF_MAJOR_VERSION}MailTransport
         VERSION ${PIM_VERSION}
         ORG_DOMAIN org.kde
         SOURCES # using only public headers, to cover only public API
@@ -211,3 +213,30 @@ if (BUILD_QCH)
 endif()
 
 add_subdirectory(plugins/smtp)
+##
+# TODO: Backwards compatiblity. Remove in next major version
+##
+set(CMAKECONFIG_INSTALL_DIR_KF5 "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF5MailTransport")
+set(MAILTRANSPORT_KF5_COMPAT TRUE)
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimMailTransportConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfig.cmake"
+    INSTALL_DESTINATION ${CMAKECONFIG_INSTALL_DIR_KF5}
+)
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KF5MailTransportConfig.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}MailTransportConfigVersion.cmake"
+    RENAME "KF5MailTransportConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    COMPONENT Devel
+)
+install(EXPORT KPim${KF_MAJOR_VERSION}MailTransportTargets
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR_KF5}"
+    FILE KPim${KF_MAJOR_VERSION}MailTransportTargets.cmake
+    NAMESPACE KF5::
+)

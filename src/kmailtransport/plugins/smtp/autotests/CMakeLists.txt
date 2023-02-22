@@ -8,7 +8,7 @@ ecm_add_test(smtpjobtest.cpp
              fakeserver.cpp
     LINK_LIBRARIES Qt::Network
                    Qt::Test
-                   KF5::MailTransport
+                   KPim${KF_MAJOR_VERSION}::MailTransport
                    KF${KF_MAJOR_VERSION}::I18n
                    KF${KF_MAJOR_VERSION}::ConfigWidgets
                    KF${KF_MAJOR_VERSION}::KIOWidgets
