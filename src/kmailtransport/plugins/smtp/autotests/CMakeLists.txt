@@ -12,7 +12,7 @@ ecm_add_test(smtpjobtest.cpp
                    KF${KF_MAJOR_VERSION}::I18n
                    KF${KF_MAJOR_VERSION}::ConfigWidgets
                    KF${KF_MAJOR_VERSION}::KIOWidgets
-                   KPim::SMTP
+                   KPim${KF_MAJOR_VERSION}::SMTP
                    KPim::GAPICore
     TEST_NAME smtpjobtest
 )
