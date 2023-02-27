@@ -32,5 +32,5 @@ target_link_libraries(mailtransport_smtpplugin
     KF${KF_MAJOR_VERSION}::ConfigWidgets
     KF${KF_MAJOR_VERSION}::KIOWidgets
     KPim${KF_MAJOR_VERSION}::SMTP
-    KPim::GAPICore
+    KPim${KF_MAJOR_VERSION}::GAPICore
     )
