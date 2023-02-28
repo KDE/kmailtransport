@@ -93,7 +93,7 @@ install(FILES
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/MailTransportAkonadi/mailtransportakonadi COMPONENT Devel
     )
 
-ecm_generate_pri_file(BASE_NAME KMailTransportAkonadi LIB_NAME KF5MailTransportAkonadi DEPS "KMailTransport AkonadiCore KMime AkonadiMime" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/MailTransportAkonadi/)
+ecm_generate_pri_file(BASE_NAME KMailTransportAkonadi LIB_NAME KF${KF_MAJOR_VERSION}MailTransportAkonadi DEPS "KMailTransport AkonadiCore KMime AkonadiMime" FILENAME_VAR PRI_FILENAME INCLUDE_INSTALL_DIR ${KDE_INSTALL_INCLUDEDIR}/KPim${KF_MAJOR_VERSION}/MailTransportAkonadi/)
 install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 
