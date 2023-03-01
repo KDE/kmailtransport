@@ -19,8 +19,8 @@ target_link_libraries(mailtransport_akonadiplugin
     KPim${KF_MAJOR_VERSION}::MailTransportAkonadi
     KPim${KF_MAJOR_VERSION}::MailTransport
     KF${KF_MAJOR_VERSION}::CoreAddons
-    KF5::AkonadiCore
-    KF5::AkonadiWidgets
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiWidgets
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::ConfigWidgets
     Qt::DBus

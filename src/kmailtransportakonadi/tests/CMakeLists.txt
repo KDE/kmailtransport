@@ -21,5 +21,5 @@ target_link_libraries( clearerror KPim${KF_MAJOR_VERSION}MailTransportAkonadi  K
 set( abort_srcs abort.cpp abort.h)
 add_executable( abort ${abort_srcs} )
 ecm_mark_as_test(abort)
-target_link_libraries( abort KPim${KF_MAJOR_VERSION}MailTransportAkonadi KF5::AkonadiCore Qt::Widgets)
+target_link_libraries( abort KPim${KF_MAJOR_VERSION}MailTransportAkonadi KPim${KF_MAJOR_VERSION}::AkonadiCore Qt::Widgets)
 

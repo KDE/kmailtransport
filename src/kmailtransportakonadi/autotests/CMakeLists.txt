@@ -12,6 +12,6 @@ add_akonadi_isolated_test(
 # TODO: port & re-enable
 #add_akonadi_isolated_test(
 #    SOURCE filteractiontest.cpp
-#    LINK_LIBRARIES KF5::AkonadiCore KF5::MailTransportAkonadi
+#    LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::AkonadiCore KF5::MailTransportAkonadi
 #)
 

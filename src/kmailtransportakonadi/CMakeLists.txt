@@ -52,7 +52,7 @@ target_include_directories(KPim${KF_MAJOR_VERSION}MailTransportAkonadi PUBLIC "$
 
 target_link_libraries(KPim${KF_MAJOR_VERSION}MailTransportAkonadi
     PUBLIC
-    KF5::AkonadiCore
+    KPim${KF_MAJOR_VERSION}::AkonadiCore
     KPim${KF_MAJOR_VERSION}::Mime
     KPim${KF_MAJOR_VERSION}::AkonadiMime
     PRIVATE
