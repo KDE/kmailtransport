@@ -21,11 +21,11 @@ public:
 
     TransportTypePrivate(const TransportTypePrivate &other)
         : QSharedData(other)
+        , mName(other.mName)
+        , mDescription(other.mDescription)
+        , mIdentifier(other.mIdentifier)
+        , mIsAkonadiResource(other.mIsAkonadiResource)
     {
-        mName = other.mName;
-        mDescription = other.mDescription;
-        mIdentifier = other.mIdentifier;
-        mIsAkonadiResource = other.mIsAkonadiResource;
     }
 
     QString mName;
