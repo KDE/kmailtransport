@@ -1,13 +1,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
-# Shinjo Park <kde@peremen.name>, 2015, 2016, 2018, 2019, 2020, 2021, 2022.
+# Shinjo Park <kde@peremen.name>, 2015, 2016, 2018, 2019, 2020, 2021, 2022, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:46+0000\n"
-"PO-Revision-Date: 2022-05-15 22:33+0200\n"
+"PO-Revision-Date: 2023-03-01 02:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -466,16 +466,7 @@ msgid "Unknown"
 msgstr "알 수 없음"
 
 #: kmailtransport/transport.cpp:217
-#, fuzzy, kde-format
-#| msgid ""
-#| "KWallet is not available. It is strongly recommended to use KWallet for "
-#| "managing your passwords.\n"
-#| "However, the password can be stored in the configuration file instead. "
-#| "The password is stored in an obfuscated format, but should not be "
-#| "considered secure from decryption efforts if access to the configuration "
-#| "file is obtained.\n"
-#| "Do you want to store the password for server '%1' in the configuration "
-#| "file?"
+#, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
 "recommended to use strong backend for managing your passwords.\n"
@@ -485,8 +476,8 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
-"KWallet을 사용할 수 없습니다. 암호를 관리하는 데 KWallet을 사용하는 것을 추천"
-"합니다.\n"
+"QKeychain에서 암호 저장 백엔드를 찾을 수 없습니다. 강력한 백엔드에 암호를 저"
+"장하는 것을 추천합니다.\n"
 "설정 파일에 암호를 대신 저장할 수도 있습니다. 암호는 읽을 수 없는 형태로 저장"
 "되지만 설정 파일이 유출되었을 때 복호화할 수도 있습니다.\n"
 "서버 '%1'의 암호를 설정 파일에 저장하시겠습니까?"
