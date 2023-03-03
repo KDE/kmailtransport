@@ -127,6 +127,7 @@ if(BUILD_TESTING)
 endif()
 
 add_subdirectory(plugins)
+if (BUILD_WITH_COMPAT_LIBS)
 if (QT_MAJOR_VERSION STREQUAL "5")
 ##
 # TODO: Backwards compatiblity. Remove in next major version
@@ -155,4 +156,5 @@ install(EXPORT KPim${KF_MAJOR_VERSION}MailTransportAkonadiTargets
     FILE KPim${KF_MAJOR_VERSION}MailTransportAkonadiTargets.cmake
     NAMESPACE KF5::
 )
+endif()
 endif()
