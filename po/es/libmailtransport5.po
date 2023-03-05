@@ -6,7 +6,7 @@
 # Santiago Fernández Sancho <santi@kde-es.org>, 2007, 2008.
 # Enrique Matias Sanchez (aka Quique) <cronopios@gmail.com>, 2007.
 # Jaime Robles <jaime@kde.org>, 2008.
-# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2010, 2019, 2022.
+# Eloy Cuadra <ecuadra@eloihr.net>, 2008, 2010, 2019, 2022, 2023.
 # Dario Andres Rodriguez <andresbajotierra@gmail.com>, 2008, 2009.
 # Cristina Yenyxe González García <the.blue.valkyrie@gmail.com>, 2009, 2010.
 # Cristina Yenyxe Gonzalez Garcia <the.blue.valkyrie@gmail.com>, 2009.
@@ -18,14 +18,14 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2022-10-22 00:46+0000\n"
-"PO-Revision-Date: 2022-10-22 18:13+0200\n"
+"PO-Revision-Date: 2023-03-04 02:00+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 22.12.3\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
@@ -38,13 +38,13 @@ msgstr "Identificador único"
 #: kmailtransport/mailtransport.kcfg:16
 #, kde-format
 msgid "User-visible transport name"
-msgstr "Nombre de transporte de visible para el usuario"
+msgstr "Nombre de transporte visible para el usuario"
 
 #. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:17
 #, kde-format
 msgid "The name that will be used when referring to this server."
-msgstr "El nombre que se utilizará cuando se haga referencia a este servidor."
+msgstr "El nombre que se usará cuando se haga referencia a este servidor."
 
 #: kmailtransport/mailtransport.kcfg:18
 #, kde-format
@@ -88,13 +88,13 @@ msgstr "Se necesita un nombre de usuario para identificarse"
 #: kmailtransport/mailtransport.kcfg:34
 #, kde-format
 msgid "The user name to send to the server for authorization."
-msgstr "El nombre de usuario a enviar al servidor para la autorización."
+msgstr "El nombre de usuario que se envía al servidor para la autorización."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:37
 #, kde-format
 msgid "Command to execute before sending a mail"
-msgstr "Orden a ejecutar antes de enviar un correo"
+msgstr "Orden para ejecutar antes de enviar un correo"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:38
@@ -103,9 +103,9 @@ msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
 "SSH tunnels, for example. Leave it empty if no command should be run."
 msgstr ""
-"Una orden para ejecutar localmente antes de enviar el correo electrónico. "
-"Puede utilizarse para configurar túneles SSH, por ejemplo. Déjela en blanco "
-"si no se debe ejecutar ninguna orden."
+"Una orden para ejecutar localmente antes de enviar el correo. Se puede usar "
+"para configurar túneles SSH, por ejemplo. Déjela en blanco si no se debe "
+"ejecutar ninguna orden."
 
 #. i18n: ectx: label, entry (options), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:41
@@ -160,7 +160,7 @@ msgstr ""
 #: kmailtransport/mailtransport.kcfg:56
 #, kde-format
 msgid "Encryption method used for communication"
-msgstr "Método de cifrado utilizado para la comunicación"
+msgstr "Método de cifrado usado para la comunicación"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:59
@@ -205,7 +205,7 @@ msgid ""
 "or to mask your system's true hostname."
 msgstr ""
 "Marque esta opción para utilizar un nombre de máquina personalizado cuando "
-"se identifique ante el servidor de correo.Es práctico cuando el nombre de "
+"se identifique ante el servidor de correo. Es práctico cuando el nombre de "
 "máquina de su sistema no esté configurado correctamente o para enmascarar el "
 "verdadero nombre de máquina de su sistema."
 
@@ -214,8 +214,8 @@ msgstr ""
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr ""
-"Introducir el nombre de máquina que se debe utilizar para identificarse ante "
-"el servidor."
+"Introduzca el nombre de máquina que se debe usar para identificarse ante el "
+"servidor."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:97
@@ -224,9 +224,9 @@ msgid ""
 "Check this option to use a custom sender address when identifying to the "
 "mail server. If not checked, the address from the identity is used."
 msgstr ""
-"Marque esta opción para utilizar una dirección de remitente personalizada "
-"cuando se identifique ante el servidor de correo. Si no está marcada, se "
-"utilizará la dirección de su identidad."
+"Marque esta opción para usar una dirección de remitente personalizada cuando "
+"se identifique ante el servidor de correo. Si no está marcada, se usará la "
+"dirección de su identidad."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:102
@@ -254,12 +254,12 @@ msgid ""
 "server."
 msgstr ""
 "Si está marcado, se usarán las preferencias de «proxy» del sistema para "
-"conectar con el correo."
+"conectarse con el servidor de correo."
 
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:144
 #, kde-format
 msgid "The password to send to the server for authorization."
-msgstr "La contraseña a enviar al servidor para la autorización."
+msgstr "La contraseña que se envía al servidor para la autorización."
 
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
 #, kde-format
