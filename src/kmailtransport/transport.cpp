@@ -52,7 +52,7 @@ void Transport::loadPassword()
     }
 }
 
-QString Transport::password()
+QString Transport::password() const
 {
     return d->password;
 }
@@ -65,6 +65,7 @@ void Transport::setPassword(const QString &passwd)
     }
     d->passwordDirty = true;
     d->password = passwd;
+    Q_EMIT passwordChanged();
 }
 
 void Transport::forceUniqueName()
@@ -100,6 +101,7 @@ void Transport::updatePasswordState()
         d->password = original->d->password;
         d->passwordLoaded = original->d->passwordLoaded;
         d->passwordDirty = original->d->passwordDirty;
+        Q_EMIT passwordChanged();
     } else {
         qCWarning(MAILTRANSPORT_LOG) << "Transport with this ID not managed by transport manager.";
     }
@@ -168,6 +170,7 @@ void Transport::usrRead()
             qCWarning(MAILTRANSPORT_LOG) << "Type unknown to manager.";
             d->transportType.d->mName = i18nc("An unknown transport type", "Unknown");
         }
+        Q_EMIT transportTypeChanged();
     }
 
     // we have everything we need
@@ -273,6 +276,7 @@ void Transport::readTransportPasswordFinished(QKeychain::Job *baseJob)
         d->password.clear();
         d->passwordLoaded = false;
         qWarning() << "We have an error during reading password " << job->errorString();
+        Q_EMIT passwordChanged();
     } else {
         setPassword(job->textData());
     }

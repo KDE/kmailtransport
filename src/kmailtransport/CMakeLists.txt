@@ -63,7 +63,7 @@ ki18n_wrap_ui(KPim${KF_MAJOR_VERSION}MailTransport
     ui/transportmanagementwidget.ui
     )
 
-kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}MailTransport transportbase.kcfgc)
+kconfig_add_kcfg_files(KPim${KF_MAJOR_VERSION}MailTransport GENERATE_MOC transportbase.kcfgc)
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim${KF_MAJOR_VERSION}MailTransport PROPERTIES UNITY_BUILD ON)

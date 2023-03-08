@@ -32,6 +32,10 @@ class TransportType;
 class MAILTRANSPORT_EXPORT Transport : public TransportBase
 {
     Q_OBJECT
+
+    Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
+    Q_PROPERTY(TransportType transportType READ transportType NOTIFY transportTypeChanged)
+
     friend class TransportManager;
     friend class TransportManagerPrivate;
 
@@ -46,12 +50,12 @@ public:
     /**
       Returns true if this transport is valid, ie. has all necessary data set.
     */
-    Q_REQUIRED_RESULT bool isValid() const;
+    Q_REQUIRED_RESULT Q_INVOKABLE bool isValid() const;
 
     /**
       Returns the password of this transport.
     */
-    Q_REQUIRED_RESULT QString password();
+    Q_REQUIRED_RESULT QString password() const;
 
     /**
       Sets the password of this transport.
@@ -146,6 +150,14 @@ Q_SIGNALS:
       Emitted when passwords have been loaded from QKeyChain.
     */
     void passwordLoaded();
+    /**
+     * Emitted when the password is changed
+     */
+    void passwordChanged();
+    /**
+     * Emitted when the transport type is changed
+     */
+    void transportTypeChanged();
 
 private:
     void readTransportPasswordFinished(QKeychain::Job *baseJob);

@@ -29,6 +29,23 @@ class TransportTypePrivate;
 */
 class MAILTRANSPORT_EXPORT TransportType
 {
+    Q_GADGET
+
+    /// This property holds whether the transport type is valid.
+    Q_PROPERTY(bool isValid READ isValid CONSTANT)
+
+    /// This property holds the i18n'ed name of the transport type.
+    Q_PROPERTY(QString name READ name CONSTANT)
+
+    /// This property holds the transport type.
+    Q_PROPERTY(QString description READ description CONSTANT)
+
+    /// This property holds the plugin identifier.
+    Q_PROPERTY(QString identifier READ identifier CONSTANT)
+
+    /// This property holds whether this transport is an akonadi resource.
+    Q_PROPERTY(bool isAkonadiResource READ isAkonadiResource CONSTANT)
+
     friend class AddTransportDialog;
     friend class Transport;
     friend class TransportManager;
@@ -85,6 +102,7 @@ public:
      */
     Q_REQUIRED_RESULT QString identifier() const;
 
+    /// Returns whether this transport is an akonadi resource.
     Q_REQUIRED_RESULT bool isAkonadiResource() const;
 
 private:
