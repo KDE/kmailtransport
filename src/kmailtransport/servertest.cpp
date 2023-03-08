@@ -627,7 +627,7 @@ void ServerTest::setServer(const QString &server)
     d->server = server;
 }
 
-void ServerTest::setPort(Transport::EnumEncryption::type encryptionMode, uint port)
+void ServerTest::setPort(Transport::EnumEncryption encryptionMode, uint port)
 {
     Q_ASSERT(encryptionMode == Transport::EnumEncryption::None || encryptionMode == Transport::EnumEncryption::SSL);
     d->customPorts.insert(encryptionMode, port);
@@ -654,7 +654,7 @@ QString ServerTest::server() const
     return d->server;
 }
 
-int ServerTest::port(TransportBase::EnumEncryption::type encryptionMode) const
+int ServerTest::port(TransportBase::EnumEncryption encryptionMode) const
 {
     Q_ASSERT(encryptionMode == Transport::EnumEncryption::None || encryptionMode == Transport::EnumEncryption::SSL);
     if (d->customPorts.contains(encryptionMode)) {

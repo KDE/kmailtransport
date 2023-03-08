@@ -87,7 +87,7 @@ public:
      *
      * @since 4.1
      */
-    void setPort(Transport::EnumEncryption::type encryptionMode, uint port);
+    void setPort(Transport::EnumEncryption encryptionMode, uint port);
 
     /**
      * @param encryptionMode the port of this encryption mode is returned.
@@ -98,7 +98,7 @@ public:
      *
      * @since 4.1
      */
-    Q_REQUIRED_RESULT int port(Transport::EnumEncryption::type encryptionMode) const;
+    Q_REQUIRED_RESULT int port(Transport::EnumEncryption encryptionMode) const;
 
     /**
      * Sets a fake hostname for the test. This is currently only used when

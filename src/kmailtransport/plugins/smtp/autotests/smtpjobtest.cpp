@@ -14,7 +14,7 @@
 #include <QStandardPaths>
 #include <QTest>
 
-Q_DECLARE_METATYPE(MailTransport::TransportBase::EnumAuthenticationType::type)
+Q_DECLARE_METATYPE(MailTransport::TransportBase::EnumAuthenticationType)
 
 class SmtpJobTest : public QObject
 {
@@ -29,7 +29,7 @@ private Q_SLOTS:
     void smtpJobTest_data()
     {
         QTest::addColumn<QList<QByteArray>>("scenario");
-        QTest::addColumn<MailTransport::TransportBase::EnumAuthenticationType::type>("authType");
+        QTest::addColumn<MailTransport::TransportBase::EnumAuthenticationType>("authType");
         QTest::addColumn<QString>("from");
         QTest::addColumn<QStringList>("to");
         QTest::addColumn<QStringList>("cc");
@@ -63,7 +63,7 @@ private Q_SLOTS:
     void smtpJobTest()
     {
         QFETCH(QList<QByteArray>, scenario);
-        QFETCH(MailTransport::TransportBase::EnumAuthenticationType::type, authType);
+        QFETCH(MailTransport::TransportBase::EnumAuthenticationType, authType);
         QFETCH(QString, from);
         QFETCH(QStringList, to);
         QFETCH(QStringList, cc);

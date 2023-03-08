@@ -3,6 +3,7 @@ ClassName=TransportBase
 NameSpace=MailTransport
 Mutators=true
 ItemAccessors=true
+GlobalEnums=true
 SetUserTexts=true
 GenerateProperties=true
 Visibility=MAILTRANSPORT_EXPORT
