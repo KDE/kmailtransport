@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:00+0000\n"
+"POT-Creation-Date: 2023-03-09 00:47+0000\n"
 "PO-Revision-Date: 2023-03-01 02:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -440,32 +440,32 @@ msgstr "사전 명령 충돌함."
 msgid "The precommand exited with code %1."
 msgstr "사전 명령이 코드 %1(으)로 종료됨."
 
-#: kmailtransport/transport.cpp:85
+#: kmailtransport/transport.cpp:86
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:134
+#: kmailtransport/transport.cpp:136
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "평문 텍스트"
 
-#: kmailtransport/transport.cpp:138
+#: kmailtransport/transport.cpp:140
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "익명"
 
-#: kmailtransport/transport.cpp:169
+#: kmailtransport/transport.cpp:171
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "알 수 없음"
 
-#: kmailtransport/transport.cpp:212
+#: kmailtransport/transport.cpp:215
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -482,17 +482,17 @@ msgstr ""
 "되지만 설정 파일이 유출되었을 때 복호화할 수도 있습니다.\n"
 "서버 '%1'의 암호를 설정 파일에 저장하시겠습니까?"
 
-#: kmailtransport/transport.cpp:221
+#: kmailtransport/transport.cpp:224
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet 사용 불가"
 
-#: kmailtransport/transport.cpp:222
+#: kmailtransport/transport.cpp:225
 #, kde-format
 msgid "Store Password"
 msgstr "암호 저장"
 
-#: kmailtransport/transport.cpp:223
+#: kmailtransport/transport.cpp:226
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "저장하지 않음"

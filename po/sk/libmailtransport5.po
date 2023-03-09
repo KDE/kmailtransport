@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:00+0000\n"
+"POT-Creation-Date: 2023-03-09 00:47+0000\n"
 "PO-Revision-Date: 2021-01-14 15:31+0100\n"
 "Last-Translator: Matej Mrenica <matejm98mthw@gmail.com>\n"
 "Language-Team: Slovak <kde-i18n-doc@kde.org>\n"
@@ -448,32 +448,32 @@ msgstr "Predpríkaz padol."
 msgid "The precommand exited with code %1."
 msgstr "Predpríkaz skončil s kódom %1."
 
-#: kmailtransport/transport.cpp:85
+#: kmailtransport/transport.cpp:86
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:134
+#: kmailtransport/transport.cpp:136
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Vyčistiť text"
 
-#: kmailtransport/transport.cpp:138
+#: kmailtransport/transport.cpp:140
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonym"
 
-#: kmailtransport/transport.cpp:169
+#: kmailtransport/transport.cpp:171
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Neznáme"
 
-#: kmailtransport/transport.cpp:212
+#: kmailtransport/transport.cpp:215
 #, fuzzy, kde-format
 #| msgid ""
 #| "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -500,17 +500,17 @@ msgstr ""
 "súboru.\n"
 "Chcete uložiť heslo pre server '%1' v konfiguračnom súbore?"
 
-#: kmailtransport/transport.cpp:221
+#: kmailtransport/transport.cpp:224
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet nie je dostupný"
 
-#: kmailtransport/transport.cpp:222
+#: kmailtransport/transport.cpp:225
 #, kde-format
 msgid "Store Password"
 msgstr "Uložiť heslo"
 
-#: kmailtransport/transport.cpp:223
+#: kmailtransport/transport.cpp:226
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Neukladať heslo"

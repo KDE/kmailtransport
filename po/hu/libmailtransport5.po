@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:00+0000\n"
+"POT-Creation-Date: 2023-03-09 00:47+0000\n"
 "PO-Revision-Date: 2014-09-04 15:25+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -454,32 +454,32 @@ msgstr "Az előparancs lefagyott."
 msgid "The precommand exited with code %1."
 msgstr "Az előparancs befejeződött, kilépési kód: %1"
 
-#: kmailtransport/transport.cpp:85
+#: kmailtransport/transport.cpp:86
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:134
+#: kmailtransport/transport.cpp:136
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Sima szöveg"
 
-#: kmailtransport/transport.cpp:138
+#: kmailtransport/transport.cpp:140
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Névtelen"
 
-#: kmailtransport/transport.cpp:169
+#: kmailtransport/transport.cpp:171
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: kmailtransport/transport.cpp:212
+#: kmailtransport/transport.cpp:215
 #, fuzzy, kde-format
 #| msgid ""
 #| "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -507,17 +507,17 @@ msgstr ""
 "El szeretné menteni a(z) '%1' kiszolgáló eléréséhez használt jelszót a "
 "beállítófájlba?"
 
-#: kmailtransport/transport.cpp:221
+#: kmailtransport/transport.cpp:224
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "A KWallet nem érhető el"
 
-#: kmailtransport/transport.cpp:222
+#: kmailtransport/transport.cpp:225
 #, kde-format
 msgid "Store Password"
 msgstr "A jelszó elmentése"
 
-#: kmailtransport/transport.cpp:223
+#: kmailtransport/transport.cpp:226
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "A jelszót nem kell elmenteni"
