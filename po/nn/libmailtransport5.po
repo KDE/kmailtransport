@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-02-18 01:00+0000\n"
+"POT-Creation-Date: 2023-03-09 00:47+0000\n"
 "PO-Revision-Date: 2023-03-04 16:23+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -451,32 +451,32 @@ msgstr "Førkommandoen krasja."
 msgid "The precommand exited with code %1."
 msgstr "Førkommandoen vart avslutta med kode %1."
 
-#: kmailtransport/transport.cpp:85
+#: kmailtransport/transport.cpp:86
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1, nr. %2"
 
-#: kmailtransport/transport.cpp:134
+#: kmailtransport/transport.cpp:136
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Klårtekst"
 
-#: kmailtransport/transport.cpp:138
+#: kmailtransport/transport.cpp:140
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonym"
 
-#: kmailtransport/transport.cpp:169
+#: kmailtransport/transport.cpp:171
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Ukjend"
 
-#: kmailtransport/transport.cpp:212
+#: kmailtransport/transport.cpp:215
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -494,17 +494,17 @@ msgstr ""
 "tilgang til oppsettsfila.\n"
 "Vil du lagra passordet til tenaren «%1» i oppsettsfila?"
 
-#: kmailtransport/transport.cpp:221
+#: kmailtransport/transport.cpp:224
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KDE Lommebokpassar er ikkje tilgjengeleg"
 
-#: kmailtransport/transport.cpp:222
+#: kmailtransport/transport.cpp:225
 #, kde-format
 msgid "Store Password"
 msgstr "Lagra passord"
 
-#: kmailtransport/transport.cpp:223
+#: kmailtransport/transport.cpp:226
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Ikkje lagra passord"
