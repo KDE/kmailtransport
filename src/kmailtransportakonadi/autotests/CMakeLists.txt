@@ -7,7 +7,7 @@ add_akonadi_isolated_test(
 )
 add_akonadi_isolated_test(
     SOURCE messagequeuejobtest.cpp
-    LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MailTransportAkonadi KF5::MailTransport KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::ConfigGui
+    LINK_LIBRARIES KPim${KF_MAJOR_VERSION}::MailTransportAkonadi KPim${KF_MAJOR_VERSION}::MailTransport KF${KF_MAJOR_VERSION}::I18n KF${KF_MAJOR_VERSION}::ConfigGui
 )
 # TODO: port & re-enable
 #add_akonadi_isolated_test(

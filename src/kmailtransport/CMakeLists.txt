@@ -1,6 +1,5 @@
 add_library(KPim${KF_MAJOR_VERSION}MailTransport)
 add_library(KPim${KF_MAJOR_VERSION}::MailTransport ALIAS KPim${KF_MAJOR_VERSION}MailTransport)
-add_library(KF5::MailTransport ALIAS KPim${KF_MAJOR_VERSION}MailTransport)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h"

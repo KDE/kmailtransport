@@ -1,15 +1,11 @@
 add_library(KPim${KF_MAJOR_VERSION}MailTransportAkonadi)
 add_library(KPim${KF_MAJOR_VERSION}::MailTransportAkonadi ALIAS KPim${KF_MAJOR_VERSION}MailTransportAkonadi)
-add_library(KF5::MailTransportAkonadi ALIAS KPim${KF_MAJOR_VERSION}MailTransportAkonadi)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransportakonadi_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim${KF_MAJOR_VERSION}MailTransportAkonadiConfigVersion.cmake"
     SOVERSION 5
     )
-
-
-
 
 target_sources(KPim${KF_MAJOR_VERSION}MailTransportAkonadi PRIVATE
     dispatcherinterface.cpp
