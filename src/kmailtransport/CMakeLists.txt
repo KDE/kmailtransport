@@ -97,7 +97,7 @@ set_target_properties(KPim${KF_MAJOR_VERSION}MailTransport PROPERTIES
     )
 
 
-install(TARGETS KPim${KF_MAJOR_VERSION}MailTransport EXPORT KPim${KF_MAJOR_VERSION}MailTransportTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KPim${KF_MAJOR_VERSION}MailTransport EXPORT KPim${KF_MAJOR_VERSION}MailTransportTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 install(FILES mailtransport.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 
