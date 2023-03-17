@@ -76,9 +76,9 @@ target_include_directories(KPim${KF_MAJOR_VERSION}MailTransport PUBLIC "$<BUILD_
 target_link_libraries(KPim${KF_MAJOR_VERSION}MailTransport
     PUBLIC
     KF${KF_MAJOR_VERSION}::Wallet
+    KF${KF_MAJOR_VERSION}::ConfigGui
     PRIVATE
     KF${KF_MAJOR_VERSION}::I18n
-    KF${KF_MAJOR_VERSION}::ConfigGui
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF${KF_MAJOR_VERSION}::CoreAddons
     KF${KF_MAJOR_VERSION}::Wallet

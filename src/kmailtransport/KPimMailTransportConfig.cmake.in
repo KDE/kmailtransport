@@ -3,6 +3,7 @@
 set(CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR} ${CMAKE_MODULE_PATH})
 include(CMakeFindDependencyMacro)
 find_dependency(KF@KF_MAJOR_VERSION@Wallet "@KF_MIN_VERSION@")
+find_dependency(KF@KF_MAJOR_VERSION@Config "@KF_MIN_VERSION@")
 
 if (@MAILTRANSPORT_KF5_COMPAT@)
     message(WARNING "\n"
