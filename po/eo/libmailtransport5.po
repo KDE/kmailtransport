@@ -1,62 +1,64 @@
-# Translation of libmailtransport into esperanto.
+# Translation of libmailtransport5.pot into esperanto.
+# Copyright (C) 2009 Free Software Foundation, Inc.
+# This file is distributed under the same license as the kmailtransport package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
+# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-09 00:47+0000\n"
-"PO-Revision-Date: 2009-11-15 12:06+0100\n"
-"Last-Translator: Axel Rousseau <axel@esperanto-jeunes.org>\n"
+"PO-Revision-Date: 2023-03-22 19:14+0100\n"
+"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: pology\n"
+"X-Generator: translate-po (https://github.com/zcribe/translate-po)\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:12
 #, kde-format
 msgid "Unique identifier"
-msgstr ""
+msgstr "Unika identigilo"
 
 #. i18n: ectx: label, entry (name), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:16
 #, kde-format
 msgid "User-visible transport name"
-msgstr ""
+msgstr "Uzant-videbla transportnomo"
 
 #. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:17
 #, kde-format
 msgid "The name that will be used when referring to this server."
-msgstr ""
+msgstr "La nomo kiu estos uzata kiam oni raportas al ĉi tiu servilo."
 
 #: kmailtransport/mailtransport.kcfg:18
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgid "Unnamed"
-msgstr "&Renomi"
+msgstr "Nenomita"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:24
 #, kde-format
 msgid "Host name of the server"
-msgstr ""
+msgstr "Gastnomo de la servilo"
 
 #. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:25
 #, kde-format
 msgid "The domain name or numerical address of the SMTP server."
-msgstr ""
+msgstr "La domajna nomo aŭ nombra adreso de la SMTP-servilo."
 
 #. i18n: ectx: label, entry (port), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:28
 #, kde-format
 msgid "Port number of the server"
-msgstr ""
+msgstr "Portnumero de la servilo"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:29
@@ -64,24 +66,26 @@ msgstr ""
 msgid ""
 "The port number that the SMTP server is listening on. The default port is 25."
 msgstr ""
+"La havena numero, sur kiu la SMTP-servilo aŭskultas. La defaŭlta haveno "
+"estas 25."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:33
 #, kde-format
 msgid "User name needed for login"
-msgstr ""
+msgstr "Uzantnomo necesas por ensaluto"
 
 #. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:34
 #, kde-format
 msgid "The user name to send to the server for authorization."
-msgstr ""
+msgstr "La uzantnomo por sendi al la servilo por rajtigo."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:37
 #, kde-format
 msgid "Command to execute before sending a mail"
-msgstr ""
+msgstr "Ordono por ekzekuti antaŭ sendi poŝton"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:38
@@ -90,18 +94,20 @@ msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
 "SSH tunnels, for example. Leave it empty if no command should be run."
 msgstr ""
+"Komando ruli loke, antaŭ sendi retpoŝton. Ĉi tio povas esti uzata por agordi "
+"SSH-tunelojn, ekzemple. Lasu ĝin malplena se neniu komando devus esti rulita."
 
 #. i18n: ectx: label, entry (options), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:41
 #, kde-format
 msgid "Options added to mailtransport method"
-msgstr ""
+msgstr "Opcioj aldonitaj al poŝttransporta metodo"
 
 #. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:44
 #, kde-format
 msgid "Server requires authentication"
-msgstr ""
+msgstr "Servilo postulas aŭtentikigon"
 
 #. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:45
@@ -110,13 +116,15 @@ msgid ""
 "Check this option if your SMTP server requires authentication before "
 "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
 msgstr ""
+"Kontrolu ĉi tiun opcion se via SMTP-servilo postulas aŭtentikigon antaŭ "
+"akcepti poŝton. Ĉi tio estas konata kiel 'Aŭtentikigita SMTP' aŭ simple "
+"ASMTP."
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:49
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgid "Store password"
-msgstr "Konservi pasvorton"
+msgstr "Konservu pasvorton"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:52
@@ -130,40 +138,43 @@ msgid ""
 "should not be considered secure from decryption efforts if access to the "
 "configuration file is obtained."
 msgstr ""
+"Marku ĉi tiun opcion por konservi vian pasvorton.\n"
+"Se KWallet estas disponebla, la pasvorto estos konservita tie, kio estas "
+"konsiderata sekura.\n"
+"Tamen, se KWallet ne disponeblas, la pasvorto estos konservita en la agorda "
+"dosiero. La pasvorto estas konservita en malklarigita formato, sed ne devus "
+"esti konsiderata sekura kontraŭ malĉifraj klopodoj se aliro al la agorda "
+"dosiero estas akirita."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:56
 #, kde-format
 msgid "Encryption method used for communication"
-msgstr ""
+msgstr "Ĉifrada metodo uzata por komunikado"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:59
-#, fuzzy, kde-format
-#| msgid "Encryption"
+#, kde-format
 msgid "No encryption"
-msgstr "Ĉifrado"
+msgstr "Neniu ĉifrado"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:62
-#, fuzzy, kde-format
-#| msgid "Encryption"
+#, kde-format
 msgid "SSL encryption"
-msgstr "Ĉifrado"
+msgstr "SSL-ĉifrado"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:65
-#, fuzzy, kde-format
-#| msgid "Encryption"
+#, kde-format
 msgid "TLS encryption"
-msgstr "Ĉifrado"
+msgstr "TLS-ĉifrado"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:70
-#, fuzzy, kde-format
-#| msgid "Authentication Method"
+#, kde-format
 msgid "Authentication method"
-msgstr "Aŭtentigometodo"
+msgstr "Aŭtentikiga metodo"
 
 #. i18n: ectx: label, entry (specifyHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
@@ -173,7 +184,7 @@ msgstr "Aŭtentigometodo"
 #: kmailtransport/mailtransport.kcfg:96 kmailtransport/mailtransport.kcfg:101
 #, kde-format
 msgid "<!-- TODO -->"
-msgstr ""
+msgstr "<!-- TODO -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:88
@@ -183,12 +194,16 @@ msgid ""
 "server. This is useful when your system's hostname may not be set correctly "
 "or to mask your system's true hostname."
 msgstr ""
+"Kontrolu ĉi tiun opcion por uzi kutiman gastigan nomon kiam vi identiĝas al "
+"la poŝtservilo. Ĉi tio estas utila kiam la gastiga nomo de via sistemo eble "
+"ne estas ĝuste agordita aŭ por maski la veran gastigan nomon de via sistemo."
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:93
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr ""
+"Enigu la gastigan nomon, kiu devas esti uzata dum identigado al la servilo."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:97
@@ -197,6 +212,8 @@ msgid ""
 "Check this option to use a custom sender address when identifying to the "
 "mail server. If not checked, the address from the identity is used."
 msgstr ""
+"Marku ĉi tiun opcion por uzi kutiman sendintadreson kiam vi identiĝas al la "
+"poŝtservilo. Se ne kontrolite, la adreso de la identeco estas uzata."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:102
@@ -205,6 +222,8 @@ msgid ""
 "Enter the address that should be used to overwrite the default sender "
 "address."
 msgstr ""
+"Enigu la adreson, kiu devus esti uzata por anstataŭigi la defaŭltan "
+"senditadreson."
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
@@ -212,7 +231,7 @@ msgstr ""
 #: kmailtransport/plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
-msgstr ""
+msgstr "Konektu uzante la sistemajn prokurajn agordojn"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:106
@@ -221,27 +240,32 @@ msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
 "server."
 msgstr ""
+"Se markite, la sistemaj prokuraj agordoj estos uzataj por konekti al la "
+"poŝtservilo."
 
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:144
 #, kde-format
 msgid "The password to send to the server for authorization."
-msgstr ""
+msgstr "La pasvorto por sendi al la servilo por rajtigo."
 
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
+"Malsukcesis kontroli kapablojn. Bonvolu kontroli havenon kaj "
+"aŭtentikigreĝimon."
 
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
 #, kde-format
 msgid "Check Capabilities Failed"
-msgstr ""
+msgstr "Kontrolo Kapabloj Malsukcesis"
 
 #: kmailtransport/plugins/smtp/smtpjob.cpp:242
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
+"Vi devas provizi uzantnomon kaj pasvorton por uzi ĉi tiun SMTP-servilon."
 
 #: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:27
 #, kde-format
@@ -252,20 +276,20 @@ msgstr "SMTP"
 #: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
 msgid "An SMTP server on the Internet"
-msgstr ""
+msgstr "SMTP-servilo en la Interreto"
 
 #: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:38
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
-msgstr ""
+msgstr "Agordi konton"
 
 #. i18n: ectx: attribute (title), widget (QWidget, smptTab)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:34
 #, kde-format
 msgctxt "general smtp settings"
 msgid "General"
-msgstr ""
+msgstr "Generalo"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:40
@@ -277,13 +301,13 @@ msgstr "Informoj pri Konto"
 #: kmailtransport/plugins/smtp/smtpsettings.ui:47
 #, kde-format
 msgid "Outgoing &mail server:"
-msgstr ""
+msgstr "Elira&nta poŝtservilo:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:67
 #, kde-format
 msgid "Server &requires authentication"
-msgstr ""
+msgstr "Se&rvilo postulas aŭtentikigon"
 
 #. i18n: ectx: property (text), widget (QLabel, usernameLabel)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:77
@@ -299,43 +323,40 @@ msgstr "&Pasvorto:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:126
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgid "&Store SMTP password"
-msgstr "Konservi pasvorton"
+msgstr "Kon&servi SMTP-pasvorton"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:147
 #, kde-format
 msgctxt "advanced smtp settings"
 msgid "Advanced"
-msgstr ""
+msgstr "Altnivela"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:153
-#, fuzzy, kde-format
-#| msgid "%1 Settings"
+#, kde-format
 msgid "Connection Settings"
-msgstr "%1 Agordoj"
+msgstr "Konekto-Agordoj"
 
 #. i18n: ectx: property (text), widget (QLabel, noAuthPossible)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:172
 #, kde-format
 msgid "This server does not support authentication"
-msgstr ""
+msgstr "Ĉi tiu servilo ne subtenas aŭtentikigon"
 
 #. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:189
 #, kde-format
 msgid "Auto Detect"
-msgstr ""
+msgstr "Aŭtomata Detektado"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:216
-#, fuzzy, kde-format
-#| msgid "Encryption"
+#, kde-format
 msgid "Encryption:"
-msgstr "Ĉifrado"
+msgstr "Ĉifrado:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:225
@@ -345,17 +366,15 @@ msgstr "&Nenio"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:232
-#, fuzzy, kde-format
-#| msgid "&SSL"
+#, kde-format
 msgid "&SSL/TLS"
-msgstr "&SSL"
+msgstr "&SSL/TLS"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:239
-#, fuzzy, kde-format
-#| msgid "&TLS"
+#, kde-format
 msgid "START&TLS"
-msgstr "&TLS"
+msgstr "START&TLS"
 
 #. i18n: ectx: property (text), widget (QLabel, portLabel)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:248
@@ -365,76 +384,75 @@ msgstr "&Pordo:"
 
 #. i18n: ectx: property (text), widget (QLabel, authLabel)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:274
-#, fuzzy, kde-format
-#| msgid "Authentication Method"
+#, kde-format
 msgid "Authentication:"
-msgstr "Aŭtentigometodo"
+msgstr "Aŭtentikigo:"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:293
 #, kde-format
 msgid "SMTP Settings"
-msgstr ""
+msgstr "SMTP-agordoj"
 
 #. i18n: ectx: property (text), widget (QLabel, hostnameLabel)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:303
 #, kde-format
 msgid "Hostna&me:"
-msgstr ""
+msgstr "Gastigantono&mo:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:329
 #, kde-format
 msgid "Sender Address:"
-msgstr ""
+msgstr "Sendanto Adreso:"
 
 #. i18n: ectx: property (text), widget (QLabel, precommandLabel)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:346
 #, kde-format
 msgid "Precommand:"
-msgstr ""
+msgstr "Antaŭkomando:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:376
 #, kde-format
 msgid "Sen&d custom hostname to server"
-msgstr ""
+msgstr "Sen&di propran gastigan nomon al servilo"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:383
 #, kde-format
 msgid "Use custom sender address"
-msgstr ""
+msgstr "Uzi kutiman sendint-adreson"
 
 #: kmailtransport/precommandjob.cpp:68
 #, kde-format
 msgid "Executing precommand"
-msgstr ""
+msgstr "Efektivigante antaŭkomandon"
 
 #: kmailtransport/precommandjob.cpp:68
 #, kde-format
 msgid "Executing precommand '%1'."
-msgstr ""
+msgstr "Plenumante antaŭkomandon '%1'."
 
 #: kmailtransport/precommandjob.cpp:75
 #, kde-format
 msgid "Unable to start precommand '%1'."
-msgstr ""
+msgstr "Ne eblas komenci antaŭkomandon '%1'."
 
 #: kmailtransport/precommandjob.cpp:77
 #, kde-format
 msgid "Error while executing precommand '%1'."
-msgstr ""
+msgstr "Eraro dum rulo de antaŭkomando '%1'."
 
 #: kmailtransport/precommandjob.cpp:93
 #, kde-format
 msgid "The precommand crashed."
-msgstr ""
+msgstr "La antaŭkomando paneis."
 
 #: kmailtransport/precommandjob.cpp:96
 #, kde-format
 msgid "The precommand exited with code %1."
-msgstr ""
+msgstr "La antaŭkondo eliĝis kun kodo %1."
 
 #: kmailtransport/transport.cpp:86
 #, kde-format
@@ -447,19 +465,19 @@ msgstr "%1 #%2"
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
-msgstr ""
+msgstr "Klara teksto"
 
 #: kmailtransport/transport.cpp:140
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
-msgstr ""
+msgstr "Anonima"
 
 #: kmailtransport/transport.cpp:171
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
-msgstr ""
+msgstr "Nekonata"
 
 #: kmailtransport/transport.cpp:215
 #, kde-format
@@ -472,6 +490,13 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
+"QKeychain ne trovis backend por stoki vian pasvorton. Estas forte "
+"rekomendite uzi fortan backend por administri viajn pasvortojn.\n"
+"Tamen, la pasvorto povas esti konservita en la agorda dosiero anstataŭe. La "
+"pasvorto estas konservita en malklarigita formato, sed ne devus esti "
+"konsiderata sekura kontraŭ malĉifrado, se aliro al la agorda dosiero estas "
+"akirita.\n"
+"Ĉu vi volas konservi la pasvorton por servilo '%1' en la agorda dosiero?"
 
 #: kmailtransport/transport.cpp:224
 #, kde-format
@@ -491,27 +516,27 @@ msgstr "Ne konservi pasvorton"
 #: kmailtransport/transportjob.cpp:122
 #, kde-format
 msgid "The outgoing account \"%1\" is not correctly configured."
-msgstr ""
+msgstr "La elira konto \"%1\" ne estas ĝuste agordita."
 
 #: kmailtransport/transportmanager.cpp:229
 #, kde-format
 msgid "Default Transport"
-msgstr ""
+msgstr "Defaŭlta Transporto"
 
 #: kmailtransport/transportmanager.cpp:247
 #, kde-format
 msgid "You must create an outgoing account before sending."
-msgstr ""
+msgstr "Vi devas krei eksiĝintan konton antaŭ sendi."
 
 #: kmailtransport/transportmanager.cpp:248
 #, kde-format
 msgid "Create Account Now?"
-msgstr ""
+msgstr "Ĉu krei konton nun?"
 
 #: kmailtransport/transportmanager.cpp:249
 #, kde-format
 msgid "Create Account Now"
-msgstr ""
+msgstr "Krei Konton Nun"
 
 #: kmailtransport/transportmanager.cpp:631
 #, kde-format
@@ -523,6 +548,12 @@ msgid ""
 "which stores sensitive data for you in a strongly encrypted file.\n"
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
+"La sekvaj poŝtaj transportiloj konservas siajn pasvortojn en neĉifrita "
+"agorda dosiero.\n"
+"Pro sekurecaj kialoj, bonvolu pripensi migri tiujn pasvortojn al KWallet, la "
+"administra ilo de KDE Wallet,\n"
+"kiu konservas sentemajn datumojn por vi en forte ĉifrita dosiero.\n"
+"Ĉu vi volas migri viajn pasvortojn al KWallet?"
 
 #: kmailtransport/transportmanager.cpp:638
 #, kde-format
@@ -532,7 +563,7 @@ msgstr "Demando"
 #: kmailtransport/transportmanager.cpp:639
 #, kde-format
 msgid "Migrate"
-msgstr ""
+msgstr "Migri"
 
 #: kmailtransport/transportmanager.cpp:640
 #, kde-format
@@ -543,26 +574,26 @@ msgstr "Konservi"
 #: kmailtransport/ui/addtransportdialog.ui:20
 #, kde-format
 msgid "Step One: Select Transport Type"
-msgstr ""
+msgstr "Paŝo Unu: Elekti Transportan Tipon"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: kmailtransport/ui/addtransportdialog.ui:38
 #, kde-format
 msgctxt "The name of a mail transport"
 msgid "Name:"
-msgstr ""
+msgstr "Nomo:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDefault)
 #: kmailtransport/ui/addtransportdialog.ui:48
 #, kde-format
 msgid "Make this the default outgoing account"
-msgstr ""
+msgstr "Fari ĉi tion la defaŭlta elira konto"
 
 #. i18n: ectx: property (text), widget (QLabel, descLabel)
 #: kmailtransport/ui/addtransportdialog.ui:61
 #, kde-format
 msgid "Select an account type from the list below:"
-msgstr ""
+msgstr "Elektu kontan tipon el la suba listo:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: kmailtransport/ui/addtransportdialog.ui:81
@@ -580,13 +611,13 @@ msgstr "Priskribo"
 #: kmailtransport/ui/transportmanagementwidget.ui:17
 #, kde-format
 msgid "Remo&ve"
-msgstr "&Forigu"
+msgstr "&Forigi"
 
 #. i18n: ectx: property (text), widget (QPushButton, defaultButton)
 #: kmailtransport/ui/transportmanagementwidget.ui:24
 #, kde-format
 msgid "&Set as Default"
-msgstr ""
+msgstr "&Meti kiel Defaŭlto"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: kmailtransport/ui/transportmanagementwidget.ui:54
@@ -610,36 +641,36 @@ msgstr "&Modifi..."
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
-msgstr ""
+msgstr "Krei eliran konton"
 
 #: kmailtransport/widgets/addtransportdialogng.cpp:95
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
-msgstr ""
+msgstr "Krei kaj Agordi"
 
 #: kmailtransport/widgets/transportlistview.cpp:27
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
-msgstr ""
+msgstr "Nomo"
 
 #: kmailtransport/widgets/transportlistview.cpp:27
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
-msgstr ""
+msgstr "Tipo"
 
 #: kmailtransport/widgets/transportlistview.cpp:99
 #, kde-format
 msgctxt "@label the default mail transport"
 msgid " (Default)"
-msgstr ""
+msgstr " (Defaŭlto)"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
-msgstr ""
+msgstr "Ĉu vi volas forigi eliran konton '%1'?"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:139
 #, kde-format
@@ -651,93 +682,44 @@ msgstr[1] ""
 #: kmailtransport/widgets/transportmanagementwidget.cpp:141
 #, kde-format
 msgid "Remove outgoing account?"
-msgstr ""
+msgstr "Ĉu forigi eliran konton?"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:162
-#, fuzzy, kde-format
-#| msgid "A&dd..."
+#, kde-format
 msgid "Add..."
-msgstr "&Aldoni..."
+msgstr "Aldoni..."
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:167
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "Modify..."
-msgstr "&Modifi..."
+msgstr "Modifi..."
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:170
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgid "Rename"
-msgstr "&Renomi"
+msgstr "Renomi"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:174
-#, fuzzy, kde-format
-#| msgid "Remo&ve"
+#, kde-format
 msgid "Remove"
-msgstr "&Forigu"
+msgstr "Forigi"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:179
 #, kde-format
 msgid "Set as Default"
-msgstr ""
+msgstr "Meti kiel Defaŭlton"
 
 #: kmailtransportakonadi/messagequeuejob.cpp:59
 #, kde-format
 msgid "Empty message."
-msgstr ""
+msgstr "Malplena mesaĝo."
 
 #: kmailtransportakonadi/messagequeuejob.cpp:66
 #, kde-format
 msgid "Message has no recipients."
-msgstr ""
+msgstr "Mesaĝo ne havas ricevantojn."
 
 #: kmailtransportakonadi/messagequeuejob.cpp:73
 #, kde-format
 msgid "Message has invalid sent-mail folder."
-msgstr ""
-
-#, fuzzy
-#~| msgid "Server:"
-#~ msgid "SMTP Server"
-#~ msgstr "Servilo:"
-
-#, fuzzy
-#~| msgctxt "@option SMTP transport"
-#~| msgid "SMTP"
-#~ msgid "SMTP"
-#~ msgstr "SMTP"
-
-#, fuzzy
-#~| msgctxt "@option sendmail transport"
-#~| msgid "Sendmail"
-#~ msgid "Local sendmail"
-#~ msgstr "Sendmail"
-
-#~ msgctxt "@option sendmail transport"
-#~ msgid "Sendmail"
-#~ msgstr "Sendmail"
-
-#~ msgid "text"
-#~ msgstr "teksto"
-
-#~ msgid "Check &What the Server Supports"
-#~ msgstr "Rigardi &kion la servilo subtenas"
-
-#~ msgid "&LOGIN"
-#~ msgstr "&LOGIN"
-
-#~ msgid "&PLAIN"
-#~ msgstr "&PLAIN"
-
-#~ msgid "CRAM-MD&5"
-#~ msgstr "CRAM-MD&5"
-
-#~ msgid "&DIGEST-MD5"
-#~ msgstr "&DIGEST-MD5"
-
-#~ msgid "&GSSAPI"
-#~ msgstr "&GSSAPI"
-
-#~ msgid "&NTLM"
-#~ msgstr "&NTML"
+msgstr "Mesaĝo havas nevalidan senditan dosierujon."
