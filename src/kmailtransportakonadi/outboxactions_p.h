@@ -94,6 +94,6 @@ public:
     Akonadi::Job *itemAction(const Akonadi::Item &item, Akonadi::FilterActionJob *parent) const override;
 
 private:
-    int mTransportId;
+    const int mTransportId;
 };
 } // namespace MailTransport
