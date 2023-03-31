@@ -46,13 +46,13 @@ public:
       Returns true if this message has everything it needs and is ready to be
       sent.
     */
-    bool validate();
+    Q_REQUIRED_RESULT bool validate() const;
 
     // slot
     void outboxRequestResult(KJob *job);
 };
 
-bool MessageQueueJobPrivate::validate()
+bool MessageQueueJobPrivate::validate() const
 {
     if (!message) {
         q->setError(KJob::UserDefinedError);
