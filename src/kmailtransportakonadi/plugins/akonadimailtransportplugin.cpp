@@ -58,7 +58,7 @@ QVector<MailTransport::TransportAbstractPluginInfo> AkonadiMailTransportPlugin::
             info.description = atype.description();
             info.identifier = atype.identifier();
             info.isAkonadi = true;
-            lst << info;
+            lst << std::move(info);
         }
     }
     return lst;
