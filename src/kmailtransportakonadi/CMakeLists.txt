@@ -122,7 +122,6 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-add_subdirectory(plugins)
 if (BUILD_WITH_COMPAT_LIBS)
 if (QT_MAJOR_VERSION STREQUAL "5")
 ##
