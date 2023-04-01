@@ -72,9 +72,8 @@ bool AkonadiMailTransportPlugin::configureTransport(const QString &identifier, M
         qCWarning(MAILTRANSPORT_AKONADI_LOG) << "Invalid resource instance" << transport->host();
         return false;
     }
-    QPointer<Akonadi::AgentConfigurationDialog> dlg = new Akonadi::AgentConfigurationDialog(instance, parent); // Async...
-    dlg->exec();
-    delete dlg;
+    Akonadi::AgentConfigurationDialog dlg(instance, parent); // Async...
+    dlg.exec();
     transport->save();
     return true; // No way to know here if the user cancelled or not.
 }
