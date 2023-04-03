@@ -11,8 +11,4 @@ irc: akonadi
 libraries:
  - qmake: KMailTransport
    cmake: "KF5::MailTransport"
- - qmake: KMailTransportAkonadi
-   cmake: "KF5::MailTransportAkonadi"
 cmakename: KF5MailTransport
-# FIXME kapidox does not support more than one cmake module per repo yet
-#cmakename: KF5MailTransportAkonadi
