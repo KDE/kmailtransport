@@ -5,8 +5,6 @@ Dependencies:
 - 'on': ['Linux/Qt5', 'FreeBSD/Qt5', 'Windows/Qt5']
   'require':
     'frameworks/extra-cmake-modules': '@latest'
-    'pim/akonadi' : '@same'
-    'pim/akonadi-mime' : '@same'
     'pim/kmime' : '@same'
     'pim/ksmtp' : '@same'
     'pim/libkgapi' : '@same'
@@ -15,8 +13,6 @@ Dependencies:
 - 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6']
   'require':
     'frameworks/extra-cmake-modules': '@latest-kf6'
-    'pim/akonadi' : '@latest-kf6'
-    'pim/akonadi-mime' : '@latest-kf6'
     'pim/kmime' : '@latest-kf6'
     'pim/ksmtp' : '@latest-kf6'
     'pim/libkgapi' : '@latest-kf6'
