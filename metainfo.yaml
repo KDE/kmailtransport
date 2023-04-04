@@ -10,5 +10,5 @@ irc: akonadi
 
 libraries:
  - qmake: KMailTransport
-   cmake: "KF5::MailTransport"
-cmakename: KF5MailTransport
+   cmake: "KPim6::MailTransport"
+cmakename: KPim6MailTransport

@@ -8,11 +8,11 @@ ecm_add_test(smtpjobtest.cpp
              fakeserver.cpp
     LINK_LIBRARIES Qt::Network
                    Qt::Test
-                   KPim${KF_MAJOR_VERSION}::MailTransport
-                   KF${KF_MAJOR_VERSION}::I18n
-                   KF${KF_MAJOR_VERSION}::ConfigWidgets
-                   KF${KF_MAJOR_VERSION}::KIOWidgets
-                   KPim${KF_MAJOR_VERSION}::SMTP
-                   KPim${KF_MAJOR_VERSION}::GAPICore
+                   KPim6::MailTransport
+                   KF6::I18n
+                   KF6::ConfigWidgets
+                   KF6::KIOWidgets
+                   KPim6::SMTP
+                   KPim6::GAPICore
     TEST_NAME smtpjobtest
 )
