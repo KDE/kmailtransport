@@ -87,7 +87,7 @@ target_link_libraries(KPim6MailTransport
     Qt::Network
     )
 
-target_link_libraries(KPim6MailTransport PRIVATE qt${QT_MAJOR_VERSION}keychain)
+target_link_libraries(KPim6MailTransport PRIVATE qt6keychain)
 
 
 set_target_properties(KPim6MailTransport PROPERTIES
