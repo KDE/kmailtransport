@@ -54,7 +54,7 @@ Q_SIGNALS:
     void transportRemoved(int id, const QString &name);
 
 protected:
-    void setTransportList(const QVector<int> &transportList);
+    void setTransportList(const QList<int> &transportList);
 
 public Q_SLOTS:
     /**

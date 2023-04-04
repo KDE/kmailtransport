@@ -41,7 +41,7 @@ public Q_SLOTS:
 private Q_SLOTS:
     void checkSmtpCapabilities();
     void passwordsLoaded();
-    void slotFinished(const QVector<int> &results);
+    void slotFinished(const QList<int> &results);
     void hostNameChanged(const QString &text);
     void encryptionChanged(int enc);
     void ensureValidAuthSelection();

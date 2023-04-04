@@ -40,7 +40,7 @@ public:
     QButtonGroup *encryptionGroup = nullptr;
 
     // detected authentication capabilities
-    QVector<int> noEncCapa, sslCapa, tlsCapa;
+    QList<int> noEncCapa, sslCapa, tlsCapa;
 
     bool serverTestFailed;
 
@@ -70,7 +70,7 @@ public:
             return;
         }
 
-        QVector<int> capa = noEncCapa;
+        QList<int> capa = noEncCapa;
         if (ui.encryptionSsl->isChecked()) {
             capa = sslCapa;
         } else if (ui.encryptionTls->isChecked()) {
@@ -259,7 +259,7 @@ void SMTPConfigWidget::passwordsLoaded()
 }
 
 // TODO rename
-void SMTPConfigWidget::slotFinished(const QVector<int> &results)
+void SMTPConfigWidget::slotFinished(const QList<int> &results)
 {
     Q_D(SMTPConfigWidget);
 

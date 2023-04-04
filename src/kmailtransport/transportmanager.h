@@ -181,7 +181,7 @@ public:
     /**
       Returns a list of transport identifiers.
     */
-    Q_SCRIPTABLE QVector<int> transportIds() const;
+    Q_SCRIPTABLE QList<int> transportIds() const;
 
     /**
       Returns a list of transport names.

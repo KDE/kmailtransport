@@ -55,7 +55,7 @@ public:
     /**
       Describes a list of transport types.
     */
-    using List = QVector<TransportType>;
+    using List = QList<TransportType>;
 
     /**
       Constructs a new TransportType.

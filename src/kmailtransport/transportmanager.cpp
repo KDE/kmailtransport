@@ -307,9 +307,9 @@ bool TransportManager::isEmpty() const
     return d->transports.isEmpty();
 }
 
-QVector<int> TransportManager::transportIds() const
+QList<int> TransportManager::transportIds() const
 {
-    QVector<int> rv;
+    QList<int> rv;
     rv.reserve(d->transports.count());
     for (Transport *t : std::as_const(d->transports)) {
         rv << t->id();
@@ -458,12 +458,12 @@ void TransportManagerPrivate::fillTypes()
 void TransportManagerPrivate::updatePluginList()
 {
     types.clear();
-    const QVector<MailTransport::TransportAbstractPlugin *> lstPlugins = MailTransport::TransportPluginManager::self()->pluginsList();
+    const QList<MailTransport::TransportAbstractPlugin *> lstPlugins = MailTransport::TransportPluginManager::self()->pluginsList();
     for (MailTransport::TransportAbstractPlugin *plugin : lstPlugins) {
         if (plugin->names().isEmpty()) {
             qCDebug(MAILTRANSPORT_LOG) << "Plugin " << plugin << " doesn't provide plugin";
         }
-        const QVector<TransportAbstractPluginInfo> lstInfos = plugin->names();
+        const QList<TransportAbstractPluginInfo> lstInfos = plugin->names();
         for (const MailTransport::TransportAbstractPluginInfo &info : lstInfos) {
             TransportType type;
             type.d->mName = info.name;
@@ -506,7 +506,7 @@ void TransportManagerPrivate::slotTransportsChanged()
 
 int TransportManagerPrivate::createId() const
 {
-    QVector<int> usedIds;
+    QList<int> usedIds;
     usedIds.reserve(transports.size());
     for (Transport *t : std::as_const(transports)) {
         usedIds << t->id();

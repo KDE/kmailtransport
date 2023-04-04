@@ -42,8 +42,8 @@ public:
     }
 
     void loadPlugin(MailTransportPluginInfo *item);
-    Q_REQUIRED_RESULT QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
-    QVector<MailTransportPluginInfo> mPluginList;
+    Q_REQUIRED_RESULT QList<MailTransport::TransportAbstractPlugin *> pluginsList() const;
+    QList<MailTransportPluginInfo> mPluginList;
     void initializePlugins();
 
 private:
@@ -55,9 +55,9 @@ void TransportPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return;
     }
-    const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/mailtransport"));
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/mailtransport"));
 
-    QVectorIterator<KPluginMetaData> i(plugins);
+    QListIterator<KPluginMetaData> i(plugins);
     i.toBack();
     while (i.hasPrevious()) {
         MailTransportPluginInfo info;
@@ -73,8 +73,8 @@ void TransportPluginManagerPrivate::initializePlugins()
             qCWarning(MAILTRANSPORT_LOG) << "Plugin " << data.name() << " doesn't have correction plugin version. It will not be loaded.";
         }
     }
-    const QVector<MailTransportPluginInfo>::iterator end(mPluginList.end());
-    for (QVector<MailTransportPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
+    const QList<MailTransportPluginInfo>::iterator end(mPluginList.end());
+    for (QList<MailTransportPluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }
 }
@@ -88,11 +88,11 @@ void TransportPluginManagerPrivate::loadPlugin(MailTransportPluginInfo *item)
     }
 }
 
-QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManagerPrivate::pluginsList() const
+QList<MailTransport::TransportAbstractPlugin *> TransportPluginManagerPrivate::pluginsList() const
 {
-    QVector<MailTransport::TransportAbstractPlugin *> lst;
-    const QVector<MailTransportPluginInfo>::ConstIterator end(mPluginList.constEnd());
-    for (QVector<MailTransportPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
+    QList<MailTransport::TransportAbstractPlugin *> lst;
+    const QList<MailTransportPluginInfo>::ConstIterator end(mPluginList.constEnd());
+    for (QList<MailTransportPluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if (auto plugin = (*it).plugin) {
             lst << plugin;
         }
@@ -114,16 +114,16 @@ TransportPluginManager *TransportPluginManager::self()
     return &s_self;
 }
 
-QVector<MailTransport::TransportAbstractPlugin *> TransportPluginManager::pluginsList() const
+QList<MailTransport::TransportAbstractPlugin *> TransportPluginManager::pluginsList() const
 {
     return d->pluginsList();
 }
 
 MailTransport::TransportAbstractPlugin *TransportPluginManager::plugin(const QString &identifier)
 {
-    const QVector<MailTransport::TransportAbstractPlugin *> lstPlugins = pluginsList();
+    const QList<MailTransport::TransportAbstractPlugin *> lstPlugins = pluginsList();
     for (MailTransport::TransportAbstractPlugin *p : lstPlugins) {
-        const QVector<TransportAbstractPluginInfo> lstPluginInfo = p->names();
+        const QList<TransportAbstractPluginInfo> lstPluginInfo = p->names();
         for (const MailTransport::TransportAbstractPluginInfo &info : lstPluginInfo) {
             if (info.identifier == identifier) {
                 return p;

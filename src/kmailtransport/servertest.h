@@ -150,7 +150,7 @@ public:
      * after the finished() signals has been sent.
      * @return an enum of the type Transport::EnumAuthenticationType
      */
-    Q_REQUIRED_RESULT QVector<int> normalProtocols() const;
+    Q_REQUIRED_RESULT QList<int> normalProtocols() const;
 
     /**
      * tells you if the normal server is available
@@ -164,14 +164,14 @@ public:
      * @return an enum of the type Transport::EnumAuthenticationType
      * @since 4.1
      */
-    Q_REQUIRED_RESULT QVector<int> tlsProtocols() const;
+    Q_REQUIRED_RESULT QList<int> tlsProtocols() const;
 
     /**
      * Get the protocols for the SSL connections. Call this only
      * after the finished() signals has been sent.
      * @return an enum of the type Transport::EnumAuthenticationType
      */
-    Q_REQUIRED_RESULT QVector<int> secureProtocols() const;
+    Q_REQUIRED_RESULT QList<int> secureProtocols() const;
 
     /**
      * tells you if the ssl server is available
@@ -193,7 +193,7 @@ Q_SIGNALS:
      * This will be emitted when the test is done. It will contain
      * the values from the enum EnumEncryption which are possible.
      */
-    void finished(const QVector<int> &);
+    void finished(const QList<int> &);
 
 private:
     Q_DECLARE_PRIVATE(ServerTest)

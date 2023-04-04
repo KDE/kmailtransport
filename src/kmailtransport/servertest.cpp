@@ -42,7 +42,7 @@ public:
     MailTransport::Socket *secureSocket = nullptr;
 
     QSet<int> connectionResults;
-    QHash<int, QVector<int>> authenticationResults;
+    QHash<int, QList<int>> authenticationResults;
     QSet<ServerTest::Capability> capabilityResults;
     QHash<int, uint> customPorts;
     QTimer *normalSocketTimer = nullptr;
@@ -67,7 +67,7 @@ public:
     void sendInitialCapabilityQuery(MailTransport::Socket *socket);
     bool handlePopConversation(MailTransport::Socket *socket, int type, int stage, const QString &response, bool *shouldStartTLS);
     bool handleNntpConversation(MailTransport::Socket *socket, int type, int *stage, const QString &response, bool *shouldStartTLS);
-    QVector<int> parseAuthenticationList(const QStringList &authentications);
+    QList<int> parseAuthenticationList(const QStringList &authentications);
 
     Q_REQUIRED_RESULT inline bool isGmail(const QString &server) const
     {
@@ -111,7 +111,7 @@ void ServerTestPrivate::finalResult()
     normalSocketFinished = false;
     tlsFinished = false;
 
-    QVector<int> resultsAsVector;
+    QList<int> resultsAsVector;
     resultsAsVector.reserve(connectionResults.size());
     for (int res : std::as_const(connectionResults)) {
         resultsAsVector.append(res);
@@ -120,9 +120,9 @@ void ServerTestPrivate::finalResult()
     Q_EMIT q->finished(resultsAsVector);
 }
 
-QVector<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authentications)
+QList<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authentications)
 {
-    QVector<int> result;
+    QList<int> result;
     for (QStringList::ConstIterator it = authentications.begin(); it != authentications.end(); ++it) {
         QString current = (*it).toUpper();
         if (current == QLatin1String("LOGIN")) {
@@ -343,12 +343,12 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
         //     SASL DIGEST-MD5 CRAM-MD5 NTLM PLAIN LOGIN
         //     STARTTLS
         //     .
-        const QVector<QStringView> lines = QStringView(response).split(QStringLiteral("\r\n"), Qt::SkipEmptyParts);
+        const QList<QStringView> lines = QStringView(response).split(QStringLiteral("\r\n"), Qt::SkipEmptyParts);
         for (const QStringView line : lines) {
             if (line.compare(QLatin1String("STARTTLS"), Qt::CaseInsensitive) == 0) {
                 *shouldStartTLS = true;
             } else if (line.startsWith(QLatin1String("AUTHINFO "), Qt::CaseInsensitive)) {
-                const QVector<QStringView> authinfos = QStringView(line).split(QLatin1Char(' '), Qt::SkipEmptyParts);
+                const QList<QStringView> authinfos = QStringView(line).split(QLatin1Char(' '), Qt::SkipEmptyParts);
                 const QString s(QStringLiteral("USER"));
                 const QStringView ref(s);
                 if (authinfos.contains(ref)) {
@@ -656,7 +656,7 @@ QProgressBar *ServerTest::progressBar() const
     return d->testProgress;
 }
 
-QVector<int> ServerTest::normalProtocols() const
+QList<int> ServerTest::normalProtocols() const
 {
     return d->authenticationResults[TransportBase::EnumEncryption::None];
 }
@@ -666,12 +666,12 @@ bool ServerTest::isNormalPossible() const
     return d->normalPossible;
 }
 
-QVector<int> ServerTest::tlsProtocols() const
+QList<int> ServerTest::tlsProtocols() const
 {
     return d->authenticationResults[TransportBase::EnumEncryption::TLS];
 }
 
-QVector<int> ServerTest::secureProtocols() const
+QList<int> ServerTest::secureProtocols() const
 {
     return d->authenticationResults[Transport::EnumEncryption::SSL];
 }

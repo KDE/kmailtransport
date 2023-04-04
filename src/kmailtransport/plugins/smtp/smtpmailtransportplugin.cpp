@@ -20,7 +20,7 @@ SMTPMailTransportPlugin::SMTPMailTransportPlugin(QObject *parent, const QList<QV
 
 SMTPMailTransportPlugin::~SMTPMailTransportPlugin() = default;
 
-QVector<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::names() const
+QList<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::names() const
 {
     MailTransport::TransportAbstractPluginInfo info;
 
@@ -28,7 +28,7 @@ QVector<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::nam
     info.description = i18n("An SMTP server on the Internet");
     info.identifier = QStringLiteral("SMTP");
     info.isAkonadi = false;
-    return QVector<MailTransport::TransportAbstractPluginInfo>() << info;
+    return QList<MailTransport::TransportAbstractPluginInfo>() << info;
 }
 
 bool SMTPMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)

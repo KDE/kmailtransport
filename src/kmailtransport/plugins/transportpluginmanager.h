@@ -25,7 +25,7 @@ public:
     static TransportPluginManager *self();
 
     Q_REQUIRED_RESULT MailTransport::TransportAbstractPlugin *plugin(const QString &identifier);
-    Q_REQUIRED_RESULT QVector<MailTransport::TransportAbstractPlugin *> pluginsList() const;
+    Q_REQUIRED_RESULT QList<MailTransport::TransportAbstractPlugin *> pluginsList() const;
 
 Q_SIGNALS:
     void updatePluginList();

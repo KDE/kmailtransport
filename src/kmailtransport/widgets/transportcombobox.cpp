@@ -17,7 +17,7 @@ using namespace MailTransport;
 class TransportComboBoxPrivate
 {
 public:
-    QVector<int> transports;
+    QList<int> transports;
 };
 
 TransportComboBox::TransportComboBox(QWidget *parent)
@@ -62,7 +62,7 @@ void TransportComboBox::updateComboboxList()
     int defaultId = 0;
     if (!TransportManager::self()->isEmpty()) {
         const QStringList listNames = TransportManager::self()->transportNames();
-        const QVector<int> listIds = TransportManager::self()->transportIds();
+        const QList<int> listIds = TransportManager::self()->transportIds();
         addItems(listNames);
         setTransportList(listIds);
         defaultId = TransportManager::self()->defaultTransportId();
@@ -75,7 +75,7 @@ void TransportComboBox::updateComboboxList()
     }
 }
 
-void TransportComboBox::setTransportList(const QVector<int> &transportList)
+void TransportComboBox::setTransportList(const QList<int> &transportList)
 {
     d->transports = transportList;
 }
