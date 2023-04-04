@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2023-03-01 02:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -691,20 +691,14 @@ msgstr "삭제"
 msgid "Set as Default"
 msgstr "기본값으로 설정"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "메시지가 비었습니다."
+#~ msgid "Empty message."
+#~ msgstr "메시지가 비었습니다."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "메시지에 받을 사람이 없습니다."
+#~ msgid "Message has no recipients."
+#~ msgstr "메시지에 받을 사람이 없습니다."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "메시지의 보낸 편지함 폴더가 잘못되었습니다."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "메시지의 보낸 편지함 폴더가 잘못되었습니다."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "메시지의 전송 방식이 잘못되었습니다."

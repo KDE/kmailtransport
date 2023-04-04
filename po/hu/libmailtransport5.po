@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2014-09-04 15:25+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -720,20 +720,14 @@ msgstr "Eltávolítás"
 msgid "Set as Default"
 msgstr "Beállítás alapértelmezettként"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Üres üzenet."
+#~ msgid "Empty message."
+#~ msgstr "Üres üzenet."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Az üzenetnek nincsenek címzettjei."
+#~ msgid "Message has no recipients."
+#~ msgstr "Az üzenetnek nincsenek címzettjei."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Az üzenetnek érvénytelen elküldött levelek mappája van."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Az üzenetnek érvénytelen elküldött levelek mappája van."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Az üzenetnek érvénytelen továbbítása van."

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2023-01-15 15:12+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -717,20 +717,14 @@ msgstr "Verwijderen"
 msgid "Set as Default"
 msgstr "Als standaard instellen"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Leeg bericht."
+#~ msgid "Empty message."
+#~ msgstr "Leeg bericht."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Bericht heeft geen ontvangers."
+#~ msgid "Message has no recipients."
+#~ msgstr "Bericht heeft geen ontvangers."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Bericht heeft een ongeldige 'verzonden mail'-map."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Bericht heeft een ongeldige 'verzonden mail'-map."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Bericht heeft een ongeldig transportmedium."

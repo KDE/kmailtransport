@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2023-01-07 09:12+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -721,20 +721,14 @@ msgstr "Αφαίρεση"
 msgid "Set as Default"
 msgstr "Ορισμός προεπιλογής"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Κενό μήνυμα."
+#~ msgid "Empty message."
+#~ msgstr "Κενό μήνυμα."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Το μήνυμα δεν έχει παραλήπτες."
+#~ msgid "Message has no recipients."
+#~ msgstr "Το μήνυμα δεν έχει παραλήπτες."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Το μήνυμα έχει μη έγκυρο φάκελο απεσταλμένων."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Το μήνυμα έχει μη έγκυρο φάκελο απεσταλμένων."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Το μήνυμα έχει μη έγκυρο μεταφορέα."

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2022-11-10 20:31+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -723,20 +723,15 @@ msgstr "Entfernen"
 msgid "Set as Default"
 msgstr "Als Standard festlegen"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Leere Nachricht."
+#~ msgid "Empty message."
+#~ msgstr "Leere Nachricht."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Die Nachricht enthält keine Empfänger"
+#~ msgid "Message has no recipients."
+#~ msgstr "Die Nachricht enthält keine Empfänger"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Die Nachricht hat einen ungültigen Ordner für gesendete Nachrichten."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr ""
+#~ "Die Nachricht hat einen ungültigen Ordner für gesendete Nachrichten."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Die Nachricht hat einen ungültigen Transport."

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -686,20 +686,11 @@ msgstr "ਹਟਾਓ(&v)"
 msgid "Set as Default"
 msgstr "ਡਿਫਾਲਟ ਸੈੱਟ ਕਰੋ(&S)"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "ਖਾਲੀ ਸੁਨੇਹਾ।"
+#~ msgid "Empty message."
+#~ msgstr "ਖਾਲੀ ਸੁਨੇਹਾ।"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "ਸੁਨੇਹੇ ਵਿੱਚ ਕੋਈ ਪ੍ਰਾਪਤਕਰਤਾ ਨਹੀਂ।"
-
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr ""
+#~ msgid "Message has no recipients."
+#~ msgstr "ਸੁਨੇਹੇ ਵਿੱਚ ਕੋਈ ਪ੍ਰਾਪਤਕਰਤਾ ਨਹੀਂ।"
 
 #~ msgid "Unable to create SMTP job."
 #~ msgstr "SMTP ਜਾਬ ਬਣਾਉਣ ਲਈ ਅਸਮਰੱਥ।"

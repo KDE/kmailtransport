@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2023-01-12 10:44+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -717,20 +717,14 @@ msgstr "Удалить"
 msgid "Set as Default"
 msgstr "Сделать основным"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Пустое письмо."
+#~ msgid "Empty message."
+#~ msgstr "Пустое письмо."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "В письме не указаны получатели."
+#~ msgid "Message has no recipients."
+#~ msgstr "В письме не указаны получатели."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Недопустимая папка для отправленной почты."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Недопустимая папка для отправленной почты."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Недопустимый метод отправки письма."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2010-01-01 17:14+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -764,20 +764,14 @@ msgstr "I&zņemt"
 msgid "Set as Default"
 msgstr "Ie&statīt par noklusēto"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Tukša vēstule."
+#~ msgid "Empty message."
+#~ msgstr "Tukša vēstule."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Vēstulei nav saņēmēju."
+#~ msgid "Message has no recipients."
+#~ msgstr "Vēstulei nav saņēmēju."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Vēstulei ir nederīga nosūtīto vēstuļu mape."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Vēstulei ir nederīga nosūtīto vēstuļu mape."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Vēstulei ir nederīgs transports."
