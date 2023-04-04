@@ -30,13 +30,7 @@
 #include <KEMailSettings>
 #include <KLocalizedString>
 #include <KMessageBox>
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-#include <Kdelibs4ConfigMigrator>
-#include <qt5keychain/keychain.h>
-#else
 #include <qt6keychain/keychain.h>
-
-#endif
 
 using namespace QKeychain;
 
@@ -111,11 +105,6 @@ TransportManager::TransportManager()
     : QObject()
     , d(new TransportManagerPrivate(this))
 {
-#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
-    Kdelibs4ConfigMigrator migrate(QStringLiteral("transportmanager"));
-    migrate.setConfigFiles(QStringList() << QStringLiteral("mailtransports"));
-    migrate.migrate();
-#endif
     qAddPostRoutine(destroyStaticTransportManager);
     d->config = new KConfig(QStringLiteral("mailtransports"));
 
