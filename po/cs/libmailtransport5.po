@@ -702,12 +702,3 @@ msgstr "Odstranit"
 #, kde-format
 msgid "Set as Default"
 msgstr "Nastavit jako výchozí"
-
-#~ msgid "Empty message."
-#~ msgstr "Prázdnou zpráva."
-
-#~ msgid "Message has no recipients."
-#~ msgstr "Zpráva nemá příjemce."
-
-#~ msgid "Message has invalid sent-mail folder."
-#~ msgstr "Zpráva má neplatnou složku odeslané pošty."
