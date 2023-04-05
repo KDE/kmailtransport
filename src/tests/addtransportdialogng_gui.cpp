@@ -5,7 +5,7 @@
 */
 
 #include "addtransportdialogng_gui.h"
-#include "../src/kmailtransport/widgets/addtransportdialogng.h"
+#include "widgets/addtransportdialogng.h"
 
 #include <QApplication>
 #include <QHBoxLayout>

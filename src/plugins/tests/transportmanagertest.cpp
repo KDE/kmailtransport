@@ -5,7 +5,7 @@
 */
 
 #include "transportmanagertest.h"
-#include "kmailtransport/plugins/transportpluginmanager.h"
+#include "plugins/transportpluginmanager.h"
 #include <MailTransport/TransportAbstractPlugin>
 #include <QCoreApplication>
 #include <QDebug>
