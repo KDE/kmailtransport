@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2013-09-20 03:53+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -710,20 +710,14 @@ msgstr "Өшіру"
 msgid "Set as Default"
 msgstr "Әдетті қылу"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Мазмұны жоқ хат"
+#~ msgid "Empty message."
+#~ msgstr "Мазмұны жоқ хат"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Хат кімге көрсетілмеген"
+#~ msgid "Message has no recipients."
+#~ msgstr "Хат кімге көрсетілмеген"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Хаттың жіберілген пошта қапшығы дұрыс емес."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Хаттың жіберілген пошта қапшығы дұрыс емес."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Хаттың тасымадауы дұрыс емес."

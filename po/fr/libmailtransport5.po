@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2023-01-05 20:19+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -727,20 +727,14 @@ msgstr "Supprimer"
 msgid "Set as Default"
 msgstr "Définir comme réglage par défaut"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Message vide."
+#~ msgid "Empty message."
+#~ msgstr "Message vide."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Le message n'a aucun destinataire."
+#~ msgid "Message has no recipients."
+#~ msgstr "Le message n'a aucun destinataire."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Le dossier de messages envoyés n'est pas valable."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Le dossier de messages envoyés n'est pas valable."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Le serveur d'envoi du message n'est pas valable."

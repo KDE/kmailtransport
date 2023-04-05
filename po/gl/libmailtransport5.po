@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2019-08-11 16:51+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
@@ -727,20 +727,14 @@ msgstr "Retirar"
 msgid "Set as Default"
 msgstr "Facer predeterminado"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "A mensaxe está baleira."
+#~ msgid "Empty message."
+#~ msgstr "A mensaxe está baleira."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "A mensaxe non ten destinatarios."
+#~ msgid "Message has no recipients."
+#~ msgstr "A mensaxe non ten destinatarios."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "O cartafol de saída da mensaxe é incorrecto."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "O cartafol de saída da mensaxe é incorrecto."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "O transporte da mensaxe é incorrecto."

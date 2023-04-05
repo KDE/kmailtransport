@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2019-03-22 00:54+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -701,20 +701,14 @@ msgstr "移除"
 msgid "Set as Default"
 msgstr "設成預設值"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "空白的信件。"
+#~ msgid "Empty message."
+#~ msgstr "空白的信件。"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "信件沒有收件人。"
+#~ msgid "Message has no recipients."
+#~ msgstr "信件沒有收件人。"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "信件有一個不合法的寄件備份資料夾。"
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "信件有一個不合法的寄件備份資料夾。"
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "信件的傳輸不正確。"

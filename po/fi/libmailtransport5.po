@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2022-11-05 21:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -706,20 +706,14 @@ msgstr "Poista"
 msgid "Set as Default"
 msgstr "Aseta oletukseksi"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Tyhjä viesti."
+#~ msgid "Empty message."
+#~ msgstr "Tyhjä viesti."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Viestillä ei ole vastaanottajia."
+#~ msgid "Message has no recipients."
+#~ msgstr "Viestillä ei ole vastaanottajia."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Viestillä on virheellinen lähtevän postin kansio."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Viestillä on virheellinen lähtevän postin kansio."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Viestillä on virheellinen lähetystapa."

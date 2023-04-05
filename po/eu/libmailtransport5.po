@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2022-10-25 07:25+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -716,17 +716,11 @@ msgstr "Kendu"
 msgid "Set as Default"
 msgstr "Ezarri lehenetsi gisa"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Mezua hutsik."
+#~ msgid "Empty message."
+#~ msgstr "Mezua hutsik."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Mezuak ez du hartzailerik."
+#~ msgid "Message has no recipients."
+#~ msgstr "Mezuak ez du hartzailerik."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Mezuak bidalitako-posta karpeta baliogabea du."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Mezuak bidalitako-posta karpeta baliogabea du."

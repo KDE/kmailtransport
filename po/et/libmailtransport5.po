@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-03-09 00:47+0000\n"
+"POT-Creation-Date: 2023-04-04 00:48+0000\n"
 "PO-Revision-Date: 2019-12-18 19:47+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -711,20 +711,14 @@ msgstr "Eemalda"
 msgid "Set as Default"
 msgstr "Sea vaikeväärtuseks"
 
-#: kmailtransportakonadi/messagequeuejob.cpp:59
-#, kde-format
-msgid "Empty message."
-msgstr "Tühi kiri."
+#~ msgid "Empty message."
+#~ msgstr "Tühi kiri."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:66
-#, kde-format
-msgid "Message has no recipients."
-msgstr "Kirjal pole saajaid."
+#~ msgid "Message has no recipients."
+#~ msgstr "Kirjal pole saajaid."
 
-#: kmailtransportakonadi/messagequeuejob.cpp:73
-#, kde-format
-msgid "Message has invalid sent-mail folder."
-msgstr "Kirjal on vigane saadetud kirjade kaust."
+#~ msgid "Message has invalid sent-mail folder."
+#~ msgstr "Kirjal on vigane saadetud kirjade kaust."
 
 #~ msgid "Message has invalid transport."
 #~ msgstr "Kirjal on vale edastamisviis."
