@@ -8,4 +8,4 @@ Dependencies:
     'pim/kmime' : '@latest-kf6'
     'pim/ksmtp' : '@latest-kf6'
     'pim/libkgapi' : '@latest-kf6'
-    'third-party/qtkeychain': '@latest'
+    'third-party/qtkeychain': '@latest-kf6'
