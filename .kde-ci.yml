@@ -10,10 +10,3 @@ Dependencies:
     'pim/libkgapi' : '@same'
     'third-party/qtkeychain': '@latest'
 
-- 'on': ['Linux/Qt6', 'FreeBSD/Qt6', 'Windows/Qt6']
-  'require':
-    'frameworks/extra-cmake-modules': '@latest-kf6'
-    'pim/kmime' : '@latest-kf6'
-    'pim/ksmtp' : '@latest-kf6'
-    'pim/libkgapi' : '@latest-kf6'
-    'third-party/qtkeychain': '@latest'
