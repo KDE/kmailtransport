@@ -1,6 +1,5 @@
 {
     "KPlugin": {
-        "Id": "smtpmailtransport",
         "Name": "SMTP Mail Transport",
         "Name[ar]": "نقولات بريد SMTP",
         "Name[bg]": "Пощенски транспорт SMTP",
