@@ -75,13 +75,13 @@ target_include_directories(KPim6MailTransport PUBLIC "$<BUILD_INTERFACE:${MailTr
 
 target_link_libraries(KPim6MailTransport
     PUBLIC
-    KF6::Wallet
     KF6::ConfigGui
     PRIVATE
     KF6::I18n
     KF6::WidgetsAddons
     KF6::CoreAddons
     KF6::ConfigWidgets
+    KF6::Wallet
     Qt::DBus
     Qt::Network
     )
