@@ -67,7 +67,7 @@ set_target_properties(KPim${KF_MAJOR_VERSION}MailTransportAkonadi PROPERTIES
     )
 
 
-install(TARGETS KPim${KF_MAJOR_VERSION}MailTransportAkonadi EXPORT KPim${KF_MAJOR_VERSION}MailTransportAkonadiTargets ${KF_INSTALL_TARGETS_DEFAULT_ARGS})
+install(TARGETS KPim${KF_MAJOR_VERSION}MailTransportAkonadi EXPORT KPim${KF_MAJOR_VERSION}MailTransportAkonadiTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ecm_generate_headers(MailTransport_kmailtransportakonadi_CamelCase_HEADERS
     HEADER_NAMES
