@@ -63,7 +63,7 @@ set_package_properties(Qt6Keychain PROPERTIES
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
 
-ecm_set_disabled_deprecation_versions(QT 6.4  KF 5.240.0)
+ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 
 
 if(BUILD_TESTING)
