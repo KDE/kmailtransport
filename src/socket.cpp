@@ -180,7 +180,7 @@ bool Socket::available()
 void Socket::startTLS()
 {
     qCDebug(MAILTRANSPORT_LOG) << objectName();
-    d->socket->setProtocol(QSsl::TlsV1_0OrLater);
+    d->socket->setProtocol(QSsl::TlsV1_2OrLater);
     d->socket->startClientEncryption();
 }
 
