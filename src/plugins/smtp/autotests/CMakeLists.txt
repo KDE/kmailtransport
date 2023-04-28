@@ -5,7 +5,7 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/..)
 ecm_add_test(smtpjobtest.cpp
              ../smtpjob.cpp
              ${CMAKE_CURRENT_BINARY_DIR}/../mailtransportplugin_smtp_debug.cpp
-             fakeserver.cpp
+             fakeserver.cpp fakeserver.h
     LINK_LIBRARIES Qt::Network
                    Qt::Test
                    KPim6::MailTransport
