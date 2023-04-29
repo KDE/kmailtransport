@@ -8,14 +8,14 @@
 # Xosé <xosecalvo@gmail.com>, 2009, 2010.
 # Xosé <xosecalvo@edu.xunta.es>, 2009.
 # Adrian Chaves Fernandez <adriyetichaves@gmail.com>, 2013, 2015, 2016, 2017.
-# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019.
+# Adrián Chaves (Gallaecio) <adrian@chaves.io>, 2017, 2018, 2019, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-03-09 00:47+0000\n"
-"PO-Revision-Date: 2019-08-11 16:51+0200\n"
+"PO-Revision-Date: 2023-04-28 19:06+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Galician <proxecto@trasno.gal>\n"
 "Language: gl\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 19.04.1\n"
+"X-Generator: Lokalize 23.04.0\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:12
@@ -148,7 +148,7 @@ msgstr ""
 "dispoñíbel o contrasinal gárdao el, o que se considera seguro. Porén, se "
 "KWallet non estiver dispoñíbel, o contrasinal gárdase no ficheiro de "
 "configuración. O contrasinal gárdase tras ofuscalo, pero non debe "
-"considerarse como seguro frente a descifrados de obterse acceso ao ficheiro "
+"considerarse como seguro fronte a descifrados de obterse acceso ao ficheiro "
 "de configuración."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
@@ -253,7 +253,7 @@ msgstr ""
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:144
 #, kde-format
 msgid "The password to send to the server for authorization."
-msgstr "O contrasinal que se envia ao servidor para autenticarse."
+msgstr "O contrasinal que se envía ao servidor para autenticarse."
 
 #: kmailtransport/plugins/smtp/smtpconfigwidget.cpp:274
 #, kde-format
@@ -287,8 +287,7 @@ msgid "An SMTP server on the Internet"
 msgstr "Un servidor de SMTP en Internet"
 
 #: kmailtransport/plugins/smtp/smtpmailtransportplugin.cpp:38
-#, fuzzy, kde-format
-#| msgid "Configure account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
 msgstr "Configurar a conta"
@@ -489,16 +488,7 @@ msgid "Unknown"
 msgstr "Descoñecido"
 
 #: kmailtransport/transport.cpp:215
-#, fuzzy, kde-format
-#| msgid ""
-#| "KWallet is not available. It is strongly recommended to use KWallet for "
-#| "managing your passwords.\n"
-#| "However, the password can be stored in the configuration file instead. "
-#| "The password is stored in an obfuscated format, but should not be "
-#| "considered secure from decryption efforts if access to the configuration "
-#| "file is obtained.\n"
-#| "Do you want to store the password for server '%1' in the configuration "
-#| "file?"
+#, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
 "recommended to use strong backend for managing your passwords.\n"
@@ -508,10 +498,11 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
-"KWallet non está dispoñíbel. Recoméndase de corazón que use KWallet para "
-"xestionar os seus contrasinais.\n"
+"QKeychain non atopou un motor co que almacenar o seu contrasinal. "
+"Recomendámoslle encarecidamente que use un motor potente para xestionar os "
+"seus contrasinais.\n"
 "Porén, pódeo gardar no ficheiro de configuración. O contrasinal gárdase nun "
-"formato ofuscado, que non debe considerarse seguro frente a esforzos de "
+"formato ofuscado, que non debe considerarse seguro fronte a esforzos de "
 "descifrado se un atacante obtén acceso ao ficheiro de configuración.\n"
 "Quere gardar o contrasinal do servidor «%1» no ficheiro de configuración?"
 
@@ -654,8 +645,7 @@ msgid "&Modify..."
 msgstr "&Modificar…"
 
 #: kmailtransport/widgets/addtransportdialogng.cpp:92
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
 msgstr "Crear a conta de saída"
@@ -690,12 +680,11 @@ msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Quere retirar a conta saínte «%1»?"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:139
-#, fuzzy, kde-format
-#| msgid "Do you want to remove outgoing account '%1'?"
+#, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] "Quere retirar a conta saínte «%1»?"
-msgstr[1] "Quere retirar a conta saínte «%1»?"
+msgstr[0] "Seguro que quere retirar esta conta saínte?"
+msgstr[1] "Seguro que quere retirar estas %1 contas saíntes?"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:141
 #, kde-format
