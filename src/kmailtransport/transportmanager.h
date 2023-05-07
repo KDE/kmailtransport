@@ -136,12 +136,6 @@ public:
     */
     MAILTRANSPORT_DEPRECATED void schedule(TransportJob *job);
 
-    /**
-      Tries to create a transport based on KEMailSettings.
-      If the data in KEMailSettings is incomplete, no transport is created.
-    */
-    void createDefaultTransport();
-
     /// Describes when to show the transport creation dialog
     enum ShowCondition {
         Always, ///< Show the transport creation dialog unconditionally
