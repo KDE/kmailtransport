@@ -27,7 +27,6 @@
 #include "mailtransport_debug.h"
 #include <KConfig>
 #include <KConfigGroup>
-#include <KEMailSettings>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <qt6keychain/keychain.h>
@@ -209,20 +208,6 @@ void TransportManager::schedule(TransportJob *job)
     }
 
     job->start();
-}
-
-void TransportManager::createDefaultTransport()
-{
-    KEMailSettings kes;
-    Transport *t = createTransport();
-    t->setName(i18n("Default Transport"));
-    t->setHost(kes.getSetting(KEMailSettings::OutServer));
-    if (t->isValid()) {
-        t->save();
-        addTransport(t);
-    } else {
-        qCWarning(MAILTRANSPORT_LOG) << "KEMailSettings does not contain a valid transport.";
-    }
 }
 
 bool TransportManager::showTransportCreationDialog(QWidget *parent, ShowCondition showCondition)
