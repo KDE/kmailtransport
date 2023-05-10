@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2023-03-01 02:01+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -502,27 +502,22 @@ msgstr "저장하지 않음"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "발신 계정 \"%1\"이(가) 올바르게 설정되지 않았습니다."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "기본 전송"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "보내기 전에 전송 계정을 만들어야 합니다."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "지금 계정을 만드시겠습니까?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "지금 계정 만들기"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -538,17 +533,17 @@ msgstr ""
 "이 도구는 암호를 암호화된 파일에 저장합니다.\n"
 "KWallet으로 암호를 이전하시겠습니까?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "질문"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "이전"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "유지"
@@ -690,6 +685,9 @@ msgstr "삭제"
 #, kde-format
 msgid "Set as Default"
 msgstr "기본값으로 설정"
+
+#~ msgid "Default Transport"
+#~ msgstr "기본 전송"
 
 #~ msgid "Empty message."
 #~ msgstr "메시지가 비었습니다."

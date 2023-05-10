@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2022-10-22 19:08+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -504,27 +504,22 @@ msgstr "لا تحفظ كلمة السر"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "لم يضبط حساب الصادر \"%1\" بشكل صحيح."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "الناقل المبدئي"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "يجب عليك إنشاء حساب صادر قبل الإرسال."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "أنشئ حسابًا الآن؟"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "أنشئ حسابًا الآن"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -540,17 +535,17 @@ msgstr ""
 "إدارة محفظة كِيدِي ، التي تخزن البيانات الحساسة لك في ملف مشفر بقوة. \n"
 "هل تريد ترحيل كلمات السر الخاصة بك إلى حافظتك Kwallet؟"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "سؤال"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "رحّل"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "أبقِ"
@@ -697,6 +692,9 @@ msgstr "أزل"
 #, kde-format
 msgid "Set as Default"
 msgstr "اضبطها كمبدئيّة"
+
+#~ msgid "Default Transport"
+#~ msgstr "الناقل المبدئي"
 
 #~ msgid "Empty message."
 #~ msgstr "رسالة فارغة."

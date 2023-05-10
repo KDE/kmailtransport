@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_extragear-utils_kdiff3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2010-12-22 05:05+0700\n"
 "Last-Translator: Seng Sutha <Sutha@khmeros.info>\n"
 "Language-Team: Khmer [km] <Support@khmeros.info>\n"
@@ -518,27 +518,22 @@ msgstr "កុំ​ទុក​ពាក្យ​សម្ងាត់"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "ការ​បញ្ជូន​សំបុត្រ \"%1\" មិន​ត្រូវ​បាន​កំណត់​រចនាសម្ព័ន្ធ​ត្រឹមត្រូវ​ទេ ។"
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "ការ​​បញ្ជូន​លំនាំដើម​"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "អ្នក​ត្រូវ​តែ​បង្កើត​គណនី​ចេញ​សិន​មុន​នឹង​ផ្ញើ ។"
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "បង្កើត​គណនី​ឥឡូវ​នេះ​ឬ ?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "បង្កើត​គណនី​ឥឡូវ​នេះ"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -553,17 +548,17 @@ msgstr ""
 "ដែល​ទុក​ទិន្នន័យ​​បម្រែ​បម្រួល​សម្រាប់​អ្នក​ស្ថិតនៅ​ក្នុង​ឯកសារ​ដែល​បានអ៊ិនគ្រីប​យ៉ាង​ខ្លាំង ។\n"
 "តើអ្នក​ចង់​ប្ដូរ​ពាក្យ​សម្ងាត់​របស់​អ្នក​ទៅ KWallet?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "សំណួរ"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "ប្ដូរ"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "រក្សា"
@@ -713,6 +708,9 @@ msgstr "យកចេញ​"
 #| msgid "&Set as Default"
 msgid "Set as Default"
 msgstr "កំណត់​ជា​លំនាំដើម​"
+
+#~ msgid "Default Transport"
+#~ msgstr "ការ​​បញ្ជូន​លំនាំដើម​"
 
 #~ msgid "Empty message."
 #~ msgstr "សារ​ទទេ ។"

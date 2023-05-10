@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2014-09-04 15:25+0200\n"
 "Last-Translator: Kristóf Kiszel <ulysses@kubuntu.org>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -527,27 +527,22 @@ msgstr "A jelszót nem kell elmenteni"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "A(z) „%1” kimenő fiók nincs helyesen beállítva."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "Alapértelmezett továbbító"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Létre kell hoznia egy kimenő fiókot a küldés előtt."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Új fiók létrehozása?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "Fiók létrehozása most"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -563,17 +558,17 @@ msgstr ""
 "alkalmazó jelszótárolási mód, ezért érdemes áttérni a használatára.\n"
 "Át szeretné helyezni a jelszavakat a KWalletbe?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "Kérdés"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "Migrálás"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "Megtartás"
@@ -719,6 +714,9 @@ msgstr "Eltávolítás"
 #, kde-format
 msgid "Set as Default"
 msgstr "Beállítás alapértelmezettként"
+
+#~ msgid "Default Transport"
+#~ msgstr "Alapértelmezett továbbító"
 
 #~ msgid "Empty message."
 #~ msgstr "Üres üzenet."

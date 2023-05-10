@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2023-01-05 20:19+0100\n"
 "Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
 "Language-Team: fr\n"
@@ -536,27 +536,22 @@ msgstr "Ne pas enregistrer le mot de passe"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Le compte d'envoi « %1 » n'est pas correctement configuré."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "Transport par défaut"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Vous devez créer un compte d'envoi avant un envoi."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Créer le compte maintenant ?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "Créer le compte maintenant"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -573,17 +568,17 @@ msgstr ""
 "qui conserve les données sensibles dans un fichier au chiffrement robuste.\n"
 "Voulez-vous déplacer vos mots de passe vers KWallet ?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "Question"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "Migrer"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "Conserver"
@@ -726,6 +721,9 @@ msgstr "Supprimer"
 #, kde-format
 msgid "Set as Default"
 msgstr "Définir comme réglage par défaut"
+
+#~ msgid "Default Transport"
+#~ msgstr "Transport par défaut"
 
 #~ msgid "Empty message."
 #~ msgstr "Message vide."
