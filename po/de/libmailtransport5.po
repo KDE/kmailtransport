@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2022-11-10 20:31+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -530,29 +530,24 @@ msgstr "Passwort nicht speichern"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Der Postausgang „%1“ ist nicht korrekt eingerichtet."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "Standard-Versandart"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr ""
 "Sie müssen eine Versandart einrichten, bevor Nachrichten versandt werden "
 "können."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Neuen Zugang jetzt erstellen?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "Neuen Zugang erstellen"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -569,17 +564,17 @@ msgstr ""
 "in der für Sie sensible Daten gut verschlüsselt gespeichert werden.\n"
 "Möchten Sie die Passwörter auf die Speicherung in KWallet umstellen?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "Frage"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "Umstellen"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "Beibehalten"
@@ -722,6 +717,9 @@ msgstr "Entfernen"
 #, kde-format
 msgid "Set as Default"
 msgstr "Als Standard festlegen"
+
+#~ msgid "Default Transport"
+#~ msgstr "Standard-Versandart"
 
 #~ msgid "Empty message."
 #~ msgstr "Leere Nachricht."

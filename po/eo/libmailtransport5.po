@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2023-03-22 19:14+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -518,27 +518,22 @@ msgstr "Ne konservi pasvorton"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "La elira konto \"%1\" ne estas ĝuste agordita."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "Defaŭlta Transporto"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Vi devas krei eksiĝintan konton antaŭ sendi."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Ĉu krei konton nun?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "Krei Konton Nun"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -555,17 +550,17 @@ msgstr ""
 "kiu konservas sentemajn datumojn por vi en forte ĉifrita dosiero.\n"
 "Ĉu vi volas migri viajn pasvortojn al KWallet?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "Demando"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "Migri"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "Konservi"
@@ -708,6 +703,9 @@ msgstr "Forigi"
 #, kde-format
 msgid "Set as Default"
 msgstr "Meti kiel Defaŭlton"
+
+#~ msgid "Default Transport"
+#~ msgstr "Defaŭlta Transporto"
 
 #~ msgid "Empty message."
 #~ msgstr "Malplena mesaĝo."

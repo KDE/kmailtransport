@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2022-12-12 07:29+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -513,27 +513,22 @@ msgstr "პაროლი დამახსოვრებული არ ი
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "გამავალი ანგარიში '%1' არასწორადაა მორგებული."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "ნაგულისხმები ტრანსპორტი"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "გაგზავნამდე აუცილებელია გამავალი ანგარიში შექმნათ."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "შევქმნა ანგარიში ახლავე?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "ანგარიშის შექმნა"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -550,17 +545,17 @@ msgstr ""
 "რომელი ინახავს მგრძნობიარე მონაცემებს თქვენთვის მკაცრად დაშიფრულ ფაილში.\n"
 "გსურთ თქვენი პაროლების მიგრაცია KWallet- ში?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "კითხვა"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "მიგრაცია"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "შენარჩუნება"
@@ -703,6 +698,9 @@ msgstr "წაშლა"
 #, kde-format
 msgid "Set as Default"
 msgstr "ნაგულისხმებად დაყენება"
+
+#~ msgid "Default Transport"
+#~ msgstr "ნაგულისხმები ტრანსპორტი"
 
 #~ msgid "Empty message."
 #~ msgstr "შეტყობინება ცარიელია."

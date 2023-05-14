@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2022-10-22 09:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -522,27 +522,22 @@ msgstr "Не зберігати пароль"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Обліковий записи вихідної пошти «%1» налаштовано неправильно."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "Типовий транспорт"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Вам слід створити обліковий запис вихідної пошти перед надсиланням."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Створити запис зараз?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "Створити запис зараз"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -558,17 +553,17 @@ msgstr ""
 "шифром.\n"
 "Чи бажаєте ви перенести ваші паролі до KWallet?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "Питання"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "Мігрувати"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "Залишити"
@@ -713,6 +708,9 @@ msgstr "Вилучити"
 #, kde-format
 msgid "Set as Default"
 msgstr "Зробити типовим"
+
+#~ msgid "Default Transport"
+#~ msgstr "Типовий транспорт"
 
 #~ msgid "Empty message."
 #~ msgstr "Порожнє повідомлення."

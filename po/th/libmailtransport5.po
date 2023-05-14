@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2010-02-28 18:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -563,27 +563,22 @@ msgstr "ไม่ต้องจัดเก็บรหัสผ่าน"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "บริการจัดส่งจดหมาย \"%1\" ถูกปรับแต่งค่าไว้อย่างไม่ถูกต้อง"
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "เครื่องมือส่งจดหมายปริยาย"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "คุณต้องสร้างบัญชีผู้ใช้สำหรับจัดส่งจดหมายก่อน จึงจะทำการส่งได้"
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "จะสร้างบัญชีผู้ใช้งานเดี๋ยวนี้หรือไม่ ?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "สร้างบัญชีผู้ใช้งานเดี๋ยวนี้"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -601,17 +596,17 @@ msgstr ""
 "ซึ่งจะมีการจัดเก็บข้อมูลในรูปแบบแฟ้มเข้ารหัสที่แข็งแกร่งมาก\n"
 "คุณต้องการจะทำการผนวกรวมรหัสผ่านของคุณเข้าไปยังระบบกระเป๋าคุมข้อมูล-K หรือไม่ ?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "คำถาม"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "ผนวกรวม"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "คงไว้"
@@ -761,6 +756,9 @@ msgstr "เ&อาออก"
 #| msgid "&Set as Default"
 msgid "Set as Default"
 msgstr "&ตั้งเป็นค่า&ปริยาย"
+
+#~ msgid "Default Transport"
+#~ msgstr "เครื่องมือส่งจดหมายปริยาย"
 
 #~ msgid "Empty message."
 #~ msgstr "จดหมายเปล่า"

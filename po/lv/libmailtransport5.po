@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2010-01-01 17:14+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -565,27 +565,22 @@ msgstr "Nesaglabāt paroli"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Pasta transports \"%1\" nav korekti konfigurēts."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "Noklusētais transports"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Jums jāizveido pasta nosūtīšanas konts pirms sūtīšanas."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Izveidot tagad kontu?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "Izveidot tagad kontu"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -601,17 +596,17 @@ msgstr ""
 "pārvaldības rīka, kas tās glabā spēcīgi šifrētā failā.\n"
 "Vai vēlaties pārcelt jūsu paroles uz KWallet?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "Jautājums"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "Pārcelt"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "Paturēt"
@@ -763,6 +758,9 @@ msgstr "I&zņemt"
 #| msgid "&Set as Default"
 msgid "Set as Default"
 msgstr "Ie&statīt par noklusēto"
+
+#~ msgid "Default Transport"
+#~ msgstr "Noklusētais transports"
 
 #~ msgid "Empty message."
 #~ msgstr "Tukša vēstule."

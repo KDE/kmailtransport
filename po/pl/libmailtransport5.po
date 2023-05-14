@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2022-11-23 20:12+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -514,27 +514,22 @@ msgstr "Nie przechowuj hasła"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Konto wychodzące \"%1\" nie jest poprawnie ustawione."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "Domyślny rodzaj serwera pocztowego"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Musisz utworzyć konto poczty wychodzącej przed wysłaniem."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Utworzyć konto teraz?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "Utwórz konto teraz"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -550,17 +545,17 @@ msgstr ""
 "który przechowuje wrażliwe dane w silnie zaszyfrowanym pliku.\n"
 "Czy chcesz przenieść swoje hasła do Portfela?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "Pytanie"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "Przenieś"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "Zachowaj"
@@ -704,6 +699,9 @@ msgstr "Usuń"
 #, kde-format
 msgid "Set as Default"
 msgstr "Ustaw jako domyślne"
+
+#~ msgid "Default Transport"
+#~ msgstr "Domyślny rodzaj serwera pocztowego"
 
 #~ msgid "Empty message."
 #~ msgstr "Pusta wiadomość."

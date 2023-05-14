@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-04-04 00:48+0000\n"
+"POT-Creation-Date: 2023-05-10 00:48+0000\n"
 "PO-Revision-Date: 2013-09-20 03:53+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -517,27 +517,22 @@ msgstr "Парольді сақтамау"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "\"%1\" жіберетін тіркелгі дұрыс бапталмаған."
 
-#: kmailtransport/transportmanager.cpp:229
-#, kde-format
-msgid "Default Transport"
-msgstr "Әдетті тасымалдауы"
-
-#: kmailtransport/transportmanager.cpp:247
+#: kmailtransport/transportmanager.cpp:232
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Жіберуінің алдында шығыс пошта тіркелгісін құру керек."
 
-#: kmailtransport/transportmanager.cpp:248
+#: kmailtransport/transportmanager.cpp:233
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Тіркелгіні қазір құрасыз ба?"
 
-#: kmailtransport/transportmanager.cpp:249
+#: kmailtransport/transportmanager.cpp:234
 #, kde-format
 msgid "Create Account Now"
 msgstr "Қазір құру"
 
-#: kmailtransport/transportmanager.cpp:631
+#: kmailtransport/transportmanager.cpp:616
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -554,17 +549,17 @@ msgstr ""
 "Әмиян құпиялы деректі мықтылап шифрланған файлда сақтайды.\n"
 "Парольдеріңізді KWallet-ке көшірмексіз бе?"
 
-#: kmailtransport/transportmanager.cpp:638
+#: kmailtransport/transportmanager.cpp:623
 #, kde-format
 msgid "Question"
 msgstr "Сұрақ"
 
-#: kmailtransport/transportmanager.cpp:639
+#: kmailtransport/transportmanager.cpp:624
 #, kde-format
 msgid "Migrate"
 msgstr "Көшу"
 
-#: kmailtransport/transportmanager.cpp:640
+#: kmailtransport/transportmanager.cpp:625
 #, kde-format
 msgid "Keep"
 msgstr "Қала берісн"
@@ -709,6 +704,9 @@ msgstr "Өшіру"
 #, kde-format
 msgid "Set as Default"
 msgstr "Әдетті қылу"
+
+#~ msgid "Default Transport"
+#~ msgstr "Әдетті тасымалдауы"
 
 #~ msgid "Empty message."
 #~ msgstr "Мазмұны жоқ хат"
