@@ -15,7 +15,9 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KStringHandler>
+#if USE_LEGACY_WALLET_CODE
 #include <KWallet>
+#endif
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <qt5keychain/keychain.h>
@@ -190,7 +192,11 @@ void Transport::usrRead()
 
     if (!d->password.isEmpty()) {
         d->passwordLoaded = true;
+#if USE_LEGACY_WALLET_CODE
         if (KWallet::Wallet::isEnabled()) {
+#else
+        if (QKeychain::isAvailable()) {
+#endif
             // TODO: Needs to replaced with a check, if a backend is available.
             //  2022-10-12: QtKeyChain has no method to request, if there is any backend.
             //  see https://github.com/frankosterfeld/qtkeychain/issues/224

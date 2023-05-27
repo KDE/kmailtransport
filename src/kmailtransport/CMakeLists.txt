@@ -80,11 +80,13 @@ target_link_libraries(KPim${KF_MAJOR_VERSION}MailTransport
     KF${KF_MAJOR_VERSION}::I18n
     KF${KF_MAJOR_VERSION}::WidgetsAddons
     KF${KF_MAJOR_VERSION}::CoreAddons
-    KF${KF_MAJOR_VERSION}::Wallet
     KF${KF_MAJOR_VERSION}::ConfigWidgets
     Qt::DBus
     Qt::Network
     )
+if (TARGET KF${KF_MAJOR_VERSION}::Wallet)
+    target_link_libraries(KPim${KF_MAJOR_VERSION}MailTransport PRIVATE KF${KF_MAJOR_VERSION}::Wallet)
+endif()
 
 target_link_libraries(KPim${KF_MAJOR_VERSION}MailTransport PRIVATE qt${QT_MAJOR_VERSION}keychain)
 
