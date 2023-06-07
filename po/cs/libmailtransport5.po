@@ -697,6 +697,3 @@ msgstr "Odstranit"
 #, kde-format
 msgid "Set as Default"
 msgstr "Nastavit jako výchozí"
-
-#~ msgid "Default Transport"
-#~ msgstr "Výchozí transport"
