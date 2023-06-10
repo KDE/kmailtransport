@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-05-10 00:48+0000\n"
-"PO-Revision-Date: 2023-03-22 19:14+0100\n"
+"PO-Revision-Date: 2023-06-09 20:56+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -671,8 +671,8 @@ msgstr "Ĉu vi volas forigi eliran konton '%1'?"
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ĉu vi vere volas forigi tiun %1 elirantan konton?"
+msgstr[1] "Ĉu vi vere volas forigi tiujn %1 elirantajn kontojn?"
 
 #: kmailtransport/widgets/transportmanagementwidget.cpp:141
 #, kde-format
@@ -703,15 +703,3 @@ msgstr "Forigi"
 #, kde-format
 msgid "Set as Default"
 msgstr "Meti kiel Defaŭlton"
-
-#~ msgid "Default Transport"
-#~ msgstr "Defaŭlta Transporto"
-
-#~ msgid "Empty message."
-#~ msgstr "Malplena mesaĝo."
-
-#~ msgid "Message has no recipients."
-#~ msgstr "Mesaĝo ne havas ricevantojn."
-
-#~ msgid "Message has invalid sent-mail folder."
-#~ msgstr "Mesaĝo havas nevalidan senditan dosierujon."
