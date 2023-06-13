@@ -5,6 +5,7 @@ Dependencies:
 - 'on': ['Linux', 'FreeBSD', 'Windows']
   'require':
     'frameworks/extra-cmake-modules': '@latest-kf6'
+    'frameworks/ktextwidgets': '@latest-kf6'
     'pim/kmime' : '@latest-kf6'
     'pim/ksmtp' : '@latest-kf6'
     'pim/libkgapi' : '@latest-kf6'
