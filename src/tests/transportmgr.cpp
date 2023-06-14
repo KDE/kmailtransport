@@ -12,11 +12,11 @@
 #include <transportmanager.h>
 #include <widgets/transportmanagementwidget.h>
 
-#include <KTextEdit>
 #include <QApplication>
 #include <QDebug>
 #include <QLineEdit>
 
+#include <QPlainTextEdit>
 #include <QPushButton>
 
 using namespace MailTransport;
@@ -25,7 +25,6 @@ TransportMgr::TransportMgr()
     : mCurrentJob(nullptr)
 {
     auto vbox = new QVBoxLayout(this);
-    vbox->setContentsMargins(0, 0, 0, 0);
 
     vbox->addWidget(new TransportManagementWidget(this));
     mComboBox = new TransportComboBox(this);
@@ -49,9 +48,8 @@ TransportMgr::TransportMgr()
     mBccEdit = new QLineEdit(this);
     mBccEdit->setPlaceholderText(QStringLiteral("Bcc"));
     vbox->addWidget(mBccEdit);
-    mMailEdit = new KTextEdit(this);
-    mMailEdit->setAcceptRichText(false);
-    mMailEdit->setLineWrapMode(QTextEdit::NoWrap);
+    mMailEdit = new QPlainTextEdit(this);
+    mMailEdit->setLineWrapMode(QPlainTextEdit::NoWrap);
     vbox->addWidget(mMailEdit);
     b = new QPushButton(QStringLiteral("&Send"), this);
     connect(b, &QPushButton::clicked, this, &TransportMgr::sendBtnClicked);
@@ -93,7 +91,7 @@ void TransportMgr::sendBtnClicked()
     job->setTo(mToEdit->text().isEmpty() ? QStringList() : mToEdit->text().split(QLatin1Char(',')));
     job->setCc(mCcEdit->text().isEmpty() ? QStringList() : mCcEdit->text().split(QLatin1Char(',')));
     job->setBcc(mBccEdit->text().isEmpty() ? QStringList() : mBccEdit->text().split(QLatin1Char(',')));
-    job->setData(mMailEdit->document()->toPlainText().toLatin1());
+    job->setData(mMailEdit->toPlainText().toLatin1());
     connect(job, &KJob::result, this, &TransportMgr::jobResult);
     connect(job, &TransportJob::percentChanged, this, &TransportMgr::jobPercent);
     connect(job, &KJob::infoMessage, this, &TransportMgr::jobInfoMessage);

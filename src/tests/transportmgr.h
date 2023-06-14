@@ -13,7 +13,7 @@
 
 class KJob;
 class QLineEdit;
-class KTextEdit;
+class QPlainTextEdit;
 
 class TransportMgr : public QWidget
 {
@@ -37,6 +37,6 @@ private:
     QLineEdit *mToEdit = nullptr;
     QLineEdit *mCcEdit = nullptr;
     QLineEdit *mBccEdit = nullptr;
-    KTextEdit *mMailEdit = nullptr;
+    QPlainTextEdit *mMailEdit = nullptr;
     KJob *mCurrentJob = nullptr;
 };
