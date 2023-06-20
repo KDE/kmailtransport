@@ -219,8 +219,8 @@ msgid ""
 "mail server. If not checked, the address from the identity is used."
 msgstr ""
 "Marque esta opción para usar un enderezo de remitente personalizado para "
-"identificarse no servidor de correo. Se non se selecciona emprégase o "
-"enderezo da identidade."
+"identificarse no servidor de correo. Se non se selecciona úsase o enderezo "
+"da identidade."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:102
@@ -229,8 +229,8 @@ msgid ""
 "Enter the address that should be used to overwrite the default sender "
 "address."
 msgstr ""
-"Insira o enderezo que desexa empregar para anular o enderezo predeterminado "
-"de remitente."
+"Insira o enderezo que desexa usar para anular o enderezo predeterminado de "
+"remitente."
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
@@ -430,7 +430,7 @@ msgstr "Enviar un nome de &máquina personalizado ao servidor"
 #: kmailtransport/plugins/smtp/smtpsettings.ui:383
 #, kde-format
 msgid "Use custom sender address"
-msgstr "Empregar un enderezo de remitente personalizado"
+msgstr "Usar un enderezo de remitente personalizado"
 
 #: kmailtransport/precommandjob.cpp:68
 #, kde-format
@@ -553,7 +553,7 @@ msgid ""
 msgstr ""
 "Os transportes de correo seguintes gardan os contrasinais nun ficheiro de "
 "configuración non cifrado.\n"
-"Por motivos de seguranza, pense en empregar KWallet para gardar os "
+"Por motivos de seguridade, pense en usar KWallet para gardar os "
 "contrasinais, que garda os datos sensíbeis nun ficheiro cunha cifra forte.\n"
 "Quere migrar os contrasinais para KWallet?"
 
