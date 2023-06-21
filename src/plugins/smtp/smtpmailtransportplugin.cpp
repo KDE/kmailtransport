@@ -48,3 +48,5 @@ MailTransport::TransportJob *SMTPMailTransportPlugin::createTransportJob(MailTra
 }
 
 #include "smtpmailtransportplugin.moc"
+
+#include "moc_smtpmailtransportplugin.cpp"

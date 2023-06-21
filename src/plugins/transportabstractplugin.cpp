@@ -24,3 +24,5 @@ void TransportAbstractPlugin::initializeTransport(MailTransport::Transport *t, c
     Q_UNUSED(identifier)
     Q_UNUSED(t)
 }
+
+#include "moc_transportabstractplugin.cpp"

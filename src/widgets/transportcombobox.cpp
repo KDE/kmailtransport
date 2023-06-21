@@ -79,3 +79,5 @@ void TransportComboBox::setTransportList(const QList<int> &transportList)
 {
     d->transports = transportList;
 }
+
+#include "moc_transportcombobox.cpp"

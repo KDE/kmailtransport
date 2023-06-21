@@ -57,3 +57,5 @@ bool TransportType::isAkonadiResource() const
 {
     return d->mIsAkonadiResource;
 }
+
+#include "moc_transporttype.cpp"

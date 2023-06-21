@@ -35,3 +35,5 @@ int main(int argc, char **argv)
     app.exec();
     delete t;
 }
+
+#include "moc_addtransportdialogng_gui.cpp"

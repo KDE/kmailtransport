@@ -308,3 +308,5 @@ TransportType Transport::transportType() const
     }
     return d->transportType;
 }
+
+#include "moc_transport.cpp"

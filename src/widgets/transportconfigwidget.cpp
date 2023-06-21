@@ -61,3 +61,5 @@ void TransportConfigWidget::apply()
     d->transport->save();
     qCDebug(MAILTRANSPORT_LOG) << "Config written.";
 }
+
+#include "moc_transportconfigwidget.cpp"

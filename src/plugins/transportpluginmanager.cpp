@@ -132,3 +132,5 @@ MailTransport::TransportAbstractPlugin *TransportPluginManager::plugin(const QSt
     }
     return {};
 }
+
+#include "moc_transportpluginmanager.cpp"

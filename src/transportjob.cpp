@@ -125,3 +125,5 @@ void TransportJob::start()
     }
     doStart();
 }
+
+#include "moc_transportjob.cpp"
