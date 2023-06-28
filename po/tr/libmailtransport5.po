@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 00:48+0000\n"
+"POT-Creation-Date: 2023-06-28 00:49+0000\n"
 "PO-Revision-Date: 2023-04-02 17:28+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -456,32 +456,32 @@ msgstr "Ön komut çöktü."
 msgid "The precommand exited with code %1."
 msgstr "Ön komuttan '%1' kodu ile çıkıldı."
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:88
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:136
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Metni temizle"
 
-#: kmailtransport/transport.cpp:140
+#: kmailtransport/transport.cpp:142
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonim"
 
-#: kmailtransport/transport.cpp:171
+#: kmailtransport/transport.cpp:173
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Bilinmeyen"
 
-#: kmailtransport/transport.cpp:215
+#: kmailtransport/transport.cpp:221
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -501,17 +501,17 @@ msgstr ""
 "'%1' sunucusu için parolanızı yapılandırma dosyasında saklamak istiyor "
 "musunuz?"
 
-#: kmailtransport/transport.cpp:224
+#: kmailtransport/transport.cpp:230
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "K Cüzdan Kullanılamıyor"
 
-#: kmailtransport/transport.cpp:225
+#: kmailtransport/transport.cpp:231
 #, kde-format
 msgid "Store Password"
 msgstr "Parolayı Kaydet"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:232
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Parolayı Kaydetme"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 00:48+0000\n"
+"POT-Creation-Date: 2023-06-28 00:49+0000\n"
 "PO-Revision-Date: 2023-06-09 20:56+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
@@ -454,32 +454,32 @@ msgstr "La antaŭkomando paneis."
 msgid "The precommand exited with code %1."
 msgstr "La antaŭkondo eliĝis kun kodo %1."
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:88
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:136
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Klara teksto"
 
-#: kmailtransport/transport.cpp:140
+#: kmailtransport/transport.cpp:142
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonima"
 
-#: kmailtransport/transport.cpp:171
+#: kmailtransport/transport.cpp:173
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Nekonata"
 
-#: kmailtransport/transport.cpp:215
+#: kmailtransport/transport.cpp:221
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -498,17 +498,17 @@ msgstr ""
 "akirita.\n"
 "Ĉu vi volas konservi la pasvorton por servilo '%1' en la agorda dosiero?"
 
-#: kmailtransport/transport.cpp:224
+#: kmailtransport/transport.cpp:230
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet ne disponebla"
 
-#: kmailtransport/transport.cpp:225
+#: kmailtransport/transport.cpp:231
 #, kde-format
 msgid "Store Password"
 msgstr "Konservi pasvorton"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:232
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Ne konservi pasvorton"

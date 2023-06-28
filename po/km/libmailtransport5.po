@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_extragear-utils_kdiff3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 00:48+0000\n"
+"POT-Creation-Date: 2023-06-28 00:49+0000\n"
 "PO-Revision-Date: 2010-12-22 05:05+0700\n"
 "Last-Translator: Seng Sutha <Sutha@khmeros.info>\n"
 "Language-Team: Khmer [km] <Support@khmeros.info>\n"
@@ -445,32 +445,32 @@ msgstr "មុន​ពាក្យ​បញ្ជា​ដែល​បាន​
 msgid "The precommand exited with code %1."
 msgstr "មុន​ពាក្យ​បញ្ជា​ដែល​បាន​ចេញ​ជាមួយ​​កូដ​​ %1 ។"
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:88
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:136
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "ជម្រះអត្ថបទ​​"
 
-#: kmailtransport/transport.cpp:140
+#: kmailtransport/transport.cpp:142
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "អនាមិក​"
 
-#: kmailtransport/transport.cpp:171
+#: kmailtransport/transport.cpp:173
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "មិន​ស្គាល់​"
 
-#: kmailtransport/transport.cpp:215
+#: kmailtransport/transport.cpp:221
 #, fuzzy, kde-format
 #| msgid ""
 #| "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -497,17 +497,17 @@ msgstr ""
 "ចូល​ដំណើរការ​ទៅ​កាន់​ឯកសារ​កំណត់​រចនាសម្ព័ន្ធ​ត្រូវ​បាន​ទទួល ។\n"
 "តើ​អ្នក​ពិត​ជា​ចង់ទុក​ពាក្យ​សម្ងាត់​សម្រាប់​ម៉ាស៊ីន​បម្រើ '%1' នៅ​ក្នុង​ឯកសារ​កំណត់​រចនាសម្ព័ន្ធ ឬ​ ?"
 
-#: kmailtransport/transport.cpp:224
+#: kmailtransport/transport.cpp:230
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "មិនមាន KWallet ទេ"
 
-#: kmailtransport/transport.cpp:225
+#: kmailtransport/transport.cpp:231
 #, kde-format
 msgid "Store Password"
 msgstr "ទុក​ពាក្យ​សម្ងាត់"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:232
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "កុំ​ទុក​ពាក្យ​សម្ងាត់"
