@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 00:48+0000\n"
+"POT-Creation-Date: 2023-06-28 00:49+0000\n"
 "PO-Revision-Date: 2010-02-28 18:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -488,32 +488,32 @@ msgstr "การทำงานของคำสั่งที่ใช้ก
 msgid "The precommand exited with code %1."
 msgstr "คำสั่งที่ใช้ก่อนจบการทำงานด้วยรหัส %1"
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:88
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:136
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr ""
 
-#: kmailtransport/transport.cpp:140
+#: kmailtransport/transport.cpp:142
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr ""
 
-#: kmailtransport/transport.cpp:171
+#: kmailtransport/transport.cpp:173
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "ไม่ทราบ"
 
-#: kmailtransport/transport.cpp:215
+#: kmailtransport/transport.cpp:221
 #, fuzzy, kde-format
 #| msgid ""
 #| "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -542,17 +542,17 @@ msgstr ""
 "คุณแน่ใจหรือไม่ว่า ต้องการจะทำการจัดเก็บรหัสผ่านสำหรับเซิร์ฟเวอร์ '%1' ไว้ในแฟ้มค่าปรับแต่งจริง "
 "ๆ ?"
 
-#: kmailtransport/transport.cpp:224
+#: kmailtransport/transport.cpp:230
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "ไม่มีโปรแกรมกระเป๋าคุมข้อมูล-K (KWallet) อยู่"
 
-#: kmailtransport/transport.cpp:225
+#: kmailtransport/transport.cpp:231
 #, kde-format
 msgid "Store Password"
 msgstr "จัดเก็บรหัสผ่าน"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:232
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "ไม่ต้องจัดเก็บรหัสผ่าน"

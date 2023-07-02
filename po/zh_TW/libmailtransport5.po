@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 00:48+0000\n"
+"POT-Creation-Date: 2023-06-28 00:49+0000\n"
 "PO-Revision-Date: 2019-03-22 00:54+0800\n"
 "Last-Translator: pan93412 <pan93412@gmail.com>\n"
 "Language-Team: Chinese <zh-l10n@lists.linux.org.tw>\n"
@@ -441,32 +441,32 @@ msgstr "執行前置命令失敗。"
 msgid "The precommand exited with code %1."
 msgstr "前置命令結束傳回碼 %1。"
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:88
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:136
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "明碼"
 
-#: kmailtransport/transport.cpp:140
+#: kmailtransport/transport.cpp:142
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "匿名"
 
-#: kmailtransport/transport.cpp:171
+#: kmailtransport/transport.cpp:173
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "未知"
 
-#: kmailtransport/transport.cpp:215
+#: kmailtransport/transport.cpp:221
 #, fuzzy, kde-format
 #| msgid ""
 #| "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -491,17 +491,17 @@ msgstr ""
 "這仍然不保證密碼可以安全地不被破解。\n"
 "您確定要將帳號 %1 的密碼存在設定檔中嗎？"
 
-#: kmailtransport/transport.cpp:224
+#: kmailtransport/transport.cpp:230
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "無法使用 KWallet"
 
-#: kmailtransport/transport.cpp:225
+#: kmailtransport/transport.cpp:231
 #, kde-format
 msgid "Store Password"
 msgstr "儲存密碼"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:232
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "不要儲存"

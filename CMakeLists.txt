@@ -47,8 +47,6 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6MailTransport")
 
 ########### Find packages ###########
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
-#remove in the future
-find_package(KF6Wallet ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KPim6Mime ${KPIM_MIME_VERSION} CONFIG REQUIRED)
@@ -56,12 +54,17 @@ find_package(KPim6Mime ${KPIM_MIME_VERSION} CONFIG REQUIRED)
 find_package(KPim6SMTP ${KSMTP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6GAPI ${KGAPI_LIB_VERSION} CONFIG REQUIRED)
 
-#it will replace kwallet support
 find_package(Qt6Keychain CONFIG)
 set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
+if (Qt${QT_MAJOR_VERSION}Keychain_VERSION VERSION_LESS 0.14.1)
+    find_package(KF${KF_MAJOR_VERSION}Wallet ${KF_MIN_VERSION} CONFIG REQUIRED)
+    add_definitions(-DUSE_LEGACY_WALLET_CODE=1)
+else()
+    add_definitions(-DUSE_LEGACY_WALLET_CODE=0)
+endif()
 
 ecm_set_disabled_deprecation_versions(QT 6.5  KF 5.240.0)
 

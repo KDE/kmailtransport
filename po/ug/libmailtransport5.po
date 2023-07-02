@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-05-10 00:48+0000\n"
+"POT-Creation-Date: 2023-06-28 00:49+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -427,32 +427,32 @@ msgstr ""
 msgid "The precommand exited with code %1."
 msgstr ""
 
-#: kmailtransport/transport.cpp:86
+#: kmailtransport/transport.cpp:88
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: kmailtransport/transport.cpp:136
+#: kmailtransport/transport.cpp:138
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "تېكىستنى تازىلا"
 
-#: kmailtransport/transport.cpp:140
+#: kmailtransport/transport.cpp:142
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "ئاتسىز"
 
-#: kmailtransport/transport.cpp:171
+#: kmailtransport/transport.cpp:173
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "نامەلۇم"
 
-#: kmailtransport/transport.cpp:215
+#: kmailtransport/transport.cpp:221
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -464,17 +464,17 @@ msgid ""
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
 
-#: kmailtransport/transport.cpp:224
+#: kmailtransport/transport.cpp:230
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet نى ئىشلەتكىلى بولمايدۇ"
 
-#: kmailtransport/transport.cpp:225
+#: kmailtransport/transport.cpp:231
 #, kde-format
 msgid "Store Password"
 msgstr "ئىم ساقلاش"
 
-#: kmailtransport/transport.cpp:226
+#: kmailtransport/transport.cpp:232
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "ئىمنى ساقلىما"
