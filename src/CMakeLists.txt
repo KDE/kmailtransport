@@ -81,7 +81,6 @@ target_link_libraries(KPim6MailTransport
     KF6::WidgetsAddons
     KF6::CoreAddons
     KF6::ConfigWidgets
-    KF6::Wallet
     Qt::DBus
     Qt::Network
     )
