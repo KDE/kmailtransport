@@ -87,7 +87,7 @@ target_link_libraries(KPim6MailTransport
     )
 
 if (TARGET KF6::Wallet)
-    target_link_libraries(KPim6MailTransport PRIVATE KF${KF_MAJOR_VERSION}::Wallet)
+    target_link_libraries(KPim6MailTransport PRIVATE KF6::Wallet)
 endif()
 
 target_link_libraries(KPim6MailTransport PRIVATE qt6keychain)
