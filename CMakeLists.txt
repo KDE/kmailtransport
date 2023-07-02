@@ -59,8 +59,8 @@ set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
-if (Qt${QT_MAJOR_VERSION}Keychain_VERSION VERSION_LESS 0.14.1)
-    find_package(KF${KF_MAJOR_VERSION}Wallet ${KF_MIN_VERSION} CONFIG REQUIRED)
+if (Qt6Keychain_VERSION VERSION_LESS 0.14.1)
+    find_package(KF6Wallet ${KF_MIN_VERSION} CONFIG REQUIRED)
     add_definitions(-DUSE_LEGACY_WALLET_CODE=1)
 else()
     add_definitions(-DUSE_LEGACY_WALLET_CODE=0)
