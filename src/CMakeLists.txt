@@ -159,20 +159,6 @@ install(FILES ${PRI_FILENAME} DESTINATION ${ECM_MKSPECS_INSTALL_DIR})
 
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6MailTransport")
-configure_package_config_file(
-    "${CMAKE_CURRENT_SOURCE_DIR}/KPimMailTransportConfig.cmake.in"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfig.cmake"
-    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
-
-install(FILES
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfig.cmake"
-    "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfigVersion.cmake"
-    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-    COMPONENT Devel
-    )
-
-install(EXPORT KPim6MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6MailTransportTargets.cmake NAMESPACE KPim6::)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h
@@ -211,5 +197,30 @@ if (BUILD_QCH)
         COMPONENT Devel
     )
 endif()
+if (BUILD_QCH)
+    ecm_install_qch_export(
+        TARGETS KPim6MailTransport_QCH
+        FILE KPim6MailTransportQchTargets.cmake
+        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+        COMPONENT Devel
+    )
+    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6MailTransportQchTargets.cmake\")")
+endif()
+
+
+configure_package_config_file(
+    "${CMAKE_CURRENT_SOURCE_DIR}/KPimMailTransportConfig.cmake.in"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfig.cmake"
+    INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
+    )
+
+install(FILES
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfig.cmake"
+    "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfigVersion.cmake"
+    DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
+    COMPONENT Devel
+    )
+
+install(EXPORT KPim6MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6MailTransportTargets.cmake NAMESPACE KPim6::)
 
 add_subdirectory(plugins/smtp)

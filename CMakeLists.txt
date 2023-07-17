@@ -43,8 +43,6 @@ set(AKONADIMIME_LIB_VERSION "5.240.40")
 set(KSMTP_LIB_VERSION "5.240.40")
 set(KGAPI_LIB_VERSION "5.240.40")
 
-set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KF6MailTransport")
-
 ########### Find packages ###########
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -93,15 +91,7 @@ ecm_qt_install_logging_categories(
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 
-if (BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim6MailTransport_QCH
-        FILE KPim6MailTransportQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6MailTransportQchTargets.cmake\")")
-endif()
+
 
 ki18n_install(po)
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
