@@ -713,15 +713,3 @@ msgstr "Elimina"
 #, kde-format
 msgid "Set as Default"
 msgstr "Establix com a predeterminat"
-
-#~ msgid "Default Transport"
-#~ msgstr "Transport predeterminat"
-
-#~ msgid "Empty message."
-#~ msgstr "Missatge buit."
-
-#~ msgid "Message has no recipients."
-#~ msgstr "El missatge no té destinataris."
-
-#~ msgid "Message has invalid sent-mail folder."
-#~ msgstr "El missatge té una carpeta no vàlida de correu enviat."
