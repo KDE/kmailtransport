@@ -112,4 +112,4 @@ private:
 };
 } // namespace MailTransport
 
-Q_DECLARE_TYPEINFO(MailTransport::TransportType, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(MailTransport::TransportType, Q_RELOCATABLE_TYPE);

@@ -45,4 +45,4 @@ Q_SIGNALS:
     void updatePluginList();
 };
 }
-Q_DECLARE_TYPEINFO(MailTransport::TransportAbstractPluginInfo, Q_MOVABLE_TYPE);
+Q_DECLARE_TYPEINFO(MailTransport::TransportAbstractPluginInfo, Q_RELOCATABLE_TYPE);
