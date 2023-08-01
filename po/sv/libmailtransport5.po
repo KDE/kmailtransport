@@ -2,13 +2,13 @@
 # Copyright (C) YEAR This_file_is_part_of_KDE
 # This file is distributed under the same license as the PACKAGE package.
 #
-# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2007, 2008, 2009, 2010, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2022.
+# Stefan Asserhäll <stefan.asserhall@bredband.net>, 2007, 2008, 2009, 2010, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-28 00:49+0000\n"
-"PO-Revision-Date: 2022-04-27 20:14+0200\n"
+"PO-Revision-Date: 2023-07-31 09:50+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
 "Language: sv\n"
@@ -478,16 +478,7 @@ msgid "Unknown"
 msgstr "Okänd"
 
 #: kmailtransport/transport.cpp:221
-#, fuzzy, kde-format
-#| msgid ""
-#| "KWallet is not available. It is strongly recommended to use KWallet for "
-#| "managing your passwords.\n"
-#| "However, the password can be stored in the configuration file instead. "
-#| "The password is stored in an obfuscated format, but should not be "
-#| "considered secure from decryption efforts if access to the configuration "
-#| "file is obtained.\n"
-#| "Do you want to store the password for server '%1' in the configuration "
-#| "file?"
+#, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
 "recommended to use strong backend for managing your passwords.\n"
@@ -497,8 +488,9 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
-"Plånboken är inte tillgänglig. Du rekommenderas starkt att använda plånboken "
-"för att hantera lösenord.\n"
+"QKeychain hittade inte ett gränssnitt för att lagra ditt lösenord. Det "
+"rekommenderas starkt att använda ett starkt gränssnitt för att hantera "
+"lösenord.\n"
 "Dock kan lösenorden istället lagras i inställningsfilen. Lösenordet lagras "
 "med ett fördunklat format, men kan inte anses säkert för dekrypteringsförsök "
 "om åtkomst till konfigurationsfilen erhålls.\n"
