@@ -46,6 +46,7 @@ public:
     ~Transport() override;
 
     using List = QList<Transport *>;
+    using Id = int;
 
     /**
       Returns true if this transport is valid, ie. has all necessary data set.
