@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-06-28 00:49+0000\n"
-"PO-Revision-Date: 2023-07-30 07:12\n"
+"PO-Revision-Date: 2023-08-02 12:43\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -103,7 +103,7 @@ msgstr "添加至邮件传输方式的选项"
 #: kmailtransport/mailtransport.kcfg:44
 #, kde-format
 msgid "Server requires authentication"
-msgstr "服务器需要认证"
+msgstr "服务器要求身份认证"
 
 #. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
 #: kmailtransport/mailtransport.kcfg:45
@@ -291,7 +291,7 @@ msgstr "外发邮件服务器(&M)："
 #: kmailtransport/plugins/smtp/smtpsettings.ui:67
 #, kde-format
 msgid "Server &requires authentication"
-msgstr "服务器需要认证(&R)"
+msgstr "服务器要求身份认证(&R)"
 
 #. i18n: ectx: property (text), widget (QLabel, usernameLabel)
 #: kmailtransport/plugins/smtp/smtpsettings.ui:77
