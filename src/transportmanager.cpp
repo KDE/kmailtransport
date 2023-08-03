@@ -70,7 +70,7 @@ public:
     void readConfig();
     void writeConfig();
     void fillTypes();
-    Q_REQUIRED_RESULT int createId() const;
+    Q_REQUIRED_RESULT Transport::Id createId() const;
     void prepareWallet();
     void validateDefault();
     void migrateToWallet();
@@ -135,7 +135,7 @@ TransportManager *TransportManager::self()
     return sSelf;
 }
 
-Transport *TransportManager::transportById(int id, bool def) const
+Transport *TransportManager::transportById(Transport::Id id, bool def) const
 {
     for (Transport *t : std::as_const(d->transports)) {
         if (t->id() == id) {
@@ -174,7 +174,7 @@ TransportType::List TransportManager::types() const
 
 Transport *TransportManager::createTransport() const
 {
-    int id = d->createId();
+    auto id = d->createId();
     auto t = new Transport(QString::number(id));
     t->setId(id);
     return t;
@@ -326,7 +326,7 @@ int TransportManager::defaultTransportId() const
     return d->defaultTransportId;
 }
 
-void TransportManager::setDefaultTransport(int id)
+void TransportManager::setDefaultTransport(Transport::Id id)
 {
     if (id == d->defaultTransportId || !transportById(id, false)) {
         return;
@@ -335,14 +335,14 @@ void TransportManager::setDefaultTransport(int id)
     d->writeConfig();
 }
 
-void TransportManager::removePasswordFromWallet(int id)
+void TransportManager::removePasswordFromWallet(Transport::Id id)
 {
     auto deleteJob = new DeletePasswordJob(WALLET_FOLDER);
     deleteJob->setKey(QString::number(id));
     deleteJob->start();
 }
 
-void TransportManager::removeTransport(int id)
+void TransportManager::removeTransport(Transport::Id id)
 {
     Transport *t = transportById(id, false);
     if (!t) {
@@ -489,7 +489,7 @@ void TransportManagerPrivate::slotTransportsChanged()
     Q_EMIT q->transportsChanged();
 }
 
-int TransportManagerPrivate::createId() const
+Transport::Id TransportManagerPrivate::createId() const
 {
     QList<int> usedIds;
     usedIds.reserve(transports.size());

@@ -702,15 +702,3 @@ msgstr "Премахване"
 #, kde-format
 msgid "Set as Default"
 msgstr "Настройване като подразбиращ се"
-
-#~ msgid "Default Transport"
-#~ msgstr "Транспорт по подразбиране"
-
-#~ msgid "Empty message."
-#~ msgstr "Празно съобщение."
-
-#~ msgid "Message has no recipients."
-#~ msgstr "Съобщението има невалидни получатели."
-
-#~ msgid "Message has invalid sent-mail folder."
-#~ msgstr "Съобщението има невалидна папка Изпратени."

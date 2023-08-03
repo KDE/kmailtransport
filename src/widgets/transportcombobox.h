@@ -7,6 +7,7 @@
 #pragma once
 
 #include "mailtransport_export.h"
+#include "transport.h"
 #include "transportbase.h"
 
 #include <QComboBox>
@@ -51,7 +52,7 @@ public:
     Q_REQUIRED_RESULT QString transportType() const;
 
 Q_SIGNALS:
-    void transportRemoved(int id, const QString &name);
+    void transportRemoved(Transport::Id id, const QString &name);
 
 protected:
     void setTransportList(const QList<int> &transportList);

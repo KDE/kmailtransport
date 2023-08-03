@@ -5,7 +5,6 @@ Dependencies:
 - 'on': ['Linux', 'FreeBSD', 'Windows']
   'require':
     'frameworks/extra-cmake-modules': '@latest-kf6'
-    'pim/kmime' : '@latest-kf6'
     'pim/ksmtp' : '@latest-kf6'
     'pim/libkgapi' : '@latest-kf6'
     'third-party/qtkeychain': '@latest-kf6'

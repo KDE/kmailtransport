@@ -66,7 +66,7 @@ public:
       soon as the event loop is entered again due to remote changes. If you need
       to store a Transport object, store the transport identifier instead.
     */
-    Transport *transportById(int id, bool def = true) const;
+    Transport *transportById(Transport::Id id, bool def = true) const;
 
     /**
       Returns the transport object with the given name.
@@ -112,7 +112,7 @@ public:
       @deprecated use MessageQueueJob to queue messages
                   and rely on the Dispatcher Agent to send them.
     */
-    MAILTRANSPORT_DEPRECATED TransportJob *createTransportJob(int transportId);
+    MAILTRANSPORT_DEPRECATED TransportJob *createTransportJob(Transport::Id transportId);
 
     /**
       Creates a mail transport job for the given transport identifier,
@@ -191,21 +191,21 @@ public:
       Returns the default transport identifier.
       Invalid if there are no transports at all.
     */
-    Q_SCRIPTABLE int defaultTransportId() const;
+    Q_SCRIPTABLE Transport::Id defaultTransportId() const;
 
     /**
       Sets the default transport. The change will be in effect immediately.
       @param id The identifier of the new default transport.
     */
-    Q_SCRIPTABLE void setDefaultTransport(int id);
+    Q_SCRIPTABLE void setDefaultTransport(Transport::Id id);
 
     /**
       Deletes the specified transport.
       @param id The identifier of the mail transport to remove.
     */
-    Q_SCRIPTABLE void removeTransport(int id);
+    Q_SCRIPTABLE void removeTransport(Transport::Id id);
 
-    void removePasswordFromWallet(int id);
+    void removePasswordFromWallet(Transport::Id id);
 Q_SIGNALS:
     /**
       Emitted when transport settings have changed (by this or any other
@@ -232,7 +232,7 @@ Q_SIGNALS:
       @param id The identifier of the deleted transport.
       @param name The name of the deleted transport.
     */
-    void transportRemoved(int id, const QString &name);
+    void transportRemoved(Transport::Id id, const QString &name);
 
     /**
       Emitted when a transport has been renamed.
@@ -240,7 +240,7 @@ Q_SIGNALS:
       @param oldName The old name.
       @param newName The new name.
     */
-    void transportRenamed(int id, const QString &oldName, const QString &newName);
+    void transportRenamed(Transport::Id id, const QString &oldName, const QString &newName);
 
 protected:
     /**
