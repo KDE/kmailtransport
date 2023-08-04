@@ -7,6 +7,6 @@ GlobalEnums=true
 SetUserTexts=true
 GenerateProperties=true
 Visibility=MAILTRANSPORT_EXPORT
-IncludeFiles=\"mailtransport_export.h\",KLocalizedString
+IncludeFiles=\"mailtransport_export.h\"
 TranslationDomain=libmailtransport5
 TranslationSystem=kde
