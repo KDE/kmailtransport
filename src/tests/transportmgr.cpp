@@ -130,11 +130,10 @@ void TransportMgr::jobPercent(KJob *job, unsigned long percent)
     qDebug() << percent << "%";
 }
 
-void TransportMgr::jobInfoMessage(KJob *job, const QString &info, const QString &info2)
+void TransportMgr::jobInfoMessage(KJob *job, const QString &info)
 {
     Q_UNUSED(job)
     qDebug() << info;
-    qDebug() << info2;
 }
 
 #include "moc_transportmgr.cpp"

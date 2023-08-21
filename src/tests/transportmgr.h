@@ -29,7 +29,7 @@ private Q_SLOTS:
     void cancelBtnClicked();
     void jobResult(KJob *job);
     void jobPercent(KJob *job, unsigned long percent);
-    void jobInfoMessage(KJob *job, const QString &info, const QString &info2);
+    void jobInfoMessage(KJob *job, const QString &info);
 
 private:
     MailTransport::TransportComboBox *mComboBox = nullptr;
