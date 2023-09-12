@@ -142,8 +142,14 @@ void TransportManagementWidgetPrivate::removeClicked()
     if (rc == KMessageBox::ButtonCode::SecondaryAction) {
         return;
     }
+
+    QList<Transport::Id> lst;
+    lst.reserve(nbAccount);
     for (QTreeWidgetItem *selecteditem : selectedItems) {
-        TransportManager::self()->removeTransport(selecteditem->data(0, Qt::UserRole).toInt());
+        lst << selecteditem->data(0, Qt::UserRole).toInt();
+    }
+    for (const auto id : std::as_const(lst)) {
+        TransportManager::self()->removeTransport(id);
     }
 }
 
