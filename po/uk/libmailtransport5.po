@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 00:49+0000\n"
+"POT-Creation-Date: 2023-09-13 00:47+0000\n"
 "PO-Revision-Date: 2022-10-22 09:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -684,27 +684,27 @@ msgstr[3] "Ви справді хочете вилучити цей обліко
 msgid "Remove outgoing account?"
 msgstr "Вилучити обліковий запис вихідної пошти?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:162
+#: kmailtransport/widgets/transportmanagementwidget.cpp:168
 #, kde-format
 msgid "Add..."
 msgstr "Додати…"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:167
+#: kmailtransport/widgets/transportmanagementwidget.cpp:173
 #, kde-format
 msgid "Modify..."
 msgstr "Змінити…"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:170
+#: kmailtransport/widgets/transportmanagementwidget.cpp:176
 #, kde-format
 msgid "Rename"
 msgstr "Перейменувати"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:174
+#: kmailtransport/widgets/transportmanagementwidget.cpp:180
 #, kde-format
 msgid "Remove"
 msgstr "Вилучити"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:179
+#: kmailtransport/widgets/transportmanagementwidget.cpp:185
 #, kde-format
 msgid "Set as Default"
 msgstr "Зробити типовим"

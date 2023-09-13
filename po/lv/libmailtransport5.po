@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 00:49+0000\n"
+"POT-Creation-Date: 2023-09-13 00:47+0000\n"
 "PO-Revision-Date: 2010-01-01 17:14+0200\n"
 "Last-Translator: Viesturs Zarins <viesturs.zarins@mii.lu.lv>\n"
 "Language-Team: Latvian <locale@laka.lv>\n"
@@ -729,31 +729,31 @@ msgstr[2] ""
 msgid "Remove outgoing account?"
 msgstr "Izveidot nosūtīšanas kontu"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:162
+#: kmailtransport/widgets/transportmanagementwidget.cpp:168
 #, fuzzy, kde-format
 #| msgid "A&dd..."
 msgid "Add..."
 msgstr "P&ievienot..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:167
+#: kmailtransport/widgets/transportmanagementwidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgid "Modify..."
 msgstr "&Mainīt..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:170
+#: kmailtransport/widgets/transportmanagementwidget.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename"
 msgstr "Pā&rdēvēt:"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:174
+#: kmailtransport/widgets/transportmanagementwidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
 msgid "Remove"
 msgstr "I&zņemt"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:179
+#: kmailtransport/widgets/transportmanagementwidget.cpp:185
 #, fuzzy, kde-format
 #| msgid "&Set as Default"
 msgid "Set as Default"

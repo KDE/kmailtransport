@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 00:49+0000\n"
+"POT-Creation-Date: 2023-09-13 00:47+0000\n"
 "PO-Revision-Date: 2010-09-25 20:12-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -693,31 +693,31 @@ msgstr[0] ""
 msgid "Remove outgoing account?"
 msgstr ""
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:162
+#: kmailtransport/widgets/transportmanagementwidget.cpp:168
 #, fuzzy, kde-format
 #| msgid "A&dd..."
 msgid "Add..."
 msgstr "追加(&D)..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:167
+#: kmailtransport/widgets/transportmanagementwidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgid "Modify..."
 msgstr "変更(&M)..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:170
+#: kmailtransport/widgets/transportmanagementwidget.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgid "Rename"
 msgstr "名前変更(&R)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:174
+#: kmailtransport/widgets/transportmanagementwidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
 msgid "Remove"
 msgstr "削除(&V)"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:179
+#: kmailtransport/widgets/transportmanagementwidget.cpp:185
 #, fuzzy, kde-format
 #| msgid "&Set as Default"
 msgid "Set as Default"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 00:49+0000\n"
+"POT-Creation-Date: 2023-09-13 00:47+0000\n"
 "PO-Revision-Date: 2022-11-10 20:31+0100\n"
 "Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -693,27 +693,27 @@ msgstr[1] "Möchten Sie diese %1 Versand-Zugänge entfernen?"
 msgid "Remove outgoing account?"
 msgstr "Versand-Zugang entfernen?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:162
+#: kmailtransport/widgets/transportmanagementwidget.cpp:168
 #, kde-format
 msgid "Add..."
 msgstr "Hinzufügen ..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:167
+#: kmailtransport/widgets/transportmanagementwidget.cpp:173
 #, kde-format
 msgid "Modify..."
 msgstr "Ändern ..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:170
+#: kmailtransport/widgets/transportmanagementwidget.cpp:176
 #, kde-format
 msgid "Rename"
 msgstr "Umbenennen"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:174
+#: kmailtransport/widgets/transportmanagementwidget.cpp:180
 #, kde-format
 msgid "Remove"
 msgstr "Entfernen"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:179
+#: kmailtransport/widgets/transportmanagementwidget.cpp:185
 #, kde-format
 msgid "Set as Default"
 msgstr "Als Standard festlegen"
