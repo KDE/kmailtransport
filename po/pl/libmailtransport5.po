@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-06-28 00:49+0000\n"
+"POT-Creation-Date: 2023-09-13 00:47+0000\n"
 "PO-Revision-Date: 2022-11-23 20:12+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -675,27 +675,27 @@ msgstr[2] "Czy na pewno usunąć te %1 kont wychodzących?"
 msgid "Remove outgoing account?"
 msgstr "Czy usunąć konto wychodzące?"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:162
+#: kmailtransport/widgets/transportmanagementwidget.cpp:168
 #, kde-format
 msgid "Add..."
 msgstr "Dodaj..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:167
+#: kmailtransport/widgets/transportmanagementwidget.cpp:173
 #, kde-format
 msgid "Modify..."
 msgstr "Zmień..."
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:170
+#: kmailtransport/widgets/transportmanagementwidget.cpp:176
 #, kde-format
 msgid "Rename"
 msgstr "Zmień nazwę"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:174
+#: kmailtransport/widgets/transportmanagementwidget.cpp:180
 #, kde-format
 msgid "Remove"
 msgstr "Usuń"
 
-#: kmailtransport/widgets/transportmanagementwidget.cpp:179
+#: kmailtransport/widgets/transportmanagementwidget.cpp:185
 #, kde-format
 msgid "Set as Default"
 msgstr "Ustaw jako domyślne"
