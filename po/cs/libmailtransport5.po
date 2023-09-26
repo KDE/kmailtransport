@@ -691,6 +691,3 @@ msgstr "Odstranit"
 #, kde-format
 msgid "Set as Default"
 msgstr "Nastavit jako výchozí"
-
-#~ msgid "Executing precommand"
-#~ msgstr "Provádím předběžný příkaz"
