@@ -695,6 +695,3 @@ msgstr "Fjern"
 #, kde-format
 msgid "Set as Default"
 msgstr "Bruk som standard"
-
-#~ msgid "Executing precommand"
-#~ msgstr "Køyrer førkommando"
