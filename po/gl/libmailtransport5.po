@@ -259,7 +259,7 @@ msgstr "O contrasinal que se envía ao servidor para autenticarse."
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
-"Non se puideron comprobar as funcionalidades. Verifique o porto e o modo de "
+"Non foi posíbel comprobar as funcionalidades. Verifique o porto e o modo de "
 "autenticación."
 
 #: plugins/smtp/smtpconfigwidget.cpp:274
@@ -434,12 +434,12 @@ msgstr "Usar un enderezo de remitente personalizado"
 #: precommandjob.cpp:68
 #, kde-format
 msgid "Executing precommand '%1'."
-msgstr "Estase a executar a orde previa «%1»."
+msgstr "Executando a orde previa «%1»."
 
 #: precommandjob.cpp:75
 #, kde-format
 msgid "Unable to start precommand '%1'."
-msgstr "Non se pode executar a orde previa «%1»."
+msgstr "Non é posíbel executar a orde previa «%1»."
 
 #: precommandjob.cpp:77
 #, kde-format
