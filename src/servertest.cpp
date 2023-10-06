@@ -69,7 +69,7 @@ public:
     bool handleNntpConversation(MailTransport::Socket *socket, int type, int *stage, const QString &response, bool *shouldStartTLS);
     QList<int> parseAuthenticationList(const QStringList &authentications);
 
-    Q_REQUIRED_RESULT inline bool isGmail(const QString &server) const
+    [[nodiscard]] inline bool isGmail(const QString &server) const
     {
         return server.endsWith(QLatin1String("gmail.com")) || server.endsWith(QLatin1String("googlemail.com"));
     }

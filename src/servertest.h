@@ -65,7 +65,7 @@ public:
     /**
      * Returns the server to test.
      */
-    Q_REQUIRED_RESULT QString server() const;
+    [[nodiscard]] QString server() const;
 
     /**
      * Set a custom port to use.
@@ -98,7 +98,7 @@ public:
      *
      * @since 4.1
      */
-    Q_REQUIRED_RESULT int port(Transport::EnumEncryption encryptionMode) const;
+    [[nodiscard]] int port(Transport::EnumEncryption encryptionMode) const;
 
     /**
      * Sets a fake hostname for the test. This is currently only used when
@@ -115,7 +115,7 @@ public:
     /**
      * @return the fake hostname, as set before with @ref setFakeHostname
      */
-    Q_REQUIRED_RESULT QString fakeHostname() const;
+    [[nodiscard]] QString fakeHostname() const;
 
     /**
      * Makes @p pb the progressbar to use. This class will call show()
@@ -138,7 +138,7 @@ public:
     /**
      * Returns the protocol.
      */
-    Q_REQUIRED_RESULT QString protocol() const;
+    [[nodiscard]] QString protocol() const;
 
     /**
      * Starts the test. Will emit finished() when done.
@@ -150,13 +150,13 @@ public:
      * after the finished() signals has been sent.
      * @return an enum of the type Transport::EnumAuthenticationType
      */
-    Q_REQUIRED_RESULT QList<int> normalProtocols() const;
+    [[nodiscard]] QList<int> normalProtocols() const;
 
     /**
      * tells you if the normal server is available
      * @since 4.5
      */
-    Q_REQUIRED_RESULT bool isNormalPossible() const;
+    [[nodiscard]] bool isNormalPossible() const;
 
     /**
      * Get the protocols for the TLS connections. Call this only
@@ -164,20 +164,20 @@ public:
      * @return an enum of the type Transport::EnumAuthenticationType
      * @since 4.1
      */
-    Q_REQUIRED_RESULT QList<int> tlsProtocols() const;
+    [[nodiscard]] QList<int> tlsProtocols() const;
 
     /**
      * Get the protocols for the SSL connections. Call this only
      * after the finished() signals has been sent.
      * @return an enum of the type Transport::EnumAuthenticationType
      */
-    Q_REQUIRED_RESULT QList<int> secureProtocols() const;
+    [[nodiscard]] QList<int> secureProtocols() const;
 
     /**
      * tells you if the ssl server is available
      * @since 4.5
      */
-    Q_REQUIRED_RESULT bool isSecurePossible() const;
+    [[nodiscard]] bool isSecurePossible() const;
 
     /**
      * Get the special capabilities of the server.
@@ -186,7 +186,7 @@ public:
      * @return the list of special capabilities of the server.
      * @since 4.1
      */
-    Q_REQUIRED_RESULT QList<Capability> capabilities() const;
+    [[nodiscard]] QList<Capability> capabilities() const;
 
 Q_SIGNALS:
     /**

@@ -51,12 +51,12 @@ public:
     /**
       Returns true if this transport is valid, ie. has all necessary data set.
     */
-    Q_REQUIRED_RESULT Q_INVOKABLE bool isValid() const;
+    [[nodiscard]] Q_INVOKABLE bool isValid() const;
 
     /**
       Returns the password of this transport.
     */
-    Q_REQUIRED_RESULT QString password() const;
+    [[nodiscard]] QString password() const;
 
     /**
       Sets the password of this transport.
@@ -88,12 +88,12 @@ public:
       This is the way to find out if the password has already been loaded
       from the wallet.
     */
-    Q_REQUIRED_RESULT bool isComplete() const;
+    [[nodiscard]] bool isComplete() const;
 
     /**
       Returns a string representation of the authentication type.
     */
-    Q_REQUIRED_RESULT QString authenticationTypeString() const;
+    [[nodiscard]] QString authenticationTypeString() const;
 
     /**
       Returns a string representation of the authentication type.
@@ -102,7 +102,7 @@ public:
 
       @since 4.5
     */
-    Q_REQUIRED_RESULT static QString authenticationTypeString(int type);
+    [[nodiscard]] static QString authenticationTypeString(int type);
 
     /**
       Returns a deep copy of this Transport object which will no longer be
@@ -119,7 +119,7 @@ public:
       @see TransportType.
       @since 4.4
     */
-    Q_REQUIRED_RESULT TransportType transportType() const;
+    [[nodiscard]] TransportType transportType() const;
 
 protected:
     /**
@@ -134,7 +134,7 @@ protected:
     /**
       Returns true if the password was not stored in the wallet.
     */
-    Q_REQUIRED_RESULT bool needsWalletMigration() const;
+    [[nodiscard]] bool needsWalletMigration() const;
 
     /**
       Try to migrate the password from the config file to the wallet.

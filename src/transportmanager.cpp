@@ -70,7 +70,7 @@ public:
     void readConfig();
     void writeConfig();
     void fillTypes();
-    Q_REQUIRED_RESULT Transport::Id createId() const;
+    [[nodiscard]] Transport::Id createId() const;
     void prepareWallet();
     void validateDefault();
     void migrateToWallet();

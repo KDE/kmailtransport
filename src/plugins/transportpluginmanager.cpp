@@ -42,7 +42,7 @@ public:
     }
 
     void loadPlugin(MailTransportPluginInfo *item);
-    Q_REQUIRED_RESULT QList<MailTransport::TransportAbstractPlugin *> pluginsList() const;
+    [[nodiscard]] QList<MailTransport::TransportAbstractPlugin *> pluginsList() const;
     QList<MailTransportPluginInfo> mPluginList;
     void initializePlugins();
 

@@ -80,30 +80,30 @@ public:
     /**
      * Compares the transport type with the @p other.
      */
-    Q_REQUIRED_RESULT bool operator==(const TransportType &other) const;
+    [[nodiscard]] bool operator==(const TransportType &other) const;
 
     /**
       Returns whether the transport type is valid.
     */
-    Q_REQUIRED_RESULT bool isValid() const;
+    [[nodiscard]] bool isValid() const;
 
     /**
       Returns the i18n'ed name of the transport type.
     */
-    Q_REQUIRED_RESULT QString name() const;
+    [[nodiscard]] QString name() const;
 
     /**
       Returns a description of the transport type.
     */
-    Q_REQUIRED_RESULT QString description() const;
+    [[nodiscard]] QString description() const;
 
     /**
      * Returns a plugin identifier
      */
-    Q_REQUIRED_RESULT QString identifier() const;
+    [[nodiscard]] QString identifier() const;
 
     /// Returns whether this transport is an akonadi resource.
-    Q_REQUIRED_RESULT bool isAkonadiResource() const;
+    [[nodiscard]] bool isAkonadiResource() const;
 
 private:
     //@cond PRIVATE

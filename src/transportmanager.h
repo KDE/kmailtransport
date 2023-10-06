@@ -83,12 +83,12 @@ public:
       Note: The Transport objects become invalid as soon as a change occur, so
       they are only suitable for immediate use.
     */
-    Q_REQUIRED_RESULT QList<Transport *> transports() const;
+    [[nodiscard]] QList<Transport *> transports() const;
 
     /**
       Returns a list of all available transport types.
     */
-    Q_REQUIRED_RESULT TransportType::List types() const;
+    [[nodiscard]] TransportType::List types() const;
 
     /**
       Creates a new, empty Transport object. The object is owned by the caller.

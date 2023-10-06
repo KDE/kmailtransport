@@ -37,7 +37,7 @@ public:
     /**
       Returns identifier of the currently selected mail transport.
     */
-    Q_REQUIRED_RESULT int currentTransportId() const;
+    [[nodiscard]] int currentTransportId() const;
 
     /**
       Selects the given transport.
@@ -49,7 +49,7 @@ public:
     /**
       Returns the type of the selected transport.
     */
-    Q_REQUIRED_RESULT QString transportType() const;
+    [[nodiscard]] QString transportType() const;
 
 Q_SIGNALS:
     void transportRemoved(Transport::Id id, const QString &name);

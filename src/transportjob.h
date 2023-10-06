@@ -98,27 +98,27 @@ protected:
     /**
       Returns the sender of the mail.
     */
-    Q_REQUIRED_RESULT QString sender() const;
+    [[nodiscard]] QString sender() const;
 
     /**
       Returns the "To" receiver(s) of the mail.
     */
-    Q_REQUIRED_RESULT QStringList to() const;
+    [[nodiscard]] QStringList to() const;
 
     /**
       Returns the "Cc" receiver(s) of the mail.
     */
-    Q_REQUIRED_RESULT QStringList cc() const;
+    [[nodiscard]] QStringList cc() const;
 
     /**
       Returns the "Bcc" receiver(s) of the mail.
     */
-    Q_REQUIRED_RESULT QStringList bcc() const;
+    [[nodiscard]] QStringList bcc() const;
 
     /**
       Returns the data of the mail.
     */
-    Q_REQUIRED_RESULT QByteArray data() const;
+    [[nodiscard]] QByteArray data() const;
 
     /**
       Returns a QBuffer opened on the message data. This is useful for
@@ -134,7 +134,7 @@ protected:
     /**
       Returns true if DSN is enabled.
     */
-    Q_REQUIRED_RESULT bool deliveryStatusNotification() const;
+    [[nodiscard]] bool deliveryStatusNotification() const;
 
 private:
     //@cond PRIVATE
