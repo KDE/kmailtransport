@@ -716,9 +716,3 @@ msgstr "削除(&V)"
 #| msgid "&Set as Default"
 msgid "Set as Default"
 msgstr "デフォルトにする(&S)"
-
-#~ msgid "Executing precommand"
-#~ msgstr "前コマンドの実行"
-
-#~ msgid "Default Transport"
-#~ msgstr "デフォルトの送信手段"
