@@ -44,7 +44,7 @@ public:
         qCDebug(MAILTRANSPORT_SMTP_LOG) << "Removing session" << session << "from the pool";
         int key = sessions.key(session);
         if (key > 0) {
-            QObject::connect(session, &KSmtp::Session::stateChanged, [session](KSmtp::Session::State state) {
+            QObject::connect(session, &KSmtp::Session::stateChanged, session, [session](KSmtp::Session::State state) {
                 if (state == KSmtp::Session::Disconnected) {
                     session->deleteLater();
                 }
