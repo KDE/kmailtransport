@@ -406,7 +406,7 @@ void TransportManagerPrivate::readConfig()
     qDeleteAll(oldTransports);
     oldTransports.clear();
     // read default transport
-    KConfigGroup group(config, QLatin1String("General"));
+    KConfigGroup group(config, QStringLiteral("General"));
     defaultTransportId = group.readEntry("default-transport", 0);
     if (defaultTransportId == 0) {
         // migrated default transport contains the name instead
@@ -426,7 +426,7 @@ void TransportManagerPrivate::readConfig()
 
 void TransportManagerPrivate::writeConfig()
 {
-    KConfigGroup group(config, QLatin1String("General"));
+    KConfigGroup group(config, QStringLiteral("General"));
     group.writeEntry("default-transport", defaultTransportId);
     config->sync();
     q->emitChangesCommitted();
