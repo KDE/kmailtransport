@@ -44,13 +44,13 @@ public:
 
 void AddTransportDialogNGPrivate::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "AddTransportDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String("AddTransportDialog"));
     group.writeEntry("Size", q->size());
 }
 
 void AddTransportDialogNGPrivate::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "AddTransportDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), QLatin1String("AddTransportDialog"));
     const QSize sizeDialog = group.readEntry("Size", QSize(300, TransportManager::self()->types().size() > 1 ? 300 : 160));
     if (sizeDialog.isValid()) {
         q->resize(sizeDialog);
