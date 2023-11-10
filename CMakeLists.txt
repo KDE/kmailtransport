@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.240.75")
+set(PIM_VERSION "5.240.81")
 project(MailTransport VERSION ${PIM_VERSION})
 
 # ECM setup
