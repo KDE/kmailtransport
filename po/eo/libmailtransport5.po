@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-06-09 20:56+0100\n"
+"PO-Revision-Date: 2023-11-12 16:39+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -66,8 +66,8 @@ msgstr "Portnumero de la servilo"
 msgid ""
 "The port number that the SMTP server is listening on. The default port is 25."
 msgstr ""
-"La havena numero, sur kiu la SMTP-servilo aŭskultas. La defaŭlta haveno "
-"estas 25."
+"La porda numero, sur kiu la SMTP-servilo aŭskultas. La defaŭlta pordo estas "
+"25."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:33
@@ -85,7 +85,7 @@ msgstr "La uzantnomo por sendi al la servilo por rajtigo."
 #: mailtransport.kcfg:37
 #, kde-format
 msgid "Command to execute before sending a mail"
-msgstr "Ordono por ekzekuti antaŭ sendi poŝton"
+msgstr "Ordono por plenumi antaŭ sendi poŝton"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:38
@@ -252,7 +252,7 @@ msgstr "La pasvorto por sendi al la servilo por rajtigo."
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
-"Malsukcesis kontroli kapablojn. Bonvolu kontroli havenon kaj "
+"Malsukcesis kontroli kapablojn. Bonvolu kontroli pordon kaj "
 "aŭtentikigreĝimon."
 
 #: plugins/smtp/smtpconfigwidget.cpp:274
@@ -484,7 +484,7 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
-"QKeychain ne trovis backend por stoki vian pasvorton. Estas forte "
+"QKeychain ne trovis backend por konservi vian pasvorton. Estas forte "
 "rekomendite uzi fortan backend por administri viajn pasvortojn.\n"
 "Tamen, la pasvorto povas esti konservita en la agorda dosiero anstataŭe. La "
 "pasvorto estas konservita en malklarigita formato, sed ne devus esti "
