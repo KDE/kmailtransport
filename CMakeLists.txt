@@ -3,7 +3,7 @@ set(PIM_VERSION "5.240.81")
 project(MailTransport VERSION ${PIM_VERSION})
 
 # ECM setup
-set(KF_MIN_VERSION "5.240.0")
+set(KF_MIN_VERSION "5.245.0")
 
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
