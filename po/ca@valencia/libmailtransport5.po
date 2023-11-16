@@ -49,7 +49,7 @@ msgstr "Sense nom"
 #: mailtransport.kcfg:24
 #, kde-format
 msgid "Host name of the server"
-msgstr "Nom d'ordinador del servidor"
+msgstr "Nom d'amfitrió del servidor"
 
 #. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:25
@@ -120,7 +120,7 @@ msgid ""
 "Check this option if your SMTP server requires authentication before "
 "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
 msgstr ""
-"Marqueu esta opció si el servidor SMTP requerix autenticació abans "
+"Seleccioneu esta opció si el servidor SMTP requerix autenticació abans "
 "d'acceptar correu. Açò es coneix com a «SMTP autenticat» o senzillament "
 "ASMTP."
 
@@ -142,7 +142,7 @@ msgid ""
 "should not be considered secure from decryption efforts if access to the "
 "configuration file is obtained."
 msgstr ""
-"Marqueu esta opció per a emmagatzemar la contrasenya.\n"
+"Seleccioneu esta opció per a emmagatzemar la contrasenya.\n"
 "Si està disponible KWallet, la contrasenya es guardarà allí, perquè es "
 "considera segur.\n"
 "Al contrari, si no està disponible KWallet, la contrasenya es guardarà en el "
@@ -198,17 +198,17 @@ msgid ""
 "server. This is useful when your system's hostname may not be set correctly "
 "or to mask your system's true hostname."
 msgstr ""
-"Marqueu esta opció per a utilitzar un nom d'ordinador personalitzat que "
-"identifique el servidor de correu. Açò és útil quan el nom d'ordinador del "
-"sistema no es pot establir correctament o per a emmascarar el nom "
-"d'ordinador real del sistema."
+"Seleccioneu esta opció per a utilitzar un nom personalitzat d'amfitrió que "
+"identifique el servidor de correu. Açò és útil quan el nom d'amfitrió del "
+"sistema no es pot establir correctament o per a emmascarar el nom d'amfitrió "
+"real del sistema."
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
 #: mailtransport.kcfg:93
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr ""
-"Introduïu el nom d'ordinador que s'hauria d'utilitzar per a identificar amb "
+"Introduïu el nom d'amfitrió que s'hauria d'utilitzar per a identificar amb "
 "el servidor."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
@@ -218,9 +218,9 @@ msgid ""
 "Check this option to use a custom sender address when identifying to the "
 "mail server. If not checked, the address from the identity is used."
 msgstr ""
-"Activeu esta opció per a utilitzar una adreça de remitent personalitzada que "
-"identifique al servidor de correu. Si no està marcada, s'utilitzarà l'adreça "
-"de la identitat."
+"Seleccioneu esta opció per a utilitzar una adreça de remitent personalitzada "
+"que identifique al servidor de correu. Si no se selecciona, s'utilitzarà "
+"l'adreça de la identitat."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:102
@@ -246,7 +246,7 @@ msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
 "server."
 msgstr ""
-"Si està marcada, s'utilitzarà la configuració del sistema per a connectar "
+"Si se selecciona, s'utilitzarà la configuració del sistema per a connectar "
 "amb el servidor de correu."
 
 #: plugins/smtp/smtpconfigwidget.cpp:144
@@ -405,7 +405,7 @@ msgstr "Configureu l'SMTP"
 #: plugins/smtp/smtpsettings.ui:303
 #, kde-format
 msgid "Hostna&me:"
-msgstr "Nom de la &màquina:"
+msgstr "Nom de l'amfitrió:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/smtp/smtpsettings.ui:329
@@ -423,7 +423,7 @@ msgstr "Ordre prèvia:"
 #: plugins/smtp/smtpsettings.ui:376
 #, kde-format
 msgid "Sen&d custom hostname to server"
-msgstr "En&via el nom d'ordinador personalitzat al servidor"
+msgstr "En&via el nom personalitzat d'amfitrió al servidor"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
 #: plugins/smtp/smtpsettings.ui:383
@@ -707,6 +707,3 @@ msgstr "Elimina"
 #, kde-format
 msgid "Set as Default"
 msgstr "Establix com a predeterminat"
-
-#~ msgid "Executing precommand"
-#~ msgstr "S'està executant l'ordre prèvia"
