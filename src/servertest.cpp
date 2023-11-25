@@ -553,7 +553,7 @@ void ServerTest::start()
 
     d->normalSocket = new MailTransport::Socket(this);
     d->secureSocket = new MailTransport::Socket(this);
-    d->normalSocket->setObjectName(QStringLiteral("normal"));
+    d->normalSocket->setObjectName(QLatin1StringView("normal"));
     d->normalSocket->setServer(d->server);
     d->normalSocket->setProtocol(d->testProtocol);
     if (d->testProtocol == IMAP_PROTOCOL) {
@@ -585,7 +585,7 @@ void ServerTest::start()
     d->normalSocketTimer->start(10000);
 
     if (d->secureSocket->port() > 0) {
-        d->secureSocket->setObjectName(QStringLiteral("secure"));
+        d->secureSocket->setObjectName(QLatin1StringView("secure"));
         d->secureSocket->setServer(d->server);
         d->secureSocket->setProtocol(d->testProtocol + QLatin1Char('s'));
         d->secureSocket->setSecure(true);
