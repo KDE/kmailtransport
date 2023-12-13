@@ -12,14 +12,14 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-11-29 18:39+0900\n"
+"PO-Revision-Date: 2023-12-13 05:19+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
@@ -222,7 +222,7 @@ msgstr "請輸入與伺服器溝通時使用的電子郵件地址。"
 #: mailtransport.kcfg:105 plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
-msgstr "使用系統的代理伺服器設定連線"
+msgstr "使用系統的代理伺服器設定進行連線"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
 #: mailtransport.kcfg:106
