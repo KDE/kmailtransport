@@ -32,7 +32,7 @@ option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, 
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
 
 
-add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport5\")
+add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport6\")
 
 set(KMAILTRANSPORT_LIB_VERSION ${PIM_VERSION})
 
