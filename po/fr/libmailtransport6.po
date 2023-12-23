@@ -1,77 +1,71 @@
-# translation of libmailtransport.po to
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
-# Bruno Patri <bruno.patri@gmail.com>, 2007, 2008, 2009, 2010, 2012, 2013.
-# Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
-# Sebastien Renard <Sebastien.Renard@Solucom.fr>, 2009.
-# xavier <xavier.besnard@neuf.fr>, 2013, 2022.
-# Maxime Corteel <mcorteel@gmail.com>, 2015.
-# Vincent Pinon <vpinon@kde.org>, 2017, 2018.
-# Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
-# Xavier BESNARD <xavier.besnard@neuf.fr>, 2023.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: libmailtransport\n"
+"Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2023-09-21 00:45+0000\n"
-"PO-Revision-Date: 2023-01-05 20:19+0100\n"
-"Last-Translator: Xavier BESNARD <xavier.besnard]neuf.fr>\n"
-"Language-Team: fr\n"
+"PO-Revision-Date: 2023-12-22 05:31+0100\n"
+"Last-Translator: KDE Francophone <kde-francophone@kde.org>\n"
+"Language-Team: KDE Francophone <kde-francophone@kde.org>\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
-"X-Environment: kde\n"
-"X-Accelerator-Marker: &\n"
-"X-Text-Markup: kde4\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unique identifier"
 msgid "Unique identifier"
 msgstr "Identifiant unique"
 
 #. i18n: ectx: label, entry (name), group (Transport $(transportId))
 #: mailtransport.kcfg:16
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "User-visible transport name"
 msgid "User-visible transport name"
 msgstr "Nom du transport visible par l'utilisateur"
 
 #. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
 #: mailtransport.kcfg:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The name that will be used when referring to this server."
 msgid "The name that will be used when referring to this server."
 msgstr "Le nom qui sera utilisé lors d'une référence à ce serveur."
 
 #: mailtransport.kcfg:18
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unnamed"
 msgid "Unnamed"
 msgstr "Sans nom"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Host name of the server"
 msgid "Host name of the server"
 msgstr "Nom d'hôte du serveur"
 
 #. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:25
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The domain name or numerical address of the SMTP server."
 msgid "The domain name or numerical address of the SMTP server."
 msgstr "Le nom de domaine ou l'adresse numérique du serveur SMTP."
 
 #. i18n: ectx: label, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Port number of the server"
 msgid "Port number of the server"
 msgstr "Numéro de port du serveur"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The port number that the SMTP server is listening on. The default port is "
+#| "25."
 msgid ""
 "The port number that the SMTP server is listening on. The default port is 25."
 msgstr ""
@@ -80,25 +74,31 @@ msgstr ""
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:33
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "User name needed for login"
 msgid "User name needed for login"
 msgstr "Nom d'utilisateur requis pour la connexion"
 
 #. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The user name to send to the server for authorization."
 msgid "The user name to send to the server for authorization."
 msgstr "Le nom d'utilisateur à envoyer au serveur pour autorisation."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:37
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Command to execute before sending a mail"
 msgid "Command to execute before sending a mail"
 msgstr "Commande à exécuter avant l'envoi d'un courrier électronique"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "A command to run locally, prior to sending email. This can be used to set "
+#| "up SSH tunnels, for example. Leave it empty if no command should be run."
 msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
 "SSH tunnels, for example. Leave it empty if no command should be run."
@@ -109,19 +109,24 @@ msgstr ""
 
 #. i18n: ectx: label, entry (options), group (Transport $(transportId))
 #: mailtransport.kcfg:41
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Options added to mailtransport method"
 msgid "Options added to mailtransport method"
 msgstr "Options ajoutées à la méthode « mailtransport »"
 
 #. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
 #: mailtransport.kcfg:44
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Server requires authentication"
 msgid "Server requires authentication"
 msgstr "Le serveur exige une authentification"
 
 #. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
 #: mailtransport.kcfg:45
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Check this option if your SMTP server requires authentication before "
+#| "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
 msgid ""
 "Check this option if your SMTP server requires authentication before "
 "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
@@ -132,13 +137,22 @@ msgstr ""
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:49
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Store password"
 msgid "Store password"
 msgstr "Enregistrer le mot de passe"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:52
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Check this option to have your password stored.\n"
+#| "If KWallet is available the password will be stored there, which is "
+#| "considered safe.\n"
+#| "However, if KWallet is not available, the password will be stored in the "
+#| "configuration file. The password is stored in an obfuscated format, but "
+#| "should not be considered secure from decryption efforts if access to the "
+#| "configuration file is obtained."
 msgid ""
 "Check this option to have your password stored.\n"
 "If KWallet is available the password will be stored there, which is "
@@ -159,31 +173,36 @@ msgstr ""
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:56
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Encryption method used for communication"
 msgid "Encryption method used for communication"
 msgstr "Méthode de chiffrement utilisée pour la communication"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:59
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "No encryption"
 msgid "No encryption"
 msgstr "Aucun chiffrement"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "SSL encryption"
 msgid "SSL encryption"
 msgstr "Chiffrement « SSL »"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "TLS encryption"
 msgid "TLS encryption"
 msgstr "Chiffrement « TLS »"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:70
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Authentication method"
 msgid "Authentication method"
 msgstr "Méthode d'authentification"
 
@@ -193,13 +212,18 @@ msgstr "Méthode d'authentification"
 #. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:87 mailtransport.kcfg:92 mailtransport.kcfg:96
 #: mailtransport.kcfg:101
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "<!-- TODO -->"
 msgid "<!-- TODO -->"
 msgstr "<!-- TODO -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
 #: mailtransport.kcfg:88
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Check this option to use a custom hostname when identifying to the mail "
+#| "server. This is useful when your system's hostname may not be set "
+#| "correctly or to mask your system's true hostname."
 msgid ""
 "Check this option to use a custom hostname when identifying to the mail "
 "server. This is useful when your system's hostname may not be set correctly "
@@ -212,7 +236,9 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
 #: mailtransport.kcfg:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enter the hostname that should be used when identifying to the server."
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr ""
 "Saisissez le nom d'hôte qui devrait être utilisé lors de l'identification "
@@ -220,7 +246,10 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:97
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Check this option to use a custom sender address when identifying to the "
+#| "mail server. If not checked, the address from the identity is used."
 msgid ""
 "Check this option to use a custom sender address when identifying to the "
 "mail server. If not checked, the address from the identity is used."
@@ -232,7 +261,10 @@ msgstr ""
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:102
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Enter the address that should be used to overwrite the default sender "
+#| "address."
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
 "address."
@@ -243,13 +275,17 @@ msgstr ""
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
 #: mailtransport.kcfg:105 plugins/smtp/smtpsettings.ui:284
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connect using the system proxy settings"
 msgid "Connect using the system proxy settings"
 msgstr "Utiliser les paramètres de serveur mandataire du système"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
 #: mailtransport.kcfg:106
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "If checked, the system proxy settings will be used to connect to the mail "
+#| "server."
 msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
 "server."
@@ -258,12 +294,15 @@ msgstr ""
 "seront utilisés pour se connecter au serveur de courriel."
 
 #: plugins/smtp/smtpconfigwidget.cpp:144
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The password to send to the server for authorization."
 msgid "The password to send to the server for authorization."
 msgstr "Le mot de passe à envoyer au serveur pour autorisation."
 
 #: plugins/smtp/smtpconfigwidget.cpp:274
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "Failed to check capabilities. Please verify port and authentication mode."
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
@@ -271,226 +310,283 @@ msgstr ""
 "le mode d'authentification."
 
 #: plugins/smtp/smtpconfigwidget.cpp:274
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Check Capabilities Failed"
 msgid "Check Capabilities Failed"
 msgstr "La vérification des capacités a échoué"
 
 #: plugins/smtp/smtpjob.cpp:242
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "You need to supply a username and a password to use this SMTP server."
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
 "Vous devez fournir un nom d'utilisateur et un mot de passe pour utiliser ce "
 "serveur SMTP."
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@option SMTP transport"
+#| msgid "SMTP"
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:28
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "An SMTP server on the Internet"
 msgid "An SMTP server on the Internet"
 msgstr "Un serveur SMTP sur Internet"
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Configure account"
 msgctxt "@title:window"
 msgid "Configure account"
 msgstr "Configurer le compte"
 
 #. i18n: ectx: attribute (title), widget (QWidget, smptTab)
 #: plugins/smtp/smtpsettings.ui:34
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "general smtp settings"
+#| msgid "General"
 msgctxt "general smtp settings"
 msgid "General"
 msgstr "Général"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #: plugins/smtp/smtpsettings.ui:40
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Account Information"
 msgid "Account Information"
 msgstr "Informations sur le compte"
 
 #. i18n: ectx: property (text), widget (QLabel, hostLabel)
 #: plugins/smtp/smtpsettings.ui:47
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Outgoing &mail server:"
 msgid "Outgoing &mail server:"
 msgstr "Serveur d'envoi de &courriers électroniques :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
 #: plugins/smtp/smtpsettings.ui:67
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Server &requires authentication"
 msgid "Server &requires authentication"
 msgstr "Le serveu&r exige une authentification"
 
 #. i18n: ectx: property (text), widget (QLabel, usernameLabel)
 #: plugins/smtp/smtpsettings.ui:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Login:"
 msgid "&Login:"
 msgstr "&Utilisateur :"
 
 #. i18n: ectx: property (text), widget (QLabel, passwordLabel)
 #: plugins/smtp/smtpsettings.ui:103
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "P&assword:"
 msgid "P&assword:"
 msgstr "Mot de p&asse :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
 #: plugins/smtp/smtpsettings.ui:126
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Store SMTP password"
 msgid "&Store SMTP password"
 msgstr "Enregi&strer le mot de passe SMTP"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
 #: plugins/smtp/smtpsettings.ui:147
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "advanced smtp settings"
+#| msgid "Advanced"
 msgctxt "advanced smtp settings"
 msgid "Advanced"
 msgstr "Avancé"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
 #: plugins/smtp/smtpsettings.ui:153
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Connection Settings"
 msgid "Connection Settings"
 msgstr "Configuration de la connexion"
 
 #. i18n: ectx: property (text), widget (QLabel, noAuthPossible)
 #: plugins/smtp/smtpsettings.ui:172
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "This server does not support authentication"
 msgid "This server does not support authentication"
 msgstr "Ce serveur ne prend pas en charge l'authentification"
 
 #. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
 #: plugins/smtp/smtpsettings.ui:189
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Auto Detect"
 msgid "Auto Detect"
 msgstr "Détection automatique"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/smtp/smtpsettings.ui:216
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Encryption:"
 msgid "Encryption:"
 msgstr "Chiffrement :"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
 #: plugins/smtp/smtpsettings.ui:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&None"
 msgid "&None"
 msgstr "Aucu&n"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
 #: plugins/smtp/smtpsettings.ui:232
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&SSL/TLS"
 msgid "&SSL/TLS"
 msgstr "&SSL / TLS"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
 #: plugins/smtp/smtpsettings.ui:239
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "START&TLS"
 msgid "START&TLS"
 msgstr "START&TLS"
 
 #. i18n: ectx: property (text), widget (QLabel, portLabel)
 #: plugins/smtp/smtpsettings.ui:248
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Port:"
 msgid "&Port:"
 msgstr "&Port :"
 
 #. i18n: ectx: property (text), widget (QLabel, authLabel)
 #: plugins/smtp/smtpsettings.ui:274
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Authentication:"
 msgid "Authentication:"
 msgstr "Authentification :"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
 #: plugins/smtp/smtpsettings.ui:293
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "SMTP Settings"
 msgid "SMTP Settings"
 msgstr "Configuration SMTP"
 
 #. i18n: ectx: property (text), widget (QLabel, hostnameLabel)
 #: plugins/smtp/smtpsettings.ui:303
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Hostna&me:"
 msgid "Hostna&me:"
 msgstr "&Nom d'hôte :"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/smtp/smtpsettings.ui:329
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sender Address:"
 msgid "Sender Address:"
 msgstr "Adresse d'expéditeur :"
 
 #. i18n: ectx: property (text), widget (QLabel, precommandLabel)
 #: plugins/smtp/smtpsettings.ui:346
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Precommand:"
 msgid "Precommand:"
 msgstr "Pré commande :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
 #: plugins/smtp/smtpsettings.ui:376
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Sen&d custom hostname to server"
 msgid "Sen&d custom hostname to server"
 msgstr "Envoyer un nom &d'hôte personnalisé au serveur"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
 #: plugins/smtp/smtpsettings.ui:383
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Use custom sender address"
 msgid "Use custom sender address"
 msgstr "Utiliser une adresse personnalisée d'expéditeur"
 
 #: precommandjob.cpp:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Executing precommand '%1'."
 msgid "Executing precommand '%1'."
 msgstr "Exécution de la pré commande « %1 »."
 
 #: precommandjob.cpp:75
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Unable to start precommand '%1'."
 msgid "Unable to start precommand '%1'."
 msgstr "Impossible d'exécuter la pré commande « %1 » :"
 
 #: precommandjob.cpp:77
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Error while executing precommand '%1'."
 msgid "Error while executing precommand '%1'."
 msgstr "Erreur lors de l'exécution de la pré commande « %1 »."
 
 #: precommandjob.cpp:93
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The precommand crashed."
 msgid "The precommand crashed."
 msgstr "La pré commande s'est interrompue brutalement."
 
 #: precommandjob.cpp:96
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The precommand exited with code %1."
 msgid "The precommand exited with code %1."
 msgstr "La pré commande s'est terminée avec le code %1."
 
 #: transport.cpp:84
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt ""
+#| "%1: name; %2: number appended to it to make it unique among a list of "
+#| "names"
+#| msgid "%1 #%2"
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
 #: transport.cpp:134
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Authentication method"
+#| msgid "Clear text"
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Texte en clair"
 
 #: transport.cpp:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "Authentication method"
+#| msgid "Anonymous"
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonyme"
 
 #: transport.cpp:169
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "An unknown transport type"
+#| msgid "Unknown"
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Inconnu"
 
 #: transport.cpp:217
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "QKeychain not found a backend for storing your password. It is strongly "
+#| "recommended to use strong backend for managing your passwords.\n"
+#| "However, the password can be stored in the configuration file instead. "
+#| "The password is stored in an obfuscated format, but should not be "
+#| "considered secure from decryption efforts if access to the configuration "
+#| "file is obtained.\n"
+#| "Do you want to store the password for server '%1' in the configuration "
+#| "file?"
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
 "recommended to use strong backend for managing your passwords.\n"
@@ -511,42 +607,56 @@ msgstr ""
 "de configuration ?"
 
 #: transport.cpp:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KWallet Not Available"
 msgid "KWallet Not Available"
 msgstr "KWallet n'est pas disponible"
 
 #: transport.cpp:227
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Store Password"
 msgid "Store Password"
 msgstr "Enregistrer le mot de passe"
 
 #: transport.cpp:228
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do Not Store Password"
 msgid "Do Not Store Password"
 msgstr "Ne pas enregistrer le mot de passe"
 
 #: transportjob.cpp:122
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "The outgoing account \"%1\" is not correctly configured."
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Le compte d'envoi « %1 » n'est pas correctement configuré."
 
 #: transportmanager.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "You must create an outgoing account before sending."
 msgid "You must create an outgoing account before sending."
 msgstr "Vous devez créer un compte d'envoi avant un envoi."
 
 #: transportmanager.cpp:222
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now?"
 msgid "Create Account Now?"
 msgstr "Créer le compte maintenant ?"
 
 #: transportmanager.cpp:223
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now"
 msgid "Create Account Now"
 msgstr "Créer le compte maintenant"
 
 #: transportmanager.cpp:605
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The following mail transports store their passwords in an unencrypted "
+#| "configuration file.\n"
+#| "For security reasons, please consider migrating these passwords to "
+#| "KWallet, the KDE Wallet management tool,\n"
+#| "which stores sensitive data for you in a strongly encrypted file.\n"
+#| "Do you want to migrate your passwords to KWallet?"
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
 "configuration file.\n"
@@ -563,156 +673,190 @@ msgstr ""
 "Voulez-vous déplacer vos mots de passe vers KWallet ?"
 
 #: transportmanager.cpp:612
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Question"
 msgid "Question"
 msgstr "Question"
 
 #: transportmanager.cpp:613
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Migrate"
 msgid "Migrate"
 msgstr "Migrer"
 
 #: transportmanager.cpp:614
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep"
 msgid "Keep"
 msgstr "Conserver"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Step One: Select Transport Type"
 msgid "Step One: Select Transport Type"
 msgstr "Étape 1 : sélectionnez le type de transport"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/addtransportdialog.ui:38
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "The name of a mail transport"
+#| msgid "Name:"
 msgctxt "The name of a mail transport"
 msgid "Name:"
 msgstr "Nom :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDefault)
 #: ui/addtransportdialog.ui:48
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Make this the default outgoing account"
 msgid "Make this the default outgoing account"
 msgstr "En faire le compte d'envoi par défaut"
 
 #. i18n: ectx: property (text), widget (QLabel, descLabel)
 #: ui/addtransportdialog.ui:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Select an account type from the list below:"
 msgid "Select an account type from the list below:"
 msgstr "Sélectionner un type de compte dans la liste ci-dessous :"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: ui/addtransportdialog.ui:81
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Type"
 msgid "Type"
 msgstr "Type"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: ui/addtransportdialog.ui:86
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Description"
 msgid "Description"
 msgstr "Description"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidget.ui:17
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remo&ve"
 msgid "Remo&ve"
 msgstr "&Supprimer"
 
 #. i18n: ectx: property (text), widget (QPushButton, defaultButton)
 #: ui/transportmanagementwidget.ui:24
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Set as Default"
 msgid "&Set as Default"
 msgstr "Dé&finir comme réglage par défaut"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidget.ui:54
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "A&dd..."
 msgid "A&dd..."
 msgstr "&Ajouter..."
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidget.ui:61
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Rename"
 msgid "&Rename"
 msgstr "&Renommer :"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidget.ui:68
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "&Modify..."
 msgid "&Modify..."
 msgstr "&Modifier..."
 
 #: widgets/addtransportdialogng.cpp:92
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:window"
+#| msgid "Create Outgoing Account"
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
 msgstr "Créer un compte d'envoi"
 
 #: widgets/addtransportdialogng.cpp:95
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "create and configure a mail transport"
+#| msgid "Create and Configure"
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Créer et configurer"
 
 #: widgets/transportlistview.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:column email transport name"
+#| msgid "Name"
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Nom"
 
 #: widgets/transportlistview.cpp:27
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@title:column email transport type"
+#| msgid "Type"
 msgctxt "@title:column email transport type"
 msgid "Type"
 msgstr "Type"
 
 #: widgets/transportlistview.cpp:99
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@label the default mail transport"
+#| msgid " (Default)"
 msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (par défaut)"
 
 #: widgets/transportmanagementwidget.cpp:138
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Voulez-vous supprimer le compte d'envoi « %1 » ?"
 
 #: widgets/transportmanagementwidget.cpp:139
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do you really want to remove this %1 outgoing account?"
+#| msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Voulez-vous vraiment supprimer ce compte sortant « %1 » ?"
 msgstr[1] "Voulez-vous vraiment supprimer ces %1 comptes sortants ?"
 
 #: widgets/transportmanagementwidget.cpp:141
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove outgoing account?"
 msgid "Remove outgoing account?"
 msgstr "Supprimer le compte d'envoi ?"
 
 #: widgets/transportmanagementwidget.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add..."
 msgid "Add..."
 msgstr "Ajouter..."
 
 #: widgets/transportmanagementwidget.cpp:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Modify..."
 msgid "Modify..."
 msgstr "Modifier..."
 
 #: widgets/transportmanagementwidget.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename"
 msgid "Rename"
 msgstr "Renommer"
 
 #: widgets/transportmanagementwidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
 msgid "Remove"
 msgstr "Supprimer"
 
 #: widgets/transportmanagementwidget.cpp:185
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Set as Default"
 msgid "Set as Default"
 msgstr "Définir comme réglage par défaut"
 
