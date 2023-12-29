@@ -5,7 +5,6 @@
 */
 
 #include "transportcombobox.h"
-#include "transport.h"
 #include "transportmanager.h"
 
 using namespace MailTransport;
