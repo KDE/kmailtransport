@@ -1,4 +1,4 @@
-# Translation of libmailtransport5 to Norwegian Nynorsk
+# Translation of libmailtransport6 to Norwegian Nynorsk
 #
 # Karl Ove Hufthammer <karl@huftis.org>, 2008, 2010, 2011, 2020, 2022, 2023.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2009, 2010.
