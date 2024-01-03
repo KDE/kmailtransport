@@ -1,4 +1,4 @@
-# Translation of libmailtransport5 to Northern Sami
+# Translation of libmailtransport6 to Northern Sami
 #
 # Børre Gaup <boerre@skolelinux.no>, 2009.
 msgid ""
