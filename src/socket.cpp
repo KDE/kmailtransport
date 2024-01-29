@@ -89,7 +89,7 @@ void SocketPrivate::slotSocketRead()
         return;
     }
 
-    m_msg += QLatin1String(socket->readAll());
+    m_msg += QLatin1StringView(socket->readAll());
 
     if (!m_msg.endsWith(QLatin1Char('\n'))) {
         return;
@@ -161,7 +161,7 @@ void Socket::write(const QString &text)
         return;
     }
 
-    QByteArray cs = (text + QLatin1String("\r\n")).toLatin1();
+    QByteArray cs = (text + QLatin1StringView("\r\n")).toLatin1();
 
 #ifdef comm_debug
     qCDebug(MAILTRANSPORT_LOG) << "C   :" << cs;

@@ -71,7 +71,7 @@ public:
 
     [[nodiscard]] inline bool isGmail(const QString &server) const
     {
-        return server.endsWith(QLatin1String("gmail.com")) || server.endsWith(QLatin1String("googlemail.com"));
+        return server.endsWith(QLatin1StringView("gmail.com")) || server.endsWith(QLatin1String("googlemail.com"));
     }
 
     // slots
@@ -125,21 +125,21 @@ QList<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authent
     QList<int> result;
     for (QStringList::ConstIterator it = authentications.begin(); it != authentications.end(); ++it) {
         QString current = (*it).toUpper();
-        if (current == QLatin1String("LOGIN")) {
+        if (current == QLatin1StringView("LOGIN")) {
             result << Transport::EnumAuthenticationType::LOGIN;
-        } else if (current == QLatin1String("PLAIN")) {
+        } else if (current == QLatin1StringView("PLAIN")) {
             result << Transport::EnumAuthenticationType::PLAIN;
-        } else if (current == QLatin1String("CRAM-MD5")) {
+        } else if (current == QLatin1StringView("CRAM-MD5")) {
             result << Transport::EnumAuthenticationType::CRAM_MD5;
-        } else if (current == QLatin1String("DIGEST-MD5")) {
+        } else if (current == QLatin1StringView("DIGEST-MD5")) {
             result << Transport::EnumAuthenticationType::DIGEST_MD5;
-        } else if (current == QLatin1String("NTLM")) {
+        } else if (current == QLatin1StringView("NTLM")) {
             result << Transport::EnumAuthenticationType::NTLM;
-        } else if (current == QLatin1String("GSSAPI")) {
+        } else if (current == QLatin1StringView("GSSAPI")) {
             result << Transport::EnumAuthenticationType::GSSAPI;
-        } else if (current == QLatin1String("ANONYMOUS")) {
+        } else if (current == QLatin1StringView("ANONYMOUS")) {
             result << Transport::EnumAuthenticationType::ANONYMOUS;
-        } else if (current == QLatin1String("XOAUTH2")) {
+        } else if (current == QLatin1StringView("XOAUTH2")) {
             if (isGmail(server)) {
                 result << Transport::EnumAuthenticationType::XOAUTH2;
             }
@@ -160,7 +160,7 @@ QList<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authent
 
 void ServerTestPrivate::handleSMTPIMAPResponse(int type, const QString &text)
 {
-    if (!text.contains(QLatin1String("AUTH"), Qt::CaseInsensitive)) {
+    if (!text.contains(QLatin1StringView("AUTH"), Qt::CaseInsensitive)) {
         qCDebug(MAILTRANSPORT_LOG) << "No authentication possible";
         return;
     }
@@ -213,12 +213,12 @@ void ServerTestPrivate::sendInitialCapabilityQuery(MailTransport::Socket *socket
             if (hostname.isEmpty()) {
                 hostname = QStringLiteral("localhost.invalid");
             } else if (!hostname.contains(QChar::fromLatin1('.'))) {
-                hostname += QLatin1String(".localnet");
+                hostname += QLatin1StringView(".localnet");
             }
         }
         qCDebug(MAILTRANSPORT_LOG) << "Hostname for EHLO is" << hostname;
 
-        socket->write(QLatin1String("EHLO ") + hostname);
+        socket->write(QLatin1StringView("EHLO ") + hostname);
     }
 }
 
@@ -266,16 +266,16 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
         //     UIDL
         //     RESP-CODES
         //     .
-        if (response.contains(QLatin1String("TOP"))) {
+        if (response.contains(QLatin1StringView("TOP"))) {
             capabilityResults += ServerTest::Top;
         }
-        if (response.contains(QLatin1String("PIPELINING"))) {
+        if (response.contains(QLatin1StringView("PIPELINING"))) {
             capabilityResults += ServerTest::Pipelining;
         }
-        if (response.contains(QLatin1String("UIDL"))) {
+        if (response.contains(QLatin1StringView("UIDL"))) {
             capabilityResults += ServerTest::UIDL;
         }
-        if (response.contains(QLatin1String("STLS"))) {
+        if (response.contains(QLatin1StringView("STLS"))) {
             connectionResults << Transport::EnumEncryption::TLS;
             popSupportsTLS = true;
         }
@@ -297,7 +297,7 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
 
         // Get rid of the first +OK line
         formattedReply = formattedReply.right(formattedReply.size() - formattedReply.indexOf(QLatin1Char('\n')) - 1);
-        formattedReply = formattedReply.replace(QLatin1Char(' '), QLatin1Char('-')).replace(QLatin1String("\r\n"), QLatin1String(" "));
+        formattedReply = formattedReply.replace(QLatin1Char(' '), QLatin1Char('-')).replace(QLatin1StringView("\r\n"), QLatin1String(" "));
 
         authenticationResults[type] += parseAuthenticationList(formattedReply.split(QLatin1Char(' ')));
     }
@@ -313,10 +313,10 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
 
     // Initial Greeting
     if (*stage == 0) {
-        if (response.startsWith(QLatin1String("382 "))) {
+        if (response.startsWith(QLatin1StringView("382 "))) {
             return true;
         }
-        if (!response.isEmpty() && !response.startsWith(QLatin1String("200 "))) {
+        if (!response.isEmpty() && !response.startsWith(QLatin1StringView("200 "))) {
             return false;
         }
 
@@ -326,7 +326,7 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
     // CAPABILITIES result
     else if (*stage == 1) {
         // Check whether we got "500 command 'CAPABILITIES' not recognized"
-        if (response.startsWith(QLatin1String("500 "))) {
+        if (response.startsWith(QLatin1StringView("500 "))) {
             return false;
         }
 
@@ -345,16 +345,16 @@ bool ServerTestPrivate::handleNntpConversation(MailTransport::Socket *socket, in
         //     .
         const QList<QStringView> lines = QStringView(response).split(QStringLiteral("\r\n"), Qt::SkipEmptyParts);
         for (const QStringView line : lines) {
-            if (line.compare(QLatin1String("STARTTLS"), Qt::CaseInsensitive) == 0) {
+            if (line.compare(QLatin1StringView("STARTTLS"), Qt::CaseInsensitive) == 0) {
                 *shouldStartTLS = true;
-            } else if (line.startsWith(QLatin1String("AUTHINFO "), Qt::CaseInsensitive)) {
+            } else if (line.startsWith(QLatin1StringView("AUTHINFO "), Qt::CaseInsensitive)) {
                 const QList<QStringView> authinfos = QStringView(line).split(QLatin1Char(' '), Qt::SkipEmptyParts);
                 const QString s(QStringLiteral("USER"));
                 const QStringView ref(s);
                 if (authinfos.contains(ref)) {
                     authenticationResults[type].append(Transport::EnumAuthenticationType::CLEAR); // XXX
                 }
-            } else if (line.startsWith(QLatin1String("SASL "), Qt::CaseInsensitive)) {
+            } else if (line.startsWith(QLatin1StringView("SASL "), Qt::CaseInsensitive)) {
                 const QStringList auths = line.mid(5).toString().split(QLatin1Char(' '), Qt::SkipEmptyParts);
                 authenticationResults[type] += parseAuthenticationList(auths);
             } else if (line == QLatin1Char('.')) {
@@ -413,7 +413,7 @@ void ServerTestPrivate::slotReadNormal(const QString &text)
             return;
         }
 
-        if (text.contains(QLatin1String("STARTTLS"), Qt::CaseInsensitive)) {
+        if (text.contains(QLatin1StringView("STARTTLS"), Qt::CaseInsensitive)) {
             connectionResults << Transport::EnumEncryption::TLS;
             shouldStartTLS = true;
         }
