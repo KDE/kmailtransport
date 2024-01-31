@@ -9,8 +9,8 @@
 
 #pragma once
 
+#include "transportjob.h"
 #include <KSMTP/Session>
-#include <transportjob.h>
 
 #include <memory>
 

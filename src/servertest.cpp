@@ -10,7 +10,7 @@
 #include "servertest.h"
 #include "socket.h"
 
-#include <mailtransport_defs.h>
+#include "mailtransport_defs.h"
 #include <transportbase.h>
 
 // Qt

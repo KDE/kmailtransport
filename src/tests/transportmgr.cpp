@@ -6,11 +6,11 @@
 
 #include "transportmgr.h"
 
+#include "transport.h"
+#include "transportjob.h"
+#include "transportmanager.h"
+#include "widgets/transportmanagementwidget.h"
 #include <QVBoxLayout>
-#include <transport.h>
-#include <transportjob.h>
-#include <transportmanager.h>
-#include <widgets/transportmanagementwidget.h>
 
 #include <QApplication>
 #include <QDebug>
