@@ -71,7 +71,7 @@ public:
 
     [[nodiscard]] inline bool isGmail(const QString &server) const
     {
-        return server.endsWith(QLatin1StringView("gmail.com")) || server.endsWith(QLatin1String("googlemail.com"));
+        return server.endsWith(QLatin1StringView("gmail.com")) || server.endsWith(QLatin1StringView("googlemail.com"));
     }
 
     // slots
@@ -297,7 +297,7 @@ bool ServerTestPrivate::handlePopConversation(MailTransport::Socket *socket, int
 
         // Get rid of the first +OK line
         formattedReply = formattedReply.right(formattedReply.size() - formattedReply.indexOf(QLatin1Char('\n')) - 1);
-        formattedReply = formattedReply.replace(QLatin1Char(' '), QLatin1Char('-')).replace(QLatin1StringView("\r\n"), QLatin1String(" "));
+        formattedReply = formattedReply.replace(QLatin1Char(' '), QLatin1Char('-')).replace(QLatin1StringView("\r\n"), QLatin1StringView(" "));
 
         authenticationResults[type] += parseAuthenticationList(formattedReply.split(QLatin1Char(' ')));
     }
