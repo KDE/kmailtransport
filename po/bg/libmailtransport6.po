@@ -696,6 +696,3 @@ msgstr "Премахване"
 #, kde-format
 msgid "Set as Default"
 msgstr "Настройване като подразбиращ се"
-
-#~ msgid "Executing precommand"
-#~ msgstr "Изпълнение на предварителна команда"
