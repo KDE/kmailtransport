@@ -26,8 +26,8 @@
     </entry>
     <entry name="port" type="UInt">
       <label>Port number of the server</label>
-      <whatsthis>The port number that the SMTP server is listening on. The default port is 25.</whatsthis>
-      <default>25</default>
+      <whatsthis>The port number that the SMTP server is listening on. The default port is 587.</whatsthis>
+      <default>587</default>
     </entry>
     <entry name="userName" type="String" key="user">
       <label>User name needed for login</label>
@@ -59,12 +59,13 @@ However, if KWallet is not available, the password will be stored in the configu
           <label>No encryption</label>
         </choice>
         <choice name="SSL">
-          <label>SSL encryption</label>
+          <label>SSL/TLS encryption</label>
         </choice>
         <choice name="TLS">
-          <label>TLS encryption</label>
+          <label>STARTTLS encryption</label>
         </choice>
       </choices>
+      <default>SSL</default>
     </entry>
     <entry name="authenticationType" type="Enum" key="authtype">
       <label>Authentication method</label>
