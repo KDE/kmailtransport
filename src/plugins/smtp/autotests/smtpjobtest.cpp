@@ -81,6 +81,7 @@ private Q_SLOTS:
         transport->setPort(5989);
         transport->setRequiresAuthentication(true);
         transport->setAuthenticationType(authType);
+        transport->setEncryption(MailTransport::Transport::EnumEncryption::None);
         transport->setStorePassword(false);
         transport->setUserName(QStringLiteral("login"));
         transport->setPassword(QStringLiteral("password"));
