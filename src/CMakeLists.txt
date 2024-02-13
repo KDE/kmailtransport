@@ -15,6 +15,7 @@ target_sources(KPim6MailTransport PRIVATE
     precommandjob.cpp
     socket.cpp
     servertest.cpp
+    outlookoauthtokenrequester.cpp
     )
 
 target_sources(KPim6MailTransport PRIVATE
@@ -33,6 +34,7 @@ target_sources(KPim6MailTransport PRIVATE
     transporttype_p.h
     mailtransport_defs.h
     socket.h
+    outlookoauthtokenrequester.h
     precommandjob.h
     transport_p.h
     transport.h
@@ -112,6 +114,7 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
     TransportJob
     TransportManager
     TransportType
+    OutlookOAuthTokenRequester
     PREFIX MailTransport
     REQUIRED_HEADERS MailTransport_HEADERS
     )
