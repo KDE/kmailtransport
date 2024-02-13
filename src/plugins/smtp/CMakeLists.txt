@@ -13,7 +13,9 @@ target_sources(mailtransport_smtpplugin PRIVATE
     sessionuiproxy.h
     smtpmailtransportplugin.h
     smtpconfigwidget.h
-
+    xoauthpasswordrequester.cpp
+    gmailpasswordrequester.cpp
+    outlookpasswordrequester.cpp
     )
 ki18n_wrap_ui(mailtransport_smtpplugin
     smtpsettings.ui
@@ -31,6 +33,7 @@ target_link_libraries(mailtransport_smtpplugin
     KF6::I18n
     KF6::ConfigWidgets
     KF6::KIOWidgets
+    KF6::Wallet
     KPim6::SMTP
     KPim6::GAPICore
     )

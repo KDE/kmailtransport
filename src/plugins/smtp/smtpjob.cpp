@@ -13,6 +13,7 @@
 #include "precommandjob.h"
 #include "sessionuiproxy.h"
 #include "transport.h"
+#include "xoauthpasswordrequester.h"
 #include <KAuthorized>
 #include <QHash>
 #include <QPointer>
@@ -28,9 +29,6 @@
 #include <KGAPI/Account>
 #include <KGAPI/AccountManager>
 #include <KGAPI/AuthJob>
-
-#define GOOGLE_API_KEY QStringLiteral("554041944266.apps.googleusercontent.com")
-#define GOOGLE_API_SECRET QStringLiteral("mdT1DjzohxN3npUUzkENT0gO")
 
 using namespace MailTransport;
 
@@ -188,43 +186,26 @@ void SmtpJob::startPasswordRetrieval(bool forceRefresh)
         return;
     }
 
-    if (transport()->authenticationType() == TransportBase::EnumAuthenticationType::XOAUTH2) {
-        auto promise = KGAPI2::AccountManager::instance()->findAccount(GOOGLE_API_KEY, transport()->userName(), {KGAPI2::Account::mailScopeUrl()});
-        connect(promise, &KGAPI2::AccountPromise::finished, this, [forceRefresh, this](KGAPI2::AccountPromise *promise) {
-            if (promise->account()) {
-                if (forceRefresh) {
-                    promise = KGAPI2::AccountManager::instance()->refreshTokens(GOOGLE_API_KEY, GOOGLE_API_SECRET, transport()->userName());
-                } else {
-                    onTokenRequestFinished(promise);
-                    return;
-                }
-            } else {
-                promise = KGAPI2::AccountManager::instance()->getAccount(GOOGLE_API_KEY,
-                                                                         GOOGLE_API_SECRET,
-                                                                         transport()->userName(),
-                                                                         {KGAPI2::Account::mailScopeUrl()});
-            }
-            connect(promise, &KGAPI2::AccountPromise::finished, this, &SmtpJob::onTokenRequestFinished);
-        });
+    auto xoauthRequester = createXOAuthPasswordRequester(transport(), this);
+    if (xoauthRequester != nullptr) {
+        connect(xoauthRequester,
+                &XOAuthPasswordRequester::done,
+                this,
+                [this, xoauthRequester](XOAuthPasswordRequester::Result result, const QString &password) {
+                    xoauthRequester->deleteLater();
+                    if (result == XOAuthPasswordRequester::Error) {
+                        setError(KJob::UserDefinedError);
+                        emitResult();
+                        return;
+                    }
+
+                    transport()->setPassword(password);
+                    startLoginJob();
+                });
+        xoauthRequester->requestPassword(forceRefresh);
     } else {
         startLoginJob();
     }
-}
-
-void SmtpJob::onTokenRequestFinished(KGAPI2::AccountPromise *promise)
-{
-    if (promise->hasError()) {
-        qCWarning(MAILTRANSPORT_SMTP_LOG) << "Error obtaining XOAUTH2 token:" << promise->errorText();
-        setError(KJob::UserDefinedError);
-        setErrorText(promise->errorText());
-        emitResult();
-        return;
-    }
-
-    const auto account = promise->account();
-    const QString tokens = QStringLiteral("%1\001%2").arg(account->accessToken(), account->refreshToken());
-    transport()->setPassword(tokens);
-    startLoginJob();
 }
 
 void SmtpJob::startLoginJob()

@@ -4,6 +4,9 @@ include_directories(${CMAKE_CURRENT_BINARY_DIR}/..)
 
 ecm_add_test(smtpjobtest.cpp
              ../smtpjob.cpp
+             ../xoauthpasswordrequester.cpp
+             ../outlookpasswordrequester.cpp
+             ../gmailpasswordrequester.cpp
              ${CMAKE_CURRENT_BINARY_DIR}/../mailtransportplugin_smtp_debug.cpp
              fakeserver.cpp fakeserver.h
     LINK_LIBRARIES Qt::Network
@@ -12,6 +15,7 @@ ecm_add_test(smtpjobtest.cpp
                    KF6::I18n
                    KF6::ConfigWidgets
                    KF6::KIOWidgets
+                   KF6::Wallet
                    KPim6::SMTP
                    KPim6::GAPICore
     TEST_NAME smtpjobtest
