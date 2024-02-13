@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "6.0.40")
+set(PIM_VERSION "6.0.41")
 project(MailTransport VERSION ${PIM_VERSION})
 
 # ECM setup
@@ -44,6 +44,7 @@ set(KGAPI_LIB_VERSION "6.0.40")
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
+find_package(KF6Wallet ${KF_MIN_VERSION} CONFIG REQUIRED)
 
 find_package(KPim6SMTP ${KSMTP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6GAPI ${KGAPI_LIB_VERSION} CONFIG REQUIRED)
