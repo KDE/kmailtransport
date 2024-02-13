@@ -69,9 +69,10 @@ public:
     bool handleNntpConversation(MailTransport::Socket *socket, int type, int *stage, const QString &response, bool *shouldStartTLS);
     QList<int> parseAuthenticationList(const QStringList &authentications);
 
-    [[nodiscard]] inline bool isGmail(const QString &server) const
+    [[nodiscard]] inline bool isSupportedXOAuthServer(const QString &server) const
     {
-        return server.endsWith(QLatin1StringView("gmail.com")) || server.endsWith(QLatin1StringView("googlemail.com"));
+        return server.endsWith(u".gmail.com") || server.endsWith(u".googlemail.com") || server.endsWith(u".office365.com") || server.endsWith(u".outlook.com")
+            || server.endsWith(u".hotmail.com");
     }
 
     // slots
@@ -140,7 +141,7 @@ QList<int> ServerTestPrivate::parseAuthenticationList(const QStringList &authent
         } else if (current == QLatin1StringView("ANONYMOUS")) {
             result << Transport::EnumAuthenticationType::ANONYMOUS;
         } else if (current == QLatin1StringView("XOAUTH2")) {
-            if (isGmail(server)) {
+            if (isSupportedXOAuthServer(server)) {
                 result << Transport::EnumAuthenticationType::XOAUTH2;
             }
         }
@@ -166,7 +167,7 @@ void ServerTestPrivate::handleSMTPIMAPResponse(int type, const QString &text)
     }
 
     QStringList protocols;
-    if (isGmail(server)) {
+    if (isSupportedXOAuthServer(server)) {
         protocols << QStringLiteral("XOAUTH2");
     }
 
