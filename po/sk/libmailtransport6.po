@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2023-12-10 15:07+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -235,12 +235,12 @@ msgstr ""
 "Ak je začiarknuté, na pripojenie k poštovému serveru sa použijú systémové "
 "nastavenia proxy."
 
-#: plugins/smtp/smtpconfigwidget.cpp:144
+#: plugins/smtp/smtpconfigwidget.cpp:150
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Heslo ktoré bude poslané serveru kvôli autentifikácii."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -248,12 +248,12 @@ msgstr ""
 "Zlyhalo skontrolovanie schopností. Prosím, skontrolujte port a režim "
 "overenia."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Kontrola schopností zlyhala"
 
-#: plugins/smtp/smtpjob.cpp:242
+#: plugins/smtp/smtpjob.cpp:243
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""

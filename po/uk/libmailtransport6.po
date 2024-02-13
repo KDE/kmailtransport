@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2022-10-22 09:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -243,12 +243,12 @@ msgstr ""
 "Якщо позначити цей пункт, для з'єднання із поштовим сервером буде "
 "використано параметри загальносистемного проксі-сервера."
 
-#: plugins/smtp/smtpconfigwidget.cpp:144
+#: plugins/smtp/smtpconfigwidget.cpp:150
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Пароль для надсилання до сервера для авторизації."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -256,12 +256,12 @@ msgstr ""
 "Не вдалося визначити список можливостей. Будь ласка, перевірте, чи правильно "
 "вказано порт і режим розпізнавання."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Невдала спроба визначити можливості"
 
-#: plugins/smtp/smtpjob.cpp:242
+#: plugins/smtp/smtpjob.cpp:243
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""

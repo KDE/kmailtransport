@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2014-09-23 22:07+0200\n"
 "Last-Translator: Bjørn Steensrud <bjornst@skogkatt.homelinux.org>\n"
 "Language-Team: Norwegian Bokmål <l10n-no@lister.huftis.org>\n"
@@ -237,12 +237,12 @@ msgid ""
 "server."
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:144
+#: plugins/smtp/smtpconfigwidget.cpp:150
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Passordet som skal sendes til tjeneren for autorisering."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -250,12 +250,12 @@ msgstr ""
 "Klarte ikke kontrollere muligheter. Se til at port og autentiseringsmåte er "
 "riktig."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Klarte ikke kontrollere muligheter"
 
-#: plugins/smtp/smtpjob.cpp:242
+#: plugins/smtp/smtpjob.cpp:243
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""

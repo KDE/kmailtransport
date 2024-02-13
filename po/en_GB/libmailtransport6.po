@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2022-12-31 15:14+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -237,24 +237,24 @@ msgstr ""
 "If ticked, the system proxy settings will be used to connect to the mail "
 "server."
 
-#: plugins/smtp/smtpconfigwidget.cpp:144
+#: plugins/smtp/smtpconfigwidget.cpp:150
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "The password to send to the server for authorisation."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 "Failed to check capabilities. Please verify port and authentication mode."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Check Capabilities Failed"
 
-#: plugins/smtp/smtpjob.cpp:242
+#: plugins/smtp/smtpjob.cpp:243
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "You need to supply a username and a password to use this SMTP server."

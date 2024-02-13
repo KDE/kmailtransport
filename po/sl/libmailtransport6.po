@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-02-13 00:38+0000\n"
 "PO-Revision-Date: 2023-04-03 09:13+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -242,23 +242,23 @@ msgstr ""
 "Če je odkljukano, bodo za povezavo s pošto uporabljene sistemske nastavitve "
 "posredniškega strežnika."
 
-#: plugins/smtp/smtpconfigwidget.cpp:144
+#: plugins/smtp/smtpconfigwidget.cpp:150
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Geslo, ki naj se pošlje strežniku za pooblastitev."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr "Zmožnosti ni bilo mogoče preveriti. Preverite vrata in način overitve."
 
-#: plugins/smtp/smtpconfigwidget.cpp:274
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Preverjanje zmožnosti ni uspelo"
 
-#: plugins/smtp/smtpjob.cpp:242
+#: plugins/smtp/smtpjob.cpp:243
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
