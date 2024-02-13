@@ -1,5 +1,5 @@
 /*
-    SPDX-FileCopyrightText: 2023 Daniel Vrátil <dvratil@kde.org>
+    SPDX-FileCopyrightText: 2024 Daniel Vrátil <dvratil@kde.org>
 
     SPDX-License-Identifier: LGPL-2.0-or-later
 */

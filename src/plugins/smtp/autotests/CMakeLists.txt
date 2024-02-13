@@ -15,8 +15,8 @@ ecm_add_test(smtpjobtest.cpp
                    KF6::I18n
                    KF6::ConfigWidgets
                    KF6::KIOWidgets
-                   KF6::Wallet
                    KPim6::SMTP
                    KPim6::GAPICore
+                   qt6keychain
     TEST_NAME smtpjobtest
 )

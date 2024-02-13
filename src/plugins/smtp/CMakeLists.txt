@@ -33,7 +33,7 @@ target_link_libraries(mailtransport_smtpplugin
     KF6::I18n
     KF6::ConfigWidgets
     KF6::KIOWidgets
-    KF6::Wallet
     KPim6::SMTP
     KPim6::GAPICore
+    qt6keychain
     )
