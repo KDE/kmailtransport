@@ -190,6 +190,7 @@ void TransportManager::addTransport(Transport *transport)
     qCDebug(MAILTRANSPORT_LOG) << "Added transport" << transport;
     d->transports.append(transport);
     d->validateDefault();
+    d->writeConfig();
     emitChangesCommitted();
 }
 
