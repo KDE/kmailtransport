@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-02-14 02:28+0000\n"
 "PO-Revision-Date: 2023-03-04 16:23+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -508,22 +508,22 @@ msgstr "Ikkje lagra passord"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Kontoen «%1» for utgåande e-post er ikkje rett sett opp."
 
-#: transportmanager.cpp:221
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Du må leggja til ein konto for utgåande e-post først."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:223
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Vil du leggja til kontoen no?"
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:224
 #, kde-format
 msgid "Create Account Now"
 msgstr "Legg til kontoen"
 
-#: transportmanager.cpp:605
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -540,17 +540,17 @@ msgstr ""
 "Der vert dei lagra i ei sterkt kryptert fil.\n"
 "Vil du flytta over passorda til KDE Lommebokpassar?"
 
-#: transportmanager.cpp:612
+#: transportmanager.cpp:613
 #, kde-format
 msgid "Question"
 msgstr "Spørsmål"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:614
 #, kde-format
 msgid "Migrate"
 msgstr "Flytt over"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:615
 #, kde-format
 msgid "Keep"
 msgstr "Ta vare på"

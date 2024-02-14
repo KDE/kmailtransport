@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-02-14 02:28+0000\n"
 "PO-Revision-Date: 2022-10-25 07:25+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -518,22 +518,22 @@ msgstr "Ez gorde pasahitzik"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Irteerako \"%1\" kontua ez dago ondo konfiguratuta."
 
-#: transportmanager.cpp:221
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Bidali aurretik, irteerako kontu bat sortu behar duzu."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:223
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Kontua orain sortu?"
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:224
 #, kde-format
 msgid "Create Account Now"
 msgstr "Sortu kontua orain"
 
-#: transportmanager.cpp:605
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -551,17 +551,17 @@ msgstr ""
 "batean gordetzen ditu.\n"
 "Zure pasahitzak KWallet-era migratu nahi dituzu?"
 
-#: transportmanager.cpp:612
+#: transportmanager.cpp:613
 #, kde-format
 msgid "Question"
 msgstr "Galdera"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:614
 #, kde-format
 msgid "Migrate"
 msgstr "Migratu"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:615
 #, kde-format
 msgid "Keep"
 msgstr "Mantendu"

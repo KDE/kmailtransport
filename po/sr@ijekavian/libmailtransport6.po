@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-02-14 02:28+0000\n"
 "PO-Revision-Date: 2017-09-28 18:00+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -528,22 +528,22 @@ msgstr "Не смијештај лозинку"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Одлазни налог „%1“ није исправно подешен."
 
-#: transportmanager.cpp:221
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Прије слања морате направити одлазни налог."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:223
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Направити налог сада?"
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:224
 #, kde-format
 msgid "Create Account Now"
 msgstr "Направи налог сада"
 
-#: transportmanager.cpp:605
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -559,17 +559,17 @@ msgstr ""
 "шифрованом фајлу.\n"
 "Желите ли да преселите лозинке у К‑новчаник?"
 
-#: transportmanager.cpp:612
+#: transportmanager.cpp:613
 #, kde-format
 msgid "Question"
 msgstr "Питање"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:614
 #, kde-format
 msgid "Migrate"
 msgstr "Пресели"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:615
 #, kde-format
 msgid "Keep"
 msgstr "Задржи"

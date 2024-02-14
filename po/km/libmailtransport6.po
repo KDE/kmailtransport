@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_extragear-utils_kdiff3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2023-09-21 00:45+0000\n"
+"POT-Creation-Date: 2024-02-14 02:28+0000\n"
 "PO-Revision-Date: 2010-12-22 05:05+0700\n"
 "Last-Translator: Seng Sutha <Sutha@khmeros.info>\n"
 "Language-Team: Khmer [km] <Support@khmeros.info>\n"
@@ -512,22 +512,22 @@ msgstr "កុំ​ទុក​ពាក្យ​សម្ងាត់"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "ការ​បញ្ជូន​សំបុត្រ \"%1\" មិន​ត្រូវ​បាន​កំណត់​រចនាសម្ព័ន្ធ​ត្រឹមត្រូវ​ទេ ។"
 
-#: transportmanager.cpp:221
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "អ្នក​ត្រូវ​តែ​បង្កើត​គណនី​ចេញ​សិន​មុន​នឹង​ផ្ញើ ។"
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:223
 #, kde-format
 msgid "Create Account Now?"
 msgstr "បង្កើត​គណនី​ឥឡូវ​នេះ​ឬ ?"
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:224
 #, kde-format
 msgid "Create Account Now"
 msgstr "បង្កើត​គណនី​ឥឡូវ​នេះ"
 
-#: transportmanager.cpp:605
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -542,17 +542,17 @@ msgstr ""
 "ដែល​ទុក​ទិន្នន័យ​​បម្រែ​បម្រួល​សម្រាប់​អ្នក​ស្ថិតនៅ​ក្នុង​ឯកសារ​ដែល​បានអ៊ិនគ្រីប​យ៉ាង​ខ្លាំង ។\n"
 "តើអ្នក​ចង់​ប្ដូរ​ពាក្យ​សម្ងាត់​របស់​អ្នក​ទៅ KWallet?"
 
-#: transportmanager.cpp:612
+#: transportmanager.cpp:613
 #, kde-format
 msgid "Question"
 msgstr "សំណួរ"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:614
 #, kde-format
 msgid "Migrate"
 msgstr "ប្ដូរ"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:615
 #, kde-format
 msgid "Keep"
 msgstr "រក្សា"
