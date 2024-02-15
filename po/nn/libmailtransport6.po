@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2023-03-04 16:23+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -64,9 +64,13 @@ msgstr "Portnummeret til tenaren"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The port number that the SMTP server is listening on. The default port is "
+#| "25."
 msgid ""
-"The port number that the SMTP server is listening on. The default port is 25."
+"The port number that the SMTP server is listening on. The default port is "
+"587."
 msgstr "Portnummeret som SMTP-tenaren lyttar på. Standardporten er 25."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
@@ -159,18 +163,20 @@ msgstr "Inga kryptering"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
-#, kde-format
-msgid "SSL encryption"
-msgstr "SSL-kryptering"
+#, fuzzy, kde-format
+#| msgid "TLS encryption"
+msgid "SSL/TLS encryption"
+msgstr "TLS-kryptering"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, kde-format
-msgid "TLS encryption"
+#, fuzzy, kde-format
+#| msgid "TLS encryption"
+msgid "STARTTLS encryption"
 msgstr "TLS-kryptering"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
-#: mailtransport.kcfg:70
+#: mailtransport.kcfg:71
 #, kde-format
 msgid "Authentication method"
 msgstr "Autentiseringsmetode"
@@ -179,14 +185,14 @@ msgstr "Autentiseringsmetode"
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:87 mailtransport.kcfg:92 mailtransport.kcfg:96
-#: mailtransport.kcfg:101
+#: mailtransport.kcfg:88 mailtransport.kcfg:93 mailtransport.kcfg:97
+#: mailtransport.kcfg:102
 #, kde-format
 msgid "<!-- TODO -->"
 msgstr "<!-- HUGS -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:88
+#: mailtransport.kcfg:89
 #, kde-format
 msgid ""
 "Check this option to use a custom hostname when identifying to the mail "
@@ -198,13 +204,13 @@ msgstr ""
 "eller for å dekkja over det verkelege vertsnamnet."
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:93
+#: mailtransport.kcfg:94
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr "Skriv inn vertsnamnet som skal brukast ved innlogging på tenaren."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:97
+#: mailtransport.kcfg:98
 #, kde-format
 msgid ""
 "Check this option to use a custom sender address when identifying to the "
@@ -214,7 +220,7 @@ msgstr ""
 "e-post­tenaren. Viss det ikkje er kryssa av, vert adressa i identiteten brukt."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:102
+#: mailtransport.kcfg:103
 #, kde-format
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
@@ -224,13 +230,13 @@ msgstr ""
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
-#: mailtransport.kcfg:105 plugins/smtp/smtpsettings.ui:284
+#: mailtransport.kcfg:106 plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
 msgstr "Bruk system­innstillingane for mellomtenar ved tilkopling"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
-#: mailtransport.kcfg:106
+#: mailtransport.kcfg:107
 #, kde-format
 msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
@@ -695,3 +701,6 @@ msgstr "Fjern"
 #, kde-format
 msgid "Set as Default"
 msgstr "Bruk som standard"
+
+#~ msgid "SSL encryption"
+#~ msgstr "SSL-kryptering"

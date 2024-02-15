@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2022-10-22 09:27+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <kde-i18n-uk@kde.org>\n"
@@ -64,9 +64,13 @@ msgstr "Номер порту сервера"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The port number that the SMTP server is listening on. The default port is "
+#| "25."
 msgid ""
-"The port number that the SMTP server is listening on. The default port is 25."
+"The port number that the SMTP server is listening on. The default port is "
+"587."
 msgstr "Номер потру, який прослуховується SMTP сервером. Типове значення: 25."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
@@ -160,18 +164,20 @@ msgstr "Без шифрування"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
-#, kde-format
-msgid "SSL encryption"
-msgstr "Шифрування SSL"
+#, fuzzy, kde-format
+#| msgid "TLS encryption"
+msgid "SSL/TLS encryption"
+msgstr "Шифрування TLS"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, kde-format
-msgid "TLS encryption"
+#, fuzzy, kde-format
+#| msgid "TLS encryption"
+msgid "STARTTLS encryption"
 msgstr "Шифрування TLS"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
-#: mailtransport.kcfg:70
+#: mailtransport.kcfg:71
 #, kde-format
 msgid "Authentication method"
 msgstr "Метод автентифікації"
@@ -180,14 +186,14 @@ msgstr "Метод автентифікації"
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:87 mailtransport.kcfg:92 mailtransport.kcfg:96
-#: mailtransport.kcfg:101
+#: mailtransport.kcfg:88 mailtransport.kcfg:93 mailtransport.kcfg:97
+#: mailtransport.kcfg:102
 #, kde-format
 msgid "<!-- TODO -->"
 msgstr "<!-- ЗАВДАННЯ -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:88
+#: mailtransport.kcfg:89
 #, kde-format
 msgid ""
 "Check this option to use a custom hostname when identifying to the mail "
@@ -200,14 +206,14 @@ msgstr ""
 "системи.      "
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:93
+#: mailtransport.kcfg:94
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr ""
 "Введіть назву вузла, яку слід використовувати для ідентифікації сервера."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:97
+#: mailtransport.kcfg:98
 #, kde-format
 msgid ""
 "Check this option to use a custom sender address when identifying to the "
@@ -218,7 +224,7 @@ msgstr ""
 "буде використано адресу профілю."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:102
+#: mailtransport.kcfg:103
 #, kde-format
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
@@ -228,13 +234,13 @@ msgstr ""
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
-#: mailtransport.kcfg:105 plugins/smtp/smtpsettings.ui:284
+#: mailtransport.kcfg:106 plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
 msgstr "З'єднатися із використанням параметрів системного проксі"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
-#: mailtransport.kcfg:106
+#: mailtransport.kcfg:107
 #, kde-format
 msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
@@ -702,6 +708,9 @@ msgstr "Вилучити"
 #, kde-format
 msgid "Set as Default"
 msgstr "Зробити типовим"
+
+#~ msgid "SSL encryption"
+#~ msgstr "Шифрування SSL"
 
 #~ msgid "Executing precommand"
 #~ msgstr "Виконання передкоманди"

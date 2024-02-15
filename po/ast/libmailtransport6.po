@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2023-11-07 21:27+0100\n"
 "Last-Translator: Enol P. <enolp@softastur.org>\n"
 "Language-Team: \n"
@@ -62,7 +62,8 @@ msgstr ""
 #: mailtransport.kcfg:29
 #, kde-format
 msgid ""
-"The port number that the SMTP server is listening on. The default port is 25."
+"The port number that the SMTP server is listening on. The default port is "
+"587."
 msgstr ""
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
@@ -145,17 +146,17 @@ msgstr ""
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
 #, kde-format
-msgid "SSL encryption"
+msgid "SSL/TLS encryption"
 msgstr ""
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
 #, kde-format
-msgid "TLS encryption"
+msgid "STARTTLS encryption"
 msgstr ""
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
-#: mailtransport.kcfg:70
+#: mailtransport.kcfg:71
 #, kde-format
 msgid "Authentication method"
 msgstr ""
@@ -164,14 +165,14 @@ msgstr ""
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:87 mailtransport.kcfg:92 mailtransport.kcfg:96
-#: mailtransport.kcfg:101
+#: mailtransport.kcfg:88 mailtransport.kcfg:93 mailtransport.kcfg:97
+#: mailtransport.kcfg:102
 #, kde-format
 msgid "<!-- TODO -->"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:88
+#: mailtransport.kcfg:89
 #, kde-format
 msgid ""
 "Check this option to use a custom hostname when identifying to the mail "
@@ -180,13 +181,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:93
+#: mailtransport.kcfg:94
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:97
+#: mailtransport.kcfg:98
 #, kde-format
 msgid ""
 "Check this option to use a custom sender address when identifying to the "
@@ -194,7 +195,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:102
+#: mailtransport.kcfg:103
 #, kde-format
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
@@ -203,13 +204,13 @@ msgstr ""
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
-#: mailtransport.kcfg:105 plugins/smtp/smtpsettings.ui:284
+#: mailtransport.kcfg:106 plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
-#: mailtransport.kcfg:106
+#: mailtransport.kcfg:107
 #, kde-format
 msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "

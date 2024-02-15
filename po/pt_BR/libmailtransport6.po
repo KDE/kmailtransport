@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-14 00:38+0000\n"
+"POT-Creation-Date: 2024-02-15 00:38+0000\n"
 "PO-Revision-Date: 2022-12-15 11:08-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -64,9 +64,13 @@ msgstr "Número da porta do servidor"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:29
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The port number that the SMTP server is listening on. The default port is "
+#| "25."
 msgid ""
-"The port number that the SMTP server is listening on. The default port is 25."
+"The port number that the SMTP server is listening on. The default port is "
+"587."
 msgstr ""
 "O número da porta que o servidor SMTP está escutando. A porta padrão é a 25."
 
@@ -162,18 +166,20 @@ msgstr "Sem criptografia"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
-#, kde-format
-msgid "SSL encryption"
-msgstr "Criptografia SSL"
+#, fuzzy, kde-format
+#| msgid "TLS encryption"
+msgid "SSL/TLS encryption"
+msgstr "Criptografia TLS"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, kde-format
-msgid "TLS encryption"
+#, fuzzy, kde-format
+#| msgid "TLS encryption"
+msgid "STARTTLS encryption"
 msgstr "Criptografia TLS"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
-#: mailtransport.kcfg:70
+#: mailtransport.kcfg:71
 #, kde-format
 msgid "Authentication method"
 msgstr "Método de autenticação"
@@ -182,14 +188,14 @@ msgstr "Método de autenticação"
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:87 mailtransport.kcfg:92 mailtransport.kcfg:96
-#: mailtransport.kcfg:101
+#: mailtransport.kcfg:88 mailtransport.kcfg:93 mailtransport.kcfg:97
+#: mailtransport.kcfg:102
 #, kde-format
 msgid "<!-- TODO -->"
 msgstr "<!-- A FAZER -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:88
+#: mailtransport.kcfg:89
 #, kde-format
 msgid ""
 "Check this option to use a custom hostname when identifying to the mail "
@@ -202,7 +208,7 @@ msgstr ""
 "máquina verdadeiro do seu sistema."
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:93
+#: mailtransport.kcfg:94
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr ""
@@ -210,7 +216,7 @@ msgstr ""
 "servidor."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:97
+#: mailtransport.kcfg:98
 #, kde-format
 msgid ""
 "Check this option to use a custom sender address when identifying to the "
@@ -221,7 +227,7 @@ msgstr ""
 "identidade é usado."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:102
+#: mailtransport.kcfg:103
 #, kde-format
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
@@ -232,13 +238,13 @@ msgstr ""
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
-#: mailtransport.kcfg:105 plugins/smtp/smtpsettings.ui:284
+#: mailtransport.kcfg:106 plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
 msgstr "Conectar usando a configuração de proxy do sistema"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
-#: mailtransport.kcfg:106
+#: mailtransport.kcfg:107
 #, kde-format
 msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
@@ -705,6 +711,9 @@ msgstr "Remover"
 #, kde-format
 msgid "Set as Default"
 msgstr "Definir como padrão"
+
+#~ msgid "SSL encryption"
+#~ msgstr "Criptografia SSL"
 
 #~ msgid "Executing precommand"
 #~ msgstr "Executando pré-comando"
