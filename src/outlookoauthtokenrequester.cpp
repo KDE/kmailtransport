@@ -326,3 +326,5 @@ void OutlookOAuthTokenRequester::sendResponseToBrowserAndCloseSocket()
 
     qCDebug(MAILTRANSPORT_LOG) << "Sent HTTP OK response to browser and closed our local HTTP server.";
 }
+
+#include "moc_outlookoauthtokenrequester.cpp"

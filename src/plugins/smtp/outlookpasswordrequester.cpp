@@ -118,3 +118,5 @@ void OutlookPasswordRequester::onTokenRequestFinished(const TokenResult &result)
     const QString tokens = QStringLiteral("%1\001%2").arg(result.accessToken(), result.refreshToken());
     Q_EMIT done(PasswordRetrieved, tokens);
 }
+
+#include "moc_outlookpasswordrequester.cpp"
