@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
+"POT-Creation-Date: 2024-02-16 00:38+0000\n"
 "PO-Revision-Date: 2014-08-13 00:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -263,7 +263,7 @@ msgstr ""
 msgid "Check Capabilities Failed"
 msgstr "Könenprööv fehlslaan"
 
-#: plugins/smtp/smtpjob.cpp:243
+#: plugins/smtp/smtpjob.cpp:224
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""

@@ -6,20 +6,20 @@
 # Rinse de Vries <rinsedevries@kde.nl>, 2007.
 # Antoon Tolboom <atolboo@casema.nl>, 2008.
 # Antoon Tolboom <atolboo@gmail.com>, 2008.
-# Freek de Kruijf <freekdekruijf@kde.nl>, 2009, 2010, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2022, 2023.
+# SPDX-FileCopyrightText: 2009, 2010, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2022, 2023, 2024 Freek de Kruijf <freekdekruijf@kde.nl>
 msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-15 00:38+0000\n"
-"PO-Revision-Date: 2023-01-15 15:12+0100\n"
+"POT-Creation-Date: 2024-02-16 00:38+0000\n"
+"PO-Revision-Date: 2024-02-15 09:54+0100\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.1\n"
+"X-Generator: Lokalize 23.08.4\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
@@ -65,16 +65,13 @@ msgstr "Poortnummer van de server"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
 msgstr ""
 "Het poortnummer waarmee verbonden wordt met de SMTP-server. Standaard is dit "
-"25."
+"587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:33
@@ -169,17 +166,15 @@ msgstr "Geen versleuteling"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "TLS-versleuteling"
+msgstr "SSL/TLS-versleuteling"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "TLS-versleuteling"
+msgstr "STARTTLS-versleuteling"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:71
@@ -273,7 +268,7 @@ msgstr ""
 msgid "Check Capabilities Failed"
 msgstr "Mogelijkheden controleren is mislukt"
 
-#: plugins/smtp/smtpjob.cpp:243
+#: plugins/smtp/smtpjob.cpp:224
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
