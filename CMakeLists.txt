@@ -39,6 +39,7 @@ set(KMAILTRANSPORT_LIB_VERSION ${PIM_VERSION})
 
 set(KSMTP_LIB_VERSION "6.0.40")
 set(KGAPI_LIB_VERSION "6.0.40")
+set(QT6KEYCHAIN_LIB_VERSION "0.14.1")
 
 ########### Find packages ###########
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
@@ -48,17 +49,11 @@ find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KPim6SMTP ${KSMTP_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPim6GAPI ${KGAPI_LIB_VERSION} CONFIG REQUIRED)
 
-find_package(Qt6Keychain CONFIG)
+find_package(Qt6Keychain ${QT6KEYCHAIN_LIB_VERSION} CONFIG)
 set_package_properties(Qt6Keychain PROPERTIES
                                    DESCRIPTION "Provides support for secure credentials storage"
                                    URL "https://github.com/frankosterfeld/qtkeychain"
                                    TYPE REQUIRED)
-if (Qt6Keychain_VERSION VERSION_LESS 0.14.1)
-    find_package(KF6Wallet ${KF_MIN_VERSION} CONFIG REQUIRED)
-    add_definitions(-DUSE_LEGACY_WALLET_CODE=1)
-else()
-    add_definitions(-DUSE_LEGACY_WALLET_CODE=0)
-endif()
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
 ecm_set_disabled_deprecation_versions(QT 6.6.0 KF 6.0.0)
