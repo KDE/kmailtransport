@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-16 00:38+0000\n"
-"PO-Revision-Date: 2023-11-12 16:39+0100\n"
+"PO-Revision-Date: 2024-02-16 21:15+0100\n"
 "Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -62,16 +62,13 @@ msgstr "Portnumero de la servilo"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
 msgstr ""
 "La porda numero, sur kiu la SMTP-servilo aŭskultas. La defaŭlta pordo estas "
-"25."
+"587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:33
@@ -164,17 +161,15 @@ msgstr "Neniu ĉifrado"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "TLS-ĉifrado"
+msgstr "SSL/TLS-ĉifrado"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "TLS-ĉifrado"
+msgstr "STARTTLS-ĉifrado"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:71
@@ -703,9 +698,3 @@ msgstr "Forigi"
 #, kde-format
 msgid "Set as Default"
 msgstr "Meti kiel Defaŭlton"
-
-#~ msgid "SSL encryption"
-#~ msgstr "SSL-ĉifrado"
-
-#~ msgid "Executing precommand"
-#~ msgstr "Efektivigante antaŭkomandon"
