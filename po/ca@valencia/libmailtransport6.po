@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-16 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
 "PO-Revision-Date: 2024-02-15 12:37+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -457,32 +457,32 @@ msgstr "L'ordre prèvia ha fallat."
 msgid "The precommand exited with code %1."
 msgstr "L'ordre prèvia ha eixit amb el codi %1."
 
-#: transport.cpp:84
+#: transport.cpp:81
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 núm. %2"
 
-#: transport.cpp:134
+#: transport.cpp:131
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Text en clar"
 
-#: transport.cpp:138
+#: transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anònim"
 
-#: transport.cpp:169
+#: transport.cpp:166
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Desconegut"
 
-#: transport.cpp:217
+#: transport.cpp:210
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -503,17 +503,17 @@ msgstr ""
 "Voleu guardar la contrasenya per al servidor «%1» en el fitxer de "
 "configuració?"
 
-#: transport.cpp:226
+#: transport.cpp:219
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet no està disponible"
 
-#: transport.cpp:227
+#: transport.cpp:220
 #, kde-format
 msgid "Store Password"
 msgstr "Emmagatzema la contrasenya"
 
-#: transport.cpp:228
+#: transport.cpp:221
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "No emmagatzemes la contrasenya"

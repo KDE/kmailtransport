@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-16 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
 "PO-Revision-Date: 2024-02-15 16:44+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -457,32 +457,32 @@ msgstr "A orde previa quebrou."
 msgid "The precommand exited with code %1."
 msgstr "A orde previa saíu co código %1."
 
-#: transport.cpp:84
+#: transport.cpp:81
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: transport.cpp:134
+#: transport.cpp:131
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Texto simple"
 
-#: transport.cpp:138
+#: transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anónimo"
 
-#: transport.cpp:169
+#: transport.cpp:166
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Descoñecido"
 
-#: transport.cpp:217
+#: transport.cpp:210
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -501,17 +501,17 @@ msgstr ""
 "descifrado se un atacante obtén acceso ao ficheiro de configuración.\n"
 "Quere gardar o contrasinal do servidor «%1» no ficheiro de configuración?"
 
-#: transport.cpp:226
+#: transport.cpp:219
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet non está dispoñíbel"
 
-#: transport.cpp:227
+#: transport.cpp:220
 #, kde-format
 msgid "Store Password"
 msgstr "Gardar o contrasinal"
 
-#: transport.cpp:228
+#: transport.cpp:221
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Non gardar o contrasinal"

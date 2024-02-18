@@ -4,7 +4,7 @@
 # Bruno Patri <bruno.patri@gmail.com>, 2007, 2008, 2009, 2010, 2012, 2013.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
 # Sebastien Renard <Sebastien.Renard@Solucom.fr>, 2009.
-# Xavier Besnard <xavier.besnard@kde.org>, 2013, 2022.
+# SPDX-FileCopyrightText: 2013, 2022, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Maxime Corteel <mcorteel@gmail.com>, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
@@ -14,16 +14,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-16 00:38+0000\n"
-"PO-Revision-Date: 2023-01-05 20:19+0100\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
+"PO-Revision-Date: 2024-02-16 10:18+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
@@ -71,16 +71,13 @@ msgstr "Numéro de port du serveur"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
 msgstr ""
 "Le numéro de port sur lequel le serveur SMTP est en écoute. Le numéro de "
-"port par défaut est 25."
+"port par défaut est 587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:33
@@ -175,17 +172,15 @@ msgstr "Aucun chiffrement"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "Chiffrement « TLS »"
+msgstr "Chiffrement « SSL / TLS »"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "Chiffrement « TLS »"
+msgstr "Chiffrement « STARTTLS »"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:71
@@ -470,32 +465,32 @@ msgstr "La pré commande s'est interrompue brutalement."
 msgid "The precommand exited with code %1."
 msgstr "La pré commande s'est terminée avec le code %1."
 
-#: transport.cpp:84
+#: transport.cpp:81
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: transport.cpp:134
+#: transport.cpp:131
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Texte en clair"
 
-#: transport.cpp:138
+#: transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonyme"
 
-#: transport.cpp:169
+#: transport.cpp:166
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Inconnu"
 
-#: transport.cpp:217
+#: transport.cpp:210
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -516,17 +511,17 @@ msgstr ""
 "Voulez-vous enregistrer le mot de passe pour le serveur %1 dans le fichier "
 "de configuration ?"
 
-#: transport.cpp:226
+#: transport.cpp:219
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "KWallet n'est pas disponible"
 
-#: transport.cpp:227
+#: transport.cpp:220
 #, kde-format
 msgid "Store Password"
 msgstr "Enregistrer le mot de passe"
 
-#: transport.cpp:228
+#: transport.cpp:221
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "Ne pas enregistrer le mot de passe"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_extragear-utils_kdiff3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-16 00:38+0000\n"
+"POT-Creation-Date: 2024-02-18 00:38+0000\n"
 "PO-Revision-Date: 2010-12-22 05:05+0700\n"
 "Last-Translator: Seng Sutha <Sutha@khmeros.info>\n"
 "Language-Team: Khmer [km] <Support@khmeros.info>\n"
@@ -445,32 +445,32 @@ msgstr "មុន​ពាក្យ​បញ្ជា​ដែល​បាន​
 msgid "The precommand exited with code %1."
 msgstr "មុន​ពាក្យ​បញ្ជា​ដែល​បាន​ចេញ​ជាមួយ​​កូដ​​ %1 ។"
 
-#: transport.cpp:84
+#: transport.cpp:81
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: transport.cpp:134
+#: transport.cpp:131
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "ជម្រះអត្ថបទ​​"
 
-#: transport.cpp:138
+#: transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "អនាមិក​"
 
-#: transport.cpp:169
+#: transport.cpp:166
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "មិន​ស្គាល់​"
 
-#: transport.cpp:217
+#: transport.cpp:210
 #, fuzzy, kde-format
 #| msgid ""
 #| "KWallet is not available. It is strongly recommended to use KWallet for "
@@ -497,17 +497,17 @@ msgstr ""
 "ចូល​ដំណើរការ​ទៅ​កាន់​ឯកសារ​កំណត់​រចនាសម្ព័ន្ធ​ត្រូវ​បាន​ទទួល ។\n"
 "តើ​អ្នក​ពិត​ជា​ចង់ទុក​ពាក្យ​សម្ងាត់​សម្រាប់​ម៉ាស៊ីន​បម្រើ '%1' នៅ​ក្នុង​ឯកសារ​កំណត់​រចនាសម្ព័ន្ធ ឬ​ ?"
 
-#: transport.cpp:226
+#: transport.cpp:219
 #, kde-format
 msgid "KWallet Not Available"
 msgstr "មិនមាន KWallet ទេ"
 
-#: transport.cpp:227
+#: transport.cpp:220
 #, kde-format
 msgid "Store Password"
 msgstr "ទុក​ពាក្យ​សម្ងាត់"
 
-#: transport.cpp:228
+#: transport.cpp:221
 #, kde-format
 msgid "Do Not Store Password"
 msgstr "កុំ​ទុក​ពាក្យ​សម្ងាត់"
