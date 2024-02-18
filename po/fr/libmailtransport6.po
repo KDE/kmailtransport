@@ -4,7 +4,7 @@
 # Bruno Patri <bruno.patri@gmail.com>, 2007, 2008, 2009, 2010, 2012, 2013.
 # Sébastien Renard <Sebastien.Renard@digitalfox.org>, 2008.
 # Sebastien Renard <Sebastien.Renard@Solucom.fr>, 2009.
-# Xavier Besnard <xavier.besnard@kde.org>, 2013, 2022.
+# SPDX-FileCopyrightText: 2013, 2022, 2024 Xavier Besnard <xavier.besnard@kde.org>
 # Maxime Corteel <mcorteel@gmail.com>, 2015.
 # Vincent Pinon <vpinon@kde.org>, 2017, 2018.
 # Simon Depiets <sdepiets@gmail.com>, 2018, 2019.
@@ -17,13 +17,13 @@ msgstr ""
 "POT-Creation-Date: 2024-02-14 02:28+0000\n"
 "PO-Revision-Date: 2023-01-05 20:19+0100\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
-"Language-Team: French <kde-francophone@kde.org>\n"
+"Language-Team: fr\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.0\n"
+"X-Generator: Lokalize 23.08.4\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
 "X-Text-Markup: kde4\n"
