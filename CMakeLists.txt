@@ -36,8 +36,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport6\")
 
 set(KMAILTRANSPORT_LIB_VERSION ${PIM_VERSION})
 
-set(KSMTP_LIB_VERSION "6.0.0")
-set(KGAPI_LIB_VERSION "6.0.0")
+set(KSMTP_LIB_VERSION "6.0.1")
+set(KGAPI_LIB_VERSION "6.0.1")
 
 ########### Find packages ###########
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
