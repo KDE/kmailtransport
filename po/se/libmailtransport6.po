@@ -664,6 +664,3 @@ msgstr "Váldde eret"
 #, kde-format
 msgid "Set as Default"
 msgstr "Geavat standárdan"
-
-#~ msgid "SSL encryption"
-#~ msgstr "SSL-krypteren"

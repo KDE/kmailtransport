@@ -692,6 +692,3 @@ msgstr "Fjern"
 #, kde-format
 msgid "Set as Default"
 msgstr "Velg som standard"
-
-#~ msgid "SSL encryption"
-#~ msgstr "SSL-kryptering"
