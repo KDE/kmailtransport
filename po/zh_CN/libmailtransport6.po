@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-18 00:38+0000\n"
-"PO-Revision-Date: 2024-02-05 11:37\n"
+"PO-Revision-Date: 2024-02-29 12:53\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
 "Language: zh_CN\n"
@@ -60,14 +60,11 @@ msgstr "服务器的端口号码"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
-msgstr "SMTP 服务器监听的端口号码。默认端口是 25。"
+msgstr ""
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:33
@@ -157,17 +154,15 @@ msgstr "不加密"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "TLS 加密"
+msgstr ""
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "TLS 加密"
+msgstr ""
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:71
@@ -680,6 +675,3 @@ msgstr "删除"
 #, kde-format
 msgid "Set as Default"
 msgstr "设置为默认"
-
-#~ msgid "SSL encryption"
-#~ msgstr "SSL 加密"
