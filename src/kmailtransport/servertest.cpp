@@ -13,6 +13,8 @@
 #include <mailtransport_defs.h>
 #include <transportbase.h>
 
+#include <KLocalizedString>
+
 // Qt
 #include <QHash>
 #include <QHostInfo>
@@ -559,6 +561,7 @@ void ServerTest::start()
     if (d->testProgress) {
         d->testProgress->setMaximum(20);
         d->testProgress->setValue(0);
+        d->testProgress->setFormat(i18nc("Percent value; %p is the value, % is the percent sign", "%p%"));
         d->testProgress->setTextVisible(true);
         d->testProgress->show();
         d->progressTimer->start(1000);

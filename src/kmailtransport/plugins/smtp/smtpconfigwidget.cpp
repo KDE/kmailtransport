@@ -26,6 +26,7 @@
 
 #include "mailtransport_debug.h"
 #include <KAuthorized>
+#include <KLocalizedString>
 #include <KMessageBox>
 #include <KProtocolInfo>
 
@@ -152,6 +153,8 @@ void SMTPConfigWidget::init()
     d->ui.encryptionNone->setChecked(d->transport->encryption() == Transport::EnumEncryption::None);
     d->ui.encryptionSsl->setChecked(d->transport->encryption() == Transport::EnumEncryption::SSL);
     d->ui.encryptionTls->setChecked(d->transport->encryption() == Transport::EnumEncryption::TLS);
+
+    d->ui.checkCapabilitiesProgress->setFormat(i18nc("Percent value; %p is the value, % is the percent sign", "%p%"));
 
     d->resetAuthCapabilities();
 
