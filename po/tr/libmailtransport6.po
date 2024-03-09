@@ -7,13 +7,13 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# Emir SARI <emir_sari@icloud.com>, 2022, 2023.
+# SPDX-FileCopyrightText: 2022, 2023, 2024 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-14 02:28+0000\n"
-"PO-Revision-Date: 2023-04-02 17:28+0300\n"
+"PO-Revision-Date: 2024-03-08 16:24+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -351,7 +351,7 @@ msgstr "Bu sunucu kimlik doğrulamayı desteklemiyor"
 #: plugins/smtp/smtpsettings.ui:189
 #, kde-format
 msgid "Auto Detect"
-msgstr "Otomatik Algıla"
+msgstr "Kendiliğinden Algıla"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/smtp/smtpsettings.ui:216
