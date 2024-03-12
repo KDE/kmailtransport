@@ -29,7 +29,6 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KProtocolInfo>
-#include <kwidgetsaddons_version.h>
 
 using namespace MailTransport;
 
@@ -139,12 +138,8 @@ void SMTPConfigWidget::init()
     d->serverTestFailed = false;
 
     d->ui.setupUi(this);
-#if KWIDGETSADDONS_VERSION <= QT_VERSION_CHECK(5, 249, 0)
-    d->ui.password->setRevealPasswordAvailable(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")));
-#else
     d->ui.password->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
                                                                                                              : KPassword::RevealMode::Never);
-#endif
     d->manager->addWidget(this); // otherwise it doesn't find out about these widgets
     d->manager->updateWidgets();
 
