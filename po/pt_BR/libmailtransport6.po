@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:38+0000\n"
+"POT-Creation-Date: 2024-03-13 00:38+0000\n"
 "PO-Revision-Date: 2022-12-15 11:08-0300\n"
 "Last-Translator: Luiz Fernando Ranghetti <elchevive@opensuse.org>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -253,12 +253,18 @@ msgstr ""
 "Se a opção estiver assinalada, serão usadas as definições de proxy do "
 "sistema para conexão com o servidor de e-mail."
 
-#: plugins/smtp/smtpconfigwidget.cpp:150
+#: plugins/smtp/smtpconfigwidget.cpp:146
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "A senha a enviar para o servidor para autorização."
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:158 servertest.cpp:552
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr ""
+
+#: plugins/smtp/smtpconfigwidget.cpp:278
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -266,12 +272,12 @@ msgstr ""
 "Ocorreu uma falha ao verificar as capacidades. Verifique a porta e o modo de "
 "autenticação."
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:278
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Falha na verificação das capacidades"
 
-#: plugins/smtp/smtpjob.cpp:224
+#: plugins/smtp/smtpjob.cpp:223
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""

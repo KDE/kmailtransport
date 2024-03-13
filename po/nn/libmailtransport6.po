@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-02-18 00:38+0000\n"
+"POT-Creation-Date: 2024-03-13 00:38+0000\n"
 "PO-Revision-Date: 2023-03-04 16:23+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -245,12 +245,18 @@ msgstr ""
 "Viss det er kryssa av her, vert system­innstillingane for mellomtenar brukte "
 "til å kopla til e-posttenaren."
 
-#: plugins/smtp/smtpconfigwidget.cpp:150
+#: plugins/smtp/smtpconfigwidget.cpp:146
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Brukarnamnet som skal sendast til tenaren ved innlogging."
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:158 servertest.cpp:552
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr ""
+
+#: plugins/smtp/smtpconfigwidget.cpp:278
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -258,12 +264,12 @@ msgstr ""
 "Kunne ikkje sjekka for funksjonar. Sjå over dine autentiserings og "
 "portinnstillingane."
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:278
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Kunne ikkje sjekka funksjonar"
 
-#: plugins/smtp/smtpjob.cpp:224
+#: plugins/smtp/smtpjob.cpp:223
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
