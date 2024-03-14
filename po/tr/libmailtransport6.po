@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-02-14 02:28+0000\n"
-"PO-Revision-Date: 2024-03-08 16:24+0300\n"
+"PO-Revision-Date: 2024-03-13 14:19+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -120,8 +120,8 @@ msgid ""
 "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
 msgstr ""
 "Eğer SMTP sunucunuz posta kabulünden önce kimlik doğrulama gerektiriyorsa bu "
-"seçeneği işaretleyin. Bu 'Doğrulanmış SMTP - Authenticated SMTP' veya kısaca "
-"ASMTP olarak bilinir."
+"seçeneği işaretleyin. Bu, ‘Doğrulanmış SMTP — Authenticated SMTP’ veya "
+"kısaca ASMTP olarak bilinir."
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:49
@@ -142,7 +142,7 @@ msgid ""
 "configuration file is obtained."
 msgstr ""
 "Parolalarınızın depolanmasını istiyorsanız bu seçeneği işaretleyin.\n"
-"Eğer K Cüzdan varsa parolalarınız güvenli olduğu varsayılan K Cüzdan'a "
+"Eğer K Cüzdan varsa parolalarınız güvenli olduğu varsayılan K Cüzdan’a "
 "kaydedilecektir.\n"
 "Eğer K Cüzdan kullanılamıyorsa parolanız yapılandırma dosyasına kaydedilir. "
 "Parolalar karıştırılmış şekilde kaydedilir; ancak yapılandırma dosyanız "
@@ -277,7 +277,7 @@ msgstr "SMTP"
 #: plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
 msgid "An SMTP server on the Internet"
-msgstr "İnternet'teki bir SMTP sunucusu"
+msgstr "İnternet’teki bir SMTP sunucusu"
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:38
 #, kde-format
@@ -428,17 +428,17 @@ msgstr "Özel gönderen adresi kullan"
 #: precommandjob.cpp:68
 #, kde-format
 msgid "Executing precommand '%1'."
-msgstr "'%1' ön komutu çalıştırılıyor."
+msgstr "‘%1’ ön komutu çalıştırılıyor."
 
 #: precommandjob.cpp:75
 #, kde-format
 msgid "Unable to start precommand '%1'."
-msgstr "'%1' ön komutu çalıştırılamadı."
+msgstr "‘%1’ ön komutu çalıştırılamadı."
 
 #: precommandjob.cpp:77
 #, kde-format
 msgid "Error while executing precommand '%1'."
-msgstr "'%1' ön komutu çalıştırılırken bir hata oluştu."
+msgstr "‘%1’ ön komutu çalıştırılırken bir hata oluştu."
 
 #: precommandjob.cpp:93
 #, kde-format
@@ -448,7 +448,7 @@ msgstr "Ön komut çöktü."
 #: precommandjob.cpp:96
 #, kde-format
 msgid "The precommand exited with code %1."
-msgstr "Ön komuttan '%1' kodu ile çıkıldı."
+msgstr "Ön komuttan ‘%1’ kodu ile çıkıldı."
 
 #: transport.cpp:84
 #, kde-format
@@ -492,7 +492,7 @@ msgstr ""
 "Parolalar karıştırılmış şekilde kaydedilir; ancak yapılandırma dosyanız "
 "birisinin eline geçerse parolanızın şifrelemesinin çözülemeyeceğini "
 "düşünmeyin.\n"
-"'%1' sunucusu için parolanızı yapılandırma dosyasında saklamak istiyor "
+"‘%1’ sunucusu için parolanızı yapılandırma dosyasında saklamak istiyor "
 "musunuz?"
 
 #: transport.cpp:226
@@ -513,7 +513,7 @@ msgstr "Parolayı Kaydetme"
 #: transportjob.cpp:122
 #, kde-format
 msgid "The outgoing account \"%1\" is not correctly configured."
-msgstr "\"%1\" giden hesabı, doğru bir şekilde yapılandırılmamış."
+msgstr "“%1” giden hesabı doğru bir biçimde yapılandırılmamış."
 
 #: transportmanager.cpp:222
 #, kde-format
@@ -543,7 +543,7 @@ msgstr ""
 "Aşağıdaki posta gönderim parolaları şifrelenmemiş bir yapılandırma\n"
 "dosyasına kaydedilecek. Güvenlik nedeniyle hassas verilerinizi güçlü\n"
 "bir şekilde şifrelenmiş dosyalarda saklayan K Cüzdan ile saklamaya çalışın.\n"
-"Parolalarınızı K Cüzdan'a taşımak istiyor musunuz?"
+"Parolalarınızı K Cüzdan’a taşımak istiyor musunuz?"
 
 #: transportmanager.cpp:613
 #, kde-format
@@ -613,7 +613,7 @@ msgstr "Ö&ntanımlı Olarak Ayarla"
 #: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
-msgstr "&Ekle..."
+msgstr "&Ekle…"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidget.ui:61
@@ -625,7 +625,7 @@ msgstr "&Yeniden Adlandır"
 #: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
-msgstr "&Düzenle..."
+msgstr "&Değiştir…"
 
 #: widgets/addtransportdialogng.cpp:92
 #, kde-format
@@ -660,14 +660,14 @@ msgstr " (Öntanımlı)"
 #: widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
-msgstr "'%1' giden hesabını kaldırmak istiyor musunuz?"
+msgstr "“%1” giden hesabını kaldırmak istiyor musunuz?"
 
 #: widgets/transportmanagementwidget.cpp:139
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] "%1 giden hesabını gerçekten kaldırmak istiyor musunuz?"
-msgstr[1] "%1 giden hesabını gerçekten kaldırmak istiyor musunuz?"
+msgstr[0] "Bu %1 giden hesabı kaldırmayı gerçekten istiyor musunuz?"
+msgstr[1] "Bu %1 giden hesabı kaldırmayı gerçekten istiyor musunuz?"
 
 #: widgets/transportmanagementwidget.cpp:141
 #, kde-format
@@ -677,12 +677,12 @@ msgstr "Giden e-posta hesabı kaldırılsın mı?"
 #: widgets/transportmanagementwidget.cpp:168
 #, kde-format
 msgid "Add..."
-msgstr "Ekle..."
+msgstr "Ekle…"
 
 #: widgets/transportmanagementwidget.cpp:173
 #, kde-format
 msgid "Modify..."
-msgstr "Değiştir..."
+msgstr "Değiştir…"
 
 #: widgets/transportmanagementwidget.cpp:176
 #, kde-format
