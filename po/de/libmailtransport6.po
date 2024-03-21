@@ -1,8 +1,8 @@
+# SPDX-FileCopyrightText: 2010, 2024 Johannes Obermayr <johannesobermayr@gmx.de>
 # Stephan Johach <hunsum@gmx.de>, 2007.
 # Thomas Reitelbach <tr@erdfunkstelle.de>, 2007, 2008, 2009.
 # Burkhard Lück <lueck@hube-lueck.de>, 2009, 2010, 2012, 2013, 2017, 2018, 2019, 2020, 2021.
 # Frederik Schwarzer <schwarzer@kde.org>, 2009, 2010, 2011, 2012, 2013, 2014, 2016, 2021, 2022, 2023.
-# Johannes Obermayr <johannesobermayr@gmx.de>, 2010.
 # Jürgen Jäckle <divmails1@gmx.net>, 2021.
 # Frank Steinmetzger <dev-kde@felsenfleischer.de>, 2022.
 # Intevation GmbH, 2010.
@@ -11,15 +11,15 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-03-13 00:38+0000\n"
-"PO-Revision-Date: 2022-11-10 20:31+0100\n"
-"Last-Translator: Frank Steinmetzger <dev-kde@felsenfleischer.de>\n"
+"PO-Revision-Date: 2024-03-20 21:35+0100\n"
+"Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.02.0\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -65,16 +65,13 @@ msgstr "Die Port-Nummer des Servers"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:29
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
 msgstr ""
 "Die Port-Nummer, auf der der SMTP-Server auf Anfragen wartet. Der Standard-"
-"Port ist 25."
+"Port ist 587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:33
@@ -169,17 +166,15 @@ msgstr "Keine Verschlüsselung"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "TLS-Verschlüsselung"
+msgstr "SSL/TLS-Verschlüsselung"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "TLS-Verschlüsselung"
+msgstr "STARTTLS-Verschlüsselung"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:71
@@ -267,7 +262,7 @@ msgstr "Das zur Autorisierung an den Server übermittelte Passwort."
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p %"
 
 #: plugins/smtp/smtpconfigwidget.cpp:278
 #, kde-format
