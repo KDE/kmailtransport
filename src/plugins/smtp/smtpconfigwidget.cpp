@@ -12,6 +12,8 @@
 */
 
 #include "smtpconfigwidget.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "ui_smtpsettings.h"
 
 #include "mailtransport_defs.h"
@@ -159,7 +161,7 @@ void SMTPConfigWidget::init()
 
     d->resetAuthCapabilities();
 
-    if (!KProtocolInfo::capabilities(SMTP_PROTOCOL).contains(QLatin1StringView("SASL"))) {
+    if (!KProtocolInfo::capabilities(SMTP_PROTOCOL).contains("SASL"_L1)) {
         d->ui.authCombo->removeItem(d->ui.authCombo->findData(Transport::EnumAuthenticationType::NTLM));
         d->ui.authCombo->removeItem(d->ui.authCombo->findData(Transport::EnumAuthenticationType::GSSAPI));
     }

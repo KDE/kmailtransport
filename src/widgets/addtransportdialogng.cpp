@@ -5,6 +5,8 @@
 */
 
 #include "addtransportdialogng.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "transport.h"
 #include "transportmanager.h"
 #include "transporttype.h"
@@ -108,7 +110,7 @@ AddTransportDialogNG::AddTransportDialogNG(QWidget *parent)
         treeItem->setText(1, type.description());
         treeItem->setToolTip(1, type.description());
         treeItem->setData(0, Qt::UserRole, type.identifier()); // the transport type
-        if (type.identifier() == QLatin1StringView("SMTP")) {
+        if (type.identifier() == "SMTP"_L1) {
             treeItem->setSelected(true); // select SMTP by default
         }
     }

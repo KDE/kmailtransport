@@ -5,6 +5,7 @@
 */
 
 #include "smtpconfigdialog.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "smtpconfigwidget.h"
 #include "transport.h"
@@ -24,10 +25,10 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
     mTransport = transport;
     auto mainLayout = new QVBoxLayout(this);
     mConfigWidget = new SMTPConfigWidget(transport, this);
-    mConfigWidget->setObjectName(QLatin1StringView("smtpconfigwidget"));
+    mConfigWidget->setObjectName("smtpconfigwidget"_L1);
     mainLayout->addWidget(mConfigWidget);
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    buttonBox->setObjectName(QLatin1StringView("buttons"));
+    buttonBox->setObjectName("buttons"_L1);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     mainLayout->addWidget(buttonBox);

@@ -9,6 +9,7 @@
 
 // Own
 #include "socket.h"
+using namespace Qt::Literals::StringLiterals;
 
 // Qt
 #include <QByteArray>
@@ -161,7 +162,7 @@ void Socket::write(const QString &text)
         return;
     }
 
-    QByteArray cs = (text + QLatin1StringView("\r\n")).toLatin1();
+    QByteArray cs = (text + "\r\n"_L1).toLatin1();
 
 #ifdef comm_debug
     qCDebug(MAILTRANSPORT_LOG) << "C   :" << cs;
