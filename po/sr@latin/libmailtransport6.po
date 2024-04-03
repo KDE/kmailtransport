@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:38+0000\n"
+"POT-Creation-Date: 2024-04-03 00:38+0000\n"
 "PO-Revision-Date: 2017-09-28 18:00+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -245,25 +245,25 @@ msgstr ""
 
 # >! authorization -> authentication
 # rewrite-msgid: /authorization/authentication/
-#: plugins/smtp/smtpconfigwidget.cpp:146
+#: plugins/smtp/smtpconfigwidget.cpp:148
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Lozinka koja se šalje serveru radi autentifikacije."
 
-#: plugins/smtp/smtpconfigwidget.cpp:158 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:160 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:278
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 "Ne mogu da proverim sposobnosti. Proverite port i režim autentifikacije."
 
-#: plugins/smtp/smtpconfigwidget.cpp:278
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Provera sposobnosti propala"
@@ -539,22 +539,22 @@ msgstr "Ne smeštaj lozinku"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Odlazni nalog „%1“ nije ispravno podešen."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:224
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Pre slanja morate napraviti odlazni nalog."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:225
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Napraviti nalog sada?"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:226
 #, kde-format
 msgid "Create Account Now"
 msgstr "Napravi nalog sada"
 
-#: transportmanager.cpp:606
+#: transportmanager.cpp:608
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -570,17 +570,17 @@ msgstr ""
 "šifrovanom fajlu.\n"
 "Želite li da preselite lozinke u K‑novčanik?"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:615
 #, kde-format
 msgid "Question"
 msgstr "Pitanje"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:616
 #, kde-format
 msgid "Migrate"
 msgstr "Preseli"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:617
 #, kde-format
 msgid "Keep"
 msgstr "Zadrži"
@@ -654,14 +654,14 @@ msgid "&Modify..."
 msgstr "&Izmeni..."
 
 # >> @title:window
-#: widgets/addtransportdialogng.cpp:92
+#: widgets/addtransportdialogng.cpp:94
 #, fuzzy, kde-format
 #| msgid "Create Outgoing Account"
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
 msgstr "Stvaranje odlaznog naloga"
 
-#: widgets/addtransportdialogng.cpp:95
+#: widgets/addtransportdialogng.cpp:97
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"

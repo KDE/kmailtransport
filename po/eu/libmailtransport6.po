@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:38+0000\n"
+"POT-Creation-Date: 2024-04-03 00:38+0000\n"
 "PO-Revision-Date: 2024-03-23 23:08+0100\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -247,18 +247,18 @@ msgstr ""
 "Markatuta badago, sistemako ordezkariaren ezarpenak erabiliko dira posta-"
 "zerbitzarira konektatzeko."
 
-#: plugins/smtp/smtpconfigwidget.cpp:146
+#: plugins/smtp/smtpconfigwidget.cpp:148
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Baimena jasotzeko zerbitzarira bidali beharreko pasahitza."
 
-#: plugins/smtp/smtpconfigwidget.cpp:158 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:160 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%%p"
 
-#: plugins/smtp/smtpconfigwidget.cpp:278
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -266,7 +266,7 @@ msgstr ""
 "Gaitasunak ikuskatzea huts egin du. Mesedez, egiaztatu ataka eta "
 "autentifikazio modua."
 
-#: plugins/smtp/smtpconfigwidget.cpp:278
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Gaitasunak ikuskatzea huts egin du"
@@ -525,22 +525,22 @@ msgstr "Ez gorde pasahitzik"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Irteerako \"%1\" kontua ez dago ondo konfiguratuta."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:224
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Bidali aurretik, irteerako kontu bat sortu behar duzu."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:225
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Kontua orain sortu?"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:226
 #, kde-format
 msgid "Create Account Now"
 msgstr "Sortu kontua orain"
 
-#: transportmanager.cpp:606
+#: transportmanager.cpp:608
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -558,17 +558,17 @@ msgstr ""
 "batean gordetzen ditu.\n"
 "Zure pasahitzak KWallet-era migratu nahi dituzu?"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:615
 #, kde-format
 msgid "Question"
 msgstr "Galdera"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:616
 #, kde-format
 msgid "Migrate"
 msgstr "Migratu"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:617
 #, kde-format
 msgid "Keep"
 msgstr "Mantendu"
@@ -640,13 +640,13 @@ msgstr "Be&rrizendatu"
 msgid "&Modify..."
 msgstr "&Aldatu..."
 
-#: widgets/addtransportdialogng.cpp:92
+#: widgets/addtransportdialogng.cpp:94
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
 msgstr "Sortu irteerako kontua"
 
-#: widgets/addtransportdialogng.cpp:95
+#: widgets/addtransportdialogng.cpp:97
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"

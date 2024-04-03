@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:38+0000\n"
+"POT-Creation-Date: 2024-04-03 00:38+0000\n"
 "PO-Revision-Date: 2022-12-31 15:14+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -243,25 +243,25 @@ msgstr ""
 "If ticked, the system proxy settings will be used to connect to the mail "
 "server."
 
-#: plugins/smtp/smtpconfigwidget.cpp:146
+#: plugins/smtp/smtpconfigwidget.cpp:148
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "The password to send to the server for authorisation."
 
-#: plugins/smtp/smtpconfigwidget.cpp:158 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:160 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:278
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 "Failed to check capabilities. Please verify port and authentication mode."
 
-#: plugins/smtp/smtpconfigwidget.cpp:278
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr "Check Capabilities Failed"
@@ -517,22 +517,22 @@ msgstr "Do Not Store Password"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "The outgoing account \"%1\" is not correctly configured."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:224
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "You must create an outgoing account before sending."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:225
 #, kde-format
 msgid "Create Account Now?"
 msgstr "Create Account Now?"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:226
 #, kde-format
 msgid "Create Account Now"
 msgstr "Create Account Now"
 
-#: transportmanager.cpp:606
+#: transportmanager.cpp:608
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -549,17 +549,17 @@ msgstr ""
 "which stores sensitive data for you in a strongly encrypted file.\n"
 "Do you want to migrate your passwords to KWallet?"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:615
 #, kde-format
 msgid "Question"
 msgstr "Question"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:616
 #, kde-format
 msgid "Migrate"
 msgstr "Migrate"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:617
 #, kde-format
 msgid "Keep"
 msgstr "Keep"
@@ -631,13 +631,13 @@ msgstr "&Rename"
 msgid "&Modify..."
 msgstr "&Modify..."
 
-#: widgets/addtransportdialogng.cpp:92
+#: widgets/addtransportdialogng.cpp:94
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
 msgstr "Create Outgoing Account"
 
-#: widgets/addtransportdialogng.cpp:95
+#: widgets/addtransportdialogng.cpp:97
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"

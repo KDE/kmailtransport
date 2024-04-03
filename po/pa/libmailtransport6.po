@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-03-13 00:38+0000\n"
+"POT-Creation-Date: 2024-04-03 00:38+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -225,24 +225,24 @@ msgid ""
 "server."
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:146
+#: plugins/smtp/smtpconfigwidget.cpp:148
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "ਸਰਵਰ ਨੂੰ ਪਰਮਾਣਕਿਤਾ ਭੇਜਣ ਲਈ ਪਾਸਵਰਡ"
 
-#: plugins/smtp/smtpconfigwidget.cpp:158 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:160 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:278
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:278
+#: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
 msgstr ""
@@ -499,22 +499,22 @@ msgstr "ਪਾਸਵਰਡ ਨਾ ਸੰਭਾਲੋ"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "ਮੇਲ ਟਰਾਂਸਪੋਰਟ \"%1\" ਠੀਕ ਤਰ੍ਹਾਂ ਸੰਰਚਿਤ ਨਹੀਂ ਹੈ।"
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:224
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "ਤੁਹਾਨੂੰ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਭੇਜਣ (outgoing) ਅਕਾਊਂਟ ਬਣਾਉਣਾ ਪਵੇਗਾ।"
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:225
 #, kde-format
 msgid "Create Account Now?"
 msgstr "ਅਕਾਊਂਟ ਹੁਣੇ ਬਣਾਉਣਾ ਹੈ?"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:226
 #, kde-format
 msgid "Create Account Now"
 msgstr "ਹੁਣੇ ਅਕਾਊਂਟ ਬਣਾਓ"
 
-#: transportmanager.cpp:606
+#: transportmanager.cpp:608
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -525,17 +525,17 @@ msgid ""
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:615
 #, kde-format
 msgid "Question"
 msgstr "ਸਵਾਲ"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:616
 #, kde-format
 msgid "Migrate"
 msgstr "ਮਾਈਗਰੇਟ"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:617
 #, kde-format
 msgid "Keep"
 msgstr "ਰੱਖੋ"
@@ -608,14 +608,14 @@ msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 msgid "&Modify..."
 msgstr "ਸੋਧ(&M)..."
 
-#: widgets/addtransportdialogng.cpp:92
+#: widgets/addtransportdialogng.cpp:94
 #, fuzzy, kde-format
 #| msgid "Create Outgoing Account"
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
 msgstr "ਬਾਹਰ ਭੇਜਣ ਅਕਾਊਂਟ ਬਣਾਓ"
 
-#: widgets/addtransportdialogng.cpp:95
+#: widgets/addtransportdialogng.cpp:97
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
