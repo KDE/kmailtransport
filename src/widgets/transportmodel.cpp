@@ -13,3 +13,22 @@ TransportModel::TransportModel(QObject *parent)
 }
 
 TransportModel::~TransportModel() = default;
+
+QVariant TransportModel::data(const QModelIndex &index, int role) const
+{
+    return {};
+}
+
+int TransportModel::rowCount(const QModelIndex &parent) const
+{
+    return {};
+}
+int TransportModel::columnCount(const QModelIndex &parent) const
+{
+    return {};
+}
+
+QVariant TransportModel::headerData(int section, Qt::Orientation orientation, int role) const
+{
+    return {};
+}
