@@ -10,6 +10,7 @@
 #include <QAbstractListModel>
 namespace MailTransport
 {
+class TransportManager;
 class MAILTRANSPORT_EXPORT TransportModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -29,5 +30,8 @@ public:
     [[nodiscard]] int rowCount(const QModelIndex &parent = QModelIndex()) const override;
     [[nodiscard]] int columnCount(const QModelIndex &parent) const override;
     [[nodiscard]] QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
+
+private:
+    TransportManager *const mTransportManager;
 };
 }

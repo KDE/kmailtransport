@@ -5,10 +5,12 @@
 */
 
 #include "transportmodel.h"
+#include "transportmanager.h"
 
 using namespace MailTransport;
 TransportModel::TransportModel(QObject *parent)
     : QAbstractListModel{parent}
+    , mTransportManager(TransportManager::self())
 {
 }
 
