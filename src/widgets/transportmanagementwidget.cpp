@@ -165,19 +165,19 @@ void TransportManagementWidgetPrivate::defaultClicked()
 void TransportManagementWidgetPrivate::slotCustomContextMenuRequested(const QPoint &pos)
 {
     QMenu menu(q);
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), q, [this]() {
+    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18nc("@action:inmenu", "Add..."), q, [this]() {
         addClicked();
     });
     QTreeWidgetItem *item = ui.transportList->itemAt(pos);
     if (item) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Modify..."), q, [this]() {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action:inmenu", "Modify..."), q, [this]() {
             editClicked();
         });
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18n("Rename"), q, [this]() {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18nc("@action:inmenu", "Rename"), q, [this]() {
             renameClicked();
         });
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Remove"), q, [this]() {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18nc("@action:inmenu", "Remove"), q, [this]() {
             removeClicked();
         });
         if (item->data(0, Qt::UserRole) != TransportManager::self()->defaultTransportId()) {
