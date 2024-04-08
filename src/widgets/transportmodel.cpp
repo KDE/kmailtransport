@@ -32,3 +32,5 @@ QVariant TransportModel::headerData(int section, Qt::Orientation orientation, in
 {
     return {};
 }
+
+#include "moc_transportmodel.cpp"
