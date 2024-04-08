@@ -1,4 +1,5 @@
-add_library(KPim6MailTransport)
+add_library(KPim6MailTransport
+    widgets/transportsortproxymodel.h widgets/transportsortproxymodel.cpp)
 add_library(KPim6::MailTransport ALIAS KPim6MailTransport)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
