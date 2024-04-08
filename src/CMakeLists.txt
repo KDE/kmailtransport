@@ -24,6 +24,9 @@ target_sources(KPim6MailTransport PRIVATE
     widgets/transportlistview.cpp
     widgets/transportmanagementwidget.cpp
     widgets/addtransportdialogng.cpp
+
+    widgets/transportmodel.h
+    widgets/transportmodel.cpp
     )
 
 target_sources(KPim6MailTransport PRIVATE
