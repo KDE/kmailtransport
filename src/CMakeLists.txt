@@ -1,5 +1,4 @@
-add_library(KPim6MailTransport
-    widgets/transportsortproxymodel.h widgets/transportsortproxymodel.cpp)
+add_library(KPim6MailTransport)
 add_library(KPim6::MailTransport ALIAS KPim6MailTransport)
 
 ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
@@ -28,6 +27,11 @@ target_sources(KPim6MailTransport PRIVATE
 
     widgets/transportmodel.h
     widgets/transportmodel.cpp
+    widgets/transportsortproxymodel.h
+    widgets/transportsortproxymodel.cpp
+
+    transportactivitiesabstract.h
+    transportactivitiesabstract.cpp
     )
 
 target_sources(KPim6MailTransport PRIVATE
@@ -119,6 +123,7 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
     TransportManager
     TransportType
     OutlookOAuthTokenRequester
+    TransportActivitiesAbstract
     PREFIX MailTransport
     REQUIRED_HEADERS MailTransport_HEADERS
     )
