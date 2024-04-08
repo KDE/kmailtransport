@@ -36,12 +36,12 @@ public:
     TokenResult(ErrorCode errorCode, const QString &errorText);
     TokenResult(const QString &accessToken, const QString &refreshToken);
 
-    QString accessToken() const;
-    QString refreshToken() const;
+    [[nodiscard]] QString accessToken() const;
+    [[nodiscard]] QString refreshToken() const;
 
-    bool hasError() const;
-    ErrorCode errorCode() const;
-    QString errorText() const;
+    [[nodiscard]] bool hasError() const;
+    [[nodiscard]] ErrorCode errorCode() const;
+    [[nodiscard]] QString errorText() const;
 
 private:
     ErrorCode mErrorCode = ErrorCode::OK;
@@ -65,7 +65,7 @@ Q_SIGNALS:
     void finished(const TokenResult &result);
 
 private:
-    MAILTRANSPORT_NO_EXPORT std::optional<QUrl> startLocalHttpServer();
+    [[nodiscard]] MAILTRANSPORT_NO_EXPORT std::optional<QUrl> startLocalHttpServer();
 
     MAILTRANSPORT_NO_EXPORT void handleNewConnection();
     MAILTRANSPORT_NO_EXPORT void handleSocketReadyRead();
