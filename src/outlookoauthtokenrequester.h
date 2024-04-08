@@ -65,13 +65,13 @@ Q_SIGNALS:
     void finished(const TokenResult &result);
 
 private:
-    std::optional<QUrl> startLocalHttpServer();
+    MAILTRANSPORT_NO_EXPORT std::optional<QUrl> startLocalHttpServer();
 
-    void handleNewConnection();
-    void handleSocketReadyRead();
-    void requestIdToken(const QString &code);
-    void handleTokenResponse(QNetworkReply *reply, bool isTokenRefresh = false);
-    void sendResponseToBrowserAndCloseSocket();
+    MAILTRANSPORT_NO_EXPORT void handleNewConnection();
+    MAILTRANSPORT_NO_EXPORT void handleSocketReadyRead();
+    MAILTRANSPORT_NO_EXPORT void requestIdToken(const QString &code);
+    MAILTRANSPORT_NO_EXPORT void handleTokenResponse(QNetworkReply *reply, bool isTokenRefresh = false);
+    MAILTRANSPORT_NO_EXPORT void sendResponseToBrowserAndCloseSocket();
 
 private:
     QString mClientId;
