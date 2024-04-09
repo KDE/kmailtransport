@@ -30,6 +30,14 @@ target_sources(KPim6MailTransport PRIVATE
     widgets/transportsortproxymodel.h
     widgets/transportsortproxymodel.cpp
 
+    widgets/addtransportdialogng.h
+    widgets/transportcombobox.h
+    widgets/transportlistview.h
+    widgets/transportconfigwidget_p.h
+    widgets/transportconfigwidget.h
+    widgets/transportmanagementwidget.h
+
+
     transportactivitiesabstract.h
     transportactivitiesabstract.cpp
     )
@@ -49,12 +57,6 @@ target_sources(KPim6MailTransport PRIVATE
     kmailtransport_private_export.h
     plugins/transportpluginmanager.h
     plugins/transportabstractplugin.h
-    widgets/addtransportdialogng.h
-    widgets/transportcombobox.h
-    widgets/transportlistview.h
-    widgets/transportconfigwidget_p.h
-    widgets/transportconfigwidget.h
-    widgets/transportmanagementwidget.h
     transportjob.h
     transportmanager.h
     transporttype.h
