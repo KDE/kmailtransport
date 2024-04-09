@@ -39,7 +39,11 @@ set(KMAILTRANSPORT_LIB_VERSION ${PIM_VERSION})
 
 set(KSMTP_LIB_VERSION "6.0.40")
 set(KGAPI_LIB_VERSION "6.0.40")
-set(QT6KEYCHAIN_LIB_VERSION "0.14.2")
+if (WIN32)
+    set(QT6KEYCHAIN_LIB_VERSION "0.14.1")
+else()
+    set(QT6KEYCHAIN_LIB_VERSION "0.14.2")
+endif()
 
 ########### Find packages ###########
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
