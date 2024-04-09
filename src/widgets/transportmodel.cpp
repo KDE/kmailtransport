@@ -18,6 +18,9 @@ TransportModel::~TransportModel() = default;
 
 QVariant TransportModel::data(const QModelIndex &index, int role) const
 {
+    if (!index.isValid()) {
+        return {};
+    }
     return {};
 }
 
@@ -27,7 +30,9 @@ int TransportModel::rowCount(const QModelIndex &parent) const
 }
 int TransportModel::columnCount(const QModelIndex &parent) const
 {
-    return {};
+    Q_UNUSED(parent)
+    constexpr int nbCol = static_cast<int>(TransportRoles::LastColumn) + 1;
+    return nbCol;
 }
 
 QVariant TransportModel::headerData(int section, Qt::Orientation orientation, int role) const
