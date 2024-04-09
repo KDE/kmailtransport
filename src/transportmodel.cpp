@@ -24,6 +24,8 @@ QVariant TransportModel::data(const QModelIndex &index, int role) const
     if (!index.isValid()) {
         return {};
     }
+    const auto transport = mTransportManager->transportById(mTransportIds[index.row()]);
+
 #if 0
     const auto &identity = mIdentityManager->modifyIdentityForUoid(mTransportIds[index.row()]);
     if (role == Qt::ToolTipRole) {
