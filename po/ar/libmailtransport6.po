@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2024-03-30 10:51+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -670,22 +670,30 @@ msgid "Remove outgoing account?"
 msgstr "إزالة الحساب الصادر؟"
 
 #: widgets/transportmanagementwidget.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "أضف..."
 
 #: widgets/transportmanagementwidget.cpp:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "عدّل..."
 
 #: widgets/transportmanagementwidget.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "غيّر الاسم"
 
 #: widgets/transportmanagementwidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "أزل"
 

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2024-03-13 12:04+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -689,22 +689,30 @@ msgid "Remove outgoing account?"
 msgstr "Elimino el compte sortint?"
 
 #: widgets/transportmanagementwidget.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Afegeix..."
 
 #: widgets/transportmanagementwidget.cpp:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Modifica..."
 
 #: widgets/transportmanagementwidget.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Reanomena"
 
 #: widgets/transportmanagementwidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Elimina"
 

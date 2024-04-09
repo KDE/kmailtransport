@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2024-02-01 14:03+0200\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -684,22 +684,30 @@ msgid "Remove outgoing account?"
 msgstr "Vai izveidot izejošo kontu?"
 
 #: widgets/transportmanagementwidget.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Pievienot..."
 
 #: widgets/transportmanagementwidget.cpp:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Rediģēt..."
 
 #: widgets/transportmanagementwidget.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Pārdēvēt"
 
 #: widgets/transportmanagementwidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Noņemt"
 

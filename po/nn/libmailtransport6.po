@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2023-03-04 16:23+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -684,22 +684,30 @@ msgid "Remove outgoing account?"
 msgstr "Fjerna konto for utgåande e-post?"
 
 #: widgets/transportmanagementwidget.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Legg til …"
 
 #: widgets/transportmanagementwidget.cpp:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Endra …"
 
 #: widgets/transportmanagementwidget.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Endra namn"
 
 #: widgets/transportmanagementwidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Fjern"
 

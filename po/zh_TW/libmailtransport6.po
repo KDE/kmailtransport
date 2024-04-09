@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2024-03-20 18:16+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -662,22 +662,30 @@ msgid "Remove outgoing account?"
 msgstr "要移除外寄帳號嗎？"
 
 #: widgets/transportmanagementwidget.cpp:168
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Add..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "新增..."
 
 #: widgets/transportmanagementwidget.cpp:173
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "變更..."
 
 #: widgets/transportmanagementwidget.cpp:176
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Rename"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "重新命名"
 
 #: widgets/transportmanagementwidget.cpp:180
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Remove"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "移除"
 

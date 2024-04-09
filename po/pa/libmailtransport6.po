@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -660,24 +660,28 @@ msgstr "ਬਾਹਰ ਭੇਜਣ ਅਕਾਊਂਟ ਬਣਾਓ"
 #: widgets/transportmanagementwidget.cpp:168
 #, fuzzy, kde-format
 #| msgid "A&dd..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "ਸ਼ਾਮਲ(&A)..."
 
 #: widgets/transportmanagementwidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "&Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "ਸੋਧ(&M)..."
 
 #: widgets/transportmanagementwidget.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Rename"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
 #: widgets/transportmanagementwidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "ਹਟਾਓ(&v)"
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2009-02-28 22:34+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -666,24 +666,28 @@ msgstr ""
 #: widgets/transportmanagementwidget.cpp:168
 #, fuzzy, kde-format
 #| msgid "A&dd..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "जोड़व... (&d)"
 
 #: widgets/transportmanagementwidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "&Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "सुधारव... (&M)"
 
 #: widgets/transportmanagementwidget.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Name:"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "नाम: (&N)"
 
 #: widgets/transportmanagementwidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "R&emove"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "मेटाव (&e)"
 

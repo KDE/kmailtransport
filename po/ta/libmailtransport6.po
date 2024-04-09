@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2024-03-17 18:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -640,21 +640,25 @@ msgstr ""
 
 #: widgets/transportmanagementwidget.cpp:168
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr ""
 
 #: widgets/transportmanagementwidget.cpp:173
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr ""
 
 #: widgets/transportmanagementwidget.cpp:176
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr ""
 
 #: widgets/transportmanagementwidget.cpp:180
 #, kde-format
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr ""
 

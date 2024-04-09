@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2009-08-22 18:40+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@ase.md>\n"
 "Language-Team: Română <kde-i18n-ro@kde.org>\n"
@@ -701,24 +701,28 @@ msgstr "Fă acesta contul implicit de expediere."
 #: widgets/transportmanagementwidget.cpp:168
 #, fuzzy, kde-format
 #| msgid "A&dd..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "A&dăugare..."
 
 #: widgets/transportmanagementwidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "&Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "&Modificare..."
 
 #: widgets/transportmanagementwidget.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Rename"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "&Redenumește"
 
 #: widgets/transportmanagementwidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "&Elimină"
 

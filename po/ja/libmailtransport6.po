@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2010-09-25 20:12-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -702,24 +702,28 @@ msgstr ""
 #: widgets/transportmanagementwidget.cpp:168
 #, fuzzy, kde-format
 #| msgid "A&dd..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "追加(&D)..."
 
 #: widgets/transportmanagementwidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "&Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "変更(&M)..."
 
 #: widgets/transportmanagementwidget.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Rename"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "名前変更(&R)"
 
 #: widgets/transportmanagementwidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "削除(&V)"
 

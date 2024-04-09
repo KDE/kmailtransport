@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_extragear-utils_kdiff3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-03 00:38+0000\n"
+"POT-Creation-Date: 2024-04-09 00:38+0000\n"
 "PO-Revision-Date: 2010-12-22 05:05+0700\n"
 "Last-Translator: Seng Sutha <Sutha@khmeros.info>\n"
 "Language-Team: Khmer [km] <Support@khmeros.info>\n"
@@ -688,24 +688,28 @@ msgstr "យក​គណនី​ចេញ​ចេញ​ឬ ?"
 #: widgets/transportmanagementwidget.cpp:168
 #, fuzzy, kde-format
 #| msgid "A&dd..."
+msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "បន្ថែម..."
 
 #: widgets/transportmanagementwidget.cpp:173
 #, fuzzy, kde-format
 #| msgid "&Modify..."
+msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "កែប្រែ..."
 
 #: widgets/transportmanagementwidget.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Rename"
+msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "ប្តូរ​ឈ្មោះ​"
 
 #: widgets/transportmanagementwidget.cpp:180
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
+msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "យកចេញ​"
 
