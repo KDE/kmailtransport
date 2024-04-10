@@ -6,6 +6,8 @@
 
 #include "transportcombobox.h"
 #include "transportmanager.h"
+#include "transportmodel.h"
+#include "transportsortproxymodel.h"
 
 using namespace MailTransport;
 
@@ -17,6 +19,8 @@ class TransportComboBoxPrivate
 {
 public:
     QList<int> transports;
+    TransportModel *mTransportModel = nullptr;
+    TransportSortProxyModel *mTransportProxyModel = nullptr;
 };
 
 TransportComboBox::TransportComboBox(QWidget *parent)
