@@ -53,6 +53,17 @@ QString TransportComboBox::transportType() const
     return TransportManager::self()->transportById(currentTransportId())->identifier();
 }
 
+TransportActivitiesAbstract *TransportComboBox::transportActivitiesAbstract() const
+{
+    // TODO
+    return {};
+}
+
+void TransportComboBox::setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract)
+{
+    // TODO
+}
+
 void TransportComboBox::updateComboboxList()
 {
     const int oldTransport = currentTransportId();

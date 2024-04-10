@@ -18,6 +18,7 @@ class TransportComboBoxPrivate;
 
 namespace MailTransport
 {
+class TransportActivitiesAbstract;
 /**
   A combo-box for selecting a mail transport.
   It is updated automatically when transports are added, changed, or removed.
@@ -50,6 +51,11 @@ public:
       Returns the type of the selected transport.
     */
     [[nodiscard]] QString transportType() const;
+
+    /// @since 6.1
+    [[nodiscard]] MailTransport::TransportActivitiesAbstract *transportActivitiesAbstract() const;
+    /// @since 6.1
+    void setTransportActivitiesAbstract(MailTransport::TransportActivitiesAbstract *activitiesAbstract);
 
 Q_SIGNALS:
     void transportRemoved(Transport::Id id, const QString &name);
