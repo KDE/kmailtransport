@@ -17,6 +17,9 @@
       <whatsthis>The name that will be used when referring to this server.</whatsthis>
       <default code="true">i18n("Unnamed")</default>
     </entry>
+    <entry name="activities" type="StringList">
+      <default></default>
+    </entry>
     <entry name="identifier" type="String">
       <default>SMTP</default>
     </entry>
