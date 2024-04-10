@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-04-10 00:38+0000\n"
 "PO-Revision-Date: 2023-07-31 09:50+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@bredband.net>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -569,6 +569,18 @@ msgstr "Flytta"
 msgid "Keep"
 msgstr "Behåll"
 
+#: transportmodel.cpp:80 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Namn"
+
+#: transportmodel.cpp:82 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Typ"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
 #, kde-format
@@ -647,18 +659,6 @@ msgstr "Skapa utgående konto"
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Skapa och anpassa"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport name"
-msgid "Name"
-msgstr "Namn"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport type"
-msgid "Type"
-msgstr "Typ"
 
 #: widgets/transportlistview.cpp:99
 #, kde-format

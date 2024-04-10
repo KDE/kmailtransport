@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-04-10 00:38+0000\n"
 "PO-Revision-Date: 2023-01-07 09:12+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -583,6 +583,18 @@ msgstr "Μεταφορά"
 msgid "Keep"
 msgstr "Διατήρηση"
 
+#: transportmodel.cpp:80 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Όνομα"
+
+#: transportmodel.cpp:82 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Τύπος"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
 #, kde-format
@@ -661,18 +673,6 @@ msgstr "Δημιουργία λογαριασμού εξερχομένων"
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Δημιουργία και διαμόρφωση"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport name"
-msgid "Name"
-msgstr "Όνομα"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport type"
-msgid "Type"
-msgstr "Τύπος"
 
 #: widgets/transportlistview.cpp:99
 #, kde-format

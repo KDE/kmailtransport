@@ -6,15 +6,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2024-03-20 13:22+0100\n"
+"POT-Creation-Date: 2024-04-10 00:38+0000\n"
+"PO-Revision-Date: 2024-04-09 09:19+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
@@ -565,6 +565,18 @@ msgstr "Мигриране"
 msgid "Keep"
 msgstr "Запазване"
 
+#: transportmodel.cpp:80 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Име"
+
+#: transportmodel.cpp:82 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Вид"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
 #, kde-format
@@ -644,18 +656,6 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Създаване и конфигуриране"
 
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport name"
-msgid "Name"
-msgstr "Име"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport type"
-msgid "Type"
-msgstr "Вид"
-
 #: widgets/transportlistview.cpp:99
 #, kde-format
 msgctxt "@label the default mail transport"
@@ -680,29 +680,25 @@ msgid "Remove outgoing account?"
 msgstr "Искате ли да премахнете изходящия профил?"
 
 #: widgets/transportmanagementwidget.cpp:168
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Добавяне..."
 
 #: widgets/transportmanagementwidget.cpp:173
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Промяна..."
 
 #: widgets/transportmanagementwidget.cpp:176
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Преименуване"
 
 #: widgets/transportmanagementwidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Премахване"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-04-10 00:38+0000\n"
 "PO-Revision-Date: 2024-03-14 08:59+0100\n"
 "Last-Translator: xavier <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
@@ -584,6 +584,18 @@ msgstr "Migrer"
 msgid "Keep"
 msgstr "Conserver"
 
+#: transportmodel.cpp:80 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Nom"
+
+#: transportmodel.cpp:82 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Type"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
 #, kde-format
@@ -662,18 +674,6 @@ msgstr "Créer un compte d'envoi"
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Créer et configurer"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport name"
-msgid "Name"
-msgstr "Nom"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport type"
-msgid "Type"
-msgstr "Type"
 
 #: widgets/transportlistview.cpp:99
 #, kde-format

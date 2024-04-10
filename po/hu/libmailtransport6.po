@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-04-10 00:38+0000\n"
 "PO-Revision-Date: 2024-02-11 21:38+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -569,6 +569,18 @@ msgstr "Migrálás"
 msgid "Keep"
 msgstr "Megtartás"
 
+#: transportmodel.cpp:80 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Név"
+
+#: transportmodel.cpp:82 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Típus"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
 #, kde-format
@@ -647,18 +659,6 @@ msgstr "Kimenő fiók létrehozása"
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Létrehozás és beállítás"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport name"
-msgid "Name"
-msgstr "Név"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport type"
-msgid "Type"
-msgstr "Típus"
 
 #: widgets/transportlistview.cpp:99
 #, kde-format

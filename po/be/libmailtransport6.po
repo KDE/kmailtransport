@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
+"POT-Creation-Date: 2024-04-10 00:38+0000\n"
 "PO-Revision-Date: 2008-01-01 23:05+0200\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -548,6 +548,20 @@ msgstr ""
 msgid "Keep"
 msgstr "Пакінуць"
 
+#: transportmodel.cpp:80 widgets/transportlistview.cpp:27
+#, fuzzy, kde-format
+#| msgid "Name"
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Назва"
+
+#: transportmodel.cpp:82 widgets/transportlistview.cpp:27
+#, fuzzy, kde-format
+#| msgid "Type"
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Тып"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
 #, fuzzy, kde-format
@@ -633,20 +647,6 @@ msgstr ""
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr ""
-
-#: widgets/transportlistview.cpp:27
-#, fuzzy, kde-format
-#| msgid "Name"
-msgctxt "@title:column email transport name"
-msgid "Name"
-msgstr "Назва"
-
-#: widgets/transportlistview.cpp:27
-#, fuzzy, kde-format
-#| msgid "Type"
-msgctxt "@title:column email transport type"
-msgid "Type"
-msgstr "Тып"
 
 #: widgets/transportlistview.cpp:99
 #, fuzzy, kde-format

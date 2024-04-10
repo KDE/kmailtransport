@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-09 00:38+0000\n"
-"PO-Revision-Date: 2024-03-13 07:45+0100\n"
+"POT-Creation-Date: 2024-04-10 00:38+0000\n"
+"PO-Revision-Date: 2024-04-09 07:15+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -563,6 +563,18 @@ msgstr "Preseli"
 msgid "Keep"
 msgstr "Ohrani"
 
+#: transportmodel.cpp:80 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr "Ime"
+
+#: transportmodel.cpp:82 widgets/transportlistview.cpp:27
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "Vrsta"
+
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
 #, kde-format
@@ -642,18 +654,6 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Ustvari in nastavi"
 
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport name"
-msgid "Name"
-msgstr "Ime"
-
-#: widgets/transportlistview.cpp:27
-#, kde-format
-msgctxt "@title:column email transport type"
-msgid "Type"
-msgstr "Vrsta"
-
 #: widgets/transportlistview.cpp:99
 #, kde-format
 msgctxt "@label the default mail transport"
@@ -680,29 +680,25 @@ msgid "Remove outgoing account?"
 msgstr "Odstranim račun za pošiljanje?"
 
 #: widgets/transportmanagementwidget.cpp:168
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Add..."
-msgstr "Dodaj ..."
+msgstr "Dodaj..."
 
 #: widgets/transportmanagementwidget.cpp:173
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify..."
-msgstr "Spremeni ..."
+msgstr "Spremeni..."
 
 #: widgets/transportmanagementwidget.cpp:176
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Preimenuj"
 
 #: widgets/transportmanagementwidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Odstrani"
