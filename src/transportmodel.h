@@ -31,6 +31,8 @@ public:
     [[nodiscard]] int columnCount(const QModelIndex &parent) const override;
     [[nodiscard]] QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
 
+    [[nodiscard]] int transportId(int index) const;
+
 private:
     MAILTRANSPORT_NO_EXPORT void updateComboboxList();
     QList<int> mTransportIds;

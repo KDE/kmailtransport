@@ -79,6 +79,11 @@ QVariant TransportModel::headerData(int section, Qt::Orientation orientation, in
     return {};
 }
 
+int TransportModel::transportId(int index) const
+{
+    return mTransportIds.at(index);
+}
+
 void TransportModel::updateComboboxList()
 {
     beginResetModel();
