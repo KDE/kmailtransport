@@ -58,6 +58,17 @@ void TransportListView::editItem(QTreeWidgetItem *item, int column)
     }
 }
 
+TransportActivitiesAbstract *TransportListView::transportActivitiesAbstract() const
+{
+    return {};
+    // TODO
+}
+
+void TransportListView::setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract)
+{
+    // TODO
+}
+
 void TransportListView::commitData(QWidget *editor)
 {
     if (selectedItems().isEmpty()) {
