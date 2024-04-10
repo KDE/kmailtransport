@@ -25,15 +25,9 @@ QVariant TransportModel::data(const QModelIndex &index, int role) const
         return {};
     }
     const auto transport = mTransportManager->transportById(mTransportIds[index.row()]);
-
-#if 0
-    const auto &identity = mIdentityManager->modifyIdentityForUoid(mTransportIds[index.row()]);
-    if (role == Qt::ToolTipRole) {
-        return identity.primaryEmailAddress();
-    }
     if (role == Qt::FontRole) {
-        if (static_cast<IdentityRoles>(index.column()) == IdentityNameRole) {
-            if (identity.isDefault()) {
+        if (static_cast<TransportRoles>(index.column()) == TransportNameRole) {
+            if (TransportManager::self()->defaultTransportId() == transport->id()) {
                 QFont f;
                 f.setBold(true);
                 return f;
@@ -43,19 +37,16 @@ QVariant TransportModel::data(const QModelIndex &index, int role) const
     if (role != Qt::DisplayRole) {
         return {};
     }
-    switch (static_cast<IdentityRoles>(index.column())) {
-    case FullEmailRole:
-        return identity.fullEmailAddr();
-    case EmailRole:
-        return identity.primaryEmailAddress();
-    case UoidRole:
-        return identity.uoid();
-    case IdentityNameRole:
-        return generateIdentityName(identity);
+    switch (static_cast<TransportRoles>(index.column())) {
+    case NameRole:
+        return transport->name();
+    case TransportNameRole:
+        return transport->transportType().name();
+    case TransportIdentifierRole:
+        return transport->id();
     case DefaultRole:
-        return identity.isDefault();
+        return TransportManager::self()->defaultTransportId();
     }
-#endif
 
     return {};
 }
