@@ -17,6 +17,9 @@ public:
     explicit TransportSortProxyModel(QObject *parent = nullptr);
     ~TransportSortProxyModel() override;
 
+    [[nodiscard]] TransportActivitiesAbstract *transportActivitiesAbstract() const;
+    void setTransportActivitiesAbstract(TransportActivitiesAbstract *newTransportActivitiesAbstract);
+
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 

@@ -19,14 +19,18 @@ class TransportComboBoxPrivate
 {
 public:
     QList<int> transports;
-    TransportModel *mTransportModel = nullptr;
-    TransportSortProxyModel *mTransportProxyModel = nullptr;
+    MailTransport::TransportModel *transportModel = nullptr;
+    MailTransport::TransportSortProxyModel *transportProxyModel = nullptr;
 };
 
 TransportComboBox::TransportComboBox(QWidget *parent)
     : QComboBox(parent)
     , d(new TransportComboBoxPrivate)
 {
+    d->transportModel = new MailTransport::TransportModel(this);
+    d->transportProxyModel = new MailTransport::TransportSortProxyModel(this);
+    d->transportProxyModel->setSourceModel(d->transportModel);
+
     updateComboboxList();
     connect(TransportManager::self(), &TransportManager::transportsChanged, this, &TransportComboBox::updateComboboxList);
     connect(TransportManager::self(), &TransportManager::transportRemoved, this, &TransportComboBox::transportRemoved);
@@ -59,13 +63,12 @@ QString TransportComboBox::transportType() const
 
 TransportActivitiesAbstract *TransportComboBox::transportActivitiesAbstract() const
 {
-    // TODO
-    return {};
+    return d->transportProxyModel->transportActivitiesAbstract();
 }
 
 void TransportComboBox::setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract)
 {
-    // TODO
+    d->transportProxyModel->setTransportActivitiesAbstract(activitiesAbstract);
 }
 
 void TransportComboBox::updateComboboxList()

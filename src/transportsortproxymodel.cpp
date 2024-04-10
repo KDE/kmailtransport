@@ -23,4 +23,14 @@ bool TransportSortProxyModel::filterAcceptsRow(int source_row, const QModelIndex
     return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
 }
 
+TransportActivitiesAbstract *TransportSortProxyModel::transportActivitiesAbstract() const
+{
+    return mTransportActivitiesAbstract;
+}
+
+void TransportSortProxyModel::setTransportActivitiesAbstract(TransportActivitiesAbstract *newTransportActivitiesAbstract)
+{
+    mTransportActivitiesAbstract = newTransportActivitiesAbstract;
+}
+
 #include "moc_transportsortproxymodel.cpp"
