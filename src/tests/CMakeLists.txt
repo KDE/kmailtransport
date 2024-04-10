@@ -20,3 +20,8 @@ target_link_libraries(addtransportdialogng_gui KPim6MailTransport KF6::I18n KF6:
 add_executable(transportmanagementwidget_gui transportmanagementwidget_gui.cpp)
 ecm_mark_as_test(transportmanagementwidget_gui)
 target_link_libraries(transportmanagementwidget_gui KPim6MailTransport KF6::I18n KF6::ConfigGui Qt::Widgets)
+
+####
+add_executable(transportcombobox_gui transportcombobox_gui.cpp)
+ecm_mark_as_test(transportcombobox_gui)
+target_link_libraries(transportcombobox_gui KPim6MailTransport KF6::I18n KF6::ConfigGui Qt::Widgets)
