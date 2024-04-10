@@ -18,5 +18,8 @@ public:
     ~TransportActivitiesAbstract() override;
 
     virtual bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const = 0;
+
+Q_SIGNALS:
+    void activitiesChanged();
 };
 }
