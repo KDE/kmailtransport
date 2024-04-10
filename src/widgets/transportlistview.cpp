@@ -11,6 +11,8 @@
 #include "transportlistview.h"
 #include "transport.h"
 #include "transportmanager.h"
+#include "transportmodel.h"
+#include "transportsortproxymodel.h"
 #include "transporttype.h"
 
 #include <QHeaderView>
