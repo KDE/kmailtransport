@@ -54,9 +54,6 @@ public:
 Q_SIGNALS:
     void transportRemoved(Transport::Id id, const QString &name);
 
-protected:
-    void setTransportList(const QList<int> &transportList);
-
 public Q_SLOTS:
     /**
      * @since 4.11

@@ -63,7 +63,7 @@ void TransportComboBox::updateComboboxList()
         const QStringList listNames = TransportManager::self()->transportNames();
         const QList<int> listIds = TransportManager::self()->transportIds();
         addItems(listNames);
-        setTransportList(listIds);
+        d->transports = listIds;
         defaultId = TransportManager::self()->defaultTransportId();
     }
 
@@ -72,11 +72,6 @@ void TransportComboBox::updateComboboxList()
     } else {
         setCurrentTransport(defaultId);
     }
-}
-
-void TransportComboBox::setTransportList(const QList<int> &transportList)
-{
-    d->transports = transportList;
 }
 
 #include "moc_transportcombobox.cpp"
