@@ -18,19 +18,23 @@ using namespace MailTransport;
 class TransportComboBoxPrivate
 {
 public:
+    TransportComboBoxPrivate(TransportComboBox *qq)
+        : q(qq)
+        , transportModel(new MailTransport::TransportModel(qq))
+        , transportProxyModel(new MailTransport::TransportSortProxyModel(qq))
+    {
+        transportProxyModel->setSourceModel(transportModel);
+    }
+    TransportComboBox *const q;
     QList<int> transports;
-    MailTransport::TransportModel *transportModel = nullptr;
-    MailTransport::TransportSortProxyModel *transportProxyModel = nullptr;
+    MailTransport::TransportModel *const transportModel;
+    MailTransport::TransportSortProxyModel *const transportProxyModel;
 };
 
 TransportComboBox::TransportComboBox(QWidget *parent)
     : QComboBox(parent)
-    , d(new TransportComboBoxPrivate)
+    , d(new TransportComboBoxPrivate(this))
 {
-    d->transportModel = new MailTransport::TransportModel(this);
-    d->transportProxyModel = new MailTransport::TransportSortProxyModel(this);
-    d->transportProxyModel->setSourceModel(d->transportModel);
-
     updateComboboxList();
     connect(TransportManager::self(), &TransportManager::transportsChanged, this, &TransportComboBox::updateComboboxList);
     connect(TransportManager::self(), &TransportManager::transportRemoved, this, &TransportComboBox::transportRemoved);
