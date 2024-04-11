@@ -44,20 +44,28 @@ TransportComboBox::~TransportComboBox() = default;
 
 int TransportComboBox::currentTransportId() const
 {
+#if 0
+    return currentData(MailTransport::TransportModel::TransportIdentifierRole).toInt();
+#else
     if (currentIndex() >= 0 && currentIndex() < d->transports.count()) {
         return d->transports.at(currentIndex());
     }
     return -1;
+#endif
 }
 
 bool TransportComboBox::setCurrentTransport(int transportId)
 {
+#if 0
+    const int i = findData(transportId, MailTransport::TransportModel::TransportIdentifierRole);
+#else
     const int i = d->transports.indexOf(transportId);
     if (i >= 0 && i < count()) {
         setCurrentIndex(i);
         return true;
     }
     return false;
+#endif
 }
 
 QString TransportComboBox::transportType() const
