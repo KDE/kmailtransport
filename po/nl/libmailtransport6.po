@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:38+0000\n"
+"POT-Creation-Date: 2024-04-11 00:38+0000\n"
 "PO-Revision-Date: 2024-04-09 15:44+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -46,25 +46,25 @@ msgid "Unnamed"
 msgstr "Naamloos"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
-#: mailtransport.kcfg:24
+#: mailtransport.kcfg:27
 #, kde-format
 msgid "Host name of the server"
 msgstr "Hostnaam van de server"
 
 #. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
-#: mailtransport.kcfg:25
+#: mailtransport.kcfg:28
 #, kde-format
 msgid "The domain name or numerical address of the SMTP server."
 msgstr "De domeinnaam of het numerieke adres van de SMTP-server."
 
 #. i18n: ectx: label, entry (port), group (Transport $(transportId))
-#: mailtransport.kcfg:28
+#: mailtransport.kcfg:31
 #, kde-format
 msgid "Port number of the server"
 msgstr "Poortnummer van de server"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
-#: mailtransport.kcfg:29
+#: mailtransport.kcfg:32
 #, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
@@ -74,25 +74,25 @@ msgstr ""
 "587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
-#: mailtransport.kcfg:33
+#: mailtransport.kcfg:36
 #, kde-format
 msgid "User name needed for login"
 msgstr "Gebruikersnaam voor inloggen"
 
 #. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
-#: mailtransport.kcfg:34
+#: mailtransport.kcfg:37
 #, kde-format
 msgid "The user name to send to the server for authorization."
 msgstr "De gebruikersnaam die naar de server verstuurd wordt ter autorisatie."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
-#: mailtransport.kcfg:37
+#: mailtransport.kcfg:40
 #, kde-format
 msgid "Command to execute before sending a mail"
 msgstr "Uit te voeren commando voordat e-mail wordt verzonden"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
-#: mailtransport.kcfg:38
+#: mailtransport.kcfg:41
 #, kde-format
 msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
@@ -103,19 +103,19 @@ msgstr ""
 "commando wilt laten uitvoeren.        "
 
 #. i18n: ectx: label, entry (options), group (Transport $(transportId))
-#: mailtransport.kcfg:41
+#: mailtransport.kcfg:44
 #, kde-format
 msgid "Options added to mailtransport method"
 msgstr "Opties toegevoegd aan e-mailtransportmethode"
 
 #. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
-#: mailtransport.kcfg:44
+#: mailtransport.kcfg:47
 #, kde-format
 msgid "Server requires authentication"
 msgstr "Server vereist authenticatie"
 
 #. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
-#: mailtransport.kcfg:45
+#: mailtransport.kcfg:48
 #, kde-format
 msgid ""
 "Check this option if your SMTP server requires authentication before "
@@ -126,13 +126,13 @@ msgstr ""
 "eenvoudigweg ASMTP.        "
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
-#: mailtransport.kcfg:49
+#: mailtransport.kcfg:52
 #, kde-format
 msgid "Store password"
 msgstr "Wachtwoord opslaan"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
-#: mailtransport.kcfg:52
+#: mailtransport.kcfg:55
 #, kde-format
 msgid ""
 "Check this option to have your password stored.\n"
@@ -153,31 +153,31 @@ msgstr ""
 "configuratiebestand."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:56
+#: mailtransport.kcfg:59
 #, kde-format
 msgid "Encryption method used for communication"
 msgstr "Versleutelingmethode voor communicatie"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:59
+#: mailtransport.kcfg:62
 #, kde-format
 msgid "No encryption"
 msgstr "Geen versleuteling"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:62
+#: mailtransport.kcfg:65
 #, kde-format
 msgid "SSL/TLS encryption"
 msgstr "SSL/TLS-versleuteling"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:65
+#: mailtransport.kcfg:68
 #, kde-format
 msgid "STARTTLS encryption"
 msgstr "STARTTLS-versleuteling"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
-#: mailtransport.kcfg:71
+#: mailtransport.kcfg:74
 #, kde-format
 msgid "Authentication method"
 msgstr "Authenticatiemethode"
@@ -186,14 +186,14 @@ msgstr "Authenticatiemethode"
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:88 mailtransport.kcfg:93 mailtransport.kcfg:97
-#: mailtransport.kcfg:102
+#: mailtransport.kcfg:91 mailtransport.kcfg:96 mailtransport.kcfg:100
+#: mailtransport.kcfg:105
 #, kde-format
 msgid "<!-- TODO -->"
 msgstr "<!-- TEDOEN -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:89
+#: mailtransport.kcfg:92
 #, kde-format
 msgid ""
 "Check this option to use a custom hostname when identifying to the mail "
@@ -205,7 +205,7 @@ msgstr ""
 "onjuist is ingesteld of om de werkelijke hostnaam van uw systeem te maskeren."
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:94
+#: mailtransport.kcfg:97
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr ""
@@ -213,7 +213,7 @@ msgstr ""
 "server."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:98
+#: mailtransport.kcfg:101
 #, kde-format
 msgid ""
 "Check this option to use a custom sender address when identifying to the "
@@ -224,7 +224,7 @@ msgstr ""
 "adres uit de identiteit worden gebruikt."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:103
+#: mailtransport.kcfg:106
 #, kde-format
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
@@ -235,13 +235,13 @@ msgstr ""
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
-#: mailtransport.kcfg:106 plugins/smtp/smtpsettings.ui:284
+#: mailtransport.kcfg:109 plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
 msgstr "Met gebruik van de systeemproxyinstellingen verbinden"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
-#: mailtransport.kcfg:107
+#: mailtransport.kcfg:110
 #, kde-format
 msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
@@ -574,13 +574,13 @@ msgstr "Overplaatsen"
 msgid "Keep"
 msgstr "Behouden"
 
-#: transportmodel.cpp:80 widgets/transportlistview.cpp:27
+#: transportmodel.cpp:71 widgets/transportlistview.cpp:29
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Naam"
 
-#: transportmodel.cpp:82 widgets/transportlistview.cpp:27
+#: transportmodel.cpp:73 widgets/transportlistview.cpp:29
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -665,7 +665,7 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Aanmaken en configureren"
 
-#: widgets/transportlistview.cpp:99
+#: widgets/transportlistview.cpp:112
 #, kde-format
 msgctxt "@label the default mail transport"
 msgid " (Default)"

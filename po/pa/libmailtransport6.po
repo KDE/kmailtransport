@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-10 00:38+0000\n"
+"POT-Creation-Date: 2024-04-11 00:38+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -43,25 +43,25 @@ msgid "Unnamed"
 msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
-#: mailtransport.kcfg:24
+#: mailtransport.kcfg:27
 #, kde-format
 msgid "Host name of the server"
 msgstr "ਸਰਵਰ ਦਾ ਹੋਸਟ ਨਾਂ"
 
 #. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
-#: mailtransport.kcfg:25
+#: mailtransport.kcfg:28
 #, kde-format
 msgid "The domain name or numerical address of the SMTP server."
 msgstr "SMTP ਸਰਵਰ ਦਾ ਡੋਮੇਨ ਨਾਂ ਜਾਂ ਗਿਣਤੀ ਐਡਰੈੱਸ"
 
 #. i18n: ectx: label, entry (port), group (Transport $(transportId))
-#: mailtransport.kcfg:28
+#: mailtransport.kcfg:31
 #, kde-format
 msgid "Port number of the server"
 msgstr "ਸਰਵਰ ਦੀ ਪੋਰਟ ਨੰਬਰ"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
-#: mailtransport.kcfg:29
+#: mailtransport.kcfg:32
 #, fuzzy, kde-format
 #| msgid ""
 #| "The port number that the SMTP server is listening on. The default port is "
@@ -72,25 +72,25 @@ msgid ""
 msgstr "ਪੋਰਟ ਨੰਬਰ, ਜਿੱਥੇ ਕਿ SMTP ਸਰਵਰ ਲਿਸਨ ਕਰਦਾ ਹੈ। ਡਿਫਾਲਟ ਪੋਰਟ 25 ਹੈ।"
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
-#: mailtransport.kcfg:33
+#: mailtransport.kcfg:36
 #, kde-format
 msgid "User name needed for login"
 msgstr "ਯੂਜ਼ਰ ਨਾਂ ਲਾਗਇਨ ਲਈ ਚਾਹੀਦਾ ਹੈ"
 
 #. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
-#: mailtransport.kcfg:34
+#: mailtransport.kcfg:37
 #, kde-format
 msgid "The user name to send to the server for authorization."
 msgstr "ਸਰਵਰ ਲਈ ਪਰਮਾਣਕਿਤਾ ਵਾਸਤੇ ਭੇਜਣ ਲਈ ਯੂਜ਼ਰ ਨਾਂ।"
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
-#: mailtransport.kcfg:37
+#: mailtransport.kcfg:40
 #, kde-format
 msgid "Command to execute before sending a mail"
 msgstr "ਇੱਕ ਮੇਲ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਚਲਾਉਣ ਲਈ ਕਮਾਂਡ"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
-#: mailtransport.kcfg:38
+#: mailtransport.kcfg:41
 #, kde-format
 msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
@@ -98,19 +98,19 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (options), group (Transport $(transportId))
-#: mailtransport.kcfg:41
+#: mailtransport.kcfg:44
 #, kde-format
 msgid "Options added to mailtransport method"
 msgstr ""
 
 #. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
-#: mailtransport.kcfg:44
+#: mailtransport.kcfg:47
 #, kde-format
 msgid "Server requires authentication"
 msgstr "ਸਰਵਰ ਲਈ ਪਰਮਾਣਕਿਤਾ ਦੀ ਲੋੜ"
 
 #. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
-#: mailtransport.kcfg:45
+#: mailtransport.kcfg:48
 #, kde-format
 msgid ""
 "Check this option if your SMTP server requires authentication before "
@@ -118,13 +118,13 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
-#: mailtransport.kcfg:49
+#: mailtransport.kcfg:52
 #, kde-format
 msgid "Store password"
 msgstr "ਪਾਸਵਰਡ ਸੰਭਾਲੋ"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
-#: mailtransport.kcfg:52
+#: mailtransport.kcfg:55
 #, kde-format
 msgid ""
 "Check this option to have your password stored.\n"
@@ -137,33 +137,33 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:56
+#: mailtransport.kcfg:59
 #, kde-format
 msgid "Encryption method used for communication"
 msgstr "ਸੰਚਾਰ ਲਈ ਇੰਕ੍ਰਿਪਸ਼ਨ ਢੰਗ"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:59
+#: mailtransport.kcfg:62
 #, kde-format
 msgid "No encryption"
 msgstr "ਕੋਈ ਇੰਕ੍ਰਿਪਸ਼ਨ ਨਹੀਂ"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:62
+#: mailtransport.kcfg:65
 #, fuzzy, kde-format
 #| msgid "TLS encryption"
 msgid "SSL/TLS encryption"
 msgstr "TLS ਇੰਕ੍ਰਿਪਸ਼ਨ"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:65
+#: mailtransport.kcfg:68
 #, fuzzy, kde-format
 #| msgid "TLS encryption"
 msgid "STARTTLS encryption"
 msgstr "TLS ਇੰਕ੍ਰਿਪਸ਼ਨ"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
-#: mailtransport.kcfg:71
+#: mailtransport.kcfg:74
 #, kde-format
 msgid "Authentication method"
 msgstr "ਪਰਾਮਣਕਿਤਾ ਢੰਗ"
@@ -172,14 +172,14 @@ msgstr "ਪਰਾਮਣਕਿਤਾ ਢੰਗ"
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:88 mailtransport.kcfg:93 mailtransport.kcfg:97
-#: mailtransport.kcfg:102
+#: mailtransport.kcfg:91 mailtransport.kcfg:96 mailtransport.kcfg:100
+#: mailtransport.kcfg:105
 #, kde-format
 msgid "<!-- TODO -->"
 msgstr "<!-- TODO -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:89
+#: mailtransport.kcfg:92
 #, kde-format
 msgid ""
 "Check this option to use a custom hostname when identifying to the mail "
@@ -188,14 +188,14 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:94
+#: mailtransport.kcfg:97
 #, fuzzy, kde-format
 #| msgid "The name that will be used when referring to this server."
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr "ਨਾਂ, ਜੋ ਕਿ ਇਸ ਸਰਵਰ ਬਾਰੇ ਜਾਣਕਾਰੀ ਦੇਣ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:98
+#: mailtransport.kcfg:101
 #, kde-format
 msgid ""
 "Check this option to use a custom sender address when identifying to the "
@@ -203,7 +203,7 @@ msgid ""
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:103
+#: mailtransport.kcfg:106
 #, kde-format
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
@@ -212,13 +212,13 @@ msgstr ""
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
-#: mailtransport.kcfg:106 plugins/smtp/smtpsettings.ui:284
+#: mailtransport.kcfg:109 plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
 msgstr ""
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
-#: mailtransport.kcfg:107
+#: mailtransport.kcfg:110
 #, kde-format
 msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
@@ -540,13 +540,13 @@ msgstr "ਮਾਈਗਰੇਟ"
 msgid "Keep"
 msgstr "ਰੱਖੋ"
 
-#: transportmodel.cpp:80 widgets/transportlistview.cpp:27
+#: transportmodel.cpp:71 widgets/transportlistview.cpp:29
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "ਨਾਂ"
 
-#: transportmodel.cpp:82 widgets/transportlistview.cpp:27
+#: transportmodel.cpp:73 widgets/transportlistview.cpp:29
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -633,7 +633,7 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "ਬਣਾਏ ਅਤੇ ਸੰਰਚਨਾ"
 
-#: widgets/transportlistview.cpp:99
+#: widgets/transportlistview.cpp:112
 #, kde-format
 msgctxt "@label the default mail transport"
 msgid " (Default)"
