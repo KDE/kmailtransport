@@ -25,6 +25,26 @@ public:
     {
         transportProxyModel->setSourceModel(transportModel);
     }
+    void updateComboboxList()
+    {
+        const int oldTransport = q->currentTransportId();
+        q->clear();
+
+        int defaultId = 0;
+        if (!TransportManager::self()->isEmpty()) {
+            const QStringList listNames = TransportManager::self()->transportNames();
+            const QList<int> listIds = TransportManager::self()->transportIds();
+            q->addItems(listNames);
+            transports = listIds;
+            defaultId = TransportManager::self()->defaultTransportId();
+        }
+
+        if (oldTransport != -1) {
+            q->setCurrentTransport(oldTransport);
+        } else {
+            q->setCurrentTransport(defaultId);
+        }
+    }
     TransportComboBox *const q;
     QList<int> transports;
     MailTransport::TransportModel *const transportModel;
@@ -35,8 +55,10 @@ TransportComboBox::TransportComboBox(QWidget *parent)
     : QComboBox(parent)
     , d(new TransportComboBoxPrivate(this))
 {
-    updateComboboxList();
-    connect(TransportManager::self(), &TransportManager::transportsChanged, this, &TransportComboBox::updateComboboxList);
+    d->updateComboboxList();
+    connect(TransportManager::self(), &TransportManager::transportsChanged, this, [this]() {
+        d->updateComboboxList();
+    });
     connect(TransportManager::self(), &TransportManager::transportRemoved, this, &TransportComboBox::transportRemoved);
 }
 
@@ -45,7 +67,9 @@ TransportComboBox::~TransportComboBox() = default;
 int TransportComboBox::currentTransportId() const
 {
 #if 0
-    return currentData(MailTransport::TransportModel::TransportIdentifierRole).toInt();
+    return d->mIdentityProxyModel->mapToSource(d->mIdentityProxyModel->index(currentIndex(), MailTransport::TransportModel::TransportIdentifierRole))
+        .data()
+        .toInt();
 #else
     if (currentIndex() >= 0 && currentIndex() < d->transports.count()) {
         return d->transports.at(currentIndex());
@@ -81,27 +105,6 @@ TransportActivitiesAbstract *TransportComboBox::transportActivitiesAbstract() co
 void TransportComboBox::setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract)
 {
     d->transportProxyModel->setTransportActivitiesAbstract(activitiesAbstract);
-}
-
-void TransportComboBox::updateComboboxList()
-{
-    const int oldTransport = currentTransportId();
-    clear();
-
-    int defaultId = 0;
-    if (!TransportManager::self()->isEmpty()) {
-        const QStringList listNames = TransportManager::self()->transportNames();
-        const QList<int> listIds = TransportManager::self()->transportIds();
-        addItems(listNames);
-        d->transports = listIds;
-        defaultId = TransportManager::self()->defaultTransportId();
-    }
-
-    if (oldTransport != -1) {
-        setCurrentTransport(oldTransport);
-    } else {
-        setCurrentTransport(defaultId);
-    }
 }
 
 #include "moc_transportcombobox.cpp"

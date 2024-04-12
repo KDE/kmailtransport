@@ -60,12 +60,6 @@ public:
 Q_SIGNALS:
     void transportRemoved(Transport::Id id, const QString &name);
 
-public Q_SLOTS:
-    /**
-     * @since 4.11
-     */
-    void updateComboboxList();
-
 private:
     std::unique_ptr<TransportComboBoxPrivate> const d;
 };
