@@ -3,6 +3,9 @@
 
 #include "widgets/transportcombobox.h"
 #include <QApplication>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
 #include <QVBoxLayout>
 #include <QWidget>
 
@@ -19,6 +22,29 @@ IdentityComboboxWidget::IdentityComboboxWidget(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     auto combobox = new MailTransport::TransportComboBox(this);
     mainLayout->addWidget(combobox);
+
+    auto labelTransport = new QLabel(this);
+    connect(combobox, &MailTransport::TransportComboBox::activated, this, [combobox, labelTransport]() {
+        labelTransport->setText(QString::number(combobox->currentTransportId()));
+    });
+    mainLayout->addWidget(labelTransport);
+
+    {
+        auto hbox = new QHBoxLayout;
+        auto transportLineEdit = new QLineEdit(this);
+
+        hbox->addWidget(new QLabel(QStringLiteral("set transport identifier:"), this));
+        hbox->addWidget(transportLineEdit);
+
+        auto identityNameButton = new QPushButton(QStringLiteral("Apply"), this);
+        hbox->addWidget(identityNameButton);
+
+        connect(identityNameButton, &QPushButton::clicked, this, [transportLineEdit, combobox]() {
+            combobox->setCurrentTransport(transportLineEdit->text().toInt());
+        });
+
+        mainLayout->addLayout(hbox);
+    }
 }
 
 int main(int argc, char *argv[])
