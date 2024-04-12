@@ -26,7 +26,7 @@ QVariant TransportModel::data(const QModelIndex &index, int role) const
     }
     const auto transport = mTransportManager->transportById(mTransportIds[index.row()]);
     if (role == Qt::FontRole) {
-        if (static_cast<TransportRoles>(index.column()) == TransportNameRole) {
+        if (static_cast<TransportRoles>(index.column()) == NameRole) {
             if (TransportManager::self()->defaultTransportId() == transport->id()) {
                 QFont f;
                 f.setBold(true);
@@ -82,6 +82,11 @@ QVariant TransportModel::headerData(int section, Qt::Orientation orientation, in
 int TransportModel::transportId(int index) const
 {
     return mTransportIds.at(index);
+}
+
+int TransportModel::indexOf(int transportId) const
+{
+    return mTransportIds.indexOf(transportId);
 }
 
 void TransportModel::updateComboboxList()

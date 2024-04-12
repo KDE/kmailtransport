@@ -32,6 +32,7 @@ public:
     [[nodiscard]] QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
 
     [[nodiscard]] int transportId(int index) const;
+    [[nodiscard]] int indexOf(int transportId) const;
 
 private:
     MAILTRANSPORT_NO_EXPORT void updateComboboxList();

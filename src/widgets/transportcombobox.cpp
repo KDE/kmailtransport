@@ -8,6 +8,7 @@
 #include "transportmanager.h"
 #include "transportmodel.h"
 #include "transportsortproxymodel.h"
+// #define PORT_MODEL 1
 
 using namespace MailTransport;
 
@@ -24,6 +25,9 @@ public:
         , transportProxyModel(new MailTransport::TransportSortProxyModel(qq))
     {
         transportProxyModel->setSourceModel(transportModel);
+#ifdef PORT_MODEL
+        q->setModel(transportProxyModel);
+#endif
     }
     void updateComboboxList()
     {
@@ -32,10 +36,12 @@ public:
 
         int defaultId = 0;
         if (!TransportManager::self()->isEmpty()) {
+#ifndef PORT_MODEL
             const QStringList listNames = TransportManager::self()->transportNames();
             const QList<int> listIds = TransportManager::self()->transportIds();
             q->addItems(listNames);
             transports = listIds;
+#endif
             defaultId = TransportManager::self()->defaultTransportId();
         }
 
@@ -46,7 +52,9 @@ public:
         }
     }
     TransportComboBox *const q;
+#ifndef PORT_MODEL
     QList<int> transports;
+#endif
     MailTransport::TransportModel *const transportModel;
     MailTransport::TransportSortProxyModel *const transportProxyModel;
 };
@@ -56,18 +64,23 @@ TransportComboBox::TransportComboBox(QWidget *parent)
     , d(new TransportComboBoxPrivate(this))
 {
     d->updateComboboxList();
+#ifndef PORT_MODEL
     connect(TransportManager::self(), &TransportManager::transportsChanged, this, [this]() {
         d->updateComboboxList();
     });
+#endif
     connect(TransportManager::self(), &TransportManager::transportRemoved, this, &TransportComboBox::transportRemoved);
+#ifdef PORT_MODEL
+    setModelColumn(MailTransport::TransportModel::NameRole);
+#endif
 }
 
 TransportComboBox::~TransportComboBox() = default;
 
 int TransportComboBox::currentTransportId() const
 {
-#if 0
-    return d->mIdentityProxyModel->mapToSource(d->mIdentityProxyModel->index(currentIndex(), MailTransport::TransportModel::TransportIdentifierRole))
+#ifdef PORT_MODEL
+    return d->transportProxyModel->mapToSource(d->transportProxyModel->index(currentIndex(), MailTransport::TransportModel::TransportIdentifierRole))
         .data()
         .toInt();
 #else
@@ -80,16 +93,22 @@ int TransportComboBox::currentTransportId() const
 
 bool TransportComboBox::setCurrentTransport(int transportId)
 {
-#if 0
-    const int i = findData(transportId, MailTransport::TransportModel::TransportIdentifierRole);
+#ifdef PORT_MODEL
+    const int idx = d->transportModel->indexOf(transportId);
+    if (idx != -1) {
+        const int newIndex =
+            d->transportProxyModel->mapFromSource(d->transportProxyModel->index(idx, MailTransport::TransportModel::TransportIdentifierRole)).row();
+        setCurrentIndex(newIndex);
+        return true;
+    }
 #else
     const int i = d->transports.indexOf(transportId);
     if (i >= 0 && i < count()) {
         setCurrentIndex(i);
         return true;
     }
-    return false;
 #endif
+    return false;
 }
 
 QString TransportComboBox::transportType() const
