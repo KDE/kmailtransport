@@ -10,7 +10,6 @@
 
 namespace MailTransport
 {
-class TransportActivitiesAbstract;
 /**
   @internal
   A QTreeWidget for transports.
@@ -24,11 +23,6 @@ public:
 
     // overloaded from QTreeWidget
     void editItem(QTreeWidgetItem *item, int column = 0);
-
-    /// @since 6.1
-    [[nodiscard]] MailTransport::TransportActivitiesAbstract *transportActivitiesAbstract() const;
-    /// @since 6.1
-    void setTransportActivitiesAbstract(MailTransport::TransportActivitiesAbstract *activitiesAbstract);
 
 protected Q_SLOTS:
     void commitData(QWidget *editor) override;

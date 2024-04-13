@@ -11,8 +11,6 @@
 #include "transportlistview.h"
 #include "transport.h"
 #include "transportmanager.h"
-#include "transportmodel.h"
-#include "transportsortproxymodel.h"
 #include "transporttype.h"
 
 #include <QHeaderView>
@@ -58,17 +56,6 @@ void TransportListView::editItem(QTreeWidgetItem *item, int column)
             item->setText(0, t->name());
         }
     }
-}
-
-TransportActivitiesAbstract *TransportListView::transportActivitiesAbstract() const
-{
-    return {};
-    // TODO
-}
-
-void TransportListView::setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract)
-{
-    // TODO
 }
 
 void TransportListView::commitData(QWidget *editor)
