@@ -96,8 +96,7 @@ bool TransportComboBox::setCurrentTransport(int transportId)
 #ifdef PORT_MODEL
     const int idx = d->transportModel->indexOf(transportId);
     if (idx != -1) {
-        const int newIndex =
-            d->transportProxyModel->mapFromSource(d->transportProxyModel->index(idx, MailTransport::TransportModel::TransportIdentifierRole)).row();
+        const int newIndex = d->transportProxyModel->mapFromSource(d->transportModel->index(idx, MailTransport::TransportModel::TransportIdentifierRole)).row();
         setCurrentIndex(newIndex);
         return true;
     }
