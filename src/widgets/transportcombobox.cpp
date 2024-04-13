@@ -8,7 +8,7 @@
 #include "transportmanager.h"
 #include "transportmodel.h"
 #include "transportsortproxymodel.h"
-// #define PORT_MODEL 1
+#define USE_MODEL_COMBOBOX 1
 
 using namespace MailTransport;
 
@@ -25,7 +25,7 @@ public:
         , transportProxyModel(new MailTransport::TransportSortProxyModel(qq))
     {
         transportProxyModel->setSourceModel(transportModel);
-#ifdef PORT_MODEL
+#ifdef USE_MODEL_COMBOBOX
         q->setModel(transportProxyModel);
 #endif
     }
@@ -36,7 +36,7 @@ public:
 
         int defaultId = 0;
         if (!TransportManager::self()->isEmpty()) {
-#ifndef PORT_MODEL
+#ifndef USE_MODEL_COMBOBOX
             const QStringList listNames = TransportManager::self()->transportNames();
             const QList<int> listIds = TransportManager::self()->transportIds();
             q->addItems(listNames);
@@ -52,7 +52,7 @@ public:
         }
     }
     TransportComboBox *const q;
-#ifndef PORT_MODEL
+#ifndef USE_MODEL_COMBOBOX
     QList<int> transports;
 #endif
     MailTransport::TransportModel *const transportModel;
@@ -64,13 +64,13 @@ TransportComboBox::TransportComboBox(QWidget *parent)
     , d(new TransportComboBoxPrivate(this))
 {
     d->updateComboboxList();
-#ifndef PORT_MODEL
+#ifndef USE_MODEL_COMBOBOX
     connect(TransportManager::self(), &TransportManager::transportsChanged, this, [this]() {
         d->updateComboboxList();
     });
 #endif
     connect(TransportManager::self(), &TransportManager::transportRemoved, this, &TransportComboBox::transportRemoved);
-#ifdef PORT_MODEL
+#ifdef USE_MODEL_COMBOBOX
     setModelColumn(MailTransport::TransportModel::NameRole);
 #endif
 }
@@ -79,7 +79,7 @@ TransportComboBox::~TransportComboBox() = default;
 
 int TransportComboBox::currentTransportId() const
 {
-#ifdef PORT_MODEL
+#ifdef USE_MODEL_COMBOBOX
     return d->transportProxyModel->mapToSource(d->transportProxyModel->index(currentIndex(), MailTransport::TransportModel::TransportIdentifierRole))
         .data()
         .toInt();
@@ -93,7 +93,7 @@ int TransportComboBox::currentTransportId() const
 
 bool TransportComboBox::setCurrentTransport(int transportId)
 {
-#ifdef PORT_MODEL
+#ifdef USE_MODEL_COMBOBOX
     const int idx = d->transportModel->indexOf(transportId);
     if (idx != -1) {
         const int newIndex = d->transportProxyModel->mapFromSource(d->transportModel->index(idx, MailTransport::TransportModel::TransportIdentifierRole)).row();
