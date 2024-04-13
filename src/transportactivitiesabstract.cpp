@@ -11,3 +11,5 @@ TransportActivitiesAbstract::TransportActivitiesAbstract(QObject *parent)
 }
 
 TransportActivitiesAbstract::~TransportActivitiesAbstract() = default;
+
+#include "moc_transportactivitiesabstract.cpp"
