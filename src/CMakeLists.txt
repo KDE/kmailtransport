@@ -21,23 +21,28 @@ target_sources(KPim6MailTransport PRIVATE
 target_sources(KPim6MailTransport PRIVATE
     widgets/transportconfigwidget.cpp
     widgets/transportcombobox.cpp
-    widgets/transportlistview.cpp
+    widgets/transportlistwidget.cpp
     widgets/transportmanagementwidget.cpp
     widgets/addtransportdialogng.cpp
 
     widgets/addtransportdialogng.h
     widgets/transportcombobox.h
-    widgets/transportlistview.h
+    widgets/transportlistwidget.h
     widgets/transportconfigwidget_p.h
     widgets/transportconfigwidget.h
     widgets/transportmanagementwidget.h
+
+    widgets/transportlistview.h
+    widgets/transportlistview.cpp
 
     transportactivitiesabstract.h
     transportactivitiesabstract.cpp
     transportmodel.h
     transportmodel.cpp
     transportsortproxymodel.h
-    transportsortproxymodel.cpp    
+    transportsortproxymodel.cpp
+
+
     )
 
 target_sources(KPim6MailTransport PRIVATE
