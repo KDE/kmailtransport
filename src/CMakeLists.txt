@@ -122,6 +122,7 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
     TransportJob
     TransportManager
     TransportType
+    TransportModel
     OutlookOAuthTokenRequester
     TransportActivitiesAbstract
     PREFIX MailTransport
