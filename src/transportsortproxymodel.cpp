@@ -30,9 +30,11 @@ TransportActivitiesAbstract *TransportSortProxyModel::transportActivitiesAbstrac
 
 void TransportSortProxyModel::setTransportActivitiesAbstract(TransportActivitiesAbstract *newTransportActivitiesAbstract)
 {
-    mTransportActivitiesAbstract = newTransportActivitiesAbstract;
-    connect(mTransportActivitiesAbstract, &TransportActivitiesAbstract::activitiesChanged, this, &TransportSortProxyModel::invalidateFilter);
-    invalidateFilter();
+    if (mTransportActivitiesAbstract != newTransportActivitiesAbstract) {
+        mTransportActivitiesAbstract = newTransportActivitiesAbstract;
+        connect(mTransportActivitiesAbstract, &TransportActivitiesAbstract::activitiesChanged, this, &TransportSortProxyModel::invalidateFilter);
+        invalidateFilter();
+    }
 }
 
 #include "moc_transportsortproxymodel.cpp"
