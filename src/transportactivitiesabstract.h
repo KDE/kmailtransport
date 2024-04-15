@@ -19,6 +19,8 @@ public:
 
     virtual bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const = 0;
 
+    [[nodiscard]] virtual bool hasActivitySupport() const;
+
 Q_SIGNALS:
     void activitiesChanged();
 };
