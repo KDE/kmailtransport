@@ -5,12 +5,14 @@
 */
 #pragma once
 
+#include "kmailtransport_private_export.h"
 #include <QTreeView>
+
 namespace MailTransport
 {
 class TransportSortProxyModel;
 class TransportActivitiesAbstract;
-class TransportListView : public QTreeView
+class KMAILTRANSPORT_TESTS_EXPORT TransportListView : public QTreeView
 {
     Q_OBJECT
 public:
