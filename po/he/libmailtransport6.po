@@ -1,93 +1,89 @@
-# Copyright (C) YEAR This_file_is_part_of_KDE
-# This file is distributed under the same license as the PACKAGE package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kmailtransport package.
 #
-# Amanpreet Singh Alam <aalam@users.sf.net>, 2008.
-# A S Alam <aalam@users.sf.net>, 2010.
+# SPDX-FileCopyrightText: 2024 Yaron Shahrabani <sh.yaron@gmail.com>
 msgid ""
 msgstr ""
-"Project-Id-Version: libmailtransport\n"
+"Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-16 00:38+0000\n"
-"PO-Revision-Date: 2010-02-01 08:19+0530\n"
-"Last-Translator: A S Alam <aalam@users.sf.net>\n"
-"Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
-"Language: pa\n"
+"PO-Revision-Date: 2024-04-15 15:52+0300\n"
+"Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
+"Language-Team: צוות התרגום של KDE ישראל\n"
+"Language: he\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.0\n"
-"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3);\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
 #, kde-format
 msgid "Unique identifier"
-msgstr "ਵਿਲੱਖਣ ਪਛਾਣਕਰਤਾ"
+msgstr "מזהה ייחודי"
 
 #. i18n: ectx: label, entry (name), group (Transport $(transportId))
 #: mailtransport.kcfg:16
 #, kde-format
 msgid "User-visible transport name"
-msgstr "ਯੂਜ਼ਰ ਵੇਖਣਯੋਗ ਟਰਾਂਸਪੋਰਟ ਨਾਂ"
+msgstr "שם תעבורה שגלוי למשתמש"
 
 #. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
 #: mailtransport.kcfg:17
 #, kde-format
 msgid "The name that will be used when referring to this server."
-msgstr "ਨਾਂ, ਜੋ ਕਿ ਇਸ ਸਰਵਰ ਬਾਰੇ ਜਾਣਕਾਰੀ ਦੇਣ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+msgstr "השם שישמש כשמתייחסים לשרת הזה."
 
 #: mailtransport.kcfg:18
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgid "Unnamed"
-msgstr "ਨਾਂ ਬਦਲੋ(&R)"
+msgstr "ללא שם"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:27
 #, kde-format
 msgid "Host name of the server"
-msgstr "ਸਰਵਰ ਦਾ ਹੋਸਟ ਨਾਂ"
+msgstr "שם מארח השרת"
 
 #. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:28
 #, kde-format
 msgid "The domain name or numerical address of the SMTP server."
-msgstr "SMTP ਸਰਵਰ ਦਾ ਡੋਮੇਨ ਨਾਂ ਜਾਂ ਗਿਣਤੀ ਐਡਰੈੱਸ"
+msgstr "שם התחום או הכתובת המספרית של שרת ה־SMTP."
 
 #. i18n: ectx: label, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:31
 #, kde-format
 msgid "Port number of the server"
-msgstr "ਸਰਵਰ ਦੀ ਪੋਰਟ ਨੰਬਰ"
+msgstr "מספר פתחת השרת"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:32
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
-msgstr "ਪੋਰਟ ਨੰਬਰ, ਜਿੱਥੇ ਕਿ SMTP ਸਰਵਰ ਲਿਸਨ ਕਰਦਾ ਹੈ। ਡਿਫਾਲਟ ਪੋਰਟ 25 ਹੈ।"
+msgstr "מספר הפתחה לה מאזין שרת ה־SMTP. פתחת ברירת המחדל היא 587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:36
 #, kde-format
 msgid "User name needed for login"
-msgstr "ਯੂਜ਼ਰ ਨਾਂ ਲਾਗਇਨ ਲਈ ਚਾਹੀਦਾ ਹੈ"
+msgstr "שם המשתמש שנחוץ לכניסה"
 
 #. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:37
 #, kde-format
 msgid "The user name to send to the server for authorization."
-msgstr "ਸਰਵਰ ਲਈ ਪਰਮਾਣਕਿਤਾ ਵਾਸਤੇ ਭੇਜਣ ਲਈ ਯੂਜ਼ਰ ਨਾਂ।"
+msgstr "שם המשתמש לשליחה לשרת לאימות."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:40
 #, kde-format
 msgid "Command to execute before sending a mail"
-msgstr "ਇੱਕ ਮੇਲ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਚਲਾਉਣ ਲਈ ਕਮਾਂਡ"
+msgstr "פקודה להרצה בטרם שליחת דוא״ל"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:41
@@ -96,18 +92,20 @@ msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
 "SSH tunnels, for example. Leave it empty if no command should be run."
 msgstr ""
+"פקודה להרצה מקומית, בטרם שליחת הודעת דוא״ל. אפשר להשתמש בזה כדי להקים תעלות "
+"SSH, למשל. יש להשאיר ריק אם לא צריך להריץ אף פקודה."
 
 #. i18n: ectx: label, entry (options), group (Transport $(transportId))
 #: mailtransport.kcfg:44
 #, kde-format
 msgid "Options added to mailtransport method"
-msgstr ""
+msgstr "נוספות אפשרויות לשיטת תעבורת הדוא״ל (mailtransport)"
 
 #. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
 #: mailtransport.kcfg:47
 #, kde-format
 msgid "Server requires authentication"
-msgstr "ਸਰਵਰ ਲਈ ਪਰਮਾਣਕਿਤਾ ਦੀ ਲੋੜ"
+msgstr "השרת דורש אימות"
 
 #. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
 #: mailtransport.kcfg:48
@@ -116,12 +114,14 @@ msgid ""
 "Check this option if your SMTP server requires authentication before "
 "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
 msgstr ""
+"יש לסמן את האפשרות הזאת אם שרת ה־SMTP שלך דורש אימות בטרם קבלת הודעות. נודע "
+"בשם ,SMTP מאומת’ או פשוט ASMTP."
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:52
 #, kde-format
 msgid "Store password"
-msgstr "ਪਾਸਵਰਡ ਸੰਭਾਲੋ"
+msgstr "אחסון סיסמה"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:55
@@ -135,38 +135,40 @@ msgid ""
 "should not be considered secure from decryption efforts if access to the "
 "configuration file is obtained."
 msgstr ""
+"יש לסמן את האפשרות הזאת כדי שהסיסמה שלך תאוחסן.\n"
+"אם KWallet זמין הסיסמה תאוחסן שם, השימוש בו נחשב לבטוח.\n"
+"אם זאת, אם KWallet לא זמין, הסיסמה תאוחסן בצורה מעורפלת, אך זה לא מספיק בטוח "
+"מפני ניסיונות פענוח אם איכשהו מתבצעת גישה לקובץ ההגדרות."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:59
 #, kde-format
 msgid "Encryption method used for communication"
-msgstr "ਸੰਚਾਰ ਲਈ ਇੰਕ੍ਰਿਪਸ਼ਨ ਢੰਗ"
+msgstr "שיטת ההצפנה שמשמשת לתקשורת"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
 #, kde-format
 msgid "No encryption"
-msgstr "ਕੋਈ ਇੰਕ੍ਰਿਪਸ਼ਨ ਨਹੀਂ"
+msgstr "ללא הצפנה"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "TLS ਇੰਕ੍ਰਿਪਸ਼ਨ"
+msgstr "הצפנת SSL/TLS"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:68
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "TLS ਇੰਕ੍ਰਿਪਸ਼ਨ"
+msgstr "הצפנת STARTTLS"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:74
 #, kde-format
 msgid "Authentication method"
-msgstr "ਪਰਾਮਣਕਿਤਾ ਢੰਗ"
+msgstr "שיטת אימות"
 
 #. i18n: ectx: label, entry (specifyHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
@@ -176,7 +178,7 @@ msgstr "ਪਰਾਮਣਕਿਤਾ ਢੰਗ"
 #: mailtransport.kcfg:105
 #, kde-format
 msgid "<!-- TODO -->"
-msgstr "<!-- TODO -->"
+msgstr "<!-- להשלמה -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
 #: mailtransport.kcfg:92
@@ -186,13 +188,15 @@ msgid ""
 "server. This is useful when your system's hostname may not be set correctly "
 "or to mask your system's true hostname."
 msgstr ""
+"יש לסמן את האפשרות הזאת כדי להשתמש בשם מארח מותאם אישית בעת הזדהות מול שרת "
+"הדוא״ל. נעשה בזה שימוש כאשר שם המארח של המערכת שלך לא מוגדר נכון או כדי למסך "
+"את שם המארח האמיתי של המערכת שלך."
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
 #: mailtransport.kcfg:97
-#, fuzzy, kde-format
-#| msgid "The name that will be used when referring to this server."
+#, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
-msgstr "ਨਾਂ, ਜੋ ਕਿ ਇਸ ਸਰਵਰ ਬਾਰੇ ਜਾਣਕਾਰੀ ਦੇਣ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
+msgstr "נא למלא את שם המארח לשימוש בעת הזדהות מול השרת."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:101
@@ -201,6 +205,8 @@ msgid ""
 "Check this option to use a custom sender address when identifying to the "
 "mail server. If not checked, the address from the identity is used."
 msgstr ""
+"יש לסמן את האפשרות הזאת כדי להשתמש בכתובת מוען מותאמת אישית בעת הזדהות מול "
+"שרת הדוא״ל. אם האפשרות לא מסומנת, ייעשה שימוש בכתובת מהזהות."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:106
@@ -208,14 +214,14 @@ msgstr ""
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
 "address."
-msgstr ""
+msgstr "נא למלא את הכתובת לשימוש לדריסת כתובת המוען כברירת מחדל."
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
 #: mailtransport.kcfg:109 plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
-msgstr ""
+msgstr "התחברות באמצעות הגדרות המתווך של המערכת"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
 #: mailtransport.kcfg:110
@@ -224,33 +230,35 @@ msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
 "server."
 msgstr ""
+"אם האפשרות מסומנת, ייעשה שימוש בהגדרות המתווך של המערכת כדי להתחבר לשרת "
+"הדוא״ל."
 
 #: plugins/smtp/smtpconfigwidget.cpp:148
 #, kde-format
 msgid "The password to send to the server for authorization."
-msgstr "ਸਰਵਰ ਨੂੰ ਪਰਮਾਣਕਿਤਾ ਭੇਜਣ ਲਈ ਪਾਸਵਰਡ"
+msgstr "הסיסמה לשליחה לשרת לאימות."
 
 #: plugins/smtp/smtpconfigwidget.cpp:160 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
-msgstr ""
+msgstr "בדיקת היכולות נכשלה. נא לוודא שהפתחה ומצב האימות נכונים."
 
 #: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
-msgstr ""
+msgstr "בדיקת היכולות נכשלה"
 
 #: plugins/smtp/smtpjob.cpp:223
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
-msgstr "ਤੁਹਾਨੂੰ ਇਸ SMTP ਸਰਵਰ ਲਈ ਇੱਕ ਯੂਜ਼ਰ ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਦੇਣ ਦੀ ਲੋੜ ਹੈ।"
+msgstr "יש לספק שם משתמש וסיסמה כדי להשתמש בשרת ה־SMTP הזה."
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:27
 #, kde-format
@@ -261,210 +269,203 @@ msgstr "SMTP"
 #: plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
 msgid "An SMTP server on the Internet"
-msgstr "ਇੰਟਰਨੈੱਟ ਉੱਤੇ SMTP ਸਰਵਰ"
+msgstr "שרת SMTP באינטרנט"
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:38
-#, fuzzy, kde-format
-#| msgid "Configure account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
-msgstr "ਅਕਾਊਂਟ ਸੰਰਚਨਾ"
+msgstr "הגדרת חשבון"
 
 #. i18n: ectx: attribute (title), widget (QWidget, smptTab)
 #: plugins/smtp/smtpsettings.ui:34
 #, kde-format
 msgctxt "general smtp settings"
 msgid "General"
-msgstr "ਆਮ"
+msgstr "כללי"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #: plugins/smtp/smtpsettings.ui:40
 #, kde-format
 msgid "Account Information"
-msgstr ""
+msgstr "פרטי החשבון"
 
 #. i18n: ectx: property (text), widget (QLabel, hostLabel)
 #: plugins/smtp/smtpsettings.ui:47
-#, fuzzy, kde-format
-#| msgid "Outgoing mail &server:"
+#, kde-format
 msgid "Outgoing &mail server:"
-msgstr "ਬਾਹਰੀ ਭੇਜਣ ਮੇਲ ਸਰਵਰ(&s):"
+msgstr "שרת ההודעות היו&צאות:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
 #: plugins/smtp/smtpsettings.ui:67
 #, kde-format
 msgid "Server &requires authentication"
-msgstr "ਸਰਵਰ ਲਈ ਪਰਮਾਣਕਿਤਾ ਦੀ ਲੋੜ ਹੈ(&r)"
+msgstr "השרת דורש &אימות"
 
 #. i18n: ectx: property (text), widget (QLabel, usernameLabel)
 #: plugins/smtp/smtpsettings.ui:77
 #, kde-format
 msgid "&Login:"
-msgstr "ਲਾਗਇਨ(&L):"
+msgstr "&שם כניסה:"
 
 #. i18n: ectx: property (text), widget (QLabel, passwordLabel)
 #: plugins/smtp/smtpsettings.ui:103
 #, kde-format
 msgid "P&assword:"
-msgstr "ਪਾਸਵਰਡ(&a):"
+msgstr "&סיסמה:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
 #: plugins/smtp/smtpsettings.ui:126
 #, kde-format
 msgid "&Store SMTP password"
-msgstr "&SMTP ਪਾਸਵਰਡ ਸੰਭਾਲੋ"
+msgstr "&אחסון סיסמת SMTP"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
 #: plugins/smtp/smtpsettings.ui:147
 #, kde-format
 msgctxt "advanced smtp settings"
 msgid "Advanced"
-msgstr "ਤਕਨੀਕੀ"
+msgstr "מתקדם"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
 #: plugins/smtp/smtpsettings.ui:153
 #, kde-format
 msgid "Connection Settings"
-msgstr ""
+msgstr "הגדרות החיבור"
 
 #. i18n: ectx: property (text), widget (QLabel, noAuthPossible)
 #: plugins/smtp/smtpsettings.ui:172
 #, kde-format
 msgid "This server does not support authentication"
-msgstr "ਇਹ ਸਰਵਰ ਪਰਮਾਣਕਿਤਾ ਲਈ ਸਹਿਯੋਗੀ ਨਹੀਂ"
+msgstr "השרת הזה לא תומך באימות"
 
 #. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
 #: plugins/smtp/smtpsettings.ui:189
 #, kde-format
 msgid "Auto Detect"
-msgstr ""
+msgstr "זיהוי אוטומטי"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: plugins/smtp/smtpsettings.ui:216
-#, fuzzy, kde-format
-#| msgid "Encryption"
+#, kde-format
 msgid "Encryption:"
-msgstr "ਇਕ੍ਰਿਪਸ਼ਨ"
+msgstr "הצפנה:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
 #: plugins/smtp/smtpsettings.ui:225
 #, kde-format
 msgid "&None"
-msgstr "ਕੋਈ ਨਹੀਂ(&N)"
+msgstr "&ללא"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
 #: plugins/smtp/smtpsettings.ui:232
-#, fuzzy, kde-format
-#| msgid "&SSL"
+#, kde-format
 msgid "&SSL/TLS"
-msgstr "&SSL"
+msgstr "&SSL/TLS"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
 #: plugins/smtp/smtpsettings.ui:239
-#, fuzzy, kde-format
-#| msgid "&TLS"
+#, kde-format
 msgid "START&TLS"
-msgstr "&TLS"
+msgstr "START&TLS"
 
 #. i18n: ectx: property (text), widget (QLabel, portLabel)
 #: plugins/smtp/smtpsettings.ui:248
 #, kde-format
 msgid "&Port:"
-msgstr "ਪੋਰਟ(&P):"
+msgstr "&פתחה:"
 
 #. i18n: ectx: property (text), widget (QLabel, authLabel)
 #: plugins/smtp/smtpsettings.ui:274
-#, fuzzy, kde-format
-#| msgid "Authentication method"
+#, kde-format
 msgid "Authentication:"
-msgstr "ਪਰਾਮਣਕਿਤਾ ਢੰਗ"
+msgstr "אימות:"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
 #: plugins/smtp/smtpsettings.ui:293
 #, kde-format
 msgid "SMTP Settings"
-msgstr ""
+msgstr "הגדרות SMTP"
 
 #. i18n: ectx: property (text), widget (QLabel, hostnameLabel)
 #: plugins/smtp/smtpsettings.ui:303
-#, fuzzy, kde-format
-#| msgid "&Host:"
+#, kde-format
 msgid "Hostna&me:"
-msgstr "ਹੋਸਟ(&H):"
+msgstr "שם המ&ארח:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/smtp/smtpsettings.ui:329
 #, kde-format
 msgid "Sender Address:"
-msgstr ""
+msgstr "כתובת המוען:"
 
 #. i18n: ectx: property (text), widget (QLabel, precommandLabel)
 #: plugins/smtp/smtpsettings.ui:346
 #, kde-format
 msgid "Precommand:"
-msgstr "ਪ੍ਰੀ-ਕਮਾਂਡ:"
+msgstr "הפקודה הטרומית:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
 #: plugins/smtp/smtpsettings.ui:376
 #, kde-format
 msgid "Sen&d custom hostname to server"
-msgstr "ਸਰਵਰ ਨੂੰ ਪਸੰਦੀਦਾ ਹੋਸਟ-ਨਾਂ ਭੇਜੋ(&d)"
+msgstr "שליחת שם מארח מותאם &אישית לשרת"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
 #: plugins/smtp/smtpsettings.ui:383
 #, kde-format
 msgid "Use custom sender address"
-msgstr ""
+msgstr "להשתמש בכתובת מוען מותאמת אישית"
 
 #: precommandjob.cpp:68
 #, kde-format
 msgid "Executing precommand '%1'."
-msgstr "ਪ੍ਰੀ-ਕਮਾਂਡ '%1' ਚਲਾਈ ਜਾ ਰਹੀ ਹੈ"
+msgstr "הפקודה הטרומית ‚%1’ מופעלת."
 
 #: precommandjob.cpp:75
 #, kde-format
 msgid "Unable to start precommand '%1'."
-msgstr "ਪ੍ਰੀ-ਕਮਾਂਡ '%1' ਸ਼ੁਰੂ ਨਹੀਂ ਕੀਤੀ ਜਾ ਸਕੀ।"
+msgstr "לא ניתן להפעיל את הפקודה הטרומית ‚%1’."
 
 #: precommandjob.cpp:77
 #, kde-format
 msgid "Error while executing precommand '%1'."
-msgstr "ਪ੍ਰੀ-ਕਮਾਂਡ '%1' ਚਲਾਉਣ ਦੌਰਾਨ ਗਲਤੀ।"
+msgstr "שגיאה בהרצת הפקודה הטרומית ‚%1’."
 
 #: precommandjob.cpp:93
 #, kde-format
 msgid "The precommand crashed."
-msgstr "ਪ੍ਰੀ-ਕਮਾਂਡ ਕਰੈਸ਼ ਹੋਈ।"
+msgstr "הפקודה הטרומית קרסה."
 
 #: precommandjob.cpp:96
 #, kde-format
 msgid "The precommand exited with code %1."
-msgstr "ਪ੍ਰੀ-ਕਮਾਂਡ ਕੋਡ %1 ਨਾਲ ਬੰਦ ਹੋਈ।"
+msgstr "הפקודה הטרומית יצאה עם הקוד %1."
 
 #: transport.cpp:81
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
-msgstr "%1 #%2"
+msgstr "%1  מס׳ %2"
 
 #: transport.cpp:131
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
-msgstr ""
+msgstr "טקסט גלוי"
 
 #: transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
-msgstr ""
+msgstr "אלמוני"
 
 #: transport.cpp:166
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
-msgstr "ਅਣਜਾਣ"
+msgstr "לא ידוע"
 
 #: transport.cpp:210
 #, kde-format
@@ -477,42 +478,47 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
+"QKeychain לא מצא מנגנון לאחסון הסיסמה שלך. מומלץ בחום להשתמש במנגנון חזק "
+"לניהול הסיסמאות שלך.\n"
+"עם זאת, אפשר לאחסן את הסיסמה בקובץ ההגדרות במקום. הסיסמה מאוחסנת בתצורה "
+"מעורפלת, אך אין להחשיב זאת לבטוח מפני ניסיונותפענוח אם איכשהו הקובץ מתגלגל "
+"לידיים זרות.\n"
+"לאחסן את הסיסמה לשרת ‚%1’ בקובץ ההגדרות?"
 
 #: transport.cpp:219
 #, kde-format
 msgid "KWallet Not Available"
-msgstr "ਕੇ-ਵਾਲਿਟ ਉਪਲੱਬਧ ਨਹੀਂ"
+msgstr "KWallet לא זמין"
 
 #: transport.cpp:220
 #, kde-format
 msgid "Store Password"
-msgstr "ਪਾਸਵਰਡ ਸੰਭਾਲੋ"
+msgstr "אחסון סיסמה"
 
 #: transport.cpp:221
 #, kde-format
 msgid "Do Not Store Password"
-msgstr "ਪਾਸਵਰਡ ਨਾ ਸੰਭਾਲੋ"
+msgstr "לא לאחסן סיסמה"
 
 #: transportjob.cpp:122
-#, fuzzy, kde-format
-#| msgid "The mail transport \"%1\" is not correctly configured."
+#, kde-format
 msgid "The outgoing account \"%1\" is not correctly configured."
-msgstr "ਮੇਲ ਟਰਾਂਸਪੋਰਟ \"%1\" ਠੀਕ ਤਰ੍ਹਾਂ ਸੰਰਚਿਤ ਨਹੀਂ ਹੈ।"
+msgstr "חשבון ההודעות היוצאות „%1” לא מוגדר נכון."
 
 #: transportmanager.cpp:224
 #, kde-format
 msgid "You must create an outgoing account before sending."
-msgstr "ਤੁਹਾਨੂੰ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਭੇਜਣ (outgoing) ਅਕਾਊਂਟ ਬਣਾਉਣਾ ਪਵੇਗਾ।"
+msgstr "צריך ליצור חשבון להודעות יוצאות לפני השליחה."
 
 #: transportmanager.cpp:225
 #, kde-format
 msgid "Create Account Now?"
-msgstr "ਅਕਾਊਂਟ ਹੁਣੇ ਬਣਾਉਣਾ ਹੈ?"
+msgstr "ליצור חשבון עכשיו?"
 
 #: transportmanager.cpp:226
 #, kde-format
 msgid "Create Account Now"
-msgstr "ਹੁਣੇ ਅਕਾਊਂਟ ਬਣਾਓ"
+msgstr "יצירת חשבון עכשיו"
 
 #: transportmanager.cpp:608
 #, kde-format
@@ -524,293 +530,168 @@ msgid ""
 "which stores sensitive data for you in a strongly encrypted file.\n"
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
+"תעבורות הדוא״ל הבאות מאחסנות את הסיסמאות שלהן בקובץ הגדרות לא מוצפן.\n"
+"מטעמי אבטחה, נא לשקול להסב את הסיסמאות האלו לאחסון ב־KWallet, כלי ניהול "
+"הארנקים של KDE,\n"
+"שמאחסן נתונים רגישים עבורך בקובץ עם הצפנה חזקה.\n"
+"להסב את הסיסמאות שלך ל־KWallet?"
 
 #: transportmanager.cpp:615
 #, kde-format
 msgid "Question"
-msgstr "ਸਵਾਲ"
+msgstr "שאלה"
 
 #: transportmanager.cpp:616
 #, kde-format
 msgid "Migrate"
-msgstr "ਮਾਈਗਰੇਟ"
+msgstr "הסבה"
 
 #: transportmanager.cpp:617
 #, kde-format
 msgid "Keep"
-msgstr "ਰੱਖੋ"
+msgstr "שמירה"
 
 #: transportmodel.cpp:71 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
-msgstr "ਨਾਂ"
+msgstr "שם"
 
 #: transportmodel.cpp:73 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
-msgstr "ਟਾਈਪ"
+msgstr "סוג"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
 #, kde-format
 msgid "Step One: Select Transport Type"
-msgstr ""
+msgstr "שלב ראשון: בחירת סוג תעבורה"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/addtransportdialog.ui:38
 #, kde-format
 msgctxt "The name of a mail transport"
 msgid "Name:"
-msgstr "ਨਾਂ:"
+msgstr "שם:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDefault)
 #: ui/addtransportdialog.ui:48
-#, fuzzy, kde-format
-#| msgid "Make this the default outgoing account."
+#, kde-format
 msgid "Make this the default outgoing account"
-msgstr "ਇਹ ਡਿਫਾਲਟ ਭੇਜਣ ਅਕਾਊਂਟ ਬਣਾਉ।"
+msgstr "להפוך את זה לחשבון ההודעות היוצאות כברירת מחדל"
 
 #. i18n: ectx: property (text), widget (QLabel, descLabel)
 #: ui/addtransportdialog.ui:61
 #, kde-format
 msgid "Select an account type from the list below:"
-msgstr "ਹੇਠਾਂ ਲਿਸਟ ਤੋਂ ਅਕਾਊਂਟ ਕਿਸਮ ਚੁਣੋ:"
+msgstr "נא לבחור סוג אחשבון מהרשימה שלהלן:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: ui/addtransportdialog.ui:81
 #, kde-format
 msgid "Type"
-msgstr "ਟਾਈਪ"
+msgstr "סוג"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: ui/addtransportdialog.ui:86
 #, kde-format
 msgid "Description"
-msgstr "ਵੇਰਵਾ"
+msgstr "תיאור"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidget.ui:17
 #, kde-format
 msgid "Remo&ve"
-msgstr "ਹਟਾਓ(&v)"
+msgstr "ה&סרה"
 
 #. i18n: ectx: property (text), widget (QPushButton, defaultButton)
 #: ui/transportmanagementwidget.ui:24
 #, kde-format
 msgid "&Set as Default"
-msgstr "ਡਿਫਾਲਟ ਸੈੱਟ ਕਰੋ(&S)"
+msgstr "ה&גדרה כברירת מחדל"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
-msgstr "ਸ਼ਾਮਲ(&A)..."
+msgstr "הוס&פה…"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidget.ui:61
 #, kde-format
 msgid "&Rename"
-msgstr "ਨਾਂ ਬਦਲੋ(&R)"
+msgstr "&שינוי שם"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
-msgstr "ਸੋਧ(&M)..."
+msgstr "&עריכה…"
 
 #: widgets/addtransportdialogng.cpp:94
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
-msgstr "ਬਾਹਰ ਭੇਜਣ ਅਕਾਊਂਟ ਬਣਾਓ"
+msgstr "יצירת חשבון הודעות יוצאות"
 
 #: widgets/addtransportdialogng.cpp:97
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
-msgstr "ਬਣਾਏ ਅਤੇ ਸੰਰਚਨਾ"
+msgstr "יצירה והגדרה"
 
 #: widgets/transportlistwidget.cpp:99
 #, kde-format
 msgctxt "@label the default mail transport"
 msgid " (Default)"
-msgstr " (ਡਿਫਾਲਟ)"
+msgstr " (ברירת מחדל)"
 
 #: widgets/transportmanagementwidget.cpp:138
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
-msgstr ""
+msgstr "להסיר את חשבון ההודעות היוצאות ‚%1’?"
 
 #: widgets/transportmanagementwidget.cpp:139
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "להסיר את חשבון ההודעות היוצא הזה?"
+msgstr[1] "להסיר את שני חשבונות ההודעות היוצאות האלה?"
+msgstr[2] "להסיר את %1 חשבונות ההודעות היוצאות האלה?"
+msgstr[3] "להסיר את %1 חשבונות ההודעות היוצאות האלה?"
 
 #: widgets/transportmanagementwidget.cpp:141
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgid "Remove outgoing account?"
-msgstr "ਬਾਹਰ ਭੇਜਣ ਅਕਾਊਂਟ ਬਣਾਓ"
+msgstr "להסיר חשבון הודעות יוצאות?"
 
 #: widgets/transportmanagementwidget.cpp:168
-#, fuzzy, kde-format
-#| msgid "A&dd..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Add..."
-msgstr "ਸ਼ਾਮਲ(&A)..."
+msgstr "הוספה…"
 
 #: widgets/transportmanagementwidget.cpp:173
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify..."
-msgstr "ਸੋਧ(&M)..."
+msgstr "עריכה…"
 
 #: widgets/transportmanagementwidget.cpp:176
-#, fuzzy, kde-format
-#| msgid "&Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr "ਨਾਂ ਬਦਲੋ(&R)"
+msgstr "שינוי שם"
 
 #: widgets/transportmanagementwidget.cpp:180
-#, fuzzy, kde-format
-#| msgid "Remo&ve"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr "ਹਟਾਓ(&v)"
+msgstr "הסרה"
 
 #: widgets/transportmanagementwidget.cpp:185
-#, fuzzy, kde-format
-#| msgid "&Set as Default"
+#, kde-format
 msgid "Set as Default"
-msgstr "ਡਿਫਾਲਟ ਸੈੱਟ ਕਰੋ(&S)"
-
-#~ msgid "SSL encryption"
-#~ msgstr "SSL ਇੰਕ੍ਰਿਪਸ਼ਨ"
-
-#~ msgid "Executing precommand"
-#~ msgstr "ਪ੍ਰੀ-ਕਮਾਂਡ ਚਲਾਈ ਜਾ ਰਹੀ ਹੈ"
-
-#~ msgid "Default Transport"
-#~ msgstr "ਡਿਫਾਲਟ ਟਰਾਂਸਪੋਰਟ"
-
-#~ msgid "Empty message."
-#~ msgstr "ਖਾਲੀ ਸੁਨੇਹਾ।"
-
-#~ msgid "Message has no recipients."
-#~ msgstr "ਸੁਨੇਹੇ ਵਿੱਚ ਕੋਈ ਪ੍ਰਾਪਤਕਰਤਾ ਨਹੀਂ।"
-
-#~ msgid "Unable to create SMTP job."
-#~ msgstr "SMTP ਜਾਬ ਬਣਾਉਣ ਲਈ ਅਸਮਰੱਥ।"
-
-#~ msgid "SMTP Server"
-#~ msgstr "SMTP ਸਰਵਰ"
-
-#~ msgid "Akonadi Resource"
-#~ msgstr "ਅਕੌਂਡੀ ਸਰੋਤ"
-
-#~ msgid "Transport type"
-#~ msgstr "ਟਰਾਂਸਪੋਰਟ ਟਾਈਪ"
-
-#, fuzzy
-#~| msgid "This transport cannot be configured."
-#~ msgid "This outgoing account cannot be configured."
-#~ msgstr "ਇਹ ਟਰਾਂਸਪੋਰਟ ਸੰਰਚਿਤ ਨਹੀਂ ਕੀਤਾ ਜਾ ਸਕਦਾ।"
-
-#, fuzzy
-#~| msgctxt "@option SMTP transport"
-#~| msgid "SMTP"
-#~ msgid "SMTP"
-#~ msgstr "SMTP"
-
-#~ msgid "Hos&tname:"
-#~ msgstr "ਹੋਸਟ-ਨਾਂ(&t):"
-
-#~ msgid "Local sendmail"
-#~ msgstr "ਲੋਕਲ sendmail"
-
-#~ msgid "Failed to execute mailer program %1"
-#~ msgstr "ਮੇਲਰ ਪਰੋਗਰਾਮ %1 ਚਲਾਉਣ ਲਈ ਫੇਲ੍ਹ"
-
-#~ msgid "Sendmail exited abnormally."
-#~ msgstr "sendmail ਗਲਤ ਢੰਗ ਨਾਲ ਖਤਮ ਹੋਈ।"
-
-#~ msgid "Sendmail exited abnormally: %1"
-#~ msgstr "Sendmail ਅਚਾਨਕ ਬੰਦ ਹੋਈ: %1"
-
-#~ msgctxt "@option sendmail transport"
-#~ msgid "Sendmail"
-#~ msgstr "Sendmail"
-
-#~ msgid "A local sendmail installation"
-#~ msgstr "ਲੋਕਲ sendmail ਇੰਸਟਾਲੇਸ਼ਨ"
-
-#~ msgid "Sendmail &Location:"
-#~ msgstr "Sendmail ਟਿਕਾਣਾ(&L):"
-
-#, fuzzy
-#~| msgid "Outgoing mail &server:"
-#~ msgid "Mail &server:"
-#~ msgstr "ਬਾਹਰੀ ਭੇਜਣ ਮੇਲ ਸਰਵਰ(&s):"
-
-#~ msgid "text"
-#~ msgstr "ਟੈਕਸਟ"
-
-#~ msgid "Check &What the Server Supports"
-#~ msgstr "ਚੈੱਕ ਕਰੋ ਕਿ ਸਰਵਰ ਕਿਸ ਲਈ ਸਹਾਇਕ ਹੈ(&W)"
-
-#~ msgid "Authentication Method"
-#~ msgstr "ਪਰਮਾਣਕਿਤਾ ਢੰਗ"
-
-#~ msgid "&LOGIN"
-#~ msgstr "&LOGIN"
-
-#~ msgid "&PLAIN"
-#~ msgstr "&PLAIN"
-
-#~ msgid "CRAM-MD&5"
-#~ msgstr "CRAM-MD&5"
-
-#~ msgid "&DIGEST-MD5"
-#~ msgstr "&DIGEST-MD5"
-
-#~ msgid "&GSSAPI"
-#~ msgstr "&GSSAPI"
-
-#~ msgid "&NTLM"
-#~ msgstr "&NTLM"
-
-#~ msgid "Transport: Sendmail"
-#~ msgstr "ਟਰਾਂਸਪੋਰਟ: Sendmail"
-
-#~ msgid "&Location:"
-#~ msgstr "ਟਿਕਾਣਾ(&L):"
-
-#~ msgid "Choos&e..."
-#~ msgstr "ਚੁਨੋ(&e)..."
-
-#~ msgid "Transport: SMTP"
-#~ msgstr "ਟਰਾਂਸਪੋਰਟ: SMTP"
-
-#~ msgid "1"
-#~ msgstr "1"
-
-#~ msgid "Use Sendmail"
-#~ msgstr "Sendmail ਵਰਤੋਂ"
-
-#~ msgid "Only local files allowed."
-#~ msgstr "ਕੇਵਲ ਲੋਕਲ ਫਾਇਲਾਂ ਮਨਜ਼ੂਰ ਹਨ।"
-
-#~ msgctxt "@title:window"
-#~ msgid "Add Transport"
-#~ msgstr "ਟਰਾਂਸਪੋਰਟ ਸ਼ਾਮਲ"
-
-#~ msgctxt "@title:window"
-#~ msgid "Modify Transport"
-#~ msgstr "ਟਰਾਂਸਪੋਰਟ ਸੋਧ"
+msgstr "הגדרה כברירת מחדל"

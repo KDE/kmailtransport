@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-14 00:38+0000\n"
+"POT-Creation-Date: 2024-04-16 00:38+0000\n"
 "PO-Revision-Date: 2024-03-17 18:30+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -524,13 +524,13 @@ msgstr ""
 msgid "Keep"
 msgstr ""
 
-#: transportmodel.cpp:71 widgets/transportlistview.cpp:27
+#: transportmodel.cpp:71 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr ""
 
-#: transportmodel.cpp:73 widgets/transportlistview.cpp:27
+#: transportmodel.cpp:73 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -615,7 +615,7 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr ""
 
-#: widgets/transportlistview.cpp:99
+#: widgets/transportlistwidget.cpp:99
 #, kde-format
 msgctxt "@label the default mail transport"
 msgid " (Default)"
