@@ -16,7 +16,6 @@ TransportTreeDelegate::~TransportTreeDelegate() = default;
 
 QWidget *TransportTreeDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
 {
-    qDebug() << " SSSSSSSSSSSSSSSSSSSSSSSSSSSSS";
     Q_UNUSED(index);
     Q_UNUSED(option);
     auto *lineEdit = new QLineEdit(parent);
