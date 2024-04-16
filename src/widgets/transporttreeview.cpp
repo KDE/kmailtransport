@@ -30,10 +30,11 @@ TransportTreeView::TransportTreeView(QWidget *parent)
     mTransportSortProxyModel->setSourceModel(model);
     setModel(mTransportSortProxyModel);
 
-    setEditTriggers(AllEditTriggers);
+    setEditTriggers(DoubleClicked);
     setColumnHidden(MailTransport::TransportModel::TransportIdentifierRole, true);
     setColumnHidden(MailTransport::TransportModel::DefaultRole, true);
     setItemDelegateForColumn(MailTransport::TransportModel::NameRole, new TransportTreeDelegate(this));
+    setUniformRowHeights(true);
 }
 
 TransportTreeView::~TransportTreeView() = default;
