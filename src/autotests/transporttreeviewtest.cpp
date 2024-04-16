@@ -4,19 +4,19 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "transportlistviewtest.h"
-#include "widgets/transportlistview.h"
+#include "transporttreeviewtest.h"
+#include "widgets/transporttreeview.h"
 #include <QHeaderView>
 #include <QTest>
-QTEST_MAIN(TransportListViewTest)
-TransportListViewTest::TransportListViewTest(QObject *parent)
+QTEST_MAIN(TransportTreeViewTest)
+TransportTreeViewTest::TransportTreeViewTest(QObject *parent)
     : QObject{parent}
 {
 }
 
-void TransportListViewTest::shouldHaveDefaultValues()
+void TransportTreeViewTest::shouldHaveDefaultValues()
 {
-    MailTransport::TransportListView w;
+    MailTransport::TransportTreeView w;
     QVERIFY(w.alternatingRowColors());
     QCOMPARE(w.selectionMode(), QAbstractItemView::SingleSelection);
     QCOMPARE(w.selectionBehavior(), QAbstractItemView::SelectRows);
@@ -27,4 +27,4 @@ void TransportListViewTest::shouldHaveDefaultValues()
     QVERIFY(!w.header()->sectionsMovable());
 }
 
-#include "moc_transportlistviewtest.cpp"
+#include "moc_transporttreeviewtest.cpp"

@@ -11,4 +11,4 @@ macro(add_mailtransport_test _source)
     )
 endmacro ()
 
-add_mailtransport_test(transportlistviewtest.cpp)
+add_mailtransport_test(transporttreeviewtest.cpp)

@@ -12,12 +12,12 @@ namespace MailTransport
 {
 class TransportSortProxyModel;
 class TransportActivitiesAbstract;
-class KMAILTRANSPORT_TESTS_EXPORT TransportListView : public QTreeView
+class KMAILTRANSPORT_TESTS_EXPORT TransportTreeView : public QTreeView
 {
     Q_OBJECT
 public:
-    explicit TransportListView(QWidget *parent = nullptr);
-    ~TransportListView() override;
+    explicit TransportTreeView(QWidget *parent = nullptr);
+    ~TransportTreeView() override;
 
     [[nodiscard]] TransportActivitiesAbstract *transportActivitiesAbstract() const;
     void setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract);

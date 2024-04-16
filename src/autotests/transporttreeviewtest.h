@@ -8,12 +8,12 @@
 
 #include <QObject>
 
-class TransportListViewTest : public QObject
+class TransportTreeViewTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit TransportListViewTest(QObject *parent = nullptr);
-    ~TransportListViewTest() override = default;
+    explicit TransportTreeViewTest(QObject *parent = nullptr);
+    ~TransportTreeViewTest() override = default;
 
 private Q_SLOTS:
     void shouldHaveDefaultValues();

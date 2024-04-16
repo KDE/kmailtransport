@@ -6,17 +6,22 @@
 
 #pragma once
 
-#include <QItemDelegate>
+#include <QStyledItemDelegate>
+class QLineEdit;
 namespace MailTransport
 {
-class TransportListDelegate : public QItemDelegate
+class TransportTreeDelegate : public QStyledItemDelegate
 {
 public:
-    explicit TransportListDelegate(QObject *parent = nullptr);
-    ~TransportListDelegate() override;
+    explicit TransportTreeDelegate(QObject *parent = nullptr);
+    ~TransportTreeDelegate() override;
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override;
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &) const override;
+
+private:
+    QLineEdit *mLineEdit = nullptr;
 };
 }

@@ -1,7 +1,7 @@
 // SPDX-FileCopyrightText: 2024 Laurent Montel <montel@kde.org>
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
-#include "widgets/transportlistview.h"
+#include "widgets/transporttreeview.h"
 #include <QApplication>
 #include <QVBoxLayout>
 #include <QWidget>
@@ -17,7 +17,7 @@ TransportListView::TransportListView(QWidget *parent)
     : QWidget(parent)
 {
     auto mainLayout = new QVBoxLayout(this);
-    auto treeview = new MailTransport::TransportListView(this);
+    auto treeview = new MailTransport::TransportTreeView(this);
     mainLayout->addWidget(treeview);
 }
 

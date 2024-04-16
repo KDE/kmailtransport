@@ -4,13 +4,14 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "transportlistview.h"
+#include "transporttreeview.h"
 #include "transportmodel.h"
 #include "transportsortproxymodel.h"
+#include "transporttreedelegate.h"
 #include <QHeaderView>
 
 using namespace MailTransport;
-TransportListView::TransportListView(QWidget *parent)
+TransportTreeView::TransportTreeView(QWidget *parent)
     : QTreeView(parent)
     , mTransportSortProxyModel(new TransportSortProxyModel(this))
 {
@@ -29,20 +30,22 @@ TransportListView::TransportListView(QWidget *parent)
     mTransportSortProxyModel->setSourceModel(model);
     setModel(mTransportSortProxyModel);
 
+    setEditTriggers(AllEditTriggers);
     setColumnHidden(MailTransport::TransportModel::TransportIdentifierRole, true);
     setColumnHidden(MailTransport::TransportModel::DefaultRole, true);
+    setItemDelegateForColumn(MailTransport::TransportModel::NameRole, new TransportTreeDelegate(this));
 }
 
-TransportListView::~TransportListView() = default;
+TransportTreeView::~TransportTreeView() = default;
 
-TransportActivitiesAbstract *TransportListView::transportActivitiesAbstract() const
+TransportActivitiesAbstract *TransportTreeView::transportActivitiesAbstract() const
 {
     return mTransportSortProxyModel->transportActivitiesAbstract();
 }
 
-void TransportListView::setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract)
+void TransportTreeView::setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract)
 {
     mTransportSortProxyModel->setTransportActivitiesAbstract(activitiesAbstract);
 }
 
-#include "moc_transportlistview.cpp"
+#include "moc_transporttreeview.cpp"
