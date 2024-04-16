@@ -11,3 +11,19 @@ TransportListDelegate::TransportListDelegate(QObject *parent)
 }
 
 TransportListDelegate::~TransportListDelegate() = default;
+
+QWidget *TransportListDelegate::createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const
+{
+    // TODO
+    return {};
+}
+
+void TransportListDelegate::setEditorData(QWidget *editor, const QModelIndex &index) const
+{
+    // TODO
+}
+
+void TransportListDelegate::setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const
+{
+    // TODO
+}
