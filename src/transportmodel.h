@@ -34,6 +34,8 @@ public:
     [[nodiscard]] int transportId(int index) const;
     [[nodiscard]] int indexOf(int transportId) const;
 
+    [[nodiscard]] Qt::ItemFlags flags(const QModelIndex &index) const override;
+
 private:
     MAILTRANSPORT_NO_EXPORT void updateComboboxList();
     QList<int> mTransportIds;

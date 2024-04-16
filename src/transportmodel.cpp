@@ -96,4 +96,14 @@ void TransportModel::updateComboboxList()
     endResetModel();
 }
 
+Qt::ItemFlags TransportModel::flags(const QModelIndex &index) const
+{
+    if (!index.isValid())
+        return Qt::NoItemFlags;
+
+    if (static_cast<TransportRoles>(index.column()) == NameRole) {
+        return Qt::ItemIsEditable | QAbstractItemModel::flags(index);
+    }
+    return QAbstractItemModel::flags(index);
+}
 #include "moc_transportmodel.cpp"
