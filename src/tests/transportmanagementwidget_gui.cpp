@@ -11,7 +11,7 @@
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    app.setApplicationName(QStringLiteral("addtransportnewng"));
+    app.setApplicationName(QStringLiteral("transportmanagementwidget"));
     QStandardPaths::setTestModeEnabled(true);
     auto t = new MailTransport::TransportManagementWidget();
     t->show();
