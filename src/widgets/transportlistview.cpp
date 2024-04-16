@@ -7,12 +7,23 @@
 #include "transportlistview.h"
 #include "transportmodel.h"
 #include "transportsortproxymodel.h"
+#include <QHeaderView>
 
 using namespace MailTransport;
 TransportListView::TransportListView(QWidget *parent)
     : QTreeView(parent)
     , mTransportSortProxyModel(new TransportSortProxyModel(this))
 {
+    setAlternatingRowColors(true);
+    setSelectionMode(SingleSelection);
+    setContextMenuPolicy(Qt::CustomContextMenu);
+    setSelectionBehavior(QAbstractItemView::SelectRows);
+    setRootIsDecorated(false);
+    setSortingEnabled(true);
+    setAllColumnsShowFocus(true);
+    header()->setSectionsMovable(false);
+    header()->setSectionResizeMode(QHeaderView::ResizeToContents);
+
     auto model = new MailTransport::TransportModel(this);
 
     mTransportSortProxyModel->setSourceModel(model);
