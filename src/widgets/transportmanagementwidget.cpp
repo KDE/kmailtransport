@@ -113,7 +113,7 @@ void TransportManagementWidgetPrivate::editClicked()
         return;
     }
 
-    const int currentId = ui.transportList->selectedItems().at(0)->data(0, Qt::UserRole).toInt();
+    const int currentId = ui.transportList->selectedItems().constFirst()->data(0, Qt::UserRole).toInt();
     Transport *transport = TransportManager::self()->transportById(currentId);
     TransportManager::self()->configureTransport(transport->identifier(), transport, q);
 }
@@ -124,7 +124,7 @@ void TransportManagementWidgetPrivate::renameClicked()
         return;
     }
 
-    ui.transportList->editItem(ui.transportList->selectedItems().at(0), 0);
+    ui.transportList->editItem(ui.transportList->selectedItems().constFirst(), 0);
 }
 
 void TransportManagementWidgetPrivate::removeClicked()
@@ -135,7 +135,7 @@ void TransportManagementWidgetPrivate::removeClicked()
     }
     const auto nbAccount{selectedItems.count()};
     const QString msg = (selectedItems.count() == 1)
-        ? i18n("Do you want to remove outgoing account '%1'?", ui.transportList->selectedItems().at(0)->text(0))
+        ? i18n("Do you want to remove outgoing account '%1'?", ui.transportList->selectedItems().constFirst()->text(0))
         : i18np("Do you really want to remove this %1 outgoing account?", "Do you really want to remove these %1 outgoing accounts?", nbAccount);
 
     const int rc = KMessageBox::questionTwoActions(q, msg, i18n("Remove outgoing account?"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
@@ -159,7 +159,7 @@ void TransportManagementWidgetPrivate::defaultClicked()
         return;
     }
 
-    TransportManager::self()->setDefaultTransport(ui.transportList->selectedItems().at(0)->data(0, Qt::UserRole).toInt());
+    TransportManager::self()->setDefaultTransport(ui.transportList->selectedItems().constFirst()->data(0, Qt::UserRole).toInt());
 }
 
 void TransportManagementWidgetPrivate::slotCustomContextMenuRequested(const QPoint &pos)
