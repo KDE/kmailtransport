@@ -42,6 +42,5 @@ void TransportTreeDelegate::setModelData(QWidget *editor, QAbstractItemModel *mo
 
 void TransportTreeDelegate::updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex & /*index*/) const
 {
-    qDebug() << option.rect;
     editor->setGeometry(option.rect);
 }
