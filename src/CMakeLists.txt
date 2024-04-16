@@ -183,6 +183,7 @@ install(FILES
 
 if(BUILD_TESTING)
     add_subdirectory(tests)
+    add_subdirectory(autotests)
     add_subdirectory(plugins/tests)
 endif()
 
