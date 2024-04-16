@@ -27,7 +27,7 @@ ecm_mark_as_test(transportcombobox_gui)
 target_link_libraries(transportcombobox_gui KPim6MailTransport KF6::I18n KF6::ConfigGui Qt::Widgets)
 
 ####
-add_executable(transportlistview_gui transportlistview_gui.cpp)
-ecm_mark_as_test(transportlistview_gui)
-target_link_libraries(transportlistview_gui KPim6MailTransport KF6::I18n Qt::Widgets Qt::Gui)
+add_executable(transporttreeview_gui transporttreeview_gui.cpp)
+ecm_mark_as_test(transporttreeview_gui)
+target_link_libraries(transporttreeview_gui KPim6MailTransport KF6::I18n Qt::Widgets Qt::Gui)
 
