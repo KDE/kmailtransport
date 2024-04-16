@@ -9,12 +9,16 @@
 namespace MailTransport
 {
 class TransportSortProxyModel;
+class TransportActivitiesAbstract;
 class TransportListView : public QTreeView
 {
     Q_OBJECT
 public:
     explicit TransportListView(QWidget *parent = nullptr);
     ~TransportListView() override;
+
+    [[nodiscard]] TransportActivitiesAbstract *transportActivitiesAbstract() const;
+    void setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract);
 
 private:
     TransportSortProxyModel *const mTransportSortProxyModel;

@@ -21,4 +21,14 @@ TransportListView::TransportListView(QWidget *parent)
 
 TransportListView::~TransportListView() = default;
 
+TransportActivitiesAbstract *TransportListView::transportActivitiesAbstract() const
+{
+    return mTransportSortProxyModel->transportActivitiesAbstract();
+}
+
+void TransportListView::setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract)
+{
+    mTransportSortProxyModel->setTransportActivitiesAbstract(activitiesAbstract);
+}
+
 #include "moc_transportlistview.cpp"
