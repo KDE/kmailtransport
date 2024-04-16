@@ -44,3 +44,5 @@ void TransportTreeDelegate::updateEditorGeometry(QWidget *editor, const QStyleOp
 {
     editor->setGeometry(option.rect);
 }
+
+#include "moc_transporttreedelegate.cpp"

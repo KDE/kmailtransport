@@ -12,6 +12,7 @@ namespace MailTransport
 {
 class TransportTreeDelegate : public QStyledItemDelegate
 {
+    Q_OBJECT
 public:
     explicit TransportTreeDelegate(QObject *parent = nullptr);
     ~TransportTreeDelegate() override;
