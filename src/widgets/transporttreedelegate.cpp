@@ -20,7 +20,7 @@ QWidget *TransportTreeDelegate::createEditor(QWidget *parent, const QStyleOption
     Q_UNUSED(option);
     auto *lineEdit = new QLineEdit(parent);
     auto *that = const_cast<TransportTreeDelegate *>(this);
-    connect(lineEdit, &QLineEdit::editingFinished, this, [=]() {
+    connect(lineEdit, &QLineEdit::editingFinished, this, [this, that]() {
         Q_EMIT that->commitData(mLineEdit);
         Q_EMIT that->closeEditor(mLineEdit);
     });

@@ -5,6 +5,7 @@
 */
 
 #include "transportmodel.h"
+#include "mailtransport_debug.h"
 #include "transportmanager.h"
 #include <KLocalizedString>
 
@@ -105,5 +106,31 @@ Qt::ItemFlags TransportModel::flags(const QModelIndex &index) const
         return Qt::ItemIsEditable | QAbstractItemModel::flags(index);
     }
     return QAbstractItemModel::flags(index);
+}
+
+bool TransportModel::setData(const QModelIndex &modelIndex, const QVariant &value, int role)
+{
+    if (!modelIndex.isValid()) {
+        qCWarning(MAILTRANSPORT_LOG) << "ERROR: invalid index";
+        return false;
+    }
+    if (role != Qt::EditRole) {
+        return false;
+    }
+    const int idx = modelIndex.row();
+    const auto transport = mTransportManager->transportById(mTransportIds[idx]);
+    switch (static_cast<TransportRoles>(modelIndex.column())) {
+    case NameRole: {
+        const QModelIndex newIndex = index(modelIndex.row(), NameRole);
+        Q_EMIT dataChanged(newIndex, newIndex);
+        transport->setName(value.toString());
+        transport->forceUniqueName();
+        transport->save();
+        return true;
+    }
+    default:
+        break;
+    }
+    return false;
 }
 #include "moc_transportmodel.cpp"
