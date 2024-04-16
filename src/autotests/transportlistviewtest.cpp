@@ -26,3 +26,5 @@ void TransportListViewTest::shouldHaveDefaultValues()
     QCOMPARE(w.contextMenuPolicy(), Qt::CustomContextMenu);
     QVERIFY(!w.header()->sectionsMovable());
 }
+
+#include "moc_transportlistviewtest.cpp"
