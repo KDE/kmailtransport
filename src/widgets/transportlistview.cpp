@@ -28,6 +28,9 @@ TransportListView::TransportListView(QWidget *parent)
 
     mTransportSortProxyModel->setSourceModel(model);
     setModel(mTransportSortProxyModel);
+
+    setColumnHidden(MailTransport::TransportModel::TransportIdentifierRole, true);
+    setColumnHidden(MailTransport::TransportModel::DefaultRole, true);
 }
 
 TransportListView::~TransportListView() = default;
