@@ -7,6 +7,7 @@
 #include "transportmanagementwidgetng.h"
 #include "transport.h"
 #include "transportmanager.h"
+#include "transportmodel.h"
 #include "ui_transportmanagementwidgetng.h"
 
 #include <KLocalizedString>
@@ -88,13 +89,12 @@ void TransportManagementWidgetNgPrivate::updateButtonState()
         ui.renameButton->setEnabled(nbItems == 1);
         ui.removeButton->setEnabled(nbItems >= 1);
         if (nbItems == 1) {
-#if 0 // TODO
-            if (ui.transportTreeView->currentItem()->data(0, Qt::UserRole) == TransportManager::self()->defaultTransportId()) {
+            const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();
+            if (index.data(TransportModel::TransportRoles::DefaultRole).toInt() == TransportManager::self()->defaultTransportId()) {
                 ui.defaultButton->setEnabled(false);
             } else {
                 ui.defaultButton->setEnabled(true);
             }
-#endif
         } else {
             ui.defaultButton->setEnabled(false);
         }
@@ -163,9 +163,9 @@ void TransportManagementWidgetNgPrivate::defaultClicked()
         return;
     }
 
-#if 0 // TODO
-    TransportManager::self()->setDefaultTransport(ui.transportTreeView->selectedItems().constFirst()->data(0, Qt::UserRole).toInt());
-#endif
+    const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();
+    qDebug() << " index " << index;
+    TransportManager::self()->setDefaultTransport(index.data(TransportModel::TransportRoles::DefaultRole).toInt());
 }
 
 void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QPoint &pos)
@@ -186,14 +186,13 @@ void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QP
         menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18nc("@action:inmenu", "Remove"), q, [this]() {
             removeClicked();
         });
-#if 0
-        if (index.data(0, Qt::UserRole) != TransportManager::self()->defaultTransportId()) {
+        const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();
+        if (index.data(TransportModel::TransportRoles::DefaultRole).toInt() != TransportManager::self()->defaultTransportId()) {
             menu.addSeparator();
             menu.addAction(i18n("Set as Default"), q, [this]() {
                 defaultClicked();
             });
         }
-#endif
     }
     menu.exec(ui.transportTreeView->viewport()->mapToGlobal(pos));
 }
