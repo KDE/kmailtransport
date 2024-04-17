@@ -111,12 +111,10 @@ void TransportManagementWidgetNgPrivate::editClicked()
     if (!ui.transportTreeView->selectionModel()->hasSelection()) {
         return;
     }
-#if 0 // TODO
-
-    const int currentId = ui.transportTreeView->selectedItems().constFirst()->data(0, Qt::UserRole).toInt();
-    Transport *transport = TransportManager::self()->transportById(currentId);
+    const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();
+    const QModelIndex modelIndex = ui.transportTreeView->model()->index(index.row(), TransportModel::TransportRoles::TransportIdentifierRole);
+    Transport *transport = TransportManager::self()->transportById(modelIndex.data().toInt());
     TransportManager::self()->configureTransport(transport->identifier(), transport, q);
-#endif
 }
 
 void TransportManagementWidgetNgPrivate::renameClicked()
@@ -124,9 +122,8 @@ void TransportManagementWidgetNgPrivate::renameClicked()
     if (!ui.transportTreeView->selectionModel()->hasSelection()) {
         return;
     }
-#if 0
-    ui.transportTreeView->editItem(ui.transportTreeView->selectedItems().constFirst(), 0);
-#endif
+    const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();
+    ui.transportTreeView->edit(index);
 }
 
 void TransportManagementWidgetNgPrivate::removeClicked()
@@ -136,9 +133,8 @@ void TransportManagementWidgetNgPrivate::removeClicked()
     }
     const auto nbAccount{ui.transportTreeView->selectionModel()->selectedRows().count()};
 
-#if 0 // TODO
     const QString msg = (nbAccount == 1)
-        ? i18n("Do you want to remove outgoing account '%1'?", ui.transportTreeView->selectedItems().constFirst()->text(0))
+        ? i18n("Do you want to remove outgoing account '%1'?", ui.transportTreeView->selectionModel()->selectedRows().constFirst().data().toString())
         : i18np("Do you really want to remove this %1 outgoing account?", "Do you really want to remove these %1 outgoing accounts?", nbAccount);
 
     const int rc = KMessageBox::questionTwoActions(q, msg, i18n("Remove outgoing account?"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
@@ -148,13 +144,13 @@ void TransportManagementWidgetNgPrivate::removeClicked()
 
     QList<Transport::Id> lst;
     lst.reserve(nbAccount);
-    for (QTreeViewItem *selecteditem : selectedItems) {
-        lst << selecteditem->data(0, Qt::UserRole).toInt();
+    for (const QModelIndex &index : ui.transportTreeView->selectionModel()->selectedRows()) {
+        const QModelIndex modelIndex = ui.transportTreeView->model()->index(index.row(), TransportModel::TransportRoles::TransportIdentifierRole);
+        lst << modelIndex.data().toInt();
     }
     for (const auto id : std::as_const(lst)) {
         TransportManager::self()->removeTransport(id);
     }
-#endif
 }
 
 void TransportManagementWidgetNgPrivate::defaultClicked()
@@ -164,8 +160,8 @@ void TransportManagementWidgetNgPrivate::defaultClicked()
     }
 
     const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();
-    qDebug() << " index " << index;
-    TransportManager::self()->setDefaultTransport(index.data(TransportModel::TransportRoles::DefaultRole).toInt());
+    const QModelIndex modelIndex = ui.transportTreeView->model()->index(index.row(), TransportModel::TransportRoles::TransportIdentifierRole);
+    TransportManager::self()->setDefaultTransport(modelIndex.data().toInt());
 }
 
 void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QPoint &pos)

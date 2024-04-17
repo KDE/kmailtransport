@@ -22,6 +22,8 @@ public:
     [[nodiscard]] TransportActivitiesAbstract *transportActivitiesAbstract() const;
     void setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract);
 
+    [[nodiscard]] TransportSortProxyModel *transportSortProxyModel() const;
+
 private:
     TransportSortProxyModel *const mTransportSortProxyModel;
 };

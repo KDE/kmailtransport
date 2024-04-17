@@ -49,4 +49,9 @@ void TransportTreeView::setTransportActivitiesAbstract(TransportActivitiesAbstra
     mTransportSortProxyModel->setTransportActivitiesAbstract(activitiesAbstract);
 }
 
+TransportSortProxyModel *TransportTreeView::transportSortProxyModel() const
+{
+    return mTransportSortProxyModel;
+}
+
 #include "moc_transporttreeview.cpp"
