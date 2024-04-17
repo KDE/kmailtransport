@@ -78,6 +78,7 @@ ecm_qt_declare_logging_category(KPim6MailTransport HEADER mailtransport_debug.h 
 ki18n_wrap_ui(KPim6MailTransport
     ui/addtransportdialog.ui
     ui/transportmanagementwidget.ui
+    ui/transportmanagementwidgetng.ui
     )
 
 kconfig_add_kcfg_files(KPim6MailTransport GENERATE_MOC transportbase.kcfgc)
