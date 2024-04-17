@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-16 00:38+0000\n"
+"POT-Creation-Date: 2024-04-17 00:38+0000\n"
 "PO-Revision-Date: 2022-12-31 15:14+0000\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English <kde-l10n-en_gb@kde.org>\n"
@@ -564,13 +564,13 @@ msgstr "Migrate"
 msgid "Keep"
 msgstr "Keep"
 
-#: transportmodel.cpp:71 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:72 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Name"
 
-#: transportmodel.cpp:73 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:74 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
