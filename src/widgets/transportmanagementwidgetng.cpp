@@ -77,8 +77,7 @@ TransportManagementWidgetNg::~TransportManagementWidgetNg() = default;
 
 void TransportManagementWidgetNgPrivate::updateButtonState()
 {
-#if 0 // TODO
-    const auto nbItems{ui.transportTreeView->selectedItems().count()};
+    const auto nbItems{ui.transportTreeView->selectionModel()->selectedRows().count()};
     if (nbItems == 0) {
         ui.editButton->setEnabled(false);
         ui.renameButton->setEnabled(false);
@@ -89,16 +88,17 @@ void TransportManagementWidgetNgPrivate::updateButtonState()
         ui.renameButton->setEnabled(nbItems == 1);
         ui.removeButton->setEnabled(nbItems >= 1);
         if (nbItems == 1) {
+#if 0 // TODO
             if (ui.transportTreeView->currentItem()->data(0, Qt::UserRole) == TransportManager::self()->defaultTransportId()) {
                 ui.defaultButton->setEnabled(false);
             } else {
                 ui.defaultButton->setEnabled(true);
             }
+#endif
         } else {
             ui.defaultButton->setEnabled(false);
         }
     }
-#endif
 }
 
 void TransportManagementWidgetNgPrivate::addClicked()
@@ -131,13 +131,13 @@ void TransportManagementWidgetNgPrivate::renameClicked()
 
 void TransportManagementWidgetNgPrivate::removeClicked()
 {
-#if 0 // TODO
-    const auto selectedItems{ui.transportTreeView->selectedItems()};
-    if (selectedItems.isEmpty()) {
+    if (!ui.transportTreeView->selectionModel()->hasSelection()) {
         return;
     }
-    const auto nbAccount{selectedItems.count()};
-    const QString msg = (selectedItems.count() == 1)
+    const auto nbAccount{ui.transportTreeView->selectionModel()->selectedRows().count()};
+
+#if 0 // TODO
+    const QString msg = (nbAccount == 1)
         ? i18n("Do you want to remove outgoing account '%1'?", ui.transportTreeView->selectedItems().constFirst()->text(0))
         : i18np("Do you really want to remove this %1 outgoing account?", "Do you really want to remove these %1 outgoing accounts?", nbAccount);
 
