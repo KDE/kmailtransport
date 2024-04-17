@@ -174,9 +174,8 @@ void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QP
     menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18nc("@action:inmenu", "Add..."), q, [this]() {
         addClicked();
     });
-#if 0 // TODO
-    QTreeViewItem *item = ui.transportTreeView->itemAt(pos);
-    if (item) {
+    const QModelIndex index = ui.transportTreeView->indexAt(pos);
+    if (index.isValid()) {
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action:inmenu", "Modify..."), q, [this]() {
             editClicked();
         });
@@ -187,14 +186,15 @@ void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QP
         menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18nc("@action:inmenu", "Remove"), q, [this]() {
             removeClicked();
         });
-        if (item->data(0, Qt::UserRole) != TransportManager::self()->defaultTransportId()) {
+#if 0
+        if (index.data(0, Qt::UserRole) != TransportManager::self()->defaultTransportId()) {
             menu.addSeparator();
             menu.addAction(i18n("Set as Default"), q, [this]() {
                 defaultClicked();
             });
         }
-    }
 #endif
+    }
     menu.exec(ui.transportTreeView->viewport()->mapToGlobal(pos));
 }
 
