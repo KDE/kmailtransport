@@ -68,10 +68,9 @@ TransportManagementWidgetNg::TransportManagementWidgetNg(QWidget *parent)
     connect(d->ui.transportTreeView, &QTreeView::customContextMenuRequested, this, [this](QPoint p) {
         d->slotCustomContextMenuRequested(p);
     });
-    // TODO
-    // connect(d->ui.transportTreeView, &QTreeView::itemSelectionChanged, this, [this]() {
-    //     d->updateButtonState();
-    // });
+    connect(d->ui.transportTreeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]() {
+        d->updateButtonState();
+    });
 }
 
 TransportManagementWidgetNg::~TransportManagementWidgetNg() = default;
@@ -109,10 +108,10 @@ void TransportManagementWidgetNgPrivate::addClicked()
 
 void TransportManagementWidgetNgPrivate::editClicked()
 {
-#if 0 // TODO
-    if (ui.transportTreeView->selectedItems().isEmpty()) {
+    if (!ui.transportTreeView->selectionModel()->hasSelection()) {
         return;
     }
+#if 0 // TODO
 
     const int currentId = ui.transportTreeView->selectedItems().constFirst()->data(0, Qt::UserRole).toInt();
     Transport *transport = TransportManager::self()->transportById(currentId);
@@ -122,11 +121,10 @@ void TransportManagementWidgetNgPrivate::editClicked()
 
 void TransportManagementWidgetNgPrivate::renameClicked()
 {
-#if 0 // TODO
-    if (ui.transportTreeView->selectedItems().isEmpty()) {
+    if (!ui.transportTreeView->selectionModel()->hasSelection()) {
         return;
     }
-
+#if 0
     ui.transportTreeView->editItem(ui.transportTreeView->selectedItems().constFirst(), 0);
 #endif
 }
@@ -161,22 +159,22 @@ void TransportManagementWidgetNgPrivate::removeClicked()
 
 void TransportManagementWidgetNgPrivate::defaultClicked()
 {
-#if 0 // TODO
-    if (ui.transportTreeView->selectedItems().isEmpty()) {
+    if (!ui.transportTreeView->selectionModel()->hasSelection()) {
         return;
     }
 
+#if 0 // TODO
     TransportManager::self()->setDefaultTransport(ui.transportTreeView->selectedItems().constFirst()->data(0, Qt::UserRole).toInt());
 #endif
 }
 
 void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QPoint &pos)
 {
-#if 0 // TODO
     QMenu menu(q);
     menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18nc("@action:inmenu", "Add..."), q, [this]() {
         addClicked();
     });
+#if 0 // TODO
     QTreeViewItem *item = ui.transportTreeView->itemAt(pos);
     if (item) {
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action:inmenu", "Modify..."), q, [this]() {
@@ -196,8 +194,8 @@ void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QP
             });
         }
     }
-    menu.exec(ui.transportTreeView->viewport()->mapToGlobal(pos));
 #endif
+    menu.exec(ui.transportTreeView->viewport()->mapToGlobal(pos));
 }
 
 #include "moc_transportmanagementwidgetng.cpp"
