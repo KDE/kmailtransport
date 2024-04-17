@@ -31,3 +31,8 @@ add_executable(transporttreeview_gui transporttreeview_gui.cpp)
 ecm_mark_as_test(transporttreeview_gui)
 target_link_libraries(transporttreeview_gui KPim6MailTransport KF6::I18n Qt::Widgets Qt::Gui)
 
+####
+add_executable(transportmanagementwidgetng_gui transportmanagementwidgetng_gui.cpp)
+ecm_mark_as_test(transportmanagementwidgetng_gui)
+target_link_libraries(transportmanagementwidgetng_gui KPim6MailTransport KF6::I18n Qt::Widgets Qt::Gui)
+
