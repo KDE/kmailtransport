@@ -32,6 +32,9 @@ target_sources(KPim6MailTransport PRIVATE
     widgets/transportconfigwidget.h
     widgets/transportmanagementwidget.h
 
+    widgets/transportmanagementwidgetng.cpp
+    widgets/transportmanagementwidgetng.h
+
     widgets/transporttreeview.h
     widgets/transporttreeview.cpp
 
