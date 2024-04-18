@@ -6,6 +6,7 @@
 
 #include "transportsortproxymodel.h"
 #include "transportactivitiesabstract.h"
+#include "transportmodel.h"
 
 using namespace MailTransport;
 TransportSortProxyModel::TransportSortProxyModel(QObject *parent)
@@ -18,7 +19,8 @@ TransportSortProxyModel::~TransportSortProxyModel() = default;
 bool TransportSortProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     if (mTransportActivitiesAbstract) {
-        return mTransportActivitiesAbstract->filterAcceptsRow(source_row, source_parent);
+        const auto activities = sourceModel()->index(source_row, 0).data(TransportModel::ActivitiesRole).toStringList();
+        return mTransportActivitiesAbstract->filterAcceptsRow(activities);
     }
     return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
 }
