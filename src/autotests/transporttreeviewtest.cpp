@@ -5,6 +5,7 @@
 */
 
 #include "transporttreeviewtest.h"
+#include "transportmodel.h"
 #include "widgets/transporttreeview.h"
 #include <QHeaderView>
 #include <QTest>
@@ -25,6 +26,10 @@ void TransportTreeViewTest::shouldHaveDefaultValues()
     QVERIFY(w.allColumnsShowFocus());
     QCOMPARE(w.contextMenuPolicy(), Qt::CustomContextMenu);
     QVERIFY(!w.header()->sectionsMovable());
+    QVERIFY(w.uniformRowHeights());
+    QVERIFY(w.isColumnHidden(MailTransport::TransportModel::TransportIdentifierRole));
+    QVERIFY(w.isColumnHidden(MailTransport::TransportModel::DefaultRole));
+    QCOMPARE(w.editTriggers(), QAbstractItemView::DoubleClicked);
 }
 
 #include "moc_transporttreeviewtest.cpp"
