@@ -27,6 +27,7 @@ TransportTreeView::TransportTreeView(QWidget *parent)
 
     auto model = new MailTransport::TransportModel(this);
 
+    model->setShowDefault(true);
     mTransportSortProxyModel->setSourceModel(model);
     setModel(mTransportSortProxyModel);
 

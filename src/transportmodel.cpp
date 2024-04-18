@@ -40,7 +40,7 @@ QVariant TransportModel::data(const QModelIndex &index, int role) const
     }
     switch (static_cast<TransportRoles>(index.column())) {
     case NameRole:
-        return transport->name();
+        return generateTransportName(transport);
     case TransportNameRole:
         return transport->transportType().name();
     case TransportIdentifierRole:
@@ -50,6 +50,15 @@ QVariant TransportModel::data(const QModelIndex &index, int role) const
     }
 
     return {};
+}
+
+QString TransportModel::generateTransportName(Transport *t) const
+{
+    QString str = t->name();
+    if (mShowDefault && TransportManager::self()->defaultTransportId() == t->id()) {
+        str += QLatin1Char(' ') + i18nc("Default transport", " (default)");
+    }
+    return str;
 }
 
 int TransportModel::rowCount(const QModelIndex &parent) const
@@ -133,4 +142,10 @@ bool TransportModel::setData(const QModelIndex &modelIndex, const QVariant &valu
     }
     return false;
 }
+
+void TransportModel::setShowDefault(bool show)
+{
+    mShowDefault = show;
+}
+
 #include "moc_transportmodel.cpp"

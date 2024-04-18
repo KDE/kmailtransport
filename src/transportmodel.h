@@ -11,6 +11,7 @@
 namespace MailTransport
 {
 class TransportManager;
+class Transport;
 class MAILTRANSPORT_EXPORT TransportModel : public QAbstractListModel
 {
     Q_OBJECT
@@ -38,9 +39,13 @@ public:
 
     [[nodiscard]] bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
+    void setShowDefault(bool show);
+
 private:
     MAILTRANSPORT_NO_EXPORT void updateComboboxList();
+    [[nodiscard]] MAILTRANSPORT_NO_EXPORT QString generateTransportName(Transport *t) const;
     QList<int> mTransportIds;
     TransportManager *const mTransportManager;
+    bool mShowDefault = false;
 };
 }
