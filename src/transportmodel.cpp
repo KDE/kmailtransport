@@ -45,6 +45,8 @@ QVariant TransportModel::data(const QModelIndex &index, int role) const
         return transport->transportType().name();
     case TransportIdentifierRole:
         return transport->id();
+    case ActivitiesRole:
+        return transport->activities();
     case DefaultRole:
         return TransportManager::self()->defaultTransportId();
     }
@@ -83,6 +85,7 @@ QVariant TransportModel::headerData(int section, Qt::Orientation orientation, in
             return i18nc("@title:column email transport type", "Type");
         case TransportIdentifierRole:
         case DefaultRole:
+        case ActivitiesRole:
             return {};
         }
     }

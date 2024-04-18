@@ -21,7 +21,8 @@ public:
         TransportNameRole,
         TransportIdentifierRole,
         DefaultRole,
-        LastColumn = DefaultRole,
+        ActivitiesRole,
+        LastColumn = ActivitiesRole,
     };
 
     explicit TransportModel(QObject *parent = nullptr);
