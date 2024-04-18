@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-17 00:38+0000\n"
+"POT-Creation-Date: 2024-04-18 00:38+0000\n"
 "PO-Revision-Date: 2013-09-20 03:53+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -621,31 +621,31 @@ msgid "Description"
 msgstr "Сипаттамасы"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17
+#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:17
 #, kde-format
 msgid "Remo&ve"
 msgstr "Ө&шіру"
 
 #. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24
+#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:24
 #, kde-format
 msgid "&Set as Default"
 msgstr "Әдетті қ&ылу"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54
+#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "Қ&осу..."
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61
+#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:61
 #, kde-format
 msgid "&Rename"
 msgstr "&Атауын өзгерту"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68
+#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
 #, kde-format
 msgid "&Modify..."
 msgstr "&Өзгерту..."
@@ -670,11 +670,13 @@ msgid " (Default)"
 msgstr " (Әдетті)"
 
 #: widgets/transportmanagementwidget.cpp:138
+#: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Шығыс '%1' тіркелгісін өшірмексіз бе?"
 
 #: widgets/transportmanagementwidget.cpp:139
+#: widgets/transportmanagementwidgetng.cpp:138
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -682,11 +684,13 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Шығыс '%1' тіркелгісін өшірмексіз бе?"
 
 #: widgets/transportmanagementwidget.cpp:141
+#: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Шығыс тіркелгісі өшірілсін бе?"
 
 #: widgets/transportmanagementwidget.cpp:168
+#: widgets/transportmanagementwidgetng.cpp:170
 #, fuzzy, kde-format
 #| msgid "Add..."
 msgctxt "@action:inmenu"
@@ -694,6 +698,7 @@ msgid "Add..."
 msgstr "Қосу..."
 
 #: widgets/transportmanagementwidget.cpp:173
+#: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
@@ -701,6 +706,7 @@ msgid "Modify..."
 msgstr "Өзгерту..."
 
 #: widgets/transportmanagementwidget.cpp:176
+#: widgets/transportmanagementwidgetng.cpp:178
 #, fuzzy, kde-format
 #| msgid "Rename"
 msgctxt "@action:inmenu"
@@ -708,6 +714,7 @@ msgid "Rename"
 msgstr "Атауын өзгерту"
 
 #: widgets/transportmanagementwidget.cpp:180
+#: widgets/transportmanagementwidgetng.cpp:182
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:inmenu"
@@ -715,6 +722,7 @@ msgid "Remove"
 msgstr "Өшіру"
 
 #: widgets/transportmanagementwidget.cpp:185
+#: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"
 msgstr "Әдетті қылу"

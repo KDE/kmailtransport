@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-17 00:38+0000\n"
+"POT-Creation-Date: 2024-04-18 00:38+0000\n"
 "PO-Revision-Date: 2024-02-17 12:53+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -599,31 +599,31 @@ msgid "Description"
 msgstr "설명"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17
+#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:17
 #, kde-format
 msgid "Remo&ve"
 msgstr "삭제(&V)"
 
 #. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24
+#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:24
 #, kde-format
 msgid "&Set as Default"
 msgstr "기본값으로 설정(&S)"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54
+#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "추가(&D)..."
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61
+#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:61
 #, kde-format
 msgid "&Rename"
 msgstr "이름 바꾸기(&R)"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68
+#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
 #, kde-format
 msgid "&Modify..."
 msgstr "수정(&M)..."
@@ -647,22 +647,26 @@ msgid " (Default)"
 msgstr " (기본값)"
 
 #: widgets/transportmanagementwidget.cpp:138
+#: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "발신 계정 '%1'을(를) 삭제하시겠습니까?"
 
 #: widgets/transportmanagementwidget.cpp:139
+#: widgets/transportmanagementwidgetng.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "발신 계정 %1개를 삭제하시겠습니까?"
 
 #: widgets/transportmanagementwidget.cpp:141
+#: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "발신 계정 삭제?"
 
 #: widgets/transportmanagementwidget.cpp:168
+#: widgets/transportmanagementwidgetng.cpp:170
 #, fuzzy, kde-format
 #| msgid "Add..."
 msgctxt "@action:inmenu"
@@ -670,6 +674,7 @@ msgid "Add..."
 msgstr "추가..."
 
 #: widgets/transportmanagementwidget.cpp:173
+#: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
@@ -677,6 +682,7 @@ msgid "Modify..."
 msgstr "수정..."
 
 #: widgets/transportmanagementwidget.cpp:176
+#: widgets/transportmanagementwidgetng.cpp:178
 #, fuzzy, kde-format
 #| msgid "Rename"
 msgctxt "@action:inmenu"
@@ -684,6 +690,7 @@ msgid "Rename"
 msgstr "이름 바꾸기"
 
 #: widgets/transportmanagementwidget.cpp:180
+#: widgets/transportmanagementwidgetng.cpp:182
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:inmenu"
@@ -691,6 +698,7 @@ msgid "Remove"
 msgstr "삭제"
 
 #: widgets/transportmanagementwidget.cpp:185
+#: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"
 msgstr "기본값으로 설정"

@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-17 00:38+0000\n"
+"POT-Creation-Date: 2024-04-18 00:38+0000\n"
 "PO-Revision-Date: 2024-04-14 15:14+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -623,31 +623,31 @@ msgid "Description"
 msgstr "Descrición"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17
+#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:17
 #, kde-format
 msgid "Remo&ve"
 msgstr "&Retirar"
 
 #. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24
+#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:24
 #, kde-format
 msgid "&Set as Default"
 msgstr "&Converter no predeterminado"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54
+#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "Enga&dir…"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61
+#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:61
 #, kde-format
 msgid "&Rename"
 msgstr "&Renomear"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68
+#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
 #, kde-format
 msgid "&Modify..."
 msgstr "&Modificar…"
@@ -671,11 +671,13 @@ msgid " (Default)"
 msgstr " (Predeterminado)"
 
 #: widgets/transportmanagementwidget.cpp:138
+#: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Quere retirar a conta saínte «%1»?"
 
 #: widgets/transportmanagementwidget.cpp:139
+#: widgets/transportmanagementwidgetng.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
@@ -683,35 +685,41 @@ msgstr[0] "Seguro que quere retirar esta conta saínte?"
 msgstr[1] "Seguro que quere retirar estas %1 contas saíntes?"
 
 #: widgets/transportmanagementwidget.cpp:141
+#: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Retirar a conta saínte?"
 
 #: widgets/transportmanagementwidget.cpp:168
+#: widgets/transportmanagementwidgetng.cpp:170
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Engadir…"
 
 #: widgets/transportmanagementwidget.cpp:173
+#: widgets/transportmanagementwidgetng.cpp:175
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Modificar…"
 
 #: widgets/transportmanagementwidget.cpp:176
+#: widgets/transportmanagementwidgetng.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Renomear"
 
 #: widgets/transportmanagementwidget.cpp:180
+#: widgets/transportmanagementwidgetng.cpp:182
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Retirar"
 
 #: widgets/transportmanagementwidget.cpp:185
+#: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"
 msgstr "Facer predeterminado"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_extragear-utils_kdiff3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-17 00:38+0000\n"
+"POT-Creation-Date: 2024-04-18 00:38+0000\n"
 "PO-Revision-Date: 2010-12-22 05:05+0700\n"
 "Last-Translator: Seng Sutha <Sutha@khmeros.info>\n"
 "Language-Team: Khmer [km] <Support@khmeros.info>\n"
@@ -620,31 +620,31 @@ msgid "Description"
 msgstr "សេចក្តី​ពិពណ៌នា​"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17
+#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:17
 #, kde-format
 msgid "Remo&ve"
 msgstr "យកចេញ​"
 
 #. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24
+#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:24
 #, kde-format
 msgid "&Set as Default"
 msgstr "កំណត់​ជា​លំនាំដើម​"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54
+#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "បន្ថែម..."
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61
+#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:61
 #, kde-format
 msgid "&Rename"
 msgstr "ប្តូរ​ឈ្មោះ​"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68
+#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
 #, kde-format
 msgid "&Modify..."
 msgstr "កែប្រែ..."
@@ -669,11 +669,13 @@ msgid " (Default)"
 msgstr " (លំនាំដើម)"
 
 #: widgets/transportmanagementwidget.cpp:138
+#: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "តើ​អ្នក​ចង់​យក​គណនី​ចេញ '%1' ចេញ​ដែរ​ឬ​ទេ ?"
 
 #: widgets/transportmanagementwidget.cpp:139
+#: widgets/transportmanagementwidgetng.cpp:138
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -681,11 +683,13 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "តើ​អ្នក​ចង់​យក​គណនី​ចេញ '%1' ចេញ​ដែរ​ឬ​ទេ ?"
 
 #: widgets/transportmanagementwidget.cpp:141
+#: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "យក​គណនី​ចេញ​ចេញ​ឬ ?"
 
 #: widgets/transportmanagementwidget.cpp:168
+#: widgets/transportmanagementwidgetng.cpp:170
 #, fuzzy, kde-format
 #| msgid "A&dd..."
 msgctxt "@action:inmenu"
@@ -693,6 +697,7 @@ msgid "Add..."
 msgstr "បន្ថែម..."
 
 #: widgets/transportmanagementwidget.cpp:173
+#: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
@@ -700,6 +705,7 @@ msgid "Modify..."
 msgstr "កែប្រែ..."
 
 #: widgets/transportmanagementwidget.cpp:176
+#: widgets/transportmanagementwidgetng.cpp:178
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgctxt "@action:inmenu"
@@ -707,6 +713,7 @@ msgid "Rename"
 msgstr "ប្តូរ​ឈ្មោះ​"
 
 #: widgets/transportmanagementwidget.cpp:180
+#: widgets/transportmanagementwidgetng.cpp:182
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
 msgctxt "@action:inmenu"
@@ -714,6 +721,7 @@ msgid "Remove"
 msgstr "យកចេញ​"
 
 #: widgets/transportmanagementwidget.cpp:185
+#: widgets/transportmanagementwidgetng.cpp:188
 #, fuzzy, kde-format
 #| msgid "&Set as Default"
 msgid "Set as Default"
