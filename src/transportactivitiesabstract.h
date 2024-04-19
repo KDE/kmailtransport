@@ -17,7 +17,7 @@ public:
     explicit TransportActivitiesAbstract(QObject *parent = nullptr);
     ~TransportActivitiesAbstract() override;
 
-    virtual bool filterAcceptsRow(const QStringList &activities) const = 0;
+    [[nodiscard]] virtual bool filterAcceptsRow(const QStringList &activities) const = 0;
 
     [[nodiscard]] virtual bool hasActivitySupport() const = 0;
 
