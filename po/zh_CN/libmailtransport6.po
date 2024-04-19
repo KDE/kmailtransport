@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-18 00:38+0000\n"
+"POT-Creation-Date: 2024-04-19 00:38+0000\n"
 "PO-Revision-Date: 2024-04-16 13:59\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -544,13 +544,21 @@ msgstr "迁移"
 msgid "Keep"
 msgstr "保留"
 
-#: transportmodel.cpp:72 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:61
+#, fuzzy, kde-format
+#| msgctxt "@label the default mail transport"
+#| msgid " (Default)"
+msgctxt "Default transport"
+msgid " (default)"
+msgstr "(默认)"
+
+#: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "名称"
 
-#: transportmodel.cpp:74 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:85 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"

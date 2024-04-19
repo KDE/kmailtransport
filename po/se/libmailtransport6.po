@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-18 00:38+0000\n"
+"POT-Creation-Date: 2024-04-19 00:38+0000\n"
 "PO-Revision-Date: 2009-02-17 17:43+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -532,13 +532,21 @@ msgstr ""
 msgid "Keep"
 msgstr "Doalat"
 
-#: transportmodel.cpp:72 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:61
+#, fuzzy, kde-format
+#| msgctxt "@label the default mail transport"
+#| msgid " (Default)"
+msgctxt "Default transport"
+msgid " (default)"
+msgstr " (Standárda)"
+
+#: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Namma"
 
-#: transportmodel.cpp:74 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:85 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
