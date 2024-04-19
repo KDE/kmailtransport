@@ -12,9 +12,4 @@ TransportActivitiesAbstract::TransportActivitiesAbstract(QObject *parent)
 
 TransportActivitiesAbstract::~TransportActivitiesAbstract() = default;
 
-bool TransportActivitiesAbstract::hasActivitySupport() const
-{
-    return false;
-}
-
 #include "moc_transportactivitiesabstract.cpp"
