@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-19 00:38+0000\n"
-"PO-Revision-Date: 2024-04-09 13:56+0300\n"
+"PO-Revision-Date: 2024-04-19 13:41+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -568,12 +568,10 @@ msgid "Keep"
 msgstr "Koru"
 
 #: transportmodel.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr " (Öntanımlı)"
+msgstr " (öntanımlı)"
 
 #: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
 #, kde-format

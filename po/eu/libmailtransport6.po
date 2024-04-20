@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-19 00:38+0000\n"
-"PO-Revision-Date: 2024-03-23 23:08+0100\n"
+"PO-Revision-Date: 2024-04-19 22:28+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -574,9 +574,7 @@ msgid "Keep"
 msgstr "Mantendu"
 
 #: transportmodel.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Lehenetsia)"
@@ -700,32 +698,28 @@ msgstr "Irteerako kontua kendu?"
 
 #: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Gehitu..."
 
 #: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Aldatu..."
 
 #: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Berrizendatu"
 
 #: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Kendu"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-19 00:38+0000\n"
-"PO-Revision-Date: 2024-04-09 07:05+0200\n"
+"PO-Revision-Date: 2024-04-19 13:44+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -562,12 +562,10 @@ msgid "Keep"
 msgstr "შენარჩუნება"
 
 #: transportmodel.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr " (ნაგულისხმები)"
+msgstr " (ნაგულისხმევი)"
 
 #: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
 #, kde-format
