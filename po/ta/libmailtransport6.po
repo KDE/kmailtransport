@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-19 00:38+0000\n"
-"PO-Revision-Date: 2024-03-17 18:30+0530\n"
+"PO-Revision-Date: 2024-04-21 21:39+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.0\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -226,23 +226,24 @@ msgstr ""
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
+"இயலுமைகளை சரிபார்க்க முடியவில்லை. புறையையும் சான்றளிப்பு முறையையும் சரிபார்க்கவும்."
 
 #: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
-msgstr ""
+msgstr "இயலுமைகள் சரிபார்ப்பு தோல்வியடைந்தது"
 
 #: plugins/smtp/smtpjob.cpp:223
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
-msgstr ""
+msgstr "இந்த STMP சேவையகத்தைப் பயன்படுத்த பயனர்பெயரும் கடவுச்சொல்லும் தேவை."
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:27
 #, kde-format
@@ -253,26 +254,26 @@ msgstr ""
 #: plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
 msgid "An SMTP server on the Internet"
-msgstr ""
+msgstr "இணையத்திலுள்ள SMTP சேவையகம்"
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:38
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
-msgstr ""
+msgstr "கணக்கை அமைப்பது"
 
 #. i18n: ectx: attribute (title), widget (QWidget, smptTab)
 #: plugins/smtp/smtpsettings.ui:34
 #, kde-format
 msgctxt "general smtp settings"
 msgid "General"
-msgstr ""
+msgstr "பொதுவானவை"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #: plugins/smtp/smtpsettings.ui:40
 #, kde-format
 msgid "Account Information"
-msgstr ""
+msgstr "கணக்கு விவரங்கள்"
 
 #. i18n: ectx: property (text), widget (QLabel, hostLabel)
 #: plugins/smtp/smtpsettings.ui:47
