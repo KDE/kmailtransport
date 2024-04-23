@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-19 00:38+0000\n"
-"PO-Revision-Date: 2024-04-09 09:19+0200\n"
+"PO-Revision-Date: 2024-04-22 10:12+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.02.1\n"
+"X-Generator: Lokalize 24.02.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
@@ -566,12 +566,10 @@ msgid "Keep"
 msgstr "Запазване"
 
 #: transportmodel.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr " (По подразбиране)"
+msgstr " (по подразбиране)"
 
 #: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
 #, kde-format
