@@ -560,12 +560,10 @@ msgid "Keep"
 msgstr "Ponechat"
 
 #: transportmodel.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr " (výchozí)"
+msgstr ""
 
 #: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
 #, kde-format
