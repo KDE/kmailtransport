@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-19 00:38+0000\n"
-"PO-Revision-Date: 2024-03-14 21:59+0100\n"
+"PO-Revision-Date: 2024-04-19 16:43+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -569,9 +569,7 @@ msgid "Keep"
 msgstr "Mantieni"
 
 #: transportmodel.cpp:61
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (predefinito)"
@@ -695,32 +693,28 @@ msgstr "Rimuovi l'account di uscita?"
 
 #: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Aggiungi..."
 
 #: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Modifica..."
 
 #: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Rinomina"
 
 #: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Rimuovi"
