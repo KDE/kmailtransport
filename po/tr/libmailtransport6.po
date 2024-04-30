@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-19 00:38+0000\n"
-"PO-Revision-Date: 2024-04-19 13:41+0300\n"
+"PO-Revision-Date: 2024-04-30 00:20+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.04.70\n"
+"X-Generator: Lokalize 24.07.70\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -435,17 +435,17 @@ msgstr "Özel gönderen adresi kullan"
 #: precommandjob.cpp:68
 #, kde-format
 msgid "Executing precommand '%1'."
-msgstr "‘%1’ ön komutu çalıştırılıyor."
+msgstr "“%1” ön komutu çalıştırılıyor."
 
 #: precommandjob.cpp:75
 #, kde-format
 msgid "Unable to start precommand '%1'."
-msgstr "‘%1’ ön komutu çalıştırılamadı."
+msgstr "“%1” ön komutu çalıştırılamadı."
 
 #: precommandjob.cpp:77
 #, kde-format
 msgid "Error while executing precommand '%1'."
-msgstr "‘%1’ ön komutu çalıştırılırken bir hata oluştu."
+msgstr "“%1” ön komutu çalıştırılırken bir hata oluştu."
 
 #: precommandjob.cpp:93
 #, kde-format
@@ -455,7 +455,7 @@ msgstr "Ön komut çöktü."
 #: precommandjob.cpp:96
 #, kde-format
 msgid "The precommand exited with code %1."
-msgstr "Ön komuttan ‘%1’ kodu ile çıkıldı."
+msgstr "Ön komuttan “%1” kodu ile çıkıldı."
 
 #: transport.cpp:81
 #, kde-format
@@ -499,7 +499,7 @@ msgstr ""
 "Parolalar karıştırılmış şekilde kaydedilir; ancak yapılandırma dosyanız "
 "birisinin eline geçerse parolanızın şifrelemesinin çözülemeyeceğini "
 "düşünmeyin.\n"
-"‘%1’ sunucusu için parolanızı yapılandırma dosyasında saklamak istiyor "
+"“%1” sunucusu için parolanızı yapılandırma dosyasında saklamak istiyor "
 "musunuz?"
 
 #: transport.cpp:219
