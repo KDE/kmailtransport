@@ -201,7 +201,7 @@ bool Transport::usrSave()
     if (requiresAuthentication() && storePassword() && d->passwordDirty) {
         const QString storePassword = d->password;
         auto writeJob = new WritePasswordJob(WALLET_FOLDER, this);
-        connect(writeJob, &Job::finished, this, [=] {
+        connect(writeJob, &Job::finished, this, [this, writeJob, storePassword] {
             if (writeJob->error()) {
                 qWarning(MAILTRANSPORT_LOG()) << "WritePasswordJob failed with: " << writeJob->errorString();
                 // wallet saving failed, ask if we should store in the config file instead
