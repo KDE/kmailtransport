@@ -9,7 +9,7 @@
 #include "transport.h"
 #include "transportjob.h"
 #include "transportmanager.h"
-#include "widgets/transportmanagementwidget.h"
+#include "widgets/transportmanagementwidgetng.h"
 #include <QVBoxLayout>
 
 #include <QApplication>
@@ -26,7 +26,7 @@ TransportMgr::TransportMgr()
 {
     auto vbox = new QVBoxLayout(this);
 
-    vbox->addWidget(new TransportManagementWidget(this));
+    vbox->addWidget(new TransportManagementWidgetNg(this));
     mComboBox = new TransportComboBox(this);
     mComboBox->setEditable(true);
     vbox->addWidget(mComboBox);

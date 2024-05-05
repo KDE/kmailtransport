@@ -22,7 +22,6 @@ target_sources(KPim6MailTransport PRIVATE
     widgets/transportconfigwidget.cpp
     widgets/transportcombobox.cpp
     widgets/transportlistwidget.cpp
-    widgets/transportmanagementwidget.cpp
     widgets/addtransportdialogng.cpp
 
     widgets/addtransportdialogng.h
@@ -30,7 +29,6 @@ target_sources(KPim6MailTransport PRIVATE
     widgets/transportlistwidget.h
     widgets/transportconfigwidget_p.h
     widgets/transportconfigwidget.h
-    widgets/transportmanagementwidget.h
 
     widgets/transportmanagementwidgetng.cpp
     widgets/transportmanagementwidgetng.h
@@ -80,7 +78,6 @@ ecm_qt_declare_logging_category(KPim6MailTransport HEADER mailtransport_debug.h 
 
 ki18n_wrap_ui(KPim6MailTransport
     ui/addtransportdialog.ui
-    ui/transportmanagementwidget.ui
     ui/transportmanagementwidgetng.ui
     )
 
@@ -144,7 +141,6 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
 ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
     HEADER_NAMES
     TransportComboBox
-    TransportManagementWidget
     TransportConfigWidget
     TransportManagementWidgetNg
     PREFIX MailTransport
