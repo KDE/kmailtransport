@@ -5,19 +5,19 @@
 */
 
 #pragma once
-
+#include "kmailtransport_private_export.h"
 #include <QStyledItemDelegate>
 class QLineEdit;
 namespace MailTransport
 {
-class TransportTreeDelegate : public QStyledItemDelegate
+class KMAILTRANSPORT_TESTS_EXPORT TransportTreeDelegate : public QStyledItemDelegate
 {
     Q_OBJECT
 public:
     explicit TransportTreeDelegate(QObject *parent = nullptr);
     ~TransportTreeDelegate() override;
 
-    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
+    [[nodiscard]] QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &option, const QModelIndex &index) const override;
     void setEditorData(QWidget *editor, const QModelIndex &index) const override;
     void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override;
     void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &) const override;
