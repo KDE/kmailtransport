@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-06 00:39+0000\n"
 "PO-Revision-Date: 2022-11-05 21:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -673,13 +673,11 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (oletus)"
 
-#: widgets/transportmanagementwidget.cpp:138
 #: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Haluatko poistaa lähtevän tilin %1?"
 
-#: widgets/transportmanagementwidget.cpp:139
 #: widgets/transportmanagementwidgetng.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -687,13 +685,11 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Haluatko varmasti poistaa tämän lähtevän postin tilin?"
 msgstr[1] "Haluatko varmasti poistaa nämä %1 lähtevän postin tiliä?"
 
-#: widgets/transportmanagementwidget.cpp:141
 #: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Poistetaanko lähtevä tili?"
 
-#: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
 #, fuzzy, kde-format
 #| msgid "Add..."
@@ -701,7 +697,6 @@ msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Lisää…"
 
-#: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
@@ -709,7 +704,6 @@ msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Muuta…"
 
-#: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
 #, fuzzy, kde-format
 #| msgid "Rename"
@@ -717,7 +711,6 @@ msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Muuta nimeä"
 
-#: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
 #, fuzzy, kde-format
 #| msgid "Remove"
@@ -725,7 +718,6 @@ msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Poista"
 
-#: widgets/transportmanagementwidget.cpp:185
 #: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"

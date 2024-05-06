@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-06 00:39+0000\n"
 "PO-Revision-Date: 2024-04-19 09:10+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -654,13 +654,11 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (ברירת מחדל)"
 
-#: widgets/transportmanagementwidget.cpp:138
 #: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "להסיר את חשבון ההודעות היוצאות ‚%1’?"
 
-#: widgets/transportmanagementwidget.cpp:139
 #: widgets/transportmanagementwidgetng.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -670,41 +668,35 @@ msgstr[1] "להסיר את שני חשבונות ההודעות היוצאות �
 msgstr[2] "להסיר את %1 חשבונות ההודעות היוצאות האלה?"
 msgstr[3] "להסיר את %1 חשבונות ההודעות היוצאות האלה?"
 
-#: widgets/transportmanagementwidget.cpp:141
 #: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "להסיר חשבון הודעות יוצאות?"
 
-#: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "הוספה…"
 
-#: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "עריכה…"
 
-#: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "שינוי שם"
 
-#: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "הסרה"
 
-#: widgets/transportmanagementwidget.cpp:185
 #: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"

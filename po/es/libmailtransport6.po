@@ -17,7 +17,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-06 00:39+0000\n"
 "PO-Revision-Date: 2024-04-21 00:25+0200\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -684,13 +684,11 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (Predeterminado)"
 
-#: widgets/transportmanagementwidget.cpp:138
 #: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "¿Quiere eliminar la cuenta saliente «%1»?"
 
-#: widgets/transportmanagementwidget.cpp:139
 #: widgets/transportmanagementwidgetng.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -698,41 +696,35 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "¿Realmente quiere eliminar esta cuenta saliente?"
 msgstr[1] "¿Realmente quiere eliminar estas %1 cuentas salientes?"
 
-#: widgets/transportmanagementwidget.cpp:141
 #: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "¿Eliminar cuenta saliente?"
 
-#: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Añadir..."
 
-#: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Modificar..."
 
-#: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Cambiar nombre"
 
-#: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Eliminar"
 
-#: widgets/transportmanagementwidget.cpp:185
 #: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"

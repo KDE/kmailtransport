@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-06 00:39+0000\n"
 "PO-Revision-Date: 2023-03-04 16:23+0100\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
@@ -672,13 +672,11 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (standard)"
 
-#: widgets/transportmanagementwidget.cpp:138
 #: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Er du sikker på at du vil fjerna kontoen «%1» for utgåande e-post?"
 
-#: widgets/transportmanagementwidget.cpp:139
 #: widgets/transportmanagementwidgetng.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -688,13 +686,11 @@ msgstr[0] ""
 msgstr[1] ""
 "Er du sikker på at du vil fjerna desse %1 kontoane for utgåande e-post?"
 
-#: widgets/transportmanagementwidget.cpp:141
 #: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Fjerna konto for utgåande e-post?"
 
-#: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
 #, fuzzy, kde-format
 #| msgid "Add..."
@@ -702,7 +698,6 @@ msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Legg til …"
 
-#: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
@@ -710,7 +705,6 @@ msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Endra …"
 
-#: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
 #, fuzzy, kde-format
 #| msgid "Rename"
@@ -718,7 +712,6 @@ msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Endra namn"
 
-#: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
 #, fuzzy, kde-format
 #| msgid "Remove"
@@ -726,7 +719,6 @@ msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Fjern"
 
-#: widgets/transportmanagementwidget.cpp:185
 #: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"

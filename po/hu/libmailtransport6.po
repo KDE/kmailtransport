@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-06 00:39+0000\n"
 "PO-Revision-Date: 2024-02-11 21:38+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -674,13 +674,11 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (Alapértelmezés)"
 
-#: widgets/transportmanagementwidget.cpp:138
 #: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Szeretné eltávolítani a(z) „%1” kimenő fiókot?"
 
-#: widgets/transportmanagementwidget.cpp:139
 #: widgets/transportmanagementwidgetng.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -688,13 +686,11 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Biztosan el szeretné távolítani ezt a(z) „%1” kimenő fiókot?"
 msgstr[1] "Biztosan el szeretné távolítani ezt a(z) „%1” kimenő fiókot?"
 
-#: widgets/transportmanagementwidget.cpp:141
 #: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Kimenő fiók eltávolítása?"
 
-#: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
 #, fuzzy, kde-format
 #| msgid "Add..."
@@ -702,7 +698,6 @@ msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Hozzáadás…"
 
-#: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
@@ -710,7 +705,6 @@ msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Módosítás…"
 
-#: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
 #, fuzzy, kde-format
 #| msgid "Rename"
@@ -718,7 +712,6 @@ msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Átnevezés"
 
-#: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
 #, fuzzy, kde-format
 #| msgid "Remove"
@@ -726,7 +719,6 @@ msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: widgets/transportmanagementwidget.cpp:185
 #: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"

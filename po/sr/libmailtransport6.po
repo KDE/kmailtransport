@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-06 00:39+0000\n"
 "PO-Revision-Date: 2017-09-28 18:00+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -693,13 +693,11 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (подразумевани)"
 
-#: widgets/transportmanagementwidget.cpp:138
 #: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Желите ли да уклоните одлазни налог „%1“?"
 
-#: widgets/transportmanagementwidget.cpp:139
 #: widgets/transportmanagementwidgetng.cpp:138
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
@@ -710,13 +708,11 @@ msgstr[1] "Желите ли да уклоните одлазни налог „
 msgstr[2] "Желите ли да уклоните одлазни налог „%1“?"
 msgstr[3] "Желите ли да уклоните одлазни налог „%1“?"
 
-#: widgets/transportmanagementwidget.cpp:141
 #: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr "Уклонити одлазни налог?"
 
-#: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
 #, fuzzy, kde-format
 #| msgid "Add..."
@@ -724,7 +720,6 @@ msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "Додај..."
 
-#: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
@@ -732,7 +727,6 @@ msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "Измени..."
 
-#: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
 #, fuzzy, kde-format
 #| msgid "Rename"
@@ -740,7 +734,6 @@ msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Преименуј"
 
-#: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
 #, fuzzy, kde-format
 #| msgid "Remove"
@@ -748,7 +741,6 @@ msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Уклони"
 
-#: widgets/transportmanagementwidget.cpp:185
 #: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-04-19 00:38+0000\n"
+"POT-Creation-Date: 2024-05-06 00:39+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -634,26 +634,22 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (كۆڭۈلدىكى)"
 
-#: widgets/transportmanagementwidget.cpp:138
 #: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr ""
 
-#: widgets/transportmanagementwidget.cpp:139
 #: widgets/transportmanagementwidgetng.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 
-#: widgets/transportmanagementwidget.cpp:141
 #: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
 msgstr ""
 
-#: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
 #, fuzzy, kde-format
 #| msgid "Add..."
@@ -661,7 +657,6 @@ msgctxt "@action:inmenu"
 msgid "Add..."
 msgstr "قوش…"
 
-#: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
@@ -669,7 +664,6 @@ msgctxt "@action:inmenu"
 msgid "Modify..."
 msgstr "ئۆزگەرت…"
 
-#: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
 #, fuzzy, kde-format
 #| msgid "Rename"
@@ -677,7 +671,6 @@ msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "ئات ئۆزگەرت"
 
-#: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
 #, fuzzy, kde-format
 #| msgid "Remove"
@@ -685,7 +678,6 @@ msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "چىقىرىۋەت"
 
-#: widgets/transportmanagementwidget.cpp:185
 #: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"
