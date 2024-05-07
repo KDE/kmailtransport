@@ -167,12 +167,12 @@ void TransportManagementWidgetNgPrivate::defaultClicked()
 void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QPoint &pos)
 {
     QMenu menu(q);
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18nc("@action:inmenu", "Add..."), q, [this]() {
+    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18nc("@action:inmenu", "Add…"), q, [this]() {
         addClicked();
     });
     const QModelIndex index = ui.transportTreeView->indexAt(pos);
     if (index.isValid()) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action:inmenu", "Modify..."), q, [this]() {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action:inmenu", "Modify…"), q, [this]() {
             editClicked();
         });
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18nc("@action:inmenu", "Rename"), q, [this]() {
