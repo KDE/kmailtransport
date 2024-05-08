@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-02-17 12:53+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -619,7 +619,7 @@ msgid "&Set as Default"
 msgstr "기본값으로 설정(&S)"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
+#: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "추가(&D)..."
@@ -631,9 +631,22 @@ msgid "&Rename"
 msgstr "이름 바꾸기(&R)"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
+msgstr "수정(&M)..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:54
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:68
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "&Modify…"
 msgstr "수정(&M)..."
 
 #: widgets/addtransportdialogng.cpp:94
@@ -671,17 +684,16 @@ msgid "Remove outgoing account?"
 msgstr "발신 계정 삭제?"
 
 #: widgets/transportmanagementwidgetng.cpp:170
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Add..."
-msgstr "추가..."
+msgid "Add…"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
-msgid "Modify..."
+msgid "Modify…"
 msgstr "수정..."
 
 #: widgets/transportmanagementwidgetng.cpp:178
@@ -702,6 +714,12 @@ msgstr "삭제"
 #, kde-format
 msgid "Set as Default"
 msgstr "기본값으로 설정"
+
+#, fuzzy
+#~| msgid "Add..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Add..."
+#~ msgstr "추가..."
 
 #~ msgid "SSL encryption"
 #~ msgstr "SSL 암호화"

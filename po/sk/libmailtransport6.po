@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2023-12-10 15:07+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -642,7 +642,7 @@ msgid "&Set as Default"
 msgstr "Nastaviť ako predvolené"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
+#: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "Pridať..."
@@ -654,9 +654,22 @@ msgid "&Rename"
 msgstr "P&remenovať"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
+msgstr "&Upraviť..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:54
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:68
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "&Modify…"
 msgstr "&Upraviť..."
 
 #: widgets/addtransportdialogng.cpp:94
@@ -696,17 +709,16 @@ msgid "Remove outgoing account?"
 msgstr "Odstrániť odchádzajúci účet?"
 
 #: widgets/transportmanagementwidgetng.cpp:170
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Add..."
-msgstr "Pridať..."
+msgid "Add…"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
-msgid "Modify..."
+msgid "Modify…"
 msgstr "Upraviť..."
 
 #: widgets/transportmanagementwidgetng.cpp:178
@@ -727,6 +739,12 @@ msgstr "Odstrániť"
 #, kde-format
 msgid "Set as Default"
 msgstr "Nastaviť ako predvolené"
+
+#, fuzzy
+#~| msgid "Add..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Add..."
+#~ msgstr "Pridať..."
 
 #~ msgid "SSL encryption"
 #~ msgstr "SSL kryptovanie"

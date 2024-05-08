@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2017-09-28 18:00+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -657,7 +657,7 @@ msgid "&Set as Default"
 msgstr "&Ово је подразумијевано"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
+#: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "&Додај..."
@@ -669,9 +669,22 @@ msgid "&Rename"
 msgstr "&Преименуј"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
+msgstr "&Измијени..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:54
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:68
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "&Modify…"
 msgstr "&Измијени..."
 
 # >> @title:window
@@ -715,17 +728,16 @@ msgid "Remove outgoing account?"
 msgstr "Уклонити одлазни налог?"
 
 #: widgets/transportmanagementwidgetng.cpp:170
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Add..."
-msgstr "Додај..."
+msgid "Add…"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
-msgid "Modify..."
+msgid "Modify…"
 msgstr "Измијени..."
 
 #: widgets/transportmanagementwidgetng.cpp:178
@@ -746,6 +758,12 @@ msgstr "Уклони"
 #, kde-format
 msgid "Set as Default"
 msgstr "Ово је подразумијевано"
+
+#, fuzzy
+#~| msgid "Add..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Add..."
+#~ msgstr "Додај..."
 
 # >> @item
 #~ msgid "SSL encryption"

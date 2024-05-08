@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-05-02 10:47+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -620,7 +620,7 @@ msgid "&Set as Default"
 msgstr "اج&علها الافتراضية"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
+#: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "أ&ضف..."
@@ -632,9 +632,22 @@ msgid "&Rename"
 msgstr "&غيّر الاسم"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
+msgstr "&عدّل..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:54
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:68
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "&Modify…"
 msgstr "&عدّل..."
 
 #: widgets/addtransportdialogng.cpp:94
@@ -679,13 +692,15 @@ msgstr "إزالة الحساب الصادر؟"
 #: widgets/transportmanagementwidgetng.cpp:170
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Add..."
-msgstr "أضف…"
+msgid "Add…"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Modify..."
 msgctxt "@action:inmenu"
-msgid "Modify..."
+msgid "Modify…"
 msgstr "عدّل…"
 
 #: widgets/transportmanagementwidgetng.cpp:178
@@ -704,6 +719,10 @@ msgstr "أزل"
 #, kde-format
 msgid "Set as Default"
 msgstr "اضبطها كمبدئيّة"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Add..."
+#~ msgstr "أضف…"
 
 #~ msgid "SSL encryption"
 #~ msgstr "تشفير SSL"

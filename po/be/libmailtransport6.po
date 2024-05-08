@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2008-01-01 23:05+0200\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -625,7 +625,7 @@ msgid "&Set as Default"
 msgstr "Зрабіць асноўным"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
+#: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "&Дадаць..."
@@ -638,9 +638,22 @@ msgid "&Rename"
 msgstr "&Імя:"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
+msgstr "&Змяніць..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:54
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:68
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "&Modify…"
 msgstr "&Змяніць..."
 
 #: widgets/addtransportdialogng.cpp:94
@@ -681,17 +694,16 @@ msgid "Remove outgoing account?"
 msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:170
-#, fuzzy, kde-format
-#| msgid "A&dd..."
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Add..."
-msgstr "&Дадаць..."
+msgid "Add…"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
-msgid "Modify..."
+msgid "Modify…"
 msgstr "&Змяніць..."
 
 #: widgets/transportmanagementwidgetng.cpp:178
@@ -713,6 +725,12 @@ msgstr "В&ыдаліць"
 #| msgid "Set Default"
 msgid "Set as Default"
 msgstr "Зрабіць асноўным"
+
+#, fuzzy
+#~| msgid "A&dd..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Add..."
+#~ msgstr "&Дадаць..."
 
 #, fuzzy
 #~| msgid "Encryption"

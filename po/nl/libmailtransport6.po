@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2024-04-19 11:24+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -642,7 +642,7 @@ msgid "&Set as Default"
 msgstr "Als &standaard instellen"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
+#: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "&Toevoegen..."
@@ -654,9 +654,22 @@ msgid "&Rename"
 msgstr "He&rnoemen"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
+msgstr "&Wijzigen..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:54
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:68
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "&Modify…"
 msgstr "&Wijzigen..."
 
 #: widgets/addtransportdialogng.cpp:94
@@ -697,13 +710,15 @@ msgstr "Uitgaand account verwijderen?"
 #: widgets/transportmanagementwidgetng.cpp:170
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Add..."
-msgstr "Toevoegen..."
+msgid "Add…"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Modify..."
 msgctxt "@action:inmenu"
-msgid "Modify..."
+msgid "Modify…"
 msgstr "Wijzigen..."
 
 #: widgets/transportmanagementwidgetng.cpp:178
@@ -722,6 +737,10 @@ msgstr "Verwijderen"
 #, kde-format
 msgid "Set as Default"
 msgstr "Als standaard instellen"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Add..."
+#~ msgstr "Toevoegen..."
 
 #~ msgid "SSL encryption"
 #~ msgstr "SSL-versleuteling"

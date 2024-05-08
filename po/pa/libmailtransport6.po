@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -611,7 +611,7 @@ msgid "&Set as Default"
 msgstr "ਡਿਫਾਲਟ ਸੈੱਟ ਕਰੋ(&S)"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
+#: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "ਸ਼ਾਮਲ(&A)..."
@@ -623,9 +623,22 @@ msgid "&Rename"
 msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
+msgstr "ਸੋਧ(&M)..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:54
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:68
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "&Modify…"
 msgstr "ਸੋਧ(&M)..."
 
 #: widgets/addtransportdialogng.cpp:94
@@ -666,17 +679,16 @@ msgid "Remove outgoing account?"
 msgstr "ਬਾਹਰ ਭੇਜਣ ਅਕਾਊਂਟ ਬਣਾਓ"
 
 #: widgets/transportmanagementwidgetng.cpp:170
-#, fuzzy, kde-format
-#| msgid "A&dd..."
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Add..."
-msgstr "ਸ਼ਾਮਲ(&A)..."
+msgid "Add…"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
-msgid "Modify..."
+msgid "Modify…"
 msgstr "ਸੋਧ(&M)..."
 
 #: widgets/transportmanagementwidgetng.cpp:178
@@ -698,6 +710,12 @@ msgstr "ਹਟਾਓ(&v)"
 #| msgid "&Set as Default"
 msgid "Set as Default"
 msgstr "ਡਿਫਾਲਟ ਸੈੱਟ ਕਰੋ(&S)"
+
+#, fuzzy
+#~| msgid "A&dd..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Add..."
+#~ msgstr "ਸ਼ਾਮਲ(&A)..."
 
 #~ msgid "SSL encryption"
 #~ msgstr "SSL ਇੰਕ੍ਰਿਪਸ਼ਨ"

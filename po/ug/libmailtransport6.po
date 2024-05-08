@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-06 00:39+0000\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
 "PO-Revision-Date: 2013-09-08 07:05+0900\n"
 "Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
@@ -598,7 +598,7 @@ msgid "&Set as Default"
 msgstr "كۆڭۈلدىكى قىلىپ بەلگىلە(&S)"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
+#: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "قوش(&D)…"
@@ -610,9 +610,22 @@ msgid "&Rename"
 msgstr "ئات ئۆزگەرت(&R)"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
+msgstr "ئۆزگەرت(&M)..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:54
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:68
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "&Modify…"
 msgstr "ئۆزگەرت(&M)..."
 
 #: widgets/addtransportdialogng.cpp:94
@@ -651,17 +664,16 @@ msgid "Remove outgoing account?"
 msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:170
-#, fuzzy, kde-format
-#| msgid "Add..."
+#, kde-format
 msgctxt "@action:inmenu"
-msgid "Add..."
-msgstr "قوش…"
+msgid "Add…"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
-msgid "Modify..."
+msgid "Modify…"
 msgstr "ئۆزگەرت…"
 
 #: widgets/transportmanagementwidgetng.cpp:178
@@ -682,6 +694,12 @@ msgstr "چىقىرىۋەت"
 #, kde-format
 msgid "Set as Default"
 msgstr "كۆڭۈلدىكى قىلىپ بەلگىلە"
+
+#, fuzzy
+#~| msgid "Add..."
+#~ msgctxt "@action:inmenu"
+#~ msgid "Add..."
+#~ msgstr "قوش…"
 
 #~ msgid "SSL encryption"
 #~ msgstr "SSL شىفىرلاش"

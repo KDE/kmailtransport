@@ -3,22 +3,22 @@
 # Lukáš Tinkl <ltinkl@redhat.com>, 2010.
 # Vít Pelčák <vit@pelcak.org>, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020.
 # Tomáš Chvátal <tomas.chvatal@gmail.com>, 2013.
-# Vit Pelcak <vit@pelcak.org>, 2022.
+# SPDX-FileCopyrightText: 2022, 2024 Vit Pelcak <vit@pelcak.org>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-06 00:39+0000\n"
-"PO-Revision-Date: 2022-10-26 11:18+0200\n"
-"Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
+"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"PO-Revision-Date: 2024-05-07 15:35+0200\n"
+"Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 22.08.2\n"
+"X-Generator: Lokalize 24.02.2\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -67,7 +67,7 @@ msgstr "Číslo portu serveru"
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
-msgstr ""
+msgstr "Číslo portu, na kterém SMTP server naslouchá. Výchozí hodnotou je 587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:36
@@ -161,13 +161,13 @@ msgstr "Žádné šifrování"
 #: mailtransport.kcfg:65
 #, kde-format
 msgid "SSL/TLS encryption"
-msgstr ""
+msgstr "Šifrování SSL/TLS"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:68
 #, kde-format
 msgid "STARTTLS encryption"
-msgstr ""
+msgstr "Šifrování STARTTLS"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:74
@@ -249,7 +249,7 @@ msgstr "Heslo, které bude odesláno serveru k ověření."
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
@@ -563,7 +563,7 @@ msgstr "Ponechat"
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr ""
+msgstr " (výchozí)"
 
 #: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
 #, kde-format
@@ -627,7 +627,7 @@ msgid "&Set as Default"
 msgstr "Na&stavit jako výchozí"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
+#: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
 msgstr "Při&dat..."
@@ -639,9 +639,22 @@ msgid "&Rename"
 msgstr "Pře&jmenovat"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
+msgstr "Z&měnit..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:54
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:68
+#, fuzzy, kde-format
+#| msgid "&Modify..."
+msgid "&Modify…"
 msgstr "Z&měnit..."
 
 #: widgets/addtransportdialogng.cpp:94
@@ -683,20 +696,22 @@ msgstr "Odstranit odchozí účet?"
 #: widgets/transportmanagementwidgetng.cpp:170
 #, kde-format
 msgctxt "@action:inmenu"
-msgid "Add..."
+msgid "Add…"
 msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
-#, kde-format
+#, fuzzy, kde-format
+#| msgctxt "@action:inmenu"
+#| msgid "Modify..."
 msgctxt "@action:inmenu"
-msgid "Modify..."
-msgstr ""
+msgid "Modify…"
+msgstr "Změnit..."
 
 #: widgets/transportmanagementwidgetng.cpp:178
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr ""
+msgstr "Přejmenovat"
 
 #: widgets/transportmanagementwidgetng.cpp:182
 #, kde-format
@@ -708,3 +723,7 @@ msgstr "Odstranit"
 #, kde-format
 msgid "Set as Default"
 msgstr "Nastavit jako výchozí"
+
+#~ msgctxt "@action:inmenu"
+#~ msgid "Add..."
+#~ msgstr "Přidat..."
