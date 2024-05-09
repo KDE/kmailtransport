@@ -726,9 +726,3 @@ msgstr "Fjern"
 #, kde-format
 msgid "Set as Default"
 msgstr "Velg som standard"
-
-#, fuzzy
-#~| msgid "Add..."
-#~ msgctxt "@action:inmenu"
-#~ msgid "Add..."
-#~ msgstr "Legg til …"

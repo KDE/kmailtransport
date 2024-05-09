@@ -698,9 +698,3 @@ msgstr "Váldde eret"
 #, kde-format
 msgid "Set as Default"
 msgstr "Geavat standárdan"
-
-#, fuzzy
-#~| msgid "A&dd..."
-#~ msgctxt "@action:inmenu"
-#~ msgid "Add..."
-#~ msgstr "L&asit …"

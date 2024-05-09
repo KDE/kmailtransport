@@ -637,10 +637,9 @@ msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:68
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
-msgstr "修改(&M)..."
+msgstr ""
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -683,11 +682,10 @@ msgid "Add…"
 msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr "修改(&M)..."
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:178
 #, kde-format
