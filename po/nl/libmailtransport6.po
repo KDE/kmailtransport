@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:39+0000\n"
-"PO-Revision-Date: 2024-04-19 11:24+0200\n"
+"PO-Revision-Date: 2024-05-08 10:47+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
@@ -663,14 +663,13 @@ msgstr "&Wijzigen..."
 #: ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&Toevoegen…"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:68
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
-msgstr "&Wijzigen..."
+msgstr "&Wijzigen…"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -711,15 +710,13 @@ msgstr "Uitgaand account verwijderen?"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Toevoegen…"
 
 #: widgets/transportmanagementwidgetng.cpp:175
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr "Wijzigen..."
+msgstr "Wijzigen…"
 
 #: widgets/transportmanagementwidgetng.cpp:178
 #, kde-format

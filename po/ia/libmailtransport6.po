@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:39+0000\n"
-"PO-Revision-Date: 2024-04-19 11:25+0200\n"
+"PO-Revision-Date: 2024-05-09 11:17+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -661,12 +661,11 @@ msgstr "&Modifica..."
 #: ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "A&dde…"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:68
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
 msgstr "&Modifica..."
 
@@ -709,12 +708,10 @@ msgstr "Remove conto exiente ?"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Adde..."
 
 #: widgets/transportmanagementwidgetng.cpp:175
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Modifica..."

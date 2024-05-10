@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:39+0000\n"
-"PO-Revision-Date: 2024-04-21 09:29+0200\n"
+"PO-Revision-Date: 2024-05-09 19:21+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -662,12 +662,11 @@ msgstr "&Modificar…"
 #: ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&Engadir…"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:68
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
 msgstr "&Modificar…"
 
@@ -710,12 +709,10 @@ msgstr "Retirar a conta saínte?"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Engadir…"
 
 #: widgets/transportmanagementwidgetng.cpp:175
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Modificar…"

@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:39+0000\n"
-"PO-Revision-Date: 2024-04-19 08:58+0200\n"
+"PO-Revision-Date: 2024-05-08 19:34+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -647,7 +647,7 @@ msgstr "E&stablix com a predeterminat"
 #: ui/transportmanagementwidget.ui:54
 #, kde-format
 msgid "A&dd..."
-msgstr "Afi&g..."
+msgstr "Afi&g…"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:61
@@ -659,20 +659,19 @@ msgstr "Ca&nvia el nom"
 #: ui/transportmanagementwidget.ui:68
 #, kde-format
 msgid "&Modify..."
-msgstr "&Modifica..."
+msgstr "&Modifica…"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Afi&g…"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:68
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
-msgstr "&Modifica..."
+msgstr "&Modifica…"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -713,15 +712,13 @@ msgstr "Voleu eliminar el compte eixint?"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Afig…"
 
 #: widgets/transportmanagementwidgetng.cpp:175
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr "Modifica..."
+msgstr "Modifica…"
 
 #: widgets/transportmanagementwidgetng.cpp:178
 #, kde-format
@@ -739,7 +736,3 @@ msgstr "Elimina"
 #, kde-format
 msgid "Set as Default"
 msgstr "Establix com a predeterminat"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Add..."
-#~ msgstr "Afig..."
