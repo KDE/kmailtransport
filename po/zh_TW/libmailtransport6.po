@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-08 00:39+0000\n"
-"PO-Revision-Date: 2024-05-03 03:32+0900\n"
+"PO-Revision-Date: 2024-05-10 17:06+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -637,14 +637,13 @@ msgstr "變更(&M)..."
 #: ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "新增(&D)…"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:68
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
-msgstr "變更(&M)..."
+msgstr "變更(&M)…"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -684,15 +683,13 @@ msgstr "要移除外寄帳號嗎？"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "新增…"
 
 #: widgets/transportmanagementwidgetng.cpp:175
-#, fuzzy, kde-format
-#| msgctxt "@action:inmenu"
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr "變更..."
+msgstr "變更…"
 
 #: widgets/transportmanagementwidgetng.cpp:178
 #, kde-format
