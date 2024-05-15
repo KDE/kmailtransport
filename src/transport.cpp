@@ -217,8 +217,8 @@ bool Transport::usrSave()
                                                            "configuration file?",
                                                            name()),
                                                       i18n("KWallet Not Available"),
-                                                      KGuiItem(i18n("Store Password")),
-                                                      KGuiItem(i18n("Do Not Store Password")))
+                                                      KGuiItem(i18nc("@action:button", "Store Password")),
+                                                      KGuiItem(i18nc("@action:button", "Do Not Store Password")))
                         == KMessageBox::ButtonCode::PrimaryAction) {
                     // write to config file
                     KConfigGroup group(config(), currentGroup());
