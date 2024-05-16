@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2010-02-28 18:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -554,12 +554,16 @@ msgid "KWallet Not Available"
 msgstr "ไม่มีโปรแกรมกระเป๋าคุมข้อมูล-K (KWallet) อยู่"
 
 #: transport.cpp:220
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Store Password"
+msgctxt "@action:button"
 msgid "Store Password"
 msgstr "จัดเก็บรหัสผ่าน"
 
 #: transport.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do Not Store Password"
+msgctxt "@action:button"
 msgid "Do Not Store Password"
 msgstr "ไม่ต้องจัดเก็บรหัสผ่าน"
 
@@ -580,7 +584,9 @@ msgid "Create Account Now?"
 msgstr "จะสร้างบัญชีผู้ใช้งานเดี๋ยวนี้หรือไม่ ?"
 
 #: transportmanager.cpp:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now"
+msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "สร้างบัญชีผู้ใช้งานเดี๋ยวนี้"
 
@@ -608,12 +614,16 @@ msgid "Question"
 msgstr "คำถาม"
 
 #: transportmanager.cpp:616
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Migrate"
+msgctxt "@action:button"
 msgid "Migrate"
 msgstr "ผนวกรวม"
 
 #: transportmanager.cpp:617
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep"
+msgctxt "@action:button"
 msgid "Keep"
 msgstr "คงไว้"
 

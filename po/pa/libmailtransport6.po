@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -484,12 +484,16 @@ msgid "KWallet Not Available"
 msgstr "ਕੇ-ਵਾਲਿਟ ਉਪਲੱਬਧ ਨਹੀਂ"
 
 #: transport.cpp:220
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Store Password"
+msgctxt "@action:button"
 msgid "Store Password"
 msgstr "ਪਾਸਵਰਡ ਸੰਭਾਲੋ"
 
 #: transport.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Do Not Store Password"
+msgctxt "@action:button"
 msgid "Do Not Store Password"
 msgstr "ਪਾਸਵਰਡ ਨਾ ਸੰਭਾਲੋ"
 
@@ -510,7 +514,9 @@ msgid "Create Account Now?"
 msgstr "ਅਕਾਊਂਟ ਹੁਣੇ ਬਣਾਉਣਾ ਹੈ?"
 
 #: transportmanager.cpp:226
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now"
+msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "ਹੁਣੇ ਅਕਾਊਂਟ ਬਣਾਓ"
 
@@ -531,12 +537,16 @@ msgid "Question"
 msgstr "ਸਵਾਲ"
 
 #: transportmanager.cpp:616
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Migrate"
+msgctxt "@action:button"
 msgid "Migrate"
 msgstr "ਮਾਈਗਰੇਟ"
 
 #: transportmanager.cpp:617
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep"
+msgctxt "@action:button"
 msgid "Keep"
 msgstr "ਰੱਖੋ"
 

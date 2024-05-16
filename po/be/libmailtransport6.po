@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-08 00:39+0000\n"
+"POT-Creation-Date: 2024-05-16 00:39+0000\n"
 "PO-Revision-Date: 2008-01-01 23:05+0200\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -493,14 +493,18 @@ msgid "KWallet Not Available"
 msgstr "KWallet недаступны"
 
 #: transport.cpp:220
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Store Password"
+msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Захаваць пароль"
 
 #: transport.cpp:221
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Store Password"
+msgctxt "@action:button"
 msgid "Do Not Store Password"
-msgstr ""
+msgstr "Захаваць пароль"
 
 #: transportjob.cpp:122
 #, kde-format
@@ -519,6 +523,7 @@ msgstr ""
 
 #: transportmanager.cpp:226
 #, kde-format
+msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr ""
 
@@ -540,11 +545,14 @@ msgstr "Пытанне"
 
 #: transportmanager.cpp:616
 #, kde-format
+msgctxt "@action:button"
 msgid "Migrate"
 msgstr ""
 
 #: transportmanager.cpp:617
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Keep"
+msgctxt "@action:button"
 msgid "Keep"
 msgstr "Пакінуць"
 
