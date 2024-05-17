@@ -488,12 +488,12 @@ msgstr "KWallet 不可用"
 #: transport.cpp:220
 #, kde-format
 msgid "Store Password"
-msgstr "存储密码"
+msgstr ""
 
 #: transport.cpp:221
 #, kde-format
 msgid "Do Not Store Password"
-msgstr "不存储密码"
+msgstr ""
 
 #: transportjob.cpp:122
 #, kde-format
@@ -513,7 +513,7 @@ msgstr "现在就创建账户吗？"
 #: transportmanager.cpp:226
 #, kde-format
 msgid "Create Account Now"
-msgstr "现在创建账户"
+msgstr ""
 
 #: transportmanager.cpp:608
 #, kde-format
@@ -537,12 +537,12 @@ msgstr "询问"
 #: transportmanager.cpp:616
 #, kde-format
 msgid "Migrate"
-msgstr "迁移"
+msgstr ""
 
 #: transportmanager.cpp:617
 #, kde-format
 msgid "Keep"
-msgstr "保留"
+msgstr ""
 
 #: transportmodel.cpp:61
 #, kde-format
