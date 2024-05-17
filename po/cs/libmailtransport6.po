@@ -499,18 +499,16 @@ msgid "KWallet Not Available"
 msgstr "KWallet není k dispozici"
 
 #: transport.cpp:220
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
-msgstr "Uložit heslo"
+msgstr ""
 
 #: transport.cpp:221
-#, fuzzy, kde-format
-#| msgid "Do Not Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
-msgstr "Neukládat heslo"
+msgstr ""
 
 #: transportjob.cpp:122
 #, kde-format
@@ -528,11 +526,10 @@ msgid "Create Account Now?"
 msgstr "Nyní vytvořit účet?"
 
 #: transportmanager.cpp:226
-#, fuzzy, kde-format
-#| msgid "Create Account Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
-msgstr "Nyní vytvořit účet"
+msgstr ""
 
 #: transportmanager.cpp:608
 #, kde-format
@@ -556,15 +553,13 @@ msgid "Question"
 msgstr "Dotaz"
 
 #: transportmanager.cpp:616
-#, fuzzy, kde-format
-#| msgid "Migrate"
+#, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
-msgstr "Převést"
+msgstr ""
 
 #: transportmanager.cpp:617
-#, fuzzy, kde-format
-#| msgid "Keep"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keep"
 msgstr "Ponechat"
