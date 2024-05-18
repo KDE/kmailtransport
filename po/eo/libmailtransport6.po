@@ -1,16 +1,16 @@
-# Translation of libmailtransport5.pot into esperanto.
+# Translation of libmailtransport6.pot into esperanto.
 # Copyright (C) 2009 Free Software Foundation, Inc.
 # This file is distributed under the same license as the kmailtransport package.
 # Axel Rousseau <axel@esperanto-jeunes.org>, 2009.
-# Oliver Kellogg <okellogg@users.sourceforge.net>, 2023.
+# Oliver Kellogg <olivermkellogg@gmail.com>, 2023.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-19 00:38+0000\n"
-"PO-Revision-Date: 2024-04-21 17:45+0100\n"
-"Last-Translator: Oliver Kellogg <okellogg@users.sourceforge.net>\n"
+"PO-Revision-Date: 2024-05-17 06:24+0100\n"
+"Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
 "MIME-Version: 1.0\n"
@@ -117,7 +117,7 @@ msgid ""
 "Check this option if your SMTP server requires authentication before "
 "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
 msgstr ""
-"Kontrolu ĉi tiun opcion se via SMTP-servilo postulas aŭtentikigon antaŭ "
+"Marku ĉi tiun elekteblon se via SMTP-servilo postulas aŭtentikigon antaŭ "
 "akcepti poŝton. Ĉi tio estas konata kiel 'Aŭtentikigita SMTP' aŭ simple "
 "ASMTP."
 
@@ -139,7 +139,7 @@ msgid ""
 "should not be considered secure from decryption efforts if access to the "
 "configuration file is obtained."
 msgstr ""
-"Marku ĉi tiun opcion por konservi vian pasvorton.\n"
+"Marku ĉi tiun elekteblon por konservi vian pasvorton.\n"
 "Se KWallet estas disponebla, la pasvorto estos konservita tie, kio estas "
 "konsiderata sekura.\n"
 "Tamen, se KWallet ne disponeblas, la pasvorto estos konservita en la agorda "
@@ -195,7 +195,7 @@ msgid ""
 "server. This is useful when your system's hostname may not be set correctly "
 "or to mask your system's true hostname."
 msgstr ""
-"Kontrolu ĉi tiun opcion por uzi kutiman gastigan nomon kiam vi identiĝas al "
+"Marku ĉi tiun elekteblon por uzi kutiman gastigan nomon kiam vi identiĝas al "
 "la poŝtservilo. Ĉi tio estas utila kiam la gastiga nomo de via sistemo eble "
 "ne estas ĝuste agordita aŭ por maski la veran gastigan nomon de via sistemo."
 
@@ -213,8 +213,8 @@ msgid ""
 "Check this option to use a custom sender address when identifying to the "
 "mail server. If not checked, the address from the identity is used."
 msgstr ""
-"Marku ĉi tiun opcion por uzi kutiman sendintadreson kiam vi identiĝas al la "
-"poŝtservilo. Se ne kontrolite, la adreso de la identeco estas uzata."
+"Marku ĉi tiun elekteblon por uzi kutiman sendintadreson kiam vi identiĝas al "
+"la poŝtservilo. Se ne markite, la adreso de la identeco estas uzata."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:106
@@ -265,7 +265,7 @@ msgstr ""
 #: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
-msgstr "Kontrolo Kapabloj Malsukcesis"
+msgstr "Kontroli Kapablojn Malsukcesis"
 
 #: plugins/smtp/smtpjob.cpp:223
 #, kde-format
@@ -295,7 +295,7 @@ msgstr "Agordi konton"
 #, kde-format
 msgctxt "general smtp settings"
 msgid "General"
-msgstr "Generalo"
+msgstr "Ĝenerala"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #: plugins/smtp/smtpsettings.ui:40
