@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:39+0000\n"
-"PO-Revision-Date: 2024-05-08 19:34+0200\n"
+"PO-Revision-Date: 2024-05-16 15:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
@@ -515,15 +515,13 @@ msgid "KWallet Not Available"
 msgstr "KWallet no està disponible"
 
 #: transport.cpp:220
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Emmagatzema la contrasenya"
 
 #: transport.cpp:221
-#, fuzzy, kde-format
-#| msgid "Do Not Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
 msgstr "No emmagatzemes la contrasenya"
@@ -544,8 +542,7 @@ msgid "Create Account Now?"
 msgstr "Voleu crear un compte ara?"
 
 #: transportmanager.cpp:226
-#, fuzzy, kde-format
-#| msgid "Create Account Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Crea un compte ara"
@@ -573,15 +570,13 @@ msgid "Question"
 msgstr "Pregunta"
 
 #: transportmanager.cpp:616
-#, fuzzy, kde-format
-#| msgid "Migrate"
+#, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Migra"
 
 #: transportmanager.cpp:617
-#, fuzzy, kde-format
-#| msgid "Keep"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keep"
 msgstr "Conserva"
