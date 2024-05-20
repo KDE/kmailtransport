@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-04-19 00:38+0000\n"
-"PO-Revision-Date: 2024-05-12 13:19+0530\n"
+"PO-Revision-Date: 2024-05-19 16:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -33,7 +33,7 @@ msgstr "பயனருக்கு காட்டப்படும் பெ�
 #: mailtransport.kcfg:17
 #, kde-format
 msgid "The name that will be used when referring to this server."
-msgstr ""
+msgstr "இச்சேவையகத்தைக் குறிப்பிட பயன்படுத்த வேண்டிய பெயர்."
 
 #: mailtransport.kcfg:18
 #, kde-format
@@ -50,7 +50,7 @@ msgstr "சேவையகத்தின் புரவன் பெயர்"
 #: mailtransport.kcfg:28
 #, kde-format
 msgid "The domain name or numerical address of the SMTP server."
-msgstr ""
+msgstr "STMP சேவையகத்தின் ஆள்கள அல்லது எண்வடிவ முகவரி"
 
 #. i18n: ectx: label, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:31
@@ -65,6 +65,7 @@ msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
 msgstr ""
+"STMP சேவையகத்தை எந்த புறையில் தொடர்புகொள்ள வேண்டும். இயல்பிருப்பு புறை 587 ஆகும்."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:36
@@ -76,7 +77,7 @@ msgstr "நுழைவதற்கான பயனர் பெயர்"
 #: mailtransport.kcfg:37
 #, kde-format
 msgid "The user name to send to the server for authorization."
-msgstr ""
+msgstr "சான்றளிப்பதற்கு சேவையகத்திற்கு அனுப்ப வேண்டிய பயனர் பெயர்."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:40
@@ -91,6 +92,8 @@ msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
 "SSH tunnels, for example. Leave it empty if no command should be run."
 msgstr ""
+"அஞ்சலனுப்புமுன் இக்கணினியில் இயக்க வேண்டிய கட்டளை. எடுத்துக்காட்டாக, SSH குடைவுவழியை "
+"இதன்மூலம் அமைக்கலாம். எந்த கட்டளையும் தேவையில்லையெனில் இதை காலியாக விடவும்."
 
 #. i18n: ectx: label, entry (options), group (Transport $(transportId))
 #: mailtransport.kcfg:44
@@ -111,6 +114,8 @@ msgid ""
 "Check this option if your SMTP server requires authentication before "
 "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
 msgstr ""
+"அஞ்சலனுப்புமுன் சான்றளிக்குமாறு உங்கள் SMTP சேவையகம் கட்டாயப்படுத்துகிறது எனில் இதைத் "
+"தேர்ந்தெடுக்கவும். இது 'Authenticated SMTP' அல்லது ASMTP எனப்படும்."
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:52
@@ -216,6 +221,8 @@ msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
 "server."
 msgstr ""
+"தேர்வு செய்யப்பட்டிருந்தால், அஞ்சல் சேவையகத்துடன் இணையும்போது கணினியின் பதிலி அமைப்புகள் "
+"பயன்படுத்தப்படும்."
 
 #: plugins/smtp/smtpconfigwidget.cpp:148
 #, kde-format
@@ -249,7 +256,7 @@ msgstr "இந்த STMP சேவையகத்தைப் பயன்ப�
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
-msgstr ""
+msgstr "SMTP"
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
@@ -394,63 +401,63 @@ msgstr "முன்கட்டளை:"
 #: plugins/smtp/smtpsettings.ui:376
 #, kde-format
 msgid "Sen&d custom hostname to server"
-msgstr ""
+msgstr "&சேவையகத்திற்கு வேறு புரவன் பெயரை அனுப்பு"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
 #: plugins/smtp/smtpsettings.ui:383
 #, kde-format
 msgid "Use custom sender address"
-msgstr ""
+msgstr "விருப்பமான அனுப்புநர் முகவரியைப் பயன்படுத்து"
 
 #: precommandjob.cpp:68
 #, kde-format
 msgid "Executing precommand '%1'."
-msgstr ""
+msgstr "முன்கட்டளை '%1' இயக்கப்படுகிறது."
 
 #: precommandjob.cpp:75
 #, kde-format
 msgid "Unable to start precommand '%1'."
-msgstr ""
+msgstr "'%1' எனும் முன்கட்டளையைத் துவக்க முடியவில்லை."
 
 #: precommandjob.cpp:77
 #, kde-format
 msgid "Error while executing precommand '%1'."
-msgstr ""
+msgstr "'%1' எனும் முன்கட்டளையை இயக்குவதில் சிக்கல்."
 
 #: precommandjob.cpp:93
 #, kde-format
 msgid "The precommand crashed."
-msgstr ""
+msgstr "முன்கட்டளை முறிவடைந்தது"
 
 #: precommandjob.cpp:96
 #, kde-format
 msgid "The precommand exited with code %1."
-msgstr ""
+msgstr "%1 எனும் நிலையுடன் முன்கட்டளை முடிவடைந்தது."
 
 #: transport.cpp:81
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
-msgstr ""
+msgstr "%1 #%2"
 
 #: transport.cpp:131
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
-msgstr ""
+msgstr "வெறும் உரை"
 
 #: transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
-msgstr ""
+msgstr "பெயரற்றது"
 
 #: transport.cpp:166
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
-msgstr ""
+msgstr "தெரியாதது"
 
 #: transport.cpp:210
 #, kde-format
@@ -467,37 +474,37 @@ msgstr ""
 #: transport.cpp:219
 #, kde-format
 msgid "KWallet Not Available"
-msgstr ""
+msgstr "கேவால்லட் கிடைக்கவில்லை"
 
 #: transport.cpp:220
 #, kde-format
 msgid "Store Password"
-msgstr ""
+msgstr "கடவுச்சொலை நினைவில் கொள்"
 
 #: transport.cpp:221
 #, kde-format
 msgid "Do Not Store Password"
-msgstr ""
+msgstr "கடவுச்சொலை நினைவில் கொள்ளாதே"
 
 #: transportjob.cpp:122
 #, kde-format
 msgid "The outgoing account \"%1\" is not correctly configured."
-msgstr ""
+msgstr "\"%1\" எனும் அஞ்சனுப்பும் கணக்கு சரியாக அமைக்கப்படவில்லை."
 
 #: transportmanager.cpp:224
 #, kde-format
 msgid "You must create an outgoing account before sending."
-msgstr ""
+msgstr "அஞ்சலனுப்புமுன் அஞ்சலனுப்பு கணக்கை உருவாக்க வேண்டும்."
 
 #: transportmanager.cpp:225
 #, kde-format
 msgid "Create Account Now?"
-msgstr ""
+msgstr "கணக்கை இப்போது உருவாக்கலாமா?"
 
 #: transportmanager.cpp:226
 #, kde-format
 msgid "Create Account Now"
-msgstr ""
+msgstr "கணக்கை இப்போது உருவாக்கு"
 
 #: transportmanager.cpp:608
 #, kde-format
@@ -513,35 +520,35 @@ msgstr ""
 #: transportmanager.cpp:615
 #, kde-format
 msgid "Question"
-msgstr ""
+msgstr "கேள்வி"
 
 #: transportmanager.cpp:616
 #, kde-format
 msgid "Migrate"
-msgstr ""
+msgstr "மாற்று"
 
 #: transportmanager.cpp:617
 #, kde-format
 msgid "Keep"
-msgstr ""
+msgstr "வைத்திரு"
 
 #: transportmodel.cpp:61
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr ""
+msgstr " (இயல்பிருப்பு)"
 
 #: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
-msgstr ""
+msgstr "பெயர்"
 
 #: transportmodel.cpp:85 widgets/transportlistwidget.cpp:27
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
-msgstr ""
+msgstr "வகை"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
@@ -554,99 +561,99 @@ msgstr ""
 #, kde-format
 msgctxt "The name of a mail transport"
 msgid "Name:"
-msgstr ""
+msgstr "பெயர்:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDefault)
 #: ui/addtransportdialog.ui:48
 #, kde-format
 msgid "Make this the default outgoing account"
-msgstr ""
+msgstr "இயல்பிருப்பு அஞ்சனுப்பு கணக்காக இதை அமை"
 
 #. i18n: ectx: property (text), widget (QLabel, descLabel)
 #: ui/addtransportdialog.ui:61
 #, kde-format
 msgid "Select an account type from the list below:"
-msgstr ""
+msgstr "கீழுள்ள பட்டியலிலிருந்து ஓர் கணக்குவகையைத் தேர்ந்தெடுக்கவும்:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: ui/addtransportdialog.ui:81
 #, kde-format
 msgid "Type"
-msgstr ""
+msgstr "வகை"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: ui/addtransportdialog.ui:86
 #, kde-format
 msgid "Description"
-msgstr ""
+msgstr "விவரணம்"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:17
 #, kde-format
 msgid "Remo&ve"
-msgstr ""
+msgstr "&நீக்கு"
 
 #. i18n: ectx: property (text), widget (QPushButton, defaultButton)
 #: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:24
 #, kde-format
 msgid "&Set as Default"
-msgstr ""
+msgstr "&இயல்பிருப்பாக அமை"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidget.ui:54 ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd..."
-msgstr ""
+msgstr "&சேர்..."
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:61
 #, kde-format
 msgid "&Rename"
-msgstr ""
+msgstr "&மறுபெயரிடு"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidget.ui:68 ui/transportmanagementwidgetng.ui:68
 #, kde-format
 msgid "&Modify..."
-msgstr ""
+msgstr "&திருத்து"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
-msgstr ""
+msgstr "அஞ்சலனுப்பு கணக்கை உருவாக்குவது"
 
 #: widgets/addtransportdialogng.cpp:97
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
-msgstr ""
+msgstr "உருவாக்கி அமை"
 
 #: widgets/transportlistwidget.cpp:99
 #, kde-format
 msgctxt "@label the default mail transport"
 msgid " (Default)"
-msgstr ""
+msgstr " (இயல்பிருப்பு)"
 
 #: widgets/transportmanagementwidget.cpp:138
 #: widgets/transportmanagementwidgetng.cpp:137
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
-msgstr ""
+msgstr "'%1' எனும் அஞ்சலனுப்பு கணக்கை உறுதியாக நீக்க வேண்டுமா?"
 
 #: widgets/transportmanagementwidget.cpp:139
 #: widgets/transportmanagementwidgetng.cpp:138
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "இந்த %1 அஞ்சலனுப்பு கணக்கை உறுதியாக நீக்க வேண்டுமா?"
+msgstr[1] "இந்த %1 அஞ்சலனுப்பு கணக்குகளை உறுதியாக நீக்க வேண்டுமா?"
 
 #: widgets/transportmanagementwidget.cpp:141
 #: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
-msgstr ""
+msgstr "அஞ்சலனுப்பு கணக்கை நீக்கலாமா?"
 
 #: widgets/transportmanagementwidget.cpp:168
 #: widgets/transportmanagementwidgetng.cpp:170
@@ -667,17 +674,17 @@ msgstr ""
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr ""
+msgstr "மறுபெயரிடு"
 
 #: widgets/transportmanagementwidget.cpp:180
 #: widgets/transportmanagementwidgetng.cpp:182
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "நீக்கு"
 
 #: widgets/transportmanagementwidget.cpp:185
 #: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgid "Set as Default"
-msgstr ""
+msgstr "இயல்பிருப்பாக அமை"
