@@ -46,6 +46,7 @@ else()
 endif()
 
 ########### Find packages ###########
+find_package(Qt6DBus ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)
