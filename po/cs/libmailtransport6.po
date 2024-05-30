@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:39+0000\n"
-"PO-Revision-Date: 2024-05-07 15:35+0200\n"
+"PO-Revision-Date: 2024-05-29 11:30+0200\n"
 "Last-Translator: Vit Pelcak <vpelcak@suse.cz>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -502,13 +502,13 @@ msgstr "KWallet není k dispozici"
 #, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
-msgstr ""
+msgstr "Uložit heslo"
 
 #: transport.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
-msgstr ""
+msgstr "Neukládat heslo"
 
 #: transportjob.cpp:122
 #, kde-format
@@ -529,7 +529,7 @@ msgstr "Nyní vytvořit účet?"
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
-msgstr ""
+msgstr "Nyní vytvořit účet"
 
 #: transportmanager.cpp:608
 #, kde-format
@@ -556,7 +556,7 @@ msgstr "Dotaz"
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
-msgstr ""
+msgstr "Převést"
 
 #: transportmanager.cpp:617
 #, kde-format
@@ -653,13 +653,13 @@ msgstr "Z&měnit..."
 #: ui/transportmanagementwidgetng.ui:54
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Při&dat…"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:68
 #, kde-format
 msgid "&Modify…"
-msgstr ""
+msgstr "Z&měnit…"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -701,13 +701,13 @@ msgstr "Odstranit odchozí účet?"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Přidat…"
 
 #: widgets/transportmanagementwidgetng.cpp:175
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr ""
+msgstr "Změnit…"
 
 #: widgets/transportmanagementwidgetng.cpp:178
 #, kde-format
