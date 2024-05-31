@@ -721,6 +721,3 @@ msgstr "Премахване"
 #, kde-format
 msgid "Set as Default"
 msgstr "Настройване като подразбиращ се"
-
-#~ msgid "SSL encryption"
-#~ msgstr "SSL криптиране"
