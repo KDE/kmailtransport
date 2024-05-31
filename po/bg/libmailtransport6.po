@@ -730,10 +730,3 @@ msgstr "Премахване"
 #, kde-format
 msgid "Set as Default"
 msgstr "Настройване като подразбиращ се"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Add..."
-#~ msgstr "Добавяне..."
-
-#~ msgid "SSL encryption"
-#~ msgstr "SSL криптиране"
