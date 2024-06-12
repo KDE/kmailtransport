@@ -57,7 +57,7 @@ set_package_properties(Qt6Keychain PROPERTIES
                                    TYPE REQUIRED)
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.3.0)
+ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.4.0)
 
 
 if(BUILD_TESTING)
