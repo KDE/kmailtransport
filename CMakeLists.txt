@@ -63,12 +63,12 @@ ecm_set_disabled_deprecation_versions(QT 6.7.0 KF 6.4.0)
 if(BUILD_TESTING)
     find_package(Qt6Test CONFIG REQUIRED)
    add_definitions(-DBUILD_TESTING)
-endif(BUILD_TESTING)
+endif()
 
 option(USE_UNITY_CMAKE_SUPPORT "Use UNITY cmake support (speedup compile time)" OFF)
 
 set(COMPILE_WITH_UNITY_CMAKE_SUPPORT OFF)
-if (USE_UNITY_CMAKE_SUPPORT)
+if(USE_UNITY_CMAKE_SUPPORT)
     set(COMPILE_WITH_UNITY_CMAKE_SUPPORT ON)
 endif()
 
@@ -80,7 +80,7 @@ ecm_qt_install_logging_categories(
         EXPORT MAILTRANSPORT
         FILE kmailtransport.categories
         DESTINATION ${KDE_INSTALL_LOGGINGCATEGORIESDIR}
-        )
+)
 
 kde_configure_git_pre_commit_hook(CHECKS CLANG_FORMAT)
 

@@ -5,7 +5,7 @@ ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfigVersion.cmake"
     SOVERSION 6
-    )
+)
 
 target_sources(KPim6MailTransport PRIVATE
     transport.cpp
@@ -16,7 +16,7 @@ target_sources(KPim6MailTransport PRIVATE
     socket.cpp
     servertest.cpp
     outlookoauthtokenrequester.cpp
-    )
+)
 
 target_sources(KPim6MailTransport PRIVATE
     widgets/transportconfigwidget.cpp
@@ -47,12 +47,12 @@ target_sources(KPim6MailTransport PRIVATE
     transportsortproxymodel.cpp
 
 
-    )
+)
 
 target_sources(KPim6MailTransport PRIVATE
     plugins/transportabstractplugin.cpp
     plugins/transportpluginmanager.cpp
-    ) 
+)
 target_sources(KPim6MailTransport PRIVATE
     transporttype_p.h
     mailtransport_defs.h
@@ -68,22 +68,22 @@ target_sources(KPim6MailTransport PRIVATE
     transportmanager.h
     transporttype.h
     servertest.h
-    )
+)
 
 ecm_qt_declare_logging_category(KPim6MailTransport HEADER mailtransport_debug.h IDENTIFIER MAILTRANSPORT_LOG CATEGORY_NAME org.kde.pim.mailtransport
         DESCRIPTION "kmailtransport (kmailtransport)"
         OLD_CATEGORY_NAMES log_mailtransport
         EXPORT MAILTRANSPORT
-    )
+)
 
 ki18n_wrap_ui(KPim6MailTransport
     ui/addtransportdialog.ui
     ui/transportmanagementwidgetng.ui
-    )
+)
 
 kconfig_add_kcfg_files(KPim6MailTransport GENERATE_MOC transportbase.kcfgc)
 
-if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+if(COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(KPim6MailTransport PROPERTIES UNITY_BUILD ON)
 endif()
 
@@ -102,9 +102,9 @@ target_link_libraries(KPim6MailTransport
     KF6::ConfigWidgets
     Qt::DBus
     Qt::Network
-    )
+)
 
-if (TARGET KF6::Wallet)
+if(TARGET KF6::Wallet)
     target_link_libraries(KPim6MailTransport PRIVATE KF6::Wallet)
 endif()
 
@@ -115,7 +115,7 @@ set_target_properties(KPim6MailTransport PROPERTIES
     VERSION ${MAILTRANSPORT_VERSION}
     SOVERSION ${MAILTRANSPORT_SOVERSION}
     EXPORT_NAME MailTransport
-    )
+)
 
 
 install(TARGETS KPim6MailTransport EXPORT KPim6MailTransportTargets ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
@@ -136,7 +136,7 @@ ecm_generate_headers(MailTransport_CamelCase_HEADERS
     TransportActivitiesAbstract
     PREFIX MailTransport
     REQUIRED_HEADERS MailTransport_HEADERS
-    )
+)
 
 ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
     HEADER_NAMES
@@ -146,7 +146,7 @@ ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
     PREFIX MailTransport
     REQUIRED_HEADERS MailTransport_widgets_HEADERS
     RELATIVE widgets
-    )
+)
 
 ecm_generate_headers(MailTransport_plugins_CamelCase_HEADERS
     HEADER_NAMES
@@ -154,17 +154,17 @@ ecm_generate_headers(MailTransport_plugins_CamelCase_HEADERS
     PREFIX MailTransport
     REQUIRED_HEADERS MailTransport_plugins_HEADERS
     RELATIVE plugins
-    )
+)
 
 install(FILES
     ${MailTransport_SOURCE_DIR}/src/widgets/transportconfigwidget_p.h
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/MailTransport/mailtransport/private COMPONENT Devel )
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/MailTransport/mailtransport/private COMPONENT Devel)
 
 install(FILES
     ${MailTransport_CamelCase_HEADERS}
     ${MailTransport_widgets_CamelCase_HEADERS}
     ${MailTransport_plugins_CamelCase_HEADERS}
-    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/MailTransport/MailTransport/ COMPONENT Devel )
+    DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/MailTransport/MailTransport/ COMPONENT Devel)
 
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_export.h
@@ -174,7 +174,7 @@ install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/transportbase.h
 
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/MailTransport/mailtransport COMPONENT Devel
-    )
+)
 
 
 set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6MailTransport")
@@ -182,7 +182,7 @@ set(CMAKECONFIG_INSTALL_DIR "${KDE_INSTALL_CMAKEPACKAGEDIR}/KPim6MailTransport")
 install(FILES
     ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/MailTransport COMPONENT Devel
-    )
+)
 
 
 if(BUILD_TESTING)
@@ -191,7 +191,7 @@ if(BUILD_TESTING)
     add_subdirectory(plugins/tests)
 endif()
 
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_add_qch(
         KPim6MailTransport_QCH
         NAME KMailTransport
@@ -215,15 +215,15 @@ if (BUILD_QCH)
         TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
         COMPONENT Devel
-    )
+)
 endif()
-if (BUILD_QCH)
+if(BUILD_QCH)
     ecm_install_qch_export(
         TARGETS KPim6MailTransport_QCH
         FILE KPim6MailTransportQchTargets.cmake
         DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
         COMPONENT Devel
-    )
+)
     set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6MailTransportQchTargets.cmake\")")
 endif()
 
@@ -232,14 +232,14 @@ configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimMailTransportConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfig.cmake"
     INSTALL_DESTINATION  ${CMAKECONFIG_INSTALL_DIR}
-    )
+)
 
 install(FILES
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfig.cmake"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfigVersion.cmake"
     DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
     COMPONENT Devel
-    )
+)
 
 install(EXPORT KPim6MailTransportTargets DESTINATION "${CMAKECONFIG_INSTALL_DIR}" FILE KPim6MailTransportTargets.cmake NAMESPACE KPim6::)
 
