@@ -579,7 +579,7 @@ msgstr "名称："
 #: ui/addtransportdialog.ui:48
 #, kde-format
 msgid "Make this the default outgoing account"
-msgstr "设为默认发件账号"
+msgstr "设为默认发件账户"
 
 #. i18n: ectx: property (text), widget (QLabel, descLabel)
 #: ui/addtransportdialog.ui:61
