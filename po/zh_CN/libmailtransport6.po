@@ -671,14 +671,14 @@ msgstr "删除对外账户吗？"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add..."
-msgstr ""
+msgstr "添加..."
 
 #: widgets/transportmanagementwidget.cpp:173
 #: widgets/transportmanagementwidgetng.cpp:175
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify..."
-msgstr ""
+msgstr "编辑..."
 
 #: widgets/transportmanagementwidget.cpp:176
 #: widgets/transportmanagementwidgetng.cpp:178
