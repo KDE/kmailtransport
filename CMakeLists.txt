@@ -3,7 +3,7 @@ set(PIM_VERSION "6.2.40")
 project(MailTransport VERSION ${PIM_VERSION})
 
 # ECM setup
-set(KF_MIN_VERSION "6.3.0")
+set(KF_MIN_VERSION "6.4.0")
 
 find_package(ECM ${KF_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -27,7 +27,7 @@ include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
 include(ECMAddQch)
 
-set(QT_REQUIRED_VERSION "6.6.0")
+set(QT_REQUIRED_VERSION "6.7.0")
 
 option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
 add_feature_info(QCH ${BUILD_QCH} "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)")
