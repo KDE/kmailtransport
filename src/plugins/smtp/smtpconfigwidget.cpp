@@ -277,7 +277,9 @@ void SMTPConfigWidget::slotFinished(const QList<int> &results)
     // If the servertest did not find any usable authentication modes, assume the
     // connection failed and don't disable any of the radioboxes.
     if (results.isEmpty()) {
-        KMessageBox::error(this, i18n("Failed to check capabilities. Please verify port and authentication mode."), i18n("Check Capabilities Failed"));
+        KMessageBox::error(this,
+                           i18n("Failed to check capabilities. Please verify port and authentication mode."),
+                           i18nc("@title:window", "Check Capabilities Failed"));
         d->serverTestFailed = true;
         d->serverTest->deleteLater();
         return;

@@ -137,7 +137,8 @@ void TransportManagementWidgetNgPrivate::removeClicked()
         ? i18n("Do you want to remove outgoing account '%1'?", ui.transportTreeView->selectionModel()->selectedRows().constFirst().data().toString())
         : i18np("Do you really want to remove this %1 outgoing account?", "Do you really want to remove these %1 outgoing accounts?", nbAccount);
 
-    const int rc = KMessageBox::questionTwoActions(q, msg, i18n("Remove outgoing account?"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
+    const int rc =
+        KMessageBox::questionTwoActions(q, msg, i18nc("@title:window", "Remove outgoing account?"), KStandardGuiItem::remove(), KStandardGuiItem::cancel());
     if (rc == KMessageBox::ButtonCode::SecondaryAction) {
         return;
     }

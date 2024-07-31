@@ -222,7 +222,7 @@ bool TransportManager::showTransportCreationDialog(QWidget *parent, ShowConditio
 
         const int response = KMessageBox::warningContinueCancel(parent,
                                                                 i18n("You must create an outgoing account before sending."),
-                                                                i18n("Create Account Now?"),
+                                                                i18nc("@title:window", "Create Account Now?"),
                                                                 KGuiItem(i18nc("@action:button", "Create Account Now")),
                                                                 KStandardGuiItem::cancel());
         if (response != KMessageBox::Continue) {
@@ -612,7 +612,7 @@ void TransportManagerPrivate::migrateToWallet()
                                                           "for you in a strongly encrypted file.\n"
                                                           "Do you want to migrate your passwords to KWallet?"),
                                                      names,
-                                                     i18n("Question"),
+                                                     i18nc("@title:window", "Question"),
                                                      KGuiItem(i18nc("@action:button", "Migrate")),
                                                      KGuiItem(i18nc("@action:button", "Keep")),
                                                      QStringLiteral("WalletMigrate"));

@@ -216,7 +216,7 @@ bool Transport::usrSave()
                                                            "Do you want to store the password for server '%1' in the "
                                                            "configuration file?",
                                                            name()),
-                                                      i18n("KWallet Not Available"),
+                                                      i18nc("@title:window", "KWallet Not Available"),
                                                       KGuiItem(i18nc("@action:button", "Store Password")),
                                                       KGuiItem(i18nc("@action:button", "Do Not Store Password")))
                         == KMessageBox::ButtonCode::PrimaryAction) {
