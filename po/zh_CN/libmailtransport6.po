@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -241,14 +241,16 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:281
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr "检测能力失败。请检查端口和验证模式。"
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
-#, kde-format
+#: plugins/smtp/smtpconfigwidget.cpp:282
+#, fuzzy, kde-format
+#| msgid "Check Capabilities Failed"
+msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "检测能力失败"
 
@@ -481,7 +483,9 @@ msgstr ""
 "您是否想要在配置文件中存储服务器“%1”的密码？"
 
 #: transport.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KWallet Not Available"
+msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet 不可用"
 
@@ -508,7 +512,9 @@ msgid "You must create an outgoing account before sending."
 msgstr "您在发送邮件前必需创建一个对外账户。"
 
 #: transportmanager.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now?"
+msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "现在就创建账户吗？"
 
@@ -533,7 +539,9 @@ msgstr ""
 "您想要将您的密码迁移到 KWallet 中吗？"
 
 #: transportmanager.cpp:615
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@title:window"
 msgid "Question"
 msgstr "询问"
 
@@ -675,36 +683,38 @@ msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 
-#: widgets/transportmanagementwidgetng.cpp:140
-#, kde-format
+#: widgets/transportmanagementwidgetng.cpp:141
+#, fuzzy, kde-format
+#| msgid "Remove outgoing account?"
+msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "删除对外账户吗？"
 
-#: widgets/transportmanagementwidgetng.cpp:170
+#: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:175
+#: widgets/transportmanagementwidgetng.cpp:176
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:178
+#: widgets/transportmanagementwidgetng.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:182
+#: widgets/transportmanagementwidgetng.cpp:183
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgid "Set as Default"
 msgstr "设置为默认"

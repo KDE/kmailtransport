@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-05-16 15:51+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -261,7 +261,7 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p%"
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:281
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -269,8 +269,10 @@ msgstr ""
 "S'ha produït un error en comprovar les capacitats. Verifiqueu el port i el "
 "mode d'autenticació."
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
-#, kde-format
+#: plugins/smtp/smtpconfigwidget.cpp:282
+#, fuzzy, kde-format
+#| msgid "Check Capabilities Failed"
+msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "No s'ha pogut comprovar les capacitats"
 
@@ -510,7 +512,9 @@ msgstr ""
 "configuració?"
 
 #: transport.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KWallet Not Available"
+msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet no està disponible"
 
@@ -537,7 +541,9 @@ msgid "You must create an outgoing account before sending."
 msgstr "Heu de crear un compte eixint abans d'enviar."
 
 #: transportmanager.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now?"
+msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Voleu crear un compte ara?"
 
@@ -565,7 +571,9 @@ msgstr ""
 "Voleu migrar les contrasenyes a KWallet?"
 
 #: transportmanager.cpp:615
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@title:window"
 msgid "Question"
 msgstr "Pregunta"
 
@@ -708,36 +716,38 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Segur que voleu eliminar este compte eixint %1?"
 msgstr[1] "Segur que voleu eliminar estos comptes ixents %1?"
 
-#: widgets/transportmanagementwidgetng.cpp:140
-#, kde-format
+#: widgets/transportmanagementwidgetng.cpp:141
+#, fuzzy, kde-format
+#| msgid "Remove outgoing account?"
+msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Voleu eliminar el compte eixint?"
 
-#: widgets/transportmanagementwidgetng.cpp:170
+#: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Afig…"
 
-#: widgets/transportmanagementwidgetng.cpp:175
+#: widgets/transportmanagementwidgetng.cpp:176
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Modifica…"
 
-#: widgets/transportmanagementwidgetng.cpp:178
+#: widgets/transportmanagementwidgetng.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Canvia el nom"
 
-#: widgets/transportmanagementwidgetng.cpp:182
+#: widgets/transportmanagementwidgetng.cpp:183
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Elimina"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgid "Set as Default"
 msgstr "Establix com a predeterminat"

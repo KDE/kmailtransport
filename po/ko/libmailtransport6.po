@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-02-17 12:53+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -242,15 +242,17 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:281
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 "사용 가능한 기능을 확인할 수 없습니다. 포트와 인증 모드를 확인하십시오."
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
-#, kde-format
+#: plugins/smtp/smtpconfigwidget.cpp:282
+#, fuzzy, kde-format
+#| msgid "Check Capabilities Failed"
+msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "사용 가능한 기능 확인 실패"
 
@@ -484,7 +486,9 @@ msgstr ""
 "서버 '%1'의 암호를 설정 파일에 저장하시겠습니까?"
 
 #: transport.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KWallet Not Available"
+msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet 사용 불가"
 
@@ -513,7 +517,9 @@ msgid "You must create an outgoing account before sending."
 msgstr "보내기 전에 전송 계정을 만들어야 합니다."
 
 #: transportmanager.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now?"
+msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "지금 계정을 만드시겠습니까?"
 
@@ -541,7 +547,9 @@ msgstr ""
 "KWallet으로 암호를 이전하시겠습니까?"
 
 #: transportmanager.cpp:615
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@title:window"
 msgid "Question"
 msgstr "질문"
 
@@ -688,39 +696,41 @@ msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "발신 계정 %1개를 삭제하시겠습니까?"
 
-#: widgets/transportmanagementwidgetng.cpp:140
-#, kde-format
+#: widgets/transportmanagementwidgetng.cpp:141
+#, fuzzy, kde-format
+#| msgid "Remove outgoing account?"
+msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "발신 계정 삭제?"
 
-#: widgets/transportmanagementwidgetng.cpp:170
+#: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:175
+#: widgets/transportmanagementwidgetng.cpp:176
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "수정..."
 
-#: widgets/transportmanagementwidgetng.cpp:178
+#: widgets/transportmanagementwidgetng.cpp:179
 #, fuzzy, kde-format
 #| msgid "Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "이름 바꾸기"
 
-#: widgets/transportmanagementwidgetng.cpp:182
+#: widgets/transportmanagementwidgetng.cpp:183
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "삭제"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgid "Set as Default"
 msgstr "기본값으로 설정"

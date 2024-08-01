@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-06-19 19:13+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -251,7 +251,7 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p %"
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:281
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -259,8 +259,10 @@ msgstr ""
 "Misslyckades kontrollera funktionalitet. Verifiera port och inställningen av "
 "behörighetskontroll."
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
-#, kde-format
+#: plugins/smtp/smtpconfigwidget.cpp:282
+#, fuzzy, kde-format
+#| msgid "Check Capabilities Failed"
+msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Misslyckades kontrollera funktionalitet"
 
@@ -498,7 +500,9 @@ msgstr ""
 "Vill du lagra lösenordet till servern '%1' i inställningsfilen?"
 
 #: transport.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KWallet Not Available"
+msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "Kwallet inte tillgänglig"
 
@@ -525,7 +529,9 @@ msgid "You must create an outgoing account before sending."
 msgstr "Du måste skapa ett utgående konto innan du skickar någonting."
 
 #: transportmanager.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now?"
+msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Skapa konto nu?"
 
@@ -553,7 +559,9 @@ msgstr ""
 "Vill du flytta lösenorden till plånboken?"
 
 #: transportmanager.cpp:615
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@title:window"
 msgid "Question"
 msgstr "Fråga"
 
@@ -696,36 +704,38 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Vill du verkligen ta bort %1 utgående konto?"
 msgstr[1] "Vill du verkligen ta bort de %1 utgående kontona?"
 
-#: widgets/transportmanagementwidgetng.cpp:140
-#, kde-format
+#: widgets/transportmanagementwidgetng.cpp:141
+#, fuzzy, kde-format
+#| msgid "Remove outgoing account?"
+msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Ta bort utgående konto?"
 
-#: widgets/transportmanagementwidgetng.cpp:170
+#: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Lägg till…"
 
-#: widgets/transportmanagementwidgetng.cpp:175
+#: widgets/transportmanagementwidgetng.cpp:176
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Ändra…"
 
-#: widgets/transportmanagementwidgetng.cpp:178
+#: widgets/transportmanagementwidgetng.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Byt namn"
 
-#: widgets/transportmanagementwidgetng.cpp:182
+#: widgets/transportmanagementwidgetng.cpp:183
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Ta bort"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgid "Set as Default"
 msgstr "Använd som standardvärde"

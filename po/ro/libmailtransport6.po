@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2009-08-22 18:40+0300\n"
 "Last-Translator: Sergiu Bivol <sergiu@cip.md>\n"
 "Language-Team: Română <kde-i18n-ro@kde.org>\n"
@@ -256,14 +256,15 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:281
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:282
 #, kde-format
+msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr ""
 
@@ -519,7 +520,9 @@ msgstr ""
 "Doriți să salvați parola pentru serverul „%1” în fișierul de configurare?"
 
 #: transport.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KWallet Not Available"
+msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "Portofelul KDE nu e disponibil"
 
@@ -549,7 +552,9 @@ msgid "You must create an outgoing account before sending."
 msgstr "Trebuie să creați un cont de expediere înainte de a putea trimite."
 
 #: transportmanager.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now?"
+msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Creați contul acum?"
 
@@ -572,7 +577,9 @@ msgid ""
 msgstr ""
 
 #: transportmanager.cpp:615
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@title:window"
 msgid "Question"
 msgstr "Întrebare"
 
@@ -723,40 +730,41 @@ msgstr[0] ""
 msgstr[1] ""
 msgstr[2] ""
 
-#: widgets/transportmanagementwidgetng.cpp:140
+#: widgets/transportmanagementwidgetng.cpp:141
 #, fuzzy, kde-format
 #| msgid "Make this the default outgoing account."
+msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Fă acesta contul implicit de expediere."
 
-#: widgets/transportmanagementwidgetng.cpp:170
+#: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:175
+#: widgets/transportmanagementwidgetng.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "&Modificare..."
 
-#: widgets/transportmanagementwidgetng.cpp:178
+#: widgets/transportmanagementwidgetng.cpp:179
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "&Redenumește"
 
-#: widgets/transportmanagementwidgetng.cpp:182
+#: widgets/transportmanagementwidgetng.cpp:183
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "&Elimină"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:189
 #, fuzzy, kde-format
 #| msgid "&Set as Default"
 msgid "Set as Default"

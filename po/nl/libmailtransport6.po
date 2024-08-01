@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-05-16 09:29+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -261,7 +261,7 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p%"
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:281
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -269,8 +269,10 @@ msgstr ""
 "Mogelijkheden controleren is mislukt. Controleer de poort en de "
 "authenticatiemethode."
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
-#, kde-format
+#: plugins/smtp/smtpconfigwidget.cpp:282
+#, fuzzy, kde-format
+#| msgid "Check Capabilities Failed"
+msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Mogelijkheden controleren is mislukt"
 
@@ -508,7 +510,9 @@ msgstr ""
 "Wilt u het wachtwoord voor server '%1' opslaan in het configuratiebestand?"
 
 #: transport.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KWallet Not Available"
+msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet is niet beschikbaar"
 
@@ -535,7 +539,9 @@ msgid "You must create an outgoing account before sending."
 msgstr "U dient een uitgaand account in te stellen voor het verzenden."
 
 #: transportmanager.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now?"
+msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Account nu aanmaken?"
 
@@ -563,7 +569,9 @@ msgstr ""
 "Wilt u uw wachtwoorden overplaatsen naar KWallet?"
 
 #: transportmanager.cpp:615
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@title:window"
 msgid "Question"
 msgstr "Vraag"
 
@@ -706,36 +714,38 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Wilt u dit uitgaande account '%1' verwijderen?"
 msgstr[1] "Wilt u deze uitgaande accounts '%1' verwijderen?"
 
-#: widgets/transportmanagementwidgetng.cpp:140
-#, kde-format
+#: widgets/transportmanagementwidgetng.cpp:141
+#, fuzzy, kde-format
+#| msgid "Remove outgoing account?"
+msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Uitgaand account verwijderen?"
 
-#: widgets/transportmanagementwidgetng.cpp:170
+#: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Toevoegen…"
 
-#: widgets/transportmanagementwidgetng.cpp:175
+#: widgets/transportmanagementwidgetng.cpp:176
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Wijzigen…"
 
-#: widgets/transportmanagementwidgetng.cpp:178
+#: widgets/transportmanagementwidgetng.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Hernoemen"
 
-#: widgets/transportmanagementwidgetng.cpp:182
+#: widgets/transportmanagementwidgetng.cpp:183
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Verwijderen"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgid "Set as Default"
 msgstr "Als standaard instellen"

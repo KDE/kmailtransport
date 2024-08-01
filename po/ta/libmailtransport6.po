@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2024-05-19 16:05+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -235,15 +235,17 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p%"
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:281
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 "இயலுமைகளை சரிபார்க்க முடியவில்லை. புறையையும் சான்றளிப்பு முறையையும் சரிபார்க்கவும்."
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
-#, kde-format
+#: plugins/smtp/smtpconfigwidget.cpp:282
+#, fuzzy, kde-format
+#| msgid "Check Capabilities Failed"
+msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "இயலுமைகள் சரிபார்ப்பு தோல்வியடைந்தது"
 
@@ -472,7 +474,9 @@ msgid ""
 msgstr ""
 
 #: transport.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KWallet Not Available"
+msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "கேவால்லட் கிடைக்கவில்லை"
 
@@ -499,7 +503,9 @@ msgid "You must create an outgoing account before sending."
 msgstr "அஞ்சலனுப்புமுன் அஞ்சலனுப்பு கணக்கை உருவாக்க வேண்டும்."
 
 #: transportmanager.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now?"
+msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "கணக்கை இப்போது உருவாக்கலாமா?"
 
@@ -521,7 +527,9 @@ msgid ""
 msgstr ""
 
 #: transportmanager.cpp:615
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@title:window"
 msgid "Question"
 msgstr "கேள்வி"
 
@@ -664,36 +672,38 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "இந்த %1 அஞ்சலனுப்பு கணக்கை உறுதியாக நீக்க வேண்டுமா?"
 msgstr[1] "இந்த %1 அஞ்சலனுப்பு கணக்குகளை உறுதியாக நீக்க வேண்டுமா?"
 
-#: widgets/transportmanagementwidgetng.cpp:140
-#, kde-format
+#: widgets/transportmanagementwidgetng.cpp:141
+#, fuzzy, kde-format
+#| msgid "Remove outgoing account?"
+msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "அஞ்சலனுப்பு கணக்கை நீக்கலாமா?"
 
-#: widgets/transportmanagementwidgetng.cpp:170
+#: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "சேர்…"
 
-#: widgets/transportmanagementwidgetng.cpp:175
+#: widgets/transportmanagementwidgetng.cpp:176
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "மாற்று…"
 
-#: widgets/transportmanagementwidgetng.cpp:178
+#: widgets/transportmanagementwidgetng.cpp:179
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "மறுபெயரிடு"
 
-#: widgets/transportmanagementwidgetng.cpp:182
+#: widgets/transportmanagementwidgetng.cpp:183
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "நீக்கு"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgid "Set as Default"
 msgstr "இயல்பிருப்பாக அமை"

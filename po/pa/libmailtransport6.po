@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-05-16 00:39+0000\n"
+"POT-Creation-Date: 2024-08-01 00:41+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -236,14 +236,15 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:281
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:280
+#: plugins/smtp/smtpconfigwidget.cpp:282
 #, kde-format
+msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr ""
 
@@ -479,7 +480,9 @@ msgid ""
 msgstr ""
 
 #: transport.cpp:219
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "KWallet Not Available"
+msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "ਕੇ-ਵਾਲਿਟ ਉਪਲੱਬਧ ਨਹੀਂ"
 
@@ -509,7 +512,9 @@ msgid "You must create an outgoing account before sending."
 msgstr "ਤੁਹਾਨੂੰ ਭੇਜਣ ਤੋਂ ਪਹਿਲਾਂ ਭੇਜਣ (outgoing) ਅਕਾਊਂਟ ਬਣਾਉਣਾ ਪਵੇਗਾ।"
 
 #: transportmanager.cpp:225
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Create Account Now?"
+msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "ਅਕਾਊਂਟ ਹੁਣੇ ਬਣਾਉਣਾ ਹੈ?"
 
@@ -532,7 +537,9 @@ msgid ""
 msgstr ""
 
 #: transportmanager.cpp:615
-#, kde-format
+#, fuzzy, kde-format
+#| msgid "Question"
+msgctxt "@title:window"
 msgid "Question"
 msgstr "ਸਵਾਲ"
 
@@ -682,40 +689,41 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: widgets/transportmanagementwidgetng.cpp:140
+#: widgets/transportmanagementwidgetng.cpp:141
 #, fuzzy, kde-format
 #| msgid "Create Outgoing Account"
+msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "ਬਾਹਰ ਭੇਜਣ ਅਕਾਊਂਟ ਬਣਾਓ"
 
-#: widgets/transportmanagementwidgetng.cpp:170
+#: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:175
+#: widgets/transportmanagementwidgetng.cpp:176
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "ਸੋਧ(&M)..."
 
-#: widgets/transportmanagementwidgetng.cpp:178
+#: widgets/transportmanagementwidgetng.cpp:179
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
-#: widgets/transportmanagementwidgetng.cpp:182
+#: widgets/transportmanagementwidgetng.cpp:183
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "ਹਟਾਓ(&v)"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:189
 #, fuzzy, kde-format
 #| msgid "&Set as Default"
 msgid "Set as Default"
