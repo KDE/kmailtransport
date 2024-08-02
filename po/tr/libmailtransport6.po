@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-05-16 00:39+0000\n"
-"PO-Revision-Date: 2024-05-17 01:37+0300\n"
+"PO-Revision-Date: 2024-08-01 13:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -62,7 +62,7 @@ msgstr "SMTP sunucusunun alan adı veya IP adresi."
 #: mailtransport.kcfg:31
 #, kde-format
 msgid "Port number of the server"
-msgstr "Sunucunun port numarası"
+msgstr "Sunucunun kapı numarası"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:32
@@ -260,8 +260,8 @@ msgstr "%​%p"
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
-"Yeteneklerin kontrolü başarısız oldu. Lütfen portu ve kimlik kantıtlama "
-"kipini onaylayın."
+"Yetenek denetimi başarısız oldu. Lütfen kapıyı ve kimlik doğrulama kipini "
+"doğrulayın."
 
 #: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
