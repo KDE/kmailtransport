@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-16 09:49+0200\n"
+"PO-Revision-Date: 2024-08-01 06:37+0200\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n%100==1 ? 1 : n%100==2 ? 2 : n%100==3 || n"
 "%100==4 ? 3 : 0);\n"
 "Translator: Andrej Mernik <andrejm@ubuntu.si>\n"
-"X-Generator: Poedit 3.4.2\n"
+"X-Generator: Poedit 3.4.4\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -261,8 +261,7 @@ msgid ""
 msgstr "Zmožnosti ni bilo mogoče preveriti. Preverite vrata in način overitve."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Preverjanje zmožnosti ni uspelo"
@@ -499,8 +498,7 @@ msgstr ""
 "Ali želite shraniti geslo za strežnik '%1' v nastavitveno datoteko?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet ni na voljo"
@@ -528,11 +526,10 @@ msgid "You must create an outgoing account before sending."
 msgstr "Pred pošiljanjem morate ustvariti račun za pošiljanje."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
-msgstr "Ustvarim nov račun?"
+msgstr "Naj zdaj ustvarim nov račun?"
 
 #: transportmanager.cpp:226
 #, kde-format
@@ -558,8 +555,7 @@ msgstr ""
 "Ali želite svoja gesla preseliti v KWallet?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Vprašanje"
@@ -706,11 +702,10 @@ msgstr[2] "Ali želite odstraniti te %1 račune za pošiljanje?"
 msgstr[3] "Ali želite odstraniti te %1 računa za pošiljanje?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
-msgstr "Odstranim račun za pošiljanje?"
+msgstr "Naj odstranim račun za pošiljanje?"
 
 #: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format

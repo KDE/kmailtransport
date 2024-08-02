@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-16 06:38+0300\n"
+"PO-Revision-Date: 2024-08-01 08:31+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
 "Language: he\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -251,8 +251,7 @@ msgid ""
 msgstr "בדיקת היכולות נכשלה. נא לוודא שהפתחה ומצב האימות נכונים."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "בדיקת היכולות נכשלה"
@@ -488,8 +487,7 @@ msgstr ""
 "לאחסן את הסיסמה לשרת ‚%1’ בקובץ ההגדרות?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet לא זמין"
@@ -517,8 +515,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "צריך ליצור חשבון להודעות יוצאות לפני השליחה."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "ליצור חשבון עכשיו?"
@@ -546,8 +543,7 @@ msgstr ""
 "להסב את הסיסמאות שלך ל־KWallet?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "שאלה"
@@ -694,8 +690,7 @@ msgstr[2] "להסיר את %1 חשבונות ההודעות היוצאות הא�
 msgstr[3] "להסיר את %1 חשבונות ההודעות היוצאות האלה?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "להסיר חשבון הודעות יוצאות?"

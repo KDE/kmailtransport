@@ -2,13 +2,13 @@
 # This file is distributed under the same license as the PACKAGE package.
 #
 # Nico Caprioli, 2012.
-# Giovanni Sora <g.sora@tiscali.it>, 2012, 2013, 2020, 2022, 2024.
+# SPDX-FileCopyrightText: 2012, 2013, 2020, 2022, 2024 Giovanni Sora <g.sora@tiscali.it>
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-16 10:36+0200\n"
+"PO-Revision-Date: 2024-08-01 15:37+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
 "Language: ia\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -266,8 +266,7 @@ msgstr ""
 "authentication."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Verifica capacitates falleva"
@@ -508,11 +507,10 @@ msgstr ""
 "configuration?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
-msgstr "KWallet Non Es Disponibile"
+msgstr "KWallet Non Disponibile"
 
 #: transport.cpp:220
 #, kde-format
@@ -537,8 +535,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "Tu debe crear un conto exiente ante inviar."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Crear Conto Nunc?"
@@ -567,8 +564,7 @@ msgstr ""
 "Vole tu migrar tu contrasignos in KWallet?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Demanda"
@@ -713,8 +709,7 @@ msgstr[0] "Vole remover iste %1 conto exiente?"
 msgstr[1] "Vole remover iste %1contos exiente?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Remove conto exiente ?"

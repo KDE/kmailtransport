@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-17 01:37+0300\n"
+"PO-Revision-Date: 2024-08-01 13:08+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.11.70\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -62,7 +62,7 @@ msgstr "SMTP sunucusunun alan adı veya IP adresi."
 #: mailtransport.kcfg:31
 #, kde-format
 msgid "Port number of the server"
-msgstr "Sunucunun port numarası"
+msgstr "Sunucunun kapı numarası"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:32
@@ -260,15 +260,14 @@ msgstr "%​%p"
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
-"Yeteneklerin kontrolü başarısız oldu. Lütfen portu ve kimlik kantıtlama "
-"kipini onaylayın."
+"Yetenek denetimi başarısız oldu. Lütfen kapıyı ve kimlik doğrulama kipini "
+"doğrulayın."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
-msgstr "Yeteneklerin Kontrolü Başarısız"
+msgstr "Yetenek Denetimi Başarısız"
 
 #: plugins/smtp/smtpjob.cpp:223
 #, kde-format
@@ -505,8 +504,7 @@ msgstr ""
 "musunuz?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "K Cüzdan Kullanılamıyor"
@@ -534,11 +532,10 @@ msgid "You must create an outgoing account before sending."
 msgstr "Göndermeden önce bir giden e-posta hesabı oluşturmalısınız."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
-msgstr "Şimdi Yeni Hesap Oluşturulsun mu?"
+msgstr "Şimdi Yeni Hesap Oluştur?"
 
 #: transportmanager.cpp:226
 #, kde-format
@@ -562,8 +559,7 @@ msgstr ""
 "Parolalarınızı K Cüzdan’a taşımak istiyor musunuz?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Soru"
@@ -708,11 +704,10 @@ msgstr[0] "Bu %1 giden hesabı kaldırmayı gerçekten istiyor musunuz?"
 msgstr[1] "Bu %1 giden hesabı kaldırmayı gerçekten istiyor musunuz?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
-msgstr "Giden e-posta hesabı kaldırılsın mı?"
+msgstr "Giden Posta Hesabını Kaldır?"
 
 #: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format

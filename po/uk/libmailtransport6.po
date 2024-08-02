@@ -10,9 +10,9 @@ msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-16 09:14+0300\n"
+"PO-Revision-Date: 2024-08-01 20:29+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
-"Language-Team: Ukrainian\n"
+"Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
 "Language: uk\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -264,8 +264,7 @@ msgstr ""
 "вказано порт і режим розпізнавання."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Невдала спроба визначити можливості"
@@ -506,8 +505,7 @@ msgstr ""
 "configuration file?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet недоступний"
@@ -535,8 +533,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "Вам слід створити обліковий запис вихідної пошти перед надсиланням."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Створити запис зараз?"
@@ -564,8 +561,7 @@ msgstr ""
 "Чи бажаєте ви перенести ваші паролі до KWallet?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Питання"
@@ -712,8 +708,7 @@ msgstr[2] "Ви справді хочете вилучити ці %1 облік�
 msgstr[3] "Ви справді хочете вилучити цей обліковий запис вихідної пошти?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Вилучити обліковий запис вихідної пошти?"

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-16 08:00+0200\n"
+"PO-Revision-Date: 2024-08-01 05:58+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -259,8 +259,7 @@ msgstr ""
 "რეჟიმი."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "შესაძლებლობების შემოწმების შეცდომა"
@@ -497,8 +496,7 @@ msgstr ""
 "გსურთ შეინახოთ პაროლი სერვერისთვის '%1' კონფიგურაციის ფაილში?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet მიუწვდომელია"
@@ -526,8 +524,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "გაგზავნამდე აუცილებელია გამავალი ანგარიში შექმნათ."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "შევქმნა ანგარიში ახლავე?"
@@ -556,8 +553,7 @@ msgstr ""
 "გსურთ თქვენი პაროლების მიგრაცია KWallet- ში?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "კითხვა"
@@ -702,8 +698,7 @@ msgstr[0] "გნებავთ წაშალოთ ეს %1 გამავ
 msgstr[1] "გნებავთ წაშალოთ ეს %1 გამავალი ანგარიში ?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "წავშალო გამავალი ანგარიში?"
