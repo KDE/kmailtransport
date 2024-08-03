@@ -250,7 +250,7 @@ msgstr "检测能力失败。请检查端口和验证模式。"
 #: plugins/smtp/smtpconfigwidget.cpp:280
 #, kde-format
 msgid "Check Capabilities Failed"
-msgstr "检测能力失败"
+msgstr ""
 
 #: plugins/smtp/smtpjob.cpp:223
 #, kde-format
@@ -483,7 +483,7 @@ msgstr ""
 #: transport.cpp:219
 #, kde-format
 msgid "KWallet Not Available"
-msgstr "KWallet 不可用"
+msgstr ""
 
 #: transport.cpp:220
 #, kde-format
@@ -510,7 +510,7 @@ msgstr "您在发送邮件前必需创建一个对外账户。"
 #: transportmanager.cpp:225
 #, kde-format
 msgid "Create Account Now?"
-msgstr "现在就创建账户吗？"
+msgstr ""
 
 #: transportmanager.cpp:226
 #, kde-format
@@ -535,7 +535,7 @@ msgstr ""
 #: transportmanager.cpp:615
 #, kde-format
 msgid "Question"
-msgstr "询问"
+msgstr ""
 
 #: transportmanager.cpp:616
 #, kde-format
@@ -678,7 +678,7 @@ msgstr[0] ""
 #: widgets/transportmanagementwidgetng.cpp:140
 #, kde-format
 msgid "Remove outgoing account?"
-msgstr "删除对外账户吗？"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:170
 #, kde-format
