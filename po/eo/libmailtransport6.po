@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-17 06:24+0100\n"
+"PO-Revision-Date: 2024-08-02 22:29+0200\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -263,8 +263,7 @@ msgstr ""
 "aŭtentikigreĝimon."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Kontroli Kapablojn Malsukcesis"
@@ -502,8 +501,7 @@ msgstr ""
 "Ĉu vi volas konservi la pasvorton por servilo '%1' en la agorda dosiero?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet ne disponebla"
@@ -531,8 +529,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "Vi devas krei eksiĝintan konton antaŭ sendi."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Ĉu krei konton nun?"
@@ -561,8 +558,7 @@ msgstr ""
 "Ĉu vi volas migri viajn pasvortojn al KWallet?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Demando"
@@ -707,8 +703,7 @@ msgstr[0] "Ĉu vi vere volas forigi tiun %1 elirantan konton?"
 msgstr[1] "Ĉu vi vere volas forigi tiujn %1 elirantajn kontojn?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Ĉu forigi eliran konton?"
