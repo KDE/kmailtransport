@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-17 21:17+0200\n"
+"PO-Revision-Date: 2024-08-03 12:23+0200\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
 "Language: gl\n"
@@ -23,7 +23,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.05.2\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -270,8 +270,7 @@ msgstr ""
 "autenticación."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Fallou a comprobación das funcionalidades"
@@ -510,8 +509,7 @@ msgstr ""
 "Quere gardar o contrasinal do servidor «%1» no ficheiro de configuración?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet non está dispoñíbel"
@@ -539,8 +537,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "Hai que crear unha conta de saída antes de enviar."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Crear conta agora?"
@@ -568,8 +565,7 @@ msgstr ""
 "Quere migrar os contrasinais para KWallet?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Pregunta"
@@ -714,11 +710,10 @@ msgstr[0] "Seguro que quere retirar esta conta saínte?"
 msgstr[1] "Seguro que quere retirar estas %1 contas saíntes?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
-msgstr "Retirar a conta saínte?"
+msgstr "Quere retirar a conta saínte?"
 
 #: widgets/transportmanagementwidgetng.cpp:171
 #, kde-format

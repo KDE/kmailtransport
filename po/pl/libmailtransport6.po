@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-06-22 08:24+0200\n"
+"PO-Revision-Date: 2024-08-03 11:30+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
 "Language: pl\n"
@@ -261,8 +261,7 @@ msgstr ""
 "uwierzytelniania."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Niepowodzenie przy sprawdzaniu możliwości"
@@ -498,8 +497,7 @@ msgstr ""
 "Czy chcesz przechowywać hasło do serwera '%1' w pliku ustawień?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "Portfel niedostępny"
@@ -527,8 +525,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "Musisz utworzyć konto poczty wychodzącej przed wysłaniem."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Utworzyć konto teraz?"
@@ -556,8 +553,7 @@ msgstr ""
 "Czy chcesz przenieść swoje hasła do Portfela?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Pytanie"
@@ -703,8 +699,7 @@ msgstr[1] "Czy na pewno usunąć to %1 konta wychodzące?"
 msgstr[2] "Czy na pewno usunąć te %1 kont wychodzących?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Czy usunąć konto wychodzące?"
