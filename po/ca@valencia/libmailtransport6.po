@@ -3,7 +3,7 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# Josep M. Ferrer <txemaq@gmail.com>, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015, 2018, 2019, 2020, 2022, 2024.
+# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015, 2018, 2019, 2020, 2022, 2024 Josep M. Ferrer <txemaq@gmail.com>
 # Manuel Tortosa Moreno <manutortosa@gmail.com>, 2009, 2010.
 # Antoni Bella Pérez <antonibella5@yahoo.com>, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2020.
 msgid ""
@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-16 15:51+0200\n"
+"PO-Revision-Date: 2024-08-01 10:50+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.05.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Accelerator-Marker: &\n"
 
@@ -270,8 +270,7 @@ msgstr ""
 "mode d'autenticació."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "No s'ha pogut comprovar les capacitats"
@@ -512,8 +511,7 @@ msgstr ""
 "configuració?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet no està disponible"
@@ -541,8 +539,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "Heu de crear un compte eixint abans d'enviar."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Voleu crear un compte ara?"
@@ -571,8 +568,7 @@ msgstr ""
 "Voleu migrar les contrasenyes a KWallet?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Pregunta"
@@ -717,8 +713,7 @@ msgstr[0] "Segur que voleu eliminar este compte eixint %1?"
 msgstr[1] "Segur que voleu eliminar estos comptes ixents %1?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Voleu eliminar el compte eixint?"

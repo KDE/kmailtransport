@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-07-09 23:53+0200\n"
+"PO-Revision-Date: 2024-08-05 23:31+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
 "Language: eu\n"
@@ -267,8 +267,7 @@ msgstr ""
 "autentifikazio modua."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Gaitasunak ikuskatzea huts egin du"
@@ -508,8 +507,7 @@ msgstr ""
 "'%1' zerbitzariko pasahitza konfigurazio-fitxategian gorde nahi duzu?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet ez dago erabilgarri"
@@ -537,8 +535,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "Bidali aurretik, irteerako kontu bat sortu behar duzu."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Kontua orain sortu?"
@@ -568,8 +565,7 @@ msgstr ""
 "Zure pasahitzak KWallet-era migratu nahi dituzu?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Galdera"
@@ -714,8 +710,7 @@ msgstr[0] "Benetan kendu nahi duzu irteerako kontu (%1) hau?"
 msgstr[1] "Benetan kendu nahi dituzu irteerako %1 kontu hauek?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Irteerako kontua kendu?"
