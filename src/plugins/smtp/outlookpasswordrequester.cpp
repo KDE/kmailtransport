@@ -7,7 +7,6 @@
 
 #include "outlookpasswordrequester.h"
 #include "mailtransportplugin_smtp_debug.h"
-#include "outlookoauthtokenrequester.h"
 #include "transport.h"
 
 #include <QDataStream>
