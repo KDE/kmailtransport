@@ -15,7 +15,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-17 09:03+0200\n"
+"PO-Revision-Date: 2024-08-02 09:47+0200\n"
 "Last-Translator: Xavier Besnard <xavier.besnard@kde.org>\n"
 "Language-Team: French <French <kde-francophone@kde.org>>\n"
 "Language: fr\n"
@@ -278,11 +278,10 @@ msgstr ""
 "le mode d'authentification."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
-msgstr "La vérification des capacités a échoué"
+msgstr "Impossible de vérifier les capacités"
 
 #: plugins/smtp/smtpjob.cpp:223
 #, kde-format
@@ -520,11 +519,10 @@ msgstr ""
 "de configuration ?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
-msgstr "KWallet n'est pas disponible"
+msgstr "KWallet est indisponible"
 
 #: transport.cpp:220
 #, kde-format
@@ -549,8 +547,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "Vous devez créer un compte d'envoi avant un envoi."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Créer le compte maintenant ?"
@@ -579,8 +576,7 @@ msgstr ""
 "Voulez-vous déplacer vos mots de passe vers KWallet ?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Question"
@@ -725,8 +721,7 @@ msgstr[0] "Voulez-vous vraiment supprimer ce compte sortant « %1 » ?"
 msgstr[1] "Voulez-vous vraiment supprimer ces %1 comptes sortants ?"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Supprimer le compte d'envoi ?"
