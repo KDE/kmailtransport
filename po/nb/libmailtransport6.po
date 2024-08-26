@@ -63,9 +63,6 @@ msgstr "Portnummer til tjeneren"
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:32
 #, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
@@ -163,14 +160,12 @@ msgstr "Ingen kryptering"
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
 #, fuzzy, kde-format
-#| msgid "TLS encryption"
 msgid "SSL/TLS encryption"
 msgstr "TLS-kryptering"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:68
 #, fuzzy, kde-format
-#| msgid "TLS encryption"
 msgid "STARTTLS encryption"
 msgstr "TLS-kryptering"
 
@@ -500,14 +495,12 @@ msgstr "KWallet er ikke tilgjengelig"
 
 #: transport.cpp:220
 #, fuzzy, kde-format
-#| msgid "Store Password"
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Lagre Passord"
 
 #: transport.cpp:221
 #, fuzzy, kde-format
-#| msgid "Do Not Store Password"
 msgctxt "@action:button"
 msgid "Do Not Store Password"
 msgstr "Ikke lagre passord"
@@ -529,7 +522,6 @@ msgstr "Opprette konto nå?"
 
 #: transportmanager.cpp:226
 #, fuzzy, kde-format
-#| msgid "Create Account Now"
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Opprett konto nå"
@@ -558,22 +550,18 @@ msgstr "Spørsmål"
 
 #: transportmanager.cpp:616
 #, fuzzy, kde-format
-#| msgid "Migrate"
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Flytt"
 
 #: transportmanager.cpp:617
 #, fuzzy, kde-format
-#| msgid "Keep"
 msgctxt "@action:button"
 msgid "Keep"
 msgstr "Behold"
 
 #: transportmodel.cpp:61
 #, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Standard)"
@@ -666,7 +654,6 @@ msgstr ""
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:68
 #, fuzzy, kde-format
-#| msgid "&Modify..."
 msgid "&Modify…"
 msgstr "&Endre …"
 
@@ -713,21 +700,18 @@ msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:175
 #, fuzzy, kde-format
-#| msgid "Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Endre …"
 
 #: widgets/transportmanagementwidgetng.cpp:178
 #, fuzzy, kde-format
-#| msgid "Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Endre navn"
 
 #: widgets/transportmanagementwidgetng.cpp:182
 #, fuzzy, kde-format
-#| msgid "Remove"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Fjern"
