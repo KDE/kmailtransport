@@ -12,7 +12,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-08-01 00:41+0000\n"
-"PO-Revision-Date: 2024-05-18 17:43+0900\n"
+"PO-Revision-Date: 2024-08-26 16:23+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
 "Language: zh_TW\n"
@@ -248,14 +248,13 @@ msgstr "%p%"
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
-msgstr "檢查容量時失敗。請檢查連接埠與認證模式。"
+msgstr "檢查能力時失敗。請檢查連接埠與認證模式。"
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
-msgstr "檢查容量失敗"
+msgstr "檢查能力失敗"
 
 #: plugins/smtp/smtpjob.cpp:223
 #, kde-format
@@ -487,11 +486,10 @@ msgstr ""
 "您確定要將帳號 %1 的密碼存在設定檔案中嗎？"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
-msgstr "無法使用 KWallet"
+msgstr "KWallet 無法使用"
 
 #: transport.cpp:220
 #, kde-format
@@ -516,8 +514,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "您必須建立外寄郵件帳號才能傳送信件。"
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "要現在建立帳號嗎？"
@@ -543,8 +540,7 @@ msgstr ""
 "您要將您的密碼移到 KWallet 中嗎？"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "問題"
@@ -688,8 +684,7 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "您確定要移除這 %1 個外寄帳號嗎？"
 
 #: widgets/transportmanagementwidgetng.cpp:141
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "要移除外寄帳號嗎？"
