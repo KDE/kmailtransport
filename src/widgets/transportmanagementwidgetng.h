@@ -35,6 +35,9 @@ public:
     */
     ~TransportManagementWidgetNg() override;
 
+    [[nodiscard]] bool enablePlasmaActivities() const;
+    void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
+
 private:
     std::unique_ptr<TransportManagementWidgetNgPrivate> const d;
 };

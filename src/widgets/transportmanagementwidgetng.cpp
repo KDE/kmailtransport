@@ -72,6 +72,18 @@ TransportManagementWidgetNg::TransportManagementWidgetNg(QWidget *parent)
     connect(d->ui.transportTreeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]() {
         d->updateButtonState();
     });
+    // d->ui.showOnlyTransportInCurrentActivity->setVisible(false);
+}
+
+bool TransportManagementWidgetNg::enablePlasmaActivities() const
+{
+    return d->ui.transportTreeView->enablePlasmaActivities();
+}
+
+void TransportManagementWidgetNg::setEnablePlasmaActivities(bool newEnablePlasmaActivities)
+{
+    d->ui.transportTreeView->setEnablePlasmaActivities(newEnablePlasmaActivities);
+    // d->ui.showOnlyTransportInCurrentActivity->setVisible(newEnablePlasmaActivities);
 }
 
 TransportManagementWidgetNg::~TransportManagementWidgetNg() = default;
