@@ -20,10 +20,14 @@ public:
     [[nodiscard]] TransportActivitiesAbstract *transportActivitiesAbstract() const;
     void setTransportActivitiesAbstract(TransportActivitiesAbstract *newTransportActivitiesAbstract);
 
+    [[nodiscard]] bool enablePlasmaActivities() const;
+    void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
+
 protected:
     [[nodiscard]] bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
     TransportActivitiesAbstract *mTransportActivitiesAbstract = nullptr;
+    bool mEnablePlasmaActivities = false;
 };
 }

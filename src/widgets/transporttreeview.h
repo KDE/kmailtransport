@@ -24,6 +24,9 @@ public:
 
     [[nodiscard]] TransportSortProxyModel *transportSortProxyModel() const;
 
+    [[nodiscard]] bool enablePlasmaActivities() const;
+    void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
+
 private:
     TransportSortProxyModel *const mTransportSortProxyModel;
 };

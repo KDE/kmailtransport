@@ -56,4 +56,14 @@ TransportSortProxyModel *TransportTreeView::transportSortProxyModel() const
     return mTransportSortProxyModel;
 }
 
+bool TransportTreeView::enablePlasmaActivities() const
+{
+    return mTransportSortProxyModel->enablePlasmaActivities();
+}
+
+void TransportTreeView::setEnablePlasmaActivities(bool newEnablePlasmaActivities)
+{
+    mTransportSortProxyModel->setEnablePlasmaActivities(newEnablePlasmaActivities);
+}
+
 #include "moc_transporttreeview.cpp"

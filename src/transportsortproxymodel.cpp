@@ -18,11 +18,24 @@ TransportSortProxyModel::~TransportSortProxyModel() = default;
 
 bool TransportSortProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
-    if (mTransportActivitiesAbstract) {
+    if (mTransportActivitiesAbstract && mEnablePlasmaActivities) {
         const auto activities = sourceModel()->index(source_row, 0).data(TransportModel::ActivitiesRole).toStringList();
         return mTransportActivitiesAbstract->filterAcceptsRow(activities);
     }
     return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
+}
+
+bool TransportSortProxyModel::enablePlasmaActivities() const
+{
+    return mEnablePlasmaActivities;
+}
+
+void TransportSortProxyModel::setEnablePlasmaActivities(bool newEnablePlasmaActivities)
+{
+    if (mEnablePlasmaActivities != newEnablePlasmaActivities) {
+        mEnablePlasmaActivities = newEnablePlasmaActivities;
+        invalidateFilter();
+    }
 }
 
 TransportActivitiesAbstract *TransportSortProxyModel::transportActivitiesAbstract() const
