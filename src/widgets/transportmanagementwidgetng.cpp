@@ -86,6 +86,11 @@ void TransportManagementWidgetNg::setEnablePlasmaActivities(bool newEnablePlasma
     d->ui.transportOnCurrentActivity->setVisible(newEnablePlasmaActivities);
 }
 
+void TransportManagementWidgetNg::setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract)
+{
+    d->ui.transportTreeView->setTransportActivitiesAbstract(activitiesAbstract);
+}
+
 TransportManagementWidgetNg::~TransportManagementWidgetNg() = default;
 
 void TransportManagementWidgetNgPrivate::updateButtonState()

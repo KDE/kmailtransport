@@ -15,6 +15,7 @@
 namespace MailTransport
 {
 class TransportManagementWidgetNgPrivate;
+class TransportActivitiesAbstract;
 
 /**
   A widget to manage mail transports.
@@ -37,6 +38,8 @@ public:
 
     [[nodiscard]] bool enablePlasmaActivities() const;
     void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
+
+    void setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract);
 
 private:
     std::unique_ptr<TransportManagementWidgetNgPrivate> const d;
