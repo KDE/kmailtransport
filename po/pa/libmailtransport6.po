@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-08-01 00:41+0000\n"
+"POT-Creation-Date: 2024-09-04 00:40+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -616,13 +616,13 @@ msgid "Description"
 msgstr "ਵੇਰਵਾ"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:17
+#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:42
 #, kde-format
 msgid "Remo&ve"
 msgstr "ਹਟਾਓ(&v)"
 
 #. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:24
+#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:76
 #, kde-format
 msgid "&Set as Default"
 msgstr "ਡਿਫਾਲਟ ਸੈੱਟ ਕਰੋ(&S)"
@@ -634,7 +634,7 @@ msgid "A&dd..."
 msgstr "ਸ਼ਾਮਲ(&A)..."
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:61
+#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:56
 #, kde-format
 msgid "&Rename"
 msgstr "ਨਾਂ ਬਦਲੋ(&R)"
@@ -645,18 +645,24 @@ msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 msgid "&Modify..."
 msgstr "ਸੋਧ(&M)..."
 
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidgetng.ui:54
-#, kde-format
-msgid "A&dd…"
-msgstr ""
-
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidgetng.ui:68
+#: ui/transportmanagementwidgetng.ui:17
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgid "&Modify…"
 msgstr "ਸੋਧ(&M)..."
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:49
+#, kde-format
+msgid "A&dd…"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
+#: ui/transportmanagementwidgetng.ui:83
+#, kde-format
+msgid "Show only transport on current activity"
+msgstr ""
 
 #: widgets/addtransportdialogng.cpp:94
 #, fuzzy, kde-format
@@ -677,53 +683,53 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (ਡਿਫਾਲਟ)"
 
-#: widgets/transportmanagementwidgetng.cpp:137
+#: widgets/transportmanagementwidgetng.cpp:149
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:138
+#: widgets/transportmanagementwidgetng.cpp:150
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: widgets/transportmanagementwidgetng.cpp:141
+#: widgets/transportmanagementwidgetng.cpp:153
 #, fuzzy, kde-format
 #| msgid "Create Outgoing Account"
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "ਬਾਹਰ ਭੇਜਣ ਅਕਾਊਂਟ ਬਣਾਓ"
 
-#: widgets/transportmanagementwidgetng.cpp:171
+#: widgets/transportmanagementwidgetng.cpp:183
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:176
+#: widgets/transportmanagementwidgetng.cpp:188
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "ਸੋਧ(&M)..."
 
-#: widgets/transportmanagementwidgetng.cpp:179
+#: widgets/transportmanagementwidgetng.cpp:191
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
-#: widgets/transportmanagementwidgetng.cpp:183
+#: widgets/transportmanagementwidgetng.cpp:195
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "ਹਟਾਓ(&v)"
 
-#: widgets/transportmanagementwidgetng.cpp:189
+#: widgets/transportmanagementwidgetng.cpp:201
 #, fuzzy, kde-format
 #| msgid "&Set as Default"
 msgid "Set as Default"
