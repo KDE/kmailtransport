@@ -242,7 +242,7 @@ bool Transport::usrSave()
     }
     TransportManager::self()->emitChangesCommitted();
     if (name() != d->oldName) {
-        Q_EMIT TransportManager::self()->transportRenamed(id(), d->oldName, name());
+        Q_EMIT TransportManager::self() -> transportRenamed(id(), d->oldName, name());
         d->oldName = name();
     }
 
