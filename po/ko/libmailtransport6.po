@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:40+0000\n"
+"POT-Creation-Date: 2024-09-05 00:40+0000\n"
 "PO-Revision-Date: 2024-08-19 23:30+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -679,48 +679,48 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (기본값)"
 
-#: widgets/transportmanagementwidgetng.cpp:149
+#: widgets/transportmanagementwidgetng.cpp:154
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "발신 계정 '%1'을(를) 삭제하시겠습니까?"
 
-#: widgets/transportmanagementwidgetng.cpp:150
+#: widgets/transportmanagementwidgetng.cpp:155
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "발신 계정 %1개를 삭제하시겠습니까?"
 
-#: widgets/transportmanagementwidgetng.cpp:153
+#: widgets/transportmanagementwidgetng.cpp:158
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "발신 계정 삭제?"
 
-#: widgets/transportmanagementwidgetng.cpp:183
+#: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "추가…"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:193
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "수정…"
 
-#: widgets/transportmanagementwidgetng.cpp:191
+#: widgets/transportmanagementwidgetng.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "이름 바꾸기"
 
-#: widgets/transportmanagementwidgetng.cpp:195
+#: widgets/transportmanagementwidgetng.cpp:200
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "삭제"
 
-#: widgets/transportmanagementwidgetng.cpp:201
+#: widgets/transportmanagementwidgetng.cpp:206
 #, kde-format
 msgid "Set as Default"
 msgstr "기본값으로 설정"

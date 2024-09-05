@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-04 00:40+0000\n"
+"POT-Creation-Date: 2024-09-05 00:40+0000\n"
 "PO-Revision-Date: 2024-08-15 11:49+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -682,12 +682,12 @@ msgctxt "@label the default mail transport"
 msgid " (Default)"
 msgstr " (المبدئيّ)"
 
-#: widgets/transportmanagementwidgetng.cpp:149
+#: widgets/transportmanagementwidgetng.cpp:154
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "أتريد إزالة الحساب الصادر '%1'؟"
 
-#: widgets/transportmanagementwidgetng.cpp:150
+#: widgets/transportmanagementwidgetng.cpp:155
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
@@ -698,37 +698,37 @@ msgstr[3] "أتريد إزالة هذه %1 الحسابات الصادرة حق�
 msgstr[4] "أتريد إزالة هذه %1 حساباً صادرة حقاً؟"
 msgstr[5] "أتريد إزالة هذه %1 حساب صادرة حقاً؟"
 
-#: widgets/transportmanagementwidgetng.cpp:153
+#: widgets/transportmanagementwidgetng.cpp:158
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "إزالة الحساب الصادر؟"
 
-#: widgets/transportmanagementwidgetng.cpp:183
+#: widgets/transportmanagementwidgetng.cpp:188
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "أضف…"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:193
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "عدّل…"
 
-#: widgets/transportmanagementwidgetng.cpp:191
+#: widgets/transportmanagementwidgetng.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "أعد التّسمية"
 
-#: widgets/transportmanagementwidgetng.cpp:195
+#: widgets/transportmanagementwidgetng.cpp:200
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "أزل"
 
-#: widgets/transportmanagementwidgetng.cpp:201
+#: widgets/transportmanagementwidgetng.cpp:206
 #, kde-format
 msgid "Set as Default"
 msgstr "اضبطها كمبدئيّة"
