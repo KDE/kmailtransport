@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:40+0000\n"
-"PO-Revision-Date: 2024-08-03 13:04+0100\n"
+"PO-Revision-Date: 2024-09-07 12:24+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
 "Language: en_GB\n"
@@ -670,7 +670,7 @@ msgstr "A&dd…"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transport on current activity"
-msgstr ""
+msgstr "Show only transport on current activity"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format

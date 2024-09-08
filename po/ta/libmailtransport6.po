@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-05 00:40+0000\n"
-"PO-Revision-Date: 2024-05-19 16:05+0530\n"
+"PO-Revision-Date: 2024-09-07 19:33+0200\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
 "Language: ta\n"
@@ -15,7 +15,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 24.02.2\n"
+"X-Generator: Lokalize 24.08.0\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -99,7 +99,7 @@ msgstr ""
 #: mailtransport.kcfg:44
 #, kde-format
 msgid "Options added to mailtransport method"
-msgstr ""
+msgstr "mailtransport செயல்முறைக்கு தறவேண்டிய விருப்பங்கள்"
 
 #. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
 #: mailtransport.kcfg:47
@@ -189,7 +189,7 @@ msgstr ""
 #: mailtransport.kcfg:97
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
-msgstr ""
+msgstr "சேவையத்திற்கு அனுப்ப வேண்டிய புரவன் பெயரை உள்ளிடவும்."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:101
@@ -198,6 +198,9 @@ msgid ""
 "Check this option to use a custom sender address when identifying to the "
 "mail server. If not checked, the address from the identity is used."
 msgstr ""
+"சேவையத்திற்கு சான்றளிக்கும்போது அனுப்புநர் முகவரியை மாற்றிக் கூற வேண்டுமெனில் இதைக் "
+"குறிக்கவும். இது குறிக்கப்படவில்லையெனில், அடையாளத்திலுள்ள மின்னஞ்சல் முகவரி "
+"பயன்படுத்தப்படும்."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:106
@@ -206,6 +209,8 @@ msgid ""
 "Enter the address that should be used to overwrite the default sender "
 "address."
 msgstr ""
+"இயல்பிருப்பு மின்னஞ்சல் முகவரிக்கு பதிலாக பயன்படுத்த வேண்டிய மின்னஞ்சல் முகவரியை "
+"உள்ளிடவும்."
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
@@ -243,11 +248,10 @@ msgstr ""
 "இயலுமைகளை சரிபார்க்க முடியவில்லை. புறையையும் சான்றளிப்பு முறையையும் சரிபார்க்கவும்."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
-msgstr "இயலுமைகள் சரிபார்ப்பு தோல்வியடைந்தது"
+msgstr "இயலுமைகளை சரிபார்ப்பது தோல்வியடைந்தது"
 
 #: plugins/smtp/smtpjob.cpp:223
 #, kde-format
@@ -474,8 +478,7 @@ msgid ""
 msgstr ""
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "கேவால்லட் கிடைக்கவில்லை"
@@ -503,8 +506,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "அஞ்சலனுப்புமுன் அஞ்சலனுப்பு கணக்கை உருவாக்க வேண்டும்."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "கணக்கை இப்போது உருவாக்கலாமா?"
@@ -527,8 +529,7 @@ msgid ""
 msgstr ""
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "கேள்வி"
@@ -567,7 +568,7 @@ msgstr "வகை"
 #: ui/addtransportdialog.ui:20
 #, kde-format
 msgid "Step One: Select Transport Type"
-msgstr ""
+msgstr "முதல் படி: கணக்கின் வகையைத் தேர்ந்தெடுப்பது"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/addtransportdialog.ui:38
@@ -646,7 +647,7 @@ msgstr "&சேர்…"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transport on current activity"
-msgstr ""
+msgstr "தற்போதைய செயல்பாட்டிலுள்ள கணக்குகளை மட்டும் காட்டு"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -679,8 +680,7 @@ msgstr[0] "இந்த %1 அஞ்சலனுப்பு கணக்கை 
 msgstr[1] "இந்த %1 அஞ்சலனுப்பு கணக்குகளை உறுதியாக நீக்க வேண்டுமா?"
 
 #: widgets/transportmanagementwidgetng.cpp:158
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "அஞ்சலனுப்பு கணக்கை நீக்கலாமா?"
