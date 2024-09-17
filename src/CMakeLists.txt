@@ -21,12 +21,10 @@ target_sources(KPim6MailTransport PRIVATE
 target_sources(KPim6MailTransport PRIVATE
     widgets/transportconfigwidget.cpp
     widgets/transportcombobox.cpp
-    widgets/transportlistwidget.cpp
     widgets/addtransportdialogng.cpp
 
     widgets/addtransportdialogng.h
     widgets/transportcombobox.h
-    widgets/transportlistwidget.h
     widgets/transportconfigwidget_p.h
     widgets/transportconfigwidget.h
 
