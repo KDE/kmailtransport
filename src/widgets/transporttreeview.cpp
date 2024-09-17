@@ -21,6 +21,7 @@ TransportTreeView::TransportTreeView(QWidget *parent)
     setSelectionBehavior(QAbstractItemView::SelectRows);
     setRootIsDecorated(false);
     setSortingEnabled(true);
+    setEditTriggers(QAbstractItemView::EditKeyPressed);
     setAllColumnsShowFocus(true);
     header()->setSectionsMovable(false);
     header()->setSectionResizeMode(QHeaderView::ResizeToContents);
@@ -31,7 +32,6 @@ TransportTreeView::TransportTreeView(QWidget *parent)
     mTransportSortProxyModel->setSourceModel(model);
     setModel(mTransportSortProxyModel);
 
-    setEditTriggers(DoubleClicked);
     setColumnHidden(MailTransport::TransportModel::TransportIdentifierRole, true);
     setColumnHidden(MailTransport::TransportModel::DefaultRole, true);
     setColumnHidden(MailTransport::TransportModel::ActivitiesRole, true);
