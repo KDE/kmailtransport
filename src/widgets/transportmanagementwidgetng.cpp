@@ -25,7 +25,6 @@ public:
     Ui::TransportManagementWidgetNg ui;
     TransportManagementWidgetNg *const q;
 
-    // Slots
     void defaultClicked();
     void removeClicked();
     void renameClicked();
