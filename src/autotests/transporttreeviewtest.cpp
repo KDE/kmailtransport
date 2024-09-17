@@ -29,7 +29,7 @@ void TransportTreeViewTest::shouldHaveDefaultValues()
     QVERIFY(w.uniformRowHeights());
     QVERIFY(w.isColumnHidden(MailTransport::TransportModel::TransportIdentifierRole));
     QVERIFY(w.isColumnHidden(MailTransport::TransportModel::DefaultRole));
-    QCOMPARE(w.editTriggers(), QAbstractItemView::DoubleClicked);
+    QCOMPARE(w.editTriggers(), QAbstractItemView::EditKeyPressed);
     QVERIFY(!w.transportActivitiesAbstract());
 }
 
