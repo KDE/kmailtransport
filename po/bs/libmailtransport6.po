@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:40+0000\n"
+"POT-Creation-Date: 2024-09-18 00:40+0000\n"
 "PO-Revision-Date: 2013-11-15 13:49+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -600,13 +600,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Podrazumijevano)"
 
-#: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:83
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Ime"
 
-#: transportmodel.cpp:85 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:85
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -650,36 +650,6 @@ msgstr "Tip"
 msgid "Description"
 msgstr "Opis"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:42
-#, kde-format
-msgid "Remo&ve"
-msgstr "&Ukloni"
-
-#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:76
-#, kde-format
-msgid "&Set as Default"
-msgstr "&Postavi kao podrazumijevano"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54
-#, kde-format
-msgid "A&dd..."
-msgstr "D&odaj..."
-
-#. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:56
-#, kde-format
-msgid "&Rename"
-msgstr "&Preimenuj"
-
-#. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68
-#, kde-format
-msgid "&Modify..."
-msgstr "&Izmijeni..."
-
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
 #, fuzzy, kde-format
@@ -687,11 +657,29 @@ msgstr "&Izmijeni..."
 msgid "&Modify…"
 msgstr "&Izmijeni..."
 
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: ui/transportmanagementwidgetng.ui:42
+#, kde-format
+msgid "Remo&ve"
+msgstr "&Ukloni"
+
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: ui/transportmanagementwidgetng.ui:56
+#, kde-format
+msgid "&Rename"
+msgstr "&Preimenuj"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: ui/transportmanagementwidgetng.ui:76
+#, kde-format
+msgid "&Set as Default"
+msgstr "&Postavi kao podrazumijevano"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
@@ -712,18 +700,12 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Napravi i podesi"
 
-#: widgets/transportlistwidget.cpp:99
-#, kde-format
-msgctxt "@label the default mail transport"
-msgid " (Default)"
-msgstr " (Podrazumijevano)"
-
-#: widgets/transportmanagementwidgetng.cpp:154
+#: widgets/transportmanagementwidgetng.cpp:153
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Želite li ukloniti izlazni nalog '%1'?"
 
-#: widgets/transportmanagementwidgetng.cpp:155
+#: widgets/transportmanagementwidgetng.cpp:154
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -732,44 +714,54 @@ msgstr[0] "Želite li ukloniti izlazni nalog '%1'?"
 msgstr[1] "Želite li ukloniti izlazni nalog '%1'?"
 msgstr[2] "Želite li ukloniti izlazni nalog '%1'?"
 
-#: widgets/transportmanagementwidgetng.cpp:158
+#: widgets/transportmanagementwidgetng.cpp:157
 #, fuzzy, kde-format
 #| msgid "Remove outgoing account?"
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Ukloniti izlazni nalog?"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:187
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:193
+#: widgets/transportmanagementwidgetng.cpp:192
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Izmijeni..."
 
-#: widgets/transportmanagementwidgetng.cpp:196
+#: widgets/transportmanagementwidgetng.cpp:195
 #, fuzzy, kde-format
 #| msgid "Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Preimenuj"
 
-#: widgets/transportmanagementwidgetng.cpp:200
+#: widgets/transportmanagementwidgetng.cpp:199
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Ukloni"
 
-#: widgets/transportmanagementwidgetng.cpp:206
+#: widgets/transportmanagementwidgetng.cpp:205
 #, kde-format
 msgid "Set as Default"
 msgstr "Postavi kao podrazumijevano"
+
+#~ msgid "A&dd..."
+#~ msgstr "D&odaj..."
+
+#~ msgid "&Modify..."
+#~ msgstr "&Izmijeni..."
+
+#~ msgctxt "@label the default mail transport"
+#~ msgid " (Default)"
+#~ msgstr " (Podrazumijevano)"
 
 #, fuzzy
 #~| msgid "Add..."

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:40+0000\n"
+"POT-Creation-Date: 2024-09-18 00:40+0000\n"
 "PO-Revision-Date: 2023-01-07 09:12+0200\n"
 "Last-Translator: Stelios <sstavra@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -598,13 +598,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (προκαθορισμένος)"
 
-#: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:83
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Όνομα"
 
-#: transportmodel.cpp:85 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:85
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -647,47 +647,35 @@ msgstr "Τύπος"
 msgid "Description"
 msgstr "Περιγραφή"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:42
-#, kde-format
-msgid "Remo&ve"
-msgstr "&Αφαίρεση"
-
-#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:76
-#, kde-format
-msgid "&Set as Default"
-msgstr "&Ορισμός προεπιλογής"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54
-#, kde-format
-msgid "A&dd..."
-msgstr "Προσ&θήκη..."
-
-#. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:56
-#, kde-format
-msgid "&Rename"
-msgstr "&Μετονομασία"
-
-#. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68
-#, kde-format
-msgid "&Modify..."
-msgstr "&Τροποποίηση..."
-
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
 #, kde-format
 msgid "&Modify…"
 msgstr "&Τροποποίηση…"
 
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: ui/transportmanagementwidgetng.ui:42
+#, kde-format
+msgid "Remo&ve"
+msgstr "&Αφαίρεση"
+
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: ui/transportmanagementwidgetng.ui:56
+#, kde-format
+msgid "&Rename"
+msgstr "&Μετονομασία"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: ui/transportmanagementwidgetng.ui:76
+#, kde-format
+msgid "&Set as Default"
+msgstr "&Ορισμός προεπιλογής"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
@@ -707,58 +695,62 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Δημιουργία και διαμόρφωση"
 
-#: widgets/transportlistwidget.cpp:99
-#, kde-format
-msgctxt "@label the default mail transport"
-msgid " (Default)"
-msgstr " (Προκαθορισμένος)"
-
-#: widgets/transportmanagementwidgetng.cpp:154
+#: widgets/transportmanagementwidgetng.cpp:153
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Θέλετε να αφαιρέσετε το λογαριασμό εξερχομένων '%1';"
 
-#: widgets/transportmanagementwidgetng.cpp:155
+#: widgets/transportmanagementwidgetng.cpp:154
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Θέλετε να αφαιρέσετε αυτόν τον %1 λογαριασμό εξερχομένων;"
 msgstr[1] "Θέλετε να αφαιρέσετε αυτούς τους '%1' λογαριασμούς εξερχομένων;"
 
-#: widgets/transportmanagementwidgetng.cpp:158
+#: widgets/transportmanagementwidgetng.cpp:157
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Αφαίρεση λογαριασμού εξερχομένων;"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:187
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:193
+#: widgets/transportmanagementwidgetng.cpp:192
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Επεξεργασία…"
 
-#: widgets/transportmanagementwidgetng.cpp:196
+#: widgets/transportmanagementwidgetng.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Μετονομασία"
 
-#: widgets/transportmanagementwidgetng.cpp:200
+#: widgets/transportmanagementwidgetng.cpp:199
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Αφαίρεση"
 
-#: widgets/transportmanagementwidgetng.cpp:206
+#: widgets/transportmanagementwidgetng.cpp:205
 #, kde-format
 msgid "Set as Default"
 msgstr "Ορισμός προεπιλογής"
+
+#~ msgid "A&dd..."
+#~ msgstr "Προσ&θήκη..."
+
+#~ msgid "&Modify..."
+#~ msgstr "&Τροποποίηση..."
+
+#~ msgctxt "@label the default mail transport"
+#~ msgid " (Default)"
+#~ msgstr " (Προκαθορισμένος)"
 
 #, fuzzy
 #~| msgid "Add..."

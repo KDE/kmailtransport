@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs/libmailtransport.po\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:40+0000\n"
+"POT-Creation-Date: 2024-09-18 00:40+0000\n"
 "PO-Revision-Date: 2007-06-27 10:27-0500\n"
 "Last-Translator: Kevin Scannell <kscanne@gmail.com>\n"
 "Language-Team: Irish <gaeilge-gnulinux@lists.sourceforge.net>\n"
@@ -609,13 +609,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Réamhshocrú)"
 
-#: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:83
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Ainm"
 
-#: transportmodel.cpp:85 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:85
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -659,36 +659,6 @@ msgstr "Cineál"
 msgid "Description"
 msgstr "Cur Síos"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:42
-#, kde-format
-msgid "Remo&ve"
-msgstr "&Bain"
-
-#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:76
-#, kde-format
-msgid "&Set as Default"
-msgstr "&Socraigh mar Réamhshocrú"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54
-#, kde-format
-msgid "A&dd..."
-msgstr "C&uir Leis..."
-
-#. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:56
-#, kde-format
-msgid "&Rename"
-msgstr "&Athainmnigh"
-
-#. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68
-#, kde-format
-msgid "&Modify..."
-msgstr "&Athraigh..."
-
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
 #, fuzzy, kde-format
@@ -696,11 +666,29 @@ msgstr "&Athraigh..."
 msgid "&Modify…"
 msgstr "&Athraigh..."
 
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: ui/transportmanagementwidgetng.ui:42
+#, kde-format
+msgid "Remo&ve"
+msgstr "&Bain"
+
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: ui/transportmanagementwidgetng.ui:56
+#, kde-format
+msgid "&Rename"
+msgstr "&Athainmnigh"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: ui/transportmanagementwidgetng.ui:76
+#, kde-format
+msgid "&Set as Default"
+msgstr "&Socraigh mar Réamhshocrú"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
@@ -721,18 +709,12 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Cruthaigh agus Cumraigh"
 
-#: widgets/transportlistwidget.cpp:99
-#, kde-format
-msgctxt "@label the default mail transport"
-msgid " (Default)"
-msgstr " (Réamhshocrú)"
-
-#: widgets/transportmanagementwidgetng.cpp:154
+#: widgets/transportmanagementwidgetng.cpp:153
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "An bhfuil fonn ort cuntas amach '%1' a bhaint?"
 
-#: widgets/transportmanagementwidgetng.cpp:155
+#: widgets/transportmanagementwidgetng.cpp:154
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -743,44 +725,54 @@ msgstr[2] "An bhfuil fonn ort cuntas amach '%1' a bhaint?"
 msgstr[3] "An bhfuil fonn ort cuntas amach '%1' a bhaint?"
 msgstr[4] "An bhfuil fonn ort cuntas amach '%1' a bhaint?"
 
-#: widgets/transportmanagementwidgetng.cpp:158
+#: widgets/transportmanagementwidgetng.cpp:157
 #, fuzzy, kde-format
 #| msgid "Remove outgoing account?"
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "An bhfuil fonn ort an cuntas amach a scriosadh?"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:187
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:193
+#: widgets/transportmanagementwidgetng.cpp:192
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "&Athraigh..."
 
-#: widgets/transportmanagementwidgetng.cpp:196
+#: widgets/transportmanagementwidgetng.cpp:195
 #, fuzzy, kde-format
 #| msgid "Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Athainmnigh"
 
-#: widgets/transportmanagementwidgetng.cpp:200
+#: widgets/transportmanagementwidgetng.cpp:199
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Bain"
 
-#: widgets/transportmanagementwidgetng.cpp:206
+#: widgets/transportmanagementwidgetng.cpp:205
 #, kde-format
 msgid "Set as Default"
 msgstr "Socraigh mar Réamhshocrú"
+
+#~ msgid "A&dd..."
+#~ msgstr "C&uir Leis..."
+
+#~ msgid "&Modify..."
+#~ msgstr "&Athraigh..."
+
+#~ msgctxt "@label the default mail transport"
+#~ msgid " (Default)"
+#~ msgstr " (Réamhshocrú)"
 
 #, fuzzy
 #~| msgid "Add..."

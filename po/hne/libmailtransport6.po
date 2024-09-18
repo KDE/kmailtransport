@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:40+0000\n"
+"POT-Creation-Date: 2024-09-18 00:40+0000\n"
 "PO-Revision-Date: 2009-02-28 22:34+0530\n"
 "Last-Translator: Ravishankar Shrivastava <raviratlami@aol.in>\n"
 "Language-Team: Hindi <kde-i18n-doc@lists.kde.org>\n"
@@ -564,13 +564,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr "(डिफाल्ट)"
 
-#: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:83
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "नांव"
 
-#: transportmodel.cpp:85 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:85
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -618,39 +618,6 @@ msgstr "किसिम"
 msgid "Description"
 msgstr "कोई एनक्रिप्सन नइ"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:42
-#, fuzzy, kde-format
-#| msgid "R&emove"
-msgid "Remo&ve"
-msgstr "मेटाव (&e)"
-
-#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:76
-#, fuzzy, kde-format
-#| msgid "Set Default"
-msgid "&Set as Default"
-msgstr "डिफाल्ट सेट करव"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54
-#, kde-format
-msgid "A&dd..."
-msgstr "जोड़व... (&d)"
-
-#. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:56
-#, fuzzy, kde-format
-#| msgid "&Name:"
-msgid "&Rename"
-msgstr "नाम: (&N)"
-
-#. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68
-#, kde-format
-msgid "&Modify..."
-msgstr "सुधारव... (&M)"
-
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
 #, fuzzy, kde-format
@@ -658,11 +625,32 @@ msgstr "सुधारव... (&M)"
 msgid "&Modify…"
 msgstr "सुधारव... (&M)"
 
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: ui/transportmanagementwidgetng.ui:42
+#, fuzzy, kde-format
+#| msgid "R&emove"
+msgid "Remo&ve"
+msgstr "मेटाव (&e)"
+
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
 msgstr ""
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: ui/transportmanagementwidgetng.ui:56
+#, fuzzy, kde-format
+#| msgid "&Name:"
+msgid "&Rename"
+msgstr "नाम: (&N)"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: ui/transportmanagementwidgetng.ui:76
+#, fuzzy, kde-format
+#| msgid "Set Default"
+msgid "&Set as Default"
+msgstr "डिफाल्ट सेट करव"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
@@ -682,62 +670,66 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr ""
 
-#: widgets/transportlistwidget.cpp:99
-#, kde-format
-msgctxt "@label the default mail transport"
-msgid " (Default)"
-msgstr "(डिफाल्ट)"
-
-#: widgets/transportmanagementwidgetng.cpp:154
+#: widgets/transportmanagementwidgetng.cpp:153
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:155
+#: widgets/transportmanagementwidgetng.cpp:154
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: widgets/transportmanagementwidgetng.cpp:158
+#: widgets/transportmanagementwidgetng.cpp:157
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:187
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:193
+#: widgets/transportmanagementwidgetng.cpp:192
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "सुधारव... (&M)"
 
-#: widgets/transportmanagementwidgetng.cpp:196
+#: widgets/transportmanagementwidgetng.cpp:195
 #, fuzzy, kde-format
 #| msgid "&Name:"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "नाम: (&N)"
 
-#: widgets/transportmanagementwidgetng.cpp:200
+#: widgets/transportmanagementwidgetng.cpp:199
 #, fuzzy, kde-format
 #| msgid "R&emove"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "मेटाव (&e)"
 
-#: widgets/transportmanagementwidgetng.cpp:206
+#: widgets/transportmanagementwidgetng.cpp:205
 #, fuzzy, kde-format
 #| msgid "Set Default"
 msgid "Set as Default"
 msgstr "डिफाल्ट सेट करव"
+
+#~ msgid "A&dd..."
+#~ msgstr "जोड़व... (&d)"
+
+#~ msgid "&Modify..."
+#~ msgstr "सुधारव... (&M)"
+
+#~ msgctxt "@label the default mail transport"
+#~ msgid " (Default)"
+#~ msgstr "(डिफाल्ट)"
 
 #, fuzzy
 #~| msgid "A&dd..."

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-05 00:40+0000\n"
+"POT-Creation-Date: 2024-09-18 00:40+0000\n"
 "PO-Revision-Date: 2024-07-27 22:05+0200\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -583,13 +583,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (alapértelmezett)"
 
-#: transportmodel.cpp:83 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:83
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Név"
 
-#: transportmodel.cpp:85 widgets/transportlistwidget.cpp:27
+#: transportmodel.cpp:85
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -632,47 +632,35 @@ msgstr "Típus"
 msgid "Description"
 msgstr "Leírás"
 
-#. i18n: ectx: property (text), widget (QPushButton, removeButton)
-#: ui/transportmanagementwidget.ui:17 ui/transportmanagementwidgetng.ui:42
-#, kde-format
-msgid "Remo&ve"
-msgstr "&Eltávolítás"
-
-#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
-#: ui/transportmanagementwidget.ui:24 ui/transportmanagementwidgetng.ui:76
-#, kde-format
-msgid "&Set as Default"
-msgstr "Beállítá&s alapértelmezésnek"
-
-#. i18n: ectx: property (text), widget (QPushButton, addButton)
-#: ui/transportmanagementwidget.ui:54
-#, kde-format
-msgid "A&dd..."
-msgstr "&Hozzáadás…"
-
-#. i18n: ectx: property (text), widget (QPushButton, renameButton)
-#: ui/transportmanagementwidget.ui:61 ui/transportmanagementwidgetng.ui:56
-#, kde-format
-msgid "&Rename"
-msgstr "Átneve&zés"
-
-#. i18n: ectx: property (text), widget (QPushButton, editButton)
-#: ui/transportmanagementwidget.ui:68
-#, kde-format
-msgid "&Modify..."
-msgstr "Mó&dosítás…"
-
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
 #, kde-format
 msgid "&Modify…"
 msgstr "Mó&dosítás…"
 
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: ui/transportmanagementwidgetng.ui:42
+#, kde-format
+msgid "Remo&ve"
+msgstr "&Eltávolítás"
+
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
 msgstr "Hozzáa&dás…"
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: ui/transportmanagementwidgetng.ui:56
+#, kde-format
+msgid "&Rename"
+msgstr "Átneve&zés"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: ui/transportmanagementwidgetng.ui:76
+#, kde-format
+msgid "&Set as Default"
+msgstr "Beállítá&s alapértelmezésnek"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
@@ -692,59 +680,63 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Létrehozás és beállítás"
 
-#: widgets/transportlistwidget.cpp:99
-#, kde-format
-msgctxt "@label the default mail transport"
-msgid " (Default)"
-msgstr " (Alapértelmezés)"
-
-#: widgets/transportmanagementwidgetng.cpp:154
+#: widgets/transportmanagementwidgetng.cpp:153
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Szeretné eltávolítani a(z) „%1” kimenő fiókot?"
 
-#: widgets/transportmanagementwidgetng.cpp:155
+#: widgets/transportmanagementwidgetng.cpp:154
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Biztosan el szeretné távolítani ezt a(z) „%1” kimenő fiókot?"
 msgstr[1] "Biztosan el szeretné távolítani ezt a(z) „%1” kimenő fiókot?"
 
-#: widgets/transportmanagementwidgetng.cpp:158
+#: widgets/transportmanagementwidgetng.cpp:157
 #, fuzzy, kde-format
 #| msgid "Remove outgoing account?"
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Kimenő fiók eltávolítása?"
 
-#: widgets/transportmanagementwidgetng.cpp:188
+#: widgets/transportmanagementwidgetng.cpp:187
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Hozzáadás…"
 
-#: widgets/transportmanagementwidgetng.cpp:193
+#: widgets/transportmanagementwidgetng.cpp:192
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Módosítás…"
 
-#: widgets/transportmanagementwidgetng.cpp:196
+#: widgets/transportmanagementwidgetng.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Átnevezés"
 
-#: widgets/transportmanagementwidgetng.cpp:200
+#: widgets/transportmanagementwidgetng.cpp:199
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: widgets/transportmanagementwidgetng.cpp:206
+#: widgets/transportmanagementwidgetng.cpp:205
 #, kde-format
 msgid "Set as Default"
 msgstr "Beállítás alapértelmezettként"
+
+#~ msgid "A&dd..."
+#~ msgstr "&Hozzáadás…"
+
+#~ msgid "&Modify..."
+#~ msgstr "Mó&dosítás…"
+
+#~ msgctxt "@label the default mail transport"
+#~ msgid " (Default)"
+#~ msgstr " (Alapértelmezés)"
 
 #, fuzzy
 #~| msgid "Add..."
