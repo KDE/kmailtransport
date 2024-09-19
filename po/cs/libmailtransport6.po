@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:40+0000\n"
-"PO-Revision-Date: 2024-08-06 11:30+0200\n"
+"PO-Revision-Date: 2024-09-17 13:44+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
 "Language: cs\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -657,7 +657,7 @@ msgstr "Na&stavit jako výchozí"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transport on current activity"
-msgstr ""
+msgstr "Zobrazit pouze transport z aktuální aktivity"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -718,13 +718,3 @@ msgstr "Odstranit"
 #, kde-format
 msgid "Set as Default"
 msgstr "Nastavit jako výchozí"
-
-#~ msgid "A&dd..."
-#~ msgstr "Při&dat..."
-
-#~ msgid "&Modify..."
-#~ msgstr "Z&měnit..."
-
-#~ msgctxt "@label the default mail transport"
-#~ msgid " (Default)"
-#~ msgstr " (výchozí)"
