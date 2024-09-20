@@ -685,13 +685,3 @@ msgstr "Váldde eret"
 #, kde-format
 msgid "Set as Default"
 msgstr "Geavat standárdan"
-
-#~ msgid "A&dd..."
-#~ msgstr "L&asit …"
-
-#~ msgid "&Modify..."
-#~ msgstr "&Rievdat …"
-
-#~ msgctxt "@label the default mail transport"
-#~ msgid " (Default)"
-#~ msgstr " (Standárda)"

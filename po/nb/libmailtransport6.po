@@ -713,13 +713,3 @@ msgstr "Fjern"
 #, kde-format
 msgid "Set as Default"
 msgstr "Velg som standard"
-
-#~ msgid "A&dd..."
-#~ msgstr "&Legg til …"
-
-#~ msgid "&Modify..."
-#~ msgstr "&Endre …"
-
-#~ msgctxt "@label the default mail transport"
-#~ msgid " (Default)"
-#~ msgstr " (Standard)"
