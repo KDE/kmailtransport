@@ -8,20 +8,21 @@
 # Dimitrios Glentadakis <dglent@gmail.com>, 2012, 2013.
 # Stelios <sstavra@gmail.com>, 2012, 2020, 2023.
 # Dimitris Kardarakos <dimkard@gmail.com>, 2014.
+# SPDX-FileCopyrightText: 2024 Antonis Geralis <capoiosct@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-09-18 00:40+0000\n"
-"PO-Revision-Date: 2023-01-07 09:12+0200\n"
-"Last-Translator: Stelios <sstavra@gmail.com>\n"
+"PO-Revision-Date: 2024-09-20 14:05+0300\n"
+"Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
 "Language: el\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Lokalize 21.12.3\n"
+"X-Generator: Lokalize 24.08.1\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -148,13 +149,13 @@ msgid ""
 "should not be considered secure from decryption efforts if access to the "
 "configuration file is obtained."
 msgstr ""
-"Ενεργοποιήστε αυτήν την επιλογή για να αποθηκευτεί ο κωδικός πρόσβασής σας.\n"
+"Ενεργοποιήστε αυτήν την επιλογή για να αποθηκευτεί ο κωδικός πρόσβασης σας.\n"
 "Αν είναι διαθέσιμο το KWallet, ο κωδικός πρόσβασης θα αποθηκευτεί εκεί, "
 "πράγμα που θεωρείται ασφαλές.\n"
 "Αν όμως το KWallet δεν είναι διαθέσιμο, ο κωδικός πρόσβασης θα αποθηκευτεί "
 "στο αρχείο διαμόρφωσης. Ο κωδικός πρόσβασης θα αποθηκευτεί σε κωδικοποιημένη "
 "μορφή, αλλά δε θα πρέπει να θεωρείται ανθεκτική έναντι προσπαθειών "
-"αποκωδικοποίησής του, αν κάποιος αποκτήσει πρόσβαση στο αρχείο διαμόρφωσης."
+"αποκωδικοποίησης του, αν κάποιος αποκτήσει πρόσβαση στο αρχείο διαμόρφωσης."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:59
@@ -511,7 +512,7 @@ msgstr ""
 "διαχείριση των κωδικών σας.\n"
 "Ωστόσο, ο κωδικός πρόσβασης μπορεί να αποθηκευτεί στο αρχείο διαμόρφωσης. Ο "
 "κωδικός πρόσβασης θα αποθηκευτεί σε κωδικοποιημένη μορφή, αλλά δε θα πρέπει "
-"να θεωρείται ανθεκτική έναντι προσπαθειών αποκωδικοποίησής του, αν κάποιος "
+"να θεωρείται ανθεκτική έναντι προσπαθειών αποκωδικοποίησης του, αν κάποιος "
 "αποκτήσει πρόσβαση στο αρχείο διαμόρφωσης.\n"
 "Θέλετε να αποθηκεύσετε τον κωδικό πρόσβασης του διακομιστή '%1' στο αρχείο "
 "διαμόρφωσης;"
