@@ -723,13 +723,3 @@ msgstr "Премахване"
 #, kde-format
 msgid "Set as Default"
 msgstr "Настройване като подразбиращ се"
-
-#~ msgid "A&dd..."
-#~ msgstr "Д&обавяне..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Промяна..."
-
-#~ msgctxt "@label the default mail transport"
-#~ msgid " (Default)"
-#~ msgstr " (По подразбиране)"
