@@ -19,7 +19,7 @@ TransportSortProxyModel::~TransportSortProxyModel() = default;
 bool TransportSortProxyModel::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
 {
     if (mTransportActivitiesAbstract && mEnablePlasmaActivities) {
-        const auto activities = sourceModel()->index(source_row, 0).data(TransportModel::ActivitiesRole).toStringList();
+        const auto activities = sourceModel()->index(source_row, TransportModel::ActivitiesRole).data().toStringList();
         return mTransportActivitiesAbstract->filterAcceptsRow(activities);
     }
     return QSortFilterProxyModel::filterAcceptsRow(source_row, source_parent);
