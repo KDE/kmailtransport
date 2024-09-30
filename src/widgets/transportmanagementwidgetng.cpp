@@ -71,6 +71,9 @@ TransportManagementWidgetNg::TransportManagementWidgetNg(QWidget *parent)
     connect(d->ui.transportTreeView->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]() {
         d->updateButtonState();
     });
+    connect(d->ui.transportOnCurrentActivity, &QCheckBox::checkStateChanged, this, [this](Qt::CheckState state) {
+        d->ui.transportTreeView->setEnablePlasmaActivities(state == Qt::Checked);
+    });
     d->ui.transportOnCurrentActivity->setVisible(false);
 }
 
