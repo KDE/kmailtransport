@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-09-18 00:40+0000\n"
+"POT-Creation-Date: 2024-10-01 00:40+0000\n"
 "PO-Revision-Date: 2024-09-05 01:02+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -47,25 +47,25 @@ msgid "Unnamed"
 msgstr "Adsız"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
-#: mailtransport.kcfg:27
+#: mailtransport.kcfg:30
 #, kde-format
 msgid "Host name of the server"
 msgstr "Sunucunun makine adı"
 
 #. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
-#: mailtransport.kcfg:28
+#: mailtransport.kcfg:31
 #, kde-format
 msgid "The domain name or numerical address of the SMTP server."
 msgstr "SMTP sunucusunun alan adı veya IP adresi."
 
 #. i18n: ectx: label, entry (port), group (Transport $(transportId))
-#: mailtransport.kcfg:31
+#: mailtransport.kcfg:34
 #, kde-format
 msgid "Port number of the server"
 msgstr "Sunucunun kapı numarası"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
-#: mailtransport.kcfg:32
+#: mailtransport.kcfg:35
 #, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
@@ -73,25 +73,25 @@ msgid ""
 msgstr "SMTP sunucusunun dinlediği kapı numarası. Öntanımlı kapı 587’dir."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
-#: mailtransport.kcfg:36
+#: mailtransport.kcfg:39
 #, kde-format
 msgid "User name needed for login"
 msgstr "Oturum açma için gereken kullanıcı adı"
 
 #. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
-#: mailtransport.kcfg:37
+#: mailtransport.kcfg:40
 #, kde-format
 msgid "The user name to send to the server for authorization."
 msgstr "Kimlik doğrulama işlemi için sunucuya gönderilecek kullanıcı adı."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
-#: mailtransport.kcfg:40
+#: mailtransport.kcfg:43
 #, kde-format
 msgid "Command to execute before sending a mail"
 msgstr "Bir e-posta gönderilmeden önce çalıştırılacak komut"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
-#: mailtransport.kcfg:41
+#: mailtransport.kcfg:44
 #, kde-format
 msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
@@ -102,19 +102,19 @@ msgstr ""
 "gerekmiyorsa, boş bırakın."
 
 #. i18n: ectx: label, entry (options), group (Transport $(transportId))
-#: mailtransport.kcfg:44
+#: mailtransport.kcfg:47
 #, kde-format
 msgid "Options added to mailtransport method"
 msgstr "Posta taşıma yöntemine eklenen seçenekler"
 
 #. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
-#: mailtransport.kcfg:47
+#: mailtransport.kcfg:50
 #, kde-format
 msgid "Server requires authentication"
 msgstr "Sunucu kimlik doğrulaması gerektiriyor"
 
 #. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
-#: mailtransport.kcfg:48
+#: mailtransport.kcfg:51
 #, kde-format
 msgid ""
 "Check this option if your SMTP server requires authentication before "
@@ -125,13 +125,13 @@ msgstr ""
 "kısaca ASMTP olarak bilinir."
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
-#: mailtransport.kcfg:52
+#: mailtransport.kcfg:55
 #, kde-format
 msgid "Store password"
 msgstr "Parolayı kaydet"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
-#: mailtransport.kcfg:55
+#: mailtransport.kcfg:58
 #, kde-format
 msgid ""
 "Check this option to have your password stored.\n"
@@ -150,31 +150,31 @@ msgstr ""
 "birisinin eline geçerse parolanızın şifresinin çözülemeyeceğini düşünmeyin."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:59
+#: mailtransport.kcfg:62
 #, kde-format
 msgid "Encryption method used for communication"
 msgstr "İletişim için kullanılan şifreleme yöntemi"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:62
+#: mailtransport.kcfg:65
 #, kde-format
 msgid "No encryption"
 msgstr "Şifreleme yok"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:65
+#: mailtransport.kcfg:68
 #, kde-format
 msgid "SSL/TLS encryption"
 msgstr "SSL/TLS şifrelemesi"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
-#: mailtransport.kcfg:68
+#: mailtransport.kcfg:71
 #, kde-format
 msgid "STARTTLS encryption"
 msgstr "STARTTLS şifrelemesi"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
-#: mailtransport.kcfg:74
+#: mailtransport.kcfg:77
 #, kde-format
 msgid "Authentication method"
 msgstr "Kimlik doğrulama yöntemi"
@@ -183,14 +183,14 @@ msgstr "Kimlik doğrulama yöntemi"
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:91 mailtransport.kcfg:96 mailtransport.kcfg:100
-#: mailtransport.kcfg:105
+#: mailtransport.kcfg:94 mailtransport.kcfg:99 mailtransport.kcfg:103
+#: mailtransport.kcfg:108
 #, kde-format
 msgid "<!-- TODO -->"
 msgstr "<!-- YAPILACAK -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:92
+#: mailtransport.kcfg:95
 #, kde-format
 msgid ""
 "Check this option to use a custom hostname when identifying to the mail "
@@ -203,13 +203,13 @@ msgstr ""
 "maskelendiği durumlarda kullanışlıdır.     "
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
-#: mailtransport.kcfg:97
+#: mailtransport.kcfg:100
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr "Sunucu kimliği belirlenirken kullanılacak makine adını girin."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:101
+#: mailtransport.kcfg:104
 #, kde-format
 msgid ""
 "Check this option to use a custom sender address when identifying to the "
@@ -220,7 +220,7 @@ msgstr ""
 "kullanılacaktır."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
-#: mailtransport.kcfg:106
+#: mailtransport.kcfg:109
 #, kde-format
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
@@ -229,13 +229,13 @@ msgstr "Öntanımlı gönderen adresinin yerine kullanılacak adresi girin."
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
-#: mailtransport.kcfg:109 plugins/smtp/smtpsettings.ui:284
+#: mailtransport.kcfg:112 plugins/smtp/smtpsettings.ui:284
 #, kde-format
 msgid "Connect using the system proxy settings"
 msgstr "Sistem vekil sunucu ayarlarını kullanarak bağlan"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
-#: mailtransport.kcfg:110
+#: mailtransport.kcfg:113
 #, kde-format
 msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
@@ -679,49 +679,49 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Oluştur ve Yapılandır"
 
-#: widgets/transportmanagementwidgetng.cpp:153
+#: widgets/transportmanagementwidgetng.cpp:156
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "“%1” giden hesabını kaldırmak istiyor musunuz?"
 
-#: widgets/transportmanagementwidgetng.cpp:154
+#: widgets/transportmanagementwidgetng.cpp:157
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Bu %1 giden hesabı kaldırmayı gerçekten istiyor musunuz?"
 msgstr[1] "Bu %1 giden hesabı kaldırmayı gerçekten istiyor musunuz?"
 
-#: widgets/transportmanagementwidgetng.cpp:157
+#: widgets/transportmanagementwidgetng.cpp:160
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Giden Posta Hesabını Kaldır?"
 
-#: widgets/transportmanagementwidgetng.cpp:187
+#: widgets/transportmanagementwidgetng.cpp:190
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Ekle…"
 
-#: widgets/transportmanagementwidgetng.cpp:192
+#: widgets/transportmanagementwidgetng.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Değiştir…"
 
-#: widgets/transportmanagementwidgetng.cpp:195
+#: widgets/transportmanagementwidgetng.cpp:198
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Yeniden Adlandır"
 
-#: widgets/transportmanagementwidgetng.cpp:199
+#: widgets/transportmanagementwidgetng.cpp:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Kaldır"
 
-#: widgets/transportmanagementwidgetng.cpp:205
+#: widgets/transportmanagementwidgetng.cpp:208
 #, kde-format
 msgid "Set as Default"
 msgstr "Öntanımlı Olarak Ayarla"
