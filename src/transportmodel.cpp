@@ -47,6 +47,8 @@ QVariant TransportModel::data(const QModelIndex &index, int role) const
         return transport->id();
     case ActivitiesRole:
         return transport->activities();
+    case EnabledActivitiesRole:
+        return transport->activitiesEnabled();
     case DefaultRole:
         return TransportManager::self()->defaultTransportId();
     }
@@ -86,6 +88,7 @@ QVariant TransportModel::headerData(int section, Qt::Orientation orientation, in
         case TransportIdentifierRole:
         case DefaultRole:
         case ActivitiesRole:
+        case EnabledActivitiesRole:
             return {};
         }
     }

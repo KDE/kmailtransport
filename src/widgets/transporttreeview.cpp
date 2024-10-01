@@ -35,6 +35,7 @@ TransportTreeView::TransportTreeView(QWidget *parent)
     setColumnHidden(MailTransport::TransportModel::TransportIdentifierRole, true);
     setColumnHidden(MailTransport::TransportModel::DefaultRole, true);
     setColumnHidden(MailTransport::TransportModel::ActivitiesRole, true);
+    setColumnHidden(MailTransport::TransportModel::EnabledActivitiesRole, true);
     setItemDelegateForColumn(MailTransport::TransportModel::NameRole, new TransportTreeDelegate(this));
     setUniformRowHeights(true);
 }
