@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-01 00:40+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2024-09-07 00:22+0200\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -589,19 +589,19 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Beibehalten"
 
-#: transportmodel.cpp:61
+#: transportmodel.cpp:63
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Standard)"
 
-#: transportmodel.cpp:83
+#: transportmodel.cpp:85
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Name"
 
-#: transportmodel.cpp:85
+#: transportmodel.cpp:87
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"

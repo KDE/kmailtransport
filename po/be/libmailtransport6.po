@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-01 00:40+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2008-01-01 23:05+0200\n"
 "Last-Translator: Darafei Praliaskouski <komzpa@gmail.com>\n"
 "Language-Team: Belarusian (Official spelling) <i18n@mova.org>\n"
@@ -562,21 +562,21 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Пакінуць"
 
-#: transportmodel.cpp:61
+#: transportmodel.cpp:63
 #, fuzzy, kde-format
 #| msgid " (Default)"
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Стандартны)"
 
-#: transportmodel.cpp:83
+#: transportmodel.cpp:85
 #, fuzzy, kde-format
 #| msgid "Name"
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Назва"
 
-#: transportmodel.cpp:85
+#: transportmodel.cpp:87
 #, fuzzy, kde-format
 #| msgid "Type"
 msgctxt "@title:column email transport type"

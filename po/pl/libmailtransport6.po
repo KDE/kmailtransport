@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-01 00:40+0000\n"
+"POT-Creation-Date: 2024-10-02 00:40+0000\n"
 "PO-Revision-Date: 2024-09-07 11:23+0200\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: Polish <kde-i18n-doc@kde.org>\n"
@@ -570,19 +570,19 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Zachowaj"
 
-#: transportmodel.cpp:61
+#: transportmodel.cpp:63
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (domyślny)"
 
-#: transportmodel.cpp:83
+#: transportmodel.cpp:85
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Nazwa"
 
-#: transportmodel.cpp:85
+#: transportmodel.cpp:87
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
