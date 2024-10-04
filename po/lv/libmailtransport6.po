@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-02 00:40+0000\n"
-"PO-Revision-Date: 2024-02-01 14:03+0200\n"
-"Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
+"PO-Revision-Date: 2024-10-02 12:01+0300\n"
+"Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.4\n"
+"X-Generator: Lokalize 24.08.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -65,14 +65,11 @@ msgstr "Servera porta numurs"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
-msgstr "Porta numurs, kuru klausās SMTP serveris. Noklusētais ir 25."
+msgstr "Porta numurs, ko klausās SMTP serveris. Noklusētais ir 587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
@@ -165,17 +162,15 @@ msgstr "Bez šifrēšanas"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:68
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "TLS šifrēšana"
+msgstr "SSL/TLS šifrēšana"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:71
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "TLS šifrēšana"
+msgstr "STARTTLS šifrēšana"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:77
@@ -258,7 +253,7 @@ msgstr "Parole, ko nosūtīt uz serveri autentificēšanai."
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p %"
 
 #: plugins/smtp/smtpconfigwidget.cpp:281
 #, kde-format
@@ -268,8 +263,7 @@ msgstr ""
 "Neizdevās pārbaudīt iespējas. Pārbaudiet portu un autentifikācijas režīmu."
 
 #: plugins/smtp/smtpconfigwidget.cpp:282
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Iespēju pārbaude neizdevās"
@@ -505,22 +499,19 @@ msgstr ""
 "Vai vēlaties paroli serverim „%1“ glabāt konfigurācijas datnē?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "„KWallet“ nav pieejams"
 
 #: transport.cpp:220
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Saglabāt paroli"
 
 #: transport.cpp:221
-#, fuzzy, kde-format
-#| msgid "Do Not Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
 msgstr "Nesaglabāt paroli"
@@ -536,15 +527,13 @@ msgid "You must create an outgoing account before sending."
 msgstr "Pirms sūtīšanas ir jāizveido pasta nosūtīšanas konts."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
-msgstr "Izveidot kontu?"
+msgstr "Vai izveidot kontu?"
 
 #: transportmanager.cpp:226
-#, fuzzy, kde-format
-#| msgid "Create Account Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Izveidot kontu"
@@ -559,40 +548,35 @@ msgid ""
 "which stores sensitive data for you in a strongly encrypted file.\n"
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
-"Šie pasta transporti paroles glabā nešifrētā konfigurācijas datnē, bet ne "
-"„KWallet“.\n"
-"Drošības nolūkiem vēlams visas paroles glabāt „KWallet“ — KDE paroļu "
-"pārvaldības rīkā —, jo tajā tās glabājas droši šifrētā datnē.\n"
+"Šie pasta transporti paroles glabā nešifrētā konfigurācijas datnē.\n"
+"Drošības nolūkiem vēlams visas paroles pārcelt uz „KWallet“ — KDE paroļu "
+"pārvaldības rīku,\n"
+"jo tajā sensitīvie dati glabājas droši šifrētā datnē.\n"
 "Vai vēlaties pārcelt jūsu paroles uz „KWallet“?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Jautājums"
 
 #: transportmanager.cpp:616
-#, fuzzy, kde-format
-#| msgid "Migrate"
+#, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Pārcelt"
 
 #: transportmanager.cpp:617
-#, fuzzy, kde-format
-#| msgid "Keep"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keep"
 msgstr "Paturēt"
 
 #: transportmodel.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr " (Noklusējuma)"
+msgstr " (noklusējums)"
 
 #: transportmodel.cpp:85
 #, kde-format
@@ -645,10 +629,9 @@ msgstr "Apraksts"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
-msgstr "&Rediģēt..."
+msgstr "&Mainīt…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidgetng.ui:42
@@ -660,7 +643,7 @@ msgstr "&Noņemt"
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&Pievienot…"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidgetng.ui:56
@@ -678,7 +661,7 @@ msgstr "&Iestatīt par noklusēto"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transport on current activity"
-msgstr ""
+msgstr "Rādīt tikai transportu pašreizējai aktivitātei"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -706,35 +689,31 @@ msgstr[1] "Vai tiešām vēlaties noņemt šos %1 izejošos kontus?"
 msgstr[2] "Vai tiešām vēlaties noņemt šos %1 izejošos kontus?"
 
 #: widgets/transportmanagementwidgetng.cpp:160
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
-msgstr "Vai izveidot izejošo kontu?"
+msgstr "Vai noņemt izejošo kontu?"
 
 #: widgets/transportmanagementwidgetng.cpp:190
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Pievienot…"
 
 #: widgets/transportmanagementwidgetng.cpp:195
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr "Rediģēt..."
+msgstr "Mainīt…"
 
 #: widgets/transportmanagementwidgetng.cpp:198
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Pārdēvēt"
 
 #: widgets/transportmanagementwidgetng.cpp:202
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Noņemt"
