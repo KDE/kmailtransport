@@ -37,6 +37,9 @@ target_sources(KPim6MailTransport PRIVATE
     widgets/transporttreedelegate.h
     widgets/transporttreedelegate.cpp
 
+    widgets/transportactivitiesabstractplugin.h
+    widgets/transportactivitiesabstractplugin.cpp
+
     transportactivitiesabstract.h
     transportactivitiesabstract.cpp
     transportmodel.h
@@ -141,6 +144,7 @@ ecm_generate_headers(MailTransport_widgets_CamelCase_HEADERS
     TransportComboBox
     TransportConfigWidget
     TransportManagementWidgetNg
+    TransportActivitiesAbstractPlugin
     PREFIX MailTransport
     REQUIRED_HEADERS MailTransport_widgets_HEADERS
     RELATIVE widgets
