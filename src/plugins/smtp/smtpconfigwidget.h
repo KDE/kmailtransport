@@ -17,12 +17,12 @@ class QAbstractButton;
 namespace MailTransport
 {
 class Transport;
+class TransportActivitiesAbstractPlugin;
 
 /**
   @internal
 */
 class SMTPConfigWidgetPrivate;
-
 /**
   @internal
   Configuration widget for a SMTP transport.
@@ -52,5 +52,6 @@ private:
 
     void init();
     void enablePasswordLine();
+    MailTransport::TransportActivitiesAbstractPlugin *mTransportActivitiesPlugin = nullptr;
 };
 } // namespace MailTransport

@@ -190,15 +190,14 @@ void SMTPConfigWidget::init()
 
     hostNameChanged(d->transport->host());
 
-    MailTransport::TransportActivitiesAbstractPlugin *edit = nullptr;
     const KPluginMetaData editWidgetPlugin(QStringLiteral("pim6/mailtransportactivities/kmailtransportactivitiesplugin"));
 
     const auto result = KPluginFactory::instantiatePlugin<MailTransport::TransportActivitiesAbstractPlugin>(editWidgetPlugin);
     if (result) {
-        edit = result.plugin;
+        mTransportActivitiesPlugin = result.plugin;
     }
-    if (edit) {
-        d->ui.tabWidget->addTab(edit, i18n("Activities"));
+    if (mTransportActivitiesPlugin) {
+        d->ui.tabWidget->addTab(mTransportActivitiesPlugin, i18n("Activities"));
     }
 }
 
@@ -260,6 +259,10 @@ void SMTPConfigWidget::apply()
         d->transport->setEncryption(Transport::EnumEncryption::SSL);
     } else if (d->ui.encryptionTls->isChecked()) {
         d->transport->setEncryption(Transport::EnumEncryption::TLS);
+    }
+
+    if (mTransportActivitiesPlugin) {
+        // TODO
     }
 
     TransportConfigWidget::apply();
