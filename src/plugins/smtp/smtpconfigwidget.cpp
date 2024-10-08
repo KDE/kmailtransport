@@ -21,6 +21,7 @@ using namespace Qt::Literals::StringLiterals;
 #include "servertest.h"
 #include "transport.h"
 #include "transportmanager.h"
+#include "widgets/transportactivitiesabstractplugin.h"
 #include "widgets/transportconfigwidget_p.h"
 
 #include <QAbstractButton>
@@ -29,6 +30,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <KPluginFactory>
+#include <KPluginMetaData>
 #include <KProtocolInfo>
 
 using namespace MailTransport;
@@ -186,6 +189,17 @@ void SMTPConfigWidget::init()
     }
 
     hostNameChanged(d->transport->host());
+
+    MailTransport::TransportActivitiesAbstractPlugin *edit = nullptr;
+    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim6/mailtransportactivities/kmailtransportactivitiesplugin"));
+
+    const auto result = KPluginFactory::instantiatePlugin<MailTransport::TransportActivitiesAbstractPlugin>(editWidgetPlugin);
+    if (result) {
+        edit = result.plugin;
+    }
+    if (edit) {
+        d->ui.tabWidget->addTab(edit, i18n("Activities"));
+    }
 }
 
 void SMTPConfigWidget::enablePasswordLine()
