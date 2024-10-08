@@ -26,7 +26,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <QAbstractButton>
 #include <QButtonGroup>
 
-#include "mailtransport_debug.h"
 #include <KAuthorized>
 #include <KLocalizedString>
 #include <KMessageBox>
