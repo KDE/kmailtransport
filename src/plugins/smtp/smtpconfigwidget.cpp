@@ -198,6 +198,11 @@ void SMTPConfigWidget::init()
     }
     if (mTransportActivitiesPlugin) {
         d->ui.tabWidget->addTab(mTransportActivitiesPlugin, i18n("Activities"));
+        TransportActivitiesAbstractPlugin::ActivitySettings settings{
+            d->transport->activities(),
+            d->transport->activitiesEnabled(),
+        };
+        mTransportActivitiesPlugin->setActivitiesSettings(settings);
     }
 }
 
@@ -262,7 +267,9 @@ void SMTPConfigWidget::apply()
     }
 
     if (mTransportActivitiesPlugin) {
-        // TODO
+        const TransportActivitiesAbstractPlugin::ActivitySettings settings = mTransportActivitiesPlugin->activitiesSettings();
+        d->transport->setActivities(settings.activities);
+        d->transport->setActivitiesEnabled(settings.enabled);
     }
 
     TransportConfigWidget::apply();
