@@ -10,7 +10,6 @@ using namespace Qt::Literals::StringLiterals;
 #include "smtpconfigwidget.h"
 #include "transport.h"
 #include "transportmanager.h"
-#include "transporttype.h"
 
 #include <QDialogButtonBox>
 #include <QPushButton>
