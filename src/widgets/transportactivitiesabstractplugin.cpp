@@ -13,3 +13,5 @@ TransportActivitiesAbstractPlugin::TransportActivitiesAbstractPlugin(QWidget *pa
 }
 
 TransportActivitiesAbstractPlugin::~TransportActivitiesAbstractPlugin() = default;
+
+#include "moc_transportactivitiesabstractplugin.cpp"

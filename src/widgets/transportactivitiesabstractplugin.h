@@ -13,7 +13,15 @@ class MAILTRANSPORT_EXPORT TransportActivitiesAbstractPlugin : public QWidget
 {
     Q_OBJECT
 public:
+    struct ActivitySettings {
+        QStringList activities;
+        bool enabled = false;
+    };
+
     explicit TransportActivitiesAbstractPlugin(QWidget *parent = nullptr);
     ~TransportActivitiesAbstractPlugin() override;
+
+    [[nodiscard]] virtual TransportActivitiesAbstractPlugin::ActivitySettings activitiesSettings() const = 0;
+    virtual void setActivitiesSettings(const TransportActivitiesAbstractPlugin::ActivitySettings &activitySettings) = 0;
 };
 }
