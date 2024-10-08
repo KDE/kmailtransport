@@ -215,7 +215,7 @@ void SMTPConfigWidget::checkSmtpCapabilities()
     d->ui.checkCapabilitiesStack->setCurrentIndex(1);
     qApp->setOverrideCursor(Qt::BusyCursor);
 
-    connect(d->serverTest, &ServerTest::finished, this, &SMTPConfigWidget::slotFinished);
+    connect(d->serverTest, &ServerTest::finished, this, &SMTPConfigWidget::slotTestFinished);
     connect(d->serverTest, &ServerTest::finished, qApp, []() {
         qApp->restoreOverrideCursor();
     });
@@ -264,8 +264,7 @@ void SMTPConfigWidget::passwordsLoaded()
     }
 }
 
-// TODO rename
-void SMTPConfigWidget::slotFinished(const QList<int> &results)
+void SMTPConfigWidget::slotTestFinished(const QList<int> &results)
 {
     Q_D(SMTPConfigWidget);
 
