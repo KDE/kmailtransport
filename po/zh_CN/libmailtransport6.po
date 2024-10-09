@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:40+0000\n"
+"POT-Creation-Date: 2024-10-09 00:40+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -230,24 +230,29 @@ msgid ""
 "server."
 msgstr "如果选中此选项，系统代理设置将用于连接到邮件服务器。"
 
-#: plugins/smtp/smtpconfigwidget.cpp:148
+#: plugins/smtp/smtpconfigwidget.cpp:150
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "发送给服务器进行验证的密码。"
 
-#: plugins/smtp/smtpconfigwidget.cpp:160 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:162 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:281
+#: plugins/smtp/smtpconfigwidget.cpp:200
+#, kde-format
+msgid "Activities"
+msgstr ""
+
+#: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr "检测能力失败。请检查端口和验证模式。"
 
-#: plugins/smtp/smtpconfigwidget.cpp:282
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:40+0000\n"
+"POT-Creation-Date: 2024-10-09 00:40+0000\n"
 "PO-Revision-Date: 2024-03-11 16:42+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -242,18 +242,23 @@ msgstr ""
 "välityspalvelinasetuksia.Jos valittu, postipalvelimeen yhdistettäessä "
 "käytetään järjestelmän välityspalvelinasetuksia."
 
-#: plugins/smtp/smtpconfigwidget.cpp:148
+#: plugins/smtp/smtpconfigwidget.cpp:150
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Palvelimelle tunnistautumista varten lähetettävä salasana."
 
-#: plugins/smtp/smtpconfigwidget.cpp:160 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:162 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:281
+#: plugins/smtp/smtpconfigwidget.cpp:200
+#, kde-format
+msgid "Activities"
+msgstr ""
+
+#: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -261,7 +266,7 @@ msgstr ""
 "Ominaisuuksien tarkistaminen epäonnistui. Tarkista portti ja "
 "tunnistautumistapa."
 
-#: plugins/smtp/smtpconfigwidget.cpp:282
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, fuzzy, kde-format
 #| msgid "Check Capabilities Failed"
 msgctxt "@title:window"

@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:40+0000\n"
+"POT-Creation-Date: 2024-10-09 00:40+0000\n"
 "PO-Revision-Date: 2024-09-20 14:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -258,25 +258,30 @@ msgstr ""
 "Αν επιλεγεί, οι ρυθμίσεις του διαμεσολαβητή του συστήματος θα "
 "χρησιμοποιηθούν για τη σύνδεση με τον διακομιστή αλληλογραφίας."
 
-#: plugins/smtp/smtpconfigwidget.cpp:148
+#: plugins/smtp/smtpconfigwidget.cpp:150
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Ο κωδικός πρόσβασης που στέλνεται στο διακομιστή για εξουσιοδότηση."
 
-#: plugins/smtp/smtpconfigwidget.cpp:160 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:162 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:281
+#: plugins/smtp/smtpconfigwidget.cpp:200
+#, kde-format
+msgid "Activities"
+msgstr ""
+
+#: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 "Αποτυχία ελέγχου δυνατοτήτων. Επαληθεύστε τη θύρα και τη μέθοδο ταυτοποίησης."
 
-#: plugins/smtp/smtpconfigwidget.cpp:282
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"

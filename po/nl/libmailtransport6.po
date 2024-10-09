@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-02 00:40+0000\n"
+"POT-Creation-Date: 2024-10-09 00:40+0000\n"
 "PO-Revision-Date: 2024-09-04 13:24+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -250,18 +250,23 @@ msgstr ""
 "Indien geactiveerd, zullen de systeemproxyinstellingen gebruikt worden om te "
 "verbinden met de e-mailserver."
 
-#: plugins/smtp/smtpconfigwidget.cpp:148
+#: plugins/smtp/smtpconfigwidget.cpp:150
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Het wachtwoord dat voor authenticatie naar de server wordt verstuurd."
 
-#: plugins/smtp/smtpconfigwidget.cpp:160 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:162 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p%"
 
-#: plugins/smtp/smtpconfigwidget.cpp:281
+#: plugins/smtp/smtpconfigwidget.cpp:200
+#, kde-format
+msgid "Activities"
+msgstr ""
+
+#: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -269,7 +274,7 @@ msgstr ""
 "Mogelijkheden controleren is mislukt. Controleer de poort en de "
 "authenticatiemethode."
 
-#: plugins/smtp/smtpconfigwidget.cpp:282
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
