@@ -84,7 +84,6 @@ bool TransportManagementWidgetNg::enablePlasmaActivities() const
 
 void TransportManagementWidgetNg::setEnablePlasmaActivities(bool newEnablePlasmaActivities)
 {
-    d->ui.transportTreeView->setEnablePlasmaActivities(newEnablePlasmaActivities);
     d->ui.transportOnCurrentActivity->setVisible(newEnablePlasmaActivities);
 }
 
