@@ -91,4 +91,14 @@ void TransportComboBox::setTransportActivitiesAbstract(TransportActivitiesAbstra
     d->transportProxyModel->setTransportActivitiesAbstract(activitiesAbstract);
 }
 
+bool TransportComboBox::enablePlasmaActivities() const
+{
+    return d->transportProxyModel->enablePlasmaActivities();
+}
+
+void TransportComboBox::setEnablePlasmaActivities(bool newEnablePlasmaActivities)
+{
+    d->transportProxyModel->setEnablePlasmaActivities(newEnablePlasmaActivities);
+}
+
 #include "moc_transportcombobox.cpp"
