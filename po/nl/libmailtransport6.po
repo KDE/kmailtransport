@@ -11,15 +11,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-09 00:40+0000\n"
-"PO-Revision-Date: 2024-09-04 13:24+0200\n"
+"POT-Creation-Date: 2024-10-10 00:40+0000\n"
+"PO-Revision-Date: 2024-10-09 10:33+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.08.0\n"
+"X-Generator: Lokalize 24.08.1\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
@@ -264,7 +264,7 @@ msgstr "%p%"
 #: plugins/smtp/smtpconfigwidget.cpp:200
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Activiteiten"
 
 #: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
@@ -691,49 +691,49 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Aanmaken en configureren"
 
-#: widgets/transportmanagementwidgetng.cpp:156
+#: widgets/transportmanagementwidgetng.cpp:155
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Wilt u het uitgaande account '%1' verwijderen?"
 
-#: widgets/transportmanagementwidgetng.cpp:157
+#: widgets/transportmanagementwidgetng.cpp:156
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Wilt u dit uitgaande account '%1' verwijderen?"
 msgstr[1] "Wilt u deze uitgaande accounts '%1' verwijderen?"
 
-#: widgets/transportmanagementwidgetng.cpp:160
+#: widgets/transportmanagementwidgetng.cpp:159
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Uitgaand account verwijderen?"
 
-#: widgets/transportmanagementwidgetng.cpp:190
+#: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Toevoegen…"
 
-#: widgets/transportmanagementwidgetng.cpp:195
+#: widgets/transportmanagementwidgetng.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Wijzigen…"
 
-#: widgets/transportmanagementwidgetng.cpp:198
+#: widgets/transportmanagementwidgetng.cpp:197
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Hernoemen"
 
-#: widgets/transportmanagementwidgetng.cpp:202
+#: widgets/transportmanagementwidgetng.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Verwijderen"
 
-#: widgets/transportmanagementwidgetng.cpp:208
+#: widgets/transportmanagementwidgetng.cpp:207
 #, kde-format
 msgid "Set as Default"
 msgstr "Als standaard instellen"

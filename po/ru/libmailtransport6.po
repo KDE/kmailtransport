@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-09 00:40+0000\n"
+"POT-Creation-Date: 2024-10-10 00:40+0000\n"
 "PO-Revision-Date: 2023-01-12 10:44+0300\n"
 "Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
 "Language-Team: Russian <kde-russian@lists.kde.ru>\n"
@@ -706,12 +706,12 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Создать и настроить"
 
-#: widgets/transportmanagementwidgetng.cpp:156
+#: widgets/transportmanagementwidgetng.cpp:155
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Удалить учётную запись исходящей почты «%1»?"
 
-#: widgets/transportmanagementwidgetng.cpp:157
+#: widgets/transportmanagementwidgetng.cpp:156
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
@@ -720,41 +720,41 @@ msgstr[1] "Удалить %1 учётные записи исходящей по
 msgstr[2] "Удалить %1 учётных записей исходящей почты?"
 msgstr[3] "Удалить %1 учётную запись исходящей почты?"
 
-#: widgets/transportmanagementwidgetng.cpp:160
+#: widgets/transportmanagementwidgetng.cpp:159
 #, fuzzy, kde-format
 #| msgid "Remove outgoing account?"
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Удалить учётную запись?"
 
-#: widgets/transportmanagementwidgetng.cpp:190
+#: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:195
+#: widgets/transportmanagementwidgetng.cpp:194
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Изменить..."
 
-#: widgets/transportmanagementwidgetng.cpp:198
+#: widgets/transportmanagementwidgetng.cpp:197
 #, fuzzy, kde-format
 #| msgid "Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Переименовать"
 
-#: widgets/transportmanagementwidgetng.cpp:202
+#: widgets/transportmanagementwidgetng.cpp:201
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Удалить"
 
-#: widgets/transportmanagementwidgetng.cpp:208
+#: widgets/transportmanagementwidgetng.cpp:207
 #, kde-format
 msgid "Set as Default"
 msgstr "Сделать основным"
