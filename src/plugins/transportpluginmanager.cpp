@@ -47,7 +47,7 @@ public:
     void initializePlugins();
 
 private:
-    TransportPluginManager *q;
+    TransportPluginManager *const q;
 };
 
 void TransportPluginManagerPrivate::initializePlugins()
