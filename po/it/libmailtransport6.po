@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-10 00:40+0000\n"
-"PO-Revision-Date: 2024-09-04 14:26+0200\n"
+"PO-Revision-Date: 2024-10-09 13:49+0200\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -260,7 +260,7 @@ msgstr "%p%"
 #: plugins/smtp/smtpconfigwidget.cpp:200
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Attività"
 
 #: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
