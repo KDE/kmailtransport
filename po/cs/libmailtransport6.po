@@ -254,7 +254,7 @@ msgstr "%p%"
 #: plugins/smtp/smtpconfigwidget.cpp:200
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Aktivity"
 
 #: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
