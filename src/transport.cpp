@@ -270,7 +270,7 @@ void Transport::readTransportPasswordFinished(QKeychain::Job *baseJob)
     if (job->error()) {
         d->password.clear();
         d->passwordLoaded = false;
-        qWarning() << "We have an error during reading password " << job->errorString();
+        qCWarning(MAILTRANSPORT_LOG) << "We have an error during reading password for" << id() << job->errorString();
         Q_EMIT passwordChanged();
     } else {
         setPassword(job->textData());
