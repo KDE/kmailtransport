@@ -142,6 +142,7 @@ void SMTPConfigWidget::init()
     d->serverTestFailed = false;
 
     d->ui.setupUi(this);
+    d->ui.tabWidget->tabBar()->setExpanding(true);
     d->ui.password->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
                                                                                                              : KPassword::RevealMode::Never);
     d->manager->addWidget(this); // otherwise it doesn't find out about these widgets
