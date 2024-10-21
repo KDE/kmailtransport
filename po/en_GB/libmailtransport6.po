@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-10 00:40+0000\n"
+"POT-Creation-Date: 2024-10-21 00:40+0000\n"
 "PO-Revision-Date: 2024-10-18 17:18+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -224,7 +224,7 @@ msgstr ""
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
-#: mailtransport.kcfg:112 plugins/smtp/smtpsettings.ui:284
+#: mailtransport.kcfg:112 plugins/smtp/smtpsettings.ui:287
 #, kde-format
 msgid "Connect using the system proxy settings"
 msgstr "Connect using the system proxy settings"
@@ -239,30 +239,30 @@ msgstr ""
 "If ticked, the system proxy settings will be used to connect to the mail "
 "server."
 
-#: plugins/smtp/smtpconfigwidget.cpp:150
+#: plugins/smtp/smtpconfigwidget.cpp:151
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "The password to send to the server for authorisation."
 
-#: plugins/smtp/smtpconfigwidget.cpp:162 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:552
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p%"
 
-#: plugins/smtp/smtpconfigwidget.cpp:200
+#: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
 msgstr "Activities"
 
-#: plugins/smtp/smtpconfigwidget.cpp:303
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 "Failed to check capabilities. Please verify port and authentication mode."
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
@@ -291,141 +291,141 @@ msgid "Configure account"
 msgstr "Configure account"
 
 #. i18n: ectx: attribute (title), widget (QWidget, smptTab)
-#: plugins/smtp/smtpsettings.ui:34
+#: plugins/smtp/smtpsettings.ui:37
 #, kde-format
 msgctxt "general smtp settings"
 msgid "General"
 msgstr "General"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
-#: plugins/smtp/smtpsettings.ui:40
+#: plugins/smtp/smtpsettings.ui:43
 #, kde-format
 msgid "Account Information"
 msgstr "Account Information"
 
 #. i18n: ectx: property (text), widget (QLabel, hostLabel)
-#: plugins/smtp/smtpsettings.ui:47
+#: plugins/smtp/smtpsettings.ui:50
 #, kde-format
 msgid "Outgoing &mail server:"
 msgstr "Outgoing &mail server:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
-#: plugins/smtp/smtpsettings.ui:67
+#: plugins/smtp/smtpsettings.ui:70
 #, kde-format
 msgid "Server &requires authentication"
 msgstr "Server &requires authentication"
 
 #. i18n: ectx: property (text), widget (QLabel, usernameLabel)
-#: plugins/smtp/smtpsettings.ui:77
+#: plugins/smtp/smtpsettings.ui:80
 #, kde-format
 msgid "&Login:"
 msgstr "&Login:"
 
 #. i18n: ectx: property (text), widget (QLabel, passwordLabel)
-#: plugins/smtp/smtpsettings.ui:103
+#: plugins/smtp/smtpsettings.ui:106
 #, kde-format
 msgid "P&assword:"
 msgstr "P&assword:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
-#: plugins/smtp/smtpsettings.ui:126
+#: plugins/smtp/smtpsettings.ui:129
 #, kde-format
 msgid "&Store SMTP password"
 msgstr "&Store SMTP password"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
-#: plugins/smtp/smtpsettings.ui:147
+#: plugins/smtp/smtpsettings.ui:150
 #, kde-format
 msgctxt "advanced smtp settings"
 msgid "Advanced"
 msgstr "Advanced"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
-#: plugins/smtp/smtpsettings.ui:153
+#: plugins/smtp/smtpsettings.ui:156
 #, kde-format
 msgid "Connection Settings"
 msgstr "Connection Settings"
 
 #. i18n: ectx: property (text), widget (QLabel, noAuthPossible)
-#: plugins/smtp/smtpsettings.ui:172
+#: plugins/smtp/smtpsettings.ui:175
 #, kde-format
 msgid "This server does not support authentication"
 msgstr "This server does not support authentication"
 
 #. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
-#: plugins/smtp/smtpsettings.ui:189
+#: plugins/smtp/smtpsettings.ui:192
 #, kde-format
 msgid "Auto Detect"
 msgstr "Auto Detect"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
-#: plugins/smtp/smtpsettings.ui:216
+#: plugins/smtp/smtpsettings.ui:219
 #, kde-format
 msgid "Encryption:"
 msgstr "Encryption:"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
-#: plugins/smtp/smtpsettings.ui:225
+#: plugins/smtp/smtpsettings.ui:228
 #, kde-format
 msgid "&None"
 msgstr "&None"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
-#: plugins/smtp/smtpsettings.ui:232
+#: plugins/smtp/smtpsettings.ui:235
 #, kde-format
 msgid "&SSL/TLS"
 msgstr "&SSL/TLS"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
-#: plugins/smtp/smtpsettings.ui:239
+#: plugins/smtp/smtpsettings.ui:242
 #, kde-format
 msgid "START&TLS"
 msgstr "START&TLS"
 
 #. i18n: ectx: property (text), widget (QLabel, portLabel)
-#: plugins/smtp/smtpsettings.ui:248
+#: plugins/smtp/smtpsettings.ui:251
 #, kde-format
 msgid "&Port:"
 msgstr "&Port:"
 
 #. i18n: ectx: property (text), widget (QLabel, authLabel)
-#: plugins/smtp/smtpsettings.ui:274
+#: plugins/smtp/smtpsettings.ui:277
 #, kde-format
 msgid "Authentication:"
 msgstr "Authentication:"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
-#: plugins/smtp/smtpsettings.ui:293
+#: plugins/smtp/smtpsettings.ui:296
 #, kde-format
 msgid "SMTP Settings"
 msgstr "SMTP Settings"
 
 #. i18n: ectx: property (text), widget (QLabel, hostnameLabel)
-#: plugins/smtp/smtpsettings.ui:303
+#: plugins/smtp/smtpsettings.ui:306
 #, kde-format
 msgid "Hostna&me:"
 msgstr "Hostna&me:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
-#: plugins/smtp/smtpsettings.ui:329
+#: plugins/smtp/smtpsettings.ui:332
 #, kde-format
 msgid "Sender Address:"
 msgstr "Sender Address:"
 
 #. i18n: ectx: property (text), widget (QLabel, precommandLabel)
-#: plugins/smtp/smtpsettings.ui:346
+#: plugins/smtp/smtpsettings.ui:349
 #, kde-format
 msgid "Precommand:"
 msgstr "Precommand:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
-#: plugins/smtp/smtpsettings.ui:376
+#: plugins/smtp/smtpsettings.ui:379
 #, kde-format
 msgid "Sen&d custom hostname to server"
 msgstr "Sen&d custom hostname to server"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
-#: plugins/smtp/smtpsettings.ui:383
+#: plugins/smtp/smtpsettings.ui:386
 #, kde-format
 msgid "Use custom sender address"
 msgstr "Use custom sender address"
