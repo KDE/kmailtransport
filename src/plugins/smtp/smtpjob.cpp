@@ -72,7 +72,11 @@ public:
     SmtpJob *const q;
     KSmtp::Session *session = nullptr;
     KSmtp::SessionUiProxy::Ptr uiProxy;
-    enum State { Idle, Precommand, Smtp } currentState;
+    enum State {
+        Idle,
+        Precommand,
+        Smtp
+    } currentState;
     bool finished;
 };
 
