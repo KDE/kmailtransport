@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-21 00:40+0000\n"
+"POT-Creation-Date: 2024-10-27 00:41+0000\n"
 "PO-Revision-Date: 2009-02-17 17:43+0100\n"
 "Last-Translator: Børre Gaup <boerre@skolelinux.no>\n"
 "Language-Team: Northern Sami <l10n-no@lister.huftis.org>\n"
@@ -247,7 +247,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr ""
 
-#: plugins/smtp/smtpjob.cpp:223
+#: plugins/smtp/smtpjob.cpp:227
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""

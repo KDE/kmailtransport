@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-21 00:40+0000\n"
+"POT-Creation-Date: 2024-10-27 00:41+0000\n"
 "PO-Revision-Date: 2024-10-18 17:18+0100\n"
 "Last-Translator: Steve Allewell <steve.allewell@gmail.com>\n"
 "Language-Team: British English\n"
@@ -268,7 +268,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Check Capabilities Failed"
 
-#: plugins/smtp/smtpjob.cpp:223
+#: plugins/smtp/smtpjob.cpp:227
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "You need to supply a username and a password to use this SMTP server."
