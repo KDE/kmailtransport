@@ -7,14 +7,14 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:41+0000\n"
-"PO-Revision-Date: 2024-10-09 16:03+0200\n"
+"PO-Revision-Date: 2024-11-09 20:04+0100\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
 "Language: bg\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.07.70\n"
+"X-Generator: Lokalize 24.08.2\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
@@ -439,17 +439,17 @@ msgstr "Използване на потребителски адрес на п�
 #: precommandjob.cpp:68
 #, kde-format
 msgid "Executing precommand '%1'."
-msgstr "Изпълнение на предварителна команда \"%1\"."
+msgstr "Изпълнение на предварителна команда „%1“."
 
 #: precommandjob.cpp:75
 #, kde-format
 msgid "Unable to start precommand '%1'."
-msgstr "Невъзможно стартиране на предварителна команда \"%1\"."
+msgstr "Невъзможно стартиране на предварителна команда „%1“."
 
 #: precommandjob.cpp:77
 #, kde-format
 msgid "Error while executing precommand '%1'."
-msgstr "Грешка при изпълнение на предварителна команда \"%1\"."
+msgstr "Грешка при изпълнение на предварителна команда „%1“."
 
 #: precommandjob.cpp:93
 #, kde-format
@@ -525,7 +525,7 @@ msgstr "Да не се запазва парола"
 #: transportjob.cpp:122
 #, kde-format
 msgid "The outgoing account \"%1\" is not correctly configured."
-msgstr "Изходящият профил \"%1\" не е конфигуриран правилно."
+msgstr "Изходящият профил „%1“ не е конфигуриран правилно."
 
 #: transportmanager.cpp:224
 #, kde-format
@@ -685,14 +685,14 @@ msgstr "Създаване и конфигуриране"
 #: widgets/transportmanagementwidgetng.cpp:155
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
-msgstr "Искате ли да премахнете изходящия профил \"%1\"?"
+msgstr "Искате ли да премахнете изходящия профил „%1“?"
 
 #: widgets/transportmanagementwidgetng.cpp:156
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] "Искате ли да премахнете изходящия профил \"%1\"?"
-msgstr[1] "Искате ли да премахнете изходящия профил \"%1\"?"
+msgstr[0] "Искате ли да премахнете изходящия профил „%1“?"
+msgstr[1] "Искате ли да премахнете изходящия профил „%1“?"
 
 #: widgets/transportmanagementwidgetng.cpp:159
 #, kde-format
