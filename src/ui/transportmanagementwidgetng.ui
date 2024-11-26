@@ -80,7 +80,7 @@
    <item row="0" column="0">
     <widget class="QCheckBox" name="transportOnCurrentActivity">
      <property name="text">
-      <string>Show only transport on current activity</string>
+      <string>Show only transports on current activity</string>
      </property>
     </widget>
    </item>
