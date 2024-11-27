@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:41+0000\n"
+"POT-Creation-Date: 2024-11-27 00:41+0000\n"
 "PO-Revision-Date: 2024-10-02 12:01+0300\n"
 "Last-Translator: Toms Trasūns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -664,8 +664,9 @@ msgstr "&Iestatīt par noklusēto"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, kde-format
-msgid "Show only transport on current activity"
+#, fuzzy, kde-format
+#| msgid "Show only transport on current activity"
+msgid "Show only transports on current activity"
 msgstr "Rādīt tikai transportu pašreizējai aktivitātei"
 
 #: widgets/addtransportdialogng.cpp:94

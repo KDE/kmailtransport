@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2024-10-27 00:41+0000\n"
+"POT-Creation-Date: 2024-11-27 00:41+0000\n"
 "PO-Revision-Date: 2024-10-09 10:33+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -675,8 +675,9 @@ msgstr "Als &standaard instellen"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, kde-format
-msgid "Show only transport on current activity"
+#, fuzzy, kde-format
+#| msgid "Show only transport on current activity"
+msgid "Show only transports on current activity"
 msgstr "Alleen transport op huidige activiteit tonen"
 
 #: widgets/addtransportdialogng.cpp:94
