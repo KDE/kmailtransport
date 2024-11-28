@@ -10,19 +10,20 @@
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # Александр Яворский <yavorsky.a@t-rosta.com>, 2018.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2022, 2023.
+# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:41+0000\n"
-"PO-Revision-Date: 2023-01-12 10:44+0300\n"
-"Last-Translator: Alexander Yavorsky <kekcuha@gmail.com>\n"
-"Language-Team: Russian <kde-russian@lists.kde.ru>\n"
+"PO-Revision-Date: 2024-11-27 15:03+0300\n"
+"Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
+"Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 21.08.3\n"
+"X-Generator: Lokalize 23.08.5\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Environment: kde\n"
@@ -72,14 +73,11 @@ msgstr "Номер порта на сервере"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
-msgstr "Номер порта сервера SMTP. Порт по умолчанию: 25."
+msgstr "Номер порта сервера SMTP. Порт по умолчанию: 587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
@@ -150,8 +148,8 @@ msgid ""
 "should not be considered secure from decryption efforts if access to the "
 "configuration file is obtained."
 msgstr ""
-"Включите данный параметр для сохранения пароля.\n"
-"Если доступен бумажник KDE, пароль будет сохранён в нём.\n"
+"Включите этот параметр для сохранения пароля.\n"
+"Если бумажник KDE доступен, пароль будет сохранён в нём.\n"
 "Если бумажник KDE недоступен, пароль будет сохранён в конфигурационном "
 "файле. Пароль будет сохранён в нечитаемом формате, но при получении доступа "
 "к файлу конфигурации возможна расшифровка пароля."
@@ -170,17 +168,15 @@ msgstr "Без шифрования"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:68
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "Шифрование TLS"
+msgstr "Шифрование SSL/TLS"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:71
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "Шифрование TLS"
+msgstr "Шифрование STARTTLS"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:77
@@ -206,9 +202,9 @@ msgid ""
 "server. This is useful when your system's hostname may not be set correctly "
 "or to mask your system's true hostname."
 msgstr ""
-"Включите этот параметр для использования указанного имени узла для "
-"идентификации на почтовом сервере. Обычно это используется для "
-"корректирования посылаемого имени узла или для маскировки реального имени "
+"Включите этот параметр для использования указанного имени узла при "
+"аутентификации на почтовом сервере. Обычно это используется для "
+"корректировки отправляемого имени узла или для маскировки реального имени "
 "компьютера."
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
@@ -264,12 +260,12 @@ msgstr "Пароль для идентификации на сервере."
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Комнаты"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
@@ -280,8 +276,7 @@ msgstr ""
 "порта и способа аутентификации."
 
 #: plugins/smtp/smtpconfigwidget.cpp:305
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Ошибка определения возможностей"
@@ -519,22 +514,19 @@ msgstr ""
 "Сохранить пароль для доступа к серверу «%1» в файле конфигурации?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "Бумажник KDE недоступен"
 
 #: transport.cpp:220
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Сохранить пароль"
 
 #: transport.cpp:221
-#, fuzzy, kde-format
-#| msgid "Do Not Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
 msgstr "Не сохранять пароль"
@@ -550,15 +542,13 @@ msgid "You must create an outgoing account before sending."
 msgstr "Сначала необходимо создать учётную запись для отправки почты."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
-msgstr "Создать учётную запись сейчас?"
+msgstr "Немедленное создание учётной записи"
 
 #: transportmanager.cpp:226
-#, fuzzy, kde-format
-#| msgid "Create Account Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Создать учётную запись"
@@ -580,30 +570,25 @@ msgstr ""
 "Перенести пароли в бумажник KDE?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Вопрос"
 
 #: transportmanager.cpp:616
-#, fuzzy, kde-format
-#| msgid "Migrate"
+#, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Перенести в бумажник"
 
 #: transportmanager.cpp:617
-#, fuzzy, kde-format
-#| msgid "Keep"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keep"
 msgstr "Оставить в файлах"
 
 #: transportmodel.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (по умолчанию)"
@@ -624,7 +609,7 @@ msgstr "Тип"
 #: ui/addtransportdialog.ui:20
 #, kde-format
 msgid "Step One: Select Transport Type"
-msgstr "Шаг 1: Выбрать метод отправки"
+msgstr "Шаг 1 — выбор метода отправки"
 
 #. i18n: ectx: property (text), widget (QLabel, label)
 #: ui/addtransportdialog.ui:38
@@ -659,10 +644,9 @@ msgstr "Описание"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
-msgstr "&Изменить..."
+msgstr "&Изменить…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidgetng.ui:42
@@ -674,7 +658,7 @@ msgstr "Удалит&ь"
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&Добавить…"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidgetng.ui:56
@@ -692,7 +676,7 @@ msgstr "Сделать &основным"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transport on current activity"
-msgstr ""
+msgstr "Показывать только метод отправки в текущей комнате Plasma"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -721,35 +705,31 @@ msgstr[2] "Удалить %1 учётных записей исходящей п
 msgstr[3] "Удалить %1 учётную запись исходящей почты?"
 
 #: widgets/transportmanagementwidgetng.cpp:159
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
-msgstr "Удалить учётную запись?"
+msgstr "Удаление учётной записи для отправки почты"
 
 #: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Добавить…"
 
 #: widgets/transportmanagementwidgetng.cpp:194
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr "Изменить..."
+msgstr "Изменить…"
 
 #: widgets/transportmanagementwidgetng.cpp:197
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Переименовать"
 
 #: widgets/transportmanagementwidgetng.cpp:201
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Удалить"
