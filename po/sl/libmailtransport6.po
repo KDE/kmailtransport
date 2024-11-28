@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-10-11 19:49+0200\n"
+"PO-Revision-Date: 2024-11-27 07:51+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
 "Language: sl\n"
@@ -664,10 +664,9 @@ msgstr "Na&stavi kot privzet"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, fuzzy, kde-format
-#| msgid "Show only transport on current activity"
+#, kde-format
 msgid "Show only transports on current activity"
-msgstr "Pokaži samo transport pri trenutni dejavnosti"
+msgstr "Pokaži samo transporte pri trenutni dejavnosti"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format

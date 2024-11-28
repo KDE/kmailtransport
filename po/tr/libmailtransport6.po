@@ -13,7 +13,7 @@ msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-10-09 10:03+0300\n"
+"PO-Revision-Date: 2024-11-27 16:05+0300\n"
 "Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
@@ -21,7 +21,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -668,10 +668,9 @@ msgstr "Ö&ntanımlı Olarak Ayarla"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, fuzzy, kde-format
-#| msgid "Show only transport on current activity"
+#, kde-format
 msgid "Show only transports on current activity"
-msgstr "Taşımayı yalnızca geçerli etkinlikte göster"
+msgstr "Geçerli etkinlikte yalnızca taşımaları göster"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format

@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-10-09 05:33+0200\n"
+"PO-Revision-Date: 2024-11-27 04:04+0100\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
 "Language: ka\n"
@@ -662,10 +662,9 @@ msgstr "ნაგულისხმებად &დაყენება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, fuzzy, kde-format
-#| msgid "Show only transport on current activity"
+#, kde-format
 msgid "Show only transports on current activity"
-msgstr "მიმდნარე აქტივობაზე, მხოლოდ, ტრანსპორტის ჩვენება"
+msgstr "მიმდნარე აქტივობაზე, მხოლოდ, ტრანსპორტების ჩვენება"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
