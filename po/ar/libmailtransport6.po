@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-10-10 08:59+0400\n"
+"PO-Revision-Date: 2024-11-28 12:09+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -653,10 +653,9 @@ msgstr "اج&علها الافتراضية"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, fuzzy, kde-format
-#| msgid "Show only transport on current activity"
+#, kde-format
 msgid "Show only transports on current activity"
-msgstr "أظهر الناقل فقط في النشاط الحالي"
+msgstr "أظهر النواقل فقط في النشاط الحالي"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
