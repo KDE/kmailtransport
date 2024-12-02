@@ -1,6 +1,6 @@
 # Copyright © 2010, 2011, 2012 This_file_is_part_of_KDE
 # This file is distributed under the same license as the kdepimlibs package.
-# Tommi Nieminen <translator@legisign.org>, 2010, 2011, 2016, 2018, 2019, 2020, 2022, 2024.
+# SPDX-FileCopyrightText: 2010, 2011, 2016, 2018, 2019, 2020, 2022, 2024 Tommi Nieminen <translator@legisign.org>
 # Lasse Liehu <lasse.liehu@gmail.com>, 2012, 2013, 2014.
 #
 # KDE Finnish translation sprint participants:
@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:41+0000\n"
-"PO-Revision-Date: 2024-03-11 16:42+0200\n"
+"PO-Revision-Date: 2024-10-16 18:07+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
 "Language: fi\n"
@@ -19,8 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-POT-Import-Date: 2012-12-01 22:25:21+0000\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -126,7 +125,7 @@ msgstr ""
 #: mailtransport.kcfg:55
 #, kde-format
 msgid "Store password"
-msgstr "Tallenna salasana"
+msgstr "Talleta salasana"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:58
@@ -140,10 +139,10 @@ msgid ""
 "should not be considered secure from decryption efforts if access to the "
 "configuration file is obtained."
 msgstr ""
-"Tallenna salasanasi tämän valinnan avulla.\n"
-"Jos KWallet on käytettävissä, salasana tallennetaan siihen, mitä voi pitää "
+"Valitse tämä, niin salasana talletetaan.\n"
+"Jos KWallet on käytettävissä, salasana talletetaan siihen, mitä voi pitää "
 "turvallisena.\n"
-"Jos taas KWallet ei ole käytettävissä, salasana tallennetaan "
+"Jos taas KWallet ei ole käytettävissä, salasana talletetaan "
 "asetustiedostoon. Vaikka tallennusmuoto on sekoitettu, salasana ei ole "
 "turvassa purkuyrityksiltä, jos hyökkääjä pääsee käsiksi asetustiedostoon."
 
@@ -251,12 +250,12 @@ msgstr "Palvelimelle tunnistautumista varten lähetettävä salasana."
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p %"
 
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Aktiviteetit"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
@@ -267,8 +266,7 @@ msgstr ""
 "tunnistautumistapa."
 
 #: plugins/smtp/smtpconfigwidget.cpp:305
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Ominaisuuksien tarkistaminen epäonnistui"
@@ -336,7 +334,7 @@ msgstr "&Salasana:"
 #: plugins/smtp/smtpsettings.ui:129
 #, kde-format
 msgid "&Store SMTP password"
-msgstr "&Tallenna SMTP-salasana"
+msgstr "&Talleta SMTP-salasana"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
 #: plugins/smtp/smtpsettings.ui:150
@@ -496,33 +494,30 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
-"QKeychain-taustajärjestelmää ei löytynyt salasanan tallentamiseksi. "
+"QKeychain-taustajärjestelmää ei löytynyt salasanan tallettamiseksi. "
 "Salasanojen hallintaan suositellaan vahvaa taustajärjestelmää.\n"
-"Salasana voidaan kuitenkaan tallentaa myös asetustiedostoon. Se tallennetaan "
+"Salasana voidaan kuitenkaan tallettaa myös asetustiedostoon. Se talletetaan "
 "sekoitettuna, mutta sitä ei voi pitää turvattuna purkuyrityksiltä, jos "
 "jollakulla on pääsy asetustiedostoon.\n"
-"Haluatko tallentaa palvelimen ”%1” salasanan asetustiedostoon?"
+"Haluatko tallettaa palvelimen ”%1” salasanan asetustiedostoon?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet ei ole käytettävissä"
 
 #: transport.cpp:220
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
-msgstr "Tallenna salasana"
+msgstr "Talleta salasana"
 
 #: transport.cpp:221
-#, fuzzy, kde-format
-#| msgid "Do Not Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
-msgstr "Älä tallenna salasanaa"
+msgstr "Älä talleta salasanaa"
 
 #: transportjob.cpp:122
 #, kde-format
@@ -535,15 +530,13 @@ msgid "You must create an outgoing account before sending."
 msgstr "Ennen lähettämistä sinun on luotava lähtevä tili."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Luodaanko tili nyt?"
 
 #: transportmanager.cpp:226
-#, fuzzy, kde-format
-#| msgid "Create Account Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Luo tili nyt"
@@ -558,38 +551,33 @@ msgid ""
 "which stores sensitive data for you in a strongly encrypted file.\n"
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
-"Seuraavat lähetystavat tallentavat salasanat salaamattomana "
+"Seuraavat lähetystavat tallettavat salasanat salaamattomana "
 "asetustiedostoon.\n"
 "Harkitse turvallisuussyistä näiden salasanojen siirtämistä KWalletiin, KDE:n "
 "lompakonhallintaan,\n"
-"joka tallentaa yksityiset tietosi vahvasti salattuun tiedostoon.\n"
+"joka tallettaa yksityiset tietosi vahvasti salattuun tiedostoon.\n"
 "Haluatko siirtää salasanasi KWalletiin?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Kysymys"
 
 #: transportmanager.cpp:616
-#, fuzzy, kde-format
-#| msgid "Migrate"
+#, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Siirrä"
 
 #: transportmanager.cpp:617
-#, fuzzy, kde-format
-#| msgid "Keep"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keep"
-msgstr "Pidä"
+msgstr "Säilytä"
 
 #: transportmodel.cpp:63
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (oletus)"
@@ -645,8 +633,7 @@ msgstr "Kuvaus"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
 msgstr "&Muuta…"
 
@@ -660,7 +647,7 @@ msgstr "P&oista"
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&Lisää…"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidgetng.ui:56
@@ -678,7 +665,7 @@ msgstr "&Aseta oletukseksi"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transport on current activity"
-msgstr ""
+msgstr "Näytä nykyiselle toimenpiteelle vain välitys"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -705,8 +692,7 @@ msgstr[0] "Haluatko varmasti poistaa tämän lähtevän postin tilin?"
 msgstr[1] "Haluatko varmasti poistaa nämä %1 lähtevän postin tiliä?"
 
 #: widgets/transportmanagementwidgetng.cpp:159
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Poistetaanko lähtevä tili?"
@@ -715,25 +701,22 @@ msgstr "Poistetaanko lähtevä tili?"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Lisää…"
 
 #: widgets/transportmanagementwidgetng.cpp:194
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Muuta…"
 
 #: widgets/transportmanagementwidgetng.cpp:197
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Muuta nimeä"
 
 #: widgets/transportmanagementwidgetng.cpp:201
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Poista"
