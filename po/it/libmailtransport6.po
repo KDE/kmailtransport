@@ -4,14 +4,14 @@
 # Federico Zenith <federico.zenith@member.fsf.org>, 2007, 2009.
 # Luca Bellonda <lbellonda@gmail.com>, 2008.
 # Pino Toscano <toscano.pino@tiscali.it>, 2009.
-# Luigi Toscano <luigi.toscano@tiscali.it>, 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2022, 2024.
+# SPDX-FileCopyrightText: 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2022, 2024 Luigi Toscano <luigi.toscano@tiscali.it>
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-10-09 13:49+0200\n"
+"PO-Revision-Date: 2024-11-27 13:37+0100\n"
 "Last-Translator: Luigi Toscano <luigi.toscano@tiscali.it>\n"
 "Language-Team: Italian <kde-i18n-it@kde.org>\n"
 "Language: it\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 22.12.3\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -669,10 +669,9 @@ msgstr "Impo&sta come predefinito"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, fuzzy, kde-format
-#| msgid "Show only transport on current activity"
+#, kde-format
 msgid "Show only transports on current activity"
-msgstr "Mostra solo il trasporto nell'attività corrente"
+msgstr "Mostra solo i trasporti nell'attività corrente"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
