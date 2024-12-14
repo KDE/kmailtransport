@@ -1,0 +1,713 @@
+# Sanskrit translations for kmailtransport package.
+# Copyright (C) 2024 This file is copyright:
+# This file is distributed under the same license as the kmailtransport package.
+# Kali <EMAIL@ADDRESS>, 2024.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: kmailtransport\n"
+"Report-Msgid-Bugs-To: https://bugs.kde.org\n"
+"POT-Creation-Date: 2024-11-27 00:41+0000\n"
+"PO-Revision-Date: 2024-12-13 19:09+0530\n"
+"Last-Translator: Kali <EMAIL@ADDRESS>\n"
+"Language-Team: Sanskrit\n"
+"Language: sa\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n>2);\n"
+
+#. i18n: ectx: label, entry (id), group (Transport $(transportId))
+#: mailtransport.kcfg:12
+#, kde-format
+msgid "Unique identifier"
+msgstr "अद्वितीयपरिचयकर्ता"
+
+#. i18n: ectx: label, entry (name), group (Transport $(transportId))
+#: mailtransport.kcfg:16
+#, kde-format
+msgid "User-visible transport name"
+msgstr "उपयोक्तृदृश्यमान परिवहननाम"
+
+#. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
+#: mailtransport.kcfg:17
+#, kde-format
+msgid "The name that will be used when referring to this server."
+msgstr "अस्य सर्वरस्य सन्दर्भे यत् नाम प्रयुक्तं भविष्यति ।"
+
+#: mailtransport.kcfg:18
+#, kde-format
+msgid "Unnamed"
+msgstr "अनामिका"
+
+#. i18n: ectx: label, entry (host), group (Transport $(transportId))
+#: mailtransport.kcfg:30
+#, kde-format
+msgid "Host name of the server"
+msgstr "सर्वरस्य होस्ट् नाम"
+
+#. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
+#: mailtransport.kcfg:31
+#, kde-format
+msgid "The domain name or numerical address of the SMTP server."
+msgstr "SMTP सर्वरस्य डोमेननाम अथवा संख्यात्मकं पता ।"
+
+#. i18n: ectx: label, entry (port), group (Transport $(transportId))
+#: mailtransport.kcfg:34
+#, kde-format
+msgid "Port number of the server"
+msgstr "सर्वरस्य पोर्ट् सङ्ख्या"
+
+#. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
+#: mailtransport.kcfg:35
+#, kde-format
+msgid ""
+"The port number that the SMTP server is listening on. The default port is "
+"587."
+msgstr "यस्मिन् पोर्ट् सङ्ख्या SMTP सर्वरः शृणोति । पूर्वनिर्धारितं पोर्ट् ५८७ अस्ति ।"
+
+#. i18n: ectx: label, entry (userName), group (Transport $(transportId))
+#: mailtransport.kcfg:39
+#, kde-format
+msgid "User name needed for login"
+msgstr "प्रवेशार्थं उपयोक्तृनाम आवश्यकम्"
+
+#. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
+#: mailtransport.kcfg:40
+#, kde-format
+msgid "The user name to send to the server for authorization."
+msgstr "प्राधिकरणार्थं सर्वरं प्रति प्रेषयितुं उपयोक्तृनाम ।"
+
+#. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
+#: mailtransport.kcfg:43
+#, kde-format
+msgid "Command to execute before sending a mail"
+msgstr "मेल प्रेषणात् पूर्वं निष्पादयितुं आदेशः"
+
+#. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
+#: mailtransport.kcfg:44
+#, kde-format
+msgid ""
+"A command to run locally, prior to sending email. This can be used to set up "
+"SSH tunnels, for example. Leave it empty if no command should be run."
+msgstr ""
+"स्थानीयरूपेण चालयितुं आदेशः, ईमेल प्रेषणात् पूर्वं । एतत् SSH सुरङ्गस्थापनार्थं उपयोक्तुं शक्यते, "
+"उदाहरणार्थम् । यदि कोऽपि आदेशः चालनीयः नास्ति तर्हि रिक्तं त्यजन्तु ।"
+
+#. i18n: ectx: label, entry (options), group (Transport $(transportId))
+#: mailtransport.kcfg:47
+#, kde-format
+msgid "Options added to mailtransport method"
+msgstr "मेलपरिवहनविधौ विकल्पाः योजिताः"
+
+#. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
+#: mailtransport.kcfg:50
+#, kde-format
+msgid "Server requires authentication"
+msgstr "सर्वरस्य प्रमाणीकरणस्य आवश्यकता वर्तते"
+
+#. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
+#: mailtransport.kcfg:51
+#, kde-format
+msgid ""
+"Check this option if your SMTP server requires authentication before "
+"accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
+msgstr ""
+"यदि भवतः SMTP सर्वरः मेलस्वीकारात् पूर्वं प्रमाणीकरणस्य आवश्यकतां अनुभवति तर्हि एतत् विकल्पं "
+"पश्यन्तु । एतत् 'Authenticated SMTP' अथवा केवलं ASMTP इति ज्ञायते ।"
+
+#. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
+#: mailtransport.kcfg:55
+#, kde-format
+msgid "Store password"
+msgstr "गुप्तशब्दं संग्रहयन्तु"
+
+#. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
+#: mailtransport.kcfg:58
+#, kde-format
+msgid ""
+"Check this option to have your password stored.\n"
+"If KWallet is available the password will be stored there, which is "
+"considered safe.\n"
+"However, if KWallet is not available, the password will be stored in the "
+"configuration file. The password is stored in an obfuscated format, but "
+"should not be considered secure from decryption efforts if access to the "
+"configuration file is obtained."
+msgstr ""
+"भवतः गुप्तशब्दः संगृहीतः भवतु इति एतत् विकल्पं पश्यन्तु ।\n"
+"यदि KWallet उपलभ्यते तर्हि गुप्तशब्दः तत्र संगृहीतः भविष्यति, यत् सुरक्षितं मन्यते ।\n"
+"परन्तु यदि KWallet उपलब्धं नास्ति तर्हि गुप्तशब्दः विन्याससञ्चिकायां संगृहीतः भविष्यति । "
+"गुप्तशब्दः अस्पष्टरूपेण संगृह्यते, परन्तु विन्याससञ्चिकायाः प्रवेशः प्राप्तः चेत् "
+"विगुप्तीकरणप्रयत्नात् सुरक्षितः न गणनीयः ।"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: mailtransport.kcfg:62
+#, kde-format
+msgid "Encryption method used for communication"
+msgstr "संचारार्थं प्रयुक्ता एन्क्रिप्शनविधिः"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: mailtransport.kcfg:65
+#, kde-format
+msgid "No encryption"
+msgstr "न एन्क्रिप्शन"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: mailtransport.kcfg:68
+#, kde-format
+msgid "SSL/TLS encryption"
+msgstr "SSL/TLS एन्क्रिप्शन"
+
+#. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
+#: mailtransport.kcfg:71
+#, kde-format
+msgid "STARTTLS encryption"
+msgstr "STARTTLS एन्क्रिप्शन"
+
+#. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
+#: mailtransport.kcfg:77
+#, kde-format
+msgid "Authentication method"
+msgstr "प्रमाणीकरणविधिः"
+
+#. i18n: ectx: label, entry (specifyHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
+#. i18n: ectx: label, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#. i18n: ectx: label, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: mailtransport.kcfg:94 mailtransport.kcfg:99 mailtransport.kcfg:103
+#: mailtransport.kcfg:108
+#, kde-format
+msgid "<!-- TODO -->"
+msgstr "<!-- सर्वे -->"
+
+#. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
+#: mailtransport.kcfg:95
+#, kde-format
+msgid ""
+"Check this option to use a custom hostname when identifying to the mail "
+"server. This is useful when your system's hostname may not be set correctly "
+"or to mask your system's true hostname."
+msgstr ""
+"मेल सर्वरं प्रति परिचयं कुर्वन् इष्टं होस्ट्नाम उपयोक्तुं एतत् विकल्पं पश्यन्तु । एतत् तदा उपयोगी "
+"भवति यदा भवतः प्रणाल्याः होस्ट्-नाम सम्यक् सेट् न भवति अथवा भवतः प्रणाल्याः यथार्थं होस्ट्-"
+"नाम मास्कं कर्तुं ।"
+
+#. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
+#: mailtransport.kcfg:100
+#, kde-format
+msgid "Enter the hostname that should be used when identifying to the server."
+msgstr "सर्वरं प्रति परिचयं कुर्वन् यत् होस्ट्-नाम प्रयोक्तव्यं तत् प्रविशतु ।"
+
+#. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
+#: mailtransport.kcfg:104
+#, kde-format
+msgid ""
+"Check this option to use a custom sender address when identifying to the "
+"mail server. If not checked, the address from the identity is used."
+msgstr ""
+"मेलसर्वरं प्रति परिचयं कुर्वन् इष्टप्रेषकसङ्केतं उपयोक्तुं एतत् विकल्पं पश्यन्तु । यदि न परीक्षितं "
+"तर्हि परिचयात् पता उपयुज्यते ।"
+
+#. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
+#: mailtransport.kcfg:109
+#, kde-format
+msgid ""
+"Enter the address that should be used to overwrite the default sender "
+"address."
+msgstr "पूर्वनिर्धारितप्रेषकसङ्केतस्य अधिलेखनार्थं यत् पता प्रयोक्तव्यं तत् प्रविशतु ।"
+
+#. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
+#: mailtransport.kcfg:112 plugins/smtp/smtpsettings.ui:287
+#, kde-format
+msgid "Connect using the system proxy settings"
+msgstr "सिस्टम् प्रॉक्सी सेटिंग्स् इत्यस्य उपयोगेन संयोजयन्तु"
+
+#. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
+#: mailtransport.kcfg:113
+#, kde-format
+msgid ""
+"If checked, the system proxy settings will be used to connect to the mail "
+"server."
+msgstr "यदि परीक्षितं तर्हि मेलसर्वरेण सह संयोजयितुं सिस्टम् प्रॉक्सी सेटिङ्ग्स् उपयुज्यन्ते ।"
+
+#: plugins/smtp/smtpconfigwidget.cpp:151
+#, kde-format
+msgid "The password to send to the server for authorization."
+msgstr "प्राधिकरणार्थं सर्वरं प्रति प्रेषयितुं गुप्तशब्दः ।"
+
+#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:552
+#, kde-format
+msgctxt "Percent value; %p is the value, % is the percent sign"
+msgid "%p%"
+msgstr ""
+
+#: plugins/smtp/smtpconfigwidget.cpp:201
+#, kde-format
+msgid "Activities"
+msgstr "गतिविधयः"
+
+#: plugins/smtp/smtpconfigwidget.cpp:304
+#, kde-format
+msgid ""
+"Failed to check capabilities. Please verify port and authentication mode."
+msgstr "क्षमतां परीक्षितुं असफलम्। कृपया पोर्ट् प्रमाणीकरणविधानं च सत्यापयन्तु ।"
+
+#: plugins/smtp/smtpconfigwidget.cpp:305
+#, kde-format
+msgctxt "@title:window"
+msgid "Check Capabilities Failed"
+msgstr ""
+
+#: plugins/smtp/smtpjob.cpp:227
+#, kde-format
+msgid "You need to supply a username and a password to use this SMTP server."
+msgstr "अस्य SMTP सर्वरस्य उपयोगाय भवद्भिः उपयोक्तृनाम गुप्तशब्दं च आपूर्तिः कर्तव्यः ।"
+
+#: plugins/smtp/smtpmailtransportplugin.cpp:27
+#, kde-format
+msgctxt "@option SMTP transport"
+msgid "SMTP"
+msgstr ""
+
+#: plugins/smtp/smtpmailtransportplugin.cpp:28
+#, kde-format
+msgid "An SMTP server on the Internet"
+msgstr "अन्तर्जालस्य एकः SMTP सर्वरः"
+
+#: plugins/smtp/smtpmailtransportplugin.cpp:38
+#, kde-format
+msgctxt "@title:window"
+msgid "Configure account"
+msgstr ""
+
+#. i18n: ectx: attribute (title), widget (QWidget, smptTab)
+#: plugins/smtp/smtpsettings.ui:37
+#, kde-format
+msgctxt "general smtp settings"
+msgid "General"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
+#: plugins/smtp/smtpsettings.ui:43
+#, kde-format
+msgid "Account Information"
+msgstr "खाता सूचना"
+
+#. i18n: ectx: property (text), widget (QLabel, hostLabel)
+#: plugins/smtp/smtpsettings.ui:50
+#, kde-format
+msgid "Outgoing &mail server:"
+msgstr "बहिर्गच्छन् &मेल सर्वरः:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
+#: plugins/smtp/smtpsettings.ui:70
+#, kde-format
+msgid "Server &requires authentication"
+msgstr "सर्वर &प्रमाणीकरणस्य आवश्यकता अस्ति"
+
+#. i18n: ectx: property (text), widget (QLabel, usernameLabel)
+#: plugins/smtp/smtpsettings.ui:80
+#, kde-format
+msgid "&Login:"
+msgstr "&प्रवेशः : १."
+
+#. i18n: ectx: property (text), widget (QLabel, passwordLabel)
+#: plugins/smtp/smtpsettings.ui:106
+#, kde-format
+msgid "P&assword:"
+msgstr "समाभाष्:"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
+#: plugins/smtp/smtpsettings.ui:129
+#, kde-format
+msgid "&Store SMTP password"
+msgstr "&SMTP गुप्तशब्दं संग्रहयन्तु"
+
+#. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
+#: plugins/smtp/smtpsettings.ui:150
+#, kde-format
+msgctxt "advanced smtp settings"
+msgid "Advanced"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
+#: plugins/smtp/smtpsettings.ui:156
+#, kde-format
+msgid "Connection Settings"
+msgstr "संयोजनसेटिंग्स्"
+
+#. i18n: ectx: property (text), widget (QLabel, noAuthPossible)
+#: plugins/smtp/smtpsettings.ui:175
+#, kde-format
+msgid "This server does not support authentication"
+msgstr "अयं सर्वरः प्रमाणीकरणस्य समर्थनं न करोति"
+
+#. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
+#: plugins/smtp/smtpsettings.ui:192
+#, kde-format
+msgid "Auto Detect"
+msgstr "ऑटो डिटेक्ट्"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: plugins/smtp/smtpsettings.ui:219
+#, kde-format
+msgid "Encryption:"
+msgstr "एन्क्रिप्शन : १."
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
+#: plugins/smtp/smtpsettings.ui:228
+#, kde-format
+msgid "&None"
+msgstr "&न कश्चित्"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
+#: plugins/smtp/smtpsettings.ui:235
+#, kde-format
+msgid "&SSL/TLS"
+msgstr "&SSL/TLS"
+
+#. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
+#: plugins/smtp/smtpsettings.ui:242
+#, kde-format
+msgid "START&TLS"
+msgstr "START&TLS इति"
+
+#. i18n: ectx: property (text), widget (QLabel, portLabel)
+#: plugins/smtp/smtpsettings.ui:251
+#, kde-format
+msgid "&Port:"
+msgstr "&पोताश्रय:"
+
+#. i18n: ectx: property (text), widget (QLabel, authLabel)
+#: plugins/smtp/smtpsettings.ui:277
+#, kde-format
+msgid "Authentication:"
+msgstr "प्रमाणीकरणम् : १."
+
+#. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
+#: plugins/smtp/smtpsettings.ui:296
+#, kde-format
+msgid "SMTP Settings"
+msgstr "SMTP सेटिंग्स्"
+
+#. i18n: ectx: property (text), widget (QLabel, hostnameLabel)
+#: plugins/smtp/smtpsettings.ui:306
+#, kde-format
+msgid "Hostna&me:"
+msgstr "होस्टना&मे: १."
+
+#. i18n: ectx: property (text), widget (QLabel, label_2)
+#: plugins/smtp/smtpsettings.ui:332
+#, kde-format
+msgid "Sender Address:"
+msgstr "प्रेषकस्य पता : १."
+
+#. i18n: ectx: property (text), widget (QLabel, precommandLabel)
+#: plugins/smtp/smtpsettings.ui:349
+#, kde-format
+msgid "Precommand:"
+msgstr "पूर्वादेशः : १."
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
+#: plugins/smtp/smtpsettings.ui:379
+#, kde-format
+msgid "Sen&d custom hostname to server"
+msgstr "सर्वरं प्रति कस्टम् होस्टनाम प्रेषयतु"
+
+#. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
+#: plugins/smtp/smtpsettings.ui:386
+#, kde-format
+msgid "Use custom sender address"
+msgstr "कस्टम् प्रेषकपतेः उपयोगं कुर्वन्तु"
+
+#: precommandjob.cpp:68
+#, kde-format
+msgid "Executing precommand '%1'."
+msgstr "'%1' पूर्वादेशं निष्पादयन् ।"
+
+#: precommandjob.cpp:75
+#, kde-format
+msgid "Unable to start precommand '%1'."
+msgstr "'%1' पूर्वादेशं आरभ्य कर्तुं असमर्थः ।"
+
+#: precommandjob.cpp:77
+#, kde-format
+msgid "Error while executing precommand '%1'."
+msgstr "'%1' पूर्वादेशं निष्पादयन् त्रुटिः ।"
+
+#: precommandjob.cpp:93
+#, kde-format
+msgid "The precommand crashed."
+msgstr "पूर्वादेशः दुर्घटनाम् अभवत् ।"
+
+#: precommandjob.cpp:96
+#, kde-format
+msgid "The precommand exited with code %1."
+msgstr "पूर्वादेशः %1 सङ्केतेन निर्गतवान् ।"
+
+#: transport.cpp:81
+#, kde-format
+msgctxt ""
+"%1: name; %2: number appended to it to make it unique among a list of names"
+msgid "%1 #%2"
+msgstr ""
+
+#: transport.cpp:131
+#, kde-format
+msgctxt "Authentication method"
+msgid "Clear text"
+msgstr ""
+
+#: transport.cpp:135
+#, kde-format
+msgctxt "Authentication method"
+msgid "Anonymous"
+msgstr ""
+
+#: transport.cpp:166
+#, kde-format
+msgctxt "An unknown transport type"
+msgid "Unknown"
+msgstr ""
+
+#: transport.cpp:210
+#, kde-format
+msgid ""
+"QKeychain not found a backend for storing your password. It is strongly "
+"recommended to use strong backend for managing your passwords.\n"
+"However, the password can be stored in the configuration file instead. The "
+"password is stored in an obfuscated format, but should not be considered "
+"secure from decryption efforts if access to the configuration file is "
+"obtained.\n"
+"Do you want to store the password for server '%1' in the configuration file?"
+msgstr ""
+"QKeychain भवतः गुप्तशब्दस्य संग्रहणार्थं पृष्ठभागं न प्राप्नोत् । भवतः गुप्तशब्दानां प्रबन्धनार्थं "
+"दृढपृष्ठभागस्य उपयोगः दृढतया अनुशंसितः अस्ति ।\n"
+"परन्तु तस्य स्थाने गुप्तशब्दं विन्याससञ्चिकायां संग्रहीतुं शक्यते । गुप्तशब्दः अस्पष्टरूपेण संगृह्यते, "
+"परन्तु विन्याससञ्चिकायाः प्रवेशः प्राप्तः चेत् विगुप्तीकरणप्रयत्नात् सुरक्षितः न गणनीयः ।\n"
+"किं भवान् '%1' सर्वरस्य गुप्तशब्दं विन्याससञ्चिकायां संग्रहीतुं इच्छति?"
+
+#: transport.cpp:219
+#, kde-format
+msgctxt "@title:window"
+msgid "KWallet Not Available"
+msgstr ""
+
+#: transport.cpp:220
+#, kde-format
+msgctxt "@action:button"
+msgid "Store Password"
+msgstr ""
+
+#: transport.cpp:221
+#, kde-format
+msgctxt "@action:button"
+msgid "Do Not Store Password"
+msgstr ""
+
+#: transportjob.cpp:122
+#, kde-format
+msgid "The outgoing account \"%1\" is not correctly configured."
+msgstr "बहिर्गच्छन्तं खातं \"%1\" सम्यक् विन्यस्तं नास्ति ।"
+
+#: transportmanager.cpp:224
+#, kde-format
+msgid "You must create an outgoing account before sending."
+msgstr "प्रेषणात् पूर्वं भवता बहिर्गच्छन् खातं निर्मातव्यम् ।"
+
+#: transportmanager.cpp:225
+#, kde-format
+msgctxt "@title:window"
+msgid "Create Account Now?"
+msgstr ""
+
+#: transportmanager.cpp:226
+#, kde-format
+msgctxt "@action:button"
+msgid "Create Account Now"
+msgstr ""
+
+#: transportmanager.cpp:608
+#, kde-format
+msgid ""
+"The following mail transports store their passwords in an unencrypted "
+"configuration file.\n"
+"For security reasons, please consider migrating these passwords to KWallet, "
+"the KDE Wallet management tool,\n"
+"which stores sensitive data for you in a strongly encrypted file.\n"
+"Do you want to migrate your passwords to KWallet?"
+msgstr ""
+"निम्नलिखितमेलपरिवहनाः स्वगुप्तशब्दान् अगुप्तविन्याससञ्चिकायां संगृह्णन्ति ।\n"
+"सुरक्षाकारणात् कृपया एतान् गुप्तशब्दान् KWallet, KDE Wallet प्रबन्धनसाधनं प्रति प्रवासयितुं "
+"विचारयन्तु,\n"
+"यत् भवतः कृते संवेदनशीलदत्तांशं दृढतया गुप्तसञ्चिकायां संगृह्णाति ।\n"
+"किं भवान् स्वस्य गुप्तशब्दान् KWallet मध्ये प्रवासयितुम् इच्छति?"
+
+#: transportmanager.cpp:615
+#, kde-format
+msgctxt "@title:window"
+msgid "Question"
+msgstr ""
+
+#: transportmanager.cpp:616
+#, kde-format
+msgctxt "@action:button"
+msgid "Migrate"
+msgstr ""
+
+#: transportmanager.cpp:617
+#, kde-format
+msgctxt "@action:button"
+msgid "Keep"
+msgstr ""
+
+#: transportmodel.cpp:63
+#, kde-format
+msgctxt "Default transport"
+msgid " (default)"
+msgstr ""
+
+#: transportmodel.cpp:85
+#, kde-format
+msgctxt "@title:column email transport name"
+msgid "Name"
+msgstr ""
+
+#: transportmodel.cpp:87
+#, kde-format
+msgctxt "@title:column email transport type"
+msgid "Type"
+msgstr "प्रकारः"
+
+#. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
+#: ui/addtransportdialog.ui:20
+#, kde-format
+msgid "Step One: Select Transport Type"
+msgstr "प्रथमः चरणः : परिवहनप्रकारं चिनोतु"
+
+#. i18n: ectx: property (text), widget (QLabel, label)
+#: ui/addtransportdialog.ui:38
+#, kde-format
+msgctxt "The name of a mail transport"
+msgid "Name:"
+msgstr ""
+
+#. i18n: ectx: property (text), widget (QCheckBox, setDefault)
+#: ui/addtransportdialog.ui:48
+#, kde-format
+msgid "Make this the default outgoing account"
+msgstr "एतत् पूर्वनिर्धारितं बहिर्गमनलेखं कुर्वन्तु"
+
+#. i18n: ectx: property (text), widget (QLabel, descLabel)
+#: ui/addtransportdialog.ui:61
+#, kde-format
+msgid "Select an account type from the list below:"
+msgstr "अधोलिखितसूचिकातः खाताप्रकारं चिनुत:"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: ui/addtransportdialog.ui:81
+#, kde-format
+msgid "Type"
+msgstr "प्रकारः"
+
+#. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
+#: ui/addtransportdialog.ui:86
+#, kde-format
+msgid "Description"
+msgstr "वर्णनम्‌"
+
+#. i18n: ectx: property (text), widget (QPushButton, editButton)
+#: ui/transportmanagementwidgetng.ui:17
+#, kde-format
+msgid "&Modify…"
+msgstr "&संशोधय..."
+
+#. i18n: ectx: property (text), widget (QPushButton, removeButton)
+#: ui/transportmanagementwidgetng.ui:42
+#, kde-format
+msgid "Remo&ve"
+msgstr "अपाकरोति"
+
+#. i18n: ectx: property (text), widget (QPushButton, addButton)
+#: ui/transportmanagementwidgetng.ui:49
+#, kde-format
+msgid "A&dd…"
+msgstr "संयोजयति…"
+
+#. i18n: ectx: property (text), widget (QPushButton, renameButton)
+#: ui/transportmanagementwidgetng.ui:56
+#, kde-format
+msgid "&Rename"
+msgstr "&नाम पुनर्नाम"
+
+#. i18n: ectx: property (text), widget (QPushButton, defaultButton)
+#: ui/transportmanagementwidgetng.ui:76
+#, kde-format
+msgid "&Set as Default"
+msgstr "&पूर्वनिर्धारितरूपेण सेट् कुर्वन्तु"
+
+#. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
+#: ui/transportmanagementwidgetng.ui:83
+#, kde-format
+msgid "Show only transports on current activity"
+msgstr "वर्तमानक्रियाकलापस्य उपरि केवलं परिवहनं दर्शयतु"
+
+#: widgets/addtransportdialogng.cpp:94
+#, kde-format
+msgctxt "@title:window"
+msgid "Create Outgoing Account"
+msgstr ""
+
+#: widgets/addtransportdialogng.cpp:97
+#, kde-format
+msgctxt "create and configure a mail transport"
+msgid "Create and Configure"
+msgstr ""
+
+#: widgets/transportmanagementwidgetng.cpp:155
+#, kde-format
+msgid "Do you want to remove outgoing account '%1'?"
+msgstr "किं भवान् बहिर्गच्छन्तं खातं '%1' हर्तुं इच्छति?"
+
+#: widgets/transportmanagementwidgetng.cpp:156
+#, kde-format
+msgid "Do you really want to remove this %1 outgoing account?"
+msgid_plural "Do you really want to remove these %1 outgoing accounts?"
+msgstr[0] ""
+msgstr[1] ""
+
+#: widgets/transportmanagementwidgetng.cpp:159
+#, kde-format
+msgctxt "@title:window"
+msgid "Remove outgoing account?"
+msgstr ""
+
+#: widgets/transportmanagementwidgetng.cpp:189
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Add…"
+msgstr ""
+
+#: widgets/transportmanagementwidgetng.cpp:194
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Modify…"
+msgstr ""
+
+#: widgets/transportmanagementwidgetng.cpp:197
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Rename"
+msgstr ""
+
+#: widgets/transportmanagementwidgetng.cpp:201
+#, kde-format
+msgctxt "@action:inmenu"
+msgid "Remove"
+msgstr ""
+
+#: widgets/transportmanagementwidgetng.cpp:207
+#, kde-format
+msgid "Set as Default"
+msgstr "Default इति सेट् कुर्वन्तु"
