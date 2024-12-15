@@ -3,19 +3,21 @@
 # This file is distributed under the same license as the kmailtransport package.
 # Kali <EMAIL@ADDRESS>, 2024.
 #
+# SPDX-FileCopyrightText: 2024 kali <skkalwar999@gmail.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-12-13 19:09+0530\n"
-"Last-Translator: Kali <EMAIL@ADDRESS>\n"
-"Language-Team: Sanskrit\n"
+"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"Last-Translator: kali <skkalwar999@gmail.com>\n"
+"Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n>2);\n"
+"X-Generator: Lokalize 24.08.2\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -240,7 +242,7 @@ msgstr "प्राधिकरणार्थं सर्वरं प्र�
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%प% ९."
 
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
@@ -257,7 +259,7 @@ msgstr "क्षमतां परीक्षितुं असफलम्�
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
-msgstr ""
+msgstr "क्षमतां जाँचं विफलम्"
 
 #: plugins/smtp/smtpjob.cpp:227
 #, kde-format
@@ -268,7 +270,7 @@ msgstr "अस्य SMTP सर्वरस्य उपयोगाय भव�
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
-msgstr ""
+msgstr "एस एम टी पी"
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:28
 #, kde-format
@@ -279,14 +281,14 @@ msgstr "अन्तर्जालस्य एकः SMTP सर्वरः"
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
-msgstr ""
+msgstr "खातं विन्यस्तं कुर्वन्तु"
 
 #. i18n: ectx: attribute (title), widget (QWidget, smptTab)
 #: plugins/smtp/smtpsettings.ui:37
 #, kde-format
 msgctxt "general smtp settings"
 msgid "General"
-msgstr ""
+msgstr "सामान्य"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #: plugins/smtp/smtpsettings.ui:43
@@ -329,7 +331,7 @@ msgstr "&SMTP गुप्तशब्दं संग्रहयन्तु"
 #, kde-format
 msgctxt "advanced smtp settings"
 msgid "Advanced"
-msgstr ""
+msgstr "उन्नतं"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
 #: plugins/smtp/smtpsettings.ui:156
@@ -451,25 +453,25 @@ msgstr "पूर्वादेशः %1 सङ्केतेन निर्�
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
-msgstr ""
+msgstr "%1 #%2"
 
 #: transport.cpp:131
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
-msgstr ""
+msgstr "पाठः स्पष्टः"
 
 #: transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
-msgstr ""
+msgstr "अनामक"
 
 #: transport.cpp:166
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
-msgstr ""
+msgstr "अज्ञात"
 
 #: transport.cpp:210
 #, kde-format
@@ -492,19 +494,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
-msgstr ""
+msgstr "KWallet उपलब्धं नास्ति"
 
 #: transport.cpp:220
 #, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
-msgstr ""
+msgstr "गुप्तशब्दं संग्रहयन्तु"
 
 #: transport.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
-msgstr ""
+msgstr "गुप्तशब्दं न संग्रहयन्तु"
 
 #: transportjob.cpp:122
 #, kde-format
@@ -520,13 +522,13 @@ msgstr "प्रेषणात् पूर्वं भवता बहिर
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
-msgstr ""
+msgstr "अधुना खातं रचयन्तु?"
 
 #: transportmanager.cpp:226
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
-msgstr ""
+msgstr "अधुना खाता रचयन्तु"
 
 #: transportmanager.cpp:608
 #, kde-format
@@ -548,31 +550,31 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
-msgstr ""
+msgstr "प्रश्न"
 
 #: transportmanager.cpp:616
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
-msgstr ""
+msgstr "प्रवासं कुरुत"
 
 #: transportmanager.cpp:617
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"
-msgstr ""
+msgstr "स्थापय"
 
 #: transportmodel.cpp:63
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr ""
+msgstr " (मूलभूतम्‌)"
 
 #: transportmodel.cpp:85
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
-msgstr ""
+msgstr "नामः"
 
 #: transportmodel.cpp:87
 #, kde-format
@@ -591,7 +593,7 @@ msgstr "प्रथमः चरणः : परिवहनप्रकार�
 #, kde-format
 msgctxt "The name of a mail transport"
 msgid "Name:"
-msgstr ""
+msgstr "नामः:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDefault)
 #: ui/addtransportdialog.ui:48
@@ -621,7 +623,7 @@ msgstr "वर्णनम्‌"
 #: ui/transportmanagementwidgetng.ui:17
 #, kde-format
 msgid "&Modify…"
-msgstr "&संशोधय..."
+msgstr "&संशोधय…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidgetng.ui:42
@@ -657,13 +659,13 @@ msgstr "वर्तमानक्रियाकलापस्य उपर�
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
-msgstr ""
+msgstr "बहिर्गच्छन् खाता रचयन्तु"
 
 #: widgets/addtransportdialogng.cpp:97
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
-msgstr ""
+msgstr "रचयन्तु विन्यस्तुं च"
 
 #: widgets/transportmanagementwidgetng.cpp:155
 #, kde-format
@@ -674,38 +676,38 @@ msgstr "किं भवान् बहिर्गच्छन्तं खा
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "किं भवान् वास्तवमेव एतत् %1 बहिर्गच्छन्तं खातं हर्तुं इच्छति?"
+msgstr[1] "किं भवान् वास्तवमेव एतानि %1 बहिर्गमनलेखानि हर्तुं इच्छति?"
 
 #: widgets/transportmanagementwidgetng.cpp:159
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
-msgstr ""
+msgstr "बहिर्गच्छन्तं खातं निष्कासयन्तु?"
 
 #: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "संयोजयति…"
 
 #: widgets/transportmanagementwidgetng.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr ""
+msgstr "परिवर्तनं कुर्वन्तु…"
 
 #: widgets/transportmanagementwidgetng.cpp:197
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr ""
+msgstr "पुनर्नाम"
 
 #: widgets/transportmanagementwidgetng.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "अपाकरोति"
 
 #: widgets/transportmanagementwidgetng.cpp:207
 #, kde-format
