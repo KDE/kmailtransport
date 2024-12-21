@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-12-14 01:48+0530\n"
+"PO-Revision-Date: 2024-12-20 22:10+0530\n"
 "Last-Translator: kali <skkalwar999@gmail.com>\n"
 "Language-Team: Sanskrit <kde-i18n-doc@kde.org>\n"
 "Language: sa\n"
@@ -242,7 +242,7 @@ msgstr "प्राधिकरणार्थं सर्वरं प्र�
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr "%प% ९."
+msgstr "%p%"
 
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
@@ -312,7 +312,7 @@ msgstr "सर्वर &प्रमाणीकरणस्य आवश्य
 #: plugins/smtp/smtpsettings.ui:80
 #, kde-format
 msgid "&Login:"
-msgstr "&प्रवेशः : १."
+msgstr "&प्रवेशः :"
 
 #. i18n: ectx: property (text), widget (QLabel, passwordLabel)
 #: plugins/smtp/smtpsettings.ui:106
@@ -355,7 +355,7 @@ msgstr "ऑटो डिटेक्ट्"
 #: plugins/smtp/smtpsettings.ui:219
 #, kde-format
 msgid "Encryption:"
-msgstr "एन्क्रिप्शन : १."
+msgstr "एन्क्रिप्शन :"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionNone)
 #: plugins/smtp/smtpsettings.ui:228
@@ -385,7 +385,7 @@ msgstr "&पोताश्रय:"
 #: plugins/smtp/smtpsettings.ui:277
 #, kde-format
 msgid "Authentication:"
-msgstr "प्रमाणीकरणम् : १."
+msgstr "प्रमाणीकरणम् :"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
 #: plugins/smtp/smtpsettings.ui:296
@@ -397,19 +397,19 @@ msgstr "SMTP सेटिंग्स्"
 #: plugins/smtp/smtpsettings.ui:306
 #, kde-format
 msgid "Hostna&me:"
-msgstr "होस्टना&मे: १."
+msgstr "होस्टना&मे:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/smtp/smtpsettings.ui:332
 #, kde-format
 msgid "Sender Address:"
-msgstr "प्रेषकस्य पता : १."
+msgstr "प्रेषकस्य पता :"
 
 #. i18n: ectx: property (text), widget (QLabel, precommandLabel)
 #: plugins/smtp/smtpsettings.ui:349
 #, kde-format
 msgid "Precommand:"
-msgstr "पूर्वादेशः : १."
+msgstr "पूर्वादेशः :"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
 #: plugins/smtp/smtpsettings.ui:379
