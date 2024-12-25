@@ -7,7 +7,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:41+0000\n"
-"PO-Revision-Date: 2024-08-19 23:30+0200\n"
+"PO-Revision-Date: 2024-12-24 17:06+0100\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
 "Language: ko\n"
@@ -245,7 +245,7 @@ msgstr "%p%"
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "활동"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
@@ -652,7 +652,7 @@ msgstr "기본값으로 설정(&S)"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transport on current activity"
-msgstr ""
+msgstr "현재 활동에 있는 전송만 표시"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
