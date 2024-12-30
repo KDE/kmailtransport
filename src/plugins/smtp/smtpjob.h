@@ -65,7 +65,6 @@ protected Q_SLOTS:
 
 private:
     void startPasswordRetrieval(bool forceRefresh = false);
-    void onTokenRequestFinished(KGAPI2::AccountPromise *result);
     void startSmtpJob();
     void startLoginJob();
     void startSendJob();
