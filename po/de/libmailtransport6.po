@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2024-09-07 00:22+0200\n"
+"PO-Revision-Date: 2024-12-29 11:49+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
 "Language: de\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.11.70\n"
+"X-Generator: Lokalize 25.03.70\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -267,7 +267,7 @@ msgstr "%p %"
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Aktivitäten"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
@@ -681,8 +681,7 @@ msgstr "Als &Standard verwenden"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, fuzzy, kde-format
-#| msgid "Show only transport on current activity"
+#, kde-format
 msgid "Show only transports on current activity"
 msgstr "Nur den Versand der aktuellen Aktivität anzeigen"
 
