@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:41+0000\n"
-"PO-Revision-Date: 2024-09-21 10:41+0200\n"
+"PO-Revision-Date: 2024-12-28 17:41+0100\n"
 "Last-Translator: Oliver Kellogg <olivermkellogg@gmail.com>\n"
 "Language-Team: esperanto <kde-i18n-eo@kde.org>\n"
 "Language: eo\n"
@@ -257,7 +257,7 @@ msgstr "%p%"
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Aktivecoj"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
@@ -729,13 +729,3 @@ msgstr "Forigi"
 #, kde-format
 msgid "Set as Default"
 msgstr "Meti kiel Defaŭlton"
-
-#~ msgid "A&dd..."
-#~ msgstr "&Aldoni..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Modifi..."
-
-#~ msgctxt "@label the default mail transport"
-#~ msgid " (Default)"
-#~ msgstr " (Defaŭlto)"
