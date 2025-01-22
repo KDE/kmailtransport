@@ -12,5 +12,5 @@ platforms:
 irc: akonadi
 
 libraries:
- - cmake: "KPim6::MailTransport"
+    - cmake: "KPim6::MailTransport"
 cmakename: KPim6MailTransport
