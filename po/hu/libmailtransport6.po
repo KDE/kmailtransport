@@ -4,13 +4,13 @@
 # Tamas Szanto <tszanto@interware.hu>, 2007.
 # Kristóf Kiszel <ulysses@kubuntu.org>, 2011, 2012, 2014.
 # Balázs Úr <urbalazs@gmail.com>, 2012, 2013.
-# SPDX-FileCopyrightText: 2024 Kristof Kiszel <ulysses@fsf.hu>
+# SPDX-FileCopyrightText: 2024, 2025 Kristof Kiszel <ulysses@fsf.hu>
 msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-10-27 00:41+0000\n"
-"PO-Revision-Date: 2024-07-27 22:05+0200\n"
+"PO-Revision-Date: 2025-01-30 09:56+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Lokalize 24.05.2\n"
+"X-Generator: Lokalize 24.12.1\n"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -257,7 +257,7 @@ msgstr "%p%"
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Tevékenységek"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
@@ -268,11 +268,10 @@ msgstr ""
 "beállításait."
 
 #: plugins/smtp/smtpconfigwidget.cpp:305
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
-msgstr "Nem sikerült ellenőrizni a képességeket"
+msgstr "Sikertelen képesség-ellenőrzés"
 
 #: plugins/smtp/smtpjob.cpp:227
 #, kde-format
@@ -506,8 +505,7 @@ msgstr ""
 "beállítófájlba?"
 
 #: transport.cpp:219
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "A KWallet nem érhető el"
@@ -535,8 +533,7 @@ msgid "You must create an outgoing account before sending."
 msgstr "Létre kell hoznia egy kimenő fiókot a küldés előtt."
 
 #: transportmanager.cpp:225
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Új fiók létrehozása?"
@@ -564,8 +561,7 @@ msgstr ""
 "Át szeretné helyezni a jelszavakat a KWalletbe?"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Kérdés"
@@ -671,7 +667,7 @@ msgstr "Beállítá&s alapértelmezésnek"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transport on current activity"
-msgstr ""
+msgstr "Csak a jelenlegi tevékenységen történő továbbítások megjelenítése"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -698,8 +694,7 @@ msgstr[0] "Biztosan el szeretné távolítani ezt a(z) „%1” kimenő fiókot?
 msgstr[1] "Biztosan el szeretné távolítani ezt a(z) „%1” kimenő fiókot?"
 
 #: widgets/transportmanagementwidgetng.cpp:159
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Kimenő fiók eltávolítása?"
