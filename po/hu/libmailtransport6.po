@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2024-11-27 00:41+0000\n"
-"PO-Revision-Date: 2025-01-30 09:56+0100\n"
+"PO-Revision-Date: 2025-02-03 21:16+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
 "Language: hu\n"
@@ -667,7 +667,7 @@ msgstr "Beállítá&s alapértelmezésnek"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transports on current activity"
-msgstr ""
+msgstr "Csak a jelenlegi aktivitás továbbítóinak megjelenítése"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
