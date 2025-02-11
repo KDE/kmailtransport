@@ -660,10 +660,9 @@ msgstr "Na&stavit jako výchozí"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, fuzzy, kde-format
-#| msgid "Show only transport on current activity"
+#, kde-format
 msgid "Show only transports on current activity"
-msgstr "Zobrazit pouze transport z aktuální aktivity"
+msgstr ""
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
