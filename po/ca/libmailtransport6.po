@@ -737,35 +737,3 @@ msgstr "Elimina"
 #, kde-format
 msgid "Set as Default"
 msgstr "Estableix com a predeterminat"
-
-#~ msgid "A&dd..."
-#~ msgstr "A&fegeix..."
-
-#~ msgid "&Modify..."
-#~ msgstr "&Modifica..."
-
-#~ msgctxt "@label the default mail transport"
-#~ msgid " (Default)"
-#~ msgstr " (Predeterminat)"
-
-#~ msgctxt "@action:inmenu"
-#~ msgid "Add..."
-#~ msgstr "Afegeix..."
-
-#~ msgid "SSL encryption"
-#~ msgstr "Encriptatge SSL"
-
-#~ msgid "Executing precommand"
-#~ msgstr "S'està executant l'ordre prèvia"
-
-#~ msgid "Default Transport"
-#~ msgstr "Transport predeterminat"
-
-#~ msgid "Empty message."
-#~ msgstr "Missatge buit."
-
-#~ msgid "Message has no recipients."
-#~ msgstr "El missatge no té destinataris."
-
-#~ msgid "Message has invalid sent-mail folder."
-#~ msgstr "El missatge té una carpeta no vàlida de correu enviat."
