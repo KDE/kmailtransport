@@ -66,7 +66,7 @@ public:
 
     void enablePasswordLine()
     {
-        ui.password->setEnabled(ui.kcfg_storePassword->isChecked());
+        ui.password->setEnabled(ui.kcfg_storePassword->isChecked() && ui.kcfg_requiresAuthentication->isChecked());
     }
 
     void updateAuthCapbilities()
