@@ -67,7 +67,8 @@ QString TransportModel::generateTransportName(Transport *t) const
 
 int TransportModel::rowCount(const QModelIndex &parent) const
 {
-    Q_UNUSED(parent);
+    if (parent.isValid()) // flat model
+        return 0;
     return mTransportIds.count();
 }
 int TransportModel::columnCount(const QModelIndex &parent) const
