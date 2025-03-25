@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-18 00:43+0000\n"
+"POT-Creation-Date: 2025-03-25 00:42+0000\n"
 "PO-Revision-Date: 2024-12-01 18:47+0530\n"
 "Last-Translator: Kishore G <kishore96@gmail.com>\n"
 "Language-Team: Tamil <kde-i18n-doc@kde.org>\n"
@@ -557,13 +557,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (இயல்பிருப்பு)"
 
-#: transportmodel.cpp:85
+#: transportmodel.cpp:86
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "பெயர்"
 
-#: transportmodel.cpp:87
+#: transportmodel.cpp:88
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"

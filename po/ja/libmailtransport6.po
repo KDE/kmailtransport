@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-18 00:43+0000\n"
+"POT-Creation-Date: 2025-03-25 00:42+0000\n"
 "PO-Revision-Date: 2010-09-25 20:12-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -614,13 +614,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (デフォルト)"
 
-#: transportmodel.cpp:85
+#: transportmodel.cpp:86
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "名前"
 
-#: transportmodel.cpp:87
+#: transportmodel.cpp:88
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"

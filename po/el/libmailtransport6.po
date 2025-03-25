@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-18 00:43+0000\n"
+"POT-Creation-Date: 2025-03-25 00:42+0000\n"
 "PO-Revision-Date: 2024-09-20 14:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -604,13 +604,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (προκαθορισμένος)"
 
-#: transportmodel.cpp:85
+#: transportmodel.cpp:86
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Όνομα"
 
-#: transportmodel.cpp:87
+#: transportmodel.cpp:88
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
