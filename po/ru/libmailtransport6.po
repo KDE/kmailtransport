@@ -10,13 +10,13 @@
 # Alexander Lakhin <exclusion@gmail.com>, 2013.
 # Александр Яворский <yavorsky.a@t-rosta.com>, 2018.
 # Alexander Yavorsky <kekcuha@gmail.com>, 2019, 2020, 2022, 2023.
-# SPDX-FileCopyrightText: 2024 Olesya Gerasimenko <translation-team@basealt.ru>
+# SPDX-FileCopyrightText: 2024, 2025 Olesya Gerasimenko <translation-team@basealt.ru>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmail\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-03-18 02:37+0000\n"
-"PO-Revision-Date: 2024-11-27 15:03+0300\n"
+"PO-Revision-Date: 2025-04-02 12:57+0300\n"
 "Last-Translator: Olesya Gerasimenko <translation-team@basealt.ru>\n"
 "Language-Team: Basealt Translation Team\n"
 "Language: ru\n"
@@ -674,9 +674,9 @@ msgstr "Сделать &основным"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
-#, fuzzy, kde-format
+#, kde-format
 msgid "Show only transports on current activity"
-msgstr "Показывать только метод отправки в текущей комнате Plasma"
+msgstr "Показывать только методы отправки в текущей комнате Plasma"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
