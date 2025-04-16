@@ -90,7 +90,7 @@ class StaticTransportManager : public TransportManager
 {
 public:
     StaticTransportManager()
-        : TransportManager()
+
     {
     }
 };
@@ -103,8 +103,7 @@ static void destroyStaticTransportManager()
 }
 
 TransportManager::TransportManager()
-    : QObject()
-    , d(new TransportManagerPrivate(this))
+    : d(new TransportManagerPrivate(this))
 {
     qAddPostRoutine(destroyStaticTransportManager);
     d->config = new KConfig(QStringLiteral("mailtransports"));

@@ -22,7 +22,7 @@
 using namespace MailTransport;
 
 TransportMgr::TransportMgr()
-    : mCurrentJob(nullptr)
+
 {
     auto vbox = new QVBoxLayout(this);
 
