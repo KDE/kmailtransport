@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-25 00:42+0000\n"
+"POT-Creation-Date: 2025-04-17 00:41+0000\n"
 "PO-Revision-Date: 2024-11-27 08:36+0200\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -532,24 +532,24 @@ msgstr "Не зберігати пароль"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Обліковий записи вихідної пошти «%1» налаштовано неправильно."
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Вам слід створити обліковий запис вихідної пошти перед надсиланням."
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Створити запис зараз?"
 
-#: transportmanager.cpp:226
+#: transportmanager.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Створити запис зараз"
 
-#: transportmanager.cpp:608
+#: transportmanager.cpp:607
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -565,19 +565,19 @@ msgstr ""
 "шифром.\n"
 "Чи бажаєте ви перенести ваші паролі до KWallet?"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Питання"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Перенести"
 
-#: transportmanager.cpp:617
+#: transportmanager.cpp:616
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"

@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-25 00:42+0000\n"
+"POT-Creation-Date: 2025-04-17 00:41+0000\n"
 "PO-Revision-Date: 2024-11-27 09:25+0100\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -538,24 +538,24 @@ msgstr "No emmagatzemes la contrasenya"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "El compte eixint «%1» no està configurat correctament."
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Heu de crear un compte eixint abans d'enviar."
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Voleu crear un compte ara?"
 
-#: transportmanager.cpp:226
+#: transportmanager.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Crea un compte ara"
 
-#: transportmanager.cpp:608
+#: transportmanager.cpp:607
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -572,19 +572,19 @@ msgstr ""
 "confidencials en un fitxer robustament encriptat.\n"
 "Voleu migrar les contrasenyes a KWallet?"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Pregunta"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Migra"
 
-#: transportmanager.cpp:617
+#: transportmanager.cpp:616
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"

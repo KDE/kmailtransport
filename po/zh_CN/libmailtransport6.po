@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdeorg\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-25 00:42+0000\n"
+"POT-Creation-Date: 2025-04-17 00:41+0000\n"
 "PO-Revision-Date: 2024-04-22 15:58\n"
 "Last-Translator: \n"
 "Language-Team: Chinese Simplified\n"
@@ -509,24 +509,24 @@ msgstr ""
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "对外账户“%1”尚未正确配置。"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "您在发送邮件前必需创建一个对外账户。"
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr ""
 
-#: transportmanager.cpp:226
+#: transportmanager.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr ""
 
-#: transportmanager.cpp:608
+#: transportmanager.cpp:607
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -540,19 +540,19 @@ msgstr ""
 "为安全起见，推荐您使用 KWallet 密码库对敏感数据进行强加密存储。\n"
 "您想要将您的密码迁移到 KWallet 中吗？"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr ""
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr ""
 
-#: transportmanager.cpp:617
+#: transportmanager.cpp:616
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"

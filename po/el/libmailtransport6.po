@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-03-25 00:42+0000\n"
+"POT-Creation-Date: 2025-04-17 00:41+0000\n"
 "PO-Revision-Date: 2024-09-20 14:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -545,24 +545,24 @@ msgstr "Μη αποθήκευση κωδικού πρόσβασης"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Ο λογαριασμός εξερχομένων \"%1\" δεν είναι σωστά διαμορφωμένος."
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Πρέπει να ρυθμίσετε ένα λογαριασμό εξερχομένων πριν την αποστολή."
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Δημιουργία λογαριασμού τώρα;"
 
-#: transportmanager.cpp:226
+#: transportmanager.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Δημιουργία λογαριασμού τώρα"
 
-#: transportmanager.cpp:608
+#: transportmanager.cpp:607
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -580,19 +580,19 @@ msgstr ""
 "αρχείο.\n"
 "Επιθυμείτε τη μεταφορά των κωδικών σας στο KWallet;"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Ερώτηση"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Μεταφορά"
 
-#: transportmanager.cpp:617
+#: transportmanager.cpp:616
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"
