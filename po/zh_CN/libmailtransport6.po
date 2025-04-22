@@ -64,7 +64,7 @@ msgstr "服务器的端口号码"
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
-msgstr ""
+msgstr "SMTP 服务器监听的端口号。默认端口是 587。"
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
@@ -156,13 +156,13 @@ msgstr "不加密"
 #: mailtransport.kcfg:68
 #, kde-format
 msgid "SSL/TLS encryption"
-msgstr ""
+msgstr "SSL/TLS 加密"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:71
 #, kde-format
 msgid "STARTTLS encryption"
-msgstr ""
+msgstr "STARTTLS 加密"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:77
@@ -239,12 +239,12 @@ msgstr "发送给服务器进行验证的密码。"
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: plugins/smtp/smtpconfigwidget.cpp:203
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "活动"
 
 #: plugins/smtp/smtpconfigwidget.cpp:306
 #, kde-format
@@ -256,7 +256,7 @@ msgstr "检测能力失败。请检查端口和验证模式。"
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
-msgstr ""
+msgstr "检测功能失败"
 
 #: plugins/smtp/smtpjob.cpp:227
 #, kde-format
@@ -490,19 +490,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
-msgstr ""
+msgstr "KWallet 不可用"
 
 #: transport.cpp:220
 #, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
-msgstr ""
+msgstr "存储密码"
 
 #: transport.cpp:221
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
-msgstr ""
+msgstr "不存储密码"
 
 #: transportjob.cpp:122
 #, kde-format
@@ -518,13 +518,13 @@ msgstr "您在发送邮件前必需创建一个对外账户。"
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
-msgstr ""
+msgstr "创建帐户?"
 
 #: transportmanager.cpp:226
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
-msgstr ""
+msgstr "创建帐户"
 
 #: transportmanager.cpp:608
 #, kde-format
@@ -562,7 +562,7 @@ msgstr ""
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr ""
+msgstr " (默认)"
 
 #: transportmodel.cpp:85
 #, kde-format
@@ -617,7 +617,7 @@ msgstr "解密"
 #: ui/transportmanagementwidgetng.ui:17
 #, kde-format
 msgid "&Modify…"
-msgstr ""
+msgstr "修改…(&M)"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidgetng.ui:42
@@ -629,7 +629,7 @@ msgstr "删除(&V)"
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "添加...(&D)"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidgetng.ui:56
@@ -647,7 +647,7 @@ msgstr "设为默认(&S)"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transports on current activity"
-msgstr ""
+msgstr "仅显示当前活动的传输内容"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -670,37 +670,37 @@ msgstr "您想要删除对外账户“%1”吗？"
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] ""
+msgstr[0] "您真的想要移除这些 %1 对外帐户吗？"
 
 #: widgets/transportmanagementwidgetng.cpp:159
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
-msgstr ""
+msgstr "删除对外账户吗？"
 
 #: widgets/transportmanagementwidgetng.cpp:189
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "添加…"
 
 #: widgets/transportmanagementwidgetng.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr ""
+msgstr "修改…"
 
 #: widgets/transportmanagementwidgetng.cpp:197
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
-msgstr ""
+msgstr "重命名"
 
 #: widgets/transportmanagementwidgetng.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr ""
+msgstr "移除"
 
 #: widgets/transportmanagementwidgetng.cpp:207
 #, kde-format
