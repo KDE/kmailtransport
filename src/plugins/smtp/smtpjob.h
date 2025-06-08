@@ -33,7 +33,7 @@ namespace MailTransport
   Mail transport job for SMTP.
   Internally, all jobs for a specific transport are queued to use the same
   KIO::Slave. This avoids multiple simultaneous connections to the server,
-  which is not always allowed. Also, re-using an already existing connection
+  which is not always allowed. Also, reusing an already existing connection
   avoids the login overhead and can improve performance.
 
   Precommands are automatically executed, once per opening a connection to the

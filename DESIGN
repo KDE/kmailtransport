@@ -19,4 +19,3 @@ Ideal situation (KDE5):
 * Move SmtpJob and SendmailJob to the MDA, and let MailTransport handle only config stuff and putting things in the outbox.
 * All apps:
   App's composer -> MailTransport (MessageQueueJob) -> MDA (SMTP, Sendmail, or specific resource)
-

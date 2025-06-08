@@ -3,19 +3,21 @@ if(BUILD_TESTING)
 endif()
 kcoreaddons_add_plugin(mailtransport_smtpplugin INSTALL_NAMESPACE "pim6/mailtransport")
 
-target_sources(mailtransport_smtpplugin PRIVATE
-    smtpmailtransportplugin.cpp
-    smtpconfigdialog.cpp
-    smtpjob.cpp
-    smtpconfigwidget.cpp
-    smtpconfigdialog.h
-    smtpjob.h
-    sessionuiproxy.h
-    smtpmailtransportplugin.h
-    smtpconfigwidget.h
-    xoauthpasswordrequester.cpp
-    gmailpasswordrequester.cpp
-    outlookpasswordrequester.cpp
+target_sources(
+    mailtransport_smtpplugin
+    PRIVATE
+        smtpmailtransportplugin.cpp
+        smtpconfigdialog.cpp
+        smtpjob.cpp
+        smtpconfigwidget.cpp
+        smtpconfigdialog.h
+        smtpjob.h
+        sessionuiproxy.h
+        smtpmailtransportplugin.h
+        smtpconfigwidget.h
+        xoauthpasswordrequester.cpp
+        gmailpasswordrequester.cpp
+        outlookpasswordrequester.cpp
 )
 ki18n_wrap_ui(mailtransport_smtpplugin
     smtpsettings.ui
@@ -26,9 +28,8 @@ ecm_qt_declare_logging_category(mailtransport_smtpplugin HEADER mailtransportplu
         EXPORT MAILTRANSPORT
 )
 
-
-
-target_link_libraries(mailtransport_smtpplugin
+target_link_libraries(
+    mailtransport_smtpplugin
     KPim6::MailTransport
     KF6::I18n
     KF6::ConfigWidgets

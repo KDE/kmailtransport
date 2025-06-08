@@ -8,7 +8,7 @@ macro(add_mailtransport_test _source)
         TEST_NAME ${_name}
         LINK_LIBRARIES KPim6MailTransport
         Qt::Test Qt::Widgets
-)
+    )
 endmacro()
 
 add_mailtransport_test(transporttreeviewtest.cpp)

@@ -21,8 +21,8 @@
       <default></default>
     </entry>
     <entry name="activitiesEnabled" type="Bool">
-      <default>false</default> 
-    </entry>    
+      <default>false</default>
+    </entry>
     <entry name="identifier" type="String">
       <default>SMTP</default>
     </entry>
@@ -45,7 +45,7 @@
     </entry>
     <entry name="options" type="String">
      <label>Options added to mailtransport method</label>
-    </entry>	    
+    </entry>
     <entry name="requiresAuthentication" type="Bool" key="auth">
       <label>Server requires authentication</label>
       <whatsthis>Check this option if your SMTP server requires authentication before accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP.</whatsthis>

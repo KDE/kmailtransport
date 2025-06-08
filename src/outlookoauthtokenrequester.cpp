@@ -241,7 +241,7 @@ void OutlookOAuthTokenRequester::handleSocketReadyRead()
         return;
     }
 
-    qCDebug(MAILTRANSPORT_LOG) << "Extracted Outlook OAuth2 autorization token from response, requesting access token...";
+    qCDebug(MAILTRANSPORT_LOG) << "Extracted Outlook OAuth2 authorization token from response, requesting access token...";
     requestIdToken(code);
 }
 

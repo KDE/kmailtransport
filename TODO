@@ -31,5 +31,3 @@ SMTPJob
 Precommand
 ----------
 - test conversion from kprocess to qprocess (TA)
-
-
