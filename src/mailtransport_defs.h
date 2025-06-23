@@ -5,22 +5,22 @@
 */
 
 #pragma once
-
+using namespace Qt::Literals::StringLiterals;
 /**
   @file mailtransport_defs.h
   Internal file containing constant definitions etc.
 */
 
-#define WALLET_FOLDER QStringLiteral("mailtransports")
-#define KMAIL_WALLET_FOLDER QStringLiteral("kmail")
+#define WALLET_FOLDER u"mailtransports"_s
+#define KMAIL_WALLET_FOLDER u"kmail"_s
 
-#define DBUS_SERVICE_NAME QStringLiteral("org.kde.pim.TransportManager")
-#define DBUS_INTERFACE_NAME QStringLiteral("org.kde.pim.TransportManager")
-#define DBUS_OBJECT_PATH QStringLiteral("/TransportManager")
-#define DBUS_CHANGE_SIGNAL QStringLiteral("changesCommitted")
+#define DBUS_SERVICE_NAME u"org.kde.pim.TransportManager"_s
+#define DBUS_INTERFACE_NAME u"org.kde.pim.TransportManager"_s
+#define DBUS_OBJECT_PATH u"/TransportManager"_s
+#define DBUS_CHANGE_SIGNAL u"changesCommitted"_s
 
-#define SMTP_PROTOCOL QStringLiteral("smtp")
-#define SMTPS_PROTOCOL QStringLiteral("smtps")
+#define SMTP_PROTOCOL u"smtp"_s
+#define SMTPS_PROTOCOL u"smtps"_s
 
 #define SMTP_PORT 587
 #define SMTP_OLD_PORT 25
@@ -29,14 +29,14 @@
 // Because ServerTest is also capable of testing IMAP,
 // some additional defines:
 
-#define IMAP_PROTOCOL QStringLiteral("imap")
-#define IMAPS_PROTOCOL QStringLiteral("imaps")
+#define IMAP_PROTOCOL u"imap"_s
+#define IMAPS_PROTOCOL u"imaps"_s
 
-#define POP_PROTOCOL QStringLiteral("pop")
-#define POPS_PROTOCOL QStringLiteral("pops")
+#define POP_PROTOCOL u"pop"_s
+#define POPS_PROTOCOL u"pops"_s
 
-#define NNTP_PROTOCOL QStringLiteral("nntp")
-#define NNTPS_PROTOCOL QStringLiteral("nntps")
+#define NNTP_PROTOCOL u"nntp"_s
+#define NNTPS_PROTOCOL u"nntps"_s
 
 #define IMAP_PORT 143
 #define IMAPS_PORT 993

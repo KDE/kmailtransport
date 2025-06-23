@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "widgets/transportcombobox.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <QApplication>
 #include <QLabel>
 #include <QLineEdit>
@@ -33,10 +35,10 @@ IdentityComboboxWidget::IdentityComboboxWidget(QWidget *parent)
         auto hbox = new QHBoxLayout;
         auto transportLineEdit = new QLineEdit(this);
 
-        hbox->addWidget(new QLabel(QStringLiteral("set transport identifier:"), this));
+        hbox->addWidget(new QLabel(u"set transport identifier:"_s, this));
         hbox->addWidget(transportLineEdit);
 
-        auto identityNameButton = new QPushButton(QStringLiteral("Apply"), this);
+        auto identityNameButton = new QPushButton(u"Apply"_s, this);
         hbox->addWidget(identityNameButton);
 
         connect(identityNameButton, &QPushButton::clicked, this, [transportLineEdit, combobox]() {

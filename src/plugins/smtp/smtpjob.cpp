@@ -8,6 +8,8 @@
 */
 
 #include "smtpjob.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "mailtransport_defs.h"
 #include "mailtransportplugin_smtp_debug.h"
 #include "precommandjob.h"
@@ -230,8 +232,7 @@ void SmtpJob::startLoginJob()
         dlg->addCommentLine(QString(), transport()->name());
         dlg->setUsername(user);
         dlg->setPassword(passwd);
-        dlg->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
-                                                                                                      : KPassword::RevealMode::Never);
+        dlg->setRevealPasswordMode(KAuthorized::authorize(u"lineedit_reveal_password"_s) ? KPassword::RevealMode::OnlyNew : KPassword::RevealMode::Never);
 
         connect(this, &KJob::result, dlg, &QDialog::reject);
 
@@ -261,7 +262,7 @@ void SmtpJobPrivate::doLogin()
 {
     QString passwd = q->transport()->password();
     if (q->transport()->authenticationType() == Transport::EnumAuthenticationType::XOAUTH2) {
-        passwd = passwd.left(passwd.indexOf(QLatin1Char('\001')));
+        passwd = passwd.left(passwd.indexOf(u'\001'));
     }
 
     auto login = new KSmtp::LoginJob(session);

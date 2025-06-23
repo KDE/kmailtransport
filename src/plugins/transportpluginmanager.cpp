@@ -5,6 +5,8 @@
 */
 
 #include "transportpluginmanager.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "mailtransport_debug.h"
 #include <KPluginFactory>
 #include <KPluginMetaData>
@@ -28,7 +30,7 @@ namespace
 {
 QString pluginVersion()
 {
-    return QStringLiteral("1.0");
+    return u"1.0"_s;
 }
 }
 
@@ -55,7 +57,7 @@ void TransportPluginManagerPrivate::initializePlugins()
     if (!mPluginList.isEmpty()) {
         return;
     }
-    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pim6/mailtransport"));
+    const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(u"pim6/mailtransport"_s);
 
     QListIterator<KPluginMetaData> i(plugins);
     i.toBack();

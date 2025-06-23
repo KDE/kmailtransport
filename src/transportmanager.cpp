@@ -106,7 +106,7 @@ TransportManager::TransportManager()
     : d(new TransportManagerPrivate(this))
 {
     qAddPostRoutine(destroyStaticTransportManager);
-    d->config = new KConfig(QStringLiteral("mailtransports"));
+    d->config = new KConfig(u"mailtransports"_s);
 
     QDBusConnection::sessionBus().registerObject(DBUS_OBJECT_PATH, this, QDBusConnection::ExportScriptableSlots | QDBusConnection::ExportScriptableSignals);
 
@@ -374,7 +374,7 @@ void TransportManagerPrivate::readConfig()
     QList<Transport *> oldTransports = transports;
     transports.clear();
 
-    static QRegularExpression re(QStringLiteral("^Transport (.+)$"));
+    static QRegularExpression re(u"^Transport (.+)$"_s);
     const QStringList groups = config->groupList().filter(re);
     for (const QString &s : groups) {
         const QRegularExpressionMatch match = re.match(s);
@@ -408,7 +408,7 @@ void TransportManagerPrivate::readConfig()
     qDeleteAll(oldTransports);
     oldTransports.clear();
     // read default transport
-    KConfigGroup group(config, QStringLiteral("General"));
+    KConfigGroup group(config, u"General"_s);
     defaultTransportId = group.readEntry("default-transport", 0);
     if (defaultTransportId == 0) {
         // migrated default transport contains the name instead
@@ -428,7 +428,7 @@ void TransportManagerPrivate::readConfig()
 
 void TransportManagerPrivate::writeConfig()
 {
-    KConfigGroup group(config, QStringLiteral("General"));
+    KConfigGroup group(config, u"General"_s);
     group.writeEntry("default-transport", defaultTransportId);
     config->sync();
     q->emitChangesCommitted();
@@ -614,7 +614,7 @@ void TransportManagerPrivate::migrateToWallet()
                                                      i18nc("@title:window", "Question"),
                                                      KGuiItem(i18nc("@action:button", "Migrate")),
                                                      KGuiItem(i18nc("@action:button", "Keep")),
-                                                     QStringLiteral("WalletMigrate"));
+                                                     u"WalletMigrate"_s);
     if (result != KMessageBox::ButtonCode::PrimaryAction) {
         return;
     }

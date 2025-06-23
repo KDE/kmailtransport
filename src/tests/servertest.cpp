@@ -5,6 +5,7 @@
 */
 
 #include "servertest.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <QApplication>
 #include <QDebug>
@@ -18,7 +19,7 @@ int main(int argc, char **argv)
     }
 
     QApplication app(argc, argv);
-    app.setApplicationName(QStringLiteral("kmailtransport-servertest"));
+    app.setApplicationName(u"kmailtransport-servertest"_s);
 
     ServerTest test;
     test.setProtocol(app.arguments().at(1));

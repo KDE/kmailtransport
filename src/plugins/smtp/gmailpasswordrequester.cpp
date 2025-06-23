@@ -6,6 +6,8 @@
 */
 
 #include "gmailpasswordrequester.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "mailtransportplugin_smtp_debug.h"
 #include "plugins/smtp/xoauthpasswordrequester.h"
 #include "transport.h"
@@ -15,8 +17,8 @@
 
 using namespace MailTransport;
 
-static const QString apiKey = QStringLiteral("554041944266.apps.googleusercontent.com");
-static const QString apiSecret = QStringLiteral("mdT1DjzohxN3npUUzkENT0gO");
+static const QString apiKey = u"554041944266.apps.googleusercontent.com"_s;
+static const QString apiSecret = u"mdT1DjzohxN3npUUzkENT0gO"_s;
 
 GmailPasswordRequester::GmailPasswordRequester(Transport *transport, QObject *parent)
     : XOAuthPasswordRequester(transport, parent)
@@ -52,7 +54,7 @@ void GmailPasswordRequester::onTokenRequestFinished(KGAPI2::AccountPromise *prom
     }
 
     const auto account = promise->account();
-    const QString tokens = QStringLiteral("%1\001%2").arg(account->accessToken(), account->refreshToken());
+    const QString tokens = u"%1\001%2"_s.arg(account->accessToken(), account->refreshToken());
 
     Q_EMIT done(PasswordRetrieved, tokens);
 }

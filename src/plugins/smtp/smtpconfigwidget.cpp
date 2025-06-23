@@ -143,8 +143,8 @@ void SMTPConfigWidget::init()
 
     d->ui.setupUi(this);
     d->ui.tabWidget->tabBar()->setExpanding(true);
-    d->ui.password->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::OnlyNew
-                                                                                                             : KPassword::RevealMode::Never);
+    d->ui.password->setRevealPasswordMode(KAuthorized::authorize(u"lineedit_reveal_password"_s) ? KPassword::RevealMode::OnlyNew
+                                                                                                : KPassword::RevealMode::Never);
     d->manager->addWidget(this); // otherwise it doesn't find out about these widgets
     d->manager->updateWidgets();
 
@@ -182,8 +182,8 @@ void SMTPConfigWidget::init()
     // load the password
     d->transport->updatePasswordState();
     if (d->transport->isComplete()) {
-        d->ui.password->setRevealPasswordMode(KAuthorized::authorize(QStringLiteral("lineedit_reveal_password")) ? KPassword::RevealMode::Always
-                                                                                                                 : KPassword::RevealMode::Never);
+        d->ui.password->setRevealPasswordMode(KAuthorized::authorize(u"lineedit_reveal_password"_s) ? KPassword::RevealMode::Always
+                                                                                                    : KPassword::RevealMode::Never);
         d->ui.password->setPassword(d->transport->password());
     } else {
         if (d->transport->requiresAuthentication()) {
@@ -193,7 +193,7 @@ void SMTPConfigWidget::init()
 
     hostNameChanged(d->transport->host());
 
-    const KPluginMetaData editWidgetPlugin(QStringLiteral("pim6/mailtransportactivities/kmailtransportactivitiesplugin"));
+    const KPluginMetaData editWidgetPlugin(u"pim6/mailtransportactivities/kmailtransportactivitiesplugin"_s);
 
     const auto result = KPluginFactory::instantiatePlugin<MailTransport::TransportActivitiesAbstractPlugin>(editWidgetPlugin);
     if (result) {

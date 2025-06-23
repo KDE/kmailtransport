@@ -5,6 +5,8 @@
 */
 
 #include "../smtpjob.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "fakeserver.h"
 
 #include "transportbase.h"
@@ -56,8 +58,8 @@ private Q_SLOTS:
                  << "C: "
                  << "C: ."
                  << "S: 250 Ok transfer done" << FakeServer::bye();
-        QTest::newRow("simple") << scenario << MailTransport::TransportBase::EnumAuthenticationType::LOGIN << QStringLiteral("Foo Bar <foo@bar.com>")
-                                << QStringList{} << QStringList{QStringLiteral("bar@foo.com"), QStringLiteral("<bar@bar.foo>")} << QByteArray("Hi Bob") << true;
+        QTest::newRow("simple") << scenario << MailTransport::TransportBase::EnumAuthenticationType::LOGIN << u"Foo Bar <foo@bar.com>"_s << QStringList{}
+                                << QStringList{u"bar@foo.com"_s, u"<bar@bar.foo>"_s} << QByteArray("Hi Bob") << true;
     }
 
     void smtpJobTest()
@@ -76,15 +78,15 @@ private Q_SLOTS:
 
         auto transport = MailTransport::TransportManager::self()->createTransport();
         transport->setSpecifyHostname(true);
-        transport->setHost(QStringLiteral("127.0.0.1"));
-        transport->setLocalHostname(QStringLiteral("127.0.0.1"));
+        transport->setHost(u"127.0.0.1"_s);
+        transport->setLocalHostname(u"127.0.0.1"_s);
         transport->setPort(5989);
         transport->setRequiresAuthentication(true);
         transport->setAuthenticationType(authType);
         transport->setEncryption(MailTransport::Transport::EnumEncryption::None);
         transport->setStorePassword(false);
-        transport->setUserName(QStringLiteral("login"));
-        transport->setPassword(QStringLiteral("password"));
+        transport->setUserName(u"login"_s);
+        transport->setPassword(u"password"_s);
 
         {
             MailTransport::SmtpJob smtpJob(transport);

@@ -5,6 +5,8 @@
 */
 
 #include "transportmanagementwidgetng.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "transport.h"
 #include "transportmanager.h"
 #include "transportmodel.h"
@@ -186,19 +188,19 @@ void TransportManagementWidgetNgPrivate::defaultClicked()
 void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QPoint &pos)
 {
     QMenu menu(q);
-    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18nc("@action:inmenu", "Add…"), q, [this]() {
+    menu.addAction(QIcon::fromTheme(u"list-add"_s), i18nc("@action:inmenu", "Add…"), q, [this]() {
         addClicked();
     });
     const QModelIndex index = ui.transportTreeView->indexAt(pos);
     if (index.isValid()) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18nc("@action:inmenu", "Modify…"), q, [this]() {
+        menu.addAction(QIcon::fromTheme(u"document-edit"_s), i18nc("@action:inmenu", "Modify…"), q, [this]() {
             editClicked();
         });
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-rename")), i18nc("@action:inmenu", "Rename"), q, [this]() {
+        menu.addAction(QIcon::fromTheme(u"edit-rename"_s), i18nc("@action:inmenu", "Rename"), q, [this]() {
             renameClicked();
         });
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18nc("@action:inmenu", "Remove"), q, [this]() {
+        menu.addAction(QIcon::fromTheme(u"list-remove"_s), i18nc("@action:inmenu", "Remove"), q, [this]() {
             removeClicked();
         });
         const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();

@@ -7,6 +7,7 @@
 */
 
 #include "fakeserver.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include <QDebug>
 #include <QFile>

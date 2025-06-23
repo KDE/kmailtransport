@@ -5,6 +5,8 @@
 */
 
 #include "smtpmailtransportplugin.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "smtpconfigdialog.h"
 #include "smtpjob.h"
 #include <KLocalizedString>
@@ -26,7 +28,7 @@ QList<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::names
 
     info.name = i18nc("@option SMTP transport", "SMTP");
     info.description = i18n("An SMTP server on the Internet");
-    info.identifier = QStringLiteral("SMTP");
+    info.identifier = u"SMTP"_s;
     info.isAkonadi = false;
     return QList<MailTransport::TransportAbstractPluginInfo>() << info;
 }

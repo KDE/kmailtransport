@@ -6,6 +6,8 @@
 */
 
 #include "outlookpasswordrequester.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "mailtransportplugin_smtp_debug.h"
 #include "transport.h"
 
@@ -17,9 +19,9 @@
 
 using namespace MailTransport;
 
-static const QString clientId = QStringLiteral("18da2bc3-146a-4581-8c92-27dc7b9954a0");
-static const QString tenantId = QStringLiteral("common");
-static const QStringList scopes = {QStringLiteral("https://outlook.office.com/SMTP.Send"), QStringLiteral("offline_access")};
+static const QString clientId = u"18da2bc3-146a-4581-8c92-27dc7b9954a0"_s;
+static const QString tenantId = u"common"_s;
+static const QStringList scopes = {u"https://outlook.office.com/SMTP.Send"_s, u"offline_access"_s};
 
 namespace
 {
@@ -31,14 +33,14 @@ TokenResult extractTokens(QKeychain::Job *job)
     QVariantMap map;
     stream >> map;
 
-    const auto accessToken = map.value(QStringLiteral("accessToken")).toString();
-    const auto refreshToken = map.value(QStringLiteral("refreshToken")).toString();
+    const auto accessToken = map.value(u"accessToken"_s).toString();
+    const auto refreshToken = map.value(u"refreshToken"_s).toString();
     return {accessToken, refreshToken};
 }
 
 QByteArray serializeTokens(const TokenResult &result)
 {
-    QVariantMap map = {{QStringLiteral("accessToken"), result.accessToken()}, {QStringLiteral("refreshToken"), result.refreshToken()}};
+    QVariantMap map = {{u"accessToken"_s, result.accessToken()}, {u"refreshToken"_s, result.refreshToken()}};
     QByteArray data;
     QDataStream stream(&data, QDataStream::WriteOnly);
     stream << map;
@@ -56,7 +58,7 @@ OutlookPasswordRequester::~OutlookPasswordRequester() = default;
 
 void OutlookPasswordRequester::requestPassword(bool forceRefresh)
 {
-    auto job = new QKeychain::ReadPasswordJob(QStringLiteral("mailtransports"));
+    auto job = new QKeychain::ReadPasswordJob(u"mailtransports"_s);
     job->setKey(QString::number(transport()->id()));
     connect(job, &QKeychain::ReadPasswordJob::finished, this, [this, forceRefresh](QKeychain::Job *job) {
         if (job->error() == QKeychain::Error::EntryNotFound) {
@@ -104,7 +106,7 @@ void OutlookPasswordRequester::onTokenRequestFinished(const TokenResult &result)
         return;
     }
 
-    auto job = new QKeychain::WritePasswordJob(QStringLiteral("mailtransports"));
+    auto job = new QKeychain::WritePasswordJob(u"mailtransports"_s);
     job->setKey(QString::number(transport()->id()));
     job->setBinaryData(serializeTokens(result));
     connect(job, &QKeychain::WritePasswordJob::finished, this, [result](QKeychain::Job *job) {
@@ -114,7 +116,7 @@ void OutlookPasswordRequester::onTokenRequestFinished(const TokenResult &result)
     });
     job->start();
 
-    const QString tokens = QStringLiteral("%1\001%2").arg(result.accessToken(), result.refreshToken());
+    const QString tokens = u"%1\001%2"_s.arg(result.accessToken(), result.refreshToken());
     Q_EMIT done(PasswordRetrieved, tokens);
 }
 

@@ -5,6 +5,7 @@
 */
 
 #include "transportmgr.h"
+using namespace Qt::Literals::StringLiterals;
 
 #include "transport.h"
 #include "transportjob.h"
@@ -30,31 +31,31 @@ TransportMgr::TransportMgr()
     mComboBox = new TransportComboBox(this);
     mComboBox->setEditable(true);
     vbox->addWidget(mComboBox);
-    auto b = new QPushButton(QStringLiteral("&Edit"), this);
+    auto b = new QPushButton(u"&Edit"_s, this);
     vbox->addWidget(b);
     connect(b, &QPushButton::clicked, this, &TransportMgr::editBtnClicked);
-    b = new QPushButton(QStringLiteral("&Remove all transports"), this);
+    b = new QPushButton(u"&Remove all transports"_s, this);
     vbox->addWidget(b);
     connect(b, &QPushButton::clicked, this, &TransportMgr::removeAllBtnClicked);
     mSenderEdit = new QLineEdit(this);
-    mSenderEdit->setPlaceholderText(QStringLiteral("Sender"));
+    mSenderEdit->setPlaceholderText(u"Sender"_s);
     vbox->addWidget(mSenderEdit);
     mToEdit = new QLineEdit(this);
-    mToEdit->setPlaceholderText(QStringLiteral("To"));
+    mToEdit->setPlaceholderText(u"To"_s);
     vbox->addWidget(mToEdit);
     mCcEdit = new QLineEdit(this);
-    mCcEdit->setPlaceholderText(QStringLiteral("Cc"));
+    mCcEdit->setPlaceholderText(u"Cc"_s);
     vbox->addWidget(mCcEdit);
     mBccEdit = new QLineEdit(this);
-    mBccEdit->setPlaceholderText(QStringLiteral("Bcc"));
+    mBccEdit->setPlaceholderText(u"Bcc"_s);
     vbox->addWidget(mBccEdit);
     mMailEdit = new QPlainTextEdit(this);
     mMailEdit->setLineWrapMode(QPlainTextEdit::NoWrap);
     vbox->addWidget(mMailEdit);
-    b = new QPushButton(QStringLiteral("&Send"), this);
+    b = new QPushButton(u"&Send"_s, this);
     connect(b, &QPushButton::clicked, this, &TransportMgr::sendBtnClicked);
     vbox->addWidget(b);
-    b = new QPushButton(QStringLiteral("&Cancel"), this);
+    b = new QPushButton(u"&Cancel"_s, this);
     connect(b, &QPushButton::clicked, this, &TransportMgr::cancelBtnClicked);
     vbox->addWidget(b);
 }
@@ -88,9 +89,9 @@ void TransportMgr::sendBtnClicked()
         return;
     }
     job->setSender(mSenderEdit->text());
-    job->setTo(mToEdit->text().isEmpty() ? QStringList() : mToEdit->text().split(QLatin1Char(',')));
-    job->setCc(mCcEdit->text().isEmpty() ? QStringList() : mCcEdit->text().split(QLatin1Char(',')));
-    job->setBcc(mBccEdit->text().isEmpty() ? QStringList() : mBccEdit->text().split(QLatin1Char(',')));
+    job->setTo(mToEdit->text().isEmpty() ? QStringList() : mToEdit->text().split(u','));
+    job->setCc(mCcEdit->text().isEmpty() ? QStringList() : mCcEdit->text().split(u','));
+    job->setBcc(mBccEdit->text().isEmpty() ? QStringList() : mBccEdit->text().split(u','));
     job->setData(mMailEdit->toPlainText().toLatin1());
     connect(job, &KJob::result, this, &TransportMgr::jobResult);
     connect(job, &TransportJob::percentChanged, this, &TransportMgr::jobPercent);
@@ -110,7 +111,7 @@ void TransportMgr::cancelBtnClicked()
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    app.setApplicationName(QStringLiteral("transportmgr"));
+    app.setApplicationName(u"transportmgr"_s);
 
     auto t = new TransportMgr();
     t->show();

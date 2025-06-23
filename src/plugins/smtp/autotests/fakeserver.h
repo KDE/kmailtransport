@@ -9,6 +9,8 @@
 #pragma once
 
 #include <QMutex>
+using namespace Qt::Literals::StringLiterals;
+
 #include <QTcpSocket>
 #include <QThread>
 

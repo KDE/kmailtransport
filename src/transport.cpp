@@ -5,6 +5,8 @@
 */
 
 #include "transport.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "mailtransport_defs.h"
 #include "transport_p.h"
 #include "transportmanager.h"
@@ -116,25 +118,25 @@ QString Transport::authenticationTypeString(int type)
 {
     switch (type) {
     case EnumAuthenticationType::LOGIN:
-        return QStringLiteral("LOGIN");
+        return u"LOGIN"_s;
     case EnumAuthenticationType::PLAIN:
-        return QStringLiteral("PLAIN");
+        return u"PLAIN"_s;
     case EnumAuthenticationType::CRAM_MD5:
-        return QStringLiteral("CRAM-MD5");
+        return u"CRAM-MD5"_s;
     case EnumAuthenticationType::DIGEST_MD5:
-        return QStringLiteral("DIGEST-MD5");
+        return u"DIGEST-MD5"_s;
     case EnumAuthenticationType::NTLM:
-        return QStringLiteral("NTLM");
+        return u"NTLM"_s;
     case EnumAuthenticationType::GSSAPI:
-        return QStringLiteral("GSSAPI");
+        return u"GSSAPI"_s;
     case EnumAuthenticationType::CLEAR:
         return i18nc("Authentication method", "Clear text");
     case EnumAuthenticationType::APOP:
-        return QStringLiteral("APOP");
+        return u"APOP"_s;
     case EnumAuthenticationType::ANONYMOUS:
         return i18nc("Authentication method", "Anonymous");
     case EnumAuthenticationType::XOAUTH2:
-        return QStringLiteral("XOAUTH2");
+        return u"XOAUTH2"_s;
     }
     Q_ASSERT(false);
     return {};

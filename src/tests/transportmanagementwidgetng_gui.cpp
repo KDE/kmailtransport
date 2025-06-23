@@ -5,13 +5,15 @@
 */
 
 #include "widgets/transportmanagementwidgetng.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include <QApplication>
 #include <QStandardPaths>
 
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
-    app.setApplicationName(QStringLiteral("transportmanagementwidgetng"));
+    app.setApplicationName(u"transportmanagementwidgetng"_s);
     QStandardPaths::setTestModeEnabled(true);
     auto t = new MailTransport::TransportManagementWidgetNg();
     t->show();

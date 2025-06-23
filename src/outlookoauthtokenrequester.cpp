@@ -5,6 +5,8 @@
 */
 
 #include "outlookoauthtokenrequester.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "mailtransport_debug.h"
 
 #include <QCryptographicHash>
@@ -135,22 +137,22 @@ void OutlookOAuthTokenRequester::requestToken(const QString &usernameHint)
 
     auto redirectUri = startLocalHttpServer();
     if (!redirectUri.has_value()) {
-        Q_EMIT finished({TokenResult::InternalError, QStringLiteral("Failed to start local HTTP server to receive Outlook OAuth2 authorization code")});
+        Q_EMIT finished({TokenResult::InternalError, u"Failed to start local HTTP server to receive Outlook OAuth2 authorization code"_s});
     }
     mRedirectUri = *redirectUri;
 
-    QUrl url(QStringLiteral("https://login.microsoftonline.com/%1/oauth2/v2.0/authorize").arg(mTenantId));
-    QUrlQuery query{{QStringLiteral("client_id"), mClientId},
-                    {QStringLiteral("redirect_uri"), mRedirectUri.toString()},
-                    {QStringLiteral("response_type"), QStringLiteral("code")},
-                    {QStringLiteral("response_mode"), QStringLiteral("query")},
-                    {QStringLiteral("scope"), mScopes.join(u' ')},
-                    {QStringLiteral("code_challenge"), mPkce->challenge()},
-                    {QStringLiteral("code_challenge_method"), QStringLiteral("S256")}};
+    QUrl url(u"https://login.microsoftonline.com/%1/oauth2/v2.0/authorize"_s.arg(mTenantId));
+    QUrlQuery query{{u"client_id"_s, mClientId},
+                    {u"redirect_uri"_s, mRedirectUri.toString()},
+                    {u"response_type"_s, u"code"_s},
+                    {u"response_mode"_s, u"query"_s},
+                    {u"scope"_s, mScopes.join(u' ')},
+                    {u"code_challenge"_s, mPkce->challenge()},
+                    {u"code_challenge_method"_s, u"S256"_s}};
     if (!usernameHint.isEmpty()) {
-        query.addQueryItem(QStringLiteral("login_hint"), usernameHint);
+        query.addQueryItem(u"login_hint"_s, usernameHint);
     } else {
-        query.addQueryItem(QStringLiteral("prompt"), QStringLiteral("select_account"));
+        query.addQueryItem(u"prompt"_s, u"select_account"_s);
     }
     url.setQuery(query);
 
@@ -162,18 +164,16 @@ void OutlookOAuthTokenRequester::refreshToken(const QString &refreshToken)
 {
     qCDebug(MAILTRANSPORT_LOG) << "Refreshing Outlook OAuth2 access token";
 
-    QUrl url(QStringLiteral("https://login.microsoftonline.com/%1/oauth2/v2.0/token").arg(mTenantId));
+    QUrl url(u"https://login.microsoftonline.com/%1/oauth2/v2.0/token"_s.arg(mTenantId));
 
     QNetworkRequest request{url};
-    request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
+    request.setHeader(QNetworkRequest::ContentTypeHeader, u"application/x-www-form-urlencoded"_s);
     mNam = std::make_unique<QNetworkAccessManager>();
-    auto *reply = mNam->post(request,
-                             QUrlQuery{{QStringLiteral("client_id"), mClientId},
-                                       {QStringLiteral("grant_type"), QStringLiteral("refresh_token")},
-                                       {QStringLiteral("scope"), mScopes.join(u' ')},
-                                       {QStringLiteral("refresh_token"), refreshToken}}
-                                 .toString(QUrl::FullyEncoded)
-                                 .toUtf8());
+    auto *reply = mNam->post(
+        request,
+        QUrlQuery{{u"client_id"_s, mClientId}, {u"grant_type"_s, u"refresh_token"_s}, {u"scope"_s, mScopes.join(u' ')}, {u"refresh_token"_s, refreshToken}}
+            .toString(QUrl::FullyEncoded)
+            .toUtf8());
     connect(reply, &QNetworkReply::finished, this, [this, reply]() {
         handleTokenResponse(reply, true);
     });
@@ -188,7 +188,7 @@ std::optional<QUrl> OutlookOAuthTokenRequester::startLocalHttpServer()
     }
     qCDebug(MAILTRANSPORT_LOG) << "Local Outlook OAuth2 server listening on port" << mHttpServer->serverPort();
 
-    return QUrl(QStringLiteral("http://localhost:%1").arg(mHttpServer->serverPort()));
+    return QUrl(u"http://localhost:%1"_s.arg(mHttpServer->serverPort()));
 }
 
 void OutlookOAuthTokenRequester::handleNewConnection()
@@ -206,7 +206,7 @@ void OutlookOAuthTokenRequester::handleSocketReadyRead()
     sendResponseToBrowserAndCloseSocket();
 
     if (!request.startsWith("GET /?") && !request.endsWith("HTTP/1.1")) {
-        Q_EMIT finished({TokenResult::InvalidAuthorizationResponse, QStringLiteral("Invalid authorization response from server")});
+        Q_EMIT finished({TokenResult::InvalidAuthorizationResponse, u"Invalid authorization response from server"_s});
         return;
     }
 
@@ -220,24 +220,24 @@ void OutlookOAuthTokenRequester::handleSocketReadyRead()
     QUrl url(QString::fromUtf8(request));
     if (!url.isValid()) {
         qCWarning(MAILTRANSPORT_LOG) << "Failed to extract valid URL from initial HTTP request line from Outlook OAuth2:" << request;
-        Q_EMIT finished({TokenResult::InvalidAuthorizationResponse, QStringLiteral("Invalid authorization response from server")});
+        Q_EMIT finished({TokenResult::InvalidAuthorizationResponse, u"Invalid authorization response from server"_s});
         return;
     }
 
     // Extract code
     const QUrlQuery query(url);
-    if (query.hasQueryItem(QStringLiteral("error"))) {
-        const auto error = query.queryItemValue(QStringLiteral("error"));
-        const auto errorDescription = query.queryItemValue(QStringLiteral("error_description"));
+    if (query.hasQueryItem(u"error"_s)) {
+        const auto error = query.queryItemValue(u"error"_s);
+        const auto errorDescription = query.queryItemValue(u"error_description"_s);
         qCWarning(MAILTRANSPORT_LOG) << "Authorization server returned error:" << error << errorDescription;
         Q_EMIT finished({TokenResult::AuthorizationFailed, errorDescription});
         return;
     }
 
-    const auto code = query.queryItemValue(QStringLiteral("code"));
+    const auto code = query.queryItemValue(u"code"_s);
     if (code.isEmpty()) {
         qCWarning(MAILTRANSPORT_LOG) << "Failed to extract authorization code from Outlook OAuth2 response:" << request;
-        Q_EMIT finished({TokenResult::InvalidAuthorizationResponse, QStringLiteral("Invalid authorization response from server")});
+        Q_EMIT finished({TokenResult::InvalidAuthorizationResponse, u"Invalid authorization response from server"_s});
         return;
     }
 
@@ -247,18 +247,18 @@ void OutlookOAuthTokenRequester::handleSocketReadyRead()
 
 void OutlookOAuthTokenRequester::requestIdToken(const QString &code)
 {
-    QUrl url(QStringLiteral("https://login.microsoftonline.com/%1/oauth2/v2.0/token").arg(mTenantId));
+    QUrl url(u"https://login.microsoftonline.com/%1/oauth2/v2.0/token"_s.arg(mTenantId));
 
     QNetworkRequest request{url};
-    request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
+    request.setHeader(QNetworkRequest::ContentTypeHeader, u"application/x-www-form-urlencoded"_s);
     mNam = std::make_unique<QNetworkAccessManager>();
     auto *reply = mNam->post(request,
-                             QUrlQuery{{QStringLiteral("client_id"), mClientId},
-                                       {QStringLiteral("scope"), mScopes.join(u' ')},
-                                       {QStringLiteral("code"), code},
-                                       {QStringLiteral("redirect_uri"), mRedirectUri.toString()},
-                                       {QStringLiteral("grant_type"), QStringLiteral("authorization_code")},
-                                       {QStringLiteral("code_verifier"), mPkce->verifier()}}
+                             QUrlQuery{{u"client_id"_s, mClientId},
+                                       {u"scope"_s, mScopes.join(u' ')},
+                                       {u"code"_s, code},
+                                       {u"redirect_uri"_s, mRedirectUri.toString()},
+                                       {u"grant_type"_s, u"authorization_code"_s},
+                                       {u"code_verifier"_s, mPkce->verifier()}}
                                  .toString(QUrl::FullyEncoded)
                                  .toUtf8());
     connect(reply, &QNetworkReply::finished, this, [this, reply]() {
@@ -275,7 +275,7 @@ void OutlookOAuthTokenRequester::handleTokenResponse(QNetworkReply *reply, bool 
     const auto response = QJsonDocument::fromJson(responseData);
     if (!response.isObject()) {
         qCWarning(MAILTRANSPORT_LOG) << "Failed to parse token response:" << responseData;
-        Q_EMIT finished({TokenResult::InvalidAuthorizationResponse, QStringLiteral("Failed to parse token response")});
+        Q_EMIT finished({TokenResult::InvalidAuthorizationResponse, u"Failed to parse token response"_s});
         return;
     }
 

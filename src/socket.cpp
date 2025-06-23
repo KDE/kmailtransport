@@ -92,7 +92,7 @@ void SocketPrivate::slotSocketRead()
 
     m_msg += QLatin1StringView(socket->readAll());
 
-    if (!m_msg.endsWith(QLatin1Char('\n'))) {
+    if (!m_msg.endsWith(u'\n')) {
         return;
     }
 

@@ -5,6 +5,8 @@
 */
 
 #include "transportmodel.h"
+using namespace Qt::Literals::StringLiterals;
+
 #include "mailtransport_debug.h"
 #include "transportmanager.h"
 #include <KLocalizedString>
@@ -60,7 +62,7 @@ QString TransportModel::generateTransportName(Transport *t) const
 {
     QString str = t->name();
     if (mShowDefault && TransportManager::self()->defaultTransportId() == t->id()) {
-        str += QLatin1Char(' ') + i18nc("Default transport", " (default)");
+        str += u' ' + i18nc("Default transport", " (default)");
     }
     return str;
 }
