@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-17 00:41+0000\n"
+"POT-Creation-Date: 2025-06-24 00:43+0000\n"
 "PO-Revision-Date: 2024-11-27 07:51+0100\n"
 "Last-Translator: Matjaž Jeran <matjaz.jeran@amis.net>\n"
 "Language-Team: Slovenian <lugos-slo@lugos.si>\n"
@@ -271,24 +271,24 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Preverjanje zmožnosti ni uspelo"
 
-#: plugins/smtp/smtpjob.cpp:227
+#: plugins/smtp/smtpjob.cpp:229
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
 "Za dostop do tega strežnika morate posredovati uporabniško ime in geslo."
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:27
+#: plugins/smtp/smtpmailtransportplugin.cpp:29
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:28
+#: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "Strežnik SMTP na internetu"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:38
+#: plugins/smtp/smtpmailtransportplugin.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
@@ -459,32 +459,32 @@ msgstr "Predukaz se je sesul."
 msgid "The precommand exited with code %1."
 msgstr "Predukaz je končal s kodo %1."
 
-#: transport.cpp:81
+#: transport.cpp:83
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: transport.cpp:131
+#: transport.cpp:133
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Navadno besedilo"
 
-#: transport.cpp:135
+#: transport.cpp:137
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonimno"
 
-#: transport.cpp:166
+#: transport.cpp:168
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Neznana"
 
-#: transport.cpp:210
+#: transport.cpp:212
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -502,19 +502,19 @@ msgstr ""
 "poskusi dešifriranja, če je pridobljen dostop do nastavitvene datoteke.\n"
 "Ali želite shraniti geslo za strežnik '%1' v nastavitveno datoteko?"
 
-#: transport.cpp:219
+#: transport.cpp:221
 #, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet ni na voljo"
 
-#: transport.cpp:220
+#: transport.cpp:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Shrani geslo"
 
-#: transport.cpp:221
+#: transport.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
@@ -577,19 +577,19 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Ohrani"
 
-#: transportmodel.cpp:63
+#: transportmodel.cpp:65
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (privzeto)"
 
-#: transportmodel.cpp:86
+#: transportmodel.cpp:88
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Ime"
 
-#: transportmodel.cpp:88
+#: transportmodel.cpp:90
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -680,12 +680,12 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Ustvari in nastavi"
 
-#: widgets/transportmanagementwidgetng.cpp:155
+#: widgets/transportmanagementwidgetng.cpp:157
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Ali želite odstraniti račun za pošiljanje »%1«?"
 
-#: widgets/transportmanagementwidgetng.cpp:156
+#: widgets/transportmanagementwidgetng.cpp:158
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
@@ -694,37 +694,37 @@ msgstr[1] "Ali želite odstraniti ta %1 računa za pošiljanje?"
 msgstr[2] "Ali želite odstraniti te %1 račune za pošiljanje?"
 msgstr[3] "Ali želite odstraniti te %1 računa za pošiljanje?"
 
-#: widgets/transportmanagementwidgetng.cpp:159
+#: widgets/transportmanagementwidgetng.cpp:161
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Naj odstranim račun za pošiljanje?"
 
-#: widgets/transportmanagementwidgetng.cpp:189
+#: widgets/transportmanagementwidgetng.cpp:191
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Dodaj…"
 
-#: widgets/transportmanagementwidgetng.cpp:194
+#: widgets/transportmanagementwidgetng.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Spremeni…"
 
-#: widgets/transportmanagementwidgetng.cpp:197
+#: widgets/transportmanagementwidgetng.cpp:199
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Preimenuj"
 
-#: widgets/transportmanagementwidgetng.cpp:201
+#: widgets/transportmanagementwidgetng.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Odstrani"
 
-#: widgets/transportmanagementwidgetng.cpp:207
+#: widgets/transportmanagementwidgetng.cpp:209
 #, kde-format
 msgid "Set as Default"
 msgstr "Nastavi kot privzeto"

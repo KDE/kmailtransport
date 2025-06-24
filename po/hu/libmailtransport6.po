@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-17 00:41+0000\n"
+"POT-Creation-Date: 2025-06-24 00:43+0000\n"
 "PO-Revision-Date: 2025-02-03 21:16+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -273,23 +273,23 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Sikertelen képesség-ellenőrzés"
 
-#: plugins/smtp/smtpjob.cpp:227
+#: plugins/smtp/smtpjob.cpp:229
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "Az SMTP-kiszolgáló eléréséhez név és jelszó megadása szükséges."
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:27
+#: plugins/smtp/smtpmailtransportplugin.cpp:29
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:28
+#: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "Egy SMTP kiszolgáló az interneten"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:38
+#: plugins/smtp/smtpmailtransportplugin.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
@@ -460,32 +460,32 @@ msgstr "Az előparancs lefagyott."
 msgid "The precommand exited with code %1."
 msgstr "Az előparancs befejeződött, kilépési kód: %1"
 
-#: transport.cpp:81
+#: transport.cpp:83
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: transport.cpp:131
+#: transport.cpp:133
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Sima szöveg"
 
-#: transport.cpp:135
+#: transport.cpp:137
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Névtelen"
 
-#: transport.cpp:166
+#: transport.cpp:168
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Ismeretlen"
 
-#: transport.cpp:210
+#: transport.cpp:212
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -504,19 +504,19 @@ msgstr ""
 "El szeretné menteni a(z) „%1” kiszolgáló eléréséhez használt jelszót a "
 "beállítófájlba?"
 
-#: transport.cpp:219
+#: transport.cpp:221
 #, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "A KWallet nem érhető el"
 
-#: transport.cpp:220
+#: transport.cpp:222
 #, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Jelszó mentése"
 
-#: transport.cpp:221
+#: transport.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
@@ -578,19 +578,19 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Megtartás"
 
-#: transportmodel.cpp:63
+#: transportmodel.cpp:65
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (alapértelmezett)"
 
-#: transportmodel.cpp:86
+#: transportmodel.cpp:88
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Név"
 
-#: transportmodel.cpp:88
+#: transportmodel.cpp:90
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -681,49 +681,49 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Létrehozás és beállítás"
 
-#: widgets/transportmanagementwidgetng.cpp:155
+#: widgets/transportmanagementwidgetng.cpp:157
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Szeretné eltávolítani a(z) „%1” kimenő fiókot?"
 
-#: widgets/transportmanagementwidgetng.cpp:156
+#: widgets/transportmanagementwidgetng.cpp:158
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Biztosan el szeretné távolítani ezt a(z) „%1” kimenő fiókot?"
 msgstr[1] "Biztosan el szeretné távolítani ezt a(z) „%1” kimenő fiókot?"
 
-#: widgets/transportmanagementwidgetng.cpp:159
+#: widgets/transportmanagementwidgetng.cpp:161
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Kimenő fiók eltávolítása?"
 
-#: widgets/transportmanagementwidgetng.cpp:189
+#: widgets/transportmanagementwidgetng.cpp:191
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Hozzáadás…"
 
-#: widgets/transportmanagementwidgetng.cpp:194
+#: widgets/transportmanagementwidgetng.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Módosítás…"
 
-#: widgets/transportmanagementwidgetng.cpp:197
+#: widgets/transportmanagementwidgetng.cpp:199
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Átnevezés"
 
-#: widgets/transportmanagementwidgetng.cpp:201
+#: widgets/transportmanagementwidgetng.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Eltávolítás"
 
-#: widgets/transportmanagementwidgetng.cpp:207
+#: widgets/transportmanagementwidgetng.cpp:209
 #, kde-format
 msgid "Set as Default"
 msgstr "Beállítás alapértelmezettként"

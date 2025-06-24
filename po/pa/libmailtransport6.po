@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-04-17 00:41+0000\n"
+"POT-Creation-Date: 2025-06-24 00:43+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -253,23 +253,23 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr ""
 
-#: plugins/smtp/smtpjob.cpp:227
+#: plugins/smtp/smtpjob.cpp:229
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "ਤੁਹਾਨੂੰ ਇਸ SMTP ਸਰਵਰ ਲਈ ਇੱਕ ਯੂਜ਼ਰ ਨਾਂ ਅਤੇ ਪਾਸਵਰਡ ਦੇਣ ਦੀ ਲੋੜ ਹੈ।"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:27
+#: plugins/smtp/smtpmailtransportplugin.cpp:29
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:28
+#: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "ਇੰਟਰਨੈੱਟ ਉੱਤੇ SMTP ਸਰਵਰ"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:38
+#: plugins/smtp/smtpmailtransportplugin.cpp:40
 #, fuzzy, kde-format
 #| msgid "Configure account"
 msgctxt "@title:window"
@@ -447,32 +447,32 @@ msgstr "ਪ੍ਰੀ-ਕਮਾਂਡ ਕਰੈਸ਼ ਹੋਈ।"
 msgid "The precommand exited with code %1."
 msgstr "ਪ੍ਰੀ-ਕਮਾਂਡ ਕੋਡ %1 ਨਾਲ ਬੰਦ ਹੋਈ।"
 
-#: transport.cpp:81
+#: transport.cpp:83
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: transport.cpp:131
+#: transport.cpp:133
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr ""
 
-#: transport.cpp:135
+#: transport.cpp:137
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr ""
 
-#: transport.cpp:166
+#: transport.cpp:168
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "ਅਣਜਾਣ"
 
-#: transport.cpp:210
+#: transport.cpp:212
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -484,21 +484,21 @@ msgid ""
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
 
-#: transport.cpp:219
+#: transport.cpp:221
 #, fuzzy, kde-format
 #| msgid "KWallet Not Available"
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "ਕੇ-ਵਾਲਿਟ ਉਪਲੱਬਧ ਨਹੀਂ"
 
-#: transport.cpp:220
+#: transport.cpp:222
 #, fuzzy, kde-format
 #| msgid "Store Password"
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "ਪਾਸਵਰਡ ਸੰਭਾਲੋ"
 
-#: transport.cpp:221
+#: transport.cpp:223
 #, fuzzy, kde-format
 #| msgid "Do Not Store Password"
 msgctxt "@action:button"
@@ -562,7 +562,7 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "ਰੱਖੋ"
 
-#: transportmodel.cpp:63
+#: transportmodel.cpp:65
 #, fuzzy, kde-format
 #| msgctxt "@label the default mail transport"
 #| msgid " (Default)"
@@ -570,13 +570,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (ਡਿਫਾਲਟ)"
 
-#: transportmodel.cpp:86
+#: transportmodel.cpp:88
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "ਨਾਂ"
 
-#: transportmodel.cpp:88
+#: transportmodel.cpp:90
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -670,53 +670,53 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "ਬਣਾਏ ਅਤੇ ਸੰਰਚਨਾ"
 
-#: widgets/transportmanagementwidgetng.cpp:155
+#: widgets/transportmanagementwidgetng.cpp:157
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:156
+#: widgets/transportmanagementwidgetng.cpp:158
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 msgstr[1] ""
 
-#: widgets/transportmanagementwidgetng.cpp:159
+#: widgets/transportmanagementwidgetng.cpp:161
 #, fuzzy, kde-format
 #| msgid "Create Outgoing Account"
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "ਬਾਹਰ ਭੇਜਣ ਅਕਾਊਂਟ ਬਣਾਓ"
 
-#: widgets/transportmanagementwidgetng.cpp:189
+#: widgets/transportmanagementwidgetng.cpp:191
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:194
+#: widgets/transportmanagementwidgetng.cpp:196
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "ਸੋਧ(&M)..."
 
-#: widgets/transportmanagementwidgetng.cpp:197
+#: widgets/transportmanagementwidgetng.cpp:199
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
-#: widgets/transportmanagementwidgetng.cpp:201
+#: widgets/transportmanagementwidgetng.cpp:203
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "ਹਟਾਓ(&v)"
 
-#: widgets/transportmanagementwidgetng.cpp:207
+#: widgets/transportmanagementwidgetng.cpp:209
 #, fuzzy, kde-format
 #| msgid "&Set as Default"
 msgid "Set as Default"
