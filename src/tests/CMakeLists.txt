@@ -1,6 +1,10 @@
 include(ECMMarkAsTest)
 
-add_executable(transportmgr transportmgr.cpp transportmgr.h)
+add_executable(
+    transportmgr
+    transportmgr.cpp
+    transportmgr.h
+)
 ecm_mark_as_test(transportmgr)
 target_link_libraries(
     transportmgr
@@ -60,10 +64,7 @@ target_link_libraries(
 )
 
 ####
-add_executable(
-    transportmanagementwidgetng_gui
-    transportmanagementwidgetng_gui.cpp
-)
+add_executable(transportmanagementwidgetng_gui transportmanagementwidgetng_gui.cpp)
 ecm_mark_as_test(transportmanagementwidgetng_gui)
 target_link_libraries(
     transportmanagementwidgetng_gui
