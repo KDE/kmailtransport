@@ -219,7 +219,7 @@ msgid ""
 "Enter the address that should be used to overwrite the default sender "
 "address."
 msgstr ""
-"შეიყვანეთ მისამართი, რომელიც ნაგულისხმები გამგზავნის მისამართზე გადასაწერად "
+"შეიყვანეთ მისამართი, რომელიც ნაგულისხმევი გამგზავნის მისამართზე გადასაწერად "
 "იქნება გამოყენებული."
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
@@ -658,7 +658,7 @@ msgstr "&გადარქმევა"
 #: ui/transportmanagementwidgetng.ui:76
 #, kde-format
 msgid "&Set as Default"
-msgstr "ნაგულისხმებად &დაყენება"
+msgstr "ნაგულისხმევად &დაყენება"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
@@ -723,7 +723,7 @@ msgstr "წაშლა"
 #: widgets/transportmanagementwidgetng.cpp:209
 #, kde-format
 msgid "Set as Default"
-msgstr "ნაგულისხმებად დაყენება"
+msgstr "ნაგულისხმევად დაყენება"
 
 #~ msgid "A&dd..."
 #~ msgstr "&დამატება…"
@@ -733,7 +733,7 @@ msgstr "ნაგულისხმებად დაყენება"
 
 #~ msgctxt "@label the default mail transport"
 #~ msgid " (Default)"
-#~ msgstr " (ნაგულისხმები)"
+#~ msgstr " (ნაგულისხმევი)"
 
 #~ msgctxt "@action:inmenu"
 #~ msgid "Add..."
@@ -746,7 +746,7 @@ msgstr "ნაგულისხმებად დაყენება"
 #~ msgstr "პრე-ბრძანების შესრულება"
 
 #~ msgid "Default Transport"
-#~ msgstr "ნაგულისხმები ტრანსპორტი"
+#~ msgstr "ნაგულისხმევი ტრანსპორტი"
 
 #~ msgid "Empty message."
 #~ msgstr "შეტყობინება ცარიელია."
