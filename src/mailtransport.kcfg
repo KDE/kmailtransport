@@ -32,8 +32,8 @@
     </entry>
     <entry name="port" type="UInt">
       <label>Port number of the server</label>
-      <whatsthis>The port number that the SMTP server is listening on. The default port is 587.</whatsthis>
-      <default>587</default>
+      <whatsthis>The port number that the SMTP server is listening on. The default port is 465.</whatsthis>
+      <default>465</default>
     </entry>
     <entry name="userName" type="String" key="user">
       <label>User name needed for login</label>
