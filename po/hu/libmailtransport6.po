@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: KDE 4.3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:43+0000\n"
+"POT-Creation-Date: 2025-07-31 00:43+0000\n"
 "PO-Revision-Date: 2025-02-03 21:16+0100\n"
 "Last-Translator: Kristof Kiszel <ulysses@fsf.hu>\n"
 "Language-Team: Hungarian <kde-l10n-hu@kde.org>\n"
@@ -63,10 +63,13 @@ msgstr "Port"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The port number that the SMTP server is listening on. The default port is "
+#| "587."
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
-"587."
+"465."
 msgstr ""
 "Ezen a TCP-porton kommunikál az SMTP-kiszolgáló. Alapértelmezett értéke 587."
 

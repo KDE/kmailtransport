@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:43+0000\n"
+"POT-Creation-Date: 2025-07-31 00:43+0000\n"
 "PO-Revision-Date: 2024-11-27 08:28+0200\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -61,10 +61,13 @@ msgstr "מספר פתחת השרת"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, kde-format
+#, fuzzy, kde-format
+#| msgid ""
+#| "The port number that the SMTP server is listening on. The default port is "
+#| "587."
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
-"587."
+"465."
 msgstr "מספר הפתחה לה מאזין שרת ה־SMTP. פתחת ברירת המחדל היא 587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))

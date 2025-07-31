@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-06-24 00:43+0000\n"
+"POT-Creation-Date: 2025-07-31 00:43+0000\n"
 "PO-Revision-Date: 2010-02-28 18:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -67,7 +67,7 @@ msgstr "หมายเลขพอร์ตของเซิร์ฟเวอ
 #| "25."
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
-"587."
+"465."
 msgstr "หมายเลขพอร์ทที่เซิร์ฟเวอร์ SMTP รอรับการเชื่อมต่ออยู่ ค่าปริยายคือพอร์ตหมายเลข 25"
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
