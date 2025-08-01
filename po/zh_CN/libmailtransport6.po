@@ -60,14 +60,11 @@ msgstr "服务器的端口号码"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "587."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "465."
-msgstr "SMTP 服务器监听的端口号。默认端口是 587。"
+msgstr ""
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
