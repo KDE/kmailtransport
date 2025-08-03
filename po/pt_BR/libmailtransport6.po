@@ -11,7 +11,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-31 00:43+0000\n"
-"PO-Revision-Date: 2025-07-23 18:35-0300\n"
+"PO-Revision-Date: 2025-08-02 09:31-0300\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Brazilian Portuguese <kde-i18n-pt_BR@kde.org>\n"
 "Language: pt_BR\n"
@@ -64,15 +64,12 @@ msgstr "Número da porta do servidor"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "587."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "465."
 msgstr ""
-"O número da porta que o servidor SMTP está escutando. A porta padrão é a 587."
+"O número da porta que o servidor SMTP está escutando. A porta padrão é a 465."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
