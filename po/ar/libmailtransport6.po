@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:43+0000\n"
-"PO-Revision-Date: 2025-08-03 15:50+0400\n"
+"PO-Revision-Date: 2025-08-04 15:16+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -67,7 +67,7 @@ msgstr "رقم منفذ الخادم"
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "587."
-msgstr "رقم المنفذ اللذي يستمع له خادم SMTP. المنفذ الافتراضي رقمه 587."
+msgstr "رقم المنفذ اللذي يستمع له خادم SMTP. المنفذ المبدئي رقمه 587."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
@@ -217,7 +217,7 @@ msgstr ""
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
 "address."
-msgstr "أدخل العنوان الذي يجب استخدامه لإعادة كتابة عنوان المرسل الافتراضي."
+msgstr "أدخل العنوان الذي يجب استخدامه لإعادة كتابة عنوان المرسل المبدئي."
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
@@ -649,7 +649,7 @@ msgstr "&غيّر الاسم"
 #: ui/transportmanagementwidgetng.ui:76
 #, kde-format
 msgid "&Set as Default"
-msgstr "اج&علها الافتراضية"
+msgstr "اج&علها المبدئية"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
