@@ -123,7 +123,7 @@ msgstr ""
 #: mailtransport.kcfg:55
 #, kde-format
 msgid "Store password"
-msgstr "خزّن كلمة السّرّ"
+msgstr "خزّن كلمة السر"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:58
@@ -319,7 +319,7 @@ msgstr "&لِج:"
 #: plugins/smtp/smtpsettings.ui:106
 #, kde-format
 msgid "P&assword:"
-msgstr "&كلمة السّرّ:"
+msgstr "&كلمة السر:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_storePassword)
 #: plugins/smtp/smtpsettings.ui:129
@@ -502,7 +502,7 @@ msgstr "برنامج KWallet غير متوفر"
 #, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
-msgstr "خزّن كلمة السّرّ"
+msgstr "خزّن كلمة السر"
 
 #: transport.cpp:223
 #, kde-format
