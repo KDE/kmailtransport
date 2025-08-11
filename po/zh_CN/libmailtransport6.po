@@ -544,19 +544,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
-msgstr ""
+msgstr "问题"
 
 #: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
-msgstr ""
+msgstr "迁移"
 
 #: transportmanager.cpp:616
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"
-msgstr ""
+msgstr "保持"
 
 #: transportmodel.cpp:65
 #, kde-format
