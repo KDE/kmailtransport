@@ -64,7 +64,7 @@ msgstr "服务器的端口号码"
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "465."
-msgstr ""
+msgstr "SMTP 服务器监听的端口号。默认端口是 465。"
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
@@ -544,19 +544,19 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
-msgstr ""
+msgstr "问题"
 
 #: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
-msgstr ""
+msgstr "迁移"
 
 #: transportmanager.cpp:616
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"
-msgstr ""
+msgstr "保持"
 
 #: transportmodel.cpp:65
 #, kde-format
