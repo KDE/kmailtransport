@@ -37,7 +37,7 @@ QString pluginVersion()
 class MailTransport::TransportPluginManagerPrivate
 {
 public:
-    TransportPluginManagerPrivate(TransportPluginManager *qq)
+    explicit TransportPluginManagerPrivate(TransportPluginManager *qq)
         : q(qq)
     {
         initializePlugins();

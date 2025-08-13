@@ -225,7 +225,7 @@ void SMTPConfigWidget::checkSmtpCapabilities()
     if (d->ui.kcfg_specifyHostname->isChecked()) {
         d->serverTest->setFakeHostname(d->ui.kcfg_localHostname->text());
     }
-    QAbstractButton *encryptionChecked = d->encryptionGroup->checkedButton();
+    const QAbstractButton *encryptionChecked = d->encryptionGroup->checkedButton();
     if (encryptionChecked == d->ui.encryptionNone) {
         d->serverTest->setPort(Transport::EnumEncryption::None, d->ui.kcfg_port->value());
     } else if (encryptionChecked == d->ui.encryptionSsl) {

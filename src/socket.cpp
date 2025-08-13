@@ -24,7 +24,7 @@ namespace MailTransport
 class SocketPrivate
 {
 public:
-    SocketPrivate(Socket *s);
+    explicit SocketPrivate(Socket *s);
     Socket *const q;
     QSslSocket *socket = nullptr;
     QString server;
