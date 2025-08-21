@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-06-24 00:43+0000\n"
-"PO-Revision-Date: 2025-08-14 09:25+0400\n"
+"PO-Revision-Date: 2025-08-20 20:56+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
 "Language: ar\n"
@@ -116,8 +116,8 @@ msgid ""
 "Check this option if your SMTP server requires authentication before "
 "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
 msgstr ""
-"تحقق من هذا الخيار إذا كان خادم SMTP الخاص بك يتطلب المصادقة قبل قبول "
-"البريد. يُعرف هذا باسم \"SMTP المصادق عليه\" أو ببساطة ASMTP."
+"تحقق من هذا الخيار إذا كان خادم SMTP الخاص بك يتطلب استيثاق قبل قبول البريد. "
+"يُعرف هذا باسم \"SMTP المتوثق منه\" أو ببساطة ASMTP."
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:55
@@ -232,7 +232,7 @@ msgstr "اتّصل مستخدمًا إعدادات وكيل النظام"
 msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
 "server."
-msgstr "إن أُشّر عليه فستُستخدم إعدادات وكيل النظام للاتصال بخادوم البريد."
+msgstr "إن أُشّر عليه فستُستخدم إعدادات وكيل النظام للاتصال بخادم البريد."
 
 #: plugins/smtp/smtpconfigwidget.cpp:151
 #, kde-format
@@ -254,7 +254,7 @@ msgstr "الأنشطة"
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
-msgstr "فشل في التحقق من القدرات. يرجى التحقق من وضع المنفذ ووضع المصادقة."
+msgstr "فشل في التحقق من القدرات. يرجى التحقق من وضع المنفذ ووضع الاستيثاق."
 
 #: plugins/smtp/smtpconfigwidget.cpp:307
 #, kde-format
@@ -301,7 +301,7 @@ msgstr "معلومات الحساب"
 #: plugins/smtp/smtpsettings.ui:50
 #, kde-format
 msgid "Outgoing &mail server:"
-msgstr "خادوم البريد ال&صادر:"
+msgstr "خادم البريد ال&صادر:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
 #: plugins/smtp/smtpsettings.ui:70
