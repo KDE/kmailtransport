@@ -11,14 +11,14 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2025-07-31 00:43+0000\n"
-"PO-Revision-Date: 2025-01-28 11:41+0200\n"
+"PO-Revision-Date: 2025-08-21 12:58+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
 "Language: lv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 24.12.1\n"
+"X-Generator: Lokalize 25.08.0\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n != 0 ? 1 : "
 "2);\n"
 
@@ -65,14 +65,11 @@ msgstr "Servera porta numurs"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "587."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "465."
-msgstr "Porta numurs, ko klausās SMTP serveris. Noklusētais ir 587."
+msgstr "Porta numurs, ko klausās SMTP serveris. Noklusējuma ports ir 465."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
@@ -615,7 +612,7 @@ msgstr "Nosaukums:"
 #: ui/addtransportdialog.ui:48
 #, kde-format
 msgid "Make this the default outgoing account"
-msgstr "Padarīt šo par noklusēto izejošo vēstuļu kontu."
+msgstr "Padarīt šo par noklusējuma izejošo vēstuļu kontu."
 
 #. i18n: ectx: property (text), widget (QLabel, descLabel)
 #: ui/addtransportdialog.ui:61
@@ -663,7 +660,7 @@ msgstr "Pā&rdēvēt:"
 #: ui/transportmanagementwidgetng.ui:76
 #, kde-format
 msgid "&Set as Default"
-msgstr "&Iestatīt par noklusēto"
+msgstr "&Iestatīt par noklusējuma"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
@@ -729,7 +726,7 @@ msgstr "Noņemt"
 #: widgets/transportmanagementwidgetng.cpp:209
 #, kde-format
 msgid "Set as Default"
-msgstr "Iestatīt par noklusēto"
+msgstr "Iestatīt par noklusējumu"
 
 #~ msgid "A&dd..."
 #~ msgstr "&Pievienot..."
