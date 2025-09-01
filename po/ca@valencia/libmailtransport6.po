@@ -631,7 +631,7 @@ msgstr "Fes que este siga el compte eixint predeterminat"
 #: ui/addtransportdialog.ui:61
 #, kde-format
 msgid "Select an account type from the list below:"
-msgstr "Seleccioneu un tipus de compte de la llista de baix:"
+msgstr "Trieu un tipus de compte de la llista de baix:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: ui/addtransportdialog.ui:81
