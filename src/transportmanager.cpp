@@ -17,7 +17,6 @@ using namespace Qt::Literals::StringLiterals;
 #include "widgets/addtransportdialogng.h"
 #include <MailTransport/TransportAbstractPlugin>
 
-#include <QApplication>
 #include <QDBusConnection>
 #include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>

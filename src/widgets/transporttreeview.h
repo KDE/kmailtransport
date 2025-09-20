@@ -7,7 +7,6 @@
 
 #include "kmailtransport_private_export.h"
 #include <QTreeView>
-#include <QTreeWidgetItem>
 
 namespace MailTransport
 {
