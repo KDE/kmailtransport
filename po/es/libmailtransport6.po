@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2025-08-01 00:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -283,7 +283,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "La comprobación de capacidades ha fallado"
 
-#: plugins/smtp/smtpjob.cpp:229
+#: plugins/smtp/smtpjob.cpp:228
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
@@ -540,24 +540,24 @@ msgstr "No guardar contraseña"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "La cuenta de correo saliente «%1» no está correctamente configurada."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Debe crear una cuenta saliente antes de realizar un envío."
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "¿Crear cuenta ahora?"
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Crear cuenta ahora"
 
-#: transportmanager.cpp:607
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -574,19 +574,19 @@ msgstr ""
 "que almacena datos sensibles en un archivo fuertemente cifrado.\n"
 "¿ Desea migrar sus contraseñas a KWallet?"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:613
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Pregunta"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Migrar"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"

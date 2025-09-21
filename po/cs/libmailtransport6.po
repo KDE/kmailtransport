@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2024-09-17 13:44+0200\n"
 "Last-Translator: Vit Pelcak <vit@pelcak.org>\n"
 "Language-Team: Czech <kde-i18n-doc@kde.org>\n"
@@ -268,7 +268,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Kontrola schopností selhala"
 
-#: plugins/smtp/smtpjob.cpp:229
+#: plugins/smtp/smtpjob.cpp:228
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
@@ -522,24 +522,24 @@ msgstr "Neukládat heslo"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Odchozí účet \"%1\" není správně nastaven."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Před odesláním musíte vytvořit účet pro odesílání."
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Nyní vytvořit účet?"
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Nyní vytvořit účet"
 
-#: transportmanager.cpp:607
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -555,19 +555,19 @@ msgstr ""
 "data do zašifrovaného úložiště.\n"
 "Přejete si převést hesla do úschovny?"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:613
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Otázka"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Převést"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"

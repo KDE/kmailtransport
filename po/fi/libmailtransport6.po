@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2024-12-07 15:11+0200\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -274,7 +274,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Ominaisuuksien tarkistaminen epäonnistui"
 
-#: plugins/smtp/smtpjob.cpp:229
+#: plugins/smtp/smtpjob.cpp:228
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "Anna käyttäjätunnus ja salasana käyttääksesi tätä SMTP-palvelinta."
@@ -527,24 +527,24 @@ msgstr "Älä talleta salasanaa"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Lähetystilin ”%1” asetuksia ei voi muokata."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Ennen lähettämistä sinun on luotava lähtevä tili."
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Luodaanko tili nyt?"
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Luo tili nyt"
 
-#: transportmanager.cpp:607
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -561,19 +561,19 @@ msgstr ""
 "joka tallettaa yksityiset tietosi vahvasti salattuun tiedostoon.\n"
 "Haluatko siirtää salasanasi KWalletiin?"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:613
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Kysymys"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Siirrä"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"

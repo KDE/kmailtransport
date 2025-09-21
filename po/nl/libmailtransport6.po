@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2025-07-31 13:49+0200\n"
 "Last-Translator: Freek de Kruijf <freekdekruijf@kde.nl>\n"
 "Language-Team: \n"
@@ -279,7 +279,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Mogelijkheden controleren is mislukt"
 
-#: plugins/smtp/smtpjob.cpp:229
+#: plugins/smtp/smtpjob.cpp:228
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
@@ -535,24 +535,24 @@ msgstr "Wachtwoord niet opslaan"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Het uitgaande account \"%1\" is niet juist ingesteld."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "U dient een uitgaand account in te stellen voor het verzenden."
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Account nu aanmaken?"
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Account nu aanmaken"
 
-#: transportmanager.cpp:607
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -569,19 +569,19 @@ msgstr ""
 "die gevoelige gegevens in een sterk versleuteld bestand opstaat.\n"
 "Wilt u uw wachtwoorden overplaatsen naar KWallet?"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:613
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Vraag"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Overplaatsen"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"

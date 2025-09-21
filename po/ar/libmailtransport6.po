@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2025-08-20 20:56+0400\n"
 "Last-Translator: Zayed Al-Saidi <zayed.alsaidi@gmail.com>\n"
 "Language-Team: ar\n"
@@ -262,7 +262,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "فشل التحقق من الإمكانيات"
 
-#: plugins/smtp/smtpjob.cpp:229
+#: plugins/smtp/smtpjob.cpp:228
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "أنت تحتاج إلى اسم مستخدم وكلمة سر لاستخدام هذا الخادم SMTP."
@@ -515,24 +515,24 @@ msgstr "لا تحفظ كلمة السر"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "لم يضبط حساب الصادر \"%1\" بشكل صحيح."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "يجب عليك إنشاء حساب صادر قبل الإرسال."
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "أنشئ حسابًا الآن؟"
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "أنشئ حسابًا الآن"
 
-#: transportmanager.cpp:607
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -547,19 +547,19 @@ msgstr ""
 "إدارة محفظة كِيدِي، التي تخزن البيانات الحساسة لك في ملف معمى بقوة. \n"
 "هل تريد ترحيل كلمات السر الخاصة بك إلى حافظتك Kwallet؟"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:613
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "سؤال"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "رحّل"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"

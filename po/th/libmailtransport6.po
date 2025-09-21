@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2010-02-28 18:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -306,7 +306,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr ""
 
-#: plugins/smtp/smtpjob.cpp:229
+#: plugins/smtp/smtpjob.cpp:228
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "คุณต้องป้อนชื่อผู้ใช้และรหัสผ่านเพื่อใช้งานเซิร์ฟเวอร์ SMTP นี้"
@@ -581,26 +581,26 @@ msgstr "ไม่ต้องจัดเก็บรหัสผ่าน"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "บริการจัดส่งจดหมาย \"%1\" ถูกปรับแต่งค่าไว้อย่างไม่ถูกต้อง"
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "คุณต้องสร้างบัญชีผู้ใช้สำหรับจัดส่งจดหมายก่อน จึงจะทำการส่งได้"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, fuzzy, kde-format
 #| msgid "Create Account Now?"
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "จะสร้างบัญชีผู้ใช้งานเดี๋ยวนี้หรือไม่ ?"
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, fuzzy, kde-format
 #| msgid "Create Account Now"
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "สร้างบัญชีผู้ใช้งานเดี๋ยวนี้"
 
-#: transportmanager.cpp:607
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -618,21 +618,21 @@ msgstr ""
 "ซึ่งจะมีการจัดเก็บข้อมูลในรูปแบบแฟ้มเข้ารหัสที่แข็งแกร่งมาก\n"
 "คุณต้องการจะทำการผนวกรวมรหัสผ่านของคุณเข้าไปยังระบบกระเป๋าคุมข้อมูล-K หรือไม่ ?"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:613
 #, fuzzy, kde-format
 #| msgid "Question"
 msgctxt "@title:window"
 msgid "Question"
 msgstr "คำถาม"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, fuzzy, kde-format
 #| msgid "Migrate"
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "ผนวกรวม"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, fuzzy, kde-format
 #| msgid "Keep"
 msgctxt "@action:button"

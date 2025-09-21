@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-07-31 00:43+0000\n"
+"POT-Creation-Date: 2025-09-21 00:43+0000\n"
 "PO-Revision-Date: 2022-08-08 17:22+0200\n"
 "Last-Translator: Martin Schlander <mschlander@opensuse.org>\n"
 "Language-Team: Danish <kde-i18n-doc@kde.org>\n"
@@ -274,7 +274,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Tjek af kapabiliteter mislykkedes"
 
-#: plugins/smtp/smtpjob.cpp:229
+#: plugins/smtp/smtpjob.cpp:228
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
@@ -541,26 +541,26 @@ msgstr "Gem ikke adgangskoden"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Den udgående konto \"%1\" er ikke konfigureret korrekt."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Du skal oprette en udgående konto før afsendelse."
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, fuzzy, kde-format
 #| msgid "Create Account Now?"
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Opret en konto nu?"
 
-#: transportmanager.cpp:225
+#: transportmanager.cpp:224
 #, fuzzy, kde-format
 #| msgid "Create Account Now"
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Opret konto nu"
 
-#: transportmanager.cpp:607
+#: transportmanager.cpp:606
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -577,21 +577,21 @@ msgstr ""
 "som gemmer følsomme data for dig i en stærkt krypteret fil.\n"
 "Vil du flytte dine adgangskoder til KWallet?"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:613
 #, fuzzy, kde-format
 #| msgid "Question"
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Spørgsmål"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:614
 #, fuzzy, kde-format
 #| msgid "Migrate"
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Flyt"
 
-#: transportmanager.cpp:616
+#: transportmanager.cpp:615
 #, fuzzy, kde-format
 #| msgid "Keep"
 msgctxt "@action:button"
