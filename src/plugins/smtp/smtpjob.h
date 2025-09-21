@@ -20,11 +20,6 @@ class Job;
 class Slave;
 }
 
-namespace KGAPI2
-{
-class AccountPromise;
-}
-
 class SmtpJobPrivate;
 
 namespace MailTransport
