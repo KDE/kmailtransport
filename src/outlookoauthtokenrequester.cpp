@@ -14,7 +14,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <QHostAddress>
 #include <QJsonDocument>
 #include <QJsonObject>
-#include <QMap>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>

@@ -27,7 +27,6 @@ using namespace Qt::Literals::StringLiterals;
 #include <KSMTP/LoginJob>
 #include <KSMTP/SendJob>
 
-#include <KGAPI/Account>
 #include <KGAPI/AuthJob>
 
 using namespace MailTransport;
