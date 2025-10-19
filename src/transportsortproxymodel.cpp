@@ -39,8 +39,15 @@ bool TransportSortProxyModel::enablePlasmaActivities() const
 void TransportSortProxyModel::setEnablePlasmaActivities(bool newEnablePlasmaActivities)
 {
     if (mEnablePlasmaActivities != newEnablePlasmaActivities) {
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        beginFilterChange();
+#endif
         mEnablePlasmaActivities = newEnablePlasmaActivities;
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
 }
 
@@ -52,10 +59,27 @@ TransportActivitiesAbstract *TransportSortProxyModel::transportActivitiesAbstrac
 void TransportSortProxyModel::setTransportActivitiesAbstract(TransportActivitiesAbstract *newTransportActivitiesAbstract)
 {
     if (mTransportActivitiesAbstract != newTransportActivitiesAbstract) {
+        connect(mTransportActivitiesAbstract, &TransportActivitiesAbstract::activitiesChanged, this, &TransportSortProxyModel::slotInvalidateFilter);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        beginFilterChange();
+#endif
         mTransportActivitiesAbstract = newTransportActivitiesAbstract;
-        connect(mTransportActivitiesAbstract, &TransportActivitiesAbstract::activitiesChanged, this, &TransportSortProxyModel::invalidateFilter);
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+        endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
         invalidateFilter();
+#endif
     }
+}
+
+void TransportSortProxyModel::slotInvalidateFilter()
+{
+#if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
+    beginFilterChange();
+    endFilterChange(QSortFilterProxyModel::Direction::Rows);
+#else
+    invalidateFilter();
+#endif
 }
 
 #include "moc_transportsortproxymodel.cpp"

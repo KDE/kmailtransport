@@ -27,6 +27,7 @@ protected:
     [[nodiscard]] bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
+    void slotInvalidateFilter();
     TransportActivitiesAbstract *mTransportActivitiesAbstract = nullptr;
     bool mEnablePlasmaActivities = false;
 };
