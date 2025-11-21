@@ -59,7 +59,6 @@ TransportActivitiesAbstract *TransportSortProxyModel::transportActivitiesAbstrac
 void TransportSortProxyModel::setTransportActivitiesAbstract(TransportActivitiesAbstract *newTransportActivitiesAbstract)
 {
     if (mTransportActivitiesAbstract != newTransportActivitiesAbstract) {
-        connect(mTransportActivitiesAbstract, &TransportActivitiesAbstract::activitiesChanged, this, &TransportSortProxyModel::slotInvalidateFilter);
 #if QT_VERSION >= QT_VERSION_CHECK(6, 10, 0)
         beginFilterChange();
 #endif
@@ -69,6 +68,7 @@ void TransportSortProxyModel::setTransportActivitiesAbstract(TransportActivities
 #else
         invalidateFilter();
 #endif
+        connect(mTransportActivitiesAbstract, &TransportActivitiesAbstract::activitiesChanged, this, &TransportSortProxyModel::slotInvalidateFilter);
     }
 }
 
