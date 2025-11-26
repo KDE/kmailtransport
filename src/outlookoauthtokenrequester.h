@@ -62,7 +62,7 @@ public:
     void refreshToken(const QString &refreshToken);
 
 Q_SIGNALS:
-    void finished(const TokenResult &result);
+    void finished(const MailTransport::TokenResult &result);
 
 private:
     [[nodiscard]] MAILTRANSPORT_NO_EXPORT std::optional<QUrl> startLocalHttpServer();

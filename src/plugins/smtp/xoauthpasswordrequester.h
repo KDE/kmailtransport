@@ -31,7 +31,7 @@ public:
     virtual void requestPassword(bool forceRefresh) = 0;
 
 Q_SIGNALS:
-    void done(XOAuthPasswordRequester::Result result, const QString &password);
+    void done(MailTransport::XOAuthPasswordRequester::Result result, const QString &password);
 
 protected:
     Transport *transport() const;

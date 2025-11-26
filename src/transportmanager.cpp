@@ -552,7 +552,7 @@ void TransportManager::loadPasswordsAsync()
 void TransportManagerPrivate::startQueuedJobs()
 {
     QList<TransportJob *> jobsToDel;
-    for (auto job : walletQueue) {
+    for (auto job : std::as_const(walletQueue)) {
         if (job->transport()->isComplete()) {
             job->start();
             jobsToDel << job;
