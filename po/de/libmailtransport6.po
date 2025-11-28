@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2024-12-29 11:49+0100\n"
 "Last-Translator: Johannes Obermayr <johannesobermayr@gmx.de>\n"
 "Language-Team: German <kde-i18n-de@kde.org>\n"
@@ -20,6 +20,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Generator: Lokalize 25.03.70\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "Unbenannt"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -39,11 +43,6 @@ msgstr "Für den Benutzer sichtbarer Name der Versandart"
 msgid "The name that will be used when referring to this server."
 msgstr ""
 "Der Name, der verwendet wird, wenn auf diesen Server Bezug genommen wird."
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "Unbenannt"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

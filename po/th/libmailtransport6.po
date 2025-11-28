@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2010-02-28 18:09+0700\n"
 "Last-Translator: Thanomsub Noppaburana <donga.nb@gmail.com>\n"
 "Language-Team: Thai <thai-l10n@googlegroups.com>\n"
@@ -16,6 +16,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgid "Unnamed"
+msgstr "เป&ลี่ยนชื่อ"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -34,12 +39,6 @@ msgstr "ชื่อของบริการจัดส่งจดหมา
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "ชื่อที่จะใช้ในการอ้างอิงถึงเซิร์ฟเวอร์นี้"
-
-#: mailtransport.kcfg:18
-#, fuzzy, kde-format
-#| msgid "&Rename"
-msgid "Unnamed"
-msgstr "เป&ลี่ยนชื่อ"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

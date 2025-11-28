@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2023-12-10 15:07+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -15,6 +15,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "Nepomenované"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -33,11 +37,6 @@ msgstr "Názov prenosu viditeľný pre používateľa"
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "Meno ktoré bude použité pri odkazovaní na tento server."
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "Nepomenované"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

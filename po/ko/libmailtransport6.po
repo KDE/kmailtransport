@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2025-10-09 00:57+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 24.12.3\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "이름 없음"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -34,11 +38,6 @@ msgstr "사용자가 읽을 수 있는 전송 방법 이름"
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "이 서버를 가리킬 때 사용할 이름입니다."
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "이름 없음"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

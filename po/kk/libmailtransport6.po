@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2013-09-20 03:53+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.2\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "Атаусыз"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -34,11 +38,6 @@ msgstr "Пайдаланушыға көрінетін тасымалдауыны
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "Осы серверге сілтегенде қолданатын атауы."
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "Атаусыз"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

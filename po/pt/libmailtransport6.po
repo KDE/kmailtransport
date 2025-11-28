@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2022-10-22 11:40+0100\n"
 "Last-Translator: José Nuno Coelho Pires <zepires@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-doc@kde.org>\n"
@@ -19,6 +19,10 @@ msgstr ""
 "X-POFile-SpellExtra: MD NTLM sendmail PLAIN STMP GSSAPI KWallet CRAM LOGIN\n"
 "X-POFile-SpellExtra: ASMTP DIGEST STARTTLS QKeyChain\n"
 "X-POFile-IgnoreConsistency: Type\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "Sem nome"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -37,11 +41,6 @@ msgstr "Nome do transporte visível para o utilizador"
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "O nome que será usado ao fazer referência a este servidor."
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "Sem nome"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

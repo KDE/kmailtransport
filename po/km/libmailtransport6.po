@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_extragear-utils_kdiff3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2010-12-22 05:05+0700\n"
 "Last-Translator: Seng Sutha <Sutha@khmeros.info>\n"
 "Language-Team: Khmer [km] <Support@khmeros.info>\n"
@@ -18,6 +18,10 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: WordForge 0.8 Beta 1\n"
 "X-Language: km-KH\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "គ្មាន​ឈ្មោះ"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -36,11 +40,6 @@ msgstr "ឈ្មោះ​បញ្ជូន​ដែល​អាច​មើល
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "ឈ្មោះ​ដែល​នឹង​ត្រូវ​បានប្រើនៅពេល​សំអាង​លើ​ម៉ាស៊ីន​បម្រើ ។"
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "គ្មាន​ឈ្មោះ"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

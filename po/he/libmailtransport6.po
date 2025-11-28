@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2025-10-05 12:32+0300\n"
 "Last-Translator: Yaron Shahrabani <sh.yaron@gmail.com>\n"
 "Language-Team: צוות התרגום של KDE ישראל\n"
@@ -17,6 +17,10 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n == 1) ? 0 : ((n == 2) ? 1 : ((n > 10 && "
 "n % 10 == 0) ? 2 : 3));\n"
 "X-Generator: Lokalize 25.08.1\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "ללא שם"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -35,11 +39,6 @@ msgstr "שם תעבורה שגלוי למשתמש"
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "השם שישמש כשמתייחסים לשרת הזה."
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "ללא שם"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

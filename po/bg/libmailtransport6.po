@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2025-08-16 22:36+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 25.07.70\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "Неозаглавен"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -34,11 +38,6 @@ msgstr "Видимо за потребителя име на транспорт"
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "Името, което ще се използва при препратка към този сървър."
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "Неозаглавен"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

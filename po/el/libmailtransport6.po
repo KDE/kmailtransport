@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2024-09-20 14:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -23,6 +23,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Generator: Lokalize 24.08.1\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "Χωρίς όνομα"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -42,11 +46,6 @@ msgstr "Ορατό όνομα μεταφορέα"
 msgid "The name that will be used when referring to this server."
 msgstr ""
 "Το όνομα που θα χρησιμοποιηθεί όταν γίνεται αναφορά σε αυτόν το διακομιστή."
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "Χωρίς όνομα"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

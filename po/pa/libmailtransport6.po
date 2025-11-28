@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2010-02-01 08:19+0530\n"
 "Last-Translator: A S Alam <aalam@users.sf.net>\n"
 "Language-Team: ਪੰਜਾਬੀ <punjabi-users@lists.sf.net>\n"
@@ -17,6 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 1.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#, fuzzy, kde-format
+#| msgid "&Rename"
+msgid "Unnamed"
+msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -35,12 +40,6 @@ msgstr "ਯੂਜ਼ਰ ਵੇਖਣਯੋਗ ਟਰਾਂਸਪੋਰਟ ਨਾ
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "ਨਾਂ, ਜੋ ਕਿ ਇਸ ਸਰਵਰ ਬਾਰੇ ਜਾਣਕਾਰੀ ਦੇਣ ਲਈ ਵਰਤਿਆ ਜਾਵੇਗਾ।"
-
-#: mailtransport.kcfg:18
-#, fuzzy, kde-format
-#| msgid "&Rename"
-msgid "Unnamed"
-msgstr "ਨਾਂ ਬਦਲੋ(&R)"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30

@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-17 11:52+0000\n"
+"POT-Creation-Date: 2025-11-28 00:43+0000\n"
 "PO-Revision-Date: 2025-07-31 15:32+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <trans-uk@lists.fedoraproject.org>\n"
@@ -20,6 +20,10 @@ msgstr ""
 "X-Generator: Lokalize 23.04.3\n"
 "Plural-Forms: nplurals=4; plural=n==1 ? 3 : n%10==1 && n%100!=11 ? 0 : n"
 "%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+
+#, kde-format
+msgid "Unnamed"
+msgstr "Без назви"
 
 #. i18n: ectx: label, entry (id), group (Transport $(transportId))
 #: mailtransport.kcfg:12
@@ -38,11 +42,6 @@ msgstr "Назва транспорту, видима для користува�
 #, kde-format
 msgid "The name that will be used when referring to this server."
 msgstr "Назва, яка використовуватиметься для цього сервера."
-
-#: mailtransport.kcfg:18
-#, kde-format
-msgid "Unnamed"
-msgstr "Без назви"
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30
