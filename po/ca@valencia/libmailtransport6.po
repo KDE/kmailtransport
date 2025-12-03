@@ -271,14 +271,14 @@ msgstr "Activitats"
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
-"S'ha produït un error en comprovar les capacitats. Verifiqueu el port i el "
-"mode d'autenticació."
+"S'ha produït un error mentre es comprovaven les capacitats. Verifiqueu el "
+"port i el mode d'autenticació."
 
 #: plugins/smtp/smtpconfigwidget.cpp:307
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
-msgstr "No s'ha pogut comprovar les capacitats"
+msgstr "Ha fallat mentre es comprovaven les capacitats"
 
 #: plugins/smtp/smtpjob.cpp:227
 #, kde-format
@@ -457,7 +457,7 @@ msgstr "No s'ha pogut iniciar l'ordre prèvia «%1»."
 #: precommandjob.cpp:77
 #, kde-format
 msgid "Error while executing precommand '%1'."
-msgstr "S'ha produït un error en executar l'ordre prèvia «%1»."
+msgstr "S'ha produït un error mentre s'executava l'ordre prèvia «%1»."
 
 #: precommandjob.cpp:93
 #, kde-format
