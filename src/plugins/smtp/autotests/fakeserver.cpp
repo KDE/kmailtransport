@@ -116,7 +116,9 @@ void FakeServer::addScenario(const QList<QByteArray> &scenario)
 void FakeServer::addScenarioFromFile(const QString &fileName)
 {
     QFile file(fileName);
-    file.open(QFile::ReadOnly);
+    if (!file.open(QFile::ReadOnly)) {
+        qWarning() << "Impossible to open file";
+    }
 
     QList<QByteArray> scenario;
 
