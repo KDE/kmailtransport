@@ -1,0 +1,12 @@
+version = 1
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"
+SPDX-PackageName = "kmailtransport"
+SPDX-PackageSupplier = "Montel Laurent <montel@kde.org>"
+SPDX-PackageDownloadLocation = "https://invent.kde.org/pim/kmailtransport"
+
+[[annotations]]
+path = ["src/kmbox-index.qdoc", "src/kmbox.qdoc", "src/kmbox.qdocconf"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "none"
+SPDX-License-Identifier = "CC0-1.0"

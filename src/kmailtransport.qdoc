@@ -1,0 +1,9 @@
+/*!
+    \module KMailTransport
+    \title KMailTransport C++ Classes
+    \ingroup modules
+    \cmakepackage KPim6
+    \cmakecomponent MailTransport
+
+    \brief KMailTransport provides API for managing mail transport.
+*/

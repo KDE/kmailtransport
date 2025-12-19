@@ -1,0 +1,33 @@
+include($KDE_DOCS/global/qt-module-defaults.qdocconf)
+
+project = KMailTransport
+description = KMailTransport provides API for managing mail transport.
+
+
+documentationinheaders = true
+
+headerdirs += .
+sourcedirs += .
+
+outputformats = HTML
+
+depends += \
+    qtcore
+
+navigation.landingpage = "KMailTransport"
+
+qhp.projects            = KMailTransport
+
+qhp.KMailTransport.file                = kmailtransport.qhp
+qhp.KMailTransport.namespace           = org.kde.kmailtransport.$QT_VERSION_TAG
+qhp.KMailTransport.virtualFolder       = kmailtransport
+qhp.KMailTransport.indexTitle          = kmailtransport
+qhp.KMailTransport.indexRoot           =
+
+qhp.KMailTransport.subprojects         = classes
+qhp.KMailTransport.subprojects.classes.title = C++ Classes
+qhp.KMailTransport.subprojects.classes.indexTitle = KMailTransport C++ Classes
+qhp.KMailTransport.subprojects.classes.selectors = class fake:headerfile
+qhp.KMailTransport.subprojects.classes.sortPages = true
+
+tagfile = KMailTransport.tags
