@@ -216,42 +216,6 @@ if(BUILD_TESTING)
     add_subdirectory(plugins/tests)
 endif()
 
-if(BUILD_QCH)
-    ecm_add_qch(
-        KPim6MailTransport_QCH
-        NAME KMailTransport
-        BASE_NAME KPim6MailTransport
-        VERSION ${PIM_VERSION}
-        ORG_DOMAIN org.kde
-        SOURCES # using only public headers, to cover only public API
-            ${MailTransport_HEADERS}
-            ${MailTransport_widgets_HEADERS}
-            ${MailTransport_plugins_HEADERS}
-        #MD_MAINPAGE "${CMAKE_SOURCE_DIR}/README.md"
-        #IMAGE_DIRS "${CMAKE_SOURCE_DIR}/docs/pics"
-        LINK_QCHS
-            Qt6Core_QCH
-            Qt6Gui_QCH
-            Qt6Widgets_QCH
-        INCLUDE_DIRS
-            ${CMAKE_CURRENT_BINARY_DIR}
-        BLANK_MACROS
-            MAILTRANSPORT_EXPORT
-        TAGFILE_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        QCH_INSTALL_DESTINATION ${KDE_INSTALL_QTQCHDIR}
-        COMPONENT Devel
-    )
-endif()
-if(BUILD_QCH)
-    ecm_install_qch_export(
-        TARGETS KPim6MailTransport_QCH
-        FILE KPim6MailTransportQchTargets.cmake
-        DESTINATION "${CMAKECONFIG_INSTALL_DIR}"
-        COMPONENT Devel
-    )
-    set(PACKAGE_INCLUDE_QCHTARGETS "include(\"\${CMAKE_CURRENT_LIST_DIR}/KPim6MailTransportQchTargets.cmake\")")
-endif()
-
 configure_package_config_file(
     "${CMAKE_CURRENT_SOURCE_DIR}/KPimMailTransportConfig.cmake.in"
     "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfig.cmake"
@@ -272,5 +236,7 @@ install(
     FILE KPim6MailTransportTargets.cmake
     NAMESPACE KPim6::
 )
+
+ecm_generate_qdoc(KPim6MailTransport kmailtransport.qdocconf)
 
 add_subdirectory(plugins/smtp)

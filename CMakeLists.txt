@@ -52,16 +52,9 @@ endif()
 include(ECMQtDeclareLoggingCategory)
 include(ECMDeprecationSettings)
 include(ECMFeatureSummary)
-include(ECMAddQch)
+include(ECMGenerateQDoc)
 
 set(QT_REQUIRED_VERSION "6.9.0")
-
-option(BUILD_QCH "Build API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)" OFF)
-add_feature_info(
-    QCH
-    ${BUILD_QCH}
-    "API documentation in QCH format (for e.g. Qt Assistant, Qt Creator & KDevelop)"
-)
 
 add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport6\")
 
