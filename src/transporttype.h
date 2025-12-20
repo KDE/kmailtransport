@@ -17,15 +17,15 @@ class AddTransportDialog;
 class TransportManager;
 class TransportTypePrivate;
 
-/**
-  @short A representation of a transport type.
+/*!
+  \brief A representation of a transport type.
 
   Represents an available transport type.  SMTP is available
 
   All available transport types can be retrieved via TransportManager::types().
 
   @author Constantin Berzan <exit3219@gmail.com>
-  @since 4.4
+  \since 4.4
 */
 class MAILTRANSPORT_EXPORT TransportType
 {
@@ -52,52 +52,52 @@ class MAILTRANSPORT_EXPORT TransportType
     friend class TransportManagerPrivate;
 
 public:
-    /**
+    /*!
       Describes a list of transport types.
     */
     using List = QList<TransportType>;
 
-    /**
+    /*!
       Constructs a new TransportType.
     */
     TransportType();
 
-    /**
-      Creates a copy of the @p other TransportType.
+    /*!
+      Creates a copy of the \a other TransportType.
     */
     TransportType(const TransportType &other);
 
-    /**
+    /*!
       Destroys the TransportType.
     */
     ~TransportType();
 
-    /**
-     * Replaces the transport type by the @p other.
+    /*!
+     * Replaces the transport type by the \a other.
      */
     TransportType &operator=(const TransportType &other);
 
-    /**
-     * Compares the transport type with the @p other.
+    /*!
+     * Compares the transport type with the \a other.
      */
     [[nodiscard]] bool operator==(const TransportType &other) const;
 
-    /**
+    /*!
       Returns whether the transport type is valid.
     */
     [[nodiscard]] bool isValid() const;
 
-    /**
+    /*!
       Returns the i18n'ed name of the transport type.
     */
     [[nodiscard]] QString name() const;
 
-    /**
+    /*!
       Returns a description of the transport type.
     */
     [[nodiscard]] QString description() const;
 
-    /**
+    /*!
      * Returns a plugin identifier
      */
     [[nodiscard]] QString identifier() const;
@@ -106,9 +106,7 @@ public:
     [[nodiscard]] bool isAkonadiResource() const;
 
 private:
-    //@cond PRIVATE
     QSharedDataPointer<TransportTypePrivate> d;
-    //@endcond
 };
 } // namespace MailTransport
 
