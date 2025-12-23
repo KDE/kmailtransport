@@ -23,7 +23,7 @@ public:
         Error = 0,
         PasswordRetrieved = 1,
     };
-    Q_ENUM(Result);
+    Q_ENUM(Result)
 
     explicit XOAuthPasswordRequester(Transport *transport, QObject *parent = nullptr);
     ~XOAuthPasswordRequester() override;
