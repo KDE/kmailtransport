@@ -37,6 +37,9 @@ public:
      * This enumeration has the special capabilities a server might
      * support. This covers only capabilities not related to authentication.
      * \since 4.1
+     * \value Pipelining POP3 only. The server supports pipeplining of commands
+     * \value Top POP3 only. The server supports fetching only the headers
+     * \value UIDL POP3 only. The server has support for unique identifiers
      */
     enum Capability {
         Pipelining, ///< POP3 only. The server supports pipeplining of commands

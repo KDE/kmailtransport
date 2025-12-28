@@ -60,7 +60,7 @@ public:
 
     /*!
       Sets the password of this transport.
-      \ passwd The new password.
+      \a passwd The new password.
     */
     void setPassword(const QString &passwd);
 

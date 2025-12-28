@@ -107,7 +107,7 @@ public:
     /*!
       Creates a mail transport job for the given transport identifier.
       Returns 0 if the specified transport is invalid.
-      \ transportId The transport identifier.
+      \a transportId The transport identifier.
 
       \deprecated use MessageQueueJob to queue messages
                   and rely on the Dispatcher Agent to send them.
