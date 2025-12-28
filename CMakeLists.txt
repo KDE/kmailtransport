@@ -86,7 +86,7 @@ set_package_properties(
 )
 
 add_definitions(-DQT_NO_CONTEXTLESS_CONNECT)
-ecm_set_disabled_deprecation_versions(QT 6.10.0 KF 6.21.0)
+ecm_set_disabled_deprecation_versions(QT 6.11.0 KF 6.21.0)
 
 if(BUILD_TESTING)
     find_package(Qt6Test CONFIG REQUIRED)
