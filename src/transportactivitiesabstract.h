@@ -10,19 +10,36 @@
 #include <QObject>
 namespace MailTransport
 {
+/*!
+ * \brief The TransportActivitiesAbstract class
+ *
+ * \author Laurent Montel <montel@kde.org>
+ */
 class MAILTRANSPORT_EXPORT TransportActivitiesAbstract : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     */
     explicit TransportActivitiesAbstract(QObject *parent = nullptr);
+    /*!
+     */
     ~TransportActivitiesAbstract() override;
 
+    /*!
+     */
     [[nodiscard]] virtual bool filterAcceptsRow(const QStringList &activities) const = 0;
 
+    /*!
+     */
     [[nodiscard]] virtual bool hasActivitySupport() const = 0;
 
+    /*!
+     */
     [[nodiscard]] virtual QString currentActivity() const = 0;
 Q_SIGNALS:
+    /*!
+     */
     void activitiesChanged();
 };
 }

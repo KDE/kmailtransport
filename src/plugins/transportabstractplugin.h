@@ -15,7 +15,7 @@ class TransportJob;
 class Transport;
 /**
  * @brief The TransportAbstractPluginInfo struct
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo {
     QString name;
@@ -26,22 +26,40 @@ struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo {
 
 /**
  * @brief The TransportAbstractPlugin class
- * @author Laurent Montel <montel@kde.org>
+ * \author Laurent Montel <montel@kde.org>
  */
 class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     * \brief TransportAbstractPlugin
+     * \param parent
+     */
     explicit TransportAbstractPlugin(QObject *parent = nullptr);
+    /*!
+     */
     ~TransportAbstractPlugin() override;
 
+    /*!
+     */
     [[nodiscard]] virtual TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) = 0;
+    /*!
+     */
     [[nodiscard]] virtual QList<TransportAbstractPluginInfo> names() const = 0;
+    /*!
+     */
     [[nodiscard]] virtual bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent) = 0;
+    /*!
+     */
     virtual void cleanUp(MailTransport::Transport *t);
+    /*!
+     */
     virtual void initializeTransport(MailTransport::Transport *t, const QString &identifier);
 
 Q_SIGNALS:
+    /*!
+     */
     void updatePluginList();
 };
 }

@@ -24,7 +24,7 @@ class TransportTypePrivate;
 
   All available transport types can be retrieved via TransportManager::types().
 
-  @author Constantin Berzan <exit3219@gmail.com>
+  \author Constantin Berzan <exit3219@gmail.com>
   \since 4.4
 */
 class MAILTRANSPORT_EXPORT TransportType
@@ -53,6 +53,8 @@ class MAILTRANSPORT_EXPORT TransportType
 
 public:
     /*!
+      \typealias MailTransport::TransportType::List
+
       Describes a list of transport types.
     */
     using List = QList<TransportType>;

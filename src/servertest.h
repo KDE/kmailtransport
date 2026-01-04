@@ -23,7 +23,7 @@ class ServerTestPrivate;
 
 /*!
  * This class can be used to test certain server to see if they support stuff.
- * @author Tom Albers <tomalbers@kde.nl>
+ * \author Tom Albers <tomalbers@kde.nl>
  */
 class MAILTRANSPORT_EXPORT ServerTest : public QObject
 {

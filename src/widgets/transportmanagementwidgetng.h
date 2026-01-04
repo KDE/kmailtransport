@@ -36,9 +36,15 @@ public:
     */
     ~TransportManagementWidgetNg() override;
 
+    /*!
+     */
     [[nodiscard]] bool enablePlasmaActivities() const;
+    /*!
+     */
     void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
 
+    /*!
+     */
     void setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract);
 
 private:

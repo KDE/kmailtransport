@@ -20,7 +20,7 @@ class SocketPrivate;
  * @class Socket
  * Responsible for communicating with the server, it's designed to work
  * with the ServerTest class.
- * @author Tom Albers <tomalbers@kde.nl>
+ * \author Tom Albers <tomalbers@kde.nl>
  */
 class Socket : public QObject
 {

@@ -33,6 +33,8 @@ public:
     */
     explicit TransportComboBox(QWidget *parent = nullptr);
 
+    /*!
+     */
     ~TransportComboBox() override;
 
     /**
@@ -57,10 +59,16 @@ public:
     /// @since 6.1
     void setTransportActivitiesAbstract(MailTransport::TransportActivitiesAbstract *activitiesAbstract);
 
+    /*!
+     */
     [[nodiscard]] bool enablePlasmaActivities() const;
+    /*!
+     */
     void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
 
 Q_SIGNALS:
+    /*!
+     */
     void transportRemoved(Transport::Id id, const QString &name);
 
 private:

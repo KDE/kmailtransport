@@ -9,6 +9,10 @@
 #include <QWidget>
 namespace MailTransport
 {
+/*!
+ * \brief The TransportActivitiesAbstractPlugin class
+ * \author Laurent Montel <montel@kde.org>
+ */
 class MAILTRANSPORT_EXPORT TransportActivitiesAbstractPlugin : public QWidget
 {
     Q_OBJECT
@@ -18,10 +22,18 @@ public:
         bool enabled = false;
     };
 
+    /*!
+     */
     explicit TransportActivitiesAbstractPlugin(QWidget *parent = nullptr);
+    /*!
+     */
     ~TransportActivitiesAbstractPlugin() override;
 
+    /*!
+     */
     [[nodiscard]] virtual TransportActivitiesAbstractPlugin::ActivitySettings activitiesSettings() const = 0;
+    /*!
+     */
     virtual void setActivitiesSettings(const TransportActivitiesAbstractPlugin::ActivitySettings &activitySettings) = 0;
 };
 }

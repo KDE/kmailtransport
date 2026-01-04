@@ -39,7 +39,7 @@ class TransportConfigWidgetPrivate;
   TransportManager::addTransport() if this is a new transport, not registered
   with TransportManager.
 
-  @author Constantin Berzan <exit3219@gmail.com>
+  \author Constantin Berzan <exit3219@gmail.com>
   @since 4.4
 */
 class MAILTRANSPORT_EXPORT TransportConfigWidget : public QWidget

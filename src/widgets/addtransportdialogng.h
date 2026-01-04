@@ -24,7 +24,7 @@ class AddTransportDialogNGPrivate;
   To create a new transport from applications, use
   TransportManager::showNewTransportDialog().
 
-  @author Constantin Berzan <exit3219@gmail.com>
+  \author Constantin Berzan <exit3219@gmail.com>
   @since 4.4
 */
 class KMAILTRANSPORT_TESTS_EXPORT AddTransportDialogNG : public QDialog

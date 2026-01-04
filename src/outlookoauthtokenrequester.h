@@ -33,14 +33,28 @@ public:
         AuthorizationFailed,
     };
 
+    /*!
+     */
     TokenResult(ErrorCode errorCode, const QString &errorText);
+    /*!
+     */
     TokenResult(const QString &accessToken, const QString &refreshToken);
 
+    /*!
+     */
     [[nodiscard]] QString accessToken() const;
+    /*!
+     */
     [[nodiscard]] QString refreshToken() const;
 
+    /*!
+     */
     [[nodiscard]] bool hasError() const;
+    /*!
+     */
     [[nodiscard]] ErrorCode errorCode() const;
+    /*!
+     */
     [[nodiscard]] QString errorText() const;
 
 private:
