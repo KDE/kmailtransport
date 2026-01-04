@@ -40,23 +40,22 @@ class TransportConfigWidgetPrivate;
   with TransportManager.
 
   \author Constantin Berzan <exit3219@gmail.com>
-  @since 4.4
+  \since 4.4
 */
 class MAILTRANSPORT_EXPORT TransportConfigWidget : public QWidget
 {
     Q_OBJECT
 
 public:
-    /**
-      Creates a new mail transport configuration widget for the given
-      Transport object.
-      @param transport The Transport object to configure.
-      @param parent The parent widget.
+    /*!
+      \brief Creates a new mail transport configuration widget for the given Transport object.
+      \param transport The Transport object to configure.
+      \param parent The parent widget.
     */
     explicit TransportConfigWidget(Transport *transport, QWidget *parent = nullptr);
 
-    /**
-      Destroys the widget.
+    /*!
+      \brief Destroys the widget.
     */
     ~TransportConfigWidget() override;
 
@@ -67,7 +66,7 @@ public:
     KConfigDialogManager *configManager() const;
 
 public Q_SLOTS:
-    /**
+    /*!
       Saves the transport's settings.
 
       The base implementation writes the settings to the config file and makes

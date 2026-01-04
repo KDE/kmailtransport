@@ -25,7 +25,7 @@ class AddTransportDialogNGPrivate;
   TransportManager::showNewTransportDialog().
 
   \author Constantin Berzan <exit3219@gmail.com>
-  @since 4.4
+  \since 4.4
 */
 class KMAILTRANSPORT_TESTS_EXPORT AddTransportDialogNG : public QDialog
 {

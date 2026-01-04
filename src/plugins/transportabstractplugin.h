@@ -13,8 +13,8 @@ namespace MailTransport
 {
 class TransportJob;
 class Transport;
-/**
- * @brief The TransportAbstractPluginInfo struct
+/*!
+ * \brief The TransportAbstractPluginInfo struct
  * \author Laurent Montel <montel@kde.org>
  */
 struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo {
@@ -24,8 +24,8 @@ struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo {
     bool isAkonadi = false;
 };
 
-/**
- * @brief The TransportAbstractPlugin class
+/*!
+ * \brief The TransportAbstractPlugin class
  * \author Laurent Montel <montel@kde.org>
  */
 class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject

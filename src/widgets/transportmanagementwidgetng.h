@@ -25,13 +25,13 @@ class MAILTRANSPORT_EXPORT TransportManagementWidgetNg : public QWidget
     Q_OBJECT
 
 public:
-    /**
+    /*!
       Creates a new TransportManagementWidgetNg.
-      @param parent The parent widget.
+      \param parent The parent widget.
     */
     explicit TransportManagementWidgetNg(QWidget *parent = nullptr);
 
-    /**
+    /*!
       Destroys the widget.
     */
     ~TransportManagementWidgetNg() override;

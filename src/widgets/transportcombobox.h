@@ -27,9 +27,9 @@ class MAILTRANSPORT_EXPORT TransportComboBox : public QComboBox
 {
     Q_OBJECT
 public:
-    /**
-      Creates a new mail transport selection combo box.
-      @param parent The paren widget.
+    /*!
+      \brief Creates a new mail transport selection combo box.
+      \param parent The paren widget.
     */
     explicit TransportComboBox(QWidget *parent = nullptr);
 
@@ -54,9 +54,9 @@ public:
     */
     [[nodiscard]] QString transportType() const;
 
-    /// @since 6.1
+    /// \since 6.1
     [[nodiscard]] MailTransport::TransportActivitiesAbstract *transportActivitiesAbstract() const;
-    /// @since 6.1
+    /// \since 6.1
     void setTransportActivitiesAbstract(MailTransport::TransportActivitiesAbstract *activitiesAbstract);
 
     /*!

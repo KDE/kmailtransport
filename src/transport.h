@@ -161,8 +161,8 @@ Q_SIGNALS:
     void transportTypeChanged();
 
 private:
-    void readTransportPasswordFinished(QKeychain::Job *baseJob);
-    void loadPassword();
+    MAILTRANSPORT_NO_EXPORT void readTransportPasswordFinished(QKeychain::Job *baseJob);
+    MAILTRANSPORT_NO_EXPORT void loadPassword();
 
 private:
     std::unique_ptr<TransportPrivate> const d;

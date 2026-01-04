@@ -22,7 +22,9 @@ class QNetworkAccessManager;
 
 namespace MailTransport
 {
-
+/*!
+ * \brief The TokenResult class
+ */
 class MAILTRANSPORT_EXPORT TokenResult
 {
 public:
@@ -69,13 +71,28 @@ class MAILTRANSPORT_EXPORT OutlookOAuthTokenRequester : public QObject
 {
     Q_OBJECT
 public:
+    /*!
+     * \brief OutlookOAuthTokenRequester
+     * \param clientId
+     * \param tenantId
+     * \param scopes
+     * \param parent
+     */
     explicit OutlookOAuthTokenRequester(const QString &clientId, const QString &tenantId, const QStringList &scopes, QObject *parent = nullptr);
+    /*!
+     */
     ~OutlookOAuthTokenRequester() override;
 
+    /*!
+     */
     void requestToken(const QString &usernameHint = {});
+    /*!
+     */
     void refreshToken(const QString &refreshToken);
 
 Q_SIGNALS:
+    /*!
+     */
     void finished(const MailTransport::TokenResult &result);
 
 private:
