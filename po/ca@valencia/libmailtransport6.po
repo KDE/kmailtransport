@@ -198,7 +198,7 @@ msgid ""
 "server. This is useful when your system's hostname may not be set correctly "
 "or to mask your system's true hostname."
 msgstr ""
-"Marqueu esta opció per a utilitzar un nom personalitzat d'amfitrió que "
+"Marqueu esta opció per a utilitzar un nom personalitzat de l'amfitrió que "
 "identifique el servidor de correu. Açò és útil quan el nom d'amfitrió del "
 "sistema no es pot establir correctament o per a emmascarar el nom d'amfitrió "
 "real del sistema."
@@ -435,7 +435,7 @@ msgstr "Ordre prèvia:"
 #: plugins/smtp/smtpsettings.ui:379
 #, kde-format
 msgid "Sen&d custom hostname to server"
-msgstr "En&via el nom personalitzat d'amfitrió al servidor"
+msgstr "En&via el nom personalitzat de l'amfitrió al servidor"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
 #: plugins/smtp/smtpsettings.ui:386
