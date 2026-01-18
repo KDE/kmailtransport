@@ -520,14 +520,20 @@ ServerTest::ServerTest(QObject *parent)
 {
     d->normalSocketTimer = new QTimer(this);
     d->normalSocketTimer->setSingleShot(true);
-    connect(d->normalSocketTimer, SIGNAL(timeout()), SLOT(slotNormalNotPossible()));
+    connect(d->normalSocketTimer, &QTimer::timeout, this, [this]() {
+        d->slotNormalNotPossible();
+    });
 
     d->secureSocketTimer = new QTimer(this);
     d->secureSocketTimer->setSingleShot(true);
-    connect(d->secureSocketTimer, SIGNAL(timeout()), SLOT(slotSslNotPossible()));
+    connect(d->secureSocketTimer, &QTimer::timeout, this, [this]() {
+        d->slotSslNotPossible();
+    });
 
     d->progressTimer = new QTimer(this);
-    connect(d->progressTimer, SIGNAL(timeout()), SLOT(slotUpdateProgress()));
+    connect(d->progressTimer, &QTimer::timeout, this, [this]() {
+        d->slotUpdateProgress();
+    });
 }
 
 ServerTest::~ServerTest() = default;
@@ -581,10 +587,18 @@ void ServerTest::start()
         d->secureSocket->setPort(d->customPorts.value(Transport::EnumEncryption::SSL));
     }
 
-    connect(d->normalSocket, SIGNAL(connected()), SLOT(slotNormalPossible()));
-    connect(d->normalSocket, SIGNAL(failed()), SLOT(slotNormalNotPossible()));
-    connect(d->normalSocket, SIGNAL(data(QString)), SLOT(slotReadNormal(QString)));
-    connect(d->normalSocket, SIGNAL(tlsDone()), SLOT(slotTlsDone()));
+    connect(d->normalSocket, &MailTransport::Socket::connected, this, [this]() {
+        d->slotNormalPossible();
+    });
+    connect(d->normalSocket, &MailTransport::Socket::failed, this, [this]() {
+        d->slotNormalNotPossible();
+    });
+    connect(d->normalSocket, &MailTransport::Socket::data, this, [this](auto data) {
+        d->slotReadNormal(data);
+    });
+    connect(d->normalSocket, &MailTransport::Socket::tlsDone, this, [this]() {
+        d->slotTlsDone();
+    });
     d->normalSocket->reconnect();
     d->normalSocketTimer->start(10000);
 
@@ -593,9 +607,15 @@ void ServerTest::start()
         d->secureSocket->setServer(d->server);
         d->secureSocket->setProtocol(d->testProtocol + QLatin1Char('s'));
         d->secureSocket->setSecure(true);
-        connect(d->secureSocket, SIGNAL(connected()), SLOT(slotSslPossible()));
-        connect(d->secureSocket, SIGNAL(failed()), SLOT(slotSslNotPossible()));
-        connect(d->secureSocket, SIGNAL(data(QString)), SLOT(slotReadSecure(QString)));
+        connect(d->secureSocket, &MailTransport::Socket::connected, this, [this]() {
+            d->slotSslPossible();
+        });
+        connect(d->secureSocket, &MailTransport::Socket::failed, this, [this]() {
+            d->slotSslNotPossible();
+        });
+        connect(d->secureSocket, &MailTransport::Socket::data, this, [this](auto data) {
+            d->slotReadSecure(data);
+        });
         d->secureSocket->reconnect();
         d->secureSocketTimer->start(10000);
     } else {
