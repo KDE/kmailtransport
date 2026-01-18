@@ -145,12 +145,22 @@ void Socket::reconnect()
 
     d->socket->setProtocol(QSsl::AnyProtocol);
 
-    connect(d->socket, SIGNAL(stateChanged(QAbstractSocket::SocketState)), SLOT(slotStateChanged(QAbstractSocket::SocketState)));
-    connect(d->socket, SIGNAL(modeChanged(QSslSocket::SslMode)), SLOT(slotModeChanged(QSslSocket::SslMode)));
-    connect(d->socket, SIGNAL(connected()), SLOT(slotConnected()));
-    connect(d->socket, SIGNAL(readyRead()), SLOT(slotSocketRead()));
+    connect(d->socket, &QSslSocket::stateChanged, this, [this](auto state) {
+        d->slotStateChanged(state);
+    });
+    connect(d->socket, &QSslSocket::modeChanged, this, [this](auto mode) {
+        d->slotModeChanged(mode);
+    });
+    connect(d->socket, &QSslSocket::connected, this, [this]() {
+        d->slotConnected();
+    });
+    connect(d->socket, &QSslSocket::readyRead, this, [this]() {
+        d->slotSocketRead();
+    });
     connect(d->socket, &QSslSocket::encrypted, this, &Socket::connected);
-    connect(d->socket, SIGNAL(sslErrors(QList<QSslError>)), SLOT(slotSslErrors(QList<QSslError>)));
+    connect(d->socket, &QSslSocket::sslErrors, this, [this](auto errors) {
+        d->slotSslErrors(errors);
+    });
 }
 
 void Socket::write(const QString &text)

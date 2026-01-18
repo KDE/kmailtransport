@@ -203,14 +203,5 @@ Q_SIGNALS:
 private:
     Q_DECLARE_PRIVATE(ServerTest)
     std::unique_ptr<ServerTestPrivate> const d;
-
-    Q_PRIVATE_SLOT(d, void slotNormalPossible())
-    Q_PRIVATE_SLOT(d, void slotTlsDone())
-    Q_PRIVATE_SLOT(d, void slotSslPossible())
-    Q_PRIVATE_SLOT(d, void slotReadNormal(const QString &text))
-    Q_PRIVATE_SLOT(d, void slotReadSecure(const QString &text))
-    Q_PRIVATE_SLOT(d, void slotNormalNotPossible())
-    Q_PRIVATE_SLOT(d, void slotSslNotPossible())
-    Q_PRIVATE_SLOT(d, void slotUpdateProgress())
 };
 } // namespace MailTransport
