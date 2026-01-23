@@ -11,6 +11,9 @@
 namespace MailTransport
 {
 /*!
+ * \class MailTransport::TransportActivitiesAbstract
+ * \inmodule KMailTransport
+ * \inheaderfile MailTransport/TransportActivitiesAbstract
  * \brief The TransportActivitiesAbstract class
  *
  * \author Laurent Montel <montel@kde.org>

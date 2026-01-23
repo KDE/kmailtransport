@@ -17,7 +17,10 @@ namespace MailTransport
 class TransportManagementWidgetNgPrivate;
 class TransportActivitiesAbstract;
 
-/**
+/*!
+  \class MailTransport::TransportManagementWidgetNg
+  \inmodule KMailTransport
+  \inheaderfile MailTransport/TransportManagementWidgetNg
   A widget to manage mail transports.
 */
 class MAILTRANSPORT_EXPORT TransportManagementWidgetNg : public QWidget

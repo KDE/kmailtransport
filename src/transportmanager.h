@@ -21,6 +21,9 @@ class TransportJob;
 class TransportManagerPrivate;
 
 /*!
+  \class MailTransport::TransportManager
+  \inmodule KMailTransport
+  \inheaderfile MailTransport/TransportManager
   \brief Central transport management interface.
 
   This class manages the creation, configuration, and removal of mail

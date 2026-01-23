@@ -21,6 +21,9 @@ class PreCommandJobPrivate;
 namespace MailTransport
 {
 /*!
+  \class MailTransport::PrecommandJob
+  \inmodule KMailTransport
+  \inheaderfile MailTransport/PrecommandJob
   Job to execute a command.
   This is used often for sending or receiving mails, for example to set up
   a tunnel of VPN connection.

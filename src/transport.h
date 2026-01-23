@@ -22,6 +22,10 @@ namespace MailTransport
 class TransportType;
 
 /*!
+  \class MailTransport::Transport
+  \inmodule KMailTransport
+  \inheaderfile MailTransport/Transport
+
   Represents the settings of a specific mail transport.
 
   To create a new empty Transport object, use TransportManager::createTransport().

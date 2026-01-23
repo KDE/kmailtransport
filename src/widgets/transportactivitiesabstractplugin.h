@@ -10,6 +10,9 @@
 namespace MailTransport
 {
 /*!
+ * \class MailTransport::TransportActivitiesAbstractPlugin
+ * \inmodule KMailTransport
+ * \inheaderfile MailTransport/TransportActivitiesAbstractPlugin
  * \brief The TransportActivitiesAbstractPlugin class
  * \author Laurent Montel <montel@kde.org>
  */

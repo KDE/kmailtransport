@@ -23,6 +23,9 @@ class QNetworkAccessManager;
 namespace MailTransport
 {
 /*!
+ * \class MailTransport::TokenResult
+ * \inmodule KMailTransport
+ * \inheaderfile MailTransport/OutlookOAuthTokenRequester
  * \brief The TokenResult class
  */
 class MAILTRANSPORT_EXPORT TokenResult
@@ -67,6 +70,12 @@ private:
 };
 
 class PKCE;
+/*!
+ * \class MailTransport::OutlookOAuthTokenRequester
+ * \inmodule KMailTransport
+ * \inheaderfile MailTransport/OutlookOAuthTokenRequester
+ * \brief OAuth token requester for Outlook
+ */
 class MAILTRANSPORT_EXPORT OutlookOAuthTokenRequester : public QObject
 {
     Q_OBJECT

@@ -24,7 +24,10 @@ namespace MailTransport
 class Transport;
 class TransportConfigWidgetPrivate;
 
-/**
+/*!
+  \class MailTransport::TransportConfigWidget
+  \inmodule KMailTransport
+  \inheaderfile MailTransport/TransportConfigWidget
   @internal
 
   Abstract configuration widget for a mail transport.  It makes sure that

@@ -11,6 +11,9 @@ namespace MailTransport
 {
 class TransportActivitiesAbstract;
 /*!
+ * \class MailTransport::TransportSortProxyModel
+ * \inmodule KMailTransport
+ * \inheaderfile MailTransport/TransportSortProxyModel
  * \author Laurent Montel <montel@kde.org>
  *
  * \brief The TransportSortProxyModel class

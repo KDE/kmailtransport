@@ -22,6 +22,9 @@ namespace MailTransport
 class ServerTestPrivate;
 
 /*!
+ * \class MailTransport::ServerTest
+ * \inmodule KMailTransport
+ * \inheaderfile MailTransport/ServerTest
  * This class can be used to test certain server to see if they support stuff.
  * \author Tom Albers <tomalbers@kde.nl>
  */

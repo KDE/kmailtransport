@@ -13,6 +13,9 @@ namespace MailTransport
 class TransportManager;
 class Transport;
 /*!
+ * \class MailTransport::TransportModel
+ * \inmodule KMailTransport
+ * \inheaderfile MailTransport/TransportModel
  * \author Laurent Montel <montel@kde.org>
  *
  * \brief The TransportModel class

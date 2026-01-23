@@ -14,6 +14,9 @@ namespace MailTransport
 class TransportJob;
 class Transport;
 /*!
+ * \struct MailTransport::TransportAbstractPluginInfo
+ * \inmodule KMailTransport
+ * \inheaderfile MailTransport/TransportAbstractPlugin
  * \brief The TransportAbstractPluginInfo struct
  * \author Laurent Montel <montel@kde.org>
  */
@@ -25,6 +28,9 @@ struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo {
 };
 
 /*!
+ * \class MailTransport::TransportAbstractPlugin
+ * \inmodule KMailTransport
+ * \inheaderfile MailTransport/TransportAbstractPlugin
  * \brief The TransportAbstractPlugin class
  * \author Laurent Montel <montel@kde.org>
  */

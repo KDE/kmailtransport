@@ -18,6 +18,9 @@ class TransportManager;
 class TransportTypePrivate;
 
 /*!
+  \class MailTransport::TransportType
+  \inmodule KMailTransport
+  \inheaderfile MailTransport/TransportType
   \brief A representation of a transport type.
 
   Represents an available transport type.  SMTP is available
