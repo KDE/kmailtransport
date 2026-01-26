@@ -182,8 +182,6 @@ void SMTPConfigWidget::init()
     // load the password
     d->transport->updatePasswordState();
     if (d->transport->isComplete()) {
-        d->ui.password->setRevealPasswordMode(KAuthorized::authorize(u"lineedit_reveal_password"_s) ? KPassword::RevealMode::Always
-                                                                                                    : KPassword::RevealMode::Never);
         d->ui.password->setPassword(d->transport->password());
     } else {
         if (d->transport->requiresAuthentication()) {
