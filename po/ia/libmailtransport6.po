@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:43+0000\n"
+"POT-Creation-Date: 2026-01-27 00:45+0000\n"
 "PO-Revision-Date: 2025-09-02 17:53+0200\n"
 "Last-Translator: giovanni <g.sora@tiscali.it>\n"
 "Language-Team: Interlingua <kde-i18n-doc@kde.org>\n"
@@ -257,12 +257,12 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p%"
 
-#: plugins/smtp/smtpconfigwidget.cpp:203
+#: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
 msgstr "Activitates"
 
-#: plugins/smtp/smtpconfigwidget.cpp:306
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -270,7 +270,7 @@ msgstr ""
 "Il falleva a verificar capacitate. Pro favor verifica porto e mdo de "
 "authentication."
 
-#: plugins/smtp/smtpconfigwidget.cpp:307
+#: plugins/smtp/smtpconfigwidget.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"

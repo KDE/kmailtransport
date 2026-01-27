@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:43+0000\n"
+"POT-Creation-Date: 2026-01-27 00:45+0000\n"
 "PO-Revision-Date: 2025-08-01 12:47+0300\n"
 "Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
@@ -254,12 +254,12 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%%p"
 
-#: plugins/smtp/smtpconfigwidget.cpp:203
+#: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
 msgstr "Etkinlikler"
 
-#: plugins/smtp/smtpconfigwidget.cpp:306
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -267,7 +267,7 @@ msgstr ""
 "Yetenek denetimi başarısız oldu. Lütfen kapıyı ve kimlik doğrulama kipini "
 "doğrulayın."
 
-#: plugins/smtp/smtpconfigwidget.cpp:307
+#: plugins/smtp/smtpconfigwidget.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"

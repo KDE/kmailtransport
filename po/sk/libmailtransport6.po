@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2025-11-28 00:43+0000\n"
+"POT-Creation-Date: 2026-01-27 00:45+0000\n"
 "PO-Revision-Date: 2023-12-10 15:07+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -251,12 +251,12 @@ msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:203
+#: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:306
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -264,7 +264,7 @@ msgstr ""
 "Zlyhalo skontrolovanie schopností. Prosím, skontrolujte port a režim "
 "overenia."
 
-#: plugins/smtp/smtpconfigwidget.cpp:307
+#: plugins/smtp/smtpconfigwidget.cpp:305
 #, fuzzy, kde-format
 #| msgid "Check Capabilities Failed"
 msgctxt "@title:window"
