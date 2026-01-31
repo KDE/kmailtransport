@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:45+0000\n"
+"POT-Creation-Date: 2026-01-31 00:44+0000\n"
 "PO-Revision-Date: 2014-08-13 00:22+0200\n"
 "Last-Translator: Sönke Dibbern <s_dibbern@web.de>\n"
 "Language-Team: Low Saxon <kde-i18n-nds@kde.org>\n"
@@ -249,7 +249,7 @@ msgstr ""
 msgid "The password to send to the server for authorization."
 msgstr "Dat Passwoort, dat den Server bi't Anmellen tostüert warrt"
 
-#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:558
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"

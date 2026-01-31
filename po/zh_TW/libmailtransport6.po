@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-27 00:45+0000\n"
+"POT-Creation-Date: 2026-01-31 00:44+0000\n"
 "PO-Revision-Date: 2025-08-16 13:26+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <zh-l10n@lists.slat.org>\n"
@@ -237,7 +237,7 @@ msgstr "若核取此功能，則將使用系統的代理伺服器設定來連線
 msgid "The password to send to the server for authorization."
 msgstr "要送到伺服器認證用的密碼。"
 
-#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:552
+#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:558
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
