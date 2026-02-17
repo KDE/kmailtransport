@@ -39,33 +39,39 @@ class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject
     Q_OBJECT
 public:
     /*!
-     * \brief TransportAbstractPlugin
-     * \param parent
-     */
+      Creates a new TransportAbstractPlugin with the specified parent object.
+    */
     explicit TransportAbstractPlugin(QObject *parent = nullptr);
     /*!
-     */
+      Destroys the plugin.
+    */
     ~TransportAbstractPlugin() override;
 
     /*!
-     */
+      Creates a transport job for the given transport and identifier.
+    */
     [[nodiscard]] virtual TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) = 0;
     /*!
-     */
+      Returns the list of transport names provided by this plugin.
+    */
     [[nodiscard]] virtual QList<TransportAbstractPluginInfo> names() const = 0;
     /*!
-     */
+      Configures the transport with the given identifier.
+    */
     [[nodiscard]] virtual bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent) = 0;
     /*!
-     */
+      Cleans up the transport resources.
+    */
     virtual void cleanUp(MailTransport::Transport *t);
     /*!
-     */
+      Initializes the transport with the given identifier.
+    */
     virtual void initializeTransport(MailTransport::Transport *t, const QString &identifier);
 
 Q_SIGNALS:
     /*!
-     */
+      Emitted when the plugin list should be updated.
+    */
     void updatePluginList();
 };
 }

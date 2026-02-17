@@ -37,7 +37,8 @@ public:
     explicit TransportComboBox(QWidget *parent = nullptr);
 
     /*!
-     */
+      Destroys the combo box.
+    */
     ~TransportComboBox() override;
 
     /**

@@ -26,17 +26,21 @@ public:
     };
 
     /*!
-     */
+      Creates a new TransportActivitiesAbstractPlugin with the specified parent widget.
+    */
     explicit TransportActivitiesAbstractPlugin(QWidget *parent = nullptr);
     /*!
-     */
+      Destroys the plugin.
+    */
     ~TransportActivitiesAbstractPlugin() override;
 
     /*!
-     */
+      Returns the current activity settings.
+    */
     [[nodiscard]] virtual TransportActivitiesAbstractPlugin::ActivitySettings activitiesSettings() const = 0;
     /*!
-     */
+      Sets the activity settings.
+    */
     virtual void setActivitiesSettings(const TransportActivitiesAbstractPlugin::ActivitySettings &activitySettings) = 0;
 };
 }

@@ -39,27 +39,34 @@ public:
     };
 
     /*!
-     */
+      Creates a TokenResult with an error code and error text.
+    */
     TokenResult(ErrorCode errorCode, const QString &errorText);
     /*!
-     */
+      Creates a TokenResult with an access token and refresh token.
+    */
     TokenResult(const QString &accessToken, const QString &refreshToken);
 
     /*!
-     */
+      Returns the access token.
+    */
     [[nodiscard]] QString accessToken() const;
     /*!
-     */
+      Returns the refresh token.
+    */
     [[nodiscard]] QString refreshToken() const;
 
     /*!
-     */
+      Returns whether this result contains an error.
+    */
     [[nodiscard]] bool hasError() const;
     /*!
-     */
+      Returns the error code.
+    */
     [[nodiscard]] ErrorCode errorCode() const;
     /*!
-     */
+      Returns the error text.
+    */
     [[nodiscard]] QString errorText() const;
 
 private:
@@ -81,27 +88,31 @@ class MAILTRANSPORT_EXPORT OutlookOAuthTokenRequester : public QObject
     Q_OBJECT
 public:
     /*!
-     * \brief OutlookOAuthTokenRequester
-     * \param clientId
-     * \param tenantId
-     * \param scopes
-     * \param parent
-     */
+      Creates a new OutlookOAuthTokenRequester with the specified credentials and parent object.
+      \a clientId The OAuth client ID.
+      \a tenantId The Azure tenant ID.
+      \a scopes The OAuth scopes to request.
+      \a parent The parent object.
+    */
     explicit OutlookOAuthTokenRequester(const QString &clientId, const QString &tenantId, const QStringList &scopes, QObject *parent = nullptr);
     /*!
-     */
+      Destroys the OutlookOAuthTokenRequester.
+    */
     ~OutlookOAuthTokenRequester() override;
 
     /*!
-     */
+      Requests a new OAuth token with an optional username hint.
+    */
     void requestToken(const QString &usernameHint = {});
     /*!
-     */
+      Refreshes an existing OAuth token.
+    */
     void refreshToken(const QString &refreshToken);
 
 Q_SIGNALS:
     /*!
-     */
+      Emitted when the token request or refresh is finished.
+    */
     void finished(const MailTransport::TokenResult &result);
 
 private:

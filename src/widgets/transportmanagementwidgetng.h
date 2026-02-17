@@ -40,14 +40,17 @@ public:
     ~TransportManagementWidgetNg() override;
 
     /*!
-     */
+      Returns whether plasma activities filtering is enabled.
+    */
     [[nodiscard]] bool enablePlasmaActivities() const;
     /*!
-     */
+      Enables or disables plasma activities filtering.
+    */
     void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
 
     /*!
-     */
+      Sets the TransportActivitiesAbstract object used for activities filtering.
+    */
     void setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract);
 
 private:
