@@ -340,7 +340,7 @@ void SmtpJob::slotResult(KJob *job)
         return;
     }
     if (qobject_cast<KSmtp::LoginJob *>(job)) {
-        if (job->error() == KSmtp::LoginJob::TokenExpired || job->errorText().contains(QStringLiteral("5.7.3"))) {
+        if (job->error() == KSmtp::LoginJob::TokenExpired || job->errorText().contains(QLatin1String("5.7.3"))) {
             removeSubjob(job);
             startPasswordRetrieval(/*force refresh */ true);
             return;
