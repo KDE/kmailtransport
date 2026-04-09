@@ -13,8 +13,8 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 23.08.3\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
+"X-Generator: Lokalize 23.08.3\n"
 
 #, kde-format
 msgid "Unnamed"
@@ -58,10 +58,7 @@ msgstr "Číslo portu servera"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "465."
@@ -156,15 +153,13 @@ msgstr "Nekryptované"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:68
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
 msgstr "TLS kryptovanie"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:71
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
 msgstr "TLS kryptovanie"
 
@@ -249,12 +244,12 @@ msgstr "Heslo ktoré bude poslané serveru kvôli autentifikácii."
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Aktivity"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
@@ -265,8 +260,7 @@ msgstr ""
 "overenia."
 
 #: plugins/smtp/smtpconfigwidget.cpp:305
-#, fuzzy, kde-format
-#| msgid "Check Capabilities Failed"
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Kontrola schopností zlyhala"
@@ -486,16 +480,7 @@ msgid "Unknown"
 msgstr "Neznáme"
 
 #: transport.cpp:212
-#, fuzzy, kde-format
-#| msgid ""
-#| "KWallet is not available. It is strongly recommended to use KWallet for "
-#| "managing your passwords.\n"
-#| "However, the password can be stored in the configuration file instead. "
-#| "The password is stored in an obfuscated format, but should not be "
-#| "considered secure from decryption efforts if access to the configuration "
-#| "file is obtained.\n"
-#| "Do you want to store the password for server '%1' in the configuration "
-#| "file?"
+#, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
 "recommended to use strong backend for managing your passwords.\n"
@@ -513,22 +498,19 @@ msgstr ""
 "Chcete uložiť heslo pre server '%1' v konfiguračnom súbore?"
 
 #: transport.cpp:221
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet nie je dostupný"
 
 #: transport.cpp:222
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Uložiť heslo"
 
 #: transport.cpp:223
-#, fuzzy, kde-format
-#| msgid "Do Not Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
 msgstr "Neukladať heslo"
@@ -544,15 +526,13 @@ msgid "You must create an outgoing account before sending."
 msgstr "Pred poslaním musíte vytvoriť odchádzajúci účet."
 
 #: transportmanager.cpp:223
-#, fuzzy, kde-format
-#| msgid "Create Account Now?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Vytvoriť účet teraz?"
 
 #: transportmanager.cpp:224
-#, fuzzy, kde-format
-#| msgid "Create Account Now"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Vytvoriť účet teraz"
@@ -574,30 +554,25 @@ msgstr ""
 "Chcete presunúť svoje heslá do KWalletu? "
 
 #: transportmanager.cpp:613
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Otázka"
 
 #: transportmanager.cpp:614
-#, fuzzy, kde-format
-#| msgid "Migrate"
+#, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Presunúť"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Keep"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keep"
 msgstr "Ponechať"
 
 #: transportmodel.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Predvolené)"
@@ -653,10 +628,9 @@ msgstr "Popis"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
-msgstr "&Upraviť..."
+msgstr "&Upraviť…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidgetng.ui:42
@@ -668,7 +642,7 @@ msgstr "Odst&rániť"
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Pri&dať…"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidgetng.ui:56
@@ -686,7 +660,7 @@ msgstr "Nastaviť ako predvolené"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transports on current activity"
-msgstr ""
+msgstr "Zobraziť iba transporty na aktuálnej aktivite"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -714,8 +688,7 @@ msgstr[1] "Chcete vymazať '%1' odchádzajúce účty ?"
 msgstr[2] "Chcete vymazať odchádzajúci účet '%1'?"
 
 #: widgets/transportmanagementwidgetng.cpp:161
-#, fuzzy, kde-format
-#| msgid "Remove outgoing account?"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Odstrániť odchádzajúci účet?"
@@ -724,25 +697,22 @@ msgstr "Odstrániť odchádzajúci účet?"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Pridať…"
 
 #: widgets/transportmanagementwidgetng.cpp:196
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr "Upraviť..."
+msgstr "Upraviť…"
 
 #: widgets/transportmanagementwidgetng.cpp:199
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Premenovať"
 
 #: widgets/transportmanagementwidgetng.cpp:203
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Odstrániť"
@@ -763,7 +733,6 @@ msgstr "Nastaviť ako predvolené"
 #~ msgstr " (Predvolené)"
 
 #, fuzzy
-#~| msgid "Add..."
 #~ msgctxt "@action:inmenu"
 #~ msgid "Add..."
 #~ msgstr "Pridať..."
@@ -808,8 +777,6 @@ msgstr "Nastaviť ako predvolené"
 #~ msgstr "Tento odchádzajúci účet nie je možné nastaviť."
 
 #, fuzzy
-#~| msgctxt "@option SMTP transport"
-#~| msgid "SMTP"
 #~ msgid "SMTP"
 #~ msgstr "SMTP"
 
