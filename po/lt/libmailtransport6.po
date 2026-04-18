@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:44+0000\n"
-"PO-Revision-Date: 2013-08-12 10:46+0300\n"
+"PO-Revision-Date: 2026-04-18 00:21+0300\n"
 "Last-Translator: Andrius Štikonas <andrius@stikonas.eu>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
 "Language: lt\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n%10>=2 && (n%100<10 || n"
 "%100>=20) ? 1 : n%10==0 || (n%100>10 && n%100<20) ? 2 : 3);\n"
-"X-Generator: Poedit 1.5.5\n"
+"X-Generator: Poedit 3.8\n"
 
 #, kde-format
 msgid "Unnamed"
@@ -33,7 +33,7 @@ msgstr "Unikalus identifikatorius"
 #: mailtransport.kcfg:16
 #, kde-format
 msgid "User-visible transport name"
-msgstr "Naudotojams matomas perdavimo pavadinimas"
+msgstr "Naudotojui matomas perdavimo pavadinimas"
 
 #. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
 #: mailtransport.kcfg:17
@@ -45,13 +45,13 @@ msgstr "Pavadinimas, kuris bus naudojamas kalbant apie šį serverį."
 #: mailtransport.kcfg:30
 #, kde-format
 msgid "Host name of the server"
-msgstr "Serverio vardas"
+msgstr "Serverio mazgo vardas"
 
 #. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:31
 #, kde-format
 msgid "The domain name or numerical address of the SMTP server."
-msgstr "SMTP serverio domeno vardas ar skaitmeninis adresas"
+msgstr "SMTP serverio domeno vardas ar skaitinis adresas."
 
 #. i18n: ectx: label, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:34
@@ -61,32 +61,32 @@ msgstr "Serverio prievado numeris"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, fuzzy, kde-format
-#| msgid ""
-#| "The port number that the SMTP server is listening on. The default port is "
-#| "25."
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "465."
-msgstr "SMTP serverio prievado numeris.  Numatytasis prievadas yra 25."
+msgstr ""
+"Prievado numeris, ties kuriuo SMTP serveris klausosi. Numatytasis prievadas "
+"yra 465."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
 #, kde-format
 msgid "User name needed for login"
-msgstr "Naudotojo vardas prisijungimui"
+msgstr "Prisijungimui reikalingas naudotojo vardas"
 
 #. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:40
 #, kde-format
 msgid "The user name to send to the server for authorization."
 msgstr ""
+"Naudotojo vardas, kurį siųsti serveriui, kad būtų gautos prieigos teisės."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:43
 #, kde-format
 msgid "Command to execute before sending a mail"
-msgstr ""
+msgstr "Komanda, kurią vykdyti prieš išsiunčiant laiškus"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:44
@@ -95,18 +95,21 @@ msgid ""
 "A command to run locally, prior to sending email. This can be used to set up "
 "SSH tunnels, for example. Leave it empty if no command should be run."
 msgstr ""
+"Komanda, kurią paleisti vietiniu lygmeniu, prieš siunčiant el. laiškus. Tai "
+"gali būti naudojama, pavyzdžiui, SSH tunelių paruošimui. Palikite tuščią, "
+"jei neturėtų būti paleidžiama jokia komanda."
 
 #. i18n: ectx: label, entry (options), group (Transport $(transportId))
 #: mailtransport.kcfg:47
 #, kde-format
 msgid "Options added to mailtransport method"
-msgstr ""
+msgstr "Parinktys pridėtos į mailtransport metodą"
 
 #. i18n: ectx: label, entry (requiresAuthentication), group (Transport $(transportId))
 #: mailtransport.kcfg:50
 #, kde-format
 msgid "Server requires authentication"
-msgstr "Serveris reikalauja tapatumo nustatymo"
+msgstr "Serveris reikalauja tapatybės nustatymo"
 
 #. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
 #: mailtransport.kcfg:51
@@ -115,12 +118,15 @@ msgid ""
 "Check this option if your SMTP server requires authentication before "
 "accepting mail. This is known as 'Authenticated SMTP' or simply ASMTP."
 msgstr ""
+"Pažymėkite šią parinktį, jeigu jūsų SMTP serveris, prieš priimdamas laiškus, "
+"reikalauja tapatybės nustatymo. Tai yra žinoma kaip „Nustatytos tapatybės "
+"SMTP“ (angl. Authenticated SMTP) arba tiesiog ASMTP."
 
 #. i18n: ectx: label, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:55
 #, kde-format
 msgid "Store password"
-msgstr "Išsaugoti slaptažodį"
+msgstr "Saugoti slaptažodį"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:58
@@ -134,12 +140,19 @@ msgid ""
 "should not be considered secure from decryption efforts if access to the "
 "configuration file is obtained."
 msgstr ""
+"Pažymėkite šią parinktį, jei norite, kad jūsų slaptažodis būtų saugomas.\n"
+"Jei yra prieinama KWallet, tada slaptažodis bus saugomas joje, kas yra "
+"laikoma saugu.\n"
+"Vis dėlto, jei KWallet yra neprieinama, tada slaptažodis bus saugomas "
+"konfigūracijos faile. Slaptažodis bus saugomas užtamsintu formatu, bet "
+"neturėtų būti manoma, kad jis yra apsaugotas nuo pastangų jį iššifruoti tuo "
+"atveju, jei bus gauta prieiga prie konfigūracijos failo."
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:62
 #, kde-format
 msgid "Encryption method used for communication"
-msgstr ""
+msgstr "Komunikacijai naudojamas šifravimo metodas"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:65
@@ -149,23 +162,21 @@ msgstr "Be šifravimo"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:68
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "TLS šifravimas"
+msgstr "SSL/TLS šifravimas"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:71
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "TLS šifravimas"
+msgstr "STARTTLS šifravimas"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:77
 #, kde-format
 msgid "Authentication method"
-msgstr "Autentifikacijos metodas"
+msgstr "Tapatybės nustatymo metodas"
 
 #. i18n: ectx: label, entry (specifyHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
@@ -175,7 +186,7 @@ msgstr "Autentifikacijos metodas"
 #: mailtransport.kcfg:108
 #, kde-format
 msgid "<!-- TODO -->"
-msgstr ""
+msgstr "<!-- ATLIKTINI DARBAI -->"
 
 #. i18n: ectx: whatsthis, entry (specifyHostname), group (Transport $(transportId))
 #: mailtransport.kcfg:95
@@ -185,12 +196,18 @@ msgid ""
 "server. This is useful when your system's hostname may not be set correctly "
 "or to mask your system's true hostname."
 msgstr ""
+"Pažymėkite šią parinktį norėdami, atliekant identifikaciją serveryje, "
+"naudoti tinkintą mazgo vardą. Tai naudinga tais atvejais, kai jūsų sistemos "
+"mazgo vardas yra, galbūt, nustatytas neteisingai arba siekiant paslėpti "
+"tikrąjį sistemos mazgo vardą."
 
 #. i18n: ectx: whatsthis, entry (localHostname), group (Transport $(transportId))
 #: mailtransport.kcfg:100
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
 msgstr ""
+"Įveskite mazgo vardą, kuris turėtų būti naudojamas atliekant identifikaciją "
+"serveryje."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:104
@@ -199,6 +216,9 @@ msgid ""
 "Check this option to use a custom sender address when identifying to the "
 "mail server. If not checked, the address from the identity is used."
 msgstr ""
+"Pažymėkite šią parinktį norėdami, atliekant identifikaciją serveryje, "
+"naudoti tinkintą siuntėjo adresą. Jei nepažymėta, bus naudojamas adresas iš "
+"tapatybės."
 
 #. i18n: ectx: whatsthis, entry (senderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:109
@@ -207,13 +227,15 @@ msgid ""
 "Enter the address that should be used to overwrite the default sender "
 "address."
 msgstr ""
+"Įveskite adresą, kuris turėtų būti naudojamas numatytojo siuntėjo adreso "
+"perrašymui."
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
 #: mailtransport.kcfg:112 plugins/smtp/smtpsettings.ui:287
 #, kde-format
 msgid "Connect using the system proxy settings"
-msgstr ""
+msgstr "Prisijungti naudojant sistemos įgaliotojo serverio nuostatas"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
 #: mailtransport.kcfg:113
@@ -222,40 +244,44 @@ msgid ""
 "If checked, the system proxy settings will be used to connect to the mail "
 "server."
 msgstr ""
+"Jei pažymėta, prisijungimui prie pašto serverio bus naudojamos sistemos "
+"įgaliotojo serverio nuostatos."
 
 #: plugins/smtp/smtpconfigwidget.cpp:151
 #, kde-format
 msgid "The password to send to the server for authorization."
-msgstr ""
+msgstr "Slaptažodis, kurį siųsti serveriui, kad būtų gautos prieigos teisės."
 
 #: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:558
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Veiklos"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
+"Nepavyko patikrinti galimybių. Patikrinkite prievadą ir tapatybės nustatymo "
+"veikseną."
 
 #: plugins/smtp/smtpconfigwidget.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
-msgstr ""
+msgstr "Galimybių patikrinimas patyrė nesėkmę"
 
 #: plugins/smtp/smtpjob.cpp:227
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
-"Norėdami naudotis šiuo SMTP serveriu, Jūs turite pateikti naudotojo vardą ir "
+"Norėdami naudoti šį SMTP serverį, turite pateikti naudotojo vardą ir "
 "slaptažodį."
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:29
@@ -267,45 +293,44 @@ msgstr "SMTP"
 #: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
 msgid "An SMTP server on the Internet"
-msgstr ""
+msgstr "SMTP serveris internete"
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:40
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
-msgstr ""
+msgstr "Konfigūruoti paskyrą"
 
 #. i18n: ectx: attribute (title), widget (QWidget, smptTab)
 #: plugins/smtp/smtpsettings.ui:37
 #, kde-format
 msgctxt "general smtp settings"
 msgid "General"
-msgstr "Bendri"
+msgstr "Bendra"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #: plugins/smtp/smtpsettings.ui:43
 #, kde-format
 msgid "Account Information"
-msgstr "Paskyros informacija"
+msgstr "Informacija apie paskyrą"
 
 #. i18n: ectx: property (text), widget (QLabel, hostLabel)
 #: plugins/smtp/smtpsettings.ui:50
-#, fuzzy, kde-format
-#| msgid "Outgoing mail &server:"
+#, kde-format
 msgid "Outgoing &mail server:"
-msgstr "Išsiunčiamų laiškų &serveris:"
+msgstr "Išsiunčiamų &laiškų serveris:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_requiresAuthentication)
 #: plugins/smtp/smtpsettings.ui:70
 #, kde-format
 msgid "Server &requires authentication"
-msgstr "Serveriui &reikia autentikacijos"
+msgstr "Serveris &reikalauja tapatybės nustatymo"
 
 #. i18n: ectx: property (text), widget (QLabel, usernameLabel)
 #: plugins/smtp/smtpsettings.ui:80
 #, kde-format
 msgid "&Login:"
-msgstr "&Registracijos vardas:"
+msgstr "&Prisijungimas:"
 
 #. i18n: ectx: property (text), widget (QLabel, passwordLabel)
 #: plugins/smtp/smtpsettings.ui:106
@@ -317,14 +342,14 @@ msgstr "Sl&aptažodis:"
 #: plugins/smtp/smtpsettings.ui:129
 #, kde-format
 msgid "&Store SMTP password"
-msgstr "Iš&saugoti SMTP slaptažodį"
+msgstr "&Saugoti SMTP slaptažodį"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
 #: plugins/smtp/smtpsettings.ui:150
 #, kde-format
 msgctxt "advanced smtp settings"
 msgid "Advanced"
-msgstr "Sudėtingesni"
+msgstr "Išplėstiniai"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_2)
 #: plugins/smtp/smtpsettings.ui:156
@@ -336,7 +361,7 @@ msgstr "Ryšio nuostatos"
 #: plugins/smtp/smtpsettings.ui:175
 #, kde-format
 msgid "This server does not support authentication"
-msgstr "Serveris nepalaiko autentikacijos"
+msgstr "Šis serveris nepalaiko tapatybės nustatymo"
 
 #. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
 #: plugins/smtp/smtpsettings.ui:192
@@ -358,17 +383,15 @@ msgstr "&Nėra"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
 #: plugins/smtp/smtpsettings.ui:235
-#, fuzzy, kde-format
-#| msgid "&SSL"
+#, kde-format
 msgid "&SSL/TLS"
-msgstr "&SSL"
+msgstr "&SSL/TLS"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
 #: plugins/smtp/smtpsettings.ui:242
-#, fuzzy, kde-format
-#| msgid "&TLS"
+#, kde-format
 msgid "START&TLS"
-msgstr "&TLS"
+msgstr "START&TLS"
 
 #. i18n: ectx: property (text), widget (QLabel, portLabel)
 #: plugins/smtp/smtpsettings.ui:251
@@ -380,7 +403,7 @@ msgstr "&Prievadas:"
 #: plugins/smtp/smtpsettings.ui:277
 #, kde-format
 msgid "Authentication:"
-msgstr "Tapatumo nustatymas:"
+msgstr "Tapatybės nustatymas:"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget_3)
 #: plugins/smtp/smtpsettings.ui:296
@@ -392,7 +415,7 @@ msgstr "SMTP nuostatos"
 #: plugins/smtp/smtpsettings.ui:306
 #, kde-format
 msgid "Hostna&me:"
-msgstr ""
+msgstr "&Mazgo vardas:"
 
 #. i18n: ectx: property (text), widget (QLabel, label_2)
 #: plugins/smtp/smtpsettings.ui:332
@@ -404,29 +427,29 @@ msgstr "Siuntėjo adresas:"
 #: plugins/smtp/smtpsettings.ui:349
 #, kde-format
 msgid "Precommand:"
-msgstr ""
+msgstr "Išankstinė komanda:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifyHostname)
 #: plugins/smtp/smtpsettings.ui:379
 #, kde-format
 msgid "Sen&d custom hostname to server"
-msgstr "Siųsti &derintą savo mazgo vardą serveriui"
+msgstr "Siųsti serveriui tinkintą mazgo vardą"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
 #: plugins/smtp/smtpsettings.ui:386
 #, kde-format
 msgid "Use custom sender address"
-msgstr ""
+msgstr "Naudoti tinkintą siuntėjo adresą"
 
 #: precommandjob.cpp:68
 #, kde-format
 msgid "Executing precommand '%1'."
-msgstr "Vykdomos išankstinė komanda „%1“."
+msgstr "Vykdomа išankstinė komanda „%1“."
 
 #: precommandjob.cpp:75
 #, kde-format
 msgid "Unable to start precommand '%1'."
-msgstr "Nepavyksta paleisti išankstinės komandos „%1“."
+msgstr "Nepavykо paleisti išankstinės komandos „%1“."
 
 #: precommandjob.cpp:77
 #, kde-format
@@ -436,37 +459,37 @@ msgstr "Klaida vykdant išankstinę komandą „%1“."
 #: precommandjob.cpp:93
 #, kde-format
 msgid "The precommand crashed."
-msgstr ""
+msgstr "Išankstinė komanda užstrigo."
 
 #: precommandjob.cpp:96
 #, kde-format
 msgid "The precommand exited with code %1."
-msgstr ""
+msgstr "Išankstinė komanda užbaigė darbą grąžindama kodą %1."
 
 #: transport.cpp:83
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
-msgstr "%1 #%2"
+msgstr "%1 nr. %2"
 
 #: transport.cpp:133
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
-msgstr "Paprastas tekstas"
+msgstr "Atvirasis tekstas"
 
 #: transport.cpp:137
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
-msgstr "Anonimas"
+msgstr "Anoniminis"
 
 #: transport.cpp:168
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
-msgstr "Nežinoma"
+msgstr "Nežinomas"
 
 #: transport.cpp:212
 #, kde-format
@@ -479,51 +502,53 @@ msgid ""
 "obtained.\n"
 "Do you want to store the password for server '%1' in the configuration file?"
 msgstr ""
+"QKeychain nerado vidinės pusės, skirtos saugoti slaptažodį. Yra primygtinai "
+"rekomenduojama slaptažodžių tvarkymui naudoti stiprią vidinę pusę.\n"
+"Vis dėlto, vietoj to, slaptažodis gali būti saugomas konfigūracijos faile. "
+"Slaptažodis būtų saugomas užtamsintu formatu, bet neturėtų būti manoma, kad "
+"jis yra apsaugotas nuo pastangų jį iššifruoti tuo atveju, jei bus gauta "
+"prieiga prie konfigūracijos failo.\n"
+"Ar norite serveriui „%1“ skirtą slaptažodį saugoti konfigūracijos faile?"
 
 #: transport.cpp:221
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
-msgstr "KDE slaptažodinė nepasiekiama"
+msgstr "KWallet neprieinama"
 
 #: transport.cpp:222
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
-msgstr "Išsaugoti slaptažodį"
+msgstr "Saugoti slaptažodį"
 
 #: transport.cpp:223
-#, fuzzy, kde-format
-#| msgid "Do Not Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
-msgstr "Neišsaugoti slaptažodžio"
+msgstr "Nesaugoti slaptažodžio"
 
 #: transportjob.cpp:122
 #, kde-format
 msgid "The outgoing account \"%1\" is not correctly configured."
-msgstr ""
+msgstr "Išsiuntimo paskyra „%1“ nėra teisingai sukonfigūruota."
 
 #: transportmanager.cpp:222
 #, kde-format
 msgid "You must create an outgoing account before sending."
-msgstr ""
+msgstr "Prieš siųsdami, privalote susikurti išsiuntimo paskyrą."
 
 #: transportmanager.cpp:223
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
-msgstr "Sukurti išsiuntimo paskyrą"
+msgstr "Ar sukurti paskyrą dabar?"
 
 #: transportmanager.cpp:224
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
-msgstr "Sukurti išsiuntimo paskyrą"
+msgstr "Sukurti paskyrą dabar"
 
 #: transportmanager.cpp:606
 #, kde-format
@@ -535,35 +560,36 @@ msgid ""
 "which stores sensitive data for you in a strongly encrypted file.\n"
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
+"Šie pašto perdavimai saugo savo slaptažodžius nešifruotame konfigūracijos "
+"faile.\n"
+"Saugumo sumetimais, apsvarstykite galimybę perkelti šiuos slaptažodžius į "
+"KWallet, KDE slaptažodinių tvarkymo įrankį,\n"
+"kuris saugo slaptus duomenis šifruotame faile.\n"
+"Ar norite perkelti slaptažodžius į KWallet?"
 
 #: transportmanager.cpp:613
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Klausimas"
 
 #: transportmanager.cpp:614
-#, fuzzy, kde-format
-#| msgid "Migrate"
+#, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
-msgstr "Perkėlimas"
+msgstr "Perkelti"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Keep"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keep"
 msgstr "Palikti"
 
 #: transportmodel.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr " (numatytas)"
+msgstr " (numatytasis)"
 
 #: transportmodel.cpp:88
 #, kde-format
@@ -588,20 +614,19 @@ msgstr "Pirmas žingsnis: Pasirinkite perdavimo tipą"
 #, kde-format
 msgctxt "The name of a mail transport"
 msgid "Name:"
-msgstr "Vardas:"
+msgstr "Pavadinimas:"
 
 #. i18n: ectx: property (text), widget (QCheckBox, setDefault)
 #: ui/addtransportdialog.ui:48
-#, fuzzy, kde-format
-#| msgid "Make this the default outgoing account."
+#, kde-format
 msgid "Make this the default outgoing account"
-msgstr "Nustatyti tai numatyta išsiuntimo paskyra."
+msgstr "Padaryti tai numatytąja išsiuntimo paskyra"
 
 #. i18n: ectx: property (text), widget (QLabel, descLabel)
 #: ui/addtransportdialog.ui:61
 #, kde-format
 msgid "Select an account type from the list below:"
-msgstr "Pasirinkite paskyros tipą iš žemiau esančio sąrašo:"
+msgstr "Pasirinkite žemiau esančiame sąraše paskyros tipą:"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: ui/addtransportdialog.ui:81
@@ -613,26 +638,25 @@ msgstr "Tipas"
 #: ui/addtransportdialog.ui:86
 #, kde-format
 msgid "Description"
-msgstr "Aprašymas"
+msgstr "Aprašas"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
-msgstr "&Keisti..."
+msgstr "&Modifikuoti…"
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidgetng.ui:42
 #, kde-format
 msgid "Remo&ve"
-msgstr "Pa&šalinti"
+msgstr "Paša&linti"
 
 #. i18n: ectx: property (text), widget (QPushButton, addButton)
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "Pri&dėti…"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidgetng.ui:56
@@ -644,17 +668,16 @@ msgstr "Pe&rvadinti"
 #: ui/transportmanagementwidgetng.ui:76
 #, kde-format
 msgid "&Set as Default"
-msgstr "Nurodyti kaip numatytą"
+msgstr "Nustatyti kaip numatytąjį"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transports on current activity"
-msgstr ""
+msgstr "Rodyti tik perdavimus dabartinėje veikloje"
 
 #: widgets/addtransportdialogng.cpp:94
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
 msgstr "Sukurti išsiuntimo paskyrą"
@@ -668,55 +691,51 @@ msgstr "Sukurti ir konfigūruoti"
 #: widgets/transportmanagementwidgetng.cpp:157
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
-msgstr ""
+msgstr "Ar tikrai norite pašalinti išsiuntimo paskyrą „%1“?"
 
 #: widgets/transportmanagementwidgetng.cpp:158
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
-msgstr[3] ""
+msgstr[0] "Ar tikrai norite pašalinti šią %1 išsiuntimo paskyrą?"
+msgstr[1] "Ar tikrai norite pašalinti šias %1 išsiuntimo paskyras?"
+msgstr[2] "Ar tikrai norite pašalinti šias %1 išsiuntimo paskyrų?"
+msgstr[3] "Ar tikrai norite pašalinti šią %1 išsiuntimo paskyrą?"
 
 #: widgets/transportmanagementwidgetng.cpp:161
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
-msgstr "Sukurti išsiuntimo paskyrą"
+msgstr "Šalinti išsiuntimo paskyrą?"
 
 #: widgets/transportmanagementwidgetng.cpp:191
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Pridėti…"
 
 #: widgets/transportmanagementwidgetng.cpp:196
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
-msgstr "Keisti..."
+msgstr "Modifikuoti…"
 
 #: widgets/transportmanagementwidgetng.cpp:199
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Pervadinti"
 
 #: widgets/transportmanagementwidgetng.cpp:203
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
-msgstr "Pašalinti"
+msgstr "Šalinti"
 
 #: widgets/transportmanagementwidgetng.cpp:209
 #, kde-format
 msgid "Set as Default"
-msgstr "Nustatyti numatytuoju"
+msgstr "Nustatyti kaip numatytąjį"
 
 #~ msgid "A&dd..."
 #~ msgstr "Į&dėti..."
