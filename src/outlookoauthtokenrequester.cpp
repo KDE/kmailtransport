@@ -20,7 +20,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QRandomGenerator64>
 #include <QTcpServer>
 #include <QTcpSocket>
-#include <QUrl>
+
 #include <QUrlQuery>
 
 using namespace MailTransport;
