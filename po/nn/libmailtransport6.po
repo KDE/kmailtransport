@@ -1,6 +1,5 @@
 # Translation of libmailtransport6 to Norwegian Nynorsk
 #
-# Karl Ove Hufthammer <karl@huftis.org>, 2008, 2010, 2011, 2020, 2022, 2023.
 # Eirik U. Birkeland <eirbir@gmail.com>, 2009, 2010.
 # Olav Selseng Vestreim <o.vest@operamail.com>, 2015.
 msgid ""
@@ -8,14 +7,14 @@ msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-01-31 00:44+0000\n"
-"PO-Revision-Date: 2023-03-04 16:23+0100\n"
+"PO-Revision-Date: 2026-04-27 21:52+0200\n"
 "Last-Translator: Karl Ove Hufthammer <karl@huftis.org>\n"
 "Language-Team: Norwegian Nynorsk <l10n-no@lister.huftis.org>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 22.12.2\n"
+"X-Generator: Lokalize 26.04.0\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
 "X-Environment: kde\n"
 "X-Accelerator-Marker: &\n"
@@ -63,11 +62,11 @@ msgstr "Portnummeret til tenaren"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
-#, fuzzy, kde-format
+#, kde-format
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "465."
-msgstr "Portnummeret som SMTP-tenaren lyttar på. Standardporten er 25."
+msgstr "Portnummeret som SMTP-tenaren lyttar på. Standardporten er 465."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
@@ -159,15 +158,15 @@ msgstr "Inga kryptering"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:68
-#, fuzzy, kde-format
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "TLS-kryptering"
+msgstr "SSL/TLS-kryptering"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:71
-#, fuzzy, kde-format
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "TLS-kryptering"
+msgstr "STARTTLS-kryptering"
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:77
@@ -248,12 +247,12 @@ msgstr "Brukarnamnet som skal sendast til tenaren ved innlogging."
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p %"
 
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "Aktivitetar"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
@@ -264,7 +263,7 @@ msgstr ""
 "portinnstillingane."
 
 #: plugins/smtp/smtpconfigwidget.cpp:305
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Kunne ikkje sjekka funksjonar"
@@ -501,19 +500,19 @@ msgstr ""
 "Vil du lagra passordet til tenaren «%1» i oppsettsfila?"
 
 #: transport.cpp:221
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
-msgstr "KDE Lommebokpassar er ikkje tilgjengeleg"
+msgstr "KWallet er ikkje tilgjengeleg"
 
 #: transport.cpp:222
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Lagra passord"
 
 #: transport.cpp:223
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
 msgstr "Ikkje lagra passord"
@@ -529,13 +528,13 @@ msgid "You must create an outgoing account before sending."
 msgstr "Du må leggja til ein konto for utgåande e-post først."
 
 #: transportmanager.cpp:223
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Vil du leggja til kontoen no?"
 
 #: transportmanager.cpp:224
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Legg til kontoen"
@@ -558,25 +557,25 @@ msgstr ""
 "Vil du flytta over passorda til KDE Lommebokpassar?"
 
 #: transportmanager.cpp:613
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Spørsmål"
 
 #: transportmanager.cpp:614
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Flytt over"
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:button"
 msgid "Keep"
 msgstr "Ta vare på"
 
 #: transportmodel.cpp:65
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (standard)"
@@ -632,7 +631,7 @@ msgstr "Skildring"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
-#, fuzzy, kde-format
+#, kde-format
 msgid "&Modify…"
 msgstr "&Endra …"
 
@@ -646,7 +645,7 @@ msgstr "&Fjern"
 #: ui/transportmanagementwidgetng.ui:49
 #, kde-format
 msgid "A&dd…"
-msgstr ""
+msgstr "&Legg til …"
 
 #. i18n: ectx: property (text), widget (QPushButton, renameButton)
 #: ui/transportmanagementwidgetng.ui:56
@@ -664,7 +663,7 @@ msgstr "&Bruk som standard"
 #: ui/transportmanagementwidgetng.ui:83
 #, kde-format
 msgid "Show only transports on current activity"
-msgstr ""
+msgstr "Vis berre overføringar frå gjeldande aktivitet"
 
 #: widgets/addtransportdialogng.cpp:94
 #, kde-format
@@ -693,7 +692,7 @@ msgstr[1] ""
 "Er du sikker på at du vil fjerna desse %1 kontoane for utgåande e-post?"
 
 #: widgets/transportmanagementwidgetng.cpp:161
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Fjerna konto for utgåande e-post?"
@@ -702,22 +701,22 @@ msgstr "Fjerna konto for utgåande e-post?"
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "Legg til …"
 
 #: widgets/transportmanagementwidgetng.cpp:196
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Endra …"
 
 #: widgets/transportmanagementwidgetng.cpp:199
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Endra namn"
 
 #: widgets/transportmanagementwidgetng.cpp:203
-#, fuzzy, kde-format
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Fjern"
