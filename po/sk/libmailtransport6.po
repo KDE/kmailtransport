@@ -68,13 +68,13 @@ msgstr "Číslo portu na ktorom počúva SMTP server. Východzí port je 25."
 #: mailtransport.kcfg:39
 #, kde-format
 msgid "User name needed for login"
-msgstr "Uživateľské meno potrebné pre prihlásenie"
+msgstr "Užívateľské meno potrebné pre prihlásenie"
 
 #. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:40
 #, kde-format
 msgid "The user name to send to the server for authorization."
-msgstr "Uživateľské meno ktoré sa posiela na servver pri prihlasovaní."
+msgstr "Užívateľské meno ktoré sa posiela na servver pri prihlasovaní."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:43
@@ -187,7 +187,7 @@ msgid ""
 "server. This is useful when your system's hostname may not be set correctly "
 "or to mask your system's true hostname."
 msgstr ""
-"Označte túto možnosť aby sa použilo vložené uživateľské meno hostiteľa pri "
+"Označte túto možnosť aby sa použilo vložené užívateľské meno hostiteľa pri "
 "identifikácii na server.Je to užitočné ak nemáte správne nastavené systémové "
 "meno hostiteľa alebo ho chcete maskovať.      "
 
@@ -269,7 +269,7 @@ msgstr "Kontrola schopností zlyhala"
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
-"Musíte vyplniť uživateľské meno a heslo aby ste mohli použiť tento SMTP "
+"Musíte vyplniť užívateľské meno a heslo aby ste mohli použiť tento SMTP "
 "server."
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:29
@@ -421,7 +421,7 @@ msgstr "Predpríkaz:"
 #: plugins/smtp/smtpsettings.ui:379
 #, kde-format
 msgid "Sen&d custom hostname to server"
-msgstr "Poslať uživateľove meno hostiteľa serveru(&d)"
+msgstr "Poslať užívateľove meno hostiteľa serveru(&d)"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
 #: plugins/smtp/smtpsettings.ui:386
