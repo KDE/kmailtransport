@@ -16,7 +16,6 @@ include(GenerateExportHeader)
 include(ECMGenerateHeaders)
 
 include(ECMSetupVersion)
-include(KDEGitCommitHooks)
 include(ECMCheckOutboundLicense)
 file(
     GLOB_RECURSE ALL_CLANG_FORMAT_SOURCE_FILES
