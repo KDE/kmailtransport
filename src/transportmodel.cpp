@@ -37,10 +37,15 @@ QVariant TransportModel::data(const QModelIndex &index, int role) const
             }
         }
     }
-    if (role != Qt::DisplayRole) {
-        return {};
+    TransportRoles transportRole;
+    if (role == Qt::DisplayRole) {
+        transportRole = static_cast<TransportRoles>(index.column());
+    } else {
+        // Called by QtQuick component
+        transportRole = static_cast<TransportRoles>(role);
     }
-    switch (static_cast<TransportRoles>(index.column())) {
+
+    switch (transportRole) {
     case NameRole:
         return generateTransportName(transport);
     case TransportNameRole:
@@ -96,6 +101,16 @@ QVariant TransportModel::headerData(int section, Qt::Orientation orientation, in
         }
     }
     return {};
+}
+
+QHash<int, QByteArray> TransportModel::roleNames() const
+{
+    return {{NameRole, "name"_ba},
+            {TransportNameRole, "transportName"_ba},
+            {TransportIdentifierRole, "transportIdentifier"_ba},
+            {DefaultRole, "default"_ba},
+            {ActivitiesRole, "activities"_ba},
+            {EnabledActivitiesRole, "enabledActivities"_ba}};
 }
 
 int TransportModel::transportId(int index) const

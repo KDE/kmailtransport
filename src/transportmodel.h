@@ -59,6 +59,10 @@ public:
       Returns the header data for the given section.
     */
     [[nodiscard]] QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
+    /*!
+     * Returns role names for QtQuick applications
+     */
+    [[nodiscard]] QHash<int, QByteArray> roleNames() const override;
 
     /*!
       Returns the transport ID at the given index.
