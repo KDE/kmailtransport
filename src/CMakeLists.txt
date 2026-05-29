@@ -110,10 +110,11 @@ target_link_libraries(
     KPim6MailTransport
     PUBLIC
         KF6::ConfigGui
+        KF6::CoreAddons
+        Qt::Widgets
     PRIVATE
         KF6::I18n
         KF6::WidgetsAddons
-        KF6::CoreAddons
         KF6::ConfigWidgets
         Qt::DBus
         Qt::Network
