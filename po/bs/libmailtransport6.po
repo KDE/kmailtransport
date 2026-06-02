@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:44+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2013-11-15 13:49+0000\n"
 "Last-Translator: Samir Ribić <Unknown>\n"
 "Language-Team: Bosnian <bs@li.org>\n"
@@ -596,7 +596,7 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Zadrži"
 
-#: transportmodel.cpp:65
+#: transportmodel.cpp:70
 #, fuzzy, kde-format
 #| msgctxt "@label the default mail transport"
 #| msgid " (Default)"
@@ -604,13 +604,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Podrazumijevano)"
 
-#: transportmodel.cpp:88
+#: transportmodel.cpp:93
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Ime"
 
-#: transportmodel.cpp:90
+#: transportmodel.cpp:95
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"

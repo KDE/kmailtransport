@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:44+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2026-04-18 00:21+0300\n"
 "Last-Translator: Andrius Štikonas <andrius@stikonas.eu>\n"
 "Language-Team: Lithuanian <kde-i18n-lt@kde.org>\n"
@@ -585,19 +585,19 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Palikti"
 
-#: transportmodel.cpp:65
+#: transportmodel.cpp:70
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (numatytasis)"
 
-#: transportmodel.cpp:88
+#: transportmodel.cpp:93
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Pavadinimas"
 
-#: transportmodel.cpp:90
+#: transportmodel.cpp:95
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"

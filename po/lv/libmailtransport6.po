@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:44+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2025-08-21 12:58+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -576,19 +576,19 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Paturēt"
 
-#: transportmodel.cpp:65
+#: transportmodel.cpp:70
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (noklusējums)"
 
-#: transportmodel.cpp:88
+#: transportmodel.cpp:93
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Nosaukums"
 
-#: transportmodel.cpp:90
+#: transportmodel.cpp:95
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"

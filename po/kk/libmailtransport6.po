@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:44+0000\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
 "PO-Revision-Date: 2013-09-20 03:53+0600\n"
 "Last-Translator: Sairan Kikkarin <sairan@computer.org>\n"
 "Language-Team: Kazakh <kde-i18n-doc@kde.org>\n"
@@ -591,7 +591,7 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Қала берісн"
 
-#: transportmodel.cpp:65
+#: transportmodel.cpp:70
 #, fuzzy, kde-format
 #| msgctxt "@label the default mail transport"
 #| msgid " (Default)"
@@ -599,13 +599,13 @@ msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Әдетті)"
 
-#: transportmodel.cpp:88
+#: transportmodel.cpp:93
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Атауы"
 
-#: transportmodel.cpp:90
+#: transportmodel.cpp:95
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"

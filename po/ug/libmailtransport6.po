@@ -7,15 +7,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-01-31 00:44+0000\n"
-"PO-Revision-Date: 2013-09-08 07:05+0900\n"
-"Last-Translator: Gheyret Kenji <gheyret@gmail.com>\n"
+"POT-Creation-Date: 2026-06-02 00:44+0000\n"
+"PO-Revision-Date: 2026-05-31 19:02-0400\n"
+"Last-Translator: Abduqadir Abliz <sahranbay@gmail.com>\n"
 "Language-Team: Uyghur Computer Science Association <UKIJ@yahoogroups.com>\n"
 "Language: ug\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Poedit 3.9\n"
 
 #, kde-format
 msgid "Unnamed"
@@ -25,37 +26,37 @@ msgstr "ئاتسىز"
 #: mailtransport.kcfg:12
 #, kde-format
 msgid "Unique identifier"
-msgstr ""
+msgstr "بىردىنبىر كىملىك"
 
 #. i18n: ectx: label, entry (name), group (Transport $(transportId))
 #: mailtransport.kcfg:16
 #, kde-format
 msgid "User-visible transport name"
-msgstr ""
+msgstr "ئىشلەتكۈچى كۆرەلەيدىغان يەتكۈزۈش ئىسمى"
 
 #. i18n: ectx: whatsthis, entry (name), group (Transport $(transportId))
 #: mailtransport.kcfg:17
 #, kde-format
 msgid "The name that will be used when referring to this server."
-msgstr ""
+msgstr "بۇ مۇلازىمېتىرغا تاپشۇرغاندا ئىشلىتىدىغان ئىسىم."
 
 #. i18n: ectx: label, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:30
 #, kde-format
 msgid "Host name of the server"
-msgstr ""
+msgstr "مۇلازىمېتىرنىڭ ئاتى"
 
 #. i18n: ectx: whatsthis, entry (host), group (Transport $(transportId))
 #: mailtransport.kcfg:31
 #, kde-format
 msgid "The domain name or numerical address of the SMTP server."
-msgstr ""
+msgstr "SMTP مۇلازىمېتىرنىڭ رايون ئىسمى ياكى سان ئادرېسى."
 
 #. i18n: ectx: label, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:34
 #, kde-format
 msgid "Port number of the server"
-msgstr ""
+msgstr "مۇلازىمېتىرنىڭ ئېغىز نومۇرى"
 
 #. i18n: ectx: whatsthis, entry (port), group (Transport $(transportId))
 #: mailtransport.kcfg:35
@@ -63,25 +64,25 @@ msgstr ""
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "465."
-msgstr ""
+msgstr "SMTP مۇلازىمېتىرنىڭ تىڭشىلىدىغان ئېغىز نومۇرى. كۆڭۈلدىكى ئېغىز 465."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
 #, kde-format
 msgid "User name needed for login"
-msgstr ""
+msgstr "تىزىمغا كىرىشتە زۆرۈر بولغان ئىشلەتكۈچى ئاتى"
 
 #. i18n: ectx: whatsthis, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:40
 #, kde-format
 msgid "The user name to send to the server for authorization."
-msgstr ""
+msgstr "مۇلازىمېتىرغا يوللاپ كىملىك دەلىللەيدىغان ئىشلەتكۈچى ئاتى."
 
 #. i18n: ectx: label, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:43
 #, kde-format
 msgid "Command to execute before sending a mail"
-msgstr ""
+msgstr "ئېلخەت يوللاشتىن ئىلگىرى ئىجرا قىلىنىدىغان بۇيرۇق"
 
 #. i18n: ectx: whatsthis, entry (precommand), group (Transport $(transportId))
 #: mailtransport.kcfg:44
@@ -144,17 +145,15 @@ msgstr "شىفىرلاش يوق"
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:68
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "SSL/TLS encryption"
-msgstr "TLS شىفىرلاش"
+msgstr ""
 
 #. i18n: ectx: label, entry (encryption), group (Transport $(transportId))
 #: mailtransport.kcfg:71
-#, fuzzy, kde-format
-#| msgid "TLS encryption"
+#, kde-format
 msgid "STARTTLS encryption"
-msgstr "TLS شىفىرلاش"
+msgstr ""
 
 #. i18n: ectx: label, entry (authenticationType), group (Transport $(transportId))
 #: mailtransport.kcfg:77
@@ -227,12 +226,12 @@ msgstr ""
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
-msgstr ""
+msgstr "%p%"
 
 #: plugins/smtp/smtpconfigwidget.cpp:201
 #, kde-format
 msgid "Activities"
-msgstr ""
+msgstr "پائالىيەت"
 
 #: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
@@ -255,7 +254,7 @@ msgstr ""
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
-msgstr "SMTP"
+msgstr ""
 
 #: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
@@ -266,7 +265,7 @@ msgstr ""
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"
-msgstr ""
+msgstr "ھېساب سەپلەش"
 
 #. i18n: ectx: attribute (title), widget (QWidget, smptTab)
 #: plugins/smtp/smtpsettings.ui:37
@@ -350,17 +349,15 @@ msgstr "يوق(&N)"
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionSsl)
 #: plugins/smtp/smtpsettings.ui:235
-#, fuzzy, kde-format
-#| msgid "&SSL"
+#, kde-format
 msgid "&SSL/TLS"
-msgstr "&SSL"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QRadioButton, encryptionTls)
 #: plugins/smtp/smtpsettings.ui:242
-#, fuzzy, kde-format
-#| msgid "&TLS"
+#, kde-format
 msgid "START&TLS"
-msgstr "&TLS"
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QLabel, portLabel)
 #: plugins/smtp/smtpsettings.ui:251
@@ -440,7 +437,7 @@ msgstr ""
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
-msgstr "%1 #%2"
+msgstr ""
 
 #: transport.cpp:133
 #, kde-format
@@ -458,7 +455,7 @@ msgstr "ئاتسىز"
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
-msgstr "نامەلۇم"
+msgstr "يوچۇن"
 
 #: transport.cpp:212
 #, kde-format
@@ -473,25 +470,22 @@ msgid ""
 msgstr ""
 
 #: transport.cpp:221
-#, fuzzy, kde-format
-#| msgid "KWallet Not Available"
+#, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
-msgstr "KWallet نى ئىشلەتكىلى بولمايدۇ"
+msgstr ""
 
 #: transport.cpp:222
-#, fuzzy, kde-format
-#| msgid "Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
-msgstr "ئىم ساقلاش"
+msgstr ""
 
 #: transport.cpp:223
-#, fuzzy, kde-format
-#| msgid "Do Not Store Password"
+#, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
-msgstr "ئىمنى ساقلىما"
+msgstr ""
 
 #: transportjob.cpp:122
 #, kde-format
@@ -504,18 +498,16 @@ msgid "You must create an outgoing account before sending."
 msgstr ""
 
 #: transportmanager.cpp:223
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
-msgstr "Create Outgoing Account"
+msgstr ""
 
 #: transportmanager.cpp:224
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
-msgstr "Create Outgoing Account"
+msgstr ""
 
 #: transportmanager.cpp:606
 #, kde-format
@@ -529,45 +521,40 @@ msgid ""
 msgstr ""
 
 #: transportmanager.cpp:613
-#, fuzzy, kde-format
-#| msgid "Question"
+#, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "سوئال"
 
 #: transportmanager.cpp:614
-#, fuzzy, kde-format
-#| msgid "Migrate"
+#, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
-msgstr "يۆتكە"
+msgstr ""
 
 #: transportmanager.cpp:615
-#, fuzzy, kde-format
-#| msgid "Keep"
+#, kde-format
 msgctxt "@action:button"
 msgid "Keep"
-msgstr "تەگمە"
+msgstr "ساقلاپ قال"
 
-#: transportmodel.cpp:65
-#, fuzzy, kde-format
-#| msgctxt "@label the default mail transport"
-#| msgid " (Default)"
+#: transportmodel.cpp:70
+#, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (كۆڭۈلدىكى)"
 
-#: transportmodel.cpp:88
+#: transportmodel.cpp:93
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "ئاتى"
 
-#: transportmodel.cpp:90
+#: transportmodel.cpp:95
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
-msgstr "تىپى"
+msgstr "تۈرى"
 
 #. i18n: ectx: property (windowTitle), widget (QWidget, AddTransportDialog)
 #: ui/addtransportdialog.ui:20
@@ -598,7 +585,7 @@ msgstr ""
 #: ui/addtransportdialog.ui:81
 #, kde-format
 msgid "Type"
-msgstr "تىپى"
+msgstr "تۈرى"
 
 #. i18n: ectx: property (text), widget (QTreeWidget, typeListView)
 #: ui/addtransportdialog.ui:86
@@ -608,10 +595,9 @@ msgstr "چۈشەندۈرۈش"
 
 #. i18n: ectx: property (text), widget (QPushButton, editButton)
 #: ui/transportmanagementwidgetng.ui:17
-#, fuzzy, kde-format
-#| msgid "&Modify..."
+#, kde-format
 msgid "&Modify…"
-msgstr "ئۆزگەرت(&M)..."
+msgstr ""
 
 #. i18n: ectx: property (text), widget (QPushButton, removeButton)
 #: ui/transportmanagementwidgetng.ui:42
@@ -644,11 +630,10 @@ msgid "Show only transports on current activity"
 msgstr ""
 
 #: widgets/addtransportdialogng.cpp:94
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
-msgstr "Create Outgoing Account"
+msgstr ""
 
 #: widgets/addtransportdialogng.cpp:97
 #, kde-format
@@ -668,35 +653,31 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 
 #: widgets/transportmanagementwidgetng.cpp:161
-#, fuzzy, kde-format
-#| msgid "Create Outgoing Account"
+#, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
-msgstr "Create Outgoing Account"
+msgstr ""
 
 #: widgets/transportmanagementwidgetng.cpp:191
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
-msgstr ""
+msgstr "قوش…"
 
 #: widgets/transportmanagementwidgetng.cpp:196
-#, fuzzy, kde-format
-#| msgid "Modify..."
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "ئۆزگەرت…"
 
 #: widgets/transportmanagementwidgetng.cpp:199
-#, fuzzy, kde-format
-#| msgid "Rename"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "ئات ئۆزگەرت"
 
 #: widgets/transportmanagementwidgetng.cpp:203
-#, fuzzy, kde-format
-#| msgid "Remove"
+#, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "چىقىرىۋەت"
@@ -716,7 +697,6 @@ msgstr "كۆڭۈلدىكى قىلىپ بەلگىلە"
 #~ msgid " (Default)"
 #~ msgstr " (كۆڭۈلدىكى)"
 
-#, fuzzy
 #~| msgid "Add..."
 #~ msgctxt "@action:inmenu"
 #~ msgid "Add..."
@@ -731,7 +711,6 @@ msgstr "كۆڭۈلدىكى قىلىپ بەلگىلە"
 #~ msgid "Akonadi Resource"
 #~ msgstr "Akonadi مەنبەسى"
 
-#, fuzzy
 #~| msgctxt "@option SMTP transport"
 #~| msgid "SMTP"
 #~ msgid "SMTP"
