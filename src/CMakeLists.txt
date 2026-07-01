@@ -241,3 +241,25 @@ install(
 ecm_generate_qdoc(KPim6MailTransport kmailtransport.qdocconf)
 
 add_subdirectory(plugins/smtp)
+
+ecm_add_installed_library_check(KPim6MailTransport
+    PACKAGE_NAME "KPim6MailTransport"
+    PACKAGE_VERSION ${MAILTRANSPORT_VERSION}
+    PACKAGE_TARGET_NAMESPACE "KPim6::"
+)
+
+ecm_installed_library_check_include_strings(KPim6MailTransport
+    HEADERS
+    ${MailTransport_HEADERS}
+    ${MailTransport_widgets_HEADERS}
+    ${MailTransport_plugins_HEADERS}
+    PREFIX mailtransport
+)
+
+ecm_installed_library_check_include_strings(KPim6MailTransport
+    HEADERS
+    ${MailTransport_CamelCase_HEADERS}
+    ${MailTransport_widgets_CamelCase_HEADERS}
+    ${MailTransport_plugins_CamelCase_HEADERS}
+    PREFIX MailTransport
+)
