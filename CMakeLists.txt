@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.7.40")
+set(PIM_VERSION "6.8.40")
 project(MailTransport VERSION ${PIM_VERSION})
 
 # ECM setup
