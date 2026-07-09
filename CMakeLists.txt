@@ -96,8 +96,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"libmailtransport6\")
 
 set(KMAILTRANSPORT_LIB_VERSION ${PIM_VERSION})
 
-set(KSMTP_LIB_VERSION "6.7.40")
-set(KGAPI_LIB_VERSION "6.7.40")
+set(KSMTP_LIB_VERSION "6.7.80")
+set(KGAPI_LIB_VERSION "6.7.80")
 set(QT6KEYCHAIN_LIB_VERSION "0.15.0")
 
 ########### Find packages ###########
