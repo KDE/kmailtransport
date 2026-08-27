@@ -14,12 +14,6 @@
 
 #include <memory>
 
-namespace KIO
-{
-class Job;
-class Slave;
-}
-
 class SmtpJobPrivate;
 
 namespace MailTransport
