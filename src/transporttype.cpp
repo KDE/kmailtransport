@@ -18,6 +18,8 @@ TransportType::TransportType(const TransportType &other)
 
     = default;
 
+TransportType::TransportType(TransportType &&other) noexcept = default;
+
 TransportType::~TransportType() = default;
 
 TransportType &TransportType::operator=(const TransportType &other)
@@ -27,6 +29,8 @@ TransportType &TransportType::operator=(const TransportType &other)
     }
     return *this;
 }
+
+TransportType &TransportType::operator=(TransportType &&other) noexcept = default;
 
 bool TransportType::operator==(const TransportType &other) const
 {

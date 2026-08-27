@@ -73,6 +73,11 @@ public:
     TransportType(const TransportType &other);
 
     /*!
+      Moves the \a other TransportType into this one.
+    */
+    TransportType(TransportType &&other) noexcept;
+
+    /*!
       Destroys the TransportType.
     */
     ~TransportType();
@@ -81,6 +86,11 @@ public:
      * Replaces the transport type by the \a other.
      */
     TransportType &operator=(const TransportType &other);
+
+    /*!
+     * Moves the \a other transport type into this one.
+     */
+    TransportType &operator=(TransportType &&other) noexcept;
 
     /*!
      * Compares the transport type with the \a other.
