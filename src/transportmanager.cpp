@@ -370,7 +370,7 @@ void TransportManager::removeTransport(Transport::Id id)
 
 void TransportManagerPrivate::readConfig()
 {
-    QList<Transport *> oldTransports = transports;
+    QList<Transport *> oldTransports = std::move(transports);
     transports.clear();
 
     static QRegularExpression re(u"^Transport (.+)$"_s);
@@ -456,7 +456,7 @@ void TransportManagerPrivate::updatePluginList()
             type.d->mDescription = info.description;
             type.d->mIdentifier = info.identifier;
             type.d->mIsAkonadiResource = info.isAkonadi;
-            types << type;
+            types << std::move(type);
         }
     }
 }

@@ -186,7 +186,7 @@ void FakeServer::writeServerPart(int scenarioNumber)
         QVERIFY(scenario.first().startsWith("C: "));
     }
 
-    m_scenarios[scenarioNumber] = scenario;
+    m_scenarios[scenarioNumber] = std::move(scenario);
 }
 
 void FakeServer::readClientPart(int scenarioNumber)
@@ -224,7 +224,7 @@ void FakeServer::readClientPart(int scenarioNumber)
         QVERIFY(scenario.first().startsWith("S: "));
     }
 
-    m_scenarios[scenarioNumber] = scenario;
+    m_scenarios[scenarioNumber] = std::move(scenario);
 }
 
 #include "moc_fakeserver.cpp"

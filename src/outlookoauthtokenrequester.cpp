@@ -138,7 +138,7 @@ void OutlookOAuthTokenRequester::requestToken(const QString &usernameHint)
     if (!redirectUri.has_value()) {
         Q_EMIT finished({TokenResult::InternalError, u"Failed to start local HTTP server to receive Outlook OAuth2 authorization code"_s});
     }
-    mRedirectUri = *redirectUri;
+    mRedirectUri = std::move(*redirectUri);
 
     QUrl url(u"https://login.microsoftonline.com/%1/oauth2/v2.0/authorize"_s.arg(mTenantId));
     QUrlQuery query{{u"client_id"_s, mClientId},
