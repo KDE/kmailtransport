@@ -134,7 +134,9 @@ void TransportManagementWidgetNgPrivate::editClicked()
     const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();
     const QModelIndex modelIndex = ui.transportTreeView->model()->index(index.row(), TransportModel::TransportRoles::TransportIdentifierRole);
     Transport *transport = TransportManager::self()->transportById(modelIndex.data().toInt());
-    TransportManager::self()->configureTransport(transport->identifier(), transport, q);
+    if (transport) {
+        TransportManager::self()->configureTransport(transport->identifier(), transport, q);
+    }
 }
 
 void TransportManagementWidgetNgPrivate::renameClicked()

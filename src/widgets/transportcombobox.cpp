@@ -78,7 +78,10 @@ bool TransportComboBox::setCurrentTransport(int transportId)
 
 QString TransportComboBox::transportType() const
 {
-    return TransportManager::self()->transportById(currentTransportId())->identifier();
+    if (auto transport = TransportManager::self()->transportById(currentTransportId()); transport) {
+        return transport->identifier();
+    }
+    return {};
 }
 
 TransportActivitiesAbstract *TransportComboBox::transportActivitiesAbstract() const
