@@ -39,7 +39,7 @@ Transport::~Transport() = default;
 
 bool Transport::isValid() const
 {
-    return (id() > 0) && !host().isEmpty() && port() <= 65536;
+    return (id() > 0) && !host().isEmpty() && port() < 65536;
 }
 
 void Transport::loadPassword()
