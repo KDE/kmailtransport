@@ -295,7 +295,6 @@ void SMTPConfigWidget::slotTestFinished(const QList<int> &results)
     d->ui.checkCapabilitiesStack->setCurrentIndex(0);
 
     d->ui.checkCapabilities->setEnabled(true);
-    d->serverTest->deleteLater();
 
     // If the servertest did not find any usable authentication modes, assume the
     // connection failed and don't disable any of the radioboxes.
@@ -305,6 +304,7 @@ void SMTPConfigWidget::slotTestFinished(const QList<int> &results)
                            i18nc("@title:window", "Check Capabilities Failed"));
         d->serverTestFailed = true;
         d->serverTest->deleteLater();
+        d->serverTest = nullptr;
         return;
     }
 
@@ -331,6 +331,7 @@ void SMTPConfigWidget::slotTestFinished(const QList<int> &results)
         d->ui.kcfg_port->setValue(portValue == -1 ? SMTP_PORT : portValue);
     }
     d->serverTest->deleteLater();
+    d->serverTest = nullptr;
 }
 
 void SMTPConfigWidget::hostNameChanged(const QString &text)
