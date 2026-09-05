@@ -93,7 +93,7 @@ void PreCommandJobPrivate::slotFinished(int exitCode, QProcess::ExitStatus exitS
         q->setErrorText(i18n("The precommand crashed."));
     } else if (exitCode != 0) {
         q->setError(KJob::UserDefinedError);
-        q->setErrorText(i18n("The precommand exited with code %1.", process->exitStatus()));
+        q->setErrorText(i18n("The precommand exited with code %1.", process->exitCode()));
     }
     q->emitResult();
 }
