@@ -169,7 +169,9 @@ bool TransportModel::setData(const QModelIndex &modelIndex, const QVariant &valu
 
 void TransportModel::setShowDefault(bool show)
 {
+    beginResetModel();
     mShowDefault = show;
+    endResetModel();
 }
 
 #include "moc_transportmodel.cpp"
