@@ -155,10 +155,10 @@ bool TransportModel::setData(const QModelIndex &modelIndex, const QVariant &valu
     switch (static_cast<TransportRoles>(modelIndex.column())) {
     case NameRole: {
         const QModelIndex newIndex = index(modelIndex.row(), NameRole);
-        Q_EMIT dataChanged(newIndex, newIndex);
         transport->setName(value.toString());
         transport->forceUniqueName();
         transport->save();
+        Q_EMIT dataChanged(newIndex, newIndex);
         return true;
     }
     default:
