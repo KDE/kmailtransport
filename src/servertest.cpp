@@ -114,11 +114,7 @@ void ServerTestPrivate::finalResult()
     normalSocketFinished = false;
     tlsFinished = false;
 
-    QList<int> resultsAsVector;
-    resultsAsVector.reserve(connectionResults.size());
-    for (int res : std::as_const(connectionResults)) {
-        resultsAsVector.append(res);
-    }
+    const QList<int> resultsAsVector(connectionResults.cbegin(), connectionResults.cend());
 
     Q_EMIT q->finished(resultsAsVector);
 }
