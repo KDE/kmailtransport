@@ -376,14 +376,11 @@ void TransportManagerPrivate::readConfig()
     static const QRegularExpression re(u"^Transport (.+)$"_s);
     const QStringList groups = config->groupList().filter(re);
     for (const QString &s : groups) {
-        const QRegularExpressionMatch match = re.match(s);
-        if (!match.hasMatch()) {
-            continue;
-        }
         Transport *t = nullptr;
         // see if we happen to have that one already
-        const QString capturedString = match.captured(1);
-        const QString checkString = "Transport "_L1 + capturedString;
+        // We capture "Transport foo" => we need only "foo" => mid(10)
+        const QString capturedString = s.mid(10); // strip "Transport "
+        const QString &checkString = s;
         for (Transport *old : oldTransports) {
             if (old->currentGroup() == checkString) {
                 qCDebug(MAILTRANSPORT_LOG) << "reloading existing transport:" << s;
