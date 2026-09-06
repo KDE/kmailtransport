@@ -11,7 +11,6 @@ using namespace Qt::Literals::StringLiterals;
 #include "plugins/transportabstractplugin.h"
 #include "plugins/transportpluginmanager.h"
 #include "transport.h"
-#include "transport_p.h"
 #include "transportjob.h"
 #include "transporttype_p.h"
 #include "widgets/addtransportdialogng.h"
