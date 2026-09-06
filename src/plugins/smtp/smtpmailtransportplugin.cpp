@@ -30,7 +30,7 @@ QList<MailTransport::TransportAbstractPluginInfo> SMTPMailTransportPlugin::names
     info.description = i18n("An SMTP server on the Internet");
     info.identifier = u"SMTP"_s;
     info.isAkonadi = false;
-    return QList<MailTransport::TransportAbstractPluginInfo>() << info;
+    return {std::move(info)};
 }
 
 bool SMTPMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)

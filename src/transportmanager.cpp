@@ -373,7 +373,7 @@ void TransportManagerPrivate::readConfig()
     QList<Transport *> oldTransports = std::move(transports);
     transports.clear();
 
-    static QRegularExpression re(u"^Transport (.+)$"_s);
+    static const QRegularExpression re(u"^Transport (.+)$"_s);
     const QStringList groups = config->groupList().filter(re);
     for (const QString &s : groups) {
         const QRegularExpressionMatch match = re.match(s);

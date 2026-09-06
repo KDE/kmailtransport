@@ -123,8 +123,9 @@ static void checkHighestEnabledButton(QButtonGroup *group)
 {
     Q_ASSERT(group);
 
-    for (int i = group->buttons().count() - 1; i >= 0; --i) {
-        QAbstractButton *b = group->buttons().at(i);
+    const auto listButton = group->buttons();
+    for (int i = listButton.count() - 1; i >= 0; --i) {
+        QAbstractButton *b = listButton.at(i);
         if (b && b->isEnabled()) {
             b->animateClick();
             return;
@@ -349,8 +350,9 @@ void SMTPConfigWidget::hostNameChanged(const QString &text)
 
     d->resetAuthCapabilities();
     if (d->encryptionGroup) {
-        for (int i = 0; i < d->encryptionGroup->buttons().count(); ++i) {
-            d->encryptionGroup->buttons().at(i)->setEnabled(true);
+        const auto listButtons = d->encryptionGroup->buttons();
+        for (int i = 0; i < listButtons.count(); ++i) {
+            listButtons.at(i)->setEnabled(true);
         }
     }
 }
