@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:44+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2025-09-19 18:25+0300\n"
 "Last-Translator: Tommi Nieminen <translator@legisign.org>\n"
 "Language-Team: Finnish <kde-i18n-doc@kde.org>\n"
@@ -256,7 +256,7 @@ msgstr "%p %"
 msgid "Activities"
 msgstr "Aktiviteetit"
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -264,7 +264,7 @@ msgstr ""
 "Ominaisuuksien tarkistaminen epäonnistui. Tarkista portti ja "
 "tunnistautumistapa."
 
-#: plugins/smtp/smtpconfigwidget.cpp:305
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
@@ -678,49 +678,49 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Luo ja määritä"
 
-#: widgets/transportmanagementwidgetng.cpp:157
+#: widgets/transportmanagementwidgetng.cpp:159
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Haluatko poistaa lähtevän tilin %1?"
 
-#: widgets/transportmanagementwidgetng.cpp:158
+#: widgets/transportmanagementwidgetng.cpp:160
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Haluatko varmasti poistaa tämän lähtevän postin tilin?"
 msgstr[1] "Haluatko varmasti poistaa nämä %1 lähtevän postin tiliä?"
 
-#: widgets/transportmanagementwidgetng.cpp:161
+#: widgets/transportmanagementwidgetng.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Poistetaanko lähtevä tili?"
 
-#: widgets/transportmanagementwidgetng.cpp:191
+#: widgets/transportmanagementwidgetng.cpp:193
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Lisää…"
 
-#: widgets/transportmanagementwidgetng.cpp:196
+#: widgets/transportmanagementwidgetng.cpp:198
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Muuta…"
 
-#: widgets/transportmanagementwidgetng.cpp:199
+#: widgets/transportmanagementwidgetng.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Muuta nimeä"
 
-#: widgets/transportmanagementwidgetng.cpp:203
+#: widgets/transportmanagementwidgetng.cpp:205
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Poista"
 
-#: widgets/transportmanagementwidgetng.cpp:209
+#: widgets/transportmanagementwidgetng.cpp:211
 #, kde-format
 msgid "Set as Default"
 msgstr "Aseta oletukseksi"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:44+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2025-07-31 03:42+0200\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian <kde-i18n-doc@kde.org>\n"
@@ -254,7 +254,7 @@ msgstr "%p%"
 msgid "Activities"
 msgstr "ქმედებები"
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -262,7 +262,7 @@ msgstr ""
 "შესაძლებლობების შემოწმების შეცდომა. გადაამოწმეთ პორტი და ავთენტიკაციის "
 "რეჟიმი."
 
-#: plugins/smtp/smtpconfigwidget.cpp:305
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
@@ -677,49 +677,49 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "შექმნა და მორგება"
 
-#: widgets/transportmanagementwidgetng.cpp:157
+#: widgets/transportmanagementwidgetng.cpp:159
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "გნებავთ წაშალოთ გამავალი ანგარიში '%1'?"
 
-#: widgets/transportmanagementwidgetng.cpp:158
+#: widgets/transportmanagementwidgetng.cpp:160
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "გნებავთ წაშალოთ ეს %1 გამავალი ანგარიში ?"
 msgstr[1] "გნებავთ წაშალოთ ეს %1 გამავალი ანგარიში ?"
 
-#: widgets/transportmanagementwidgetng.cpp:161
+#: widgets/transportmanagementwidgetng.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "წავშალო გამავალი ანგარიში?"
 
-#: widgets/transportmanagementwidgetng.cpp:191
+#: widgets/transportmanagementwidgetng.cpp:193
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "დამატება…"
 
-#: widgets/transportmanagementwidgetng.cpp:196
+#: widgets/transportmanagementwidgetng.cpp:198
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "ჩასწორება…"
 
-#: widgets/transportmanagementwidgetng.cpp:199
+#: widgets/transportmanagementwidgetng.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "გადარქმევა"
 
-#: widgets/transportmanagementwidgetng.cpp:203
+#: widgets/transportmanagementwidgetng.cpp:205
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "წაშლა"
 
-#: widgets/transportmanagementwidgetng.cpp:209
+#: widgets/transportmanagementwidgetng.cpp:211
 #, kde-format
 msgid "Set as Default"
 msgstr "ნაგულისხმევად დაყენება"

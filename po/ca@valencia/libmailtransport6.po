@@ -3,14 +3,14 @@
 # This file is distributed under the license LGPL version 2.1 or
 # version 3 or later versions approved by the membership of KDE e.V.
 #
-# SPDX-FileCopyrightText: 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2015, 2018, 2019, 2020, 2022, 2024, 2025 Josep M. Ferrer <txemaq@gmail.com>
-# SPDX-FileCopyrightText: 2009, 2010 Manuel Tortosa Moreno <manutortosa@gmail.com>
-# SPDX-FileCopyrightText: 2012, 2013, 2014, 2016, 2017, 2018, 2019, 2020 Antoni Bella Pérez <antonibella5@yahoo.com>
+# SPDX-FileCopyrightText: 2007-2013, 2015, 2018-2020, 2022, 2024-2025 Josep M. Ferrer <txemaq@gmail.com>
+# SPDX-FileCopyrightText: 2009-2010 Manuel Tortosa Moreno <manutortosa@gmail.com>
+# SPDX-FileCopyrightText: 2012-2014, 2016-2020 Antoni Bella Pérez <antonibella5@yahoo.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:44+0000\n"
+"POT-Creation-Date: 2026-09-06 00:46+0000\n"
 "PO-Revision-Date: 2025-07-31 16:45+0200\n"
 "Last-Translator: Josep M. Ferrer <txemaq@gmail.com>\n"
 "Language-Team: Catalan <kde-i18n-ca@kde.org>\n"
@@ -265,7 +265,7 @@ msgstr "%p%"
 msgid "Activities"
 msgstr "Activitats"
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:303
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -273,7 +273,7 @@ msgstr ""
 "S'ha produït un error mentre es comprovaven les capacitats. Verifiqueu el "
 "port i el mode d'autenticació."
 
-#: plugins/smtp/smtpconfigwidget.cpp:305
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
@@ -692,49 +692,49 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Crea i configura"
 
-#: widgets/transportmanagementwidgetng.cpp:157
+#: widgets/transportmanagementwidgetng.cpp:159
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Voleu eliminar el compte eixint «%1»?"
 
-#: widgets/transportmanagementwidgetng.cpp:158
+#: widgets/transportmanagementwidgetng.cpp:160
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Segur que voleu eliminar este compte eixint %1?"
 msgstr[1] "Segur que voleu eliminar estos comptes ixents %1?"
 
-#: widgets/transportmanagementwidgetng.cpp:161
+#: widgets/transportmanagementwidgetng.cpp:163
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Voleu eliminar el compte eixint?"
 
-#: widgets/transportmanagementwidgetng.cpp:191
+#: widgets/transportmanagementwidgetng.cpp:193
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Afig…"
 
-#: widgets/transportmanagementwidgetng.cpp:196
+#: widgets/transportmanagementwidgetng.cpp:198
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Modifica…"
 
-#: widgets/transportmanagementwidgetng.cpp:199
+#: widgets/transportmanagementwidgetng.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Canvia el nom"
 
-#: widgets/transportmanagementwidgetng.cpp:203
+#: widgets/transportmanagementwidgetng.cpp:205
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Elimina"
 
-#: widgets/transportmanagementwidgetng.cpp:209
+#: widgets/transportmanagementwidgetng.cpp:211
 #, kde-format
 msgid "Set as Default"
 msgstr "Establix com a predeterminat"
