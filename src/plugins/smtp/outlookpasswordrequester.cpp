@@ -109,7 +109,7 @@ void OutlookPasswordRequester::onTokenRequestFinished(const TokenResult &result)
     auto job = new QKeychain::WritePasswordJob(u"mailtransports"_s);
     job->setKey(QString::number(transport()->id()));
     job->setBinaryData(serializeTokens(result));
-    connect(job, &QKeychain::WritePasswordJob::finished, this, [result](QKeychain::Job *job) {
+    connect(job, &QKeychain::WritePasswordJob::finished, this, [](QKeychain::Job *job) {
         if (job->error() != QKeychain::Error::NoError) {
             qCWarning(MAILTRANSPORT_SMTP_LOG) << "Failed to store Outlook OAuth2 token to keychain:" << job->errorString();
         }
