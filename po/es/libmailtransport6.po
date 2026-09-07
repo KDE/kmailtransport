@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-06-02 00:44+0000\n"
+"POT-Creation-Date: 2026-09-07 00:46+0000\n"
 "PO-Revision-Date: 2025-08-01 00:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -252,18 +252,18 @@ msgstr ""
 "Si está marcado, se usarán las preferencias de «proxy» del sistema para "
 "conectarse con el servidor de correo."
 
-#: plugins/smtp/smtpconfigwidget.cpp:151
+#: plugins/smtp/smtpconfigwidget.cpp:152
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "La contraseña que se envía al servidor para la autorización."
 
-#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:558
+#: plugins/smtp/smtpconfigwidget.cpp:164 servertest.cpp:554
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p %"
 
-#: plugins/smtp/smtpconfigwidget.cpp:201
+#: plugins/smtp/smtpconfigwidget.cpp:202
 #, kde-format
 msgid "Activities"
 msgstr "Actividades"
@@ -539,24 +539,24 @@ msgstr "No guardar contraseña"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "La cuenta de correo saliente «%1» no está correctamente configurada."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:221
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Debe crear una cuenta saliente antes de realizar un envío."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "¿Crear cuenta ahora?"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Crear cuenta ahora"
 
-#: transportmanager.cpp:606
+#: transportmanager.cpp:602
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -573,19 +573,19 @@ msgstr ""
 "que almacena datos sensibles en un archivo fuertemente cifrado.\n"
 "¿ Desea migrar sus contraseñas a KWallet?"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:609
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Pregunta"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:610
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Migrar"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:611
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"
@@ -694,49 +694,49 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Crear y configurar"
 
-#: widgets/transportmanagementwidgetng.cpp:157
+#: widgets/transportmanagementwidgetng.cpp:160
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "¿Quiere eliminar la cuenta saliente «%1»?"
 
-#: widgets/transportmanagementwidgetng.cpp:158
+#: widgets/transportmanagementwidgetng.cpp:161
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "¿Realmente quiere eliminar esta cuenta saliente?"
 msgstr[1] "¿Realmente quiere eliminar estas %1 cuentas salientes?"
 
-#: widgets/transportmanagementwidgetng.cpp:161
+#: widgets/transportmanagementwidgetng.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "¿Eliminar cuenta saliente?"
 
-#: widgets/transportmanagementwidgetng.cpp:191
+#: widgets/transportmanagementwidgetng.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Añadir…"
 
-#: widgets/transportmanagementwidgetng.cpp:196
+#: widgets/transportmanagementwidgetng.cpp:199
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Modificar…"
 
-#: widgets/transportmanagementwidgetng.cpp:199
+#: widgets/transportmanagementwidgetng.cpp:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Cambiar nombre"
 
-#: widgets/transportmanagementwidgetng.cpp:203
+#: widgets/transportmanagementwidgetng.cpp:206
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Eliminar"
 
-#: widgets/transportmanagementwidgetng.cpp:209
+#: widgets/transportmanagementwidgetng.cpp:212
 #, kde-format
 msgid "Set as Default"
 msgstr "Poner como predeterminado"

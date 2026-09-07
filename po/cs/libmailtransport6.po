@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-06 00:46+0000\n"
+"POT-Creation-Date: 2026-09-07 00:46+0000\n"
 "PO-Revision-Date: 2026-08-14 11:49+0200\n"
 "Last-Translator: Libor Filípek <libor.filipek@gmail.com>\n"
 "Language-Team: \n"
@@ -240,29 +240,29 @@ msgstr ""
 "Pokud je zaškrtnuto, systémové nastavení proxy bude použito pro připojení k "
 "e-mailovému serveru."
 
-#: plugins/smtp/smtpconfigwidget.cpp:151
+#: plugins/smtp/smtpconfigwidget.cpp:152
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Heslo, které bude odesláno serveru k ověření."
 
-#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:558
+#: plugins/smtp/smtpconfigwidget.cpp:164 servertest.cpp:554
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p%"
 
-#: plugins/smtp/smtpconfigwidget.cpp:201
+#: plugins/smtp/smtpconfigwidget.cpp:202
 #, kde-format
 msgid "Activities"
 msgstr "Aktivity"
 
-#: plugins/smtp/smtpconfigwidget.cpp:303
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr "Nepodařilo se ověřit oprávnění. Zkontrolujte port a režim ověřování."
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
@@ -522,24 +522,24 @@ msgstr "Neukládat heslo"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Odchozí účet \"%1\" není správně nastaven."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:221
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Před odesláním musíte vytvořit účet pro odesílání."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Nyní vytvořit účet?"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Nyní vytvořit účet"
 
-#: transportmanager.cpp:606
+#: transportmanager.cpp:602
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -555,19 +555,19 @@ msgstr ""
 "data do zašifrovaného úložiště.\n"
 "Přejete si převést hesla do úschovny?"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:609
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Otázka"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:610
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Převést"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:611
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"
@@ -676,12 +676,12 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Vytvořit a nastavit"
 
-#: widgets/transportmanagementwidgetng.cpp:159
+#: widgets/transportmanagementwidgetng.cpp:160
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Přejete si odstranit odchozí účet '%1'?"
 
-#: widgets/transportmanagementwidgetng.cpp:160
+#: widgets/transportmanagementwidgetng.cpp:161
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
@@ -689,37 +689,37 @@ msgstr[0] "Opravdu si přejete odstranit tento %1 odchozí účet?"
 msgstr[1] "Opravdu si přejete odstranit tyto %1 odchozí účty?"
 msgstr[2] "Opravdu si přejete odstranit těchto %1 odchozích účtů?"
 
-#: widgets/transportmanagementwidgetng.cpp:163
+#: widgets/transportmanagementwidgetng.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Odstranit odchozí účet?"
 
-#: widgets/transportmanagementwidgetng.cpp:193
+#: widgets/transportmanagementwidgetng.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Přidat…"
 
-#: widgets/transportmanagementwidgetng.cpp:198
+#: widgets/transportmanagementwidgetng.cpp:199
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Změnit…"
 
-#: widgets/transportmanagementwidgetng.cpp:201
+#: widgets/transportmanagementwidgetng.cpp:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Přejmenovat"
 
-#: widgets/transportmanagementwidgetng.cpp:205
+#: widgets/transportmanagementwidgetng.cpp:206
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Odstranit"
 
-#: widgets/transportmanagementwidgetng.cpp:211
+#: widgets/transportmanagementwidgetng.cpp:212
 #, kde-format
 msgid "Set as Default"
 msgstr "Nastavit jako výchozí"

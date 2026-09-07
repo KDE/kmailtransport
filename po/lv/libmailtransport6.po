@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-06 00:46+0000\n"
+"POT-Creation-Date: 2026-09-07 00:46+0000\n"
 "PO-Revision-Date: 2025-08-21 12:58+0300\n"
 "Last-Translator: Toms Trasuns <toms.trasuns@posteo.net>\n"
 "Language-Team: Latvian <kde-i18n-doc@kde.org>\n"
@@ -243,30 +243,30 @@ msgstr ""
 "Ja atzīmēts, lai savienotos ar e-pasta serveri, dators izmantos sistēmas "
 "starpniekservera iestatījumus."
 
-#: plugins/smtp/smtpconfigwidget.cpp:151
+#: plugins/smtp/smtpconfigwidget.cpp:152
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Parole, ko nosūtīt uz serveri autentificēšanai."
 
-#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:558
+#: plugins/smtp/smtpconfigwidget.cpp:164 servertest.cpp:554
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p %"
 
-#: plugins/smtp/smtpconfigwidget.cpp:201
+#: plugins/smtp/smtpconfigwidget.cpp:202
 #, kde-format
 msgid "Activities"
 msgstr "Aktivitātes"
 
-#: plugins/smtp/smtpconfigwidget.cpp:303
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 "Neizdevās pārbaudīt iespējas. Pārbaudiet portu un autentifikācijas režīmu."
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
@@ -525,24 +525,24 @@ msgstr "Nesaglabāt paroli"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Izejošais konts „%1“ nav korekti konfigurēts."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:221
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Pirms sūtīšanas ir jāizveido pasta nosūtīšanas konts."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Vai izveidot kontu?"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Izveidot kontu"
 
-#: transportmanager.cpp:606
+#: transportmanager.cpp:602
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -558,19 +558,19 @@ msgstr ""
 "jo tajā sensitīvie dati glabājas droši šifrētā datnē.\n"
 "Vai vēlaties pārcelt jūsu paroles uz „KWallet“?"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:609
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Jautājums"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:610
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Pārcelt"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:611
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"
@@ -679,12 +679,12 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Izveidot un konfigurēt"
 
-#: widgets/transportmanagementwidgetng.cpp:159
+#: widgets/transportmanagementwidgetng.cpp:160
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Vai tiešām vēlaties noņemt izejošo kontu „%1“?"
 
-#: widgets/transportmanagementwidgetng.cpp:160
+#: widgets/transportmanagementwidgetng.cpp:161
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
@@ -692,37 +692,37 @@ msgstr[0] "Vai tiešām vēlaties noņemt šo %1 izejošo kontu?"
 msgstr[1] "Vai tiešām vēlaties noņemt šos %1 izejošos kontus?"
 msgstr[2] "Vai tiešām vēlaties noņemt šos %1 izejošos kontus?"
 
-#: widgets/transportmanagementwidgetng.cpp:163
+#: widgets/transportmanagementwidgetng.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Vai noņemt izejošo kontu?"
 
-#: widgets/transportmanagementwidgetng.cpp:193
+#: widgets/transportmanagementwidgetng.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Pievienot…"
 
-#: widgets/transportmanagementwidgetng.cpp:198
+#: widgets/transportmanagementwidgetng.cpp:199
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Mainīt…"
 
-#: widgets/transportmanagementwidgetng.cpp:201
+#: widgets/transportmanagementwidgetng.cpp:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Pārdēvēt"
 
-#: widgets/transportmanagementwidgetng.cpp:205
+#: widgets/transportmanagementwidgetng.cpp:206
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Noņemt"
 
-#: widgets/transportmanagementwidgetng.cpp:211
+#: widgets/transportmanagementwidgetng.cpp:212
 #, kde-format
 msgid "Set as Default"
 msgstr "Iestatīt par noklusējumu"

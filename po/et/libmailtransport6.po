@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-06 00:46+0000\n"
+"POT-Creation-Date: 2026-09-07 00:46+0000\n"
 "PO-Revision-Date: 2019-12-18 19:47+0200\n"
 "Last-Translator: Marek Laane <qiilaq69@gmail.com>\n"
 "Language-Team: Estonian <kde-et@lists.linux.ee>\n"
@@ -242,30 +242,30 @@ msgstr ""
 "Märkimise korral kasutatakse e-posti serveriga ühendumisel süsteemi "
 "puhverserveri seadistust."
 
-#: plugins/smtp/smtpconfigwidget.cpp:151
+#: plugins/smtp/smtpconfigwidget.cpp:152
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Serverisse autentimiseks saadetav parool."
 
-#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:558
+#: plugins/smtp/smtpconfigwidget.cpp:164 servertest.cpp:554
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:201
+#: plugins/smtp/smtpconfigwidget.cpp:202
 #, kde-format
 msgid "Activities"
 msgstr ""
 
-#: plugins/smtp/smtpconfigwidget.cpp:303
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
 msgstr ""
 "Omaduste kontrollimine nurjus. Palun kontrolli porti ja autentimisviisi."
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:305
 #, fuzzy, kde-format
 #| msgid "Check Capabilities Failed"
 msgctxt "@title:window"
@@ -537,26 +537,26 @@ msgstr "Ära salvesta parooli"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Väljuvate kirjade konto \"%1\" ei ole korrektselt seadistatud."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:221
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Enne saatmist tuleb luua väljuvate kirjade konto."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, fuzzy, kde-format
 #| msgid "Create Account Now?"
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Kas luua konto nüüd?"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, fuzzy, kde-format
 #| msgid "Create Account Now"
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Loo konto nüüd"
 
-#: transportmanager.cpp:606
+#: transportmanager.cpp:602
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -573,21 +573,21 @@ msgstr ""
 "mis salvestab sinu tundlikud andmed tugevasti krüptitud faili.\n"
 "Kas kanda paroolid üle KWalletisse?"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:609
 #, fuzzy, kde-format
 #| msgid "Question"
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Küsimus"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:610
 #, fuzzy, kde-format
 #| msgid "Migrate"
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Kanna üle"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:611
 #, fuzzy, kde-format
 #| msgid "Keep"
 msgctxt "@action:button"
@@ -700,12 +700,12 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Loo ja seadista"
 
-#: widgets/transportmanagementwidgetng.cpp:159
+#: widgets/transportmanagementwidgetng.cpp:160
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Kas eemaldada väljuvate kirjade konto \"%1\"?"
 
-#: widgets/transportmanagementwidgetng.cpp:160
+#: widgets/transportmanagementwidgetng.cpp:161
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -713,41 +713,41 @@ msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Kas eemaldada väljuvate kirjade konto \"%1\"?"
 msgstr[1] "Kas eemaldada väljuvate kirjade konto \"%1\"?"
 
-#: widgets/transportmanagementwidgetng.cpp:163
+#: widgets/transportmanagementwidgetng.cpp:164
 #, fuzzy, kde-format
 #| msgid "Remove outgoing account?"
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Kas eemaldada väljuvate kirjade konto?"
 
-#: widgets/transportmanagementwidgetng.cpp:193
+#: widgets/transportmanagementwidgetng.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:198
+#: widgets/transportmanagementwidgetng.cpp:199
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Muuda..."
 
-#: widgets/transportmanagementwidgetng.cpp:201
+#: widgets/transportmanagementwidgetng.cpp:202
 #, fuzzy, kde-format
 #| msgid "Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Muuda nime"
 
-#: widgets/transportmanagementwidgetng.cpp:205
+#: widgets/transportmanagementwidgetng.cpp:206
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Eemalda"
 
-#: widgets/transportmanagementwidgetng.cpp:211
+#: widgets/transportmanagementwidgetng.cpp:212
 #, kde-format
 msgid "Set as Default"
 msgstr "Sea vaikeväärtuseks"

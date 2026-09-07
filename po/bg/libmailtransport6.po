@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-06 00:46+0000\n"
+"POT-Creation-Date: 2026-09-07 00:46+0000\n"
 "PO-Revision-Date: 2025-08-16 22:36+0200\n"
 "Last-Translator: Mincho Kondarev <mkondarev@yahoo.de>\n"
 "Language-Team: Bulgarian <kde-i18n-doc@kde.org>\n"
@@ -241,23 +241,23 @@ msgstr ""
 "Ако е отметнато, настройките на системния прокси ще се използват за "
 "свързване с пощенския сървър."
 
-#: plugins/smtp/smtpconfigwidget.cpp:151
+#: plugins/smtp/smtpconfigwidget.cpp:152
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Парола за изпращане към сървъра за удостоверяване."
 
-#: plugins/smtp/smtpconfigwidget.cpp:163 servertest.cpp:558
+#: plugins/smtp/smtpconfigwidget.cpp:164 servertest.cpp:554
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p%"
 
-#: plugins/smtp/smtpconfigwidget.cpp:201
+#: plugins/smtp/smtpconfigwidget.cpp:202
 #, kde-format
 msgid "Activities"
 msgstr "Дейности"
 
-#: plugins/smtp/smtpconfigwidget.cpp:303
+#: plugins/smtp/smtpconfigwidget.cpp:304
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -265,7 +265,7 @@ msgstr ""
 "Проверката на възможностите е неуспешна. Моля, проверете порта и режима за "
 "удостоверяване."
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:305
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
@@ -526,24 +526,24 @@ msgstr "Да не се запазва парола"
 msgid "The outgoing account \"%1\" is not correctly configured."
 msgstr "Изходящият профил „%1“ не е конфигуриран правилно."
 
-#: transportmanager.cpp:222
+#: transportmanager.cpp:221
 #, kde-format
 msgid "You must create an outgoing account before sending."
 msgstr "Трябва да създадете изходящ профил, преди изпращане."
 
-#: transportmanager.cpp:223
+#: transportmanager.cpp:222
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Account Now?"
 msgstr "Да се създаде ли профила сега?"
 
-#: transportmanager.cpp:224
+#: transportmanager.cpp:223
 #, kde-format
 msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Създаване на профил сега"
 
-#: transportmanager.cpp:606
+#: transportmanager.cpp:602
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -560,19 +560,19 @@ msgstr ""
 "която съхранява чувствителни данни за вас в силно криптиран файл.\n"
 "Искате ли да мигрирате паролите си в KWallet?"
 
-#: transportmanager.cpp:613
+#: transportmanager.cpp:609
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Въпрос"
 
-#: transportmanager.cpp:614
+#: transportmanager.cpp:610
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Мигриране"
 
-#: transportmanager.cpp:615
+#: transportmanager.cpp:611
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"
@@ -681,49 +681,49 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Създаване и конфигуриране"
 
-#: widgets/transportmanagementwidgetng.cpp:159
+#: widgets/transportmanagementwidgetng.cpp:160
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Искате ли да премахнете изходящия профил „%1“?"
 
-#: widgets/transportmanagementwidgetng.cpp:160
+#: widgets/transportmanagementwidgetng.cpp:161
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Искате ли да премахнете изходящия профил „%1“?"
 msgstr[1] "Искате ли да премахнете изходящия профил „%1“?"
 
-#: widgets/transportmanagementwidgetng.cpp:163
+#: widgets/transportmanagementwidgetng.cpp:164
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Искате ли да премахнете изходящия профил?"
 
-#: widgets/transportmanagementwidgetng.cpp:193
+#: widgets/transportmanagementwidgetng.cpp:194
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Добавяне…"
 
-#: widgets/transportmanagementwidgetng.cpp:198
+#: widgets/transportmanagementwidgetng.cpp:199
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Промяна…"
 
-#: widgets/transportmanagementwidgetng.cpp:201
+#: widgets/transportmanagementwidgetng.cpp:202
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Преименуване"
 
-#: widgets/transportmanagementwidgetng.cpp:205
+#: widgets/transportmanagementwidgetng.cpp:206
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Премахване"
 
-#: widgets/transportmanagementwidgetng.cpp:211
+#: widgets/transportmanagementwidgetng.cpp:212
 #, kde-format
 msgid "Set as Default"
 msgstr "Настройване като подразбиращ се"
