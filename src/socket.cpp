@@ -90,7 +90,7 @@ void SocketPrivate::slotSocketRead()
         return;
     }
 
-    m_msg += QLatin1StringView(socket->readAll());
+    m_msg += QString::fromLatin1(socket->readAll());
 
     if (!m_msg.endsWith(u'\n')) {
         return;
