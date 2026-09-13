@@ -206,12 +206,15 @@ void TransportManagementWidgetNgPrivate::slotCustomContextMenuRequested(const QP
         menu.addAction(QIcon::fromTheme(u"list-remove"_s), i18nc("@action:inmenu", "Remove"), q, [this]() {
             removeClicked();
         });
-        const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();
-        if (index.data(TransportModel::TransportRoles::DefaultRole).toInt() != TransportManager::self()->defaultTransportId()) {
-            menu.addSeparator();
-            menu.addAction(i18n("Set as Default"), q, [this]() {
-                defaultClicked();
-            });
+        const auto selectedRows = ui.transportTreeView->selectionModel()->selectedRows();
+        if (!selectedRows.isEmpty()) {
+            const QModelIndex index = selectedRows.constFirst();
+            if (index.data(TransportModel::TransportRoles::DefaultRole).toInt() != TransportManager::self()->defaultTransportId()) {
+                menu.addSeparator();
+                menu.addAction(i18n("Set as Default"), q, [this]() {
+                    defaultClicked();
+                });
+            }
         }
     }
     menu.exec(ui.transportTreeView->viewport()->mapToGlobal(pos));
