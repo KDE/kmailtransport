@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-07 00:46+0000\n"
+"POT-Creation-Date: 2026-09-14 00:44+0000\n"
 "PO-Revision-Date: 2024-09-20 14:05+0300\n"
 "Last-Translator: Antonis Geralis <capoiosct@gmail.com>\n"
 "Language-Team: Greek <kde-i18n-el@kde.org>\n"
@@ -742,7 +742,7 @@ msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Αφαίρεση"
 
-#: widgets/transportmanagementwidgetng.cpp:212
+#: widgets/transportmanagementwidgetng.cpp:214
 #, kde-format
 msgid "Set as Default"
 msgstr "Ορισμός προεπιλογής"
