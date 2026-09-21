@@ -379,9 +379,8 @@ void TransportManagerPrivate::readConfig()
         // see if we happen to have that one already
         // We capture "Transport foo" => we need only "foo" => mid(10)
         const QString capturedString = s.mid(10); // strip "Transport "
-        const QString &checkString = s;
         for (Transport *old : oldTransports) {
-            if (old->currentGroup() == checkString) {
+            if (old->currentGroup() == s) {
                 qCDebug(MAILTRANSPORT_LOG) << "reloading existing transport:" << s;
                 t = old;
                 t->load();
