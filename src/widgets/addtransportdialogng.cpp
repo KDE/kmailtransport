@@ -166,6 +166,8 @@ void AddTransportDialogNG::accept()
             TransportManager::self()->setDefaultTransport(transport->id());
         }
         QDialog::accept();
+    } else {
+        delete transport;
     }
 }
 
