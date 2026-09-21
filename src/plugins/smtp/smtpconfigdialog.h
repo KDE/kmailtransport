@@ -21,7 +21,6 @@ public:
 
 private:
     void okClicked();
-    void slotTextChanged(const QString &text);
 
     Transport *mTransport = nullptr;
     SMTPConfigWidget *mConfigWidget = nullptr;

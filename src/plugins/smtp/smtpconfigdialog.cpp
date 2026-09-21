@@ -51,9 +51,4 @@ void SmtpConfigDialog::okClicked()
     mTransport->save();
 }
 
-void SmtpConfigDialog::slotTextChanged(const QString &text)
-{
-    mOkButton->setEnabled(!text.isEmpty());
-}
-
 #include "moc_smtpconfigdialog.cpp"
