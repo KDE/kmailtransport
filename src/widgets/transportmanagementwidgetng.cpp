@@ -98,7 +98,8 @@ TransportManagementWidgetNg::~TransportManagementWidgetNg() = default;
 
 void TransportManagementWidgetNgPrivate::updateButtonState()
 {
-    const auto nbItems{ui.transportTreeView->selectionModel()->selectedRows().count()};
+    const auto selectedRows = ui.transportTreeView->selectionModel()->selectedRows();
+    const auto nbItems{selectedRows.count()};
     if (nbItems == 0) {
         ui.editButton->setEnabled(false);
         ui.renameButton->setEnabled(false);
@@ -109,7 +110,7 @@ void TransportManagementWidgetNgPrivate::updateButtonState()
         ui.renameButton->setEnabled(nbItems == 1);
         ui.removeButton->setEnabled(nbItems >= 1);
         if (nbItems == 1) {
-            const QModelIndex index = ui.transportTreeView->selectionModel()->selectedRows().constFirst();
+            const QModelIndex index = selectedRows.constFirst();
             if (index.data(TransportModel::TransportRoles::DefaultRole).toInt() == TransportManager::self()->defaultTransportId()) {
                 ui.defaultButton->setEnabled(false);
             } else {
