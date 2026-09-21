@@ -137,6 +137,7 @@ void OutlookOAuthTokenRequester::requestToken(const QString &usernameHint)
     auto redirectUri = startLocalHttpServer();
     if (!redirectUri.has_value()) {
         Q_EMIT finished({TokenResult::InternalError, u"Failed to start local HTTP server to receive Outlook OAuth2 authorization code"_s});
+        return;
     }
     mRedirectUri = std::move(*redirectUri);
 
