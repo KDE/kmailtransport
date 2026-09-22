@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-14 00:44+0000\n"
+"POT-Creation-Date: 2026-09-22 00:46+0000\n"
 "PO-Revision-Date: 2010-09-25 20:12-0700\n"
 "Last-Translator: Fumiaki Okushi <okushi@kde.gr.jp>\n"
 "Language-Team: Japanese <kde-jp@kde.org>\n"
@@ -567,7 +567,7 @@ msgid "Create Account Now"
 msgstr ""
 
 # skip-rule: wallet
-#: transportmanager.cpp:602
+#: transportmanager.cpp:601
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -584,21 +584,21 @@ msgstr ""
 "ます。\n"
 "パスワードを KWallet へ移しますか？"
 
-#: transportmanager.cpp:609
+#: transportmanager.cpp:608
 #, fuzzy, kde-format
 #| msgid "Question"
 msgctxt "@title:window"
 msgid "Question"
 msgstr "質問"
 
-#: transportmanager.cpp:610
+#: transportmanager.cpp:609
 #, fuzzy, kde-format
 #| msgid "Migrate"
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "移す"
 
-#: transportmanager.cpp:611
+#: transportmanager.cpp:610
 #, fuzzy, kde-format
 #| msgid "Keep"
 msgctxt "@action:button"
@@ -711,51 +711,51 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:160
+#: widgets/transportmanagementwidgetng.cpp:161
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:161
+#: widgets/transportmanagementwidgetng.cpp:162
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] ""
 
-#: widgets/transportmanagementwidgetng.cpp:164
+#: widgets/transportmanagementwidgetng.cpp:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:194
+#: widgets/transportmanagementwidgetng.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:199
+#: widgets/transportmanagementwidgetng.cpp:200
 #, fuzzy, kde-format
 #| msgid "&Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "変更(&M)..."
 
-#: widgets/transportmanagementwidgetng.cpp:202
+#: widgets/transportmanagementwidgetng.cpp:203
 #, fuzzy, kde-format
 #| msgid "&Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "名前変更(&R)"
 
-#: widgets/transportmanagementwidgetng.cpp:206
+#: widgets/transportmanagementwidgetng.cpp:207
 #, fuzzy, kde-format
 #| msgid "Remo&ve"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "削除(&V)"
 
-#: widgets/transportmanagementwidgetng.cpp:214
+#: widgets/transportmanagementwidgetng.cpp:215
 #, fuzzy, kde-format
 #| msgid "&Set as Default"
 msgid "Set as Default"

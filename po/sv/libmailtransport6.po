@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-14 00:44+0000\n"
+"POT-Creation-Date: 2026-09-22 00:46+0000\n"
 "PO-Revision-Date: 2025-07-31 07:57+0200\n"
 "Last-Translator: Stefan Asserhäll <stefan.asserhall@gmail.com>\n"
 "Language-Team: Swedish <kde-i18n-doc@kde.org>\n"
@@ -542,7 +542,7 @@ msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Skapa konto nu"
 
-#: transportmanager.cpp:602
+#: transportmanager.cpp:601
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -559,19 +559,19 @@ msgstr ""
 "som lagrar känslig data åt dig i en säkert krypterad fil.\n"
 "Vill du flytta lösenorden till plånboken?"
 
-#: transportmanager.cpp:609
+#: transportmanager.cpp:608
 #, kde-format
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Fråga"
 
-#: transportmanager.cpp:610
+#: transportmanager.cpp:609
 #, kde-format
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Flytta"
 
-#: transportmanager.cpp:611
+#: transportmanager.cpp:610
 #, kde-format
 msgctxt "@action:button"
 msgid "Keep"
@@ -680,49 +680,49 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Skapa och anpassa"
 
-#: widgets/transportmanagementwidgetng.cpp:160
+#: widgets/transportmanagementwidgetng.cpp:161
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Vill du ta bort utgående kontot '%1'?"
 
-#: widgets/transportmanagementwidgetng.cpp:161
+#: widgets/transportmanagementwidgetng.cpp:162
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Vill du verkligen ta bort %1 utgående konto?"
 msgstr[1] "Vill du verkligen ta bort de %1 utgående kontona?"
 
-#: widgets/transportmanagementwidgetng.cpp:164
+#: widgets/transportmanagementwidgetng.cpp:165
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Ta bort utgående konto?"
 
-#: widgets/transportmanagementwidgetng.cpp:194
+#: widgets/transportmanagementwidgetng.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Lägg till…"
 
-#: widgets/transportmanagementwidgetng.cpp:199
+#: widgets/transportmanagementwidgetng.cpp:200
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Ändra…"
 
-#: widgets/transportmanagementwidgetng.cpp:202
+#: widgets/transportmanagementwidgetng.cpp:203
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Byt namn"
 
-#: widgets/transportmanagementwidgetng.cpp:206
+#: widgets/transportmanagementwidgetng.cpp:207
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Ta bort"
 
-#: widgets/transportmanagementwidgetng.cpp:214
+#: widgets/transportmanagementwidgetng.cpp:215
 #, kde-format
 msgid "Set as Default"
 msgstr "Använd som standardvärde"

@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-14 00:44+0000\n"
+"POT-Creation-Date: 2026-09-22 00:46+0000\n"
 "PO-Revision-Date: 2017-09-28 18:00+0200\n"
 "Last-Translator: Chusslove Illich <caslav.ilic@gmx.net>\n"
 "Language-Team: Serbian <kde-i18n-sr@kde.org>\n"
@@ -571,7 +571,7 @@ msgctxt "@action:button"
 msgid "Create Account Now"
 msgstr "Направи налог сада"
 
-#: transportmanager.cpp:602
+#: transportmanager.cpp:601
 #, kde-format
 msgid ""
 "The following mail transports store their passwords in an unencrypted "
@@ -587,21 +587,21 @@ msgstr ""
 "шифрованом фајлу.\n"
 "Желите ли да преселите лозинке у К‑новчаник?"
 
-#: transportmanager.cpp:609
+#: transportmanager.cpp:608
 #, fuzzy, kde-format
 #| msgid "Question"
 msgctxt "@title:window"
 msgid "Question"
 msgstr "Питање"
 
-#: transportmanager.cpp:610
+#: transportmanager.cpp:609
 #, fuzzy, kde-format
 #| msgid "Migrate"
 msgctxt "@action:button"
 msgid "Migrate"
 msgstr "Пресели"
 
-#: transportmanager.cpp:611
+#: transportmanager.cpp:610
 #, fuzzy, kde-format
 #| msgid "Keep"
 msgctxt "@action:button"
@@ -717,12 +717,12 @@ msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Направи и подеси"
 
-#: widgets/transportmanagementwidgetng.cpp:160
+#: widgets/transportmanagementwidgetng.cpp:161
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "Желите ли да уклоните одлазни налог „%1“?"
 
-#: widgets/transportmanagementwidgetng.cpp:161
+#: widgets/transportmanagementwidgetng.cpp:162
 #, fuzzy, kde-format
 #| msgid "Do you want to remove outgoing account '%1'?"
 msgid "Do you really want to remove this %1 outgoing account?"
@@ -732,41 +732,41 @@ msgstr[1] "Желите ли да уклоните одлазни налог „
 msgstr[2] "Желите ли да уклоните одлазни налог „%1“?"
 msgstr[3] "Желите ли да уклоните одлазни налог „%1“?"
 
-#: widgets/transportmanagementwidgetng.cpp:164
+#: widgets/transportmanagementwidgetng.cpp:165
 #, fuzzy, kde-format
 #| msgid "Remove outgoing account?"
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Уклонити одлазни налог?"
 
-#: widgets/transportmanagementwidgetng.cpp:194
+#: widgets/transportmanagementwidgetng.cpp:195
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr ""
 
-#: widgets/transportmanagementwidgetng.cpp:199
+#: widgets/transportmanagementwidgetng.cpp:200
 #, fuzzy, kde-format
 #| msgid "Modify..."
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Измијени..."
 
-#: widgets/transportmanagementwidgetng.cpp:202
+#: widgets/transportmanagementwidgetng.cpp:203
 #, fuzzy, kde-format
 #| msgid "Rename"
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Преименуј"
 
-#: widgets/transportmanagementwidgetng.cpp:206
+#: widgets/transportmanagementwidgetng.cpp:207
 #, fuzzy, kde-format
 #| msgid "Remove"
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Уклони"
 
-#: widgets/transportmanagementwidgetng.cpp:214
+#: widgets/transportmanagementwidgetng.cpp:215
 #, kde-format
 msgid "Set as Default"
 msgstr "Ово је подразумијевано"
