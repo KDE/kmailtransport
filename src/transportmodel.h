@@ -13,6 +13,12 @@ namespace MailTransport
 class TransportManager;
 class Transport;
 /*!
+ * \qmltype TransportModel
+ * \inqmlmodule org.kde.mailtransport
+ * \nativetype MailTransport::TransportModel
+ * \brief A model of configured mail transports.
+ */
+/*!
  * \class MailTransport::TransportModel
  * \inmodule KMailTransport
  * \inheaderfile MailTransport/TransportModel

@@ -25,6 +25,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMInstalledLibraryCheck)
 include(GenerateExportHeader)
 include(ECMGenerateHeaders)
+include(ECMQmlModule)
 
 include(ECMSetupVersion)
 include(ECMCheckOutboundLicense)
@@ -110,6 +111,7 @@ set(QT6KEYCHAIN_LIB_VERSION "0.15.0")
 
 ########### Find packages ###########
 find_package(Qt6DBus ${QT_REQUIRED_VERSION} CONFIG REQUIRED)
+find_package(Qt6 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Qml)
 find_package(KF6ConfigWidgets ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6I18n ${KF_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF6KIO ${KF_MIN_VERSION} CONFIG REQUIRED)

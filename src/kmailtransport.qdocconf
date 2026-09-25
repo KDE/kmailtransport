@@ -7,6 +7,7 @@ description = KMailTransport provides API for managing mail transport.
 documentationinheaders = true
 
 headerdirs += .
+headerdirs += qml
 sourcedirs += .
 
 outputformats = HTML

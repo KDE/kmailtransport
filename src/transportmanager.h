@@ -21,6 +21,12 @@ class TransportJob;
 class TransportManagerPrivate;
 
 /*!
+  \qmltype TransportManager
+  \inqmlmodule org.kde.mailtransport
+  \nativetype MailTransport::TransportManager
+  \brief Provides access to configured mail transports.
+*/
+/*!
   \class MailTransport::TransportManager
   \inmodule KMailTransport
   \inheaderfile MailTransport/TransportManager
@@ -58,7 +64,7 @@ public:
       The passwordsChanged() signal is emitted once the passwords have been loaded.
       Nothing happens if the passwords were already available.
     */
-    void loadPasswordsAsync();
+    Q_INVOKABLE void loadPasswordsAsync();
 
     /*!
       Returns the Transport object with the given id.
@@ -69,7 +75,7 @@ public:
       soon as the event loop is entered again due to remote changes. If you need
       to store a Transport object, store the transport identifier instead.
     */
-    Transport *transportById(Transport::Id id, bool def = true) const;
+    Q_INVOKABLE Transport *transportById(Transport::Id id, bool def = true) const;
 
     /*!
       Returns the transport object with the given name.
@@ -79,33 +85,33 @@ public:
       Returns A Transport object for immediate use, see transportById() for
       limitations.
     */
-    Transport *transportByName(const QString &name, bool def = true) const;
+    Q_INVOKABLE Transport *transportByName(const QString &name, bool def = true) const;
 
     /*!
       Returns a list of all available transports.
       Note The Transport objects become invalid as soon as a change occur, so
       they are only suitable for immediate use.
     */
-    [[nodiscard]] QList<Transport *> transports() const;
+    Q_INVOKABLE [[nodiscard]] QList<Transport *> transports() const;
 
     /*!
       Returns a list of all available transport types.
     */
-    [[nodiscard]] TransportType::List types() const;
+    Q_INVOKABLE [[nodiscard]] QList<TransportType> types() const;
 
     /*!
       Creates a new, empty Transport object. The object is owned by the caller.
       If you want to add the Transport permanently (eg. after configuring it)
       call addTransport().
     */
-    Transport *createTransport() const;
+    Q_INVOKABLE Transport *createTransport() const;
 
     /*!
       Adds the given transport. The object ownership is transferred to
       TransportMananger, ie. you must not delete \a transport.
       \a transport The Transport object to add.
     */
-    void addTransport(Transport *transport);
+    Q_INVOKABLE void addTransport(Transport *transport);
 
     /*!
       Creates a mail transport job for the given transport identifier.
@@ -167,46 +173,46 @@ public:
     */
     bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent);
 
-    void initializeTransport(const QString &identifier, Transport *transport);
+    Q_INVOKABLE void initializeTransport(const QString &identifier, Transport *transport);
 
 public:
     /*!
       Returns true if there are no mail transports at all.
     */
-    Q_SCRIPTABLE bool isEmpty() const;
+    Q_INVOKABLE bool isEmpty() const;
 
     /*!
       Returns a list of transport identifiers.
     */
-    Q_SCRIPTABLE QList<int> transportIds() const;
+    Q_INVOKABLE QList<int> transportIds() const;
 
     /*!
       Returns a list of transport names.
     */
-    Q_SCRIPTABLE QStringList transportNames() const;
+    Q_INVOKABLE QStringList transportNames() const;
 
     /*!
       Returns the default transport name.
     */
-    Q_SCRIPTABLE QString defaultTransportName() const;
+    Q_INVOKABLE QString defaultTransportName() const;
 
     /*!
       Returns the default transport identifier.
       Invalid if there are no transports at all.
     */
-    Q_SCRIPTABLE int defaultTransportId() const;
+    Q_INVOKABLE int defaultTransportId() const;
 
     /*!
       Sets the default transport. The change will be in effect immediately.
       \a id The identifier of the new default transport.
     */
-    Q_SCRIPTABLE void setDefaultTransport(int id);
+    Q_INVOKABLE void setDefaultTransport(int id);
 
     /*!
       Deletes the specified transport.
       \a id The identifier of the mail transport to remove.
     */
-    Q_SCRIPTABLE void removeTransport(int id);
+    Q_INVOKABLE void removeTransport(int id);
 
     void removePasswordFromWallet(Transport::Id id);
 Q_SIGNALS:

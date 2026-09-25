@@ -18,6 +18,15 @@ class TransportManager;
 class TransportTypePrivate;
 
 /*!
+  \qmltype transportType
+  \inqmlmodule org.kde.mailtransport
+  \nativetype MailTransport::TransportType
+  \brief Describes an available mail transport type to QML.
+
+  This value is returned by MailTransport::TransportManager and is not
+  constructed directly from QML.
+*/
+/*!
   \class MailTransport::TransportType
   \inmodule KMailTransport
   \inheaderfile MailTransport/TransportType
@@ -34,19 +43,29 @@ class MAILTRANSPORT_EXPORT TransportType
 {
     Q_GADGET
 
-    /// This property holds whether the transport type is valid.
+    /*! \qmlproperty bool TransportType::isValid
+     * Whether the transport type is valid.
+     */
     Q_PROPERTY(bool isValid READ isValid CONSTANT)
 
-    /// This property holds the i18n'ed name of the transport type.
+    /*! \qmlproperty string TransportType::name
+     * The translated name of the transport type.
+     */
     Q_PROPERTY(QString name READ name CONSTANT)
 
-    /// This property holds the transport type.
+    /*! \qmlproperty string TransportType::description
+     * A description of the transport type.
+     */
     Q_PROPERTY(QString description READ description CONSTANT)
 
-    /// This property holds the plugin identifier.
+    /*! \qmlproperty string TransportType::identifier
+     * The plugin identifier for the transport type.
+     */
     Q_PROPERTY(QString identifier READ identifier CONSTANT)
 
-    /// This property holds whether this transport is an akonadi resource.
+    /*! \qmlproperty bool TransportType::isAkonadiResource
+     * Whether this transport is an Akonadi resource.
+     */
     Q_PROPERTY(bool isAkonadiResource READ isAkonadiResource CONSTANT)
 
     friend class AddTransportDialog;

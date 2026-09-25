@@ -22,6 +22,12 @@ namespace MailTransport
 class TransportType;
 
 /*!
+  \qmltype Transport
+  \inqmlmodule org.kde.mailtransport
+  \nativetype MailTransport::Transport
+  \brief Settings for one configured mail transport.
+*/
+/*!
   \class MailTransport::Transport
   \inmodule KMailTransport
   \inheaderfile MailTransport/Transport

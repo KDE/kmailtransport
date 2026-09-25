@@ -126,6 +126,8 @@ endif()
 
 target_link_libraries(KPim6MailTransport PRIVATE qt6keychain)
 
+add_subdirectory(qml)
+
 set_target_properties(
     KPim6MailTransport
     PROPERTIES
