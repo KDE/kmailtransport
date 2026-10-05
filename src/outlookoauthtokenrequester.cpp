@@ -5,7 +5,6 @@
 */
 
 #include "outlookoauthtokenrequester.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "mailtransport_debug.h"
 
@@ -23,6 +22,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QUrlQuery>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 TokenResult::TokenResult(ErrorCode errorCode, const QString &errorText)

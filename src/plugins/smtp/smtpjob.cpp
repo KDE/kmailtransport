@@ -8,7 +8,6 @@
 */
 
 #include "smtpjob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "mailtransport_defs.h"
 #include "mailtransportplugin_smtp_debug.h"
@@ -29,6 +28,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <KGAPI/AuthJob>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 class SessionPool

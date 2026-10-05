@@ -5,7 +5,6 @@
 */
 
 #include "addtransportdialogng_gui.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "widgets/addtransportdialogng.h"
 
@@ -13,6 +12,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QHBoxLayout>
 #include <QPushButton>
 #include <QStandardPaths>
+
+using namespace Qt::Literals::StringLiterals;
 
 AddTransportDialogNG_gui::AddTransportDialogNG_gui(QWidget *parent)
     : QWidget(parent)

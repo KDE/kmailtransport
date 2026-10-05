@@ -5,7 +5,6 @@
 */
 
 #include "../smtpjob.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "fakeserver.h"
 
@@ -15,6 +14,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QObject>
 #include <QStandardPaths>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(MailTransport::TransportBase::EnumAuthenticationType)
 

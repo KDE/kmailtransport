@@ -5,7 +5,6 @@
 */
 
 #include "transportmgr.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "transport.h"
 #include "transportjob.h"
@@ -20,6 +19,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPlainTextEdit>
 #include <QPushButton>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 TransportMgr::TransportMgr()

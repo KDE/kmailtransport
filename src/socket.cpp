@@ -9,7 +9,6 @@
 
 // Own
 #include "socket.h"
-using namespace Qt::Literals::StringLiterals;
 
 // Qt
 #include <QByteArray>
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 // KDE
 #include "mailtransport_debug.h"
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 namespace MailTransport

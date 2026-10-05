@@ -5,12 +5,12 @@
 */
 
 #include "transportmodel.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "mailtransport_debug.h"
 #include "transportmanager.h"
 #include <KLocalizedString>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 TransportModel::TransportModel(QObject *parent)
     : QAbstractListModel{parent}

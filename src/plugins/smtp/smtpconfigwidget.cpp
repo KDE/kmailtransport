@@ -12,7 +12,6 @@
 */
 
 #include "smtpconfigwidget.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "ui_smtpsettings.h"
 
@@ -34,6 +33,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KPluginMetaData>
 #include <KProtocolInfo>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 class MailTransport::SMTPConfigWidgetPrivate : public TransportConfigWidgetPrivate

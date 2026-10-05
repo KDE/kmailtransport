@@ -5,10 +5,11 @@
 */
 
 #include "widgets/transportmanagementwidgetng.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QApplication>
 #include <QStandardPaths>
+
+using namespace Qt::Literals::StringLiterals;
 
 int main(int argc, char **argv)
 {

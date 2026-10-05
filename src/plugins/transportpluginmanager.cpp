@@ -5,7 +5,6 @@
 */
 
 #include "transportpluginmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "mailtransport_debug.h"
 #include <KPluginFactory>
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QFileInfo>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 class MailTransportPluginInfo

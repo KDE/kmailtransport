@@ -7,12 +7,13 @@
 */
 
 #include "fakeserver.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QDebug>
 #include <QFile>
 #include <QTcpServer>
 #include <QTest>
+
+using namespace Qt::Literals::StringLiterals;
 
 FakeServer::FakeServer(QObject *parent)
     : QThread(parent)

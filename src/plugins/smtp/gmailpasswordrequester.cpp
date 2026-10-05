@@ -6,7 +6,6 @@
 */
 
 #include "gmailpasswordrequester.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "mailtransportplugin_smtp_debug.h"
 #include "plugins/smtp/xoauthpasswordrequester.h"
@@ -15,6 +14,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KGAPI/Account>
 #include <KGAPI/AccountManager>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 static const QString apiKey = u"554041944266.apps.googleusercontent.com"_s;

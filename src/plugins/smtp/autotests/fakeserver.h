@@ -9,10 +9,11 @@
 #pragma once
 
 #include <QMutex>
-using namespace Qt::Literals::StringLiterals;
 
 #include <QTcpSocket>
 #include <QThread>
+
+using namespace Qt::Literals::StringLiterals;
 
 Q_DECLARE_METATYPE(QList<QByteArray>)
 class QTcpServer;

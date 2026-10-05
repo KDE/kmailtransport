@@ -5,7 +5,6 @@
 */
 
 #include "transportmanagementwidgetng.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "transport.h"
 #include "transportmanager.h"
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 
 #include <QMenu>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 class MailTransport::TransportManagementWidgetNgPrivate

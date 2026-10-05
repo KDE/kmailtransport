@@ -6,7 +6,6 @@
 */
 
 #include "outlookpasswordrequester.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "mailtransportplugin_smtp_debug.h"
 #include "transport.h"
@@ -17,6 +16,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <memory>
 #include <qt6keychain/keychain.h>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 static const QString clientId = u"18da2bc3-146a-4581-8c92-27dc7b9954a0"_s;

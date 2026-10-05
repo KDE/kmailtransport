@@ -5,7 +5,6 @@
 */
 
 #include "transportmanager.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "mailtransport_defs.h"
 #include "plugins/transportabstractplugin.h"
@@ -31,6 +30,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <KMessageBox>
 #include <qt6keychain/keychain.h>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace QKeychain;
 
 using namespace MailTransport;

@@ -5,7 +5,6 @@
 */
 
 #include "smtpconfigdialog.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "smtpconfigwidget.h"
 #include "transport.h"
@@ -16,6 +15,7 @@ using namespace Qt::Literals::StringLiterals;
 #include <QStyle>
 #include <QVBoxLayout>
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)

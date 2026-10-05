@@ -5,13 +5,14 @@
 */
 
 #include "smtpmailtransportplugin.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include "smtpconfigdialog.h"
 #include "smtpjob.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QPointer>
+
+using namespace Qt::Literals::StringLiterals;
 
 K_PLUGIN_CLASS_WITH_JSON(SMTPMailTransportPlugin, "smtpmailtransport.json")
 

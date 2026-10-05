@@ -2,7 +2,6 @@
 // SPDX-License-Identifier: LGPL-2.0-or-later
 
 #include "widgets/transportcombobox.h"
-using namespace Qt::Literals::StringLiterals;
 
 #include <QApplication>
 #include <QLabel>
@@ -10,6 +9,8 @@ using namespace Qt::Literals::StringLiterals;
 #include <QPushButton>
 #include <QVBoxLayout>
 #include <QWidget>
+
+using namespace Qt::Literals::StringLiterals;
 
 class IdentityComboboxWidget : public QWidget
 {
