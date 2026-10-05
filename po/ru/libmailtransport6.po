@@ -117,7 +117,7 @@ msgstr "Параметры, передаваемые вызываемому сп
 #: mailtransport.kcfg:50
 #, kde-format
 msgid "Server requires authentication"
-msgstr "Сервер требует идентификацию"
+msgstr "Сервер требует аутентификацию"
 
 #. i18n: ectx: whatsthis, entry (requiresAuthentication), group (Transport $(transportId))
 #: mailtransport.kcfg:51
@@ -133,7 +133,7 @@ msgstr ""
 #: mailtransport.kcfg:55
 #, kde-format
 msgid "Store password"
-msgstr "Сохранить пароль"
+msgstr "Сохранять пароль"
 
 #. i18n: ectx: whatsthis, entry (storePassword), group (Transport $(transportId))
 #: mailtransport.kcfg:58
@@ -181,7 +181,7 @@ msgstr "Шифрование STARTTLS"
 #: mailtransport.kcfg:77
 #, kde-format
 msgid "Authentication method"
-msgstr "Способ идентификации"
+msgstr "Способ аутентификации"
 
 #. i18n: ectx: label, entry (specifyHostname), group (Transport $(transportId))
 #. i18n: ectx: label, entry (localHostname), group (Transport $(transportId))
@@ -210,7 +210,7 @@ msgstr ""
 #: mailtransport.kcfg:100
 #, kde-format
 msgid "Enter the hostname that should be used when identifying to the server."
-msgstr "Введите имя узла, используемого во время идентификации на сервере."
+msgstr "Введите имя узла, используемого во время аутентификации на сервере."
 
 #. i18n: ectx: whatsthis, entry (specifySenderOverwriteAddress), group (Transport $(transportId))
 #: mailtransport.kcfg:104
@@ -238,7 +238,7 @@ msgstr ""
 #: mailtransport.kcfg:112 plugins/smtp/smtpsettings.ui:287
 #, kde-format
 msgid "Connect using the system proxy settings"
-msgstr "Использовать системные настройки прокси"
+msgstr "Использовать системные параметры прокси"
 
 #. i18n: ectx: whatsthis, entry (useProxy), group (Transport $(transportId))
 #: mailtransport.kcfg:113
@@ -253,7 +253,7 @@ msgstr ""
 #: plugins/smtp/smtpconfigwidget.cpp:152
 #, kde-format
 msgid "The password to send to the server for authorization."
-msgstr "Пароль для идентификации на сервере."
+msgstr "Пароль для аутентификации на сервере."
 
 #: plugins/smtp/smtpconfigwidget.cpp:164 servertest.cpp:554
 #, kde-format
@@ -309,7 +309,7 @@ msgstr "Настройка учётной записи"
 #, kde-format
 msgctxt "general smtp settings"
 msgid "General"
-msgstr "Главное"
+msgstr "Общие"
 
 #. i18n: ectx: property (text), widget (KTitleWidget, ktitlewidget)
 #: plugins/smtp/smtpsettings.ui:43
@@ -327,7 +327,7 @@ msgstr "&Сервер исходящей почты:"
 #: plugins/smtp/smtpsettings.ui:70
 #, kde-format
 msgid "Server &requires authentication"
-msgstr "Сервер требует &идентификацию"
+msgstr "Сервер требует &аутентификацию"
 
 #. i18n: ectx: property (text), widget (QLabel, usernameLabel)
 #: plugins/smtp/smtpsettings.ui:80
@@ -345,7 +345,7 @@ msgstr "&Пароль:"
 #: plugins/smtp/smtpsettings.ui:129
 #, kde-format
 msgid "&Store SMTP password"
-msgstr "&Сохранить пароль SMTP"
+msgstr "&Сохранять пароль SMTP"
 
 #. i18n: ectx: attribute (title), widget (QWidget, advancedTab)
 #: plugins/smtp/smtpsettings.ui:150
@@ -364,7 +364,7 @@ msgstr "Параметры подключения"
 #: plugins/smtp/smtpsettings.ui:175
 #, kde-format
 msgid "This server does not support authentication"
-msgstr "Сервер не требует идентификацию"
+msgstr "Сервер не поддерживает аутентификацию"
 
 #. i18n: ectx: property (text), widget (QPushButton, checkCapabilities)
 #: plugins/smtp/smtpsettings.ui:192
@@ -436,7 +436,7 @@ msgstr "Предварительная команда:"
 #: plugins/smtp/smtpsettings.ui:379
 #, kde-format
 msgid "Sen&d custom hostname to server"
-msgstr "&Отправить указанное имя хоста на сервер"
+msgstr "&Отправлять указанное имя хоста на сервер"
 
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_specifySenderOverwriteAddress)
 #: plugins/smtp/smtpsettings.ui:386
@@ -562,8 +562,8 @@ msgid ""
 "which stores sensitive data for you in a strongly encrypted file.\n"
 "Do you want to migrate your passwords to KWallet?"
 msgstr ""
-"Следующие почтовые транспорты хранят пароли в незашифрованном "
-"конфигурационном файле.\n"
+"Следующие методы отправки хранят пароли в незашифрованном конфигурационном "
+"файле.\n"
 "Рекомендуется перенести пароли в бумажник KDE, который безопасно хранит "
 "пароли и прочие важные данные.\n"
 "Перенести пароли в бумажник KDE?"
@@ -621,7 +621,7 @@ msgstr "Название:"
 #: ui/addtransportdialog.ui:48
 #, kde-format
 msgid "Make this the default outgoing account"
-msgstr "Сделать учётной записью исходящей почты по умолчанию"
+msgstr "Сделать эту учётную запись исходящей почты основной"
 
 #. i18n: ectx: property (text), widget (QLabel, descLabel)
 #: ui/addtransportdialog.ui:61
