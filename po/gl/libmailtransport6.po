@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:48+0000\n"
 "PO-Revision-Date: 2024-12-04 09:42+0100\n"
 "Last-Translator: Adrián Chaves (Gallaecio) <adrian@chaves.io>\n"
 "Language-Team: Proxecto Trasno (proxecto@trasno.gal)\n"
@@ -289,18 +289,18 @@ msgstr ""
 "Debe indicar un nome de usuaria e un contrasinal para usar este servidor de "
 "SMTP."
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:29
+#: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:30
+#: plugins/smtp/smtpmailtransportplugin.cpp:31
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "Un servidor de SMTP en Internet"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:40
+#: plugins/smtp/smtpmailtransportplugin.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

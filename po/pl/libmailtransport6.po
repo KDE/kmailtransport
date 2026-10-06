@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:48+0000\n"
 "PO-Revision-Date: 2025-11-08 09:31+0100\n"
 "Last-Translator: Łukasz Wojniłowicz <lukasz.wojnilowicz@gmail.com>\n"
 "Language-Team: pl\n"
@@ -275,18 +275,18 @@ msgstr "Niepowodzenie przy sprawdzaniu możliwości"
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "Ten serwer SMTP wymaga nazwy użytkownika i hasła."
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:29
+#: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:30
+#: plugins/smtp/smtpmailtransportplugin.cpp:31
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "Serwer SMTP w Internecie"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:40
+#: plugins/smtp/smtpmailtransportplugin.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

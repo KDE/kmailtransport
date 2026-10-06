@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport5\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:48+0000\n"
 "PO-Revision-Date: 2023-12-10 15:07+0100\n"
 "Last-Translator: Roman Paholik <wizzardsk@gmail.com>\n"
 "Language-Team: Slovak <kde-sk@linux.sk>\n"
@@ -272,18 +272,18 @@ msgstr ""
 "Musíte vyplniť užívateľské meno a heslo aby ste mohli použiť tento SMTP "
 "server."
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:29
+#: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:30
+#: plugins/smtp/smtpmailtransportplugin.cpp:31
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "SMTP server na Internete"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:40
+#: plugins/smtp/smtpmailtransportplugin.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

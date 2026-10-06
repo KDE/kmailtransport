@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:48+0000\n"
 "PO-Revision-Date: 2025-07-31 12:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -283,18 +283,18 @@ msgstr ""
 "SMTP zerbitzari hau erabiltzeko erabiltzaile-izen eta pasahitz bat eman "
 "behar dituzu."
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:29
+#: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:30
+#: plugins/smtp/smtpmailtransportplugin.cpp:31
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "Interneteko SMTP zerbitzari bat"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:40
+#: plugins/smtp/smtpmailtransportplugin.cpp:41
 #, kde-format
 msgctxt "@title:window"
 msgid "Configure account"

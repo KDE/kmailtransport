@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: desktop_extragear-utils_kdiff3\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-09-22 00:46+0000\n"
+"POT-Creation-Date: 2026-10-06 00:48+0000\n"
 "PO-Revision-Date: 2010-12-22 05:05+0700\n"
 "Last-Translator: Seng Sutha <Sutha@khmeros.info>\n"
 "Language-Team: Khmer [km] <Support@khmeros.info>\n"
@@ -270,18 +270,18 @@ msgstr ""
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "អ្នក​ត្រូវ​ផ្គត់ផ្គង់​ឈ្មោះ​អ្នកប្រើ​ និង​ពាក្យ​សម្ងាត់ ដើម្បី​ប្រើ​ម៉ាស៊ីន​បម្រើ SMTP នេះ ។"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:29
+#: plugins/smtp/smtpmailtransportplugin.cpp:30
 #, kde-format
 msgctxt "@option SMTP transport"
 msgid "SMTP"
 msgstr "SMTP"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:30
+#: plugins/smtp/smtpmailtransportplugin.cpp:31
 #, kde-format
 msgid "An SMTP server on the Internet"
 msgstr "ម៉ាស៊ីន​បម្រើ SMTP ស្ថិត​លើអ៊ីនធឺណិត"
 
-#: plugins/smtp/smtpmailtransportplugin.cpp:40
+#: plugins/smtp/smtpmailtransportplugin.cpp:41
 #, fuzzy, kde-format
 #| msgid "Configure account"
 msgctxt "@title:window"
