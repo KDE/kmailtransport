@@ -8,9 +8,12 @@
 
 #define USES_DEPRECATED_MAILTRANSPORT_API
 
-#include "widgets/transportcombobox.h"
 #include <QWidget>
 
+namespace MailTransport
+{
+class TransportComboBox;
+}
 class KJob;
 class QLineEdit;
 class QPlainTextEdit;

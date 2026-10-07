@@ -9,7 +9,6 @@
 
 #include "smtpjob.h"
 
-#include "mailtransport_defs.h"
 #include "mailtransportplugin_smtp_debug.h"
 #include "precommandjob.h"
 #include "sessionuiproxy.h"
@@ -19,7 +18,6 @@
 #include <QHash>
 #include <QPointer>
 
-#include "mailtransport_debug.h"
 #include <KLocalizedString>
 #include <KPasswordDialog>
 

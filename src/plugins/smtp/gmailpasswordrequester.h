@@ -8,7 +8,6 @@
 #pragma once
 
 #include "xoauthpasswordrequester.h"
-#include <accountmanager.h>
 
 namespace KGAPI2
 {

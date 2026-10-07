@@ -8,7 +8,6 @@
 
 #include "mailtransport_export.h"
 #include "transport.h"
-#include "transportbase.h"
 
 #include <QComboBox>
 

@@ -5,6 +5,7 @@
 */
 
 #include "transportmgr.h"
+#include "widgets/transportcombobox.h"
 
 #include "transport.h"
 #include "transportjob.h"
