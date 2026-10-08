@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-06 00:48+0000\n"
+"POT-Creation-Date: 2026-10-08 00:47+0000\n"
 "PO-Revision-Date: 2025-10-09 00:57+0200\n"
 "Last-Translator: Shinjo Park <kde@peremen.name>\n"
 "Language-Team: Korean <kde-kr@kde.org>\n"
@@ -259,7 +259,7 @@ msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "사용 가능한 기능 확인 실패"
 
-#: plugins/smtp/smtpjob.cpp:227
+#: plugins/smtp/smtpjob.cpp:225
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr "SMTP 서버에 사용할 사용자 이름과 암호가 필요합니다."
