@@ -70,7 +70,7 @@ QString TransportModel::generateTransportName(Transport *t) const
 {
     QString str = t->name();
     if (mShowDefault && TransportManager::self()->defaultTransportId() == t->id()) {
-        str += u' ' + i18nc("Default transport", " (default)");
+        str += i18nc("Default transport", " (default)");
     }
     return str;
 }
