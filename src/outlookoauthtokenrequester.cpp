@@ -12,11 +12,11 @@
 #include <QDesktopServices>
 #include <QHostAddress>
 #include <QJsonDocument>
-#include <QJsonObject>
+#include <QJsonValue>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 #include <QNetworkRequest>
-#include <QRandomGenerator64>
+#include <QRandomGenerator>
 #include <QTcpServer>
 #include <QTcpSocket>
 

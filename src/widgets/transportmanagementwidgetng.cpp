@@ -14,6 +14,7 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
+#include <QIcon>
 #include <QMenu>
 
 using namespace Qt::Literals::StringLiterals;

@@ -8,7 +8,7 @@
 
 #include "mailtransport_export.h"
 
-#include <QSslSocket>
+#include <QObject>
 
 #include <memory>
 

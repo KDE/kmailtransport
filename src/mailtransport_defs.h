@@ -5,7 +5,9 @@
 */
 
 #pragma once
-using namespace Qt::Literals::StringLiterals;
+
+#include <QString>
+
 /**
   @file mailtransport_defs.h
   Internal file containing constant definitions etc.

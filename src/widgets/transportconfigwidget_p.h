@@ -6,12 +6,12 @@
 
 #pragma once
 
-#include "mailtransport/transport.h"
-
-#include <KConfigDialogManager>
+class KConfigDialogManager;
 
 namespace MailTransport
 {
+class Transport;
+
 /**
   @internal
 */

@@ -7,8 +7,15 @@
 
 #pragma once
 
-#include "outlookoauthtokenrequester.h"
 #include "xoauthpasswordrequester.h"
+
+#include <memory>
+
+namespace MailTransport
+{
+class OutlookOAuthTokenRequester;
+class TokenResult;
+}
 
 class OutlookPasswordRequester : public MailTransport::XOAuthPasswordRequester
 {

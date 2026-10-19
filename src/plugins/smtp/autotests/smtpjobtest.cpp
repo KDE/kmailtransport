@@ -8,6 +8,7 @@
 
 #include "fakeserver.h"
 
+#include "transport.h"
 #include "transportbase.h"
 #include "transportmanager.h"
 

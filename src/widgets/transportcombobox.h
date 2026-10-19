@@ -13,10 +13,9 @@
 
 #include <memory>
 
-class TransportComboBoxPrivate;
-
 namespace MailTransport
 {
+class TransportComboBoxPrivate;
 class TransportActivitiesAbstract;
 /*!
   \class MailTransport::TransportComboBox

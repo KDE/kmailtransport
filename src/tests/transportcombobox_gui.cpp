@@ -4,6 +4,7 @@
 #include "widgets/transportcombobox.h"
 
 #include <QApplication>
+#include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
 #include <QPushButton>

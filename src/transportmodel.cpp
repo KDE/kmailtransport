@@ -7,8 +7,11 @@
 #include "transportmodel.h"
 
 #include "mailtransport_debug.h"
+#include "transport.h"
 #include "transportmanager.h"
 #include <KLocalizedString>
+
+#include <QFont>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;

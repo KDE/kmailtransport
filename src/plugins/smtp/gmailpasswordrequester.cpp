@@ -8,7 +8,6 @@
 #include "gmailpasswordrequester.h"
 
 #include "mailtransportplugin_smtp_debug.h"
-#include "plugins/smtp/xoauthpasswordrequester.h"
 #include "transport.h"
 
 #include <KGAPI/Account>

@@ -24,6 +24,5 @@ private:
 
     Transport *mTransport = nullptr;
     SMTPConfigWidget *mConfigWidget = nullptr;
-    QPushButton *mOkButton = nullptr;
 };
 } // namespace MailTransport

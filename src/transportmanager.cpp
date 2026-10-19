@@ -13,11 +13,11 @@
 #include "transportjob.h"
 #include "transporttype_p.h"
 #include "widgets/addtransportdialogng.h"
-#include <MailTransport/TransportAbstractPlugin>
 
 #include <QDBusConnection>
-#include <QDBusConnectionInterface>
 #include <QDBusServiceWatcher>
+#include <QEventLoop>
+#include <QMap>
 #include <QPointer>
 #include <QRandomGenerator>
 #include <QRegularExpression>

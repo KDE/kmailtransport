@@ -15,7 +15,7 @@ using namespace MailTransport;
  * Private class that helps to provide binary compatibility between releases.
  * @internal
  */
-class TransportComboBoxPrivate
+class MailTransport::TransportComboBoxPrivate
 {
 public:
     TransportComboBoxPrivate(TransportComboBox *qq)

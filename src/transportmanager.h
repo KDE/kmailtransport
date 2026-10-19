@@ -7,12 +7,15 @@
 #pragma once
 
 #include "mailtransport_export.h"
+#include "transport.h"
 #include "transporttype.h"
 
 #include <QList>
 #include <QObject>
 
 #include <memory>
+
+class QWidget;
 
 namespace MailTransport
 {
