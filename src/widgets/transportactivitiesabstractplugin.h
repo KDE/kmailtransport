@@ -6,6 +6,7 @@
 
 #pragma once
 #include "mailtransport_export.h"
+#include <QStringList>
 #include <QWidget>
 namespace MailTransport
 {

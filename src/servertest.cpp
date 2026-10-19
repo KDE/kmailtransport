@@ -11,7 +11,6 @@
 #include "socket.h"
 
 #include "mailtransport_defs.h"
-#include <transportbase.h>
 
 #include <KLocalizedString>
 
@@ -26,6 +25,7 @@
 // KDE
 #include "mailtransport_debug.h"
 
+using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
 namespace MailTransport

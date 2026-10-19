@@ -24,9 +24,12 @@
 #include "widgets/transportconfigwidget_p.h"
 
 #include <QAbstractButton>
+#include <QApplication>
 #include <QButtonGroup>
+#include <QTabBar>
 
 #include <KAuthorized>
+#include <KConfigDialogManager>
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <KPluginFactory>

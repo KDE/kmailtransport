@@ -11,9 +11,13 @@
 #include "transporttype.h"
 #include "ui_addtransportdialog.h"
 
-#include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <KLocalizedString>
+#include <KSharedConfig>
 
+#include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;

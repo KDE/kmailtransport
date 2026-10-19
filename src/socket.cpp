@@ -13,6 +13,7 @@
 // Qt
 #include <QByteArray>
 #include <QNetworkProxy>
+#include <QSslSocket>
 // KDE
 #include "mailtransport_debug.h"
 

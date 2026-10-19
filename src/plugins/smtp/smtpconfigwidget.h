@@ -16,7 +16,6 @@
 class QAbstractButton;
 namespace MailTransport
 {
-class Transport;
 class TransportActivitiesAbstractPlugin;
 
 /**

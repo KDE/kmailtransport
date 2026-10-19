@@ -9,7 +9,6 @@
 #include "gmailpasswordrequester.h"
 #include "outlookpasswordrequester.h"
 #include "transport.h"
-#include "transportbase.h"
 
 using namespace MailTransport;
 

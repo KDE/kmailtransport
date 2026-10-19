@@ -7,13 +7,14 @@
 #pragma once
 
 #include "mailtransport_export.h"
-#include "transport.h"
 
+#include <QList>
+#include <QMetaType>
+#include <QSharedDataPointer>
 #include <QString>
 
 namespace MailTransport
 {
-class AddTransportDialog;
 class TransportManager;
 class TransportTypePrivate;
 
@@ -49,7 +50,6 @@ class MAILTRANSPORT_EXPORT TransportType
     /// This property holds whether this transport is an akonadi resource.
     Q_PROPERTY(bool isAkonadiResource READ isAkonadiResource CONSTANT)
 
-    friend class AddTransportDialog;
     friend class Transport;
     friend class TransportManager;
     friend class TransportManagerPrivate;

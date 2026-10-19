@@ -17,6 +17,8 @@
 #include <KMessageBox>
 #include <KStringHandler>
 
+#include <QEventLoop>
+
 #include <qt6keychain/keychain.h>
 using namespace Qt::Literals::StringLiterals;
 using namespace QKeychain;

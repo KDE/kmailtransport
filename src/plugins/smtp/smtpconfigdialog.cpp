@@ -8,7 +8,6 @@
 
 #include "smtpconfigwidget.h"
 #include "transport.h"
-#include "transportmanager.h"
 
 #include <QDialogButtonBox>
 #include <QPushButton>
@@ -34,11 +33,11 @@ SmtpConfigDialog::SmtpConfigDialog(Transport *transport, QWidget *parent)
                                   style()->pixelMetric(QStyle::PM_LayoutRightMargin),
                                   style()->pixelMetric(QStyle::PM_LayoutBottomMargin));
     buttonBox->setObjectName("buttons"_L1);
-    mOkButton = buttonBox->button(QDialogButtonBox::Ok);
-    mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    auto okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     mainLayout->addWidget(buttonBox);
 
-    connect(mOkButton, &QAbstractButton::clicked, this, &SmtpConfigDialog::okClicked);
+    connect(okButton, &QAbstractButton::clicked, this, &SmtpConfigDialog::okClicked);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SmtpConfigDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SmtpConfigDialog::reject);
 }
