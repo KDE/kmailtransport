@@ -21,7 +21,6 @@ class MailTransportPluginInfo
 {
 public:
     QString metaDataFileNameBaseName;
-    QString metaDataFileName;
     KPluginMetaData data;
     MailTransport::TransportAbstractPlugin *plugin = nullptr;
 };
@@ -66,7 +65,6 @@ void TransportPluginManagerPrivate::initializePlugins()
         const KPluginMetaData data = i.previous();
 
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
-        info.metaDataFileName = data.fileName();
         info.data = data;
         if (pluginVersion() == data.version()) {
             info.plugin = nullptr;
