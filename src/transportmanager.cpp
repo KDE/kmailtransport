@@ -44,7 +44,7 @@ namespace MailTransport
 class TransportManagerPrivate
 {
 public:
-    TransportManagerPrivate(TransportManager *parent)
+    explicit TransportManagerPrivate(TransportManager *parent)
         : q(parent)
     {
     }
