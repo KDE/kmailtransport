@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: kmailtransport\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:47+0000\n"
+"POT-Creation-Date: 2026-10-20 00:53+0000\n"
 "PO-Revision-Date: 2025-07-31 12:10+0200\n"
 "Last-Translator: Iñigo Salvador Azurmendi <xalba@ni.eus>\n"
 "Language-Team: Basque <kde-i18n-eu@kde.org>\n"
@@ -246,23 +246,23 @@ msgstr ""
 "Markatuta badago, sistemako ordezkariaren ezarpenak erabiliko dira posta-"
 "zerbitzarira konektatzeko."
 
-#: plugins/smtp/smtpconfigwidget.cpp:152
+#: plugins/smtp/smtpconfigwidget.cpp:155
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "Baimena jasotzeko zerbitzarira bidali beharreko pasahitza."
 
-#: plugins/smtp/smtpconfigwidget.cpp:164 servertest.cpp:554
+#: plugins/smtp/smtpconfigwidget.cpp:167 servertest.cpp:554
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%%p"
 
-#: plugins/smtp/smtpconfigwidget.cpp:202
+#: plugins/smtp/smtpconfigwidget.cpp:205
 #, kde-format
 msgid "Activities"
 msgstr "Jarduerak"
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:307
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -270,13 +270,13 @@ msgstr ""
 "Gaitasunak ikuskatzea huts egin du. Mesedez, egiaztatu ataka eta "
 "autentifikazio modua."
 
-#: plugins/smtp/smtpconfigwidget.cpp:305
+#: plugins/smtp/smtpconfigwidget.cpp:308
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "Gaitasunak ikuskatzea huts egin du"
 
-#: plugins/smtp/smtpjob.cpp:225
+#: plugins/smtp/smtpjob.cpp:223
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
@@ -465,32 +465,32 @@ msgstr "Aurre-komandoa kraskatu egin da."
 msgid "The precommand exited with code %1."
 msgstr "Aurre-komandoa %1 kodearekin amaitu da."
 
-#: transport.cpp:83
+#: transport.cpp:85
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 %2 zk."
 
-#: transport.cpp:133
+#: transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Testu argia"
 
-#: transport.cpp:137
+#: transport.cpp:139
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anonimoa"
 
-#: transport.cpp:168
+#: transport.cpp:170
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Ezezaguna"
 
-#: transport.cpp:212
+#: transport.cpp:214
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -510,19 +510,19 @@ msgstr ""
 "segurutzat hartu behar.\n"
 "'%1' zerbitzariko pasahitza konfigurazio-fitxategian gorde nahi duzu?"
 
-#: transport.cpp:221
+#: transport.cpp:223
 #, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet ez dago erabilgarri"
 
-#: transport.cpp:222
+#: transport.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Gorde pasahitza"
 
-#: transport.cpp:223
+#: transport.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
@@ -586,19 +586,19 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Mantendu"
 
-#: transportmodel.cpp:70
+#: transportmodel.cpp:73
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (Lehenetsia)"
 
-#: transportmodel.cpp:93
+#: transportmodel.cpp:96
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Izena"
 
-#: transportmodel.cpp:95
+#: transportmodel.cpp:98
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -677,61 +677,61 @@ msgstr "E&zarri lehenetsi gisa"
 msgid "Show only transports on current activity"
 msgstr "Erakutsi garraioak uneko jardueran bakarrik"
 
-#: widgets/addtransportdialogng.cpp:94
+#: widgets/addtransportdialogng.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
 msgstr "Sortu irteerako kontua"
 
-#: widgets/addtransportdialogng.cpp:97
+#: widgets/addtransportdialogng.cpp:101
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Sortu eta konfiguratu"
 
-#: widgets/transportmanagementwidgetng.cpp:161
+#: widgets/transportmanagementwidgetng.cpp:162
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "'%1' irteerako kontua kendu nahi duzu?"
 
-#: widgets/transportmanagementwidgetng.cpp:162
+#: widgets/transportmanagementwidgetng.cpp:163
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "Benetan kendu nahi duzu irteerako kontu (%1) hau?"
 msgstr[1] "Benetan kendu nahi dituzu irteerako %1 kontu hauek?"
 
-#: widgets/transportmanagementwidgetng.cpp:165
+#: widgets/transportmanagementwidgetng.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "Irteerako kontua kendu?"
 
-#: widgets/transportmanagementwidgetng.cpp:195
+#: widgets/transportmanagementwidgetng.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Gehitu…"
 
-#: widgets/transportmanagementwidgetng.cpp:200
+#: widgets/transportmanagementwidgetng.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Aldatu..."
 
-#: widgets/transportmanagementwidgetng.cpp:203
+#: widgets/transportmanagementwidgetng.cpp:204
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Berrizendatu"
 
-#: widgets/transportmanagementwidgetng.cpp:207
+#: widgets/transportmanagementwidgetng.cpp:208
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Kendu"
 
-#: widgets/transportmanagementwidgetng.cpp:215
+#: widgets/transportmanagementwidgetng.cpp:216
 #, kde-format
 msgid "Set as Default"
 msgstr "Ezarri lehenetsi gisa"

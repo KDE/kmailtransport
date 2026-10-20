@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libmailtransport6\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
-"POT-Creation-Date: 2026-10-08 00:47+0000\n"
+"POT-Creation-Date: 2026-10-20 00:53+0000\n"
 "PO-Revision-Date: 2025-08-01 00:22+0100\n"
 "Last-Translator: Eloy Cuadra <ecuadra@eloihr.net>\n"
 "Language-Team: Spanish <kde-l10n-es@kde.org>\n"
@@ -252,23 +252,23 @@ msgstr ""
 "Si está marcado, se usarán las preferencias de «proxy» del sistema para "
 "conectarse con el servidor de correo."
 
-#: plugins/smtp/smtpconfigwidget.cpp:152
+#: plugins/smtp/smtpconfigwidget.cpp:155
 #, kde-format
 msgid "The password to send to the server for authorization."
 msgstr "La contraseña que se envía al servidor para la autorización."
 
-#: plugins/smtp/smtpconfigwidget.cpp:164 servertest.cpp:554
+#: plugins/smtp/smtpconfigwidget.cpp:167 servertest.cpp:554
 #, kde-format
 msgctxt "Percent value; %p is the value, % is the percent sign"
 msgid "%p%"
 msgstr "%p %"
 
-#: plugins/smtp/smtpconfigwidget.cpp:202
+#: plugins/smtp/smtpconfigwidget.cpp:205
 #, kde-format
 msgid "Activities"
 msgstr "Actividades"
 
-#: plugins/smtp/smtpconfigwidget.cpp:304
+#: plugins/smtp/smtpconfigwidget.cpp:307
 #, kde-format
 msgid ""
 "Failed to check capabilities. Please verify port and authentication mode."
@@ -276,13 +276,13 @@ msgstr ""
 "Ha fallado al comprobar las capacidades. Por favor, verifique el puerto y el "
 "modo de autenticación."
 
-#: plugins/smtp/smtpconfigwidget.cpp:305
+#: plugins/smtp/smtpconfigwidget.cpp:308
 #, kde-format
 msgctxt "@title:window"
 msgid "Check Capabilities Failed"
 msgstr "La comprobación de capacidades ha fallado"
 
-#: plugins/smtp/smtpjob.cpp:225
+#: plugins/smtp/smtpjob.cpp:223
 #, kde-format
 msgid "You need to supply a username and a password to use this SMTP server."
 msgstr ""
@@ -471,32 +471,32 @@ msgstr "La orden previa se colgó."
 msgid "The precommand exited with code %1."
 msgstr "Finalizó la orden previa con el código %1."
 
-#: transport.cpp:83
+#: transport.cpp:85
 #, kde-format
 msgctxt ""
 "%1: name; %2: number appended to it to make it unique among a list of names"
 msgid "%1 #%2"
 msgstr "%1 #%2"
 
-#: transport.cpp:133
+#: transport.cpp:135
 #, kde-format
 msgctxt "Authentication method"
 msgid "Clear text"
 msgstr "Texto en claro"
 
-#: transport.cpp:137
+#: transport.cpp:139
 #, kde-format
 msgctxt "Authentication method"
 msgid "Anonymous"
 msgstr "Anónimo"
 
-#: transport.cpp:168
+#: transport.cpp:170
 #, kde-format
 msgctxt "An unknown transport type"
 msgid "Unknown"
 msgstr "Desconocido"
 
-#: transport.cpp:212
+#: transport.cpp:214
 #, kde-format
 msgid ""
 "QKeychain not found a backend for storing your password. It is strongly "
@@ -516,19 +516,19 @@ msgstr ""
 "¿Realmente desea guardar la contraseña para el servidor «%1» en el archivo "
 "de configuración?"
 
-#: transport.cpp:221
+#: transport.cpp:223
 #, kde-format
 msgctxt "@title:window"
 msgid "KWallet Not Available"
 msgstr "KWallet no está disponible"
 
-#: transport.cpp:222
+#: transport.cpp:224
 #, kde-format
 msgctxt "@action:button"
 msgid "Store Password"
 msgstr "Guardar contraseña"
 
-#: transport.cpp:223
+#: transport.cpp:225
 #, kde-format
 msgctxt "@action:button"
 msgid "Do Not Store Password"
@@ -591,19 +591,19 @@ msgctxt "@action:button"
 msgid "Keep"
 msgstr "Saltar"
 
-#: transportmodel.cpp:70
+#: transportmodel.cpp:73
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
 msgstr " (predeterminado)"
 
-#: transportmodel.cpp:93
+#: transportmodel.cpp:96
 #, kde-format
 msgctxt "@title:column email transport name"
 msgid "Name"
 msgstr "Nombre"
 
-#: transportmodel.cpp:95
+#: transportmodel.cpp:98
 #, kde-format
 msgctxt "@title:column email transport type"
 msgid "Type"
@@ -682,61 +682,61 @@ msgstr "Establecer como &predeterminado"
 msgid "Show only transports on current activity"
 msgstr "Mostrar transportes solo en la actividad actual"
 
-#: widgets/addtransportdialogng.cpp:94
+#: widgets/addtransportdialogng.cpp:98
 #, kde-format
 msgctxt "@title:window"
 msgid "Create Outgoing Account"
 msgstr "Crear cuenta saliente"
 
-#: widgets/addtransportdialogng.cpp:97
+#: widgets/addtransportdialogng.cpp:101
 #, kde-format
 msgctxt "create and configure a mail transport"
 msgid "Create and Configure"
 msgstr "Crear y configurar"
 
-#: widgets/transportmanagementwidgetng.cpp:161
+#: widgets/transportmanagementwidgetng.cpp:162
 #, kde-format
 msgid "Do you want to remove outgoing account '%1'?"
 msgstr "¿Quiere eliminar la cuenta saliente «%1»?"
 
-#: widgets/transportmanagementwidgetng.cpp:162
+#: widgets/transportmanagementwidgetng.cpp:163
 #, kde-format
 msgid "Do you really want to remove this %1 outgoing account?"
 msgid_plural "Do you really want to remove these %1 outgoing accounts?"
 msgstr[0] "¿Realmente quiere eliminar esta cuenta saliente?"
 msgstr[1] "¿Realmente quiere eliminar estas %1 cuentas salientes?"
 
-#: widgets/transportmanagementwidgetng.cpp:165
+#: widgets/transportmanagementwidgetng.cpp:166
 #, kde-format
 msgctxt "@title:window"
 msgid "Remove outgoing account?"
 msgstr "¿Eliminar cuenta saliente?"
 
-#: widgets/transportmanagementwidgetng.cpp:195
+#: widgets/transportmanagementwidgetng.cpp:196
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Add…"
 msgstr "Añadir…"
 
-#: widgets/transportmanagementwidgetng.cpp:200
+#: widgets/transportmanagementwidgetng.cpp:201
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Modify…"
 msgstr "Modificar…"
 
-#: widgets/transportmanagementwidgetng.cpp:203
+#: widgets/transportmanagementwidgetng.cpp:204
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Rename"
 msgstr "Cambiar nombre"
 
-#: widgets/transportmanagementwidgetng.cpp:207
+#: widgets/transportmanagementwidgetng.cpp:208
 #, kde-format
 msgctxt "@action:inmenu"
 msgid "Remove"
 msgstr "Eliminar"
 
-#: widgets/transportmanagementwidgetng.cpp:215
+#: widgets/transportmanagementwidgetng.cpp:216
 #, kde-format
 msgid "Set as Default"
 msgstr "Poner como predeterminado"
