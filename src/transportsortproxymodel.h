@@ -5,7 +5,6 @@
 */
 
 #pragma once
-#include "mailtransport_export.h"
 #include <QSortFilterProxyModel>
 namespace MailTransport
 {
@@ -18,7 +17,7 @@ class TransportActivitiesAbstract;
  *
  * \brief The TransportSortProxyModel class
  */
-class MAILTRANSPORT_EXPORT TransportSortProxyModel : public QSortFilterProxyModel
+class TransportSortProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
@@ -56,7 +55,7 @@ protected:
     [[nodiscard]] bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 
 private:
-    MAILTRANSPORT_NO_EXPORT void slotInvalidateFilter();
+    void slotInvalidateFilter();
     TransportActivitiesAbstract *mTransportActivitiesAbstract = nullptr;
     bool mEnablePlasmaActivities = false;
 };
