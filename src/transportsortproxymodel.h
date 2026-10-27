@@ -15,14 +15,14 @@ class TransportActivitiesAbstract;
  * \inheaderfile MailTransport/TransportSortProxyModel
  * \author Laurent Montel <montel@kde.org>
  *
- * \brief The TransportSortProxyModel class
+ * \brief The TransportSortProxyModel class.
  */
 class TransportSortProxyModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
     /*!
-      Creates a new TransportSortProxyModel with the specified parent object.
+      Creates a new TransportSortProxyModel with the specified \a parent object.
     */
     explicit TransportSortProxyModel(QObject *parent = nullptr);
     /*!
@@ -35,7 +35,7 @@ public:
     */
     [[nodiscard]] TransportActivitiesAbstract *transportActivitiesAbstract() const;
     /*!
-      Sets the TransportActivitiesAbstract object used for filtering.
+      Sets the TransportActivitiesAbstract object \a newTransportActivitiesAbstract used for filtering.
     */
     void setTransportActivitiesAbstract(TransportActivitiesAbstract *newTransportActivitiesAbstract);
 
@@ -44,13 +44,14 @@ public:
     */
     [[nodiscard]] bool enablePlasmaActivities() const;
     /*!
-      Enables or disables plasma activities filtering.
+      Enables or disables plasma activities filtering, according to \a newEnablePlasmaActivities.
     */
     void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
 
 protected:
     /*!
       Filters rows based on transport activities. Reimplemented from QSortFilterProxyModel.
+      Returns \c true if the row \a source_row under \a source_parent is accepted.
     */
     [[nodiscard]] bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 

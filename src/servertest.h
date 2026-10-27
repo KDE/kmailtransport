@@ -31,8 +31,20 @@ class ServerTestPrivate;
 class MAILTRANSPORT_EXPORT ServerTest : public QObject
 {
     Q_OBJECT
+    /*!
+     * \property MailTransport::ServerTest::server
+     * \brief the server to test.
+     */
     Q_PROPERTY(QString server READ server WRITE setServer)
+    /*!
+     * \property MailTransport::ServerTest::protocol
+     * \brief the protocol to test.
+     */
     Q_PROPERTY(QString protocol READ protocol WRITE setProtocol)
+    /*!
+     * \property MailTransport::ServerTest::progressBar
+     * \brief the progress bar used to show the test progress.
+     */
     Q_PROPERTY(QProgressBar *progressBar READ progressBar WRITE setProgressBar)
 
 public:
@@ -63,7 +75,7 @@ public:
     ~ServerTest() override;
 
     /*!
-     * Sets the server to test.
+     * Sets the \a server to test.
      */
     void setServer(const QString &server);
 
@@ -158,7 +170,7 @@ public:
     [[nodiscard]] QList<int> normalProtocols() const;
 
     /*!
-     * tells you if the normal server is available
+     * Returns \c true if the normal server is available.
      * \since 4.5
      */
     [[nodiscard]] bool isNormalPossible() const;
@@ -179,7 +191,7 @@ public:
     [[nodiscard]] QList<int> secureProtocols() const;
 
     /*!
-     * tells you if the ssl server is available
+     * Returns \c true if the ssl server is available.
      * \since 4.5
      */
     [[nodiscard]] bool isSecurePossible() const;

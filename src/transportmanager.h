@@ -33,9 +33,7 @@ class TransportManagerPrivate;
   transports, as well as the loading and storing of mail transport settings.
 
   It also handles the creation of transport jobs, although that behaviour is
-  deprecated and you are encouraged to use MessageQueueJob.
-
-  \sa MessageQueueJob.
+  deprecated and you are encouraged to use \c Akonadi::MessageQueueJob from akonadi-mime.
 */
 class MAILTRANSPORT_EXPORT TransportManager : public QObject
 {

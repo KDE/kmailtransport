@@ -30,7 +30,7 @@ class MAILTRANSPORT_EXPORT TransportComboBox : public QComboBox
 public:
     /*!
       \brief Creates a new mail transport selection combo box.
-      \param parent The paren widget.
+      \a parent The paren widget.
     */
     explicit TransportComboBox(QWidget *parent = nullptr);
 
@@ -62,14 +62,17 @@ public:
     void setTransportActivitiesAbstract(MailTransport::TransportActivitiesAbstract *activitiesAbstract);
 
     /*!
+     * Returns \c true if plasma activities filtering is enabled.
      */
     [[nodiscard]] bool enablePlasmaActivities() const;
     /*!
+     * Enables or disables plasma activities filtering, according to \a newEnablePlasmaActivities.
      */
     void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
 
 Q_SIGNALS:
     /*!
+     * Emitted when the transport \a id named \a name is removed.
      */
     void transportRemoved(Transport::Id id, const QString &name);
 

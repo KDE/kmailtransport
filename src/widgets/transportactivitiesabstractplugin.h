@@ -14,7 +14,8 @@ namespace MailTransport
  * \class MailTransport::TransportActivitiesAbstractPlugin
  * \inmodule KMailTransport
  * \inheaderfile MailTransport/TransportActivitiesAbstractPlugin
- * \brief The TransportActivitiesAbstractPlugin class
+ * \brief The TransportActivitiesAbstractPlugin class.
+ *
  * \author Laurent Montel <montel@kde.org>
  */
 class MAILTRANSPORT_EXPORT TransportActivitiesAbstractPlugin : public QWidget
@@ -27,7 +28,7 @@ public:
     };
 
     /*!
-      Creates a new TransportActivitiesAbstractPlugin with the specified parent widget.
+      Creates a new TransportActivitiesAbstractPlugin with the specified \a parent widget.
     */
     explicit TransportActivitiesAbstractPlugin(QWidget *parent = nullptr);
     /*!
@@ -40,7 +41,7 @@ public:
     */
     [[nodiscard]] virtual TransportActivitiesAbstractPlugin::ActivitySettings activitiesSettings() const = 0;
     /*!
-      Sets the activity settings.
+      Sets the activity settings to \a activitySettings.
     */
     virtual void setActivitiesSettings(const TransportActivitiesAbstractPlugin::ActivitySettings &activitySettings) = 0;
 };

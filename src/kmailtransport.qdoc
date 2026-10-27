@@ -7,3 +7,10 @@
 
     \brief KMailTransport provides API for managing mail transport.
 */
+
+/*!
+    \namespace MailTransport
+    \inmodule KMailTransport
+
+    \brief Classes for managing mail transports.
+*/

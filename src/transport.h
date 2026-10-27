@@ -37,7 +37,15 @@ class MAILTRANSPORT_EXPORT Transport : public TransportBase
 {
     Q_OBJECT
 
+    /*!
+      \property MailTransport::Transport::password
+      \brief the password of this transport.
+    */
     Q_PROPERTY(QString password READ password WRITE setPassword NOTIFY passwordChanged)
+    /*!
+      \property MailTransport::Transport::transportType
+      \brief the type of this transport.
+    */
     Q_PROPERTY(TransportType transportType READ transportType NOTIFY transportTypeChanged)
 
     friend class TransportManager;

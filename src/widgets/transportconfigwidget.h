@@ -52,8 +52,8 @@ class MAILTRANSPORT_EXPORT TransportConfigWidget : public QWidget
 public:
     /*!
       \brief Creates a new mail transport configuration widget for the given Transport object.
-      \param transport The Transport object to configure.
-      \param parent The parent widget.
+      \a transport The Transport object to configure.
+      \a parent The parent widget.
     */
     explicit TransportConfigWidget(Transport *transport, QWidget *parent = nullptr);
 
@@ -76,8 +76,7 @@ public Q_SLOTS:
       sure the transport has a unique name.  Reimplement in derived classes to
       save your custom settings, and call the base implementation.
     */
-    // TODO: do we also want to check for invalid settings?
-    virtual void apply();
+    virtual void apply(); // TODO: do we also want to check for invalid settings?
 
 protected:
     std::unique_ptr<TransportConfigWidgetPrivate> const d_ptr;

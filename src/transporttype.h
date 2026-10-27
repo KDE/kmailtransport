@@ -35,19 +35,34 @@ class MAILTRANSPORT_EXPORT TransportType
 {
     Q_GADGET
 
-    /// This property holds whether the transport type is valid.
+    /*!
+     * \property MailTransport::TransportType::isValid
+     * \brief whether the transport type is valid.
+     */
     Q_PROPERTY(bool isValid READ isValid CONSTANT)
 
-    /// This property holds the i18n'ed name of the transport type.
+    /*!
+     * \property MailTransport::TransportType::name
+     * \brief the i18n'ed name of the transport type.
+     */
     Q_PROPERTY(QString name READ name CONSTANT)
 
-    /// This property holds the transport type.
+    /*!
+     * \property MailTransport::TransportType::description
+     * \brief the description of the transport type.
+     */
     Q_PROPERTY(QString description READ description CONSTANT)
 
-    /// This property holds the plugin identifier.
+    /*!
+     * \property MailTransport::TransportType::identifier
+     * \brief the plugin identifier.
+     */
     Q_PROPERTY(QString identifier READ identifier CONSTANT)
 
-    /// This property holds whether this transport is an akonadi resource.
+    /*!
+     * \property MailTransport::TransportType::isAkonadiResource
+     * \brief whether this transport is an akonadi resource.
+     */
     Q_PROPERTY(bool isAkonadiResource READ isAkonadiResource CONSTANT)
 
     friend class Transport;
@@ -93,7 +108,7 @@ public:
     TransportType &operator=(TransportType &&other) noexcept;
 
     /*!
-     * Compares the transport type with the \a other.
+     * Returns \c true if the transport type is equal to \a other.
      */
     [[nodiscard]] bool operator==(const TransportType &other) const;
 

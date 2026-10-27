@@ -26,7 +26,7 @@ namespace MailTransport
  * \class MailTransport::TokenResult
  * \inmodule KMailTransport
  * \inheaderfile MailTransport/OutlookOAuthTokenRequester
- * \brief The TokenResult class
+ * \brief The TokenResult class.
  */
 class MAILTRANSPORT_EXPORT TokenResult
 {
@@ -81,7 +81,7 @@ class PKCE;
  * \class MailTransport::OutlookOAuthTokenRequester
  * \inmodule KMailTransport
  * \inheaderfile MailTransport/OutlookOAuthTokenRequester
- * \brief OAuth token requester for Outlook
+ * \brief OAuth token requester for Outlook.
  */
 class MAILTRANSPORT_EXPORT OutlookOAuthTokenRequester : public QObject
 {
@@ -101,17 +101,17 @@ public:
     ~OutlookOAuthTokenRequester() override;
 
     /*!
-      Requests a new OAuth token with an optional username hint.
+      Requests a new OAuth token with the optional username hint \a usernameHint.
     */
     void requestToken(const QString &usernameHint = {});
     /*!
-      Refreshes an existing OAuth token.
+      Refreshes the existing OAuth token \a refreshToken.
     */
     void refreshToken(const QString &refreshToken);
 
 Q_SIGNALS:
     /*!
-      Emitted when the token request or refresh is finished.
+      Emitted when the token request or refresh is finished, with the \a result.
     */
     void finished(const MailTransport::TokenResult &result);
 

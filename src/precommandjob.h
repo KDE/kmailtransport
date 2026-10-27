@@ -57,6 +57,7 @@ public:
 protected:
     /*!
       Reimplemented from KJob.
+      Returns \c true if the job was killed.
     */
     bool doKill() override;
 

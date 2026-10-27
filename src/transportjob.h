@@ -22,10 +22,14 @@ class Transport;
 class TransportJobPrivate;
 
 /*!
-  Abstract base class for all mail transport jobs.
+  \class MailTransport::TransportJob
+  \inmodule KMailTransport
+  \inheaderfile MailTransport/TransportJob
+  \brief Abstract base class for all mail transport jobs.
+
   This is a job that is supposed to send exactly one mail.
 
-  \deprecated Use MessageQueueJob for sending e-mail.
+  \deprecated Use \c Akonadi::MessageQueueJob from akonadi-mime for sending e-mail.
 */
 class MAILTRANSPORT_DEPRECATED_EXPORT TransportJob : public KCompositeJob
 {
@@ -63,7 +67,7 @@ public:
     void setBcc(const QStringList &bcc);
 
     /*!
-      Sets the content of the mail.
+      Sets the content of the mail to \a data.
     */
     void setData(const QByteArray &data);
 
@@ -81,7 +85,7 @@ public:
     Transport *transport() const;
 
     /*!
-       Sets the content of the mail.
+       Sets whether a delivery status notification is requested, according to \a enabled.
     */
     void setDeliveryStatusNotification(bool enabled);
 

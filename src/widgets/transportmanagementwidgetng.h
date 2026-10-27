@@ -30,7 +30,7 @@ class MAILTRANSPORT_EXPORT TransportManagementWidgetNg : public QWidget
 public:
     /*!
       Creates a new TransportManagementWidgetNg.
-      \param parent The parent widget.
+      \a parent The parent widget.
     */
     explicit TransportManagementWidgetNg(QWidget *parent = nullptr);
 
@@ -44,12 +44,12 @@ public:
     */
     [[nodiscard]] bool enablePlasmaActivities() const;
     /*!
-      Enables or disables plasma activities filtering.
+      Enables or disables plasma activities filtering, according to \a newEnablePlasmaActivities.
     */
     void setEnablePlasmaActivities(bool newEnablePlasmaActivities);
 
     /*!
-      Sets the TransportActivitiesAbstract object used for activities filtering.
+      Sets the TransportActivitiesAbstract object \a activitiesAbstract used for activities filtering.
     */
     void setTransportActivitiesAbstract(TransportActivitiesAbstract *activitiesAbstract);
 

@@ -17,7 +17,8 @@ class Transport;
  * \struct MailTransport::TransportAbstractPluginInfo
  * \inmodule KMailTransport
  * \inheaderfile MailTransport/TransportAbstractPlugin
- * \brief The TransportAbstractPluginInfo struct
+ * \brief The TransportAbstractPluginInfo struct.
+ *
  * \author Laurent Montel <montel@kde.org>
  */
 struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo {
@@ -31,7 +32,8 @@ struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo {
  * \class MailTransport::TransportAbstractPlugin
  * \inmodule KMailTransport
  * \inheaderfile MailTransport/TransportAbstractPlugin
- * \brief The TransportAbstractPlugin class
+ * \brief The TransportAbstractPlugin class.
+ *
  * \author Laurent Montel <montel@kde.org>
  */
 class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject
@@ -39,7 +41,7 @@ class MAILTRANSPORT_EXPORT TransportAbstractPlugin : public QObject
     Q_OBJECT
 public:
     /*!
-      Creates a new TransportAbstractPlugin with the specified parent object.
+      Creates a new TransportAbstractPlugin with the specified \a parent object.
     */
     explicit TransportAbstractPlugin(QObject *parent = nullptr);
     /*!
@@ -48,7 +50,7 @@ public:
     ~TransportAbstractPlugin() override;
 
     /*!
-      Creates a transport job for the given transport and identifier.
+      Creates a transport job for the given transport \a t and \a identifier.
     */
     [[nodiscard]] virtual TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) = 0;
     /*!
@@ -56,15 +58,16 @@ public:
     */
     [[nodiscard]] virtual QList<TransportAbstractPluginInfo> names() const = 0;
     /*!
-      Configures the transport with the given identifier.
+      Configures the \a transport with the given \a identifier, using \a parent as parent widget.
+      Returns \c true if the transport was configured.
     */
     [[nodiscard]] virtual bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent) = 0;
     /*!
-      Cleans up the transport resources.
+      Cleans up the resources of the transport \a t.
     */
     virtual void cleanUp(MailTransport::Transport *t);
     /*!
-      Initializes the transport with the given identifier.
+      Initializes the transport \a t with the given \a identifier.
     */
     virtual void initializeTransport(MailTransport::Transport *t, const QString &identifier);
 

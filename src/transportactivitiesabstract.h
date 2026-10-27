@@ -14,7 +14,7 @@ namespace MailTransport
  * \class MailTransport::TransportActivitiesAbstract
  * \inmodule KMailTransport
  * \inheaderfile MailTransport/TransportActivitiesAbstract
- * \brief The TransportActivitiesAbstract class
+ * \brief The TransportActivitiesAbstract class.
  *
  * \author Laurent Montel <montel@kde.org>
  */
@@ -23,7 +23,7 @@ class MAILTRANSPORT_EXPORT TransportActivitiesAbstract : public QObject
     Q_OBJECT
 public:
     /*!
-      Creates a new TransportActivitiesAbstract with the specified parent object.
+      Creates a new TransportActivitiesAbstract with the specified \a parent object.
     */
     explicit TransportActivitiesAbstract(QObject *parent = nullptr);
     /*!
@@ -32,7 +32,7 @@ public:
     ~TransportActivitiesAbstract() override;
 
     /*!
-      Returns whether the given activities are accepted by the filter.
+      Returns whether the given \a activities are accepted by the filter.
     */
     [[nodiscard]] virtual bool filterAcceptsRow(const QStringList &activities) const = 0;
 
