@@ -12,7 +12,10 @@ sourcedirs += .
 outputformats = HTML
 
 depends += \
-    qtcore
+    qtcore \
+    qtgui \
+    qtwidgets \
+    kcoreaddons
 
 navigation.landingpage = "KMailTransport"
 
@@ -21,7 +24,7 @@ qhp.projects            = KMailTransport
 qhp.KMailTransport.file                = kmailtransport.qhp
 qhp.KMailTransport.namespace           = org.kde.kmailtransport.$QT_VERSION_TAG
 qhp.KMailTransport.virtualFolder       = kmailtransport
-qhp.KMailTransport.indexTitle          = kmailtransport
+qhp.KMailTransport.indexTitle          = KMailTransport
 qhp.KMailTransport.indexRoot           =
 
 qhp.KMailTransport.subprojects         = classes
