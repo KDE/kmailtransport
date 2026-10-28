@@ -33,4 +33,4 @@ qhp.KMailTransport.subprojects.classes.indexTitle = KMailTransport C++ Classes
 qhp.KMailTransport.subprojects.classes.selectors = class fake:headerfile
 qhp.KMailTransport.subprojects.classes.sortPages = true
 
-tagfile = KMailTransport.tags
+tagfile = kmailtransport.tags
