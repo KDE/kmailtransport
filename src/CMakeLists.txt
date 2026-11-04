@@ -4,7 +4,7 @@ add_library(KPim6::MailTransport ALIAS KPim6MailTransport)
 ecm_setup_version(PROJECT VARIABLE_PREFIX MAILTRANSPORT
     VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/mailtransport_version.h"
     PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/KPim6MailTransportConfigVersion.cmake"
-    SOVERSION 6
+    SOVERSION ${PROJECT_SOVERSION}
 )
 
 target_sources(
