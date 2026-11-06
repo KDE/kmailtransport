@@ -237,8 +237,7 @@ msgid ""
 "server."
 msgstr ""
 "Jos valittu, postipalvelimeen yhdistettäessä käytetään järjestelmän "
-"välityspalvelinasetuksia.Jos valittu, postipalvelimeen yhdistettäessä "
-"käytetään järjestelmän välityspalvelinasetuksia."
+"välityspalvelinasetuksia."
 
 #: plugins/smtp/smtpconfigwidget.cpp:155
 #, kde-format
