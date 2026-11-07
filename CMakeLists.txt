@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.29)
-set(PIM_VERSION "6.8.40")
+set(PIM_VERSION "6.9.40")
 
 project(MailTransport VERSION ${PIM_VERSION})
 # use a different SOVERSION for each minor release because we don't guarantee any ABI stability;
