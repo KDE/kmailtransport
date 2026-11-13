@@ -9,6 +9,12 @@ documentationinheaders = true
 headerdirs += .
 sourcedirs += .
 
+excludedirs += \
+    autotests \
+    plugins/smtp/autotests \
+    plugins/tests \
+    tests
+
 outputformats = HTML
 
 depends += \
