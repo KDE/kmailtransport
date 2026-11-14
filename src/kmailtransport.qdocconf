@@ -1,6 +1,7 @@
 include($KDE_DOCS/global/qt-module-defaults.qdocconf)
 
 project = KMailTransport
+moduleheader = kmailtransport_qdocmoduleheader.h
 description = KMailTransport provides API for managing mail transport.
 
 

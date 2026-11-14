@@ -1,0 +1,40 @@
+/*
+  SPDX-FileCopyrightText: 2026 Laurent Montel <montel@kde.org>
+
+  SPDX-License-Identifier: LGPL-2.0-or-later
+*/
+
+// Module header for qdoc PCH
+#include "kmailtransport_private_export.h"
+#include "mailtransport_defs.h"
+#include "outlookoauthtokenrequester.h"
+#include "plugins/smtp/gmailpasswordrequester.h"
+#include "plugins/smtp/outlookpasswordrequester.h"
+#include "plugins/smtp/sessionuiproxy.h"
+#include "plugins/smtp/smtpconfigdialog.h"
+#include "plugins/smtp/smtpconfigwidget.h"
+#include "plugins/smtp/smtpjob.h"
+#include "plugins/smtp/smtpmailtransportplugin.h"
+#include "plugins/smtp/xoauthpasswordrequester.h"
+#include "plugins/transportabstractplugin.h"
+#include "plugins/transportpluginmanager.h"
+#include "precommandjob.h"
+#include "servertest.h"
+#include "socket.h"
+#include "transport.h"
+#include "transport_p.h"
+#include "transportactivitiesabstract.h"
+#include "transportjob.h"
+#include "transportmanager.h"
+#include "transportmodel.h"
+#include "transportsortproxymodel.h"
+#include "transporttype.h"
+#include "transporttype_p.h"
+#include "widgets/addtransportdialogng.h"
+#include "widgets/transportactivitiesabstractplugin.h"
+#include "widgets/transportcombobox.h"
+#include "widgets/transportconfigwidget.h"
+#include "widgets/transportconfigwidget_p.h"
+#include "widgets/transportmanagementwidgetng.h"
+#include "widgets/transporttreedelegate.h"
+#include "widgets/transporttreeview.h"
