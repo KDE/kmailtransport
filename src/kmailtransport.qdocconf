@@ -7,7 +7,23 @@ description = KMailTransport provides API for managing mail transport.
 
 documentationinheaders = true
 
-headerdirs += .
+headers += \
+    kmailtransport_qdocmoduleheader.h \
+    outlookoauthtokenrequester.h \
+    plugins/transportabstractplugin.h \
+    precommandjob.h \
+    servertest.h \
+    transport.h \
+    transportactivitiesabstract.h \
+    transportjob.h \
+    transportmanager.h \
+    transportmodel.h \
+    transporttype.h \
+    widgets/transportactivitiesabstractplugin.h \
+    widgets/transportcombobox.h \
+    widgets/transportconfigwidget.h \
+    widgets/transportconfigwidget_p.h \
+    widgets/transportmanagementwidgetng.h
 sourcedirs += .
 
 excludedirs += \
