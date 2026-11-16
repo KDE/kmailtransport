@@ -191,12 +191,16 @@ install(
     COMPONENT Devel
 )
 
+set(MAILTRANSPORT_FILES
+    ${MailTransport_HEADERS}
+    ${MailTransport_widgets_HEADERS}
+    ${MailTransport_plugins_HEADERS}
+)
+
 install(
     FILES
         ${CMAKE_CURRENT_BINARY_DIR}/mailtransport_export.h
-        ${MailTransport_HEADERS}
-        ${MailTransport_widgets_HEADERS}
-        ${MailTransport_plugins_HEADERS}
+        ${MAILTRANSPORT_FILES}
         ${CMAKE_CURRENT_BINARY_DIR}/transportbase.h
     DESTINATION ${KDE_INSTALL_INCLUDEDIR}/KPim6/MailTransport/mailtransport
     COMPONENT Devel
@@ -250,9 +254,7 @@ ecm_add_installed_library_check(KPim6MailTransport
 
 ecm_installed_library_check_include_strings(KPim6MailTransport
     HEADERS
-    ${MailTransport_HEADERS}
-    ${MailTransport_widgets_HEADERS}
-    ${MailTransport_plugins_HEADERS}
+    ${MAILTRANSPORT_FILES}
     PREFIX mailtransport
 )
 
