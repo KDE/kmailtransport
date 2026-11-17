@@ -118,13 +118,12 @@ target_link_libraries(
         KF6::ConfigWidgets
         Qt::DBus
         Qt::Network
+        qt6keychain
 )
 
 if(TARGET KF6::Wallet)
     target_link_libraries(KPim6MailTransport PRIVATE KF6::Wallet)
 endif()
-
-target_link_libraries(KPim6MailTransport PRIVATE qt6keychain)
 
 set_target_properties(
     KPim6MailTransport
