@@ -14,6 +14,8 @@
 
 #include <QFileInfo>
 
+#include <ranges>
+
 using namespace Qt::Literals::StringLiterals;
 using namespace MailTransport;
 
@@ -58,11 +60,8 @@ void TransportPluginManagerPrivate::initializePlugins()
     }
     const QList<KPluginMetaData> plugins = KPluginMetaData::findPlugins(u"pim6/mailtransport"_s);
 
-    QListIterator<KPluginMetaData> i(plugins);
-    i.toBack();
-    while (i.hasPrevious()) {
+    for (const auto &data : plugins | std::views::reverse) {
         MailTransportPluginInfo info;
-        const KPluginMetaData data = i.previous();
 
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
         info.data = data;
