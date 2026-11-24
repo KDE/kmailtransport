@@ -7,21 +7,21 @@
 # obsoleteman <tulliana@gmail.com>, 2008-2009,2012.
 # Volkan Gezer <volkangezer@gmail.com>, 2013-2014.
 # Kaan Ozdincer <kaanozdincer@gmail.com>, 2014.
-# SPDX-FileCopyrightText: 2022, 2023, 2024, 2025 Emir SARI <emir_sari@icloud.com>
+# SPDX-FileCopyrightText: 2022-2026 Emir SARI <emir_sari@icloud.com>
 msgid ""
 msgstr ""
 "Project-Id-Version: kdepimlibs-kde4\n"
 "Report-Msgid-Bugs-To: https://bugs.kde.org\n"
 "POT-Creation-Date: 2026-10-20 00:53+0000\n"
-"PO-Revision-Date: 2025-08-01 12:47+0300\n"
-"Last-Translator: Emir SARI <emir_sari@îcloud.com>\n"
+"PO-Revision-Date: 2026-11-23 18:14+0300\n"
+"Last-Translator: Emir SARI <emir_sari@icloud.com>\n"
 "Language-Team: Turkish <kde-l10n-tr@kde.org>\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Lokalize 25.04.2\n"
+"X-Generator: Lokalize 26.08.2\n"
 
 #, kde-format
 msgid "Unnamed"
@@ -69,7 +69,7 @@ msgstr "Sunucunun kapı numarası"
 msgid ""
 "The port number that the SMTP server is listening on. The default port is "
 "465."
-msgstr "SMTP sunucusunun dinlediği kapı numarası. Öntanımlı kapı 465’dir."
+msgstr "SMTP sunucusunun dinlediği kapı numarası. Varsayılan kapı 465’dir."
 
 #. i18n: ectx: label, entry (userName), group (Transport $(transportId))
 #: mailtransport.kcfg:39
@@ -224,7 +224,7 @@ msgstr ""
 msgid ""
 "Enter the address that should be used to overwrite the default sender "
 "address."
-msgstr "Öntanımlı gönderen adresinin yerine kullanılacak adresi girin."
+msgstr "Varsayılan gönderen adresinin yerine kullanılacak adresi girin."
 
 #. i18n: ectx: label, entry (useProxy), group (Transport $(transportId))
 #. i18n: ectx: property (text), widget (QCheckBox, kcfg_useProxy)
@@ -584,7 +584,7 @@ msgstr "Tut"
 #, kde-format
 msgctxt "Default transport"
 msgid " (default)"
-msgstr " (öntanımlı)"
+msgstr " (varsayılan)"
 
 #: transportmodel.cpp:96
 #, kde-format
@@ -615,7 +615,7 @@ msgstr "Ad:"
 #: ui/addtransportdialog.ui:48
 #, kde-format
 msgid "Make this the default outgoing account"
-msgstr "Bunu öntanımlı giden hesabı yap"
+msgstr "Bunu varsayılan giden hesabı yap"
 
 #. i18n: ectx: property (text), widget (QLabel, descLabel)
 #: ui/addtransportdialog.ui:61
@@ -663,7 +663,7 @@ msgstr "&Yeniden Adlandır"
 #: ui/transportmanagementwidgetng.ui:76
 #, kde-format
 msgid "&Set as Default"
-msgstr "Ö&ntanımlı Olarak Ayarla"
+msgstr "&Varsayılan Olarak Ayarla"
 
 #. i18n: ectx: property (text), widget (QCheckBox, transportOnCurrentActivity)
 #: ui/transportmanagementwidgetng.ui:83
@@ -728,7 +728,7 @@ msgstr "Kaldır"
 #: widgets/transportmanagementwidgetng.cpp:216
 #, kde-format
 msgid "Set as Default"
-msgstr "Öntanımlı Olarak Ayarla"
+msgstr "Varsayılan Olarak Ayarla"
 
 #~ msgid "A&dd..."
 #~ msgstr "&Ekle…"
