@@ -62,8 +62,8 @@ public:
     */
     ~TransportConfigWidget() override;
 
-    /**
-      @internal
+    /*!
+      \internal
       Get the KConfigDialogManager for this widget.
     */
     KConfigDialogManager *configManager() const;
@@ -79,7 +79,11 @@ public Q_SLOTS:
     virtual void apply(); // TODO: do we also want to check for invalid settings?
 
 protected:
+    /*!
+     */
     std::unique_ptr<TransportConfigWidgetPrivate> const d_ptr;
+    /*!
+     */
     TransportConfigWidget(TransportConfigWidgetPrivate &dd, Transport *transport, QWidget *parent);
 
 private:

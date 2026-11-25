@@ -31,6 +31,8 @@ namespace MailTransport
 class MAILTRANSPORT_EXPORT TokenResult
 {
 public:
+    /*!
+     */
     enum ErrorCode {
         OK = 0, // success
         InternalError,

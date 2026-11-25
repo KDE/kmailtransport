@@ -24,6 +24,8 @@ class MAILTRANSPORT_EXPORT TransportModel : public QAbstractListModel
 {
     Q_OBJECT
 public:
+    /*!
+     */
     enum TransportRoles {
         NameRole,
         TransportNameRole,

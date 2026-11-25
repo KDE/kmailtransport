@@ -22,9 +22,17 @@ class Transport;
  * \author Laurent Montel <montel@kde.org>
  */
 struct MAILTRANSPORT_EXPORT TransportAbstractPluginInfo {
+    /*!
+     */
     QString name;
+    /*!
+     */
     QString identifier;
+    /*!
+     */
     QString description;
+    /*!
+     */
     bool isAkonadi = false;
 };
 

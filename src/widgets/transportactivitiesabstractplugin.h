@@ -22,8 +22,17 @@ class MAILTRANSPORT_EXPORT TransportActivitiesAbstractPlugin : public QWidget
 {
     Q_OBJECT
 public:
+    /*!
+     * \class MailTransport::TransportActivitiesAbstractPlugin::ActivitySettings
+     * \inmodule KMailTransport
+     * \inheaderfile MailTransport/TransportActivitiesAbstractPlugin
+     */
     struct ActivitySettings {
+        /*!
+         */
         QStringList activities;
+        /*!
+         */
         bool enabled = false;
     };
 

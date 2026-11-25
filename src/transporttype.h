@@ -133,6 +133,8 @@ public:
     [[nodiscard]] QString identifier() const;
 
     /// Returns whether this transport is an akonadi resource.
+    /*!
+     */
     [[nodiscard]] bool isAkonadiResource() const;
 
 private:

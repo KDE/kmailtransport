@@ -141,6 +141,8 @@ public:
     MAILTRANSPORT_DEPRECATED void schedule(TransportJob *job);
 
     /// Describes when to show the transport creation dialog
+    /*!
+     */
     enum ShowCondition {
         Always, ///< Show the transport creation dialog unconditionally
         IfNoTransportExists ///< Only show the transport creation dialog if no transport currently
@@ -168,6 +170,8 @@ public:
     */
     bool configureTransport(const QString &identifier, Transport *transport, QWidget *parent);
 
+    /*!
+     */
     void initializeTransport(const QString &identifier, Transport *transport);
 
 public:
@@ -209,6 +213,8 @@ public:
     */
     Q_SCRIPTABLE void removeTransport(int id);
 
+    /*!
+     */
     void removePasswordFromWallet(Transport::Id id);
 Q_SIGNALS:
     /*!

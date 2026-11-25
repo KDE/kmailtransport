@@ -12,8 +12,8 @@ namespace MailTransport
 {
 class Transport;
 
-/**
-  @internal
+/*!
+  \internal
 */
 class TransportConfigWidgetPrivate
 {

@@ -39,26 +39,30 @@ public:
     */
     ~TransportComboBox() override;
 
-    /**
+    /*!
       Returns identifier of the currently selected mail transport.
     */
     [[nodiscard]] int currentTransportId() const;
 
-    /**
+    /*!
       Selects the given transport.
-      @param transportId The transport identifier.
-      @return return true if we success to find transportId
+      \param transportId The transport identifier.
+      \return return true if we success to find transportId
     */
     bool setCurrentTransport(int transportId);
 
-    /**
+    /*!
       Returns the type of the selected transport.
     */
     [[nodiscard]] QString transportType() const;
 
     /// \since 6.1
+    /*!
+     */
     [[nodiscard]] MailTransport::TransportActivitiesAbstract *transportActivitiesAbstract() const;
     /// \since 6.1
+    /*!
+     */
     void setTransportActivitiesAbstract(MailTransport::TransportActivitiesAbstract *activitiesAbstract);
 
     /*!

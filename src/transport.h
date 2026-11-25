@@ -140,7 +140,11 @@ protected:
     */
     explicit Transport(const QString &cfgGroup);
 
+    /*!
+     */
     void usrRead() override;
+    /*!
+     */
     bool usrSave() override;
 
     /*!
